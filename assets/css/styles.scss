@@ -1,0 +1,337 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */ 
+$calm_authority_1: #34495E;
+$calm_authority_2: #5D6D7E;
+$calm_authority_3: #85929E;
+$calm_authority_4: #AAB7B8;
+$calm_authority_5: #D5D5DB;
+
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+$sunset_glow_1: #ffb84d;
+$sunset_glow_2: #ff9900;
+$sunset_glow_3: #f47b1f;
+$sunset_glow_4: #e64919;
+$sunset_glow_5: #d33131;
+
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+$smart_1: #1c1a3d; 
+$smart_2: #4a4e8c; 
+$smart_3: #8d7d9b; 
+$smart_4: #d1c3e9; 
+$smart_5: #f1e0ff;
+
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
+$dungeons_and_dragons_1: #4c3e3e;
+$dungeons_and_dragons_2: #5a4e4e;
+$dungeons_and_dragons_3: #8a6a6a;
+$dungeons_and_dragons_4: #c7a67a;
+$dungeons_and_dragons_5: #d1945c;
+
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */ 
+$gryffon_1: #ffcc00;
+$gryffon_2: #ff9900;
+$gryffon_3: #ff6600;
+$gryffon_4: #cc3300;
+$gryffon_5: #990000;
+
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */ 
+$noir_1: #1a1a1e;
+$noir_2: #3e3e41;
+$noir_3: #6b6b70;
+$noir_4: #a0a0b0;
+$noir_5: #d4d4d9;
+
+/* can be compiled to css with `sass --trace ./assets/css/styles.scss ./assets/css/styles.css` */
+
+header{
+    text-align: center;
+    background-color: $noir_1;
+    font-family: "Times New Roman", Times, serif;
+    h1{
+        color: $noir_4;
+        font-size:5vw;
+    }
+    h2{
+        color: $noir_4;
+        font-size:3vw;
+    }
+    h3{
+        color: $noir_4;
+        font-size:2vw;
+    }
+    p{
+        color: $noir_3;
+        font-size:1vw;
+    }
+    nav{
+        text-align: center;
+        color: $noir_5;
+        font-size:1vw;
+        a{
+            color: $noir_3;
+            font-size:1vw;
+        }
+    }
+}
+
+body{
+    margin: auto;
+    background-color: $noir_2;
+    font-family: Garamond, serif;
+    h1{
+        color: $noir_5;
+        font-size:5vw;
+    }
+    h2{
+        color: $noir_5;
+        font-size:3vw;
+    }
+    h3{
+        color: $noir_5;
+        font-size:2vw;
+    }
+    p{
+        color: $noir_4;
+        font-size:1vw;
+    }
+}
+
+.workHistory{
+    margin: auto;
+    background-color: $calm_authority_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1{
+        color: $calm_authority_2;
+        font-size:5vw;
+    }
+    h2{
+        color: $calm_authority_3;
+        font-size:3vw;
+    }
+    h3{
+        color: $calm_authority_4;
+        font-size:2vw;
+    }
+    p{
+        color: $calm_authority_5;
+        font-size:1vw;
+    }
+}
+
+.education{
+    margin: auto;
+    background-color: maroon;
+    width: 80%;
+    border-radius: 10px;
+    h1{
+        color:white;
+        font-size:5vw;
+    }
+    h2{
+        color:white;
+        font-size:3vw;
+    }
+    h3{
+        color:white;
+        font-size:2vw;
+    }
+    p{
+        color:white;
+        font-size:1vw;
+    }
+    ul{
+        li{
+            color: white;
+            font-size:1vw;
+        }
+    }
+    table{
+        color: white;
+        font-size:1vw;
+        border-color: white;
+        border-style: solid;
+        tr{
+            th{
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td{
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+}
+
+.projects{
+    margin: auto;
+    background-color: $smart_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1{
+        color: $smart_5;
+        font-size:5vw;
+    }
+    h2{
+        color: $smart_5;
+        font-size:3vw;
+    }
+    h3{
+        color: $smart_5;
+        font-size:2vw;
+    }
+    p{
+        color: $smart_5;
+        font-size:1vw;
+    }
+}
+
+.technicalSkills{
+    margin: auto;
+    background-color: black;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1{
+        color:greenyellow;
+        font-size:5vw;
+    }
+    h2{
+        color:greenyellow;
+        font-size:3vw;
+    }
+    h3{
+        color:greenyellow;
+        font-size:2vw;
+    }
+    p{
+        color:greenyellow;
+        font-size:1vw;
+    }
+    ul{
+        li{
+            color:greenyellow;
+            font-size:1vw;
+        }
+    }
+}
+
+.otherSkills{
+    margin: auto;
+    background-color: $sunset_glow_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    h1{
+        color: $sunset_glow_1;
+        font-size:5vw;
+    }
+    h2{
+        color: $sunset_glow_2;
+        font-size:3vw;
+    }
+    h3{
+        color: $sunset_glow_2;
+        font-size:2vw;
+    }
+    p{
+        color: $sunset_glow_2;
+        font-size:1vw;
+    }
+    ul{
+        li{
+            color: $sunset_glow_2;
+            font-size:1vw;
+        }
+    }
+}
+
+.certifications{
+    margin: auto;
+    background-color: $gryffon_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1{
+        color: $gryffon_1;
+        font-size:5vw;
+    }
+    h2{
+        color: $gryffon_1;
+        font-size:3vw;
+    }
+    h3{
+        color: $gryffon_1;
+        font-size:2vw;
+    }
+    p{
+        color: $gryffon_1;
+        font-size:1vw;
+    }
+    ul{
+        li{
+            color: $gryffon_1;
+            font-size:1vw;
+        }
+    }
+}
+
+.hobbies{
+    margin: auto;
+    background-color: $dungeons_and_dragons_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1{
+        color: $dungeons_and_dragons_5;
+        font-size:5vw;
+    }
+    h2{
+        color: $dungeons_and_dragons_5;
+        font-size:3vw;
+    }
+    h3{
+        color: $dungeons_and_dragons_5;
+        font-size:2vw;
+    }
+    p{
+        color: $dungeons_and_dragons_5;
+        font-size:1vw;
+    }
+    a{
+        color: $dungeons_and_dragons_5;
+        font-size: 1vw;
+    }
+}
+
+footer{
+    text-align: center;
+    background-color: $smart_2;
+    font-family: "Times New Roman", Times, serif;
+    .contactMe{
+        address{
+            color: $smart_4;
+            font-size:1vw;
+        }
+        p{
+            color: $smart_3;
+            font-size:1vw;
+        }
+    }
+}

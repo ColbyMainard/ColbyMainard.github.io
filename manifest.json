@@ -1,0 +1,8 @@
+{
+    "name": "Colby Mainard's Website",
+    "short_name": "Colby Mainard",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "description": "A progressive web app containing an introduction."
+}

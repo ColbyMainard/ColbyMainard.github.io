@@ -1,0 +1,230 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
+/* can be compiled to css with `sass --trace ./assets/css/styles.scss ./assets/css/styles.css` */
+header {
+  text-align: center;
+  background-color: #1a1a1e;
+  font-family: "Times New Roman", Times, serif; }
+  header h1 {
+    color: #a0a0b0;
+    font-size: 5vw; }
+  header h2 {
+    color: #a0a0b0;
+    font-size: 3vw; }
+  header h3 {
+    color: #a0a0b0;
+    font-size: 2vw; }
+  header p {
+    color: #6b6b70;
+    font-size: 1vw; }
+  header nav {
+    text-align: center;
+    color: #d4d4d9;
+    font-size: 1vw; }
+    header nav a {
+      color: #6b6b70;
+      font-size: 1vw; }
+
+body {
+  margin: auto;
+  background-color: #3e3e41;
+  font-family: Garamond, serif; }
+  body h1 {
+    color: #d4d4d9;
+    font-size: 5vw; }
+  body h2 {
+    color: #d4d4d9;
+    font-size: 3vw; }
+  body h3 {
+    color: #d4d4d9;
+    font-size: 2vw; }
+  body p {
+    color: #a0a0b0;
+    font-size: 1vw; }
+
+.workHistory {
+  margin: auto;
+  background-color: #34495E;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .workHistory h1 {
+    color: #5D6D7E;
+    font-size: 5vw; }
+  .workHistory h2 {
+    color: #85929E;
+    font-size: 3vw; }
+  .workHistory h3 {
+    color: #AAB7B8;
+    font-size: 2vw; }
+  .workHistory p {
+    color: #D5D5DB;
+    font-size: 1vw; }
+
+.education {
+  margin: auto;
+  background-color: maroon;
+  width: 80%;
+  border-radius: 10px; }
+  .education h1 {
+    color: white;
+    font-size: 5vw; }
+  .education h2 {
+    color: white;
+    font-size: 3vw; }
+  .education h3 {
+    color: white;
+    font-size: 2vw; }
+  .education p {
+    color: white;
+    font-size: 1vw; }
+  .education ul li {
+    color: white;
+    font-size: 1vw; }
+  .education table {
+    color: white;
+    font-size: 1vw;
+    border-color: white;
+    border-style: solid; }
+    .education table tr th {
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double; }
+    .education table tr td {
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove; }
+
+.projects {
+  margin: auto;
+  background-color: #1c1a3d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace; }
+  .projects h1 {
+    color: #f1e0ff;
+    font-size: 5vw; }
+  .projects h2 {
+    color: #f1e0ff;
+    font-size: 3vw; }
+  .projects h3 {
+    color: #f1e0ff;
+    font-size: 2vw; }
+  .projects p {
+    color: #f1e0ff;
+    font-size: 1vw; }
+
+.technicalSkills {
+  margin: auto;
+  background-color: black;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace; }
+  .technicalSkills h1 {
+    color: greenyellow;
+    font-size: 5vw; }
+  .technicalSkills h2 {
+    color: greenyellow;
+    font-size: 3vw; }
+  .technicalSkills h3 {
+    color: greenyellow;
+    font-size: 2vw; }
+  .technicalSkills p {
+    color: greenyellow;
+    font-size: 1vw; }
+  .technicalSkills ul li {
+    color: greenyellow;
+    font-size: 1vw; }
+
+.otherSkills {
+  margin: auto;
+  background-color: #d33131;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Lucida Handwriting", cursive; }
+  .otherSkills h1 {
+    color: #ffb84d;
+    font-size: 5vw; }
+  .otherSkills h2 {
+    color: #ff9900;
+    font-size: 3vw; }
+  .otherSkills h3 {
+    color: #ff9900;
+    font-size: 2vw; }
+  .otherSkills p {
+    color: #ff9900;
+    font-size: 1vw; }
+  .otherSkills ul li {
+    color: #ff9900;
+    font-size: 1vw; }
+
+.certifications {
+  margin: auto;
+  background-color: #990000;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace; }
+  .certifications h1 {
+    color: #ffcc00;
+    font-size: 5vw; }
+  .certifications h2 {
+    color: #ffcc00;
+    font-size: 3vw; }
+  .certifications h3 {
+    color: #ffcc00;
+    font-size: 2vw; }
+  .certifications p {
+    color: #ffcc00;
+    font-size: 1vw; }
+  .certifications ul li {
+    color: #ffcc00;
+    font-size: 1vw; }
+
+.hobbies {
+  margin: auto;
+  background-color: #4c3e3e;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Lucida Handwriting", cursive; }
+  .hobbies img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 1%; }
+  .hobbies h1 {
+    color: #d1945c;
+    font-size: 5vw; }
+  .hobbies h2 {
+    color: #d1945c;
+    font-size: 3vw; }
+  .hobbies h3 {
+    color: #d1945c;
+    font-size: 2vw; }
+  .hobbies p {
+    color: #d1945c;
+    font-size: 1vw; }
+  .hobbies a {
+    color: #d1945c;
+    font-size: 1vw; }
+
+footer {
+  text-align: center;
+  background-color: #4a4e8c;
+  font-family: "Times New Roman", Times, serif; }
+  footer .contactMe address {
+    color: #d1c3e9;
+    font-size: 1vw; }
+  footer .contactMe p {
+    color: #8d7d9b;
+    font-size: 1vw; }
+
+/*# sourceMappingURL=styles.css.map */
