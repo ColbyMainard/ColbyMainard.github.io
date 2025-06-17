@@ -224,7 +224,10 @@ footer {
     color: #d1c3e9;
     font-size: 1vw; }
   footer .contactMe p {
-    color: #8d7d9b;
+    color: #d1c3e9;
+    font-size: 1vw; }
+  footer .contactMe a {
+    color: #d1c3e9;
     font-size: 1vw; }
 
 /*# sourceMappingURL=styles.css.map */
