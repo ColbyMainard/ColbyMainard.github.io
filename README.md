@@ -1,7 +1,9 @@
-# ColbyMainard.github.io
-Colby Mainard's Website
-Things to add:
-Work experience
-Interests / hobbies
+# ColbyMainard.github.io: Colby Mainard's Personal Website
+## Discusses the following:
+Work History
 Education
 Projects
+Technical Skills
+Other Skills
+Certifications
+Hobbies
