@@ -5,7 +5,7 @@ import {
     eases, 
     createSpring,
     waapi
-} from 'animejs'
+} from './node_modules/animejs'
 
 const [ container ] = utils.$('.scroll-container');
 const debug = true;
