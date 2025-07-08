@@ -322,19 +322,27 @@ body{
 
 footer{
     text-align: center;
-    background-color: $smart_2;
+    background-color: $smart_1;
     font-family: "Times New Roman", Times, serif;
     .contactMe{
-        address{
+        h1{
+            font-size: 5vw;
+            color:$smart_2;
+        }
+        h2{
+            font-size: 3vw;
+            color: $smart_3;
+        }
+        h3{
+            font-size: 2vw;
             color: $smart_4;
+        }
+        address{
+            color: $smart_5;
             font-size:1vw;
         }
         p{
-            color: $smart_4;
-            font-size:1vw;
-        }
-        a{
-            color: $smart_4;
+            color: $smart_5;
             font-size:1vw;
         }
     }
