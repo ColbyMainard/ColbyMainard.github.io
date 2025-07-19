@@ -3,32 +3,30 @@
     <head>
         <!--https://www.w3schools.com/html/default.asp-->
         <title>Colby Mainard's Website</title>
-        <script src="./assets/js/current_time.js"></script>
-        <script type="module" src="./assets/js/animations.js"></script>
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <script src="./assets/js/current_time.js"></script>
         <meta charset="UTF-8">
         <meta name="description" content="Professional Website.">
         <meta name="keywords" content="computer vision, natural language processing, autonomous vehicles, facial tracking, sports marketing, artificial intelligence, machine learning">
         <meta name="author" content="Colby Mainard">
         <link rel="manifest" href="manifest.json">
+        
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
+        
         <!--Setting up tags for search engine verification-->
         <meta name="google-site-verification" content="LqOVTw1vRp28p5VNBCRWWOsZHXbZeZteA7rHCZi8bwQ" />
         <meta name="msvalidate.01" content="96DC561C2A904478B8F425694CAF638F" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q4KZE3X1"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-G9Q4KZE3X1');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-G9Q4KZE3X1');
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js">
-            import { animate } from 'animejs';
-        </script> 
     </head>
     <body>
         <article>
@@ -61,9 +59,9 @@
                 </nav>
             </header>
         </article>
-        <div class="scroll-container">
-            <main>
-                <h1>Colby Mainard's Personal Website</h1>
+        <main class="main" id="main">
+            <h1>Colby Mainard's Personal Website</h1>
+            <div class="workHistoryDiv" id="workHistoryDiv">
                 <section class="workHistory" id="workHistory">
                     <h1>Work History</h1>
                     <h2>MVP</h2>
@@ -76,6 +74,8 @@
                     <h3>Internship</h3>
                     <p><u>Facial Tracking / Computer Vision:</u> Surveying available commercial and open-source alternatives to meet the high accuracy requirements. Current solutions lack sufficient landmark count and distribution to facilitate UV mapping of facial textures to 3D geometry. Exploring intermediate point generation utilizing convex hull and other methodologies.</p>
                 </section>
+            </div>
+            <div class="educationDiv" id="educationDiv">
                 <section class="education" id="education">
                     <h1>Education</h1>
                     <h2>Masters of Computer Science</h2>
@@ -595,6 +595,8 @@
                         </tr>
                     </table>
                 </section>
+            </div>
+            <div class="projectsDiv" id="projectsDiv">
                 <section class="projects" id="projects">
                     <h1>Projects</h1>
                     <h2>COVID-19 Diagnosis ML Model | Design and Build Model | Fall 2020</h2>
@@ -604,6 +606,8 @@
                     <h2>Steganography | Research Project | Summer 2019</h2>
                     <p>Under direction of Dr. Ritchey, Texas A&M, extended research into hide-in-plain-sight (steganography) techniques (using Sudoku puzzles). The hypothesis tested is that steganography combined with cryptography may offer a powerful secondary approach for certain cybersecurity applications.</p>
                 </section>
+            </div>
+            <div class="technicalSkillsDiv" id="technicalSkillsDiv">
                 <section class="technicalSkills" id="technicalSkills">
                     <h1>Technical Skills</h1>
                     <h2>Programming Languages:</h2>
@@ -685,6 +689,8 @@
                         <li>Django</li>
                     </ul>
                 </section>
+            </div>
+            <div class="otherSkillsDiv" id="otherSkillsDiv">
                 <section class="otherSkills" id="otherSkills">
                     <h1>Other Skills</h1>
                     <h2>Interpersonal:</h2>
@@ -704,6 +710,8 @@
                         <li>Survey of Finance Principles</li>
                     </ul>
                 </section>
+            </div>
+            <div class="certificationsDiv" id="certificationsDiv">
                 <section class="certifications" id="certifications">
                     <h1>Certifications</h1>
                     <h2>Cloud Computing</h2>
@@ -716,6 +724,8 @@
                         </ul>
                     </ul>
                 </section>
+            </div>
+            <div class="hobbiesDiv" id="hobbiesDiv">
                 <section class="hobbies" id="hobbies">
                     <h1>Interests / Hobbies</h1>
                     <h2>Fitness</h2>
@@ -738,15 +748,15 @@
                     <h2>Dungeons and Dragons</h2>
                     <p>I started playing the 5th edition of this tabletop game in 2023 to experience a classic game and join the nerd culture in Austin, TX, and haven't looked back! Not only is it a near-infinite source of potential entertainment, but has lead to new friendships.</p>
                 </section>
-            </main>
-            <footer id="footer">
-                <section class="contactMe" id="contactMe">
-                    <h1>Contact:</h1>
-                    <p>Email: <a href="mailto:colby.mainard@proton.me">colby.mainard@proton.me</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/colby-mainard/">https://www.linkedin.com/in/colby-mainard/</a></p>
-                    <p>PGP key for email: <a href="./assets/other/pgp_email_key.asc">36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE</a></p>
-                </section>
-            </footer>
-        </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <section class="contactMe" id="contactMe">
+                <h1>Contact:</h1>
+                <h3>Email: <a href="mailto:colby.mainard@proton.me">colby.mainard@proton.me</a></h3>
+                <h3>LinkedIn: <a href="https://www.linkedin.com/in/colby-mainard/">https://www.linkedin.com/in/colby-mainard/</a></h3>
+                <h3>PGP key: <a href="./assets/other/pgp_email_key.asc">36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE</a></h3>
+            </section>
+        </footer>
     </body>
 </html>
