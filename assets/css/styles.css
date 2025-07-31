@@ -29,6 +29,10 @@ header {
     header nav a {
       color: #6b6b70;
       font-size: 1vw; }
+    header nav button {
+      color: #1a1a1e;
+      background-color: #d4d4d9;
+      font-size: 1vw; }
 
 body {
   margin: auto;
@@ -230,6 +234,9 @@ footer {
     font-size: 2vw;
     color: #d1c3e9; }
   footer .contactMe address {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  footer .contactMe a {
     color: #f1e0ff;
     font-size: 1vw; }
   footer .contactMe p {

@@ -27,40 +27,86 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
+        <script>
+            function scrollToWorkHistory(){
+                let element = document.getElementById("workHistoryDiv");
+                element.scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToEducation(){
+                let element = document.getElementById("educationDiv");
+                element.scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToProjects(){
+                let element = document.getElementById("projectsDiv");
+                element.scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToTechnicalSkills(){
+                let element = document.getElementById("technicalSkillsDiv");
+                element.scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToCertifications(){
+                let element = document.getElementById("certificationsDiv");
+                element.scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToHobbies(){
+                let element = document.getElementById("hobbiesDiv");
+                element.scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+        </script>
     </head>
     <body>
         <article>
             <header>
                 <nav>
-                    <a href="index.html">
-                        Home
-                    </a> |
-                    <a href="index.html#workHistory">
-                        Work History
-                    </a> |
-                    <a href="index.html#education">
-                        Education
-                    </a> |
-                    <a href="index.html#projects">
-                        Projects
-                    </a> |
-                    <a href="index.html#technicalSkills">
-                        Technical Skills
-                    </a> |
-                    <a href="index.html#otherSkills">
-                        Other Skills
-                    </a> |
-                    <a href="index.html#certifications">
-                        Certifications
-                    </a> |
-                    <a href="index.html#hobbies">
-                        Hobbies
-                    </a>
+                    <button type="button" onclick="scrollToWorkHistory()">Work History</button>
+                    <button type="button" onclick="scrollToEducation()">Education</button>
+                    <button type="button" onclick="scrollToProjects()">Projects</button>
+                    <button type="button" onclick="scrollToTechnicalSkills()">Technical Skills</button>
+                    <button type="button" onclick="scrollToCertifications()">Certifications</button>
+                    <button type="button" onclick="scrollToHobbies()">Hobbies</button>
                 </nav>
             </header>
         </article>
         <main class="main" id="main">
             <h1>Colby Mainard's Personal Website</h1>
+            <p>Seeking a challenging software development role in machine learning, artificial intelligence, deep learning, and/or computer vision.</p>
+            <p>Domain experience includes computer vision modeling for brand / logo tracking in advertising & marketing, building AI-based cybersecurity pipelines, image-based machine learning for medical diagnostics, and genetics / computational biology.</p>
+            <p>Comfortable designing novel foundational models (e.g. variational auto-encoders, image/text classification, generative adversarial networks) as well as fine-tuning existing models including LLMs.</p>
             <div class="workHistoryDiv" id="workHistoryDiv">
                 <section class="workHistory" id="workHistory">
                     <h1>Work History</h1>
@@ -599,12 +645,20 @@
             <div class="projectsDiv" id="projectsDiv">
                 <section class="projects" id="projects">
                     <h1>Projects</h1>
-                    <h2>COVID-19 Diagnosis ML Model | Design and Build Model | Fall 2020</h2>
-                    <p>Designed and built machine learning models as part of a five-person team that were able to diagnose a patient with COVID-19 by examining chest X-ray data. Specifically, I was responsible for designing, training, and validating two neural networks. The better model had 94% accuracy in predicting whether the patient tested positive for COVID-19. This solution was top two of twenty teams in this course.</p>
-                    <h2>Autonomous Vehicle | Testing | Spring 2020</h2>
+                    <h2>COVID-19 Diagnosis ML Model</h2>
+                    <h3>Design and Build Model</h3>
+                    <h3>Fall 2020</h3>
+                    <p>Designed and built machine learning models as part of a five-person team that were able to diagnose a patient with COVID-19 by examining chest X-ray data. </p>
+                    <p>Specifically, I was responsible for designing, training, and validating two neural networks. The better model had 94% accuracy in predicting whether the patient tested positive for COVID-19. This solution was top two of twenty teams in this course.</p>
+                    <h2>AutoDrive Autonomous Vehicle</h2>
+                    <h3>Testing</h3>
+                    <h3>Spring 2020</h3>
                     <p>As part of a continuing Texas A&M <a href="http://autodrive.tamu.edu/autodrive-old/team.html">AutoDrive</a> team, I was tasked with expanding the virtual testing suite to encompass real-world scenarios. The task entailed converting any arbitrary map in HD LiveMap (HDLM) format to an equivalent Unreal Engine 4 (UE4) map where simulations could be run.</p>
-                    <h2>Steganography | Research Project | Summer 2019</h2>
-                    <p>Under direction of Dr. Ritchey, Texas A&M, extended research into hide-in-plain-sight (steganography) techniques (using Sudoku puzzles). The hypothesis tested is that steganography combined with cryptography may offer a powerful secondary approach for certain cybersecurity applications.</p>
+                    <h2>Steganography</h2>
+                    <h3>Research Project</h3>
+                    <h3>Summer 2019</h3>
+                    <p>Under direction of Dr. Ritchey, Texas A&M, extended research into <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a> techniques using Sudoku puzzles. </p>
+                    <p>The hypothesis tested is that steganography combined with cryptography may offer a powerful secondary approach for certain cybersecurity applications.</p>
                 </section>
             </div>
             <div class="technicalSkillsDiv" id="technicalSkillsDiv">
@@ -620,9 +674,6 @@
                         <li>Ruby</li>
                         <li>Haskell</li>
                         <li>R</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>XML</li>
                         <li>Prolog</li>
                         <li>PDDL</li>
                         <li>MATLAB</li>
@@ -636,6 +687,11 @@
                         <li>CUDA GPU (NVIDIA)</li>
                         <li>PySpark</li>
                         <li>PyTorch</li>
+                        <li>Scikit-learn (sklearn)</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
                     </ul>
                     <h2>Operating Systems:</h2>
                     <ul>
@@ -651,6 +707,8 @@
                         <li>Artificial Intelligence</li>
                         <li>Machine Learning</li>
                         <li>Deep Learning</li>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
                         <li>Parallel Computing</li>
                         <li>Computational Biology</li>
                         <li>Interprocess Communication</li>
@@ -670,6 +728,9 @@
                         <li>FLTK</li>
                         <li>UE4</li>
                         <li>HDLM</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>XML</li>
                         <li>Qt</li>
                         <li>Qt Creator</li>
                         <li>G++</li>
@@ -684,7 +745,6 @@
                         <li>Tshark</li>
                         <li>Photoshop</li>
                         <li>LaTeX</li>
-                        <li>PyTorch</li>
                         <li>Flask</li>
                         <li>Django</li>
                     </ul>
@@ -753,9 +813,9 @@
         <footer id="footer">
             <section class="contactMe" id="contactMe">
                 <h1>Contact:</h1>
-                <h3>Email: <a href="mailto:colby.mainard@proton.me">colby.mainard@proton.me</a></h3>
-                <h3>LinkedIn: <a href="https://www.linkedin.com/in/colby-mainard/">https://www.linkedin.com/in/colby-mainard/</a></h3>
-                <h3>PGP key: <a href="./assets/other/pgp_email_key.asc">36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE</a></h3>
+                <p>Email: <a href="mailto:colby.mainard@proton.me">colby.mainard@proton.me</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/colby-mainard/">https://www.linkedin.com/in/colby-mainard/</a></p>
+                <p>PGP key: <a href="./assets/other/pgp_email_key.asc">36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE</a></p>
             </section>
         </footer>
     </body>
