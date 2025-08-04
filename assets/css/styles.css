@@ -6,6 +6,9 @@
 /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* can be compiled to css with `sass --trace ./assets/css/styles.scss ./assets/css/styles.css` */
+html {
+  scroll-behavior: smooth; }
+
 header {
   text-align: center;
   background-color: #1a1a1e;
@@ -122,6 +125,9 @@ body {
     color: #f1e0ff;
     font-size: 2vw; }
   .projects p {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  .projects a {
     color: #f1e0ff;
     font-size: 1vw; }
 

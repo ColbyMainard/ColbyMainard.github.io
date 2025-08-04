@@ -44,38 +44,42 @@ $noir_5: #d4d4d9;
 
 /* can be compiled to css with `sass --trace ./assets/css/styles.scss ./assets/css/styles.css` */
 
+html{
+    scroll-behavior: smooth;
+}
+
 header {
     text-align: center;
     background-color: $noir_1;
     font-family: "Times New Roman", Times, serif;
     h1 {
         color: $noir_4;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $noir_4;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $noir_4;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $noir_3;
-        font-size:1vw;
+        font-size: 1vw;
     }
     nav {
         text-align: center;
         color: $noir_5;
-        font-size:1vw;
+        font-size: 1vw;
         a {
             color: $noir_3;
-            font-size:1vw;
+            font-size: 1vw;
         }
         button {
             color: $noir_1;
             background-color: $noir_5;
-            font-size:1vw;
+            font-size: 1vw;
         }
     }
 }
@@ -86,19 +90,19 @@ body {
     font-family: Garamond, serif;
     h1 {
         color: $noir_5;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $noir_5;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $noir_5;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $noir_4;
-        font-size:1vw;
+        font-size: 1vw;
     }
 }
 
@@ -110,19 +114,19 @@ body {
     font-family: Tahoma, Verdana, sans-serif;
     h1 {
         color: $calm_authority_2;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $calm_authority_3;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $calm_authority_4;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $calm_authority_5;
-        font-size:1vw;
+        font-size: 1vw;
     }
 }
 
@@ -133,29 +137,29 @@ body {
     border-radius: 10px;
     h1 {
         color:white;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color:white;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color:white;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color:white;
-        font-size:1vw;
+        font-size: 1vw;
     }
     ul {
         li {
             color: white;
-            font-size:1vw;
+            font-size: 1vw;
         }
     }
     table {
         color: white;
-        font-size:1vw;
+        font-size: 1vw;
         border-color: white;
         border-style: solid;
         tr {
@@ -183,19 +187,23 @@ body {
     font-family: "Courier New", monospace;
     h1 {
         color: $smart_5;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $smart_5;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $smart_5;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $smart_5;
-        font-size:1vw;
+        font-size: 1vw;
+    }
+    a {
+        color: $smart_5;
+        font-size: 1vw;
     }
 }
 
@@ -207,24 +215,24 @@ body {
     font-family: "Courier New", monospace;
     h1 {
         color:greenyellow;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color:greenyellow;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color:greenyellow;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color:greenyellow;
-        font-size:1vw;
+        font-size: 1vw;
     }
     ul {
         li {
             color:greenyellow;
-            font-size:1vw;
+            font-size: 1vw;
         }
     }
 }
@@ -237,24 +245,24 @@ body {
     font-family: "Lucida Handwriting", cursive;
     h1 {
         color: $sunset_glow_1;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $sunset_glow_2;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $sunset_glow_2;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $sunset_glow_2;
-        font-size:1vw;
+        font-size: 1vw;
     }
     ul {
         li {
             color: $sunset_glow_2;
-            font-size:1vw;
+            font-size: 1vw;
         }
     }
 }
@@ -267,24 +275,24 @@ body {
     font-family: "Courier New", monospace;
     h1 {
         color: $gryffon_1;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $gryffon_1;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $gryffon_1;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $gryffon_1;
-        font-size:1vw;
+        font-size: 1vw;
     }
     ul {
         li {
             color: $gryffon_1;
-            font-size:1vw;
+            font-size: 1vw;
         }
     }
 }
@@ -305,19 +313,19 @@ body {
     }
     h1 {
         color: $dungeons_and_dragons_5;
-        font-size:5vw;
+        font-size: 5vw;
     }
     h2 {
         color: $dungeons_and_dragons_5;
-        font-size:3vw;
+        font-size: 3vw;
     }
     h3 {
         color: $dungeons_and_dragons_5;
-        font-size:2vw;
+        font-size: 2vw;
     }
     p {
         color: $dungeons_and_dragons_5;
-        font-size:1vw;
+        font-size: 1vw;
     }
     a {
         color: $dungeons_and_dragons_5;
@@ -332,7 +340,7 @@ footer {
     .contactMe {
         h1 {
             font-size: 5vw;
-            color:$smart_2;
+            color: $smart_2;
         }
         h2 {
             font-size: 3vw;
@@ -344,15 +352,15 @@ footer {
         }
         address {
             color: $smart_5;
-            font-size:1vw;
+            font-size: 1vw;
         }
         a {
             color: $smart_5;
-            font-size:1vw;
+            font-size: 1vw;
         }
         p {
             color: $smart_5;
-            font-size:1vw;
+            font-size: 1vw;
         }
     }
 }
