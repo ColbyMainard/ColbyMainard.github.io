@@ -29,8 +29,9 @@
         </script>
         <script>
             function scrollToWorkHistory(){
-                let element = document.getElementById("workHistoryDiv");
-                element.scrollIntoView(
+                document.getElementById(
+                    "workHistoryDiv"
+                ).scrollIntoView(
                     false,
                     {
                         behavior: "smooth"
@@ -39,8 +40,9 @@
             }
 
             function scrollToEducation(){
-                let element = document.getElementById("educationDiv");
-                element.scrollIntoView(
+                document.getElementById(
+                    "educationDiv"
+                ).scrollIntoView(
                     false,
                     {
                         behavior: "smooth"
@@ -49,8 +51,9 @@
             }
 
             function scrollToProjects(){
-                let element = document.getElementById("projectsDiv");
-                element.scrollIntoView(
+                document.getElementById(
+                    "projectsDiv"
+                ).scrollIntoView(
                     false,
                     {
                         behavior: "smooth"
@@ -59,8 +62,9 @@
             }
 
             function scrollToTechnicalSkills(){
-                let element = document.getElementById("technicalSkillsDiv");
-                element.scrollIntoView(
+                document.getElementById(
+                    "technicalSkillsDiv"
+                ).scrollIntoView(
                     false,
                     {
                         behavior: "smooth"
@@ -69,8 +73,9 @@
             }
 
             function scrollToCertifications(){
-                let element = document.getElementById("certificationsDiv");
-                element.scrollIntoView(
+                document.getElementById(
+                    "certificationsDiv"
+                ).scrollIntoView(
                     false,
                     {
                         behavior: "smooth"
@@ -79,8 +84,20 @@
             }
 
             function scrollToHobbies(){
-                let element = document.getElementById("hobbiesDiv");
-                element.scrollIntoView(
+                document.getElementById(
+                    "hobbiesDiv"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToContactMe(){
+                document.getElementById(
+                    "contactMe"
+                ).scrollIntoView(
                     false,
                     {
                         behavior: "smooth"
@@ -99,6 +116,7 @@
                     <button type="button" onclick="scrollToTechnicalSkills()">Technical Skills</button>
                     <button type="button" onclick="scrollToCertifications()">Certifications</button>
                     <button type="button" onclick="scrollToHobbies()">Hobbies</button>
+                    <button type="button" onclick="scrollToContactMe()">Contact Me</button>
                 </nav>
             </header>
         </article>
@@ -491,7 +509,7 @@
                                     <li>Be aware of how fundamental HCI principles support the process of technology development.</li>
                                     <li>Know late-breaking HCI research and underlying technologies.</li>
                                     <li>Be familiar with the process of HCI research from need finding to user evaluation.</li>
-                                    <li>Know how to prototype physical artifacts using machines and tools</li>
+                                    <li>Know how to prototype physical artifacts using machines and tools.</li>
                                 </ul>
                             </td>
                         </tr>
@@ -586,11 +604,11 @@
                                 </ul>
                                 <u>Other Topics:</u>
                                 <ul>
-                                    <li>Introduction to probability and distributions.</li>
-                                    <li>Sampling and descriptive measures on datasets.</li>
-                                    <li>Inference and hypothesis testing.</li>
-                                    <li>Linear regression.</li>
-                                    <li>Analysis of Variance.</li>
+                                    <li>Introduction to probability and distributions</li>
+                                    <li>Sampling and descriptive measures on datasets</li>
+                                    <li>Inference and hypothesis testing</li>
+                                    <li>Linear regression</li>
+                                    <li>Analysis of Variance</li>
                                 </ul>
                             </td>
                         </tr>
@@ -611,13 +629,13 @@
                                     <li>Demonstrate an ability to design and refine large software systems based on rough system requirements.</li>
                                     <li>Demonstrate an ability to implement and test software system design.</li>
                                     <li>Demonstrate an ability to work as a member of a software project development team.</li>
-                                    <li>Applicable knowledge of various software development paradigms.</li>
+                                    <li>Gain applicable knowledge of various software development paradigms.</li>
                                     <li>Management of software development projects.</li>
                                     <li>Write technical documentation regarding software systems.</li>
                                     <li>Communicate the overall design and details of software systems.</li>
-                                    <li>Introductory-level knowledge in database systems.</li>
-                                    <li>Introductory-level knowledge in artificial intelligence.</li>
-                                    <li>Introductory-level knowledge in software engineering.</li>
+                                    <li>Show introductory-level knowledge in database systems.</li>
+                                    <li>Show introductory-level knowledge in artificial intelligence.</li>
+                                    <li>Show introductory-level knowledge in software engineering.</li>
                                 </ul>
                             </td>
                         </tr>
@@ -648,17 +666,18 @@
                     <h2>COVID-19 Diagnosis ML Model</h2>
                     <h3>Design and Build Model</h3>
                     <h3>Fall 2020</h3>
-                    <p>Designed and built machine learning models as part of a five-person team that were able to diagnose a patient with COVID-19 by examining chest X-ray data. </p>
-                    <p>Specifically, I was responsible for designing, training, and validating two neural networks. </p>
+                    <p>Designed and built machine learning models as part of a five-person team that were able to diagnose a patient with COVID-19 by examining chest X-ray data.</p>
+                    <p>Specifically, I was responsible for designing, training, and validating two neural networks.</p>
                     <p>The better model had 94% accuracy in predicting whether the patient tested positive for COVID-19. This solution was in the top two of twenty teams competing.</p>
                     <h2>AutoDrive Autonomous Vehicle</h2>
                     <h3>Testing</h3>
                     <h3>Spring 2020</h3>
-                    <p>As part of a continuing Texas A&M <a href="http://autodrive.tamu.edu/autodrive-old/team.html">AutoDrive</a>I was tasked with expanding the virtual testing suite to encompass real-world scenarios. The task entailed converting any arbitrary map in HD LiveMap (HDLM) format to an equivalent Unreal Engine 4 (UE4) [game engine] map where simulations could be run.</p>
+                    <p>As part of a continuing Texas A&M <a href="http://autodrive.tamu.edu/autodrive-old/team.html">AutoDrive</a>I was tasked with expanding the virtual testing suite to encompass real-world scenarios.</p>
+                    <p>The task entailed converting any arbitrary map in HD LiveMap (HDLM) format to an equivalent Unreal Engine 4 (UE4) [game engine] map where simulations could be run.</p>
                     <h2>Steganography</h2>
                     <h3>Research Project</h3>
                     <h3>Summer 2019</h3>
-                    <p>Under direction of Dr. Ritchey, Texas A&M, extended research into <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a> techniques using Sudoku puzzles. </p>
+                    <p>Under direction of Dr. Ritchey, Texas A&M, extended research into <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a> techniques using Sudoku puzzles.</p>
                     <p>The hypothesis tested is that steganography combined with cryptography may offer a powerful secondary approach for certain cybersecurity applications.</p>
                 </section>
             </div>
@@ -781,8 +800,8 @@
                         <li>AWS Certified Cloud Practitioner</li>
                         <li>Microsoft Azure Fundamentals (AZ 900)</li>
                         <ul>
-                            <li>Last issued: May 2023</li>
-                            <li>Valid until: May 2026</li>
+                            <li><u>Last issued:</u> May 2023</li>
+                            <li><u>Valid until:</u> May 2026</li>
                         </ul>
                     </ul>
                 </section>
@@ -793,7 +812,7 @@
                     <h2>Fitness</h2>
                     <p>As a way to get/stay fit, I have been doing a regimen containing a combination of weightlifting and cardio. It has really helped me remained balanced with what can easily become an extremely sedentary lifestyle, and the gym I go to has an incredibly welcoming community!</p>
                     <h2>Quantum Computing</h2>
-                    <p>This area of nascent technology appears unapproachable, the easiest way to visualize this would be rotating a circle, sphere, or hypersphere (ball in 4+ dimensions) in such a way that its north pole is pointing towards the only correct. Each qubit, in this case, would keep track of the rotation of data in this space. The YouTube channel 3Blue1Brown has an excellent brief explainer <a href="https://www.youtube.com/watch?v=RQWpF2Gb-gU">here</a>. </p>
+                    <p>This area of nascent technology appears unapproachable, the easiest way to visualize this would be rotating a circle, sphere, or hypersphere (ball in 4+ dimensions) in such a way that its north pole is pointing towards the only correct. Each qubit, in this case, would keep track of the rotation of data in this space. The YouTube channel 3Blue1Brown has an excellent brief explainer <a href="https://www.youtube.com/watch?v=RQWpF2Gb-gU">here</a>.</p>
                     <p>While the list of widely-available algorithms for quantum computers are somewhat limited, I was able to teach myself to a reasonably-fine-grain level with <a href="https://www.goodreads.com/book/show/49786117-quantum-computing">Quantum Computing: An Applied Approach by Jack D. Hidary</a> and <a href="https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/">Programming Quantum Computers: Essential Algorithms and Code Samples by Eric R. Johnston, Nic Harrigan, and Mercedes Gimeno-Segovia</a>.</p>
                     <h2>Photography</h2>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>

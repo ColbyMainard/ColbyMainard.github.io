@@ -80,12 +80,14 @@ header {
             color: $noir_1;
             background-color: $noir_5;
             font-size: 1vw;
+            margin:auto;
         }
     }
 }
 
 body {
     margin: auto;
+    text-align: center;
     background-color: $noir_2;
     font-family: Garamond, serif;
     h1 {
@@ -108,6 +110,7 @@ body {
 
 .workHistory {
     margin: auto;
+    text-align: left;
     background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
@@ -132,6 +135,7 @@ body {
 
 .education {
     margin: auto;
+    text-align: left;
     background-color: maroon;
     width: 80%;
     border-radius: 10px;
@@ -181,6 +185,7 @@ body {
 
 .projects {
     margin: auto;
+    text-align: left;
     background-color: $smart_1;
     width: 80%;
     border-radius: 10px;
@@ -209,6 +214,7 @@ body {
 
 .technicalSkills {
     margin: auto;
+    text-align: left;
     background-color: black;
     width: 80%;
     border-radius: 10px;
@@ -239,6 +245,7 @@ body {
 
 .otherSkills {
     margin: auto;
+    text-align: left;
     background-color: $sunset_glow_5;
     width: 80%;
     border-radius: 10px;
@@ -269,6 +276,7 @@ body {
 
 .certifications {
     margin: auto;
+    text-align: left;
     background-color: $gryffon_5;
     width: 80%;
     border-radius: 10px;
@@ -299,6 +307,7 @@ body {
 
 .hobbies {
     margin: auto;
+    text-align: left;
     background-color: $dungeons_and_dragons_1;
     width: 80%;
     border-radius: 10px;

@@ -35,10 +35,12 @@ header {
     header nav button {
       color: #1a1a1e;
       background-color: #d4d4d9;
-      font-size: 1vw; }
+      font-size: 1vw;
+      margin: auto; }
 
 body {
   margin: auto;
+  text-align: center;
   background-color: #3e3e41;
   font-family: Garamond, serif; }
   body h1 {
@@ -56,6 +58,7 @@ body {
 
 .workHistory {
   margin: auto;
+  text-align: left;
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
@@ -75,6 +78,7 @@ body {
 
 .education {
   margin: auto;
+  text-align: left;
   background-color: maroon;
   width: 80%;
   border-radius: 10px; }
@@ -111,6 +115,7 @@ body {
 
 .projects {
   margin: auto;
+  text-align: left;
   background-color: #1c1a3d;
   width: 80%;
   border-radius: 10px;
@@ -133,6 +138,7 @@ body {
 
 .technicalSkills {
   margin: auto;
+  text-align: left;
   background-color: black;
   width: 80%;
   border-radius: 10px;
@@ -155,6 +161,7 @@ body {
 
 .otherSkills {
   margin: auto;
+  text-align: left;
   background-color: #d33131;
   width: 80%;
   border-radius: 10px;
@@ -177,6 +184,7 @@ body {
 
 .certifications {
   margin: auto;
+  text-align: left;
   background-color: #990000;
   width: 80%;
   border-radius: 10px;
@@ -199,6 +207,7 @@ body {
 
 .hobbies {
   margin: auto;
+  text-align: left;
   background-color: #4c3e3e;
   width: 80%;
   border-radius: 10px;
