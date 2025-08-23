@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!--https://www.w3schools.com/html/default.asp-->
         <title>Colby Mainard's Website</title>
-        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/default.css">
         <script src="./assets/js/current_time.js"></script>
         <meta charset="UTF-8">
         <meta name="description" content="Professional Website.">
@@ -12,7 +12,7 @@
         <link rel="manifest" href="manifest.json">
         
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><article class="pageMenu" id="pageMenu">
         <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
         
         <!--Setting up tags for search engine verification-->
@@ -104,10 +104,21 @@
                     }
                 );
             }
+
+            function scrollToTop(){
+                document.getElementById(
+                    "siteMenu"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
         </script>
     </head>
     <body>
-        <article>
+        <article class="siteMenu" id="siteMenu">
             <header>
                 <nav>
                     <button type="button" onclick="scrollToWorkHistory()">Work History</button>
@@ -117,6 +128,17 @@
                     <button type="button" onclick="scrollToCertifications()">Certifications</button>
                     <button type="button" onclick="scrollToHobbies()">Hobbies</button>
                     <button type="button" onclick="scrollToContactMe()">Contact Me</button>
+                </nav>
+                <br>
+                <br>
+            </header>
+        </article>
+        <article class="pageMenu" id="pageMenu">
+            <header>
+                <nav>
+                    <a href="index.html">Home</a> |
+                    <a href="assets/html/tech_takes.html">Technical Stances</a> | 
+                    <a href="assets/html/hobbies.html">Hobbies</a>
                 </nav>
             </header>
         </article>
@@ -130,13 +152,25 @@
                     <h1>Work History</h1>
                     <h2>MVP</h2>
                     <h3>Machine Learning Engineer</h3>
-                    <p><u>MLOps / Data Quality:</u> Create model performance-tracking pipelines, assist migration of data labelling tools to a platform that facilitates active learning, and automating tasks within various machine learning pipelines for various sports league clients, like the NFL, NHL, MLB, and NBA. Identified and secured ~$1M savings by enabling the tracking and optimizing of performance metrics for computer vision modeling. Built ML pipelines which included a bespoke variational autoencoder for unique MVP needs, various image auto labeling utilities, and the fine-tuning of image segmentation models.</p>
+                    <p>
+                        <u>MLOps / Data Quality:</u> Create model performance-tracking pipelines, assist migration of data labelling tools to a platform that facilitates active learning, and automating tasks within various machine learning pipelines for various sports league clients, like the NFL, NHL, MLB, and NBA. 
+                        Identified and secured ~$1M savings by enabling the tracking and optimizing of performance metrics for computer vision modeling.
+                        Built ML pipelines which included a bespoke variational autoencoder for unique MVP needs, various image auto labeling utilities, and the fine-tuning of image segmentation models.
+                    </p>
                     <h2>Vectra</h2>
                     <h3>Software Engineer II</h3>
-                    <p><u>Database Management / Data Integrity:</u> Integrate with and support multiple teams to aid in parsing and dispositioning network traffic into various datastores for threat assessment. Provided tools for machine learning pipelines to access critical elements from these datastores to detect unusual network activity indicative of network intrusions and other cybersecurity events.</p>
+                    <p>
+                        <u>Database Management / Data Integrity:</u> Integrate with and support multiple teams to aid in parsing and dispositioning network traffic into various datastores for threat assessment. 
+                        Provided tools for machine learning pipelines to access critical elements from these datastores to detect unusual network activity indicative of network intrusions and other cybersecurity events.
+                    </p>
                     <h2>Shiseido Americas</h2>
                     <h3>Internship</h3>
-                    <p><u>Facial Tracking / Computer Vision:</u> Surveyed available commercial and open-source alternatives to meet the high accuracy requirements. Current solutions lacked sufficient landmark count and distribution to facilitate UV mapping of facial textures to 3D geometry. Explored intermediate point generation utilizing convex hull and other methodologies.</p>
+                    <p>
+                        <u>Facial Tracking / Computer Vision:</u> Surveyed available commercial and open-source alternatives to meet the high accuracy requirements. 
+                        Current solutions lacked sufficient landmark count and distribution to facilitate UV mapping of facial textures to 3D geometry. 
+                        Explored intermediate point generation utilizing convex hull and other methodologies.
+                    </p>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="educationDiv" id="educationDiv">
@@ -658,6 +692,7 @@
                             </td>
                         </tr>
                     </table>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="projectsDiv" id="projectsDiv">
@@ -679,6 +714,7 @@
                     <h3>Summer 2019</h3>
                     <p>Under direction of Dr. Ritchey, Texas A&M, extended research into <a href="https://en.wikipedia.org/wiki/Steganography">steganography</a> techniques using Sudoku puzzles.</p>
                     <p>The hypothesis tested is that steganography combined with cryptography may offer a powerful secondary approach for certain cybersecurity applications.</p>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="technicalSkillsDiv" id="technicalSkillsDiv">
@@ -735,6 +771,8 @@
                         <li>Interprocess Communication</li>
                         <li>Computer and Network Security</li>
                         <li>Steganography</li>
+                        <li>Cybersecurity</li>
+                        <li>Network Security</li>
                         <li>Design and Analysis of Algorithms</li>
                         <li>Linear Algebra</li>
                         <li>Computer Organization</li>
@@ -769,6 +807,7 @@
                         <li>Flask</li>
                         <li>Django</li>
                     </ul>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="otherSkillsDiv" id="otherSkillsDiv">
@@ -790,6 +829,7 @@
                         <li>Survey of Management</li>
                         <li>Survey of Finance Principles</li>
                     </ul>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="certificationsDiv" id="certificationsDiv">
@@ -804,30 +844,7 @@
                             <li><u>Valid until:</u> May 2026</li>
                         </ul>
                     </ul>
-                </section>
-            </div>
-            <div class="hobbiesDiv" id="hobbiesDiv">
-                <section class="hobbies" id="hobbies">
-                    <h1>Interests / Hobbies</h1>
-                    <h2>Fitness</h2>
-                    <p>As a way to get/stay fit, I have been doing a regimen containing a combination of weightlifting and cardio. It has really helped me remained balanced with what can easily become an extremely sedentary lifestyle, and the gym I go to has an incredibly welcoming community!</p>
-                    <h2>Quantum Computing</h2>
-                    <p>This area of nascent technology appears unapproachable, the easiest way to visualize this would be rotating a circle, sphere, or hypersphere (ball in 4+ dimensions) in such a way that its north pole is pointing towards the only correct. Each qubit, in this case, would keep track of the rotation of data in this space. The YouTube channel 3Blue1Brown has an excellent brief explainer <a href="https://www.youtube.com/watch?v=RQWpF2Gb-gU">here</a>.</p>
-                    <p>While the list of widely-available algorithms for quantum computers are somewhat limited, I was able to teach myself to a reasonably-fine-grain level with <a href="https://www.goodreads.com/book/show/49786117-quantum-computing">Quantum Computing: An Applied Approach by Jack D. Hidary</a> and <a href="https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/">Programming Quantum Computers: Essential Algorithms and Code Samples by Eric R. Johnston, Nic Harrigan, and Mercedes Gimeno-Segovia</a>.</p>
-                    <h2>Photography</h2>
-                    <p>I mainly do landscape photography. Here are some of my favorite results:</p>
-                    <br>
-                    <img src="./assets/images/DSC_0004.JPG" alt="Up-close flower" loading="lazy">
-                    <br>
-                    <img src="./assets/images/DSC_0023.JPG" alt="Cloudy orange sun" loading="lazy">
-                    <br>
-                    <img src="./assets/images/DSC_0110.JPG" alt="Sunset hidden behind trees" loading="lazy">
-                    <br>
-                    <img src="./assets/images/DSC_0237.JPG" alt="Sunset hidden behind trees 2" loading="lazy">
-                    <br>
-                    <img src="./assets/images/DSC_0396.JPG" alt="Beautiful purple clouds" loading="lazy">
-                    <h2>Dungeons and Dragons</h2>
-                    <p>I started playing the 5th edition of this tabletop game in 2023 to experience a classic game and join the nerd culture in Austin, TX, and haven't looked back! Not only is it a near-infinite source of potential entertainment, but has lead to new friendships.</p>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
         </main>

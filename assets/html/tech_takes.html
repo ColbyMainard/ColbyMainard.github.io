@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta name="author" content="Colby Mainard">
+        <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href=".,/images/favicon.png"/>
+        <link rel="stylesheet" href="../css/default.css">
+    </head>
+    <body>
+        <article class="pageMenu" id="pageMenu">
+            <header>
+                <nav>
+                    <a href="../../index.html">Home</a> |
+                    <a href="./tech_takes.html">Technical Stances</a> | 
+                    <a href="./hobbies.html">Hobbies</a>
+                </nav>
+            </header>
+        </article>
+        <main class="main" id="main">
+            <div class="LLMOpinionsDiv" id="LLMOpinionsDiv">
+                <section class="LLMOpinions" id="LLMOpinions">
+                    <h1>LLMs</h1>
+                    <h2>The Good</h2>
+                    <h3>Autocompletion of Work</h3>
+                    <p>
+                        LLMs tend to see lower errors in environments where the <a href="https://developer.ibm.com/articles/awb-token-optimization-backbone-of-effective-prompt-engineering/">prompt is succinct</a>, <a href="https://www.lesswrong.com/posts/ekBsq6mATCvEvqmkC/gpt-4-is-bad-at-strategic-thinking">does not require long-term strategic thinking</a>, <a ref="https://www.k2view.com/blog/rag-hallucination/#What-is-Retrieval-Augmented-Generation">and relevant documentation was provided by processes like retrieval-augmented generation (RAG)</a>.
+                        If a human provides a very clear structure for the LLM, limits the scope of the ask, and provides all necessary context, the LLM can make a good first pass at what it believes should be the next words.
+                    </p>
+                    <h3>Summary of Documents</h3>
+                    <p>
+                        When provided with documents containing the required information in a succinct enough method that fits into the memory of the LLMs, LLMs can read and provide decent summaries of document contents and answer basic questions. 
+                        For reasons discussed later, no LLM can fully replace humans for more advanced reading comprehension. 
+                        Agentic workflows have mitigated this problem somewhat by recursively breaking problems into more manageable pieces. 
+                        However, as each component of an agentic workflow also contains calls to LLMs, it does not fully solve what would happen if input overwhelms any individual step. 
+                        This worst-case scenario simply trades the likelihood of failure at any particular step with more potential points for failure.
+                    </p>
+                    <h3>Polishing Writing</h3>
+                    <p>
+                        Many LLMs can be passed a document, with some able to process images, video and diagrams in addition to the text processing available in initial releases. 
+                        Once the context of the document is parsed, LLMs could be used to suggest edits to documents that would improve vocabulary choice, tone, clarity, and many other facets of writing. 
+                        In its current state, AI cannot fully replace humans when creating the initial drafts of documents. 
+                        All AI techniques for generating text require some sort of initial input. 
+                        This initial input is usually a combination of the initial training data and user-defined input.</p>
+                    <h3>Improved automation for NLP-related tasks</h3>
+                    <p>
+                        Before LLMs, there was no good way to interact with computers using predominantly natural language. 
+                        Natural language processing (NLP) was a very difficult field, and most NLP systems were given a very narrow scope to help address very specific questions that the end user might have. 
+                        But the easiest method for processing language data would be to store it within a database and have end users query that database in a very rigid format (e.g. SQL for relational databases containing raw text and metadata). 
+                        In contrast, many users yearn for a user interface similar to that in Star Trek, where the user can have a full conversation with the computer to achieve whatever they desire without worrying about technical implementation. 
+                        LLMs were the first taste that many users had to this interface (assuming that programming/query description languages don't count). 
+                        I think it fair to label LLMs as one of the first viable prototypes of this interface. 
+                        While there is no shortage of potential pitfalls that still need to be addressed, it is a clear step in that direction.
+                    </p>
+                    <h2>The Bad</h2>
+                    <h3>Over-reliance</h3>
+                    <p>No AI model can think for you.</p>
+                    <p>
+                        Regardless of whether you are performing unsupervised, supervised, or semi-supervised learning, the underlying model is utilizing a set of mathematical equations and a set of learned parameters / boundaries that were extrapolated from whatever training data was available. 
+                        While that training data may be more data than a human could process mathematically in a million lifetimes, that does not mean that it is safe to outsource the thinking to any of the existing AI and related technologies.
+                    </p>
+                    <p>
+                        All of the available tools in AI are focused on one thing: make a best guess at underlying patterns that are supported by the dataset available. 
+                        There is no common sense module within an LLM. 
+                        LLMs do not possess the ability to think, understand, believe, fear, love, hate, trust, doubt, or any other action that makes them feel particularly human. 
+                        Humans are much better at anthropomorphizing inanimate objects than inanimate objects are at <a href="https://writingslowly.com/2023/06/07/gaslit-by-machinery.html">mimicking the abilities of sentience and self-awareness</a>. 
+                        It is best to keep that in mind before assigning them tasks that require the accountability that would normally be associated with sentience. 
+                        Autonomy and accountability are two sides of the same coin: any system we cannot hold to account for its actions should not be given the autonomy to cause unmitigated harm.
+                    </p>
+                    <h3>Hallucinations</h3>
+                    <p>
+                        As LLMs in particular and ML models in general do not have an inherent understanding of the world outside of the computer, hallucinations are an inevitability. 
+                        Since the model doesn't have components that allow it to do a lot of features that allow humans and animals to determine the validity of presented information, there is very little the model can do to determine the truth of statements outside of what has been provide within datasets used to train.
+                    </p>
+                    <h3>Limited working memory</h3>
+                    <p>
+                        All LLMs operate on tokens. 
+                        What exactly constitutes a token depends on the implementation of the LLM and tokenizer you are using, but it is probably simplest to think of it in terms of words. 
+                        There is only so many tokens that a program (in this case, the LLM would be a component of the program) can handle. 
+                        Because of that, LLMs must choose between expiring older data or run out of RAM and crash. 
+                        This problem can be mitigated with RAG, but a lot of models have built-in recency biases that may require reloading of documents used from previous queries.
+                    </p>
+                    <h3>Unexamined biases</h3>
+                    <blockquote>"All models are wrong, but some are useful" - <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a></blockquote>
+                    <p>
+                        There are two factors that cap the potential real-world usefulness of an AI model: the training data it was given, and the number of learnable parameters the model has to get as close as possible to the training data. 
+                        It should not surprise anyone that one of the easiest ways to bias a model towards a particular output would be to give it training data that supports such a bias. 
+                        Since there are no moral guidelines inherent to the LLM itself, it would be possible to get the model to output content that would be decried for a medley of reasons. 
+                        It would be possible to generate content that would be considered racist, sexist, homophobic, xenophobic, antisemitic, or any other content that would probably have a legal/public relations team working overtime. 
+                        There has also been so many AI deployments with legal ramifications that <a href="https://www.cio.com/article/190888/5-famous-analytics-and-ai-disasters.html">there are already articles showcasing lists of the worst offenders</a>. 
+                        As such, it is best to examine every step of your AI pipeline for potential security risks and the ramifications for those risks being insufficient.
+                    </p>
+                    <h3>Cybersecurity concerns</h3>
+                    <blockquote>"The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards - and even then I have my doubts." - <a href="https://spaf.cerias.purdue.edu/quotes.html">A. K. Dewdney, March 1989</a></blockquote>
+                    <p>While the original author may not have foreseen all of the implications of of this quote as it relates to the security of LLMs, the sentiment is still well-paced. Over the past few years, we have seen a plethora of incidents that should raise concerns about how companies are implementing security controls, including: 
+                        <ul>
+                            <li><a href="https://www.infosecurity-magazine.com/news/deepseek-database-leaks-sensitive/">Exposed DeepSeek database leaks sensitive data</a></li>
+                            <li><a href="https://www.csoonline.com/article/3819170/nearly-10-of-employee-gen-ai-prompts-include-sensitive-data.html">10% of employees of GenAI prompts include sensitive data</a></li>
+                            <li><a href="https://venturebeat.com/ai/anthropic-confirms-it-suffered-a-data-leak/">Anthropic confirms that it suffered a data leak</a></li>
+                            <li><a href="https://www.spiceworks.com/tech/artificial-intelligence/news/chatgpt-leaks-sensitive-user-data-openai-suspects-hack/">OpenAI confirms ChatGPT leaks sensitive user data and suspects hack</a></li>
+                            <li><a href="https://www.forbes.com/sites/siladityaray/2023/05/02/samsung-bans-chatgpt-and-other-chatbots-for-employees-after-sensitive-code-leak/">Samsung bans ChatGPT and other LLMs after code leak</a></li>
+                            <li><a href="https://www.techpolicy.press/new-study-suggests-chatgpt-vulnerability-with-potential-privacy-implications/">ChatGPT leaks data after simply being asked to repeat a word endlessly</a></li>
+                            <li><a href="https://www.thestack.technology/microsoft-rag-copilot-enterprise-secrets/">RAG used in ConfusedPilot attack to reveal enterprise secrets</a></li>
+                            <li><a href="https://thehackernews.com/2025/02/12000-api-keys-and-passwords-found-in.html">12000+ API keys found in LLM training data</a></li>
+                            <li><a href="https://www.ic3.gov/PSA/2024/PSA241203">FBI sends out public service announcement regarding AI-powered phishing and related scams</a></li>
+                            <li><a href="https://www.pcworld.com/article/2601323/5-sneaky-ways-hackers-use-generative-ai-to-scam-you.html">AI is generating malware, and other ways scammers are attacking you</a></li>
+                            <li><a href="https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/">Deepfakes and other AI-powered Cyber Attacks</a></li>
+                        </ul>
+                    </p>
+                    <p>
+                        Clearly, with this volume of potential security issues, it is important to have multiple levels of security to prevent attacks against data that should never be exposed to the internet. 
+                        Asking the chat bots to please not leak data is going to be wholly insufficient for most applications that deal with financial, medical, and other confidential data that already have data protections in most jurisdictions.
+                    </p>
+                </section>
+            </div>
+            <div class="AppStoresDiv" id="AppStoresDiv">
+                <section class="AppStores" id="AppStores">
+                    <h1>App Stores are hurting the web</h1>
+                    <h2>Why</h2>
+                    <h3>Monopoly over user base</h3>
+                    <p>
+                        Certain tech platforms, most notably <a href="https://www.justice.gov/archives/opa/pr/justice-department-sues-apple-monopolizing-smartphone-markets">Apple</a>, have been receiving pressure to take down walled garden ecosystems.
+                        The crux of the issue is that users are not able to swap platforms without considerable friction.
+                        While some level of friction will always exist, the problem is that platforms are adding friction solely to discourage users to swap to other platforms.
+                        Examples would include blocking apps that would make it easier to move data to competition, diminishing usability of 3rd party smartwatches, and limiting 3rd party digital wallet.
+                    </p>
+                    <h3>Many apps don't need to exist</h3>
+                    <p>
+                        It is my opinion that apps should be designed to add functionality that was not available as a part of the phone.
+                        However, many apps are thinly-veiled web clients.
+                        Because of this, many applications could be replaced by a web browser.
+                    </p>
+                    <h2>What users can do about it</h2>
+                    <p></p>
+                    <h3>Bypass app stores where possible</h3>
+                    <p>
+                        Many app stores take a substantial cut of any purchases made in-app. 
+                        <a href="https://www.choicely.com/blog/how-to-estimate-the-in-app-purchase-revenue-of-your-app">Both Google and Apple</a>, for example, have been known to take 30% of in-app purchases.
+                        By not using app stores, you cut out the middle man and reduce the profit of app stores.
+                        While this might be difficult for non-technical users, these businesses respond to profits at the end of the day.
+                        Reducing their profits due to anti-consumer practices would encourage leadership at companies engaging in them to reconsider their business strategy. 
+                    </p>
+                    <h3>Reach out to legislators in support of anti-monopoly action</h3>
+                    <p></p>
+                </section>
+            </div>
+            <div class="KissMySaaSDiv" id="KissMySaaSDiv">
+                <section class="KissMySaaS" id="KissMySaaS">
+                    <h1>Not everything needs to be a subscription</h1>
+                    <p>
+                        Users are getting <a href="https://www.library.hbs.edu/working-knowledge/with-subscription-fatigue-setting-in-companies-need-to-think-hard-about-fees">subscription fatigue</a> and rebelling against those who insist <a href="https://en.wikipedia.org/wiki/You%27ll_own_nothing_and_be_happy">we will own nothing and be happy</a>.
+                        It is my opinion that many companies have chased adding subscriptions where they don't belong in an effort to chase recurring revenue and boost valuations.
+                        Adding unnecessary friction only to allow users to bypass it by opening their wallet is liable to produce backlash, like how <a href="https://www.edmunds.com/car-news/bmw-relents-on-heated-seat-subscription.html">BMW was bullied out of their heated seat subscriptions</a>.
+                        However, some business models make sense for it to be a subscription.
+                        There are a few different properties that I would use to determine if a business model makes sense as a subscription or not.
+                    </p>
+                    <h2>Legitimate uses for subscriptions</h2>
+                    <ul>
+                        <li>Indefinite/infinite support/work for product expected after acquiring user.</li>
+                        <ul>
+                            <li>It is not economically viable to promise infinite resources in exchange for an up</li>
+                            <li>User requests for ongoing support and labor from the company, resulting in additional cost.</li>
+                            <li>Billing clients for continuous service requirements often require periodic billing.</li>
+                        </ul>
+                        <li>User to make ongoing requests for resources.</li>
+                        <ul>
+                            <li>Similar to the last point.</li>
+                            <li>When continuous service is built into the business model, it doesn't make sense to offer it for free.</li>
+                        </ul>
+                        <li>Any environment in which it makes sense to charge predominantly by resource usage.</li>
+                    </ul>
+                    <h2>Where subscriptions are going wrong</h2>
+                    <ul>
+                        <li>Locking down hardware users already purchased, only to unlock for additional fee.</li>
+                        <ul>
+                            <li><a href="https://www.theatlantic.com/technology/archive/2023/02/home-printer-digital-rights-management-hp-instant-ink-subscription/672913/">HP</a> bricking printers not enrolled in ink subscription</li>
+                            <li><a href="https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling">Adobe vs FTC</a>: hard to cancel annual membership.</li>
+                            <li><a href="https://tech.yahoo.com/general/articles/study-says-online-subscriptions-exactly-171351194.html">Up to 76% of websites use shady practices</a> to get users to subscribe</li>
+                        </ul>
+                        <li>Users loosing access to Software-as-a-Service (SaaS) with little or no notice</li>
+                        <ul>
+                            <li><a href="https://www.failory.com/blog/google-failed-products">30 Google projects that didn't work out</a></li>
+                            <li><a href="https://www.thetoptens.com/internet/popular-websites-died/">10 popular dead websites</a></li>
+                        </ul>
+                    </ul>
+                </section>
+            </div>
+            <div class="PrivacyStanceDiv" id="PrivacyStanceDiv">
+                <section class="PrivacyStance" id="PrivacyStance">
+                    <h1>The internet should not require ID</h1>
+                    <blockquote>
+                        "Those who would give up essential Liberty, to purchase a little temporary Safety, deserve neither Liberty nor Safety." - <a href="https://www.npr.org/2015/03/02/390245038/ben-franklins-famous-liberty-safety-quote-lost-its-context-in-21st-century">Benjamin Franklin</a>
+                    </blockquote>
+                    <h2>Why privacy has disappeared</h2>
+                    <p>
+                        Privacy matters to the individual to preserve many of their other rights. 
+                        It is so fundamental that measures guaranteeing certain levels of privacy were enshrined in the US Constitution as a response to various attempts at government overreach, including overreaches that lead to the Revolutionary War that lead to the formation of the country in the first place.
+                        Examples of these protections would include:
+                    </p>
+                    <ul>
+                        <li>Protections against <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-iv">unreasonable search and seizure</a>.</li>
+                        <li>Protections guaranteeing <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">right to disseminate information freely</a>.</li>
+                        <li>Protections to <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">associate with others freely</a>.</li>
+                        <li>Protections in regards to <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">self-determination of religion</a>.</li>
+                        <li>Rights <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-ix">by default belong to citizens</a>.</li>
+                    </ul>
+                    <h3>Companies found digital gold</h3>
+                    <p>
+                        Many companies do not have the same stringent requirements that governments have in regards to respecting privacy (depending on jurisdiction).
+                        While there are certain limitations based on industry and the contents of certain personally-identifiable information (PII), as long as the end user willingly gives the company their data, the company can do whatever processing they want behind the scenes.
+                        This processing could include things like building advertising profiles and other data mining features that can be sold to companies to better understand individual behaviors.
+                        Selling user tracking data has become so common that companies like <a href="https://joindeleteme.com">DeleteMe</a> and <a href="https://incogni.com/">Incogni</a> offer services that aim to reduce the ability for 
+                    </p>
+                    <h3>Governments want control</h3>
+                    <p>
+                        By purchasing data from companies, governments can potentially sidestep unreasonable search and seizure. 
+                        Since the data was willingly provided to the company and the company willingly provided the data to the government, the government can legitimately claim that they did not take your PII without your consent.
+                        Some governments are looking for access to more fine-grain data of what citizens of their country are doing online and influence their browsing choices without making it obvious that they are doing so.
+                        Governments wanting to do so could try to force users accessing the internet to provide government IDs to access either the internet itself or when accessing content the government would like to restrict.
+                        While this sounds theoretical, the UK <a href="https://www.theguardian.com/technology/2025/jul/24/what-are-the-new-uk-online-safety-rules-and-how-will-they-be-enforced">has run into some controversy from implementing new restrictions trying to ban children from accessing certain content</a>. 
+                        Regardless of your stance on the specific content being restricted in the UK's case, there is nothing preventing totalitarian regimes attempting to manipulate their country's internet browsing behavior using similar technologies and laws.
+                    </p>
+                    <h2>What can you do about it</h2>
+                    <h3>Avoid logging into sites where possible</h3>
+                    <p>
+                        The quickest and easiest way to de-anonymize yourself in online spaces is logging into websites.
+                        By signing into websites, you are actively handing data to the site you are logging into.
+                        While there are other workarounds available, like cookies, it becomes more effort to convert the information from cookies to someone offline.
+                    </p>
+                    <h3>Using privacy-preserving browsers</h3>
+                    <p>
+                        <a href="https://www.torproject.org/download/">TOR</a> and <a href="https://brave.com/">Brave</a> offers additional tools to help keep users of anonymous, like hiding IP, blocking cookies, and making it easier to prevent tracking with JavaScript.
+                        TOR has much more tools turned on by default, which does slow down traffic somewhat. 
+                        Either way, for those worried about internet privacy, these browsers are known to be well and truly above the rest.
+                    </p>
+                    <h3>Pressure legislators who sacrifice privacy for "safety"</h3>
+                    <p>
+                        Many legislators have not thought through the potential identity verification to access certain content. 
+                        However, there are already known hacks that demonstrate the potential issues around sites doxxing the government IDs of users.
+                        For example, the <a href="https://www.bbc.com/news/articles/cd0dgkjgzvjo">Tea app</a> may have allowed hackers to access up to 72,000 government IDs of users.
+                        The stated goal of the site, to call out abusers to prevent domestic violence in dating, is noble.
+                        De-anonymizing users could actually increase domestic abuse in this case, as abusers could use this hack to tie posts back to the government ID of the associated account.
+                        It does not take too much imagination to see this style of hack negatively impacting similarly vulnerable populations.
+                    </p>
+                    <p>
+                        For those worried about the potential misuse of ID data, I would recommend reaching out to the <a href="https://www.eff.org/">Electronic Frontier Foundation (EFF)</a> for tools and resources in pushing for intelligent policies.
+                        Without privacy on the internet, it becomes much more difficult for vulnerable populations to share information safely without surviving negative consequences.
+                    </p>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

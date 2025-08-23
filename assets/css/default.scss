@@ -1,0 +1,823 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */ 
+$calm_authority_1: #34495E;
+$calm_authority_2: #5D6D7E;
+$calm_authority_3: #85929E;
+$calm_authority_4: #AAB7B8;
+$calm_authority_5: #D5D5DB;
+
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+$sunset_glow_1: #ffb84d;
+$sunset_glow_2: #ff9900;
+$sunset_glow_3: #f47b1f;
+$sunset_glow_4: #e64919;
+$sunset_glow_5: #d33131;
+
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+$smart_1: #1c1a3d; 
+$smart_2: #4a4e8c; 
+$smart_3: #8d7d9b; 
+$smart_4: #d1c3e9; 
+$smart_5: #f1e0ff;
+
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
+$dungeons_and_dragons_1: #4c3e3e;
+$dungeons_and_dragons_2: #5a4e4e;
+$dungeons_and_dragons_3: #8a6a6a;
+$dungeons_and_dragons_4: #c7a67a;
+$dungeons_and_dragons_5: #d1945c;
+
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */ 
+$gryffon_1: #ffcc00;
+$gryffon_2: #ff9900;
+$gryffon_3: #ff6600;
+$gryffon_4: #cc3300;
+$gryffon_5: #990000;
+
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */ 
+$noir_1: #1a1a1e;
+$noir_2: #3e3e41;
+$noir_3: #6b6b70;
+$noir_4: #a0a0b0;
+$noir_5: #d4d4d9;
+
+/* Desert Dawn color palette from https://colormagic.app/palette/689f63d900aacad274865dda */
+$desert_dawn_1: #ea7a3e;
+$desert_dawn_2: #f2ba4a;
+$desert_dawn_3: #dce3a1;
+$desert_dawn_4: #b6d4af;
+$desert_dawn_5: #5c7d4f;
+
+/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
+$vivid_terrain_1: #4f9c7e;
+$vivid_terrain_2: #a3d55d;
+$vivid_terrain_3: #f6e0a2;
+$vivid_terrain_4: #f5a524;
+$vivid_terrain_5: #e7693c;
+
+/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
+$shades_of_brown_1: #d4aa8c;
+$shades_of_brown_2: #b56a5a;
+$shades_of_brown_3: #8a4c7b;
+$shades_of_brown_4: #5b699a;
+$shades_of_brown_5: #3c4b86;
+
+/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
+$cyberpunk_dreams_1: #ff3d94;
+$cyberpunk_dreams_2: #b5307e;
+$cyberpunk_dreams_3: #6a2a98;
+$cyberpunk_dreams_4: #3f1c6d;
+$cyberpunk_dreams_5: #200b4b;
+
+/* 90s Anime color palette from https://colormagic.app/palette/671d8e4ae9810edeaccc9737 */
+
+$anime_90s_1: #ff6e61;
+$anime_90s_2: #ffb84d;
+$anime_90s_3: #6d9dc5;
+$anime_90s_4: #5e4b8b;
+$anime_90s_5: #da1b61;
+
+/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
+$luna_of_gale_1: #d6e4f5;
+$luna_of_gale_2: #a4c8df;
+$luna_of_gale_3: #7bb7d1;
+$luna_of_gale_4: #4aa0c4;
+$luna_of_gale_5: #1d3a6d;
+
+/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+$blood_moon_1: #691b1e;
+$blood_moon_2: #b82d28;
+$blood_moon_3: #f05660;
+$blood_moon_4: #f9a68b;
+$blood_moon_5: #fce3d4;
+
+/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
+$disturbed_1: #5c6b8a;
+$disturbed_2: #a2b8d2;
+$disturbed_3: #f5c9a8;
+$disturbed_4: #f07838;
+$disturbed_5: #ba4c40;
+
+/* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
+
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    background-color: $noir_1;
+    font-family: "Times New Roman", Times, serif;
+    h1 {
+        color: $noir_4;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $noir_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $noir_4;
+        font-size: 2vw;
+    }
+    p {
+        color: $noir_3;
+        font-size: 1vw;
+    }
+    .pageMenu {
+        text-align: center;
+        color: $noir_1;
+        background-color: $noir_5;
+        font-size: 1vw;
+        a {
+            color: $noir_1;
+            font-size: 1vw;
+        }
+        button {
+            color: $noir_1;
+            font-size: 1vw;
+            margin:auto;
+        }
+    }
+    .siteMenu {
+        text-align: center;
+        color: $noir_5;
+        font-size: 1vw;
+        a {
+            color: $noir_3;
+            font-size: 1vw;
+        }
+        button {
+            color: $noir_1;
+            background-color: $noir_5;
+            font-size: 1vw;
+            margin:auto;
+        }
+    }
+}
+
+body {
+    margin: auto;
+    text-align: center;
+    background-color: $noir_2;
+    font-family: Garamond, serif;
+    h1 {
+        color: $noir_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $noir_5;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $noir_5;
+        font-size: 2vw;
+    }
+    p {
+        color: $noir_4;
+        font-size: 1vw;
+    }
+}
+
+.workHistory {
+    margin: auto;
+    text-align: left;
+    background-color: $calm_authority_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        color: $calm_authority_2;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $calm_authority_3;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $calm_authority_4;
+        font-size: 2vw;
+    }
+    p {
+        color: $calm_authority_5;
+        font-size: 1vw;
+    }
+    button {
+        display: flex;
+        color: $calm_authority_5;
+        background-color: $calm_authority_1;
+        justify-content: center;
+        font-size: 1vw;
+    }
+}
+
+.education {
+    margin: auto;
+    text-align: left;
+    background-color: maroon;
+    width: 80%;
+    border-radius: 10px;
+    h1 {
+        color:white;
+        font-size: 5vw;
+    }
+    h2 {
+        color:white;
+        font-size: 3vw;
+    }
+    h3 {
+        color:white;
+        font-size: 2vw;
+    }
+    p {
+        color:white;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: white;
+            font-size: 1vw;
+        }
+    }
+    table {
+        color: white;
+        font-size: 1vw;
+        border-color: white;
+        border-style: solid;
+        tr {
+            th {
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+    button {
+        display: flex;
+        color:white;
+        background-color: maroon;
+        justify-content: center;
+        font-size: 1vw;
+    }
+}
+
+.projects {
+    margin: auto;
+    text-align: left;
+    background-color: $smart_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        color: $smart_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $smart_5;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $smart_5;
+        font-size: 2vw;
+    }
+    p {
+        color: $smart_5;
+        font-size: 1vw;
+    }
+    a {
+        color: $smart_5;
+        font-size: 1vw;
+    }
+    button {
+        display: flex;
+        color: $smart_5;
+        background-color: $smart_1;
+        justify-content: center;
+        font-size: 1vw;
+    }
+}
+
+.technicalSkills {
+    margin: auto;
+    text-align: left;
+    background-color: black;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        color:greenyellow;
+        font-size: 5vw;
+    }
+    h2 {
+        color:greenyellow;
+        font-size: 3vw;
+    }
+    h3 {
+        color:greenyellow;
+        font-size: 2vw;
+    }
+    p {
+        color:greenyellow;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color:greenyellow;
+            font-size: 1vw;
+        }
+    }
+    button {
+        display: flex;
+        color:greenyellow;
+        background-color: black;
+        justify-content: center;
+        font-size: 1vw;
+    }
+}
+
+.otherSkills {
+    margin: auto;
+    text-align: left;
+    background-color: $sunset_glow_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    h1 {
+        color: $sunset_glow_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $sunset_glow_2;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $sunset_glow_2;
+        font-size: 2vw;
+    }
+    p {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $sunset_glow_2;
+            font-size: 1vw;
+        }
+    }
+    button {
+        display: flex;
+        color: $sunset_glow_2;
+        background-color: $sunset_glow_5;
+        justify-content: center;
+        font-size: 1vw;
+    }
+}
+
+.certifications {
+    margin: auto;
+    text-align: left;
+    background-color: $gryffon_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        color: $gryffon_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $gryffon_1;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $gryffon_1;
+        font-size: 2vw;
+    }
+    p {
+        color: $gryffon_1;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $gryffon_1;
+            font-size: 1vw;
+        }
+    }
+    button {
+        display: flex;
+        color: $gryffon_1;
+        background-color: $gryffon_5;
+        justify-content: center;
+        font-size: 1vw;
+    }
+}
+
+.fitness {
+    margin: auto;
+    text-align: left;
+    background-color: $sunset_glow_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        color: $sunset_glow_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $sunset_glow_2;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $sunset_glow_2;
+        font-size: 2vw;
+    }
+    p {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $sunset_glow_2;
+            font-size: 1vw;
+        }
+    }
+    a {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+}
+
+.quantumComputing {
+    margin: auto;
+    text-align: left;
+    background-color: $calm_authority_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $calm_authority_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $calm_authority_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $calm_authority_3;
+        font-size: 2vw;
+    }
+    p {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    a {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $calm_authority_2;
+            font-size: 1vw;
+        }
+    }
+}
+
+.photography {
+    margin: auto;
+    text-align: left;
+    background-color: $vivid_terrain_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $vivid_terrain_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $vivid_terrain_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $vivid_terrain_4;
+        font-size: 2vw;
+    }
+    p {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    a {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+}
+
+.dungeonsAndDragons {
+    margin: auto;
+    text-align: left;
+    background-color: $dungeons_and_dragons_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $dungeons_and_dragons_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $dungeons_and_dragons_5;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $dungeons_and_dragons_5;
+        font-size: 2vw;
+    }
+    p {
+        color: $dungeons_and_dragons_5;
+        font-size: 1vw;
+    }
+    a {
+        color: $dungeons_and_dragons_5;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $dungeons_and_dragons_5;
+            font-size: 1vw;
+        }
+    }
+}
+
+.history {
+    margin: auto;
+    text-align: left;
+    background-color: $shades_of_brown_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $shades_of_brown_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $shades_of_brown_2;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $shades_of_brown_2;
+        font-size: 2vw;
+    }
+    p {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    blockquote {
+        color: $shades_of_brown_2;
+        font-size: 1.5vw;
+    }
+    a {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $shades_of_brown_2;
+            font-size: 1vw;
+        }
+    }
+    table {
+        border-color: $shades_of_brown_5;
+        border-style: solid;
+        tr {
+            th {
+                color: $shades_of_brown_2;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+                a {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+            }
+            td {
+                color: $shades_of_brown_2;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+                a {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
+
+.LLMOpinions {
+    margin: auto;
+    text-align: left;
+    background-color: $cyberpunk_dreams_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $cyberpunk_dreams_1;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $cyberpunk_dreams_2;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $cyberpunk_dreams_3;
+    }
+    a {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    p {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    blockquote {
+        font-size: 1.5vw;
+        color: $cyberpunk_dreams_4;
+    }
+}
+
+.AppStores {
+    margin: auto;
+    text-align: left;
+    background-color: $disturbed_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $disturbed_2;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $disturbed_3;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $disturbed_4;
+    }
+    a {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    p {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+}
+
+.KissMySaaS {
+    margin: auto;
+    text-align: left;
+    background-color: $blood_moon_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $blood_moon_2;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $blood_moon_3;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $blood_moon_4;
+    }
+    a {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $blood_moon_5;
+        }
+    }
+    p {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+}
+
+.PrivacyStance {
+    margin: auto;
+    text-align: left;
+    background-color: $anime_90s_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $anime_90s_2;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $anime_90s_3;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $anime_90s_4;
+    }
+    a {
+        font-size: 1vw;
+        color: $anime_90s_5;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $anime_90s_5;
+        }
+    }
+    p {
+        font-size: 1vw;
+        color: $anime_90s_5;
+    }
+    blockquote {
+        font-size: 1.5vw;
+        color: $anime_90s_5;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: $smart_1;
+    font-family: "Times New Roman", Times, serif;
+    .contactMe {
+        h1 {
+            font-size: 5vw;
+            color: $smart_2;
+        }
+        h2 {
+            font-size: 3vw;
+            color: $smart_3;
+        }
+        h3 {
+            font-size: 2vw;
+            color: $smart_4;
+        }
+        address {
+            color: $smart_5;
+            font-size: 1vw;
+        }
+        a {
+            color: $smart_5;
+            font-size: 1vw;
+        }
+        p {
+            color: $smart_5;
+            font-size: 1vw;
+        }
+    }
+}

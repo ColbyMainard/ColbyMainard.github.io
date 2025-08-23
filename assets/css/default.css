@@ -1,0 +1,572 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
+/* Desert Dawn color palette from https://colormagic.app/palette/689f63d900aacad274865dda */
+/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
+/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
+/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
+/* 90s Anime color palette from https://colormagic.app/palette/671d8e4ae9810edeaccc9737 */
+/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
+/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
+/* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
+html {
+  scroll-behavior: smooth; }
+
+header {
+  text-align: center;
+  background-color: #1a1a1e;
+  font-family: "Times New Roman", Times, serif; }
+  header h1 {
+    color: #a0a0b0;
+    font-size: 5vw; }
+  header h2 {
+    color: #a0a0b0;
+    font-size: 3vw; }
+  header h3 {
+    color: #a0a0b0;
+    font-size: 2vw; }
+  header p {
+    color: #6b6b70;
+    font-size: 1vw; }
+  header .pageMenu {
+    text-align: center;
+    color: #1a1a1e;
+    background-color: #d4d4d9;
+    font-size: 1vw; }
+    header .pageMenu a {
+      color: #1a1a1e;
+      font-size: 1vw; }
+    header .pageMenu button {
+      color: #1a1a1e;
+      font-size: 1vw;
+      margin: auto; }
+  header .siteMenu {
+    text-align: center;
+    color: #d4d4d9;
+    font-size: 1vw; }
+    header .siteMenu a {
+      color: #6b6b70;
+      font-size: 1vw; }
+    header .siteMenu button {
+      color: #1a1a1e;
+      background-color: #d4d4d9;
+      font-size: 1vw;
+      margin: auto; }
+
+body {
+  margin: auto;
+  text-align: center;
+  background-color: #3e3e41;
+  font-family: Garamond, serif; }
+  body h1 {
+    color: #d4d4d9;
+    font-size: 5vw; }
+  body h2 {
+    color: #d4d4d9;
+    font-size: 3vw; }
+  body h3 {
+    color: #d4d4d9;
+    font-size: 2vw; }
+  body p {
+    color: #a0a0b0;
+    font-size: 1vw; }
+
+.workHistory {
+  margin: auto;
+  text-align: left;
+  background-color: #34495E;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .workHistory h1 {
+    color: #5D6D7E;
+    font-size: 5vw; }
+  .workHistory h2 {
+    color: #85929E;
+    font-size: 3vw; }
+  .workHistory h3 {
+    color: #AAB7B8;
+    font-size: 2vw; }
+  .workHistory p {
+    color: #D5D5DB;
+    font-size: 1vw; }
+  .workHistory button {
+    display: flex;
+    color: #D5D5DB;
+    background-color: #34495E;
+    justify-content: center;
+    font-size: 1vw; }
+
+.education {
+  margin: auto;
+  text-align: left;
+  background-color: maroon;
+  width: 80%;
+  border-radius: 10px; }
+  .education h1 {
+    color: white;
+    font-size: 5vw; }
+  .education h2 {
+    color: white;
+    font-size: 3vw; }
+  .education h3 {
+    color: white;
+    font-size: 2vw; }
+  .education p {
+    color: white;
+    font-size: 1vw; }
+  .education ul li {
+    color: white;
+    font-size: 1vw; }
+  .education table {
+    color: white;
+    font-size: 1vw;
+    border-color: white;
+    border-style: solid; }
+    .education table tr th {
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double; }
+    .education table tr td {
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove; }
+  .education button {
+    display: flex;
+    color: white;
+    background-color: maroon;
+    justify-content: center;
+    font-size: 1vw; }
+
+.projects {
+  margin: auto;
+  text-align: left;
+  background-color: #1c1a3d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace; }
+  .projects h1 {
+    color: #f1e0ff;
+    font-size: 5vw; }
+  .projects h2 {
+    color: #f1e0ff;
+    font-size: 3vw; }
+  .projects h3 {
+    color: #f1e0ff;
+    font-size: 2vw; }
+  .projects p {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  .projects a {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  .projects button {
+    display: flex;
+    color: #f1e0ff;
+    background-color: #1c1a3d;
+    justify-content: center;
+    font-size: 1vw; }
+
+.technicalSkills {
+  margin: auto;
+  text-align: left;
+  background-color: black;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace; }
+  .technicalSkills h1 {
+    color: greenyellow;
+    font-size: 5vw; }
+  .technicalSkills h2 {
+    color: greenyellow;
+    font-size: 3vw; }
+  .technicalSkills h3 {
+    color: greenyellow;
+    font-size: 2vw; }
+  .technicalSkills p {
+    color: greenyellow;
+    font-size: 1vw; }
+  .technicalSkills ul li {
+    color: greenyellow;
+    font-size: 1vw; }
+  .technicalSkills button {
+    display: flex;
+    color: greenyellow;
+    background-color: black;
+    justify-content: center;
+    font-size: 1vw; }
+
+.otherSkills {
+  margin: auto;
+  text-align: left;
+  background-color: #d33131;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Lucida Handwriting", cursive; }
+  .otherSkills h1 {
+    color: #ffb84d;
+    font-size: 5vw; }
+  .otherSkills h2 {
+    color: #ff9900;
+    font-size: 3vw; }
+  .otherSkills h3 {
+    color: #ff9900;
+    font-size: 2vw; }
+  .otherSkills p {
+    color: #ff9900;
+    font-size: 1vw; }
+  .otherSkills ul li {
+    color: #ff9900;
+    font-size: 1vw; }
+  .otherSkills button {
+    display: flex;
+    color: #ff9900;
+    background-color: #d33131;
+    justify-content: center;
+    font-size: 1vw; }
+
+.certifications {
+  margin: auto;
+  text-align: left;
+  background-color: #990000;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace; }
+  .certifications h1 {
+    color: #ffcc00;
+    font-size: 5vw; }
+  .certifications h2 {
+    color: #ffcc00;
+    font-size: 3vw; }
+  .certifications h3 {
+    color: #ffcc00;
+    font-size: 2vw; }
+  .certifications p {
+    color: #ffcc00;
+    font-size: 1vw; }
+  .certifications ul li {
+    color: #ffcc00;
+    font-size: 1vw; }
+  .certifications button {
+    display: flex;
+    color: #ffcc00;
+    background-color: #990000;
+    justify-content: center;
+    font-size: 1vw; }
+
+.fitness {
+  margin: auto;
+  text-align: left;
+  background-color: #d33131;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .fitness h1 {
+    color: #ffb84d;
+    font-size: 5vw; }
+  .fitness h2 {
+    color: #ff9900;
+    font-size: 3vw; }
+  .fitness h3 {
+    color: #ff9900;
+    font-size: 2vw; }
+  .fitness p {
+    color: #ff9900;
+    font-size: 1vw; }
+  .fitness ul li {
+    color: #ff9900;
+    font-size: 1vw; }
+  .fitness a {
+    color: #ff9900;
+    font-size: 1vw; }
+
+.quantumComputing {
+  margin: auto;
+  text-align: left;
+  background-color: #34495E;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .quantumComputing img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 1%; }
+  .quantumComputing h1 {
+    color: #D5D5DB;
+    font-size: 5vw; }
+  .quantumComputing h2 {
+    color: #AAB7B8;
+    font-size: 3vw; }
+  .quantumComputing h3 {
+    color: #85929E;
+    font-size: 2vw; }
+  .quantumComputing p {
+    color: #5D6D7E;
+    font-size: 1vw; }
+  .quantumComputing a {
+    color: #5D6D7E;
+    font-size: 1vw; }
+  .quantumComputing ul li {
+    color: #5D6D7E;
+    font-size: 1vw; }
+
+.photography {
+  margin: auto;
+  text-align: left;
+  background-color: #4f9c7e;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Lucida Handwriting", cursive; }
+  .photography img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 1%; }
+  .photography h1 {
+    color: #e7693c;
+    font-size: 5vw; }
+  .photography h2 {
+    color: #f5a524;
+    font-size: 3vw; }
+  .photography h3 {
+    color: #f5a524;
+    font-size: 2vw; }
+  .photography p {
+    color: #f6e0a2;
+    font-size: 1vw; }
+  .photography a {
+    color: #f6e0a2;
+    font-size: 1vw; }
+
+.dungeonsAndDragons {
+  margin: auto;
+  text-align: left;
+  background-color: #4c3e3e;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Lucida Handwriting", cursive; }
+  .dungeonsAndDragons img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 1%; }
+  .dungeonsAndDragons h1 {
+    color: #d1945c;
+    font-size: 5vw; }
+  .dungeonsAndDragons h2 {
+    color: #d1945c;
+    font-size: 3vw; }
+  .dungeonsAndDragons h3 {
+    color: #d1945c;
+    font-size: 2vw; }
+  .dungeonsAndDragons p {
+    color: #d1945c;
+    font-size: 1vw; }
+  .dungeonsAndDragons a {
+    color: #d1945c;
+    font-size: 1vw; }
+  .dungeonsAndDragons ul li {
+    color: #d1945c;
+    font-size: 1vw; }
+
+.history {
+  margin: auto;
+  text-align: left;
+  background-color: #3c4b86;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Lucida Handwriting", cursive; }
+  .history img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 1%; }
+  .history h1 {
+    color: #d4aa8c;
+    font-size: 5vw; }
+  .history h2 {
+    color: #b56a5a;
+    font-size: 3vw; }
+  .history h3 {
+    color: #b56a5a;
+    font-size: 2vw; }
+  .history p {
+    color: #b56a5a;
+    font-size: 1vw; }
+  .history blockquote {
+    color: #b56a5a;
+    font-size: 1.5vw; }
+  .history a {
+    color: #b56a5a;
+    font-size: 1vw; }
+  .history ul li {
+    color: #b56a5a;
+    font-size: 1vw; }
+  .history table {
+    border-color: #3c4b86;
+    border-style: solid; }
+    .history table tr th {
+      color: #b56a5a;
+      font-size: 1vw;
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double; }
+      .history table tr th a {
+        color: #b56a5a;
+        font-size: 1vw; }
+    .history table tr td {
+      color: #b56a5a;
+      font-size: 1vw;
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove; }
+      .history table tr td a {
+        color: #b56a5a;
+        font-size: 1vw; }
+
+.LLMOpinions {
+  margin: auto;
+  text-align: left;
+  background-color: #200b4b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .LLMOpinions h1 {
+    font-size: 5vw;
+    color: #ff3d94; }
+  .LLMOpinions h2 {
+    font-size: 3vw;
+    color: #b5307e; }
+  .LLMOpinions h3 {
+    font-size: 2vw;
+    color: #6a2a98; }
+  .LLMOpinions a {
+    font-size: 1vw;
+    color: #3f1c6d; }
+  .LLMOpinions p {
+    font-size: 1vw;
+    color: #3f1c6d; }
+  .LLMOpinions blockquote {
+    font-size: 1.5vw;
+    color: #3f1c6d; }
+
+.AppStores {
+  margin: auto;
+  text-align: left;
+  background-color: #5c6b8a;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .AppStores h1 {
+    font-size: 5vw;
+    color: #a2b8d2; }
+  .AppStores h2 {
+    font-size: 3vw;
+    color: #f5c9a8; }
+  .AppStores h3 {
+    font-size: 2vw;
+    color: #f07838; }
+  .AppStores a {
+    font-size: 1vw;
+    color: #f07838; }
+  .AppStores p {
+    font-size: 1vw;
+    color: #f07838; }
+
+.KissMySaaS {
+  margin: auto;
+  text-align: left;
+  background-color: #691b1e;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .KissMySaaS h1 {
+    font-size: 5vw;
+    color: #b82d28; }
+  .KissMySaaS h2 {
+    font-size: 3vw;
+    color: #f05660; }
+  .KissMySaaS h3 {
+    font-size: 2vw;
+    color: #f9a68b; }
+  .KissMySaaS a {
+    font-size: 1vw;
+    color: #fce3d4; }
+  .KissMySaaS ul li {
+    font-size: 1vw;
+    color: #fce3d4; }
+  .KissMySaaS p {
+    font-size: 1vw;
+    color: #fce3d4; }
+
+.PrivacyStance {
+  margin: auto;
+  text-align: left;
+  background-color: #ff6e61;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif; }
+  .PrivacyStance h1 {
+    font-size: 5vw;
+    color: #ffb84d; }
+  .PrivacyStance h2 {
+    font-size: 3vw;
+    color: #6d9dc5; }
+  .PrivacyStance h3 {
+    font-size: 2vw;
+    color: #5e4b8b; }
+  .PrivacyStance a {
+    font-size: 1vw;
+    color: #da1b61; }
+  .PrivacyStance ul li {
+    font-size: 1vw;
+    color: #da1b61; }
+  .PrivacyStance p {
+    font-size: 1vw;
+    color: #da1b61; }
+  .PrivacyStance blockquote {
+    font-size: 1.5vw;
+    color: #da1b61; }
+
+footer {
+  text-align: center;
+  background-color: #1c1a3d;
+  font-family: "Times New Roman", Times, serif; }
+  footer .contactMe h1 {
+    font-size: 5vw;
+    color: #4a4e8c; }
+  footer .contactMe h2 {
+    font-size: 3vw;
+    color: #8d7d9b; }
+  footer .contactMe h3 {
+    font-size: 2vw;
+    color: #d1c3e9; }
+  footer .contactMe address {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  footer .contactMe a {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  footer .contactMe p {
+    color: #f1e0ff;
+    font-size: 1vw; }
+
+/*# sourceMappingURL=default.css.map */
