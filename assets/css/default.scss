@@ -71,7 +71,6 @@ $cyberpunk_dreams_4: #3f1c6d;
 $cyberpunk_dreams_5: #200b4b;
 
 /* 90s Anime color palette from https://colormagic.app/palette/671d8e4ae9810edeaccc9737 */
-
 $anime_90s_1: #ff6e61;
 $anime_90s_2: #ffb84d;
 $anime_90s_3: #6d9dc5;
@@ -127,10 +126,25 @@ header {
     }
     .pageMenu {
         text-align: center;
-        color: $noir_1;
         background-color: $noir_5;
         font-size: 1vw;
-        a {
+        /* unvisited link */
+        a:link {
+            color: $noir_1;
+            font-size: 1vw;
+        }
+        /* visited link */
+        a:visited {
+            color: $noir_1;
+            font-size: 1vw;
+        }
+        /* mouse over link */
+        a:hover {
+            color: $noir_1;
+            font-size: 1vw;
+        }
+        /* selected link */
+        a:active {
             color: $noir_1;
             font-size: 1vw;
         }
@@ -144,7 +158,23 @@ header {
         text-align: center;
         color: $noir_5;
         font-size: 1vw;
-        a {
+        /* unvisited link */
+        a:link {
+            color: $noir_3;
+            font-size: 1vw;
+        }
+        /* visited link */
+        a:visited {
+            color: $noir_3;
+            font-size: 1vw;
+        }
+        /* mouse over link */
+        a:hover {
+            color: $noir_3;
+            font-size: 1vw;
+        }
+        /* selected link */
+        a:active {
             color: $noir_3;
             font-size: 1vw;
         }
@@ -292,7 +322,23 @@ body {
         color: $smart_5;
         font-size: 1vw;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        color: $smart_5;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $smart_5;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $smart_5;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
         color: $smart_5;
         font-size: 1vw;
     }
@@ -448,7 +494,23 @@ body {
             font-size: 1vw;
         }
     }
-    a {
+    /* unvisited link */
+    a:link {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
         color: $sunset_glow_2;
         font-size: 1vw;
     }
@@ -485,7 +547,22 @@ body {
         color: $calm_authority_2;
         font-size: 1vw;
     }
-    a {
+    a:link {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
         color: $calm_authority_2;
         font-size: 1vw;
     }
@@ -528,7 +605,22 @@ body {
         color: $vivid_terrain_3;
         font-size: 1vw;
     }
-    a {
+    a:link {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
         color: $vivid_terrain_3;
         font-size: 1vw;
     }
@@ -565,7 +657,23 @@ body {
         color: $dungeons_and_dragons_5;
         font-size: 1vw;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        color: $dungeons_and_dragons_5;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $dungeons_and_dragons_5;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $dungeons_and_dragons_5;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
         color: $dungeons_and_dragons_5;
         font-size: 1vw;
     }
@@ -612,7 +720,23 @@ body {
         color: $shades_of_brown_2;
         font-size: 1.5vw;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
         color: $shades_of_brown_2;
         font-size: 1vw;
     }
@@ -633,7 +757,23 @@ body {
                 border-right-style: double;
                 border-bottom-style: double;
                 border-left-style: double;
-                a {
+                /* unvisited link */
+                a:link {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
                     color: $shades_of_brown_2;
                     font-size: 1vw;
                 }
@@ -645,7 +785,23 @@ body {
                 border-right-style: groove;
                 border-bottom-style: groove;
                 border-left-style: groove;
-                a {
+                /* unvisited link */
+                a:link {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
                     color: $shades_of_brown_2;
                     font-size: 1vw;
                 }
@@ -673,7 +829,23 @@ body {
         font-size: 2vw;
         color: $cyberpunk_dreams_3;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    /* selected link */
+    a:active {
         font-size: 1vw;
         color: $cyberpunk_dreams_4;
     }
@@ -706,7 +878,23 @@ body {
         font-size: 2vw;
         color: $disturbed_4;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    /* selected link */
+    a:active {
         font-size: 1vw;
         color: $disturbed_4;
     }
@@ -735,7 +923,23 @@ body {
         font-size: 2vw;
         color: $blood_moon_4;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    /* selected link */
+    a:active {
         font-size: 1vw;
         color: $blood_moon_5;
     }
@@ -770,7 +974,23 @@ body {
         font-size: 2vw;
         color: $anime_90s_4;
     }
-    a {
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $anime_90s_5;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $anime_90s_5;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $anime_90s_5;
+    }
+    /* selected link */
+    a:active {
         font-size: 1vw;
         color: $anime_90s_5;
     }
@@ -811,7 +1031,23 @@ footer {
             color: $smart_5;
             font-size: 1vw;
         }
-        a {
+        /* unvisited link */
+        a:link {
+            color: $smart_5;
+            font-size: 1vw;
+        }
+        /* visited link */
+        a:visited {
+            color: $smart_5;
+            font-size: 1vw;
+        }
+        /* mouse over link */
+        a:hover {
+            color: $smart_5;
+            font-size: 1vw;
+        }
+        /* selected link */
+        a:active {
             color: $smart_5;
             font-size: 1vw;
         }

@@ -35,10 +35,22 @@ header {
     font-size: 1vw; }
   header .pageMenu {
     text-align: center;
-    color: #1a1a1e;
     background-color: #d4d4d9;
-    font-size: 1vw; }
-    header .pageMenu a {
+    font-size: 1vw;
+    /* unvisited link */
+    /* visited link */
+    /* mouse over link */
+    /* selected link */ }
+    header .pageMenu a:link {
+      color: #1a1a1e;
+      font-size: 1vw; }
+    header .pageMenu a:visited {
+      color: #1a1a1e;
+      font-size: 1vw; }
+    header .pageMenu a:hover {
+      color: #1a1a1e;
+      font-size: 1vw; }
+    header .pageMenu a:active {
       color: #1a1a1e;
       font-size: 1vw; }
     header .pageMenu button {
@@ -48,8 +60,21 @@ header {
   header .siteMenu {
     text-align: center;
     color: #d4d4d9;
-    font-size: 1vw; }
-    header .siteMenu a {
+    font-size: 1vw;
+    /* unvisited link */
+    /* visited link */
+    /* mouse over link */
+    /* selected link */ }
+    header .siteMenu a:link {
+      color: #6b6b70;
+      font-size: 1vw; }
+    header .siteMenu a:visited {
+      color: #6b6b70;
+      font-size: 1vw; }
+    header .siteMenu a:hover {
+      color: #6b6b70;
+      font-size: 1vw; }
+    header .siteMenu a:active {
       color: #6b6b70;
       font-size: 1vw; }
     header .siteMenu button {
@@ -151,7 +176,11 @@ body {
   background-color: #1c1a3d;
   width: 80%;
   border-radius: 10px;
-  font-family: "Courier New", monospace; }
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .projects h1 {
     color: #f1e0ff;
     font-size: 5vw; }
@@ -164,7 +193,16 @@ body {
   .projects p {
     color: #f1e0ff;
     font-size: 1vw; }
-  .projects a {
+  .projects a:link {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  .projects a:visited {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  .projects a:hover {
+    color: #f1e0ff;
+    font-size: 1vw; }
+  .projects a:active {
     color: #f1e0ff;
     font-size: 1vw; }
   .projects button {
@@ -267,7 +305,11 @@ body {
   background-color: #d33131;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .fitness h1 {
     color: #ffb84d;
     font-size: 5vw; }
@@ -283,7 +325,16 @@ body {
   .fitness ul li {
     color: #ff9900;
     font-size: 1vw; }
-  .fitness a {
+  .fitness a:link {
+    color: #ff9900;
+    font-size: 1vw; }
+  .fitness a:visited {
+    color: #ff9900;
+    font-size: 1vw; }
+  .fitness a:hover {
+    color: #ff9900;
+    font-size: 1vw; }
+  .fitness a:active {
     color: #ff9900;
     font-size: 1vw; }
 
@@ -293,7 +344,10 @@ body {
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: Tahoma, Verdana, sans-serif;
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .quantumComputing img {
     display: block;
     margin-left: auto;
@@ -313,7 +367,16 @@ body {
   .quantumComputing p {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing a {
+  .quantumComputing a:link {
+    color: #5D6D7E;
+    font-size: 1vw; }
+  .quantumComputing a:visited {
+    color: #5D6D7E;
+    font-size: 1vw; }
+  .quantumComputing a:hover {
+    color: #5D6D7E;
+    font-size: 1vw; }
+  .quantumComputing a:active {
     color: #5D6D7E;
     font-size: 1vw; }
   .quantumComputing ul li {
@@ -326,7 +389,10 @@ body {
   background-color: #4f9c7e;
   width: 80%;
   border-radius: 10px;
-  font-family: "Lucida Handwriting", cursive; }
+  font-family: "Lucida Handwriting", cursive;
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .photography img {
     display: block;
     margin-left: auto;
@@ -346,7 +412,16 @@ body {
   .photography p {
     color: #f6e0a2;
     font-size: 1vw; }
-  .photography a {
+  .photography a:link {
+    color: #f6e0a2;
+    font-size: 1vw; }
+  .photography a:visited {
+    color: #f6e0a2;
+    font-size: 1vw; }
+  .photography a:hover {
+    color: #f6e0a2;
+    font-size: 1vw; }
+  .photography a:active {
     color: #f6e0a2;
     font-size: 1vw; }
 
@@ -356,7 +431,11 @@ body {
   background-color: #4c3e3e;
   width: 80%;
   border-radius: 10px;
-  font-family: "Lucida Handwriting", cursive; }
+  font-family: "Lucida Handwriting", cursive;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .dungeonsAndDragons img {
     display: block;
     margin-left: auto;
@@ -376,7 +455,16 @@ body {
   .dungeonsAndDragons p {
     color: #d1945c;
     font-size: 1vw; }
-  .dungeonsAndDragons a {
+  .dungeonsAndDragons a:link {
+    color: #d1945c;
+    font-size: 1vw; }
+  .dungeonsAndDragons a:visited {
+    color: #d1945c;
+    font-size: 1vw; }
+  .dungeonsAndDragons a:hover {
+    color: #d1945c;
+    font-size: 1vw; }
+  .dungeonsAndDragons a:active {
     color: #d1945c;
     font-size: 1vw; }
   .dungeonsAndDragons ul li {
@@ -389,7 +477,11 @@ body {
   background-color: #3c4b86;
   width: 80%;
   border-radius: 10px;
-  font-family: "Lucida Handwriting", cursive; }
+  font-family: "Lucida Handwriting", cursive;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .history img {
     display: block;
     margin-left: auto;
@@ -412,7 +504,16 @@ body {
   .history blockquote {
     color: #b56a5a;
     font-size: 1.5vw; }
-  .history a {
+  .history a:link {
+    color: #b56a5a;
+    font-size: 1vw; }
+  .history a:visited {
+    color: #b56a5a;
+    font-size: 1vw; }
+  .history a:hover {
+    color: #b56a5a;
+    font-size: 1vw; }
+  .history a:active {
     color: #b56a5a;
     font-size: 1vw; }
   .history ul li {
@@ -427,8 +528,21 @@ body {
       border-top-style: double;
       border-right-style: double;
       border-bottom-style: double;
-      border-left-style: double; }
-      .history table tr th a {
+      border-left-style: double;
+      /* unvisited link */
+      /* visited link */
+      /* mouse over link */
+      /* selected link */ }
+      .history table tr th a:link {
+        color: #b56a5a;
+        font-size: 1vw; }
+      .history table tr th a:visited {
+        color: #b56a5a;
+        font-size: 1vw; }
+      .history table tr th a:hover {
+        color: #b56a5a;
+        font-size: 1vw; }
+      .history table tr th a:active {
         color: #b56a5a;
         font-size: 1vw; }
     .history table tr td {
@@ -437,8 +551,21 @@ body {
       border-top-style: groove;
       border-right-style: groove;
       border-bottom-style: groove;
-      border-left-style: groove; }
-      .history table tr td a {
+      border-left-style: groove;
+      /* unvisited link */
+      /* visited link */
+      /* mouse over link */
+      /* selected link */ }
+      .history table tr td a:link {
+        color: #b56a5a;
+        font-size: 1vw; }
+      .history table tr td a:visited {
+        color: #b56a5a;
+        font-size: 1vw; }
+      .history table tr td a:hover {
+        color: #b56a5a;
+        font-size: 1vw; }
+      .history table tr td a:active {
         color: #b56a5a;
         font-size: 1vw; }
 
@@ -448,7 +575,11 @@ body {
   background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .LLMOpinions h1 {
     font-size: 5vw;
     color: #ff3d94; }
@@ -458,7 +589,16 @@ body {
   .LLMOpinions h3 {
     font-size: 2vw;
     color: #6a2a98; }
-  .LLMOpinions a {
+  .LLMOpinions a:link {
+    font-size: 1vw;
+    color: #3f1c6d; }
+  .LLMOpinions a:visited {
+    font-size: 1vw;
+    color: #3f1c6d; }
+  .LLMOpinions a:hover {
+    font-size: 1vw;
+    color: #3f1c6d; }
+  .LLMOpinions a:active {
     font-size: 1vw;
     color: #3f1c6d; }
   .LLMOpinions p {
@@ -474,7 +614,11 @@ body {
   background-color: #5c6b8a;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .AppStores h1 {
     font-size: 5vw;
     color: #a2b8d2; }
@@ -484,7 +628,16 @@ body {
   .AppStores h3 {
     font-size: 2vw;
     color: #f07838; }
-  .AppStores a {
+  .AppStores a:link {
+    font-size: 1vw;
+    color: #f07838; }
+  .AppStores a:visited {
+    font-size: 1vw;
+    color: #f07838; }
+  .AppStores a:hover {
+    font-size: 1vw;
+    color: #f07838; }
+  .AppStores a:active {
     font-size: 1vw;
     color: #f07838; }
   .AppStores p {
@@ -497,7 +650,11 @@ body {
   background-color: #691b1e;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .KissMySaaS h1 {
     font-size: 5vw;
     color: #b82d28; }
@@ -507,7 +664,16 @@ body {
   .KissMySaaS h3 {
     font-size: 2vw;
     color: #f9a68b; }
-  .KissMySaaS a {
+  .KissMySaaS a:link {
+    font-size: 1vw;
+    color: #fce3d4; }
+  .KissMySaaS a:visited {
+    font-size: 1vw;
+    color: #fce3d4; }
+  .KissMySaaS a:hover {
+    font-size: 1vw;
+    color: #fce3d4; }
+  .KissMySaaS a:active {
     font-size: 1vw;
     color: #fce3d4; }
   .KissMySaaS ul li {
@@ -523,7 +689,11 @@ body {
   background-color: #ff6e61;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   .PrivacyStance h1 {
     font-size: 5vw;
     color: #ffb84d; }
@@ -533,7 +703,16 @@ body {
   .PrivacyStance h3 {
     font-size: 2vw;
     color: #5e4b8b; }
-  .PrivacyStance a {
+  .PrivacyStance a:link {
+    font-size: 1vw;
+    color: #da1b61; }
+  .PrivacyStance a:visited {
+    font-size: 1vw;
+    color: #da1b61; }
+  .PrivacyStance a:hover {
+    font-size: 1vw;
+    color: #da1b61; }
+  .PrivacyStance a:active {
     font-size: 1vw;
     color: #da1b61; }
   .PrivacyStance ul li {
@@ -550,23 +729,37 @@ footer {
   text-align: center;
   background-color: #1c1a3d;
   font-family: "Times New Roman", Times, serif; }
-  footer .contactMe h1 {
-    font-size: 5vw;
-    color: #4a4e8c; }
-  footer .contactMe h2 {
-    font-size: 3vw;
-    color: #8d7d9b; }
-  footer .contactMe h3 {
-    font-size: 2vw;
-    color: #d1c3e9; }
-  footer .contactMe address {
-    color: #f1e0ff;
-    font-size: 1vw; }
-  footer .contactMe a {
-    color: #f1e0ff;
-    font-size: 1vw; }
-  footer .contactMe p {
-    color: #f1e0ff;
-    font-size: 1vw; }
+  footer .contactMe {
+    /* unvisited link */
+    /* visited link */
+    /* mouse over link */
+    /* selected link */ }
+    footer .contactMe h1 {
+      font-size: 5vw;
+      color: #4a4e8c; }
+    footer .contactMe h2 {
+      font-size: 3vw;
+      color: #8d7d9b; }
+    footer .contactMe h3 {
+      font-size: 2vw;
+      color: #d1c3e9; }
+    footer .contactMe address {
+      color: #f1e0ff;
+      font-size: 1vw; }
+    footer .contactMe a:link {
+      color: #f1e0ff;
+      font-size: 1vw; }
+    footer .contactMe a:visited {
+      color: #f1e0ff;
+      font-size: 1vw; }
+    footer .contactMe a:hover {
+      color: #f1e0ff;
+      font-size: 1vw; }
+    footer .contactMe a:active {
+      color: #f1e0ff;
+      font-size: 1vw; }
+    footer .contactMe p {
+      color: #f1e0ff;
+      font-size: 1vw; }
 
 /*# sourceMappingURL=default.css.map */
