@@ -36,23 +36,7 @@ header {
   header .pageMenu {
     text-align: center;
     background-color: #d4d4d9;
-    font-size: 1vw;
-    /* unvisited link */
-    /* visited link */
-    /* mouse over link */
-    /* selected link */ }
-    header .pageMenu a:link {
-      color: #1a1a1e;
-      font-size: 1vw; }
-    header .pageMenu a:visited {
-      color: #1a1a1e;
-      font-size: 1vw; }
-    header .pageMenu a:hover {
-      color: #1a1a1e;
-      font-size: 1vw; }
-    header .pageMenu a:active {
-      color: #1a1a1e;
-      font-size: 1vw; }
+    font-size: 1.5vw; }
     header .pageMenu button {
       color: #1a1a1e;
       font-size: 1vw;
@@ -60,27 +44,11 @@ header {
   header .siteMenu {
     text-align: center;
     color: #d4d4d9;
-    font-size: 1vw;
-    /* unvisited link */
-    /* visited link */
-    /* mouse over link */
-    /* selected link */ }
-    header .siteMenu a:link {
-      color: #6b6b70;
-      font-size: 1vw; }
-    header .siteMenu a:visited {
-      color: #6b6b70;
-      font-size: 1vw; }
-    header .siteMenu a:hover {
-      color: #6b6b70;
-      font-size: 1vw; }
-    header .siteMenu a:active {
-      color: #6b6b70;
-      font-size: 1vw; }
+    font-size: 1vw; }
     header .siteMenu button {
       color: #1a1a1e;
       background-color: #d4d4d9;
-      font-size: 1vw;
+      font-size: 1.5vw;
       margin: auto; }
 
 body {
@@ -520,54 +488,58 @@ body {
     color: #b56a5a;
     font-size: 1vw; }
   .history table {
-    border-color: #3c4b86;
+    border-color: #b56a5a;
     border-style: solid; }
-    .history table tr th {
-      color: #b56a5a;
-      font-size: 1vw;
-      border-top-style: double;
-      border-right-style: double;
-      border-bottom-style: double;
-      border-left-style: double;
-      /* unvisited link */
-      /* visited link */
-      /* mouse over link */
-      /* selected link */ }
-      .history table tr th a:link {
+    .history table tr {
+      border-color: #b56a5a; }
+      .history table tr th {
+        border-color: #b56a5a;
         color: #b56a5a;
-        font-size: 1vw; }
-      .history table tr th a:visited {
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double;
+        /* unvisited link */
+        /* visited link */
+        /* mouse over link */
+        /* selected link */ }
+        .history table tr th a:link {
+          color: #b56a5a;
+          font-size: 1vw; }
+        .history table tr th a:visited {
+          color: #b56a5a;
+          font-size: 1vw; }
+        .history table tr th a:hover {
+          color: #b56a5a;
+          font-size: 1vw; }
+        .history table tr th a:active {
+          color: #b56a5a;
+          font-size: 1vw; }
+      .history table tr td {
+        border-color: #b56a5a;
         color: #b56a5a;
-        font-size: 1vw; }
-      .history table tr th a:hover {
-        color: #b56a5a;
-        font-size: 1vw; }
-      .history table tr th a:active {
-        color: #b56a5a;
-        font-size: 1vw; }
-    .history table tr td {
-      color: #b56a5a;
-      font-size: 1vw;
-      border-top-style: groove;
-      border-right-style: groove;
-      border-bottom-style: groove;
-      border-left-style: groove;
-      /* unvisited link */
-      /* visited link */
-      /* mouse over link */
-      /* selected link */ }
-      .history table tr td a:link {
-        color: #b56a5a;
-        font-size: 1vw; }
-      .history table tr td a:visited {
-        color: #b56a5a;
-        font-size: 1vw; }
-      .history table tr td a:hover {
-        color: #b56a5a;
-        font-size: 1vw; }
-      .history table tr td a:active {
-        color: #b56a5a;
-        font-size: 1vw; }
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove;
+        /* unvisited link */
+        /* visited link */
+        /* mouse over link */
+        /* selected link */ }
+        .history table tr td a:link {
+          color: #b56a5a;
+          font-size: 1vw; }
+        .history table tr td a:visited {
+          color: #b56a5a;
+          font-size: 1vw; }
+        .history table tr td a:hover {
+          color: #b56a5a;
+          font-size: 1vw; }
+        .history table tr td a:active {
+          color: #b56a5a;
+          font-size: 1vw; }
 
 .LLMOpinions {
   margin: auto;

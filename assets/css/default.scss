@@ -127,27 +127,7 @@ header {
     .pageMenu {
         text-align: center;
         background-color: $noir_5;
-        font-size: 1vw;
-        /* unvisited link */
-        a:link {
-            color: $noir_1;
-            font-size: 1vw;
-        }
-        /* visited link */
-        a:visited {
-            color: $noir_1;
-            font-size: 1vw;
-        }
-        /* mouse over link */
-        a:hover {
-            color: $noir_1;
-            font-size: 1vw;
-        }
-        /* selected link */
-        a:active {
-            color: $noir_1;
-            font-size: 1vw;
-        }
+        font-size: 1.5vw;
         button {
             color: $noir_1;
             font-size: 1vw;
@@ -158,30 +138,10 @@ header {
         text-align: center;
         color: $noir_5;
         font-size: 1vw;
-        /* unvisited link */
-        a:link {
-            color: $noir_3;
-            font-size: 1vw;
-        }
-        /* visited link */
-        a:visited {
-            color: $noir_3;
-            font-size: 1vw;
-        }
-        /* mouse over link */
-        a:hover {
-            color: $noir_3;
-            font-size: 1vw;
-        }
-        /* selected link */
-        a:active {
-            color: $noir_3;
-            font-size: 1vw;
-        }
         button {
             color: $noir_1;
             background-color: $noir_5;
-            font-size: 1vw;
+            font-size: 1.5vw;
             margin:auto;
         }
     }
@@ -747,10 +707,12 @@ body {
         }
     }
     table {
-        border-color: $shades_of_brown_5;
+        border-color: $shades_of_brown_2;
         border-style: solid;
         tr {
+            border-color: $shades_of_brown_2;
             th {
+                border-color: $shades_of_brown_2;
                 color: $shades_of_brown_2;
                 font-size: 1vw;
                 border-top-style: double;
@@ -779,6 +741,7 @@ body {
                 }
             }
             td {
+                border-color: $shades_of_brown_2;
                 color: $shades_of_brown_2;
                 font-size: 1vw;
                 border-top-style: groove;
