@@ -1,4 +1,4 @@
 # ignore vscode settings
 .vscode
 .sass-cache
-*.map
+./assets/css/default.css.map
