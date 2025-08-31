@@ -70,13 +70,6 @@ $cyberpunk_dreams_3: #6a2a98;
 $cyberpunk_dreams_4: #3f1c6d;
 $cyberpunk_dreams_5: #200b4b;
 
-/* 90s Anime color palette from https://colormagic.app/palette/671d8e4ae9810edeaccc9737 */
-$anime_90s_1: #ff6e61;
-$anime_90s_2: #ffb84d;
-$anime_90s_3: #6d9dc5;
-$anime_90s_4: #5e4b8b;
-$anime_90s_5: #da1b61;
-
 /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
 $luna_of_gale_1: #d6e4f5;
 $luna_of_gale_2: #a4c8df;
@@ -97,6 +90,13 @@ $disturbed_2: #a2b8d2;
 $disturbed_3: #f5c9a8;
 $disturbed_4: #f07838;
 $disturbed_5: #ba4c40;
+
+/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
+$digital_veil_1: #1f3a3d;
+$digital_veil_2: #2a7e7e;
+$digital_veil_3: #5bc5c8;
+$digital_veil_4: #a5e3e9;
+$digital_veil_5: #f0f4f5;
 
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
 
@@ -125,21 +125,18 @@ header {
         font-size: 1vw;
     }
     .pageMenu {
-        text-align: center;
         background-color: $noir_5;
+        font-size: 1vw;
         button {
             color: $noir_1;
-            font-size: 2vw;
             margin:auto;
         }
     }
     .siteMenu {
-        text-align: center;
-        color: $noir_5;
+        background-color: $noir_5;
+        font-size: 1vw;
         button {
             color: $noir_1;
-            background-color: $noir_5;
-            font-size: 2vw;
             margin:auto;
         }
     }
@@ -192,11 +189,10 @@ body {
         font-size: 1vw;
     }
     button {
-        display: flex;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $calm_authority_5;
-        align-self: center;
         background-color: $calm_authority_1;
-        justify-content: center;
         font-size: 1vw;
     }
 }
@@ -250,11 +246,10 @@ body {
         }
     }
     button {
-        display: flex;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color:white;
-        align-self: center;
         background-color: maroon;
-        justify-content: center;
         font-size: 1vw;
     }
 }
@@ -271,43 +266,42 @@ body {
         font-size: 5vw;
     }
     h2 {
-        color: $smart_5;
+        color: $smart_4;
         font-size: 3vw;
     }
     h3 {
-        color: $smart_5;
+        color: $smart_3;
         font-size: 2vw;
     }
     p {
-        color: $smart_5;
+        color: $smart_2;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
-        color: $smart_5;
+        color: $smart_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $smart_5;
+        color: $smart_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $smart_5;
+        color: $smart_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $smart_5;
+        color: $smart_3;
         font-size: 1vw;
     }
     button {
-        display: flex;
-        align-self: center;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $smart_5;
         background-color: $smart_1;
-        justify-content: center;
         font-size: 1vw;
     }
 }
@@ -342,12 +336,11 @@ body {
         }
     }
     button {
-        display: flex;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color:greenyellow;
         background-color: black;
-        justify-content: center;
         font-size: 1vw;
-        align-self: center;
     }
 }
 
@@ -381,12 +374,11 @@ body {
         }
     }
     button {
-        display: flex;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $sunset_glow_2;
         background-color: $sunset_glow_5;
-        justify-content: center;
         font-size: 1vw;
-        align-self: center;
     }
 }
 
@@ -420,12 +412,11 @@ body {
         }
     }
     button {
-        display: flex;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $gryffon_1;
         background-color: $gryffon_5;
-        justify-content: center;
         font-size: 1vw;
-        align-self: center;
     }
 }
 
@@ -476,6 +467,13 @@ body {
     /* selected link */
     a:active {
         color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $sunset_glow_2;
+        background-color: $sunset_glow_5;
         font-size: 1vw;
     }
 }
@@ -537,6 +535,13 @@ body {
             font-size: 1vw;
         }
     }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $calm_authority_2;
+        background-color: $calm_authority_5;
+        font-size: 1vw;
+    }
 }
 
 .photography {
@@ -577,7 +582,7 @@ body {
     }
     /* visited link */
     a:visited {
-        color: $vivid_terrain_3;
+        color: $vivid_terrain_2;
         font-size: 1vw;
     }
     /* mouse over link */
@@ -587,7 +592,14 @@ body {
     }
     /* selected link */
     a:active {
-        color: $vivid_terrain_3;
+        color: $vivid_terrain_2;
+        font-size: 1vw;
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $vivid_terrain_2;
+        background-color: $vivid_terrain_5;
         font-size: 1vw;
     }
 }
@@ -612,42 +624,49 @@ body {
         font-size: 5vw;
     }
     h2 {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_4;
         font-size: 3vw;
     }
     h3 {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_3;
         font-size: 2vw;
     }
     p {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_3;
         font-size: 1vw;
     }
     ul {
         li {
-            color: $dungeons_and_dragons_5;
+            color: $dungeons_and_dragons_2;
             font-size: 1vw;
         }
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $dungeons_and_dragons_2;
+        background-color: $dungeons_and_dragons_5;
+        font-size: 1vw;
     }
 }
 
@@ -693,7 +712,7 @@ body {
     }
     /* visited link */
     a:visited {
-        color: $shades_of_brown_2;
+        color: $shades_of_brown_3;
         font-size: 1vw;
     }
     /* mouse over link */
@@ -703,7 +722,7 @@ body {
     }
     /* selected link */
     a:active {
-        color: $shades_of_brown_2;
+        color: $shades_of_brown_3;
         font-size: 1vw;
     }
     ul {
@@ -732,7 +751,7 @@ body {
                 }
                 /* visited link */
                 a:visited {
-                    color: $shades_of_brown_2;
+                    color: $shades_of_brown_3;
                     font-size: 1vw;
                 }
                 /* mouse over link */
@@ -742,7 +761,7 @@ body {
                 }
                 /* selected link */
                 a:active {
-                    color: $shades_of_brown_2;
+                    color: $shades_of_brown_3;
                     font-size: 1vw;
                 }
             }
@@ -761,7 +780,7 @@ body {
                 }
                 /* visited link */
                 a:visited {
-                    color: $shades_of_brown_2;
+                    color: $shades_of_brown_3;
                     font-size: 1vw;
                 }
                 /* mouse over link */
@@ -771,11 +790,18 @@ body {
                 }
                 /* selected link */
                 a:active {
-                    color: $shades_of_brown_2;
+                    color: $shades_of_brown_3;
                     font-size: 1vw;
                 }
             }
         }
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $shades_of_brown_2;
+        background-color: $shades_of_brown_5;
+        font-size: 1vw;
     }
 }
 
@@ -801,7 +827,7 @@ body {
     /* unvisited link */
     a:link {
         font-size: 1vw;
-        color: $cyberpunk_dreams_4;
+        color: $cyberpunk_dreams_3;
     }
     /* visited link */
     a:visited {
@@ -811,7 +837,7 @@ body {
     /* mouse over link */
     a:hover {
         font-size: 1vw;
-        color: $cyberpunk_dreams_4;
+        color: $cyberpunk_dreams_3;
     }
     /* selected link */
     a:active {
@@ -820,11 +846,18 @@ body {
     }
     p {
         font-size: 1vw;
-        color: $cyberpunk_dreams_4;
+        color: $cyberpunk_dreams_3;
     }
     blockquote {
         font-size: 1.5vw;
-        color: $cyberpunk_dreams_4;
+        color: $cyberpunk_dreams_3;
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $cyberpunk_dreams_1;
+        background-color: $cyberpunk_dreams_5;
+        font-size: 1vw;
     }
 }
 
@@ -855,7 +888,7 @@ body {
     /* visited link */
     a:visited {
         font-size: 1vw;
-        color: $disturbed_4;
+        color: $disturbed_5;
     }
     /* mouse over link */
     a:hover {
@@ -865,11 +898,18 @@ body {
     /* selected link */
     a:active {
         font-size: 1vw;
-        color: $disturbed_4;
+        color: $disturbed_5;
     }
     p {
         font-size: 1vw;
         color: $disturbed_4;
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $disturbed_5;
+        background-color: $disturbed_1;
+        font-size: 1vw;
     }
 }
 
@@ -900,7 +940,7 @@ body {
     /* visited link */
     a:visited {
         font-size: 1vw;
-        color: $blood_moon_5;
+        color: $blood_moon_4;
     }
     /* mouse over link */
     a:hover {
@@ -910,7 +950,7 @@ body {
     /* selected link */
     a:active {
         font-size: 1vw;
-        color: $blood_moon_5;
+        color: $blood_moon_4;
     }
     ul {
         li {
@@ -922,60 +962,74 @@ body {
         font-size: 1vw;
         color: $blood_moon_5;
     }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $blood_moon_5;
+        background-color: $blood_moon_1;
+        font-size: 1vw;
+    }
 }
 
 .PrivacyStance {
     margin: auto;
     text-align: left;
-    background-color: $anime_90s_1;
+    background-color: $digital_veil_1;
     width: 80%;
     border-radius: 10px;
     font-family: Tahoma, Verdana, sans-serif;
     h1 {
         font-size: 5vw;
-        color: $anime_90s_2;
+        color: $digital_veil_5;
     }
     h2 {
         font-size: 3vw;
-        color: $anime_90s_3;
+        color: $digital_veil_4;
     }
     h3 {
         font-size: 2vw;
-        color: $anime_90s_4;
+        color: $digital_veil_3;
     }
     /* unvisited link */
     a:link {
         font-size: 1vw;
-        color: $anime_90s_5;
+        color: $digital_veil_2;
     }
     /* visited link */
     a:visited {
         font-size: 1vw;
-        color: $anime_90s_5;
+        color: $digital_veil_3;
     }
     /* mouse over link */
     a:hover {
         font-size: 1vw;
-        color: $anime_90s_5;
+        color: $digital_veil_2;
     }
     /* selected link */
     a:active {
         font-size: 1vw;
-        color: $anime_90s_5;
+        color: $digital_veil_3;
     }
     ul {
         li {
             font-size: 1vw;
-            color: $anime_90s_5;
+            color: $digital_veil_2;
         }
     }
     p {
         font-size: 1vw;
-        color: $anime_90s_5;
+        color: $digital_veil_2;
     }
     blockquote {
         font-size: 1.5vw;
-        color: $anime_90s_5;
+        color: $digital_veil_2;
+    }
+    button {
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $digital_veil_5;
+        background-color: $digital_veil_1;
+        font-size: 1vw;
     }
 }
 
@@ -1007,7 +1061,7 @@ footer {
         }
         /* visited link */
         a:visited {
-            color: $smart_5;
+            color: $smart_4;
             font-size: 1vw;
         }
         /* mouse over link */
@@ -1017,7 +1071,7 @@ footer {
         }
         /* selected link */
         a:active {
-            color: $smart_5;
+            color: $smart_4;
             font-size: 1vw;
         }
         p {

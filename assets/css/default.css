@@ -9,10 +9,10 @@
 /* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
 /* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
-/* 90s Anime color palette from https://colormagic.app/palette/671d8e4ae9810edeaccc9737 */
 /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
 /* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
 /* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
+/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
 html {
   scroll-behavior: smooth; }
@@ -34,19 +34,16 @@ header {
     color: #6b6b70;
     font-size: 1vw; }
   header .pageMenu {
-    text-align: center;
-    background-color: #d4d4d9; }
+    background-color: #d4d4d9;
+    font-size: 1vw; }
     header .pageMenu button {
       color: #1a1a1e;
-      font-size: 2vw;
       margin: auto; }
   header .siteMenu {
-    text-align: center;
-    color: #d4d4d9; }
+    background-color: #d4d4d9;
+    font-size: 1vw; }
     header .siteMenu button {
       color: #1a1a1e;
-      background-color: #d4d4d9;
-      font-size: 2vw;
       margin: auto; }
 
 body {
@@ -87,11 +84,12 @@ body {
     color: #D5D5DB;
     font-size: 1vw; }
   .workHistory button {
-    display: flex;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #D5D5DB;
-    align-self: center;
     background-color: #34495E;
-    justify-content: center;
     font-size: 1vw; }
 
 .education {
@@ -131,11 +129,12 @@ body {
       border-bottom-style: groove;
       border-left-style: groove; }
   .education button {
-    display: flex;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: white;
-    align-self: center;
     background-color: maroon;
-    justify-content: center;
     font-size: 1vw; }
 
 .projects {
@@ -153,32 +152,33 @@ body {
     color: #f1e0ff;
     font-size: 5vw; }
   .projects h2 {
-    color: #f1e0ff;
+    color: #d1c3e9;
     font-size: 3vw; }
   .projects h3 {
-    color: #f1e0ff;
+    color: #8d7d9b;
     font-size: 2vw; }
   .projects p {
-    color: #f1e0ff;
+    color: #4a4e8c;
     font-size: 1vw; }
   .projects a:link {
-    color: #f1e0ff;
+    color: #4a4e8c;
     font-size: 1vw; }
   .projects a:visited {
-    color: #f1e0ff;
+    color: #8d7d9b;
     font-size: 1vw; }
   .projects a:hover {
-    color: #f1e0ff;
+    color: #4a4e8c;
     font-size: 1vw; }
   .projects a:active {
-    color: #f1e0ff;
+    color: #8d7d9b;
     font-size: 1vw; }
   .projects button {
-    display: flex;
-    align-self: center;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #f1e0ff;
     background-color: #1c1a3d;
-    justify-content: center;
     font-size: 1vw; }
 
 .technicalSkills {
@@ -204,12 +204,13 @@ body {
     color: greenyellow;
     font-size: 1vw; }
   .technicalSkills button {
-    display: flex;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: greenyellow;
     background-color: black;
-    justify-content: center;
-    font-size: 1vw;
-    align-self: center; }
+    font-size: 1vw; }
 
 .otherSkills {
   margin: auto;
@@ -234,12 +235,13 @@ body {
     color: #ff9900;
     font-size: 1vw; }
   .otherSkills button {
-    display: flex;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #ff9900;
     background-color: #d33131;
-    justify-content: center;
-    font-size: 1vw;
-    align-self: center; }
+    font-size: 1vw; }
 
 .certifications {
   margin: auto;
@@ -264,12 +266,13 @@ body {
     color: #ffcc00;
     font-size: 1vw; }
   .certifications button {
-    display: flex;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #ffcc00;
     background-color: #990000;
-    justify-content: center;
-    font-size: 1vw;
-    align-self: center; }
+    font-size: 1vw; }
 
 .fitness {
   margin: auto;
@@ -308,6 +311,14 @@ body {
     font-size: 1vw; }
   .fitness a:active {
     color: #ff9900;
+    font-size: 1vw; }
+  .fitness button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #ff9900;
+    background-color: #d33131;
     font-size: 1vw; }
 
 .quantumComputing {
@@ -355,6 +366,14 @@ body {
   .quantumComputing ul li {
     color: #5D6D7E;
     font-size: 1vw; }
+  .quantumComputing button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #5D6D7E;
+    background-color: #D5D5DB;
+    font-size: 1vw; }
 
 .photography {
   margin: auto;
@@ -390,13 +409,21 @@ body {
     color: #f6e0a2;
     font-size: 1vw; }
   .photography a:visited {
-    color: #f6e0a2;
+    color: #a3d55d;
     font-size: 1vw; }
   .photography a:hover {
     color: #f6e0a2;
     font-size: 1vw; }
   .photography a:active {
-    color: #f6e0a2;
+    color: #a3d55d;
+    font-size: 1vw; }
+  .photography button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #a3d55d;
+    background-color: #e7693c;
     font-size: 1vw; }
 
 .dungeonsAndDragons {
@@ -421,28 +448,36 @@ body {
     color: #d1945c;
     font-size: 5vw; }
   .dungeonsAndDragons h2 {
-    color: #d1945c;
+    color: #c7a67a;
     font-size: 3vw; }
   .dungeonsAndDragons h3 {
-    color: #d1945c;
+    color: #8a6a6a;
     font-size: 2vw; }
   .dungeonsAndDragons p {
-    color: #d1945c;
+    color: #8a6a6a;
     font-size: 1vw; }
   .dungeonsAndDragons a:link {
-    color: #d1945c;
+    color: #5a4e4e;
     font-size: 1vw; }
   .dungeonsAndDragons a:visited {
-    color: #d1945c;
+    color: #8a6a6a;
     font-size: 1vw; }
   .dungeonsAndDragons a:hover {
-    color: #d1945c;
+    color: #5a4e4e;
     font-size: 1vw; }
   .dungeonsAndDragons a:active {
-    color: #d1945c;
+    color: #8a6a6a;
     font-size: 1vw; }
   .dungeonsAndDragons ul li {
-    color: #d1945c;
+    color: #5a4e4e;
+    font-size: 1vw; }
+  .dungeonsAndDragons button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #5a4e4e;
+    background-color: #d1945c;
     font-size: 1vw; }
 
 .history {
@@ -482,13 +517,13 @@ body {
     color: #b56a5a;
     font-size: 1vw; }
   .history a:visited {
-    color: #b56a5a;
+    color: #8a4c7b;
     font-size: 1vw; }
   .history a:hover {
     color: #b56a5a;
     font-size: 1vw; }
   .history a:active {
-    color: #b56a5a;
+    color: #8a4c7b;
     font-size: 1vw; }
   .history ul li {
     color: #b56a5a;
@@ -514,13 +549,13 @@ body {
           color: #b56a5a;
           font-size: 1vw; }
         .history table tr th a:visited {
-          color: #b56a5a;
+          color: #8a4c7b;
           font-size: 1vw; }
         .history table tr th a:hover {
           color: #b56a5a;
           font-size: 1vw; }
         .history table tr th a:active {
-          color: #b56a5a;
+          color: #8a4c7b;
           font-size: 1vw; }
       .history table tr td {
         border-color: #b56a5a;
@@ -538,14 +573,22 @@ body {
           color: #b56a5a;
           font-size: 1vw; }
         .history table tr td a:visited {
-          color: #b56a5a;
+          color: #8a4c7b;
           font-size: 1vw; }
         .history table tr td a:hover {
           color: #b56a5a;
           font-size: 1vw; }
         .history table tr td a:active {
-          color: #b56a5a;
+          color: #8a4c7b;
           font-size: 1vw; }
+  .history button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #b56a5a;
+    background-color: #3c4b86;
+    font-size: 1vw; }
 
 .LLMOpinions {
   margin: auto;
@@ -569,22 +612,30 @@ body {
     color: #6a2a98; }
   .LLMOpinions a:link {
     font-size: 1vw;
-    color: #3f1c6d; }
+    color: #6a2a98; }
   .LLMOpinions a:visited {
     font-size: 1vw;
     color: #3f1c6d; }
   .LLMOpinions a:hover {
     font-size: 1vw;
-    color: #3f1c6d; }
+    color: #6a2a98; }
   .LLMOpinions a:active {
     font-size: 1vw;
     color: #3f1c6d; }
   .LLMOpinions p {
     font-size: 1vw;
-    color: #3f1c6d; }
+    color: #6a2a98; }
   .LLMOpinions blockquote {
     font-size: 1.5vw;
-    color: #3f1c6d; }
+    color: #6a2a98; }
+  .LLMOpinions button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #ff3d94;
+    background-color: #200b4b;
+    font-size: 1vw; }
 
 .AppStores {
   margin: auto;
@@ -611,16 +662,24 @@ body {
     color: #f07838; }
   .AppStores a:visited {
     font-size: 1vw;
-    color: #f07838; }
+    color: #ba4c40; }
   .AppStores a:hover {
     font-size: 1vw;
     color: #f07838; }
   .AppStores a:active {
     font-size: 1vw;
-    color: #f07838; }
+    color: #ba4c40; }
   .AppStores p {
     font-size: 1vw;
     color: #f07838; }
+  .AppStores button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #ba4c40;
+    background-color: #5c6b8a;
+    font-size: 1vw; }
 
 .KissMySaaS {
   margin: auto;
@@ -647,24 +706,32 @@ body {
     color: #fce3d4; }
   .KissMySaaS a:visited {
     font-size: 1vw;
-    color: #fce3d4; }
+    color: #f9a68b; }
   .KissMySaaS a:hover {
     font-size: 1vw;
     color: #fce3d4; }
   .KissMySaaS a:active {
     font-size: 1vw;
-    color: #fce3d4; }
+    color: #f9a68b; }
   .KissMySaaS ul li {
     font-size: 1vw;
     color: #fce3d4; }
   .KissMySaaS p {
     font-size: 1vw;
     color: #fce3d4; }
+  .KissMySaaS button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #fce3d4;
+    background-color: #691b1e;
+    font-size: 1vw; }
 
 .PrivacyStance {
   margin: auto;
   text-align: left;
-  background-color: #ff6e61;
+  background-color: #1f3a3d;
   width: 80%;
   border-radius: 10px;
   font-family: Tahoma, Verdana, sans-serif;
@@ -674,34 +741,42 @@ body {
   /* selected link */ }
   .PrivacyStance h1 {
     font-size: 5vw;
-    color: #ffb84d; }
+    color: #f0f4f5; }
   .PrivacyStance h2 {
     font-size: 3vw;
-    color: #6d9dc5; }
+    color: #a5e3e9; }
   .PrivacyStance h3 {
     font-size: 2vw;
-    color: #5e4b8b; }
+    color: #5bc5c8; }
   .PrivacyStance a:link {
     font-size: 1vw;
-    color: #da1b61; }
+    color: #2a7e7e; }
   .PrivacyStance a:visited {
     font-size: 1vw;
-    color: #da1b61; }
+    color: #5bc5c8; }
   .PrivacyStance a:hover {
     font-size: 1vw;
-    color: #da1b61; }
+    color: #2a7e7e; }
   .PrivacyStance a:active {
     font-size: 1vw;
-    color: #da1b61; }
+    color: #5bc5c8; }
   .PrivacyStance ul li {
     font-size: 1vw;
-    color: #da1b61; }
+    color: #2a7e7e; }
   .PrivacyStance p {
     font-size: 1vw;
-    color: #da1b61; }
+    color: #2a7e7e; }
   .PrivacyStance blockquote {
     font-size: 1.5vw;
-    color: #da1b61; }
+    color: #2a7e7e; }
+  .PrivacyStance button {
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #f0f4f5;
+    background-color: #1f3a3d;
+    font-size: 1vw; }
 
 footer {
   text-align: center;
@@ -728,13 +803,13 @@ footer {
       color: #f1e0ff;
       font-size: 1vw; }
     footer .contactMe a:visited {
-      color: #f1e0ff;
+      color: #d1c3e9;
       font-size: 1vw; }
     footer .contactMe a:hover {
       color: #f1e0ff;
       font-size: 1vw; }
     footer .contactMe a:active {
-      color: #f1e0ff;
+      color: #d1c3e9;
       font-size: 1vw; }
     footer .contactMe p {
       color: #f1e0ff;

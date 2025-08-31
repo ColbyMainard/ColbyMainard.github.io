@@ -7,10 +7,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href=".,/images/favicon.png"/>
         <link rel="stylesheet" href="../css/default.css">
+        <script>
+            function scrollToLLMOpinions(){
+                document.getElementById(
+                    "LLMOpinions"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToAppStores(){
+                document.getElementById(
+                    "AppStores"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToKissMySaaS(){
+                document.getElementById(
+                    "KissMySaaS"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToPrivacyStance(){
+                document.getElementById(
+                    "PrivacyStance"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToTop(){
+                document.getElementById(
+                    "siteMenu"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+        </script>
     </head>
     <body>
+        <article class="siteMenu" id="siteMenu">
+            <header>
+                <nav>
+                    <button type="button" onclick="scrollToLLMOpinions()">LLM Pros and Cons</button>
+                    <button type="button" onclick="scrollToAppStores()">App Stores Takes</button>
+                    <button type="button" onclick="scrollToKissMySaaS()">Oversubscription</button>
+                    <button type="button" onclick="scrollToPrivacyStance()">What Privacy Needs to Survive</button>
+                    <button type="button" onclick="scrollToContactMe()">Contact Me</button>
+                </nav>
+            </header>
+        </article>
         <article class="pageMenu" id="pageMenu">
             <header>
+                <br>
                 <nav>
                     <button onclick="location.href='../../index.html'">Home</button>
                     <button onclick="location.href='./tech_takes.html'">Technical Stances</button>
@@ -112,6 +180,8 @@
                         Clearly, with this volume of potential security issues, it is important to have multiple levels of security to prevent attacks against data that should never be exposed to the internet. 
                         Asking the chat bots to please not leak data is going to be wholly insufficient for most applications that deal with financial, medical, and other confidential data that already have data protections in most jurisdictions.
                     </p>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="AppStoresDiv" id="AppStoresDiv">
@@ -127,9 +197,10 @@
                     </p>
                     <h3>Many apps don't need to exist</h3>
                     <p>
-                        It is my opinion that apps should be designed to add functionality that was not available as a part of the phone.
+                        It is my opinion that apps should be designed to add functionality that was not available as a part of the device as originally purchased.
                         However, many apps are thinly-veiled web clients.
-                        Because of this, many applications could be replaced by a web browser.
+                        Because of this, many applications could be bypassed with a web browser that is already available for most consumer and enterprise devices.
+                        By encouraging users to download applications to access what should be just be a single website, this makes 
                     </p>
                     <h2>What users can do about it</h2>
                     <p></p>
@@ -141,8 +212,15 @@
                         While this might be difficult for non-technical users, these businesses respond to profits at the end of the day.
                         Reducing their profits due to anti-consumer practices would encourage leadership at companies engaging in them to reconsider their business strategy. 
                     </p>
-                    <h3>Reach out to legislators in support of anti-monopoly action</h3>
-                    <p></p>
+                    <h3>Support of anti-monopoly action</h3>
+                    <p>
+                        Sometimes, there isn't a good option available for consumers to opt-out of using app stores and go directly to developers.
+                        After all, app stores have incentives to keep apps on the app store to continue charging fees as middle men.
+                        While some fees are required to maintain the app store, there is also a perverse incentive to push consumers to use apps through the default app store on the device.
+                        As such, I would recommend reaching out to the <a href="https://www.eff.org/deeplinks/2025/08/no-walled-gardens-no-gilded-cages">Electronic Frontier Foundation</a>, as they are already taking steps to pressure legislators to take action against monopolistic tech practices.
+                    </p>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="KissMySaaSDiv" id="KissMySaaSDiv">
@@ -184,6 +262,8 @@
                             <li><a href="https://www.thetoptens.com/internet/popular-websites-died/">10 popular dead websites</a></li>
                         </ul>
                     </ul>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
             <div class="PrivacyStanceDiv" id="PrivacyStanceDiv">
@@ -244,9 +324,11 @@
                         It does not take too much imagination to see this style of hack negatively impacting similarly vulnerable populations.
                     </p>
                     <p>
-                        For those worried about the potential misuse of ID data, I would recommend reaching out to the <a href="https://www.eff.org/">Electronic Frontier Foundation (EFF)</a> for tools and resources in pushing for intelligent policies.
+                        For those worried about the potential misuse of ID data, I would recommend reaching out to the <a href="https://www.eff.org/">Electronic Frontier Foundation</a> for tools and resources in pushing for intelligent policies.
                         Without privacy on the internet, it becomes much more difficult for vulnerable populations to share information safely without surviving negative consequences.
                     </p>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
             </div>
         </main>
