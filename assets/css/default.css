@@ -37,12 +37,16 @@ header {
     background-color: #d4d4d9;
     font-size: 1vw; }
     header .pageMenu button {
+      display: inline-block;
+      border: 0.25vw solid #1a1a1e;
       color: #1a1a1e;
       margin: auto; }
   header .siteMenu {
     background-color: #d4d4d9;
     font-size: 1vw; }
     header .siteMenu button {
+      display: inline-block;
+      border: 0.25vw solid #1a1a1e;
       color: #1a1a1e;
       margin: auto; }
 
@@ -84,6 +88,7 @@ body {
     color: #D5D5DB;
     font-size: 1vw; }
   .workHistory button {
+    border: 0.25vw solid #D5D5DB;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -129,6 +134,7 @@ body {
       border-bottom-style: groove;
       border-left-style: groove; }
   .education button {
+    border: 0.25vw solid white;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -173,6 +179,7 @@ body {
     color: #8d7d9b;
     font-size: 1vw; }
   .projects button {
+    border: 0.25vw solid #f1e0ff;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -204,6 +211,7 @@ body {
     color: greenyellow;
     font-size: 1vw; }
   .technicalSkills button {
+    border: 0.25vw solid greenyellow;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -235,6 +243,7 @@ body {
     color: #ff9900;
     font-size: 1vw; }
   .otherSkills button {
+    border: 0.25vw solid #ff9900;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -266,6 +275,7 @@ body {
     color: #ffcc00;
     font-size: 1vw; }
   .certifications button {
+    border: 0.25vw solid #ffcc00;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -313,6 +323,7 @@ body {
     color: #ff9900;
     font-size: 1vw; }
   .fitness button {
+    border: 0.25vw solid #ff9900;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -367,12 +378,13 @@ body {
     color: #5D6D7E;
     font-size: 1vw; }
   .quantumComputing button {
+    border: 0.25vw solid #D5D5DB;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #5D6D7E;
-    background-color: #D5D5DB;
+    color: #D5D5DB;
+    background-color: #5D6D7E;
     font-size: 1vw; }
 
 .photography {
@@ -418,12 +430,13 @@ body {
     color: #a3d55d;
     font-size: 1vw; }
   .photography button {
+    border: 0.25vw solid #e7693c;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #a3d55d;
-    background-color: #e7693c;
+    color: #e7693c;
+    background-color: #a3d55d;
     font-size: 1vw; }
 
 .dungeonsAndDragons {
@@ -472,12 +485,13 @@ body {
     color: #5a4e4e;
     font-size: 1vw; }
   .dungeonsAndDragons button {
+    border: 0.25vw solid #d1945c;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #5a4e4e;
-    background-color: #d1945c;
+    color: #d1945c;
+    background-color: #5a4e4e;
     font-size: 1vw; }
 
 .history {
@@ -511,6 +525,7 @@ body {
     color: #b56a5a;
     font-size: 1vw; }
   .history blockquote {
+    font-family: "Lucida Handwriting", cursive;
     color: #b56a5a;
     font-size: 1.5vw; }
   .history a:link {
@@ -582,6 +597,7 @@ body {
           color: #8a4c7b;
           font-size: 1vw; }
   .history button {
+    border: 0.25vw solid #b56a5a;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -626,9 +642,11 @@ body {
     font-size: 1vw;
     color: #6a2a98; }
   .LLMOpinions blockquote {
+    font-family: "Lucida Handwriting", cursive;
     font-size: 1.5vw;
     color: #6a2a98; }
   .LLMOpinions button {
+    border: 0.25vw solid #ff3d94;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -673,6 +691,7 @@ body {
     font-size: 1vw;
     color: #f07838; }
   .AppStores button {
+    border: 0.25vw solid #ba4c40;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -720,6 +739,7 @@ body {
     font-size: 1vw;
     color: #fce3d4; }
   .KissMySaaS button {
+    border: 0.25vw solid #fce3d4;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
@@ -767,9 +787,11 @@ body {
     font-size: 1vw;
     color: #2a7e7e; }
   .PrivacyStance blockquote {
+    font-family: "Lucida Handwriting", cursive;
     font-size: 1.5vw;
     color: #2a7e7e; }
   .PrivacyStance button {
+    border: 0.25vw solid #f0f4f5;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;

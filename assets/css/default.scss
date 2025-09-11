@@ -128,6 +128,8 @@ header {
         background-color: $noir_5;
         font-size: 1vw;
         button {
+            display: inline-block;
+            border: 0.25vw solid $noir_1;
             color: $noir_1;
             margin:auto;
         }
@@ -136,6 +138,8 @@ header {
         background-color: $noir_5;
         font-size: 1vw;
         button {
+            display: inline-block;
+            border: 0.25vw solid $noir_1;
             color: $noir_1;
             margin:auto;
         }
@@ -189,6 +193,7 @@ body {
         font-size: 1vw;
     }
     button {
+        border: 0.25vw solid $calm_authority_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $calm_authority_5;
@@ -246,6 +251,7 @@ body {
         }
     }
     button {
+        border: 0.25vw solid white;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color:white;
@@ -298,6 +304,7 @@ body {
         font-size: 1vw;
     }
     button {
+        border: 0.25vw solid $smart_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $smart_5;
@@ -336,6 +343,7 @@ body {
         }
     }
     button {
+        border: 0.25vw solid greenyellow;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color:greenyellow;
@@ -374,6 +382,7 @@ body {
         }
     }
     button {
+        border: 0.25vw solid $sunset_glow_2;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $sunset_glow_2;
@@ -412,6 +421,7 @@ body {
         }
     }
     button {
+        border: 0.25vw solid $gryffon_1;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $gryffon_1;
@@ -470,6 +480,7 @@ body {
         font-size: 1vw;
     }
     button {
+        border: 0.25vw solid $sunset_glow_2;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $sunset_glow_2;
@@ -536,10 +547,11 @@ body {
         }
     }
     button {
+        border: 0.25vw solid $calm_authority_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $calm_authority_2;
-        background-color: $calm_authority_5;
+        color: $calm_authority_5;
+        background-color: $calm_authority_2;
         font-size: 1vw;
     }
 }
@@ -596,10 +608,11 @@ body {
         font-size: 1vw;
     }
     button {
+        border: 0.25vw solid $vivid_terrain_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $vivid_terrain_2;
-        background-color: $vivid_terrain_5;
+        color: $vivid_terrain_5;
+        background-color: $vivid_terrain_2;
         font-size: 1vw;
     }
 }
@@ -662,10 +675,11 @@ body {
         }
     }
     button {
+        border: 0.25vw solid $dungeons_and_dragons_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $dungeons_and_dragons_2;
-        background-color: $dungeons_and_dragons_5;
+        color: $dungeons_and_dragons_5;
+        background-color: $dungeons_and_dragons_2;
         font-size: 1vw;
     }
 }
@@ -702,6 +716,7 @@ body {
         font-size: 1vw;
     }
     blockquote {
+        font-family: "Lucida Handwriting", cursive;
         color: $shades_of_brown_2;
         font-size: 1.5vw;
     }
@@ -797,6 +812,7 @@ body {
         }
     }
     button {
+        border: 0.25vw solid $shades_of_brown_2;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $shades_of_brown_2;
@@ -849,10 +865,12 @@ body {
         color: $cyberpunk_dreams_3;
     }
     blockquote {
+        font-family: "Lucida Handwriting", cursive;
         font-size: 1.5vw;
         color: $cyberpunk_dreams_3;
     }
     button {
+        border: 0.25vw solid $cyberpunk_dreams_1;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $cyberpunk_dreams_1;
@@ -905,6 +923,7 @@ body {
         color: $disturbed_4;
     }
     button {
+        border: 0.25vw solid $disturbed_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $disturbed_5;
@@ -963,6 +982,7 @@ body {
         color: $blood_moon_5;
     }
     button {
+        border: 0.25vw solid $blood_moon_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $blood_moon_5;
@@ -1021,10 +1041,12 @@ body {
         color: $digital_veil_2;
     }
     blockquote {
+        font-family: "Lucida Handwriting", cursive;
         font-size: 1.5vw;
         color: $digital_veil_2;
     }
     button {
+        border: 0.25vw solid $digital_veil_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $digital_veil_5;
