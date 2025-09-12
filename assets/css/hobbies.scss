@@ -1,0 +1,427 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */ 
+$calm_authority_1: #34495E;
+$calm_authority_2: #5D6D7E;
+$calm_authority_3: #85929E;
+$calm_authority_4: #AAB7B8;
+$calm_authority_5: #D5D5DB;
+
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+$sunset_glow_1: #ffb84d;
+$sunset_glow_2: #ff9900;
+$sunset_glow_3: #f47b1f;
+$sunset_glow_4: #e64919;
+$sunset_glow_5: #d33131;
+
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
+$dungeons_and_dragons_1: #4c3e3e;
+$dungeons_and_dragons_2: #5a4e4e;
+$dungeons_and_dragons_3: #8a6a6a;
+$dungeons_and_dragons_4: #c7a67a;
+$dungeons_and_dragons_5: #d1945c;
+
+/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
+$vivid_terrain_1: #4f9c7e;
+$vivid_terrain_2: #a3d55d;
+$vivid_terrain_3: #f6e0a2;
+$vivid_terrain_4: #f5a524;
+$vivid_terrain_5: #e7693c;
+
+/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
+$shades_of_brown_1: #d4aa8c;
+$shades_of_brown_2: #b56a5a;
+$shades_of_brown_3: #8a4c7b;
+$shades_of_brown_4: #5b699a;
+$shades_of_brown_5: #3c4b86;
+
+.fitness {
+    margin: auto;
+    text-align: left;
+    background-color: $sunset_glow_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        color: $sunset_glow_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $sunset_glow_2;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $sunset_glow_2;
+        font-size: 2vw;
+    }
+    p {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $sunset_glow_2;
+            font-size: 1vw;
+        }
+    }
+    /* unvisited link */
+    a:link {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $sunset_glow_2;
+        font-size: 1vw;
+    }
+    button {
+        border: 0.25vw solid $sunset_glow_2;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $sunset_glow_2;
+        background-color: $sunset_glow_5;
+        font-size: 1vw;
+    }
+}
+
+.quantumComputing {
+    margin: auto;
+    text-align: left;
+    background-color: $calm_authority_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $calm_authority_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $calm_authority_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $calm_authority_3;
+        font-size: 2vw;
+    }
+    p {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $calm_authority_2;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $calm_authority_2;
+            font-size: 1vw;
+        }
+    }
+    button {
+        border: 0.25vw solid $calm_authority_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $calm_authority_5;
+        background-color: $calm_authority_2;
+        font-size: 1vw;
+    }
+}
+
+.photography {
+    margin: auto;
+    text-align: left;
+    background-color: $vivid_terrain_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Lucida Handwriting", cursive;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $vivid_terrain_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $vivid_terrain_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $vivid_terrain_4;
+        font-size: 2vw;
+    }
+    p {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $vivid_terrain_2;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $vivid_terrain_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $vivid_terrain_2;
+        font-size: 1vw;
+    }
+    button {
+        border: 0.25vw solid $vivid_terrain_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $vivid_terrain_5;
+        background-color: $vivid_terrain_2;
+        font-size: 1vw;
+    }
+}
+
+.dungeonsAndDragons {
+    margin: auto;
+    text-align: left;
+    background-color: $dungeons_and_dragons_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $dungeons_and_dragons_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $dungeons_and_dragons_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $dungeons_and_dragons_3;
+        font-size: 2vw;
+    }
+    p {
+        color: $dungeons_and_dragons_3;
+        font-size: 1vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $dungeons_and_dragons_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $dungeons_and_dragons_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $dungeons_and_dragons_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $dungeons_and_dragons_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $dungeons_and_dragons_2;
+            font-size: 1vw;
+        }
+    }
+    button {
+        border: 0.25vw solid $dungeons_and_dragons_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $dungeons_and_dragons_5;
+        background-color: $dungeons_and_dragons_2;
+        font-size: 1vw;
+    }
+}
+
+.history {
+    margin: auto;
+    text-align: left;
+    background-color: $shades_of_brown_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    img  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 1%;
+    }
+    h1 {
+        color: $shades_of_brown_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $shades_of_brown_2;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $shades_of_brown_2;
+        font-size: 2vw;
+    }
+    p {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        color: $shades_of_brown_2;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $shades_of_brown_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $shades_of_brown_2;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $shades_of_brown_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $shades_of_brown_2;
+            font-size: 1vw;
+        }
+    }
+    table {
+        border-color: $shades_of_brown_2;
+        border-style: solid;
+        tr {
+            border-color: $shades_of_brown_2;
+            th {
+                border-color: $shades_of_brown_2;
+                color: $shades_of_brown_2;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+                /* unvisited link */
+                a:link {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $shades_of_brown_3;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
+                    color: $shades_of_brown_3;
+                    font-size: 1vw;
+                }
+            }
+            td {
+                border-color: $shades_of_brown_2;
+                color: $shades_of_brown_2;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+                /* unvisited link */
+                a:link {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $shades_of_brown_3;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $shades_of_brown_2;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
+                    color: $shades_of_brown_3;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $shades_of_brown_2;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $shades_of_brown_2;
+        background-color: $shades_of_brown_5;
+        font-size: 1vw;
+    }
+}

@@ -1,0 +1,333 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */ 
+$calm_authority_1: #34495E;
+$calm_authority_2: #5D6D7E;
+$calm_authority_3: #85929E;
+$calm_authority_4: #AAB7B8;
+$calm_authority_5: #D5D5DB;
+
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+$sunset_glow_1: #ffb84d;
+$sunset_glow_2: #ff9900;
+$sunset_glow_3: #f47b1f;
+$sunset_glow_4: #e64919;
+$sunset_glow_5: #d33131;
+
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+$smart_1: #1c1a3d; 
+$smart_2: #4a4e8c; 
+$smart_3: #8d7d9b; 
+$smart_4: #d1c3e9; 
+$smart_5: #f1e0ff;
+
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
+$dungeons_and_dragons_1: #4c3e3e;
+$dungeons_and_dragons_2: #5a4e4e;
+$dungeons_and_dragons_3: #8a6a6a;
+$dungeons_and_dragons_4: #c7a67a;
+$dungeons_and_dragons_5: #d1945c;
+
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */ 
+$gryffon_1: #ffcc00;
+$gryffon_2: #ff9900;
+$gryffon_3: #ff6600;
+$gryffon_4: #cc3300;
+$gryffon_5: #990000;
+
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */ 
+$noir_1: #1a1a1e;
+$noir_2: #3e3e41;
+$noir_3: #6b6b70;
+$noir_4: #a0a0b0;
+$noir_5: #d4d4d9;
+
+/* Desert Dawn color palette from https://colormagic.app/palette/689f63d900aacad274865dda */
+$desert_dawn_1: #ea7a3e;
+$desert_dawn_2: #f2ba4a;
+$desert_dawn_3: #dce3a1;
+$desert_dawn_4: #b6d4af;
+$desert_dawn_5: #5c7d4f;
+
+/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
+$vivid_terrain_1: #4f9c7e;
+$vivid_terrain_2: #a3d55d;
+$vivid_terrain_3: #f6e0a2;
+$vivid_terrain_4: #f5a524;
+$vivid_terrain_5: #e7693c;
+
+/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
+$shades_of_brown_1: #d4aa8c;
+$shades_of_brown_2: #b56a5a;
+$shades_of_brown_3: #8a4c7b;
+$shades_of_brown_4: #5b699a;
+$shades_of_brown_5: #3c4b86;
+
+/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
+$cyberpunk_dreams_1: #ff3d94;
+$cyberpunk_dreams_2: #b5307e;
+$cyberpunk_dreams_3: #6a2a98;
+$cyberpunk_dreams_4: #3f1c6d;
+$cyberpunk_dreams_5: #200b4b;
+
+/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
+$luna_of_gale_1: #d6e4f5;
+$luna_of_gale_2: #a4c8df;
+$luna_of_gale_3: #7bb7d1;
+$luna_of_gale_4: #4aa0c4;
+$luna_of_gale_5: #1d3a6d;
+
+/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+$blood_moon_1: #691b1e;
+$blood_moon_2: #b82d28;
+$blood_moon_3: #f05660;
+$blood_moon_4: #f9a68b;
+$blood_moon_5: #fce3d4;
+
+/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
+$disturbed_1: #5c6b8a;
+$disturbed_2: #a2b8d2;
+$disturbed_3: #f5c9a8;
+$disturbed_4: #f07838;
+$disturbed_5: #ba4c40;
+
+/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
+$digital_veil_1: #1f3a3d;
+$digital_veil_2: #2a7e7e;
+$digital_veil_3: #5bc5c8;
+$digital_veil_4: #a5e3e9;
+$digital_veil_5: #f0f4f5;
+
+.LLMOpinions {
+    margin: auto;
+    text-align: left;
+    background-color: $cyberpunk_dreams_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $cyberpunk_dreams_1;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $cyberpunk_dreams_2;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $cyberpunk_dreams_3;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_3;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_3;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_4;
+    }
+    p {
+        font-size: 1vw;
+        color: $cyberpunk_dreams_3;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        font-size: 1.5vw;
+        color: $cyberpunk_dreams_3;
+    }
+    button {
+        border: 0.25vw solid $cyberpunk_dreams_1;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $cyberpunk_dreams_1;
+        background-color: $cyberpunk_dreams_5;
+        font-size: 1vw;
+    }
+}
+
+.AppStores {
+    margin: auto;
+    text-align: left;
+    background-color: $disturbed_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $disturbed_2;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $disturbed_3;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $disturbed_4;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $disturbed_5;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $disturbed_5;
+    }
+    p {
+        font-size: 1vw;
+        color: $disturbed_4;
+    }
+    button {
+        border: 0.25vw solid $disturbed_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $disturbed_5;
+        background-color: $disturbed_1;
+        font-size: 1vw;
+    }
+}
+
+.KissMySaaS {
+    margin: auto;
+    text-align: left;
+    background-color: $blood_moon_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $blood_moon_2;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $blood_moon_3;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $blood_moon_4;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $blood_moon_4;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $blood_moon_4;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $blood_moon_5;
+        }
+    }
+    p {
+        font-size: 1vw;
+        color: $blood_moon_5;
+    }
+    button {
+        border: 0.25vw solid $blood_moon_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $blood_moon_5;
+        background-color: $blood_moon_1;
+        font-size: 1vw;
+    }
+}
+
+.PrivacyStance {
+    margin: auto;
+    text-align: left;
+    background-color: $digital_veil_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $digital_veil_5;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $digital_veil_4;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $digital_veil_3;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $digital_veil_2;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $digital_veil_3;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $digital_veil_2;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $digital_veil_3;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $digital_veil_2;
+        }
+    }
+    p {
+        font-size: 1vw;
+        color: $digital_veil_2;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        font-size: 1.5vw;
+        color: $digital_veil_2;
+    }
+    button {
+        border: 0.25vw solid $digital_veil_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $digital_veil_5;
+        background-color: $digital_veil_1;
+        font-size: 1vw;
+    }
+}

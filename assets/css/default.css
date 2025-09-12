@@ -2,72 +2,7 @@
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
 /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
-/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
-/* Desert Dawn color palette from https://colormagic.app/palette/689f63d900aacad274865dda */
-/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
-/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
-/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
-/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
-/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
-/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
-/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
-/* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
-html {
-  scroll-behavior: smooth; }
-
-header {
-  text-align: center;
-  background-color: #1a1a1e;
-  font-family: "Times New Roman", Times, serif; }
-  header h1 {
-    color: #a0a0b0;
-    font-size: 5vw; }
-  header h2 {
-    color: #a0a0b0;
-    font-size: 3vw; }
-  header h3 {
-    color: #a0a0b0;
-    font-size: 2vw; }
-  header p {
-    color: #6b6b70;
-    font-size: 1vw; }
-  header .pageMenu {
-    background-color: #d4d4d9;
-    font-size: 1vw; }
-    header .pageMenu button {
-      display: inline-block;
-      border: 0.25vw solid #1a1a1e;
-      color: #1a1a1e;
-      margin: auto; }
-  header .siteMenu {
-    background-color: #d4d4d9;
-    font-size: 1vw; }
-    header .siteMenu button {
-      display: inline-block;
-      border: 0.25vw solid #1a1a1e;
-      color: #1a1a1e;
-      margin: auto; }
-
-body {
-  margin: auto;
-  text-align: center;
-  background-color: #3e3e41;
-  font-family: Garamond, serif; }
-  body h1 {
-    color: #d4d4d9;
-    font-size: 5vw; }
-  body h2 {
-    color: #d4d4d9;
-    font-size: 3vw; }
-  body h3 {
-    color: #d4d4d9;
-    font-size: 2vw; }
-  body p {
-    color: #a0a0b0;
-    font-size: 1vw; }
-
 .workHistory {
   margin: auto;
   text-align: left;
@@ -284,6 +219,12 @@ body {
     background-color: #990000;
     font-size: 1vw; }
 
+/* https://www.w3schools.com/Css/css_selectors.asp */
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
+/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
+/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
 .fitness {
   margin: auto;
   text-align: left;
@@ -606,6 +547,21 @@ body {
     background-color: #3c4b86;
     font-size: 1vw; }
 
+/* https://www.w3schools.com/Css/css_selectors.asp */
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
+/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
+/* Desert Dawn color palette from https://colormagic.app/palette/689f63d900aacad274865dda */
+/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
+/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
+/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
+/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
+/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
+/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
 .LLMOpinions {
   margin: auto;
   text-align: left;
@@ -798,6 +754,64 @@ body {
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #f0f4f5;
     background-color: #1f3a3d;
+    font-size: 1vw; }
+
+/* https://www.w3schools.com/Css/css_selectors.asp */
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
+/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+/* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
+html {
+  scroll-behavior: smooth; }
+
+header {
+  text-align: center;
+  background-color: #1a1a1e;
+  font-family: "Times New Roman", Times, serif; }
+  header h1 {
+    color: #a0a0b0;
+    font-size: 5vw; }
+  header h2 {
+    color: #a0a0b0;
+    font-size: 3vw; }
+  header h3 {
+    color: #a0a0b0;
+    font-size: 2vw; }
+  header p {
+    color: #6b6b70;
+    font-size: 1vw; }
+  header .pageMenu {
+    background-color: #d4d4d9;
+    font-size: 1vw; }
+    header .pageMenu button {
+      display: inline-block;
+      border: 0.25vw solid #1a1a1e;
+      color: #1a1a1e;
+      margin: auto; }
+  header .siteMenu {
+    background-color: #d4d4d9;
+    font-size: 1vw; }
+    header .siteMenu button {
+      display: inline-block;
+      border: 0.25vw solid #1a1a1e;
+      color: #1a1a1e;
+      margin: auto; }
+
+body {
+  margin: auto;
+  text-align: center;
+  background-color: #3e3e41;
+  font-family: Garamond, serif; }
+  body h1 {
+    color: #d4d4d9;
+    font-size: 5vw; }
+  body h2 {
+    color: #d4d4d9;
+    font-size: 3vw; }
+  body h3 {
+    color: #d4d4d9;
+    font-size: 2vw; }
+  body p {
+    color: #a0a0b0;
     font-size: 1vw; }
 
 footer {
