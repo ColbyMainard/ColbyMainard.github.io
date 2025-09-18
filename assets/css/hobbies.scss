@@ -62,6 +62,10 @@ $shades_of_brown_5: #3c4b86;
         li {
             color: $sunset_glow_2;
             font-size: 1vw;
+            u {
+                color: $sunset_glow_2;
+                font-size: 1vw;
+            }
         }
     }
     /* unvisited link */
@@ -174,6 +178,7 @@ $shades_of_brown_5: #3c4b86;
         margin-right: auto;
         max-width: 90%;
         height: auto;
+        border: 1vw solid $vivid_terrain_3;
         border-radius: 1%;
     }
     h1 {

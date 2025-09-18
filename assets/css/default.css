@@ -251,6 +251,9 @@
   .fitness ul li {
     color: #ff9900;
     font-size: 1vw; }
+    .fitness ul li u {
+      color: #ff9900;
+      font-size: 1vw; }
   .fitness a:link {
     color: #ff9900;
     font-size: 1vw; }
@@ -345,6 +348,7 @@
     margin-right: auto;
     max-width: 90%;
     height: auto;
+    border: 1vw solid #f6e0a2;
     border-radius: 1%; }
   .photography h1 {
     color: #e7693c;
@@ -694,6 +698,9 @@
   .KissMySaaS p {
     font-size: 1vw;
     color: #fce3d4; }
+    .KissMySaaS p u {
+      font-size: 1vw;
+      color: #fce3d4; }
   .KissMySaaS button {
     border: 0.25vw solid #fce3d4;
     display: block;
