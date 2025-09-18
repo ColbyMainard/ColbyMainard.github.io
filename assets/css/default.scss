@@ -87,6 +87,15 @@ body {
         color: $noir_4;
         font-size: 1vw;
     }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        height: auto;
+        border: 1vw solid $noir_1;
+        border-radius: 1%;
+    }
 }
 
 footer {

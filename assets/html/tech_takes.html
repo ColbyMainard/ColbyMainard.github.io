@@ -101,12 +101,18 @@
         <main class="main" id="main">
             <div class="LLMOpinionsDiv" id="LLMOpinionsDiv">
                 <section class="LLMOpinions" id="LLMOpinions">
-                    <h1>LLMs</h1>
+                    <h1>LLMs: good for natural language processing, but nothing else</h1>
                     <p><u>Last Updated:</u> September 18, 2025</p>
                     <h2>The Good</h2>
                     <h3>Autocompletion of Work</h3>
                     <p>
-                        LLMs tend to see lower errors in environments where the <a href="https://developer.ibm.com/articles/awb-token-optimization-backbone-of-effective-prompt-engineering/">prompt is succinct</a>, <a href="https://www.lesswrong.com/posts/ekBsq6mATCvEvqmkC/gpt-4-is-bad-at-strategic-thinking">does not require long-term strategic thinking</a>, <a ref="https://www.k2view.com/blog/rag-hallucination/#What-is-Retrieval-Augmented-Generation">and relevant documentation was provided by processes like retrieval-augmented generation (RAG)</a>.
+                        LLMs tend to see lower errors in environments where the <a href="https://developer.ibm.com/articles/awb-token-optimization-backbone-of-effective-prompt-engineering/">
+                            prompt is succinct
+                        </a>, <a href="https://www.lesswrong.com/posts/ekBsq6mATCvEvqmkC/gpt-4-is-bad-at-strategic-thinking">
+                            does not require long-term strategic thinking
+                        </a>, <a ref="https://www.k2view.com/blog/rag-hallucination/#What-is-Retrieval-Augmented-Generation">
+                            and relevant documentation was provided by processes like retrieval-augmented generation (RAG)
+                        </a>.
                         If a human provides a very clear structure for the LLM, limits the scope of the ask, and provides all necessary context, the LLM can make a good first pass at what it believes should be the next words.
                     </p>
                     <h3>Summary of Documents</h3>
@@ -145,7 +151,9 @@
                         All of the available tools in AI are focused on one thing: make a best guess at underlying patterns that are supported by the dataset available. 
                         There is no common sense module within an LLM. 
                         LLMs do not possess the ability to think, understand, believe, fear, love, hate, trust, doubt, or any other action that makes them feel particularly human. 
-                        Humans are much better at anthropomorphizing inanimate objects than inanimate objects are at <a href="https://writingslowly.com/2023/06/07/gaslit-by-machinery.html">mimicking the abilities of sentience and self-awareness</a>. 
+                        Humans are much better at anthropomorphizing inanimate objects than inanimate objects are at <a href="https://writingslowly.com/2023/06/07/gaslit-by-machinery.html">
+                            mimicking the abilities of sentience and self-awareness
+                        </a>. 
                         It is best to keep that in mind before assigning them tasks that require the accountability that would normally be associated with sentience. 
                         Autonomy and accountability are two sides of the same coin: any system we cannot hold to account for its actions should not be given the autonomy to cause unmitigated harm.
                     </p>
@@ -163,30 +171,89 @@
                         This problem can be mitigated with RAG, but a lot of models have built-in recency biases that may require reloading of documents used from previous queries.
                     </p>
                     <h3>Unexamined biases</h3>
-                    <blockquote>"All models are wrong, but some are useful" - <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a></blockquote>
+                    <blockquote>
+                        "All models are wrong, but some are useful" - 
+                        <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
+                            George Box
+                        </a>
+                    </blockquote>
                     <p>
                         There are two factors that cap the potential real-world usefulness of an AI model: the training data it was given, and the number of learnable parameters the model has to get as close as possible to the training data. 
                         It should not surprise anyone that one of the easiest ways to bias a model towards a particular output would be to give it training data that supports such a bias. 
                         Since there are no moral guidelines inherent to the LLM itself, it would be possible to get the model to output content that would be decried for a medley of reasons. 
                         It would be possible to generate content that would be considered racist, sexist, homophobic, xenophobic, antisemitic, or any other content that would probably have a legal/public relations team working overtime. 
-                        There has also been so many AI deployments with legal ramifications that <a href="https://www.cio.com/article/190888/5-famous-analytics-and-ai-disasters.html">there are already articles showcasing lists of the worst offenders</a>. 
+                        There has also been so many AI deployments with legal ramifications that 
+                        <a href="https://www.cio.com/article/190888/5-famous-analytics-and-ai-disasters.html">
+                            there are already articles showcasing lists of the worst offenders
+                        </a>. 
                         As such, it is best to examine every step of your AI pipeline for potential security risks and the ramifications for those risks being insufficient.
                     </p>
                     <h3>Cybersecurity concerns</h3>
-                    <blockquote>"The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards - and even then I have my doubts." - <a href="https://spaf.cerias.purdue.edu/quotes.html">A. K. Dewdney, March 1989</a></blockquote>
-                    <p>While the original author may not have foreseen all of the implications of of this quote as it relates to the security of LLMs, the sentiment is still well-paced. Over the past few years, we have seen a plethora of incidents that should raise concerns about how companies are implementing security controls, including: 
+                    <blockquote>
+                        "The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards - and even then I have my doubts." - 
+                        <a href="https://spaf.cerias.purdue.edu/quotes.html">
+                            A. K. Dewdney, March 1989
+                        </a>
+                    </blockquote>
+                    <p>
+                        While the original author may not have foreseen all of the implications of of this quote as it relates to the security of LLMs, the sentiment is still well-paced. 
+                        Over the past few years, we have seen a plethora of incidents that should raise concerns about how companies are implementing security controls, including: 
                         <ul>
-                            <li><a href="https://www.infosecurity-magazine.com/news/deepseek-database-leaks-sensitive/">Exposed DeepSeek database leaks sensitive data</a></li>
-                            <li><a href="https://www.csoonline.com/article/3819170/nearly-10-of-employee-gen-ai-prompts-include-sensitive-data.html">10% of employees of GenAI prompts include sensitive data</a></li>
-                            <li><a href="https://venturebeat.com/ai/anthropic-confirms-it-suffered-a-data-leak/">Anthropic confirms that it suffered a data leak</a></li>
-                            <li><a href="https://www.spiceworks.com/tech/artificial-intelligence/news/chatgpt-leaks-sensitive-user-data-openai-suspects-hack/">OpenAI confirms ChatGPT leaks sensitive user data and suspects hack</a></li>
-                            <li><a href="https://www.forbes.com/sites/siladityaray/2023/05/02/samsung-bans-chatgpt-and-other-chatbots-for-employees-after-sensitive-code-leak/">Samsung bans ChatGPT and other LLMs after code leak</a></li>
-                            <li><a href="https://www.techpolicy.press/new-study-suggests-chatgpt-vulnerability-with-potential-privacy-implications/">ChatGPT leaks data after simply being asked to repeat a word endlessly</a></li>
-                            <li><a href="https://www.thestack.technology/microsoft-rag-copilot-enterprise-secrets/">RAG used in ConfusedPilot attack to reveal enterprise secrets</a></li>
-                            <li><a href="https://thehackernews.com/2025/02/12000-api-keys-and-passwords-found-in.html">12000+ API keys found in LLM training data</a></li>
-                            <li><a href="https://www.ic3.gov/PSA/2024/PSA241203">FBI sends out public service announcement regarding AI-powered phishing and related scams</a></li>
-                            <li><a href="https://www.pcworld.com/article/2601323/5-sneaky-ways-hackers-use-generative-ai-to-scam-you.html">AI is generating malware, and other ways scammers are attacking you</a></li>
-                            <li><a href="https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/">Deepfakes and other AI-powered Cyber Attacks</a></li>
+                            <li>
+                                <a href="https://www.infosecurity-magazine.com/news/deepseek-database-leaks-sensitive/">
+                                    Exposed DeepSeek database leaks sensitive data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.csoonline.com/article/3819170/nearly-10-of-employee-gen-ai-prompts-include-sensitive-data.html">
+                                    10% of employees of GenAI prompts include sensitive data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://venturebeat.com/ai/anthropic-confirms-it-suffered-a-data-leak/">
+                                    Anthropic confirms that it suffered a data leak
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.spiceworks.com/tech/artificial-intelligence/news/chatgpt-leaks-sensitive-user-data-openai-suspects-hack/">
+                                    OpenAI confirms ChatGPT leaks sensitive user data and suspects hack
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.forbes.com/sites/siladityaray/2023/05/02/samsung-bans-chatgpt-and-other-chatbots-for-employees-after-sensitive-code-leak/">
+                                    Samsung bans ChatGPT and other LLMs after code leak
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.techpolicy.press/new-study-suggests-chatgpt-vulnerability-with-potential-privacy-implications/">
+                                    ChatGPT leaks data after simply being asked to repeat a word endlessly
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.thestack.technology/microsoft-rag-copilot-enterprise-secrets/">
+                                    RAG used in ConfusedPilot attack to reveal enterprise secrets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://thehackernews.com/2025/02/12000-api-keys-and-passwords-found-in.html">
+                                    12000+ API keys found in LLM training data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.ic3.gov/PSA/2024/PSA241203">
+                                    FBI sends out public service announcement regarding AI-powered phishing and related scams
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pcworld.com/article/2601323/5-sneaky-ways-hackers-use-generative-ai-to-scam-you.html">
+                                    AI is generating malware, and other ways scams
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/">
+                                    Deepfakes and other AI-powered Cyber Attacks
+                                </a>
+                            </li>
                         </ul>
                     </p>
                     <p>
@@ -205,7 +272,9 @@
                     <h2>Why</h2>
                     <h3>Monopoly over user base</h3>
                     <p>
-                        Certain tech platforms, most notably <a href="https://www.justice.gov/archives/opa/pr/justice-department-sues-apple-monopolizing-smartphone-markets">Apple</a>, have been receiving pressure to take down walled garden ecosystems.
+                        Certain tech platforms, most notably <a href="https://www.justice.gov/archives/opa/pr/justice-department-sues-apple-monopolizing-smartphone-markets">
+                            Apple
+                        </a>, have been receiving pressure to take down walled garden ecosystems.
                         The crux of the issue is that users are not able to swap platforms without considerable friction.
                         While some level of friction will always exist, the problem is that platforms are adding friction solely to discourage users to swap to other platforms.
                         Examples would include blocking apps that would make it easier to move data to competition, diminishing usability of 3rd party smartwatches, and limiting 3rd party digital wallet.
@@ -222,7 +291,9 @@
                     <h3>Bypass app stores where possible</h3>
                     <p>
                         Many app stores take a substantial cut of any purchases made in-app. 
-                        <a href="https://www.choicely.com/blog/how-to-estimate-the-in-app-purchase-revenue-of-your-app">Both Google and Apple</a>, for example, have been known to take 30% of in-app purchases.
+                        <a href="https://www.choicely.com/blog/how-to-estimate-the-in-app-purchase-revenue-of-your-app">
+                            Both Google and Apple
+                        </a>, for example, have been known to take 30% of in-app purchases.
                         By not using app stores, you cut out the middle man and reduce the profit of app stores.
                         While this might be difficult for non-technical users, these businesses respond to profits at the end of the day.
                         Reducing their profits due to anti-consumer practices would encourage leadership at companies engaging in them to reconsider their business strategy. 
@@ -232,7 +303,10 @@
                         Sometimes, there isn't a good option available for consumers to opt-out of using app stores and go directly to developers.
                         After all, app stores have incentives to keep apps on the app store to continue charging fees as middle men.
                         While some fees are required to maintain the app store, there is also a perverse incentive to push consumers to use apps through the default app store on the device and wasting resources on the consumer device.
-                        As such, I would recommend reaching out to the <a href="https://www.eff.org/deeplinks/2025/08/no-walled-gardens-no-gilded-cages">Electronic Frontier Foundation</a>, as they are already taking steps to pressure legislators to take action against monopolistic tech practices.
+                        As such, I would recommend reaching out to the 
+                        <a href="https://www.eff.org/deeplinks/2025/08/no-walled-gardens-no-gilded-cages">
+                            Electronic Frontier Foundation
+                        </a>, as they are already taking steps to pressure legislators to take action against monopolistic tech practices.
                     </p>
                     <br>
                     <button type="button" onclick="scrollToTop()">Back to Top</button>
@@ -247,9 +321,18 @@
                         However, forcing it where it is neither needed or wanted will cost a lot of good will from consumers.
                     </p>
                     <p>
-                        Users are getting <a href="https://www.library.hbs.edu/working-knowledge/with-subscription-fatigue-setting-in-companies-need-to-think-hard-about-fees">subscription fatigue</a> and rebelling against those who insist <a href="https://en.wikipedia.org/wiki/You%27ll_own_nothing_and_be_happy">we will own nothing and be happy</a>.
+                        Users are getting 
+                        <a href="https://www.library.hbs.edu/working-knowledge/with-subscription-fatigue-setting-in-companies-need-to-think-hard-about-fees">
+                            subscription fatigue
+                        </a> and rebelling against those who insist 
+                        <a href="https://en.wikipedia.org/wiki/You%27ll_own_nothing_and_be_happy">
+                            we will own nothing and be happy
+                        </a>.
                         It is my opinion that many companies have chased adding subscriptions where they don't belong in an effort to chase recurring revenue and boost valuations.
-                        Adding unnecessary friction only to allow users to bypass it by opening their wallet is liable to produce backlash, like how <a href="https://www.edmunds.com/car-news/bmw-relents-on-heated-seat-subscription.html">BMW was bullied out of their heated seat subscriptions</a>.
+                        Adding unnecessary friction only to allow users to bypass it by opening their wallet is liable to produce backlash, like how 
+                        <a href="https://www.edmunds.com/car-news/bmw-relents-on-heated-seat-subscription.html">
+                            BMW was bullied out of their heated seat subscriptions
+                        </a>.
                         However, some business models make sense for it to be a subscription.
                         There are a few different properties that I would use to determine if a business model makes sense as a subscription or not.
                     </p>
@@ -275,14 +358,34 @@
                     <ul>
                         <li>Locking down hardware users already purchased, only to unlock for additional fee.</li>
                         <ul>
-                            <li><a href="https://www.theatlantic.com/technology/archive/2023/02/home-printer-digital-rights-management-hp-instant-ink-subscription/672913/">HP</a> bricking printers not enrolled in ink subscription</li>
-                            <li><a href="https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling">Adobe vs FTC</a>: hard to cancel annual membership.</li>
-                            <li><a href="https://tech.yahoo.com/general/articles/study-says-online-subscriptions-exactly-171351194.html">Up to 76% of websites use shady practices</a> to get users to subscribe</li>
+                            <li>
+                                <a href="https://www.theatlantic.com/technology/archive/2023/02/home-printer-digital-rights-management-hp-instant-ink-subscription/672913/">
+                                    HP
+                                </a> bricking printers not enrolled in ink subscription
+                            </li>
+                            <li>
+                                <a href="https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling">
+                                    Adobe vs FTC
+                                </a>: hard to cancel annual membership.
+                            </li>
+                            <li>
+                                <a href="https://tech.yahoo.com/general/articles/study-says-online-subscriptions-exactly-171351194.html">
+                                    Up to 76% of websites use shady practices
+                                </a> to get users to subscribe
+                            </li>
                         </ul>
                         <li>Users loosing access to Software-as-a-Service (SaaS) with little or no notice</li>
                         <ul>
-                            <li><a href="https://www.failory.com/blog/google-failed-products">30 Google projects that didn't work out</a></li>
-                            <li><a href="https://www.thetoptens.com/internet/popular-websites-died/">10 popular dead websites</a></li>
+                            <li>
+                                <a href="https://www.failory.com/blog/google-failed-products">
+                                    30 Google projects that didn't work out
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.thetoptens.com/internet/popular-websites-died/">
+                                    10 popular dead websites
+                                </a>
+                            </li>
                         </ul>
                     </ul>
                     <br>
@@ -294,7 +397,10 @@
                     <h1>The internet should not require ID</h1>
                     <p><u>Last Updated:</u> September 18, 2025</p>
                     <blockquote>
-                        "Those who would give up essential Liberty, to purchase a little temporary Safety, deserve neither Liberty nor Safety." - <a href="https://www.npr.org/2015/03/02/390245038/ben-franklins-famous-liberty-safety-quote-lost-its-context-in-21st-century">Benjamin Franklin</a>
+                        "Those who would give up essential Liberty, to purchase a little temporary Safety, deserve neither Liberty nor Safety." - 
+                        <a href="https://www.npr.org/2015/03/02/390245038/ben-franklins-famous-liberty-safety-quote-lost-its-context-in-21st-century">
+                            Benjamin Franklin
+                        </a>
                     </blockquote>
                     <h2>Why privacy has disappeared</h2>
                     <p>
@@ -303,18 +409,45 @@
                         Examples of these protections would include:
                     </p>
                     <ul>
-                        <li>Protections against <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-iv">unreasonable search and seizure</a>.</li>
-                        <li>Protections guaranteeing <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">right to disseminate information freely</a>.</li>
-                        <li>Protections to <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">associate with others freely</a>.</li>
-                        <li>Protections in regards to <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">self-determination of religion</a>.</li>
-                        <li>Rights <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-ix">by default belong to citizens</a>.</li>
+                        <li>Protections against 
+                            <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-iv">
+                                unreasonable search and seizure
+                            </a>.
+                        </li>
+                        <li>
+                            Protections guaranteeing 
+                            <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">
+                                right to disseminate information freely
+                            </a>.
+                        </li>
+                        <li>Protections to 
+                            <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">
+                                associate with others freely
+                            </a>.
+                        </li>
+                        <li>Protections in regards to 
+                            <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">
+                                self-determination of religion
+                            </a>.
+                        </li>
+                        <li>Rights 
+                            <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-ix">
+                                by default belong to citizens
+                            </a>.
+                        </li>
                     </ul>
                     <h3>Companies found digital gold</h3>
                     <p>
                         Many companies do not have the same stringent requirements that governments have in regards to respecting privacy (depending on jurisdiction).
                         While there are certain limitations based on industry and the contents of certain personally-identifiable information (PII), as long as the end user willingly gives the company their data, the company can do whatever processing they want behind the scenes.
                         This processing could include things like building advertising profiles and other data mining features that can be sold to companies to better understand individual behaviors.
-                        Selling user tracking data has become so common that companies like <a href="https://joindeleteme.com">DeleteMe</a> and <a href="https://incogni.com/">Incogni</a> offer services that aim to reduce the ability for 
+                        Selling user tracking data has become so common that companies like 
+                        <a href="https://joindeleteme.com">
+                            DeleteMe
+                        </a> and 
+                        <a href="https://incogni.com/">
+                            Incogni
+                        </a> offer services that aim to reduce the ability for 
                     </p>
                     <h3>Governments want control</h3>
                     <p>
@@ -322,8 +455,14 @@
                         Since the data was willingly provided to the company and the company willingly provided the data to the government, the government can legitimately claim that they did not take your PII without your consent.
                         Some governments are looking for access to more fine-grain data of what citizens of their country are doing online and influence their browsing choices without making it obvious that they are doing so.
                         Governments wanting to do so could try to force users accessing the internet to provide government IDs to access either the internet itself or when accessing content the government would like to restrict.
-                        While this sounds theoretical, the UK <a href="https://www.theguardian.com/technology/2025/jul/24/what-are-the-new-uk-online-safety-rules-and-how-will-they-be-enforced">has run into some controversy from implementing new restrictions trying to ban children from accessing certain content</a>. 
-                        Despite this, <a href="https://www.eff.org/deeplinks/2024/12/effs-2024-battle-against-online-age-verification-defending-youth-privacy-and-free">several US states</a> have been attempting to implement similar laws.
+                        While this sounds theoretical, the UK 
+                        <a href="https://www.theguardian.com/technology/2025/jul/24/what-are-the-new-uk-online-safety-rules-and-how-will-they-be-enforced">
+                            has run into some controversy from implementing new restrictions trying to ban children from accessing certain content
+                        </a>. 
+                        Despite this, 
+                        <a href="https://www.eff.org/deeplinks/2024/12/effs-2024-battle-against-online-age-verification-defending-youth-privacy-and-free">
+                            several US states
+                        </a> have been attempting to implement similar laws.
                         Regardless of your stance on the specific content being restricted in the above cases, there is nothing preventing totalitarian regimes attempting to manipulate their country's internet browsing behavior using similar technologies and laws.
                     </p>
                     <h2>What can you do about it</h2>
@@ -335,7 +474,11 @@
                     </p>
                     <h3>Using privacy-preserving browsers</h3>
                     <p>
-                        <a href="https://www.torproject.org/download/">TOR</a> and <a href="https://brave.com/">Brave</a> offers additional tools to help keep users of anonymous, like hiding IP, blocking cookies, and making it easier to prevent tracking with JavaScript.
+                        <a href="https://www.torproject.org/download/">
+                            TOR
+                        </a> and <a href="https://brave.com/">
+                            Brave
+                        </a> offers additional tools to help keep users of anonymous, like hiding IP, blocking cookies, and making it easier to prevent tracking with JavaScript.
                         TOR has much more tools turned on by default, which does slow down traffic somewhat. 
                         Either way, for those worried about internet privacy, these browsers are known to be well and truly above the rest.
                     </p>
@@ -343,14 +486,20 @@
                     <p>
                         Many legislators have not thought through the potential identity verification to access certain content. 
                         However, there are already known hacks that demonstrate the potential issues around sites doxxing the government IDs of users.
-                        For example, the <a href="https://www.bbc.com/news/articles/cd0dgkjgzvjo">Tea app</a> may have allowed hackers to access up to 72,000 government IDs of users.
+                        For example, the 
+                        <a href="https://www.bbc.com/news/articles/cd0dgkjgzvjo">
+                            Tea app
+                        </a> may have allowed hackers to access up to 72,000 government IDs of users.
                         The stated goal of the site, to call out abusers to prevent domestic violence in dating, is noble.
                         De-anonymizing users could actually increase domestic abuse in this case, as abusers could use this hack to tie posts back to the government ID of the associated account.
                         It does not take too much imagination to see this style of hack negatively impacting similarly vulnerable populations.
                     </p>
                     <p>
-                        For those worried about the potential misuse of ID data, I would recommend reaching out to the <a href="https://www.eff.org/">Electronic Frontier Foundation</a> for tools and resources in pushing for intelligent policies.
-                        Without privacy on the internet, it becomes much more difficult for vulnerable populations to share information safely without surviving negative consequences.
+                        For those worried about the potential misuse of ID data, I would recommend reaching out to the 
+                        <a href="https://www.eff.org/">
+                            Electronic Frontier Foundation
+                        </a> for tools and resources in pushing for intelligent policies.
+                        Without privacy on the internet, it becomes much more difficult for vulnerable populations to share information safely.
                     </p>
                     <br>
                     <button type="button" onclick="scrollToTop()">Back to Top</button>
@@ -360,9 +509,22 @@
         <footer id="footer">
             <section class="contactMe" id="contactMe">
                 <h2>Contact:</h2>
-                <p>Email: <a href="mailto:colby.mainard@proton.me">colby.mainard@proton.me</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/colby-mainard/">https://www.linkedin.com/in/colby-mainard/</a></p>
-                <p>PGP key: <a href="../other/pgp_email_key.asc">36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE</a></p>
+                <p>Email: 
+                    <a href="mailto:colby.mainard@proton.me">
+                        colby.mainard@proton.me
+                    </a>
+                </p>
+                <p>LinkedIn: 
+                    <a href="https://www.linkedin.com/in/colby-mainard/">
+                        https://www.linkedin.com/in/colby-mainard/
+                    </a>
+                </p>
+                <p>
+                    PGP key: 
+                    <a href="../other/pgp_email_key.asc">
+                        36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE
+                    </a>
+                </p>
             </section>
         </footer>
     </body>
