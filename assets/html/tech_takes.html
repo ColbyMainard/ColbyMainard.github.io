@@ -53,6 +53,17 @@
                 );
             }
 
+            function scrollToKAN(){
+                document.getElementById(
+                    "KAN"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
             function scrollToContactMe(){
                 document.getElementById(
                     "contactMe"
@@ -84,6 +95,7 @@
                     <button type="button" onclick="scrollToAppStores()">App Stores Takes</button>
                     <button type="button" onclick="scrollToKissMySaaS()">Oversubscription</button>
                     <button type="button" onclick="scrollToPrivacyStance()">What Privacy Needs to Survive</button>
+                    <button type="button" onclick="scrollToKAN()">Kolmogorov-Arnold Networks</button>
                     <button type="button" onclick="scrollToContactMe()">Contact Me</button>
                 </nav>
             </header>
@@ -107,12 +119,14 @@
                     <h3>Autocompletion of Work</h3>
                     <p>
                         LLMs tend to see lower errors in environments where the <a href="https://developer.ibm.com/articles/awb-token-optimization-backbone-of-effective-prompt-engineering/">
-                            prompt is succinct
-                        </a>, <a href="https://www.lesswrong.com/posts/ekBsq6mATCvEvqmkC/gpt-4-is-bad-at-strategic-thinking">
-                            does not require long-term strategic thinking
-                        </a>, <a ref="https://www.k2view.com/blog/rag-hallucination/#What-is-Retrieval-Augmented-Generation">
-                            and relevant documentation was provided by processes like retrieval-augmented generation (RAG)
-                        </a>.
+                            prompt is succinct,
+                        </a>
+                        <a href="https://www.lesswrong.com/posts/ekBsq6mATCvEvqmkC/gpt-4-is-bad-at-strategic-thinking">
+                            does not require long-term strategic thinking,
+                        </a> 
+                        <a ref="https://www.k2view.com/blog/rag-hallucination/#What-is-Retrieval-Augmented-Generation">
+                            and relevant documentation was provided by processes like retrieval-augmented generation (RAG).
+                        </a>
                         If a human provides a very clear structure for the LLM, limits the scope of the ask, and provides all necessary context, the LLM can make a good first pass at what it believes should be the next words.
                     </p>
                     <h3>Summary of Documents</h3>
@@ -152,8 +166,8 @@
                         There is no common sense module within an LLM. 
                         LLMs do not possess the ability to think, understand, believe, fear, love, hate, trust, doubt, or any other action that makes them feel particularly human. 
                         Humans are much better at anthropomorphizing inanimate objects than inanimate objects are at <a href="https://writingslowly.com/2023/06/07/gaslit-by-machinery.html">
-                            mimicking the abilities of sentience and self-awareness
-                        </a>. 
+                            mimicking the abilities of sentience and self-awareness.
+                        </a>
                         It is best to keep that in mind before assigning them tasks that require the accountability that would normally be associated with sentience. 
                         Autonomy and accountability are two sides of the same coin: any system we cannot hold to account for its actions should not be given the autonomy to cause unmitigated harm.
                     </p>
@@ -184,8 +198,8 @@
                         It would be possible to generate content that would be considered racist, sexist, homophobic, xenophobic, antisemitic, or any other content that would probably have a legal/public relations team working overtime. 
                         There has also been so many AI deployments with legal ramifications that 
                         <a href="https://www.cio.com/article/190888/5-famous-analytics-and-ai-disasters.html">
-                            there are already articles showcasing lists of the worst offenders
-                        </a>. 
+                            there are already articles showcasing lists of the worst offenders.
+                        </a> 
                         As such, it is best to examine every step of your AI pipeline for potential security risks and the ramifications for those risks being insufficient.
                     </p>
                     <h3>Cybersecurity concerns</h3>
@@ -292,8 +306,8 @@
                     <p>
                         Many app stores take a substantial cut of any purchases made in-app. 
                         <a href="https://www.choicely.com/blog/how-to-estimate-the-in-app-purchase-revenue-of-your-app">
-                            Both Google and Apple
-                        </a>, for example, have been known to take 30% of in-app purchases.
+                            Both Google and Apple,
+                        </a>for example, have been known to take 30% of in-app purchases.
                         By not using app stores, you cut out the middle man and reduce the profit of app stores.
                         While this might be difficult for non-technical users, these businesses respond to profits at the end of the day.
                         Reducing their profits due to anti-consumer practices would encourage leadership at companies engaging in them to reconsider their business strategy. 
@@ -305,8 +319,8 @@
                         While some fees are required to maintain the app store, there is also a perverse incentive to push consumers to use apps through the default app store on the device and wasting resources on the consumer device.
                         As such, I would recommend reaching out to the 
                         <a href="https://www.eff.org/deeplinks/2025/08/no-walled-gardens-no-gilded-cages">
-                            Electronic Frontier Foundation
-                        </a>, as they are already taking steps to pressure legislators to take action against monopolistic tech practices.
+                            Electronic Frontier Foundation,
+                        </a> as they are already taking steps to pressure legislators to take action against monopolistic tech practices.
                     </p>
                     <br>
                     <button type="button" onclick="scrollToTop()">Back to Top</button>
@@ -315,24 +329,24 @@
             <div class="KissMySaaSDiv" id="KissMySaaSDiv">
                 <section class="KissMySaaS" id="KissMySaaS">
                     <h1>Not everything needs to be a subscription</h1>
-                    <p><u>Last Updated:</u> September 18, 2025</p>
+                    <p><u>Last Updated:</u> September 24, 2025</p>
                     <p>
-                        Subscriptions are a very tantalyzing business model where it makes sense. 
+                        Subscriptions are a very tantalizing business model where it makes sense. 
                         However, forcing it where it is neither needed or wanted will cost a lot of good will from consumers.
                     </p>
                     <p>
                         Users are getting 
                         <a href="https://www.library.hbs.edu/working-knowledge/with-subscription-fatigue-setting-in-companies-need-to-think-hard-about-fees">
                             subscription fatigue
-                        </a> and rebelling against those who insist 
+                        </a>and rebelling against those who insist 
                         <a href="https://en.wikipedia.org/wiki/You%27ll_own_nothing_and_be_happy">
-                            we will own nothing and be happy
-                        </a>.
+                            we will own nothing and be happy.
+                        </a>
                         It is my opinion that many companies have chased adding subscriptions where they don't belong in an effort to chase recurring revenue and boost valuations.
                         Adding unnecessary friction only to allow users to bypass it by opening their wallet is liable to produce backlash, like how 
                         <a href="https://www.edmunds.com/car-news/bmw-relents-on-heated-seat-subscription.html">
-                            BMW was bullied out of their heated seat subscriptions
-                        </a>.
+                            BMW was bullied out of their heated seat subscriptions.
+                        </a>
                         However, some business models make sense for it to be a subscription.
                         There are a few different properties that I would use to determine if a business model makes sense as a subscription or not.
                     </p>
@@ -361,17 +375,17 @@
                             <li>
                                 <a href="https://www.theatlantic.com/technology/archive/2023/02/home-printer-digital-rights-management-hp-instant-ink-subscription/672913/">
                                     HP
-                                </a> bricking printers not enrolled in ink subscription
+                                </a>bricking printers not enrolled in ink subscription
                             </li>
                             <li>
                                 <a href="https://www.ftc.gov/news-events/news/press-releases/2024/06/ftc-takes-action-against-adobe-executives-hiding-fees-preventing-consumers-easily-cancelling">
-                                    Adobe vs FTC
-                                </a>: hard to cancel annual membership.
+                                    Adobe vs FTC:
+                                </a>hard to cancel annual membership.
                             </li>
                             <li>
                                 <a href="https://tech.yahoo.com/general/articles/study-says-online-subscriptions-exactly-171351194.html">
                                     Up to 76% of websites use shady practices
-                                </a> to get users to subscribe
+                                </a>to get users to subscribe
                             </li>
                         </ul>
                         <li>Users loosing access to Software-as-a-Service (SaaS) with little or no notice</li>
@@ -411,29 +425,29 @@
                     <ul>
                         <li>Protections against 
                             <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-iv">
-                                unreasonable search and seizure
-                            </a>.
+                                unreasonable search and seizure.
+                            </a>
                         </li>
                         <li>
                             Protections guaranteeing 
                             <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">
-                                right to disseminate information freely
-                            </a>.
+                                right to disseminate information freely.
+                            </a>
                         </li>
                         <li>Protections to 
                             <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">
-                                associate with others freely
-                            </a>.
+                                associate with others freely.
+                            </a>
                         </li>
                         <li>Protections in regards to 
                             <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-i">
-                                self-determination of religion
-                            </a>.
+                                self-determination of religion.
+                            </a>
                         </li>
                         <li>Rights 
                             <a href="https://constitutioncenter.org/the-constitution/amendments/amendment-ix">
-                                by default belong to citizens
-                            </a>.
+                                by default belong to citizens.
+                            </a>
                         </li>
                     </ul>
                     <h3>Companies found digital gold</h3>
@@ -444,10 +458,10 @@
                         Selling user tracking data has become so common that companies like 
                         <a href="https://joindeleteme.com">
                             DeleteMe
-                        </a> and 
+                        </a>and 
                         <a href="https://incogni.com/">
                             Incogni
-                        </a> offer services that aim to reduce the ability for 
+                        </a>offer services that aim to reduce the ability for 
                     </p>
                     <h3>Governments want control</h3>
                     <p>
@@ -457,12 +471,12 @@
                         Governments wanting to do so could try to force users accessing the internet to provide government IDs to access either the internet itself or when accessing content the government would like to restrict.
                         While this sounds theoretical, the UK 
                         <a href="https://www.theguardian.com/technology/2025/jul/24/what-are-the-new-uk-online-safety-rules-and-how-will-they-be-enforced">
-                            has run into some controversy from implementing new restrictions trying to ban children from accessing certain content
-                        </a>. 
+                            has run into some controversy from implementing new restrictions trying to ban children from accessing certain content.
+                        </a> 
                         Despite this, 
                         <a href="https://www.eff.org/deeplinks/2024/12/effs-2024-battle-against-online-age-verification-defending-youth-privacy-and-free">
                             several US states
-                        </a> have been attempting to implement similar laws.
+                        </a>have been attempting to implement similar laws.
                         Regardless of your stance on the specific content being restricted in the above cases, there is nothing preventing totalitarian regimes attempting to manipulate their country's internet browsing behavior using similar technologies and laws.
                     </p>
                     <h2>What can you do about it</h2>
@@ -476,9 +490,9 @@
                     <p>
                         <a href="https://www.torproject.org/download/">
                             TOR
-                        </a> and <a href="https://brave.com/">
+                        </a>and <a href="https://brave.com/">
                             Brave
-                        </a> offers additional tools to help keep users of anonymous, like hiding IP, blocking cookies, and making it easier to prevent tracking with JavaScript.
+                        </a>offers additional tools to help keep users of anonymous, like hiding IP, blocking cookies, and making it easier to prevent tracking with JavaScript.
                         TOR has much more tools turned on by default, which does slow down traffic somewhat. 
                         Either way, for those worried about internet privacy, these browsers are known to be well and truly above the rest.
                     </p>
@@ -489,7 +503,7 @@
                         For example, the 
                         <a href="https://www.bbc.com/news/articles/cd0dgkjgzvjo">
                             Tea app
-                        </a> may have allowed hackers to access up to 72,000 government IDs of users.
+                        </a>may have allowed hackers to access up to 72,000 government IDs of users.
                         The stated goal of the site, to call out abusers to prevent domestic violence in dating, is noble.
                         De-anonymizing users could actually increase domestic abuse in this case, as abusers could use this hack to tie posts back to the government ID of the associated account.
                         It does not take too much imagination to see this style of hack negatively impacting similarly vulnerable populations.
@@ -498,9 +512,81 @@
                         For those worried about the potential misuse of ID data, I would recommend reaching out to the 
                         <a href="https://www.eff.org/">
                             Electronic Frontier Foundation
-                        </a> for tools and resources in pushing for intelligent policies.
+                        </a>for tools and resources in pushing for intelligent policies.
                         Without privacy on the internet, it becomes much more difficult for vulnerable populations to share information safely.
                     </p>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                </section>
+            </div>
+            <div class="KANDiv" id="KANDiv">
+                <section class="KAN" id="KAN">
+                    <h1>Kolmogorov-Arnold Networks (KANs)</h1>
+                    <p><u>Last Updated:</u> September 24, 2025</p>
+                    <h2>What are they?</h2>
+                    <p>
+                        <a href="https://arxiv.org/abs/2404.19756">
+                            Kolmogorov-Arnold Networks
+                        </a>are an interesting alternative to the current neural network technology based on multi-layer perceptrons.
+                        The internal structure of traditional neural networks are perceptrons organized into layers.
+                        Each perceptron takes a set of inputs as numbers as a matrix, performing a linear transformation (e.g. matrix multiplication), and outputting a numerical value.
+                        Predetermined activation functions (e.g. sigmoid and rectified linear unit) are then applied to outputs of each perceptron and passed from layer to layer until the neural network has arrived at an answer.
+                        In this structure, it is common to have many different perceptrons, each solving a miniscule portion of the problem.
+                        KANs, on the other hand, are interesting because they do not rely on predetermined activation function.
+                        Each perceptron in a KAN is responsible for learning its own activation function with splines.
+                        Because of this, each perceptron is much more robust than comparable multi-layer perceptrons.
+                        This additional robustness allows KANs to use fewer perceptrons to achieve similar performance.
+                    </p>
+                    <h2>Pros</h2>
+                    <h3>Improved interpretability</h3>
+                    <p>
+                        Thanks to each node of the KAN learning it's own spline, this would allow users to visualize how a change of input impacts the output of that node.
+                        Once a user understands each node as well as how data flows through the network, it would be possible to visualize how changing an input would change outputs.
+                        When comparing this to multi-layer perceptrons, it is much more difficult to determine how weights and activation functions have meaning in a larger context.
+                        Not only are there arbitrarily many perceptrons in current neural network architectures, many of these perceptrons interact with each other by virtue of this architecture.
+                        Because of this, it is almost impossible to generate a visualization that both generalizes the patterns that the multi-layer perceptrons discovered and is easily comprehended by the human mind.
+                        KANs, by comparison, have very few units composing it.
+                        This makes the combinatorial amount of visualizations are easier to merge together to make an interpretable model that is much more approachable for the average human.
+                    </p>
+                    <h3>Accuracy</h3>
+                    <p>
+                        Because each node of the KAN learns it's own activation function in addition to learning weights, each node can more accurately fit a component of the problem.
+                        Since activation functions are typically defined by the user for multi-layer perceptrons, there is no guarantee that the function chosen by the user is the best possible.
+                        Even when taking into account the use of hyperparameter tuning, this tends to yield only the best activation function of those tested.
+                        The exclusion of poor activation functions does not exhaustively that the best activation function was chosen to fit the data to the exclusion of all others.
+                    </p>
+                    <h2>Cons</h2>
+                    <h3>Less developer support</h3>
+                    <p>
+                        As the paper I was able to find for this demo was only released in 2024, most AI developers haven't had much time to play with this relatively new technology.
+                        The fact that LLMs have consumed so much of attention from non-technical users has redirected the efforts and limited time that developers have to keep up-to-date on current technologies.
+                        When developers are limited in capacity, they inevitably focus on the features that stakeholders like users and business leaders demand.
+                        Despite the fact that some technologies in the proof-of-concept phase could perform better than existing technologies, developers need to be both aware of the existence of the technology and have the resources to integrate it into their codebase.
+                        Combining the novelty of KANs and the extremely fast, chaotic impact of AI on business strategies has lead to a lack of resources to explore how KANs could change the game fundamentally.
+                    </p>
+                    <h3>Parallel Processing / Speed</h3>
+                    <p>
+                        There are several features that have limited the max speed of KANs, like:
+                    </p>
+                    <ul>
+                        <li>More complex logic</li>
+                        <ul>
+                            <li>Internal logic learns both activation function and weights/biases.</li>
+                            <li>Harder to cache and make operation possible to run in a batch.</li>
+                            <li>Developments that would allow KANs to take advantage of hardware like single instruction multiple data (SIMD) and graphics processing units (GPU) not implemented yet.</li>
+                        </ul>
+                        <li>Integration with multi-layer perceptrons</li>
+                        <ul>
+                            <li>Certain tasks may make more sense to leave implemented in multi-layer perceptrons, as performance is more of a known quantity.</li>
+                            <li>Libraries designed to make this manageable for the average don't exist at the time of writing.</li>
+                        </ul>
+                        <li>Saving and sharing KAN models with others</li>
+                        <ul>
+                            <li>No standard interchange format currently exists.</li>
+                            <li>Format would need to not interfere with optimizations to make KAN speed comparable to multi-layer perceptrons.</li>
+                        </ul>
+                    </ul>
+                    <p></p>
                     <br>
                     <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>

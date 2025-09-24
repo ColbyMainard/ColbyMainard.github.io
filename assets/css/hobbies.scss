@@ -28,12 +28,12 @@ $vivid_terrain_3: #f6e0a2;
 $vivid_terrain_4: #f5a524;
 $vivid_terrain_5: #e7693c;
 
-/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
-$shades_of_brown_1: #d4aa8c;
-$shades_of_brown_2: #b56a5a;
-$shades_of_brown_3: #8a4c7b;
-$shades_of_brown_4: #5b699a;
-$shades_of_brown_5: #3c4b86;
+/* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
+$brown_document_background_1: #e9d9b9;
+$brown_document_background_2: #d5ccae;
+$brown_document_background_3: #c2b180;
+$brown_document_background_4: #a67c5e;
+$brown_document_background_5: #895b29;
 
 .fitness {
     margin: auto;
@@ -297,7 +297,7 @@ $shades_of_brown_5: #3c4b86;
 .history {
     margin: auto;
     text-align: left;
-    background-color: $shades_of_brown_5;
+    background-color: $brown_document_background_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Times New Roman", Times, serif;
@@ -310,60 +310,60 @@ $shades_of_brown_5: #3c4b86;
         border-radius: 1%;
     }
     h1 {
-        color: $shades_of_brown_1;
+        color: $brown_document_background_1;
         font-size: 5vw;
     }
     h2 {
-        color: $shades_of_brown_2;
+        color: $brown_document_background_2;
         font-size: 3vw;
     }
     h3 {
-        color: $shades_of_brown_2;
+        color: $brown_document_background_2;
         font-size: 2vw;
     }
     p {
-        color: $shades_of_brown_2;
+        color: $brown_document_background_2;
         font-size: 1vw;
     }
     blockquote {
         font-family: "Lucida Handwriting", cursive;
-        color: $shades_of_brown_2;
+        color: $brown_document_background_2;
         font-size: 1.5vw;
     }
     /* unvisited link */
     a:link {
-        color: $shades_of_brown_2;
+        color: $brown_document_background_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $shades_of_brown_3;
+        color: $brown_document_background_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $shades_of_brown_2;
+        color: $brown_document_background_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $shades_of_brown_3;
+        color: $brown_document_background_3;
         font-size: 1vw;
     }
     ul {
         li {
-            color: $shades_of_brown_2;
+            color: $brown_document_background_2;
             font-size: 1vw;
         }
     }
     table {
-        border-color: $shades_of_brown_2;
+        border-color: $brown_document_background_2;
         border-style: solid;
         tr {
-            border-color: $shades_of_brown_2;
+            border-color: $brown_document_background_2;
             th {
-                border-color: $shades_of_brown_2;
-                color: $shades_of_brown_2;
+                border-color: $brown_document_background_2;
+                color: $brown_document_background_2;
                 font-size: 1vw;
                 border-top-style: double;
                 border-right-style: double;
@@ -371,28 +371,28 @@ $shades_of_brown_5: #3c4b86;
                 border-left-style: double;
                 /* unvisited link */
                 a:link {
-                    color: $shades_of_brown_2;
+                    color: $brown_document_background_2;
                     font-size: 1vw;
                 }
                 /* visited link */
                 a:visited {
-                    color: $shades_of_brown_3;
+                    color: $brown_document_background_3;
                     font-size: 1vw;
                 }
                 /* mouse over link */
                 a:hover {
-                    color: $shades_of_brown_2;
+                    color: $brown_document_background_2;
                     font-size: 1vw;
                 }
                 /* selected link */
                 a:active {
-                    color: $shades_of_brown_3;
+                    color: $brown_document_background_3;
                     font-size: 1vw;
                 }
             }
             td {
-                border-color: $shades_of_brown_2;
-                color: $shades_of_brown_2;
+                border-color: $brown_document_background_2;
+                color: $brown_document_background_2;
                 font-size: 1vw;
                 border-top-style: groove;
                 border-right-style: groove;
@@ -400,33 +400,33 @@ $shades_of_brown_5: #3c4b86;
                 border-left-style: groove;
                 /* unvisited link */
                 a:link {
-                    color: $shades_of_brown_2;
+                    color: $brown_document_background_2;
                     font-size: 1vw;
                 }
                 /* visited link */
                 a:visited {
-                    color: $shades_of_brown_3;
+                    color: $brown_document_background_3;
                     font-size: 1vw;
                 }
                 /* mouse over link */
                 a:hover {
-                    color: $shades_of_brown_2;
+                    color: $brown_document_background_2;
                     font-size: 1vw;
                 }
                 /* selected link */
                 a:active {
-                    color: $shades_of_brown_3;
+                    color: $brown_document_background_3;
                     font-size: 1vw;
                 }
             }
         }
     }
     button {
-        border: 0.25vw solid $shades_of_brown_2;
+        border: 0.25vw solid $brown_document_background_2;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $shades_of_brown_2;
-        background-color: $shades_of_brown_5;
+        color: $brown_document_background_2;
+        background-color: $brown_document_background_5;
         font-size: 1vw;
     }
 }

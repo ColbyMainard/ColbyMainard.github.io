@@ -224,7 +224,7 @@
 /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 /* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
 /* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
-/* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
+/* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
 .fitness {
   margin: auto;
   text-align: left;
@@ -442,7 +442,7 @@
 .history {
   margin: auto;
   text-align: left;
-  background-color: #3c4b86;
+  background-color: #895b29;
   width: 80%;
   border-radius: 10px;
   font-family: "Times New Roman", Times, serif;
@@ -458,44 +458,44 @@
     height: auto;
     border-radius: 1%; }
   .history h1 {
-    color: #d4aa8c;
+    color: #e9d9b9;
     font-size: 5vw; }
   .history h2 {
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 3vw; }
   .history h3 {
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 2vw; }
   .history p {
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 1vw; }
   .history blockquote {
     font-family: "Lucida Handwriting", cursive;
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 1.5vw; }
   .history a:link {
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 1vw; }
   .history a:visited {
-    color: #8a4c7b;
+    color: #c2b180;
     font-size: 1vw; }
   .history a:hover {
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 1vw; }
   .history a:active {
-    color: #8a4c7b;
+    color: #c2b180;
     font-size: 1vw; }
   .history ul li {
-    color: #b56a5a;
+    color: #d5ccae;
     font-size: 1vw; }
   .history table {
-    border-color: #b56a5a;
+    border-color: #d5ccae;
     border-style: solid; }
     .history table tr {
-      border-color: #b56a5a; }
+      border-color: #d5ccae; }
       .history table tr th {
-        border-color: #b56a5a;
-        color: #b56a5a;
+        border-color: #d5ccae;
+        color: #d5ccae;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
@@ -506,20 +506,20 @@
         /* mouse over link */
         /* selected link */ }
         .history table tr th a:link {
-          color: #b56a5a;
+          color: #d5ccae;
           font-size: 1vw; }
         .history table tr th a:visited {
-          color: #8a4c7b;
+          color: #c2b180;
           font-size: 1vw; }
         .history table tr th a:hover {
-          color: #b56a5a;
+          color: #d5ccae;
           font-size: 1vw; }
         .history table tr th a:active {
-          color: #8a4c7b;
+          color: #c2b180;
           font-size: 1vw; }
       .history table tr td {
-        border-color: #b56a5a;
-        color: #b56a5a;
+        border-color: #d5ccae;
+        color: #d5ccae;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
@@ -530,36 +530,29 @@
         /* mouse over link */
         /* selected link */ }
         .history table tr td a:link {
-          color: #b56a5a;
+          color: #d5ccae;
           font-size: 1vw; }
         .history table tr td a:visited {
-          color: #8a4c7b;
+          color: #c2b180;
           font-size: 1vw; }
         .history table tr td a:hover {
-          color: #b56a5a;
+          color: #d5ccae;
           font-size: 1vw; }
         .history table tr td a:active {
-          color: #8a4c7b;
+          color: #c2b180;
           font-size: 1vw; }
   .history button {
-    border: 0.25vw solid #b56a5a;
+    border: 0.25vw solid #d5ccae;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #b56a5a;
-    background-color: #3c4b86;
+    color: #d5ccae;
+    background-color: #895b29;
     font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
-/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
-/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
-/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
-/* Desert Dawn color palette from https://colormagic.app/palette/689f63d900aacad274865dda */
-/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
 /* Shades of Brown color palette from https://colormagic.app/palette/68a2a7484ad85ebf78f88879 */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
 /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
@@ -763,6 +756,54 @@
     background-color: #1f3a3d;
     font-size: 1vw; }
 
+.KAN {
+  margin: auto;
+  text-align: left;
+  background-color: #1d3a6d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  .KAN h1 {
+    font-size: 5vw;
+    color: #d6e4f5; }
+  .KAN h2 {
+    font-size: 3vw;
+    color: #a4c8df; }
+  .KAN h3 {
+    font-size: 2vw;
+    color: #7bb7d1; }
+  .KAN a:link {
+    font-size: 1vw;
+    color: #4aa0c4; }
+  .KAN a:visited {
+    font-size: 1vw;
+    color: #4aa0c4; }
+  .KAN a:hover {
+    font-size: 1vw;
+    color: #4aa0c4; }
+  .KAN a:active {
+    font-size: 1vw;
+    color: #4aa0c4; }
+  .KAN p {
+    font-size: 1vw;
+    color: #4aa0c4; }
+  .KAN ul li {
+    font-size: 1vw;
+    color: #4aa0c4; }
+  .KAN button {
+    border: 0.25vw solid #d6e4f5;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #d6e4f5;
+    background-color: #1d3a6d;
+    font-size: 1vw; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
@@ -824,7 +865,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%;
+    max-width: 60%;
     height: auto;
     border: 1vw solid #1a1a1e;
     border-radius: 1%; }
