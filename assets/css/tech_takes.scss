@@ -49,6 +49,20 @@ $digital_veil_3: #5bc5c8;
 $digital_veil_4: #a5e3e9;
 $digital_veil_5: #f0f4f5;
 
+/* Emerald Efficiency palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+$emerald_efficiency_1: #007a5e;
+$emerald_efficiency_2: #1d9a6a;
+$emerald_efficiency_3: #50c3a1;
+$emerald_efficiency_4: #a1d9b0;
+$emerald_efficiency_5: #e0f7fa;
+
+/* Purple Quantum https://colormagic.app/palette/68f429537470129f5e4b0d3d */
+$purple_quantum_1: #1e1f2a;
+$purple_quantum_2: #3c2b5f;
+$purple_quantum_3: #5c4f8c;
+$purple_quantum_4: #8d6ab9;
+$purple_quantum_5: #e5c3f9;
+
 .LLMOpinions {
     margin: auto;
     text-align: left;
@@ -342,6 +356,254 @@ $digital_veil_5: #f0f4f5;
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $luna_of_gale_1;
         background-color: $luna_of_gale_5;
+        font-size: 1vw;
+    }
+}
+
+.Cryptocurrency {
+    margin: auto;
+    text-align: left;
+    background-color: $emerald_efficiency_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $emerald_efficiency_5;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $emerald_efficiency_4;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $emerald_efficiency_4;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $emerald_efficiency_4;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $emerald_efficiency_4;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $emerald_efficiency_4;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $emerald_efficiency_4;
+    }
+    p {
+        font-size: 1vw;
+        color: $emerald_efficiency_4;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $emerald_efficiency_4;
+        }
+    }
+    table {
+        border-color: $emerald_efficiency_4;
+        border-style: solid;
+        tr {
+            border-color: $emerald_efficiency_4;
+            th {
+                border-color: $emerald_efficiency_4;
+                color: $emerald_efficiency_4;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+                /* unvisited link */
+                a:link {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+            }
+            td {
+                border-color: $emerald_efficiency_4;
+                color: $emerald_efficiency_4;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+                /* unvisited link */
+                a:link {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
+                    color: $emerald_efficiency_4;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $emerald_efficiency_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $emerald_efficiency_5;
+        background-color: $emerald_efficiency_1;
+        font-size: 1vw;
+    }
+}
+
+.FutureOfQuantum {
+    margin: auto;
+    text-align: left;
+    background-color: $purple_quantum_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $purple_quantum_5;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $purple_quantum_5;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $purple_quantum_5;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $purple_quantum_4;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $purple_quantum_4;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $purple_quantum_4;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $purple_quantum_4;
+    }
+    p {
+        font-size: 1vw;
+        color: $purple_quantum_4;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $purple_quantum_4;
+        }
+    }
+    table {
+        border-color: $purple_quantum_4;
+        border-style: solid;
+        tr {
+            border-color: $purple_quantum_4;
+            th {
+                border-color: $purple_quantum_4;
+                color: $purple_quantum_4;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+                /* unvisited link */
+                a:link {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+            }
+            td {
+                border-color: $purple_quantum_4;
+                color: $purple_quantum_4;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+                /* unvisited link */
+                a:link {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+                /* visited link */
+                a:visited {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+                /* mouse over link */
+                a:hover {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+                /* selected link */
+                a:active {
+                    color: $purple_quantum_4;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $purple_quantum_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $purple_quantum_5;
+        background-color: $purple_quantum_1;
         font-size: 1vw;
     }
 }

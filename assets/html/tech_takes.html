@@ -64,6 +64,28 @@
                 );
             }
 
+            function scrollToCryptocurrency(){
+                document.getElementById(
+                    "Cryptocurrency"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
+            function scrollToFutureOfQuantum(){
+                document.getElementById(
+                    "FutureOfQuantum"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
             function scrollToContactMe(){
                 document.getElementById(
                     "contactMe"
@@ -92,10 +114,12 @@
             <header>
                 <nav>
                     <button type="button" onclick="scrollToLLMOpinions()">LLM Pros and Cons</button>
-                    <button type="button" onclick="scrollToAppStores()">App Stores Takes</button>
+                    <button type="button" onclick="scrollToAppStores()">App Store Issues</button>
                     <button type="button" onclick="scrollToKissMySaaS()">Oversubscription</button>
                     <button type="button" onclick="scrollToPrivacyStance()">What Privacy Needs to Survive</button>
                     <button type="button" onclick="scrollToKAN()">Kolmogorov-Arnold Networks</button>
+                    <button type="button" onclick="scrollToCryptocurrency()">Cryptocurrency Basics</button>
+                    <button type="button" onclick="scrollToFutureOfQuantum()">Future of Quantum Computing</button>
                     <button type="button" onclick="scrollToContactMe()">Contact Me</button>
                 </nav>
             </header>
@@ -640,6 +664,189 @@
                             <li>Interchange and save formats would need to not interfere with optimizations to make KAN speed comparable to MLPs.</li>
                         </ul>
                     </ul>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                </section>
+            </div>
+            <div class="CryptocurrencyDiv" id="CryptocurrencyDiv">
+                <section class="Cryptocurrency" id="Cryptocurrency">
+                    <h1>Staying Safe with Cryptocurrency</h1>
+                    <p><u>Last Updated:</u> October 20, 2025</p>
+                    <h2>What are cryptocurrencies?</h2>
+                    <p></p>
+                    <h2>Pros and Cons of Investing in Crypto</h2>
+                    <p>
+                        To establish what the cryptocurrency market, I will compare and contrast it with more traditional securities.
+                        Traditional securities include things like stocks and exchange-traded funds (ETFs).
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Traditional Securities</th>
+                            <th>Cryptocurrency</th>
+                        </tr>
+                        <tr>
+                            <th>Asset types</th>
+                            <td>
+                                This usually represents partial ownership of companies or other assets.
+                            </td>
+                            <td>
+                                Cryptocurrency is protected by securing a decentralized database known as a blockchain.
+                                However, it is important to understand that many cryptocurrencies do not have any underlying assets setting value.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Regulation</th>
+                            <td>
+                                Traditional securities are very heavily regulated and often have very strict financial reporting requirements.
+                                Violating these laws can lead to various fines and jail time for those who knowingly violate these regulations.
+                            </td>
+                            <td>
+                                While cryptocurrencies have been receiving some government attention and regulation, they are still much less regulated.
+                                Similarly, it is much easier to perform unsavory activity.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Volatility</th>
+                            <td>
+                                As there is an underlying asset, prices of this security will be related to the underlying value of the asset and sentiment of future performance.
+                                The underlying assets serve as a base that reduces the variability.
+                            </td>
+                            <td>
+                                Cryptocurrencies are generally not backed by assets.
+                                Therefore, any variability can be tracked back to differences in supply/demand and sentiment.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Intended Purpose</th>
+                            <td>
+                                This is usually used to transfer ownership of publicly-traded entities.
+                                Due to this, it is a good way for publicly traded companies to raise capitals and for investors to gain access to partial business ownership.
+                            </td>
+                            <td>
+                                Cryptocurrencies are usually designed as a digital-only currency. 
+                                It would be the equivalent of a volatile currency exchange between fiat currencies and their crypto counterparts.
+                            </td>
+                        </tr>
+                    </table>
+                    <ul></ul>
+                    <h2>Which cryptocurrencies are (relatively safe)?</h2>
+                    <p>
+                        It is worth noting that cryptocurrency is much more volatile than traditional securities.
+                        Even with traditional securities, it is wise to not invest more than you can afford to lose.
+                        While I do not have cryptocurrency holdings, I can recommend several cryptocurrencies that tend to be more stable.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Cryptocurrency</th>
+                            <th>Differentiation in the Market</th>
+                        </tr>
+                        <tr>
+                            <td><a href="https://money.usnews.com/investing/articles/the-history-of-bitcoin">Bitcoin</a></td>
+                            <td>It is the first well-known cryptocurrency, with the founded whitepaper written by the anonymous Satoshi Nakamoto in 2008.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.coinbase.com/learn/crypto-basics/what-is-ethereum">Ethereum</a></td>
+                            <td>Both a cryptocurrency and a base for decentralized Web3 applications.</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Monero">Monero</a></td>
+                            <td>
+                                Designed for improved privacy. 
+                                Transactions in other cryptocurrencies can be traced back to a wallet by virtue of how their blockchain was written.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Solana_(blockchain_platform)">Solana</a></td>
+                            <td>
+                                Designed as a proof-of-stake smart contract platform.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/XRP_Ledger">XRP</a></td>
+                            <td>
+                                Also known as Ripple, this is a consensus protocol with an associated cryptocurrency and other features.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://litecoin.com/">Litecoin</a></td>
+                            <td>
+                                A lightweight cryptocurrency founded in 2011 with cheap transfer fees.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Tron_(blockchain)">TRON</a></td>
+                            <td>
+                                A proof-of-stake blockchain with smart contract functionality.
+                            </td>
+                        </tr>
+                    </table>
+                    <h2>Recommended list of supplies to start</h2>
+                    <p></p>
+                    <ul>
+                        <li>Cold Wallet</li>
+                        <ul>
+                            <li>The cryptocurrency needs to be stored somewhere.</li>
+                            <li>Cold wallets make it harder for scammers to access.</li>
+                            <li>Don't lose access to the cold wallet though - could cause issues accessing assets.</li>
+                        </ul>
+                        <li>Hot Wallet</li>
+                        <ul>
+                            <li>Makes it quicker and easier to trade crypto faster.</li>
+                            <li>Scammers often attempt to target these to steal cryptocurrency - internet connected wallets tend to be easier to steal from.</li>
+                        </ul>
+                        <li>Knowledge of the cryptocurrency space</li>
+                        <ul>
+                            <li>Trading things you don't understand is an easy way to lose money.</li>
+                            <li>Having an intuition for any space you are operating in would allow for improved safety and intelligent behavior.</li>
+                        </ul>
+                        <li>Strong cybersecurity/operational security</li>
+                        <ul>
+                            <li>Anywhere there is money stored on a computer, scammers and hackers will follow.</li>
+                            <li>Placing effective barriers between hackers and your money makes it harder for them to steal it.</li>
+                        </ul>
+                    </ul>
+                    <br>
+                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                </section>
+            </div>
+            <div class="FutureOfQuantumDiv" id="FutureOfQuantumDiv">
+                <section class="FutureOfQuantum" id="FutureOfQuantum">
+                    <h1>Future of Quantum Computing</h1>
+                    <p><u>Last Updated:</u> October 18, 2025</p>
+                    <h2>What is quantum computing?</h2>
+                    <p>
+                        <a href="https://www.nist.gov/quantum-information-science/quantum-computing-explained">
+                            Quantum computing
+                        </a>is using various principles of quantum mechanics to perform useful calculations.
+                        The base unit of these computers is the qubit.
+                        Qubits, like traditional bits, are able to take on values.
+                        Traditional bits have no uncertainty and always take the value of either true or false, while Qubits can have uncertainty by taking a state that is a combination between true and false.
+                    </p>
+                    <h2>Where is quantum computing most useful?</h2>
+                    <p>
+                        Because of the fundamental difference in how the underlying hardware handles uncertainty, algorithms can be written to take advantage of this.
+                        Uncertainty collapses upon reading the state of the qubits, and this collapse propagates through the circuit by virtue of how quantum physics behaves.
+                        Digital computers don't have this advantage, and software/hardware engineers need to explicitly need to propagate bit state changes.
+                        Allowing physics to much of the heavy lifting, it is possible to perform operations much faster with sufficient hardware.
+                        While quantum computing isn't mature enough to be general hardware, it has potential to speed up certain domains, like well-known <a href="https://arxiv.org/abs/2301.06978">
+                            NP problems.
+                        </a>These problems tend to grow exponentially or worse on digital hardware.
+                        Quantum, however, grows its computing power exponentially with the number of qubits the quantum computer has.
+                    </p>
+                    <h2>Where will quantum computing likely go?</h2>
+                    <p>
+                        Quantum computing is still in its infancy. 
+                        Because of that, all guesses are where it will take computing is speculation at best.
+                        However, there are potential parallels with the Graphics Processing Unit (GPU), Tensor Processing Unit (TPU), and other Application Specific Integrated Circuits (ASICs).
+                        All of these are good at improving performance for certain classes of problems, but the inverse is true if the problem is converted to this form poorly.
+                        GPUs are good with processes that can be broken into many smaller problems with relatively simple logic.
+                        TPUs are best for matrix-specific applications.
+                        ASICs are usually custom built for specific tasks, with GPUs and TPUs being possible examples of the most popular.
+                        It is likely that quantum computing will start as a hardware accelerator only really affordable for enterprise and government applications.
+                        Later, it is possible that quantum computing will become affordable to access for individuals, but several engineering challenges will need to be overcome first.
+                        The main issues are going to be in prohibitive energy costs, cooling, and having enough qubits available to actually be functionally useful for consumer applications.
+                    </p>
                     <br>
                     <button type="button" onclick="scrollToTop()">Back to Top</button>
                 </section>
