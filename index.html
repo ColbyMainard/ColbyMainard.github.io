@@ -83,6 +83,17 @@
                 );
             }
 
+            function scrollToLanguages(){
+                document.getElementById(
+                    "languagesDiv"
+                ).scrollIntoView(
+                    false,
+                    {
+                        behavior: "smooth"
+                    }
+                );
+            }
+
             function scrollToContactMe(){
                 document.getElementById(
                     "contactMe"
@@ -115,6 +126,7 @@
                     <button type="button" onclick="scrollToProjects()">Projects</button>
                     <button type="button" onclick="scrollToTechnicalSkills()">Technical Skills</button>
                     <button type="button" onclick="scrollToCertifications()">Certifications</button>
+                    <button type="button" onclick="scrollToLanguages()">Certifications</button>
                     <button type="button" onclick="scrollToContactMe()">Contact Me</button>
                 </nav>
             </header>
