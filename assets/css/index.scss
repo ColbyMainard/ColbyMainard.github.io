@@ -28,6 +28,13 @@ $gryffon_3: #ff6600;
 $gryffon_4: #cc3300;
 $gryffon_5: #990000;
 
+/* Visionary Kinship color palette from https://colormagic.app/palette/684cd204a1f3618a008a9255 */
+$visionary_kinship_1: #1abc9c;
+$visionary_kinship_2: #2ecc70;
+$visionary_kinship_3: #3398db;
+$visionary_kinship_4: #e77e23;
+$visionary_kinship_5: #e74d3c;
+
 .workHistory {
     margin: auto;
     text-align: left;
@@ -285,6 +292,45 @@ $gryffon_5: #990000;
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $gryffon_1;
         background-color: $gryffon_5;
+        font-size: 1vw;
+    }
+}
+
+.languages {
+    margin: auto;
+    text-align: left;
+    background-color: $visionary_kinship_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        color: $visionary_kinship_1;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $visionary_kinship_1;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $visionary_kinship_1;
+        font-size: 2vw;
+    }
+    p {
+        color: $visionary_kinship_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $visionary_kinship_3;
+            font-size: 1vw;
+        }
+    }
+    button {
+        border: 0.25vw solid $visionary_kinship_1;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $visionary_kinship_1;
+        background-color: $visionary_kinship_5;
         font-size: 1vw;
     }
 }
