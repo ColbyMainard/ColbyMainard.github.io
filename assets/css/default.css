@@ -1023,6 +1023,7 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
 html {
   scroll-behavior: smooth; }
