@@ -35,7 +35,7 @@ $brown_document_background_3: #c2b180;
 $brown_document_background_4: #a67c5e;
 $brown_document_background_5: #895b29;
 
-.fitness {
+#fitness {
     margin: auto;
     text-align: left;
     background-color: $sunset_glow_5;
@@ -98,7 +98,7 @@ $brown_document_background_5: #895b29;
     }
 }
 
-.quantumComputing {
+#quantumComputing {
     margin: auto;
     text-align: left;
     background-color: $calm_authority_1;
@@ -157,7 +157,7 @@ $brown_document_background_5: #895b29;
     }
 }
 
-.photography {
+#photography {
     margin: auto;
     text-align: left;
     background-color: $vivid_terrain_1;
@@ -219,7 +219,7 @@ $brown_document_background_5: #895b29;
     }
 }
 
-.dungeonsAndDragons {
+#dungeonsAndDragons {
     margin: auto;
     text-align: left;
     background-color: $dungeons_and_dragons_1;
@@ -278,7 +278,7 @@ $brown_document_background_5: #895b29;
     }
 }
 
-.history {
+#history {
     margin: auto;
     text-align: left;
     background-color: $brown_document_background_5;
@@ -333,6 +333,7 @@ $brown_document_background_5: #895b29;
         }
     }
     table {
+        border-collapse: collapse;
         border-color: $brown_document_background_2;
         border-style: solid;
         tr {

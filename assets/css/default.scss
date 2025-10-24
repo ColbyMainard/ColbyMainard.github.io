@@ -51,7 +51,7 @@ header {
         color: $noir_3;
         font-size: 1vw;
     }
-    .pageMenu {
+    #pageMenu {
         background-color: $noir_5;
         font-size: 1vw;
         button {
@@ -61,7 +61,7 @@ header {
             margin:auto;
         }
     }
-    .siteMenu {
+    #siteMenu {
         background-color: $noir_5;
         font-size: 1vw;
         button {
@@ -108,7 +108,7 @@ body {
 footer {
     text-align: center;
     background-color: $smart_1;
-    .contactMe {
+    #contactMe {
         font-family: "Times New Roman", Times, serif;
         h1 {
             font-size: 5vw;

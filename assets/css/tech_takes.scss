@@ -63,7 +63,7 @@ $purple_quantum_3: #5c4f8c;
 $purple_quantum_4: #8d6ab9;
 $purple_quantum_5: #e5c3f9;
 
-.LLMOpinions {
+#LLMOpinions {
     margin: auto;
     text-align: left;
     background-color: $cyberpunk_dreams_5;
@@ -121,7 +121,7 @@ $purple_quantum_5: #e5c3f9;
     }
 }
 
-.AppStores {
+#AppStores {
     margin: auto;
     text-align: left;
     background-color: $disturbed_1;
@@ -174,7 +174,7 @@ $purple_quantum_5: #e5c3f9;
     }
 }
 
-.KissMySaaS {
+#KissMySaaS {
     margin: auto;
     text-align: left;
     background-color: $blood_moon_1;
@@ -237,7 +237,7 @@ $purple_quantum_5: #e5c3f9;
     }
 }
 
-.PrivacyStance {
+#PrivacyStance {
     margin: auto;
     text-align: left;
     background-color: $digital_veil_1;
@@ -301,7 +301,7 @@ $purple_quantum_5: #e5c3f9;
     }
 }
 
-.KAN {
+#KAN {
     margin: auto;
     text-align: left;
     background-color: $luna_of_gale_5;
@@ -360,7 +360,7 @@ $purple_quantum_5: #e5c3f9;
     }
 }
 
-.Cryptocurrency {
+#Cryptocurrency {
     margin: auto;
     text-align: left;
     background-color: $emerald_efficiency_1;
@@ -410,6 +410,7 @@ $purple_quantum_5: #e5c3f9;
         }
     }
     table {
+        border-collapse: collapse;
         border-color: $emerald_efficiency_4;
         border-style: solid;
         tr {
@@ -484,7 +485,7 @@ $purple_quantum_5: #e5c3f9;
     }
 }
 
-.FutureOfQuantum {
+#FutureOfQuantum {
     margin: auto;
     text-align: left;
     background-color: $purple_quantum_1;
@@ -534,6 +535,7 @@ $purple_quantum_5: #e5c3f9;
         }
     }
     table {
+        border-collapse: collapse;
         border-color: $purple_quantum_4;
         border-style: solid;
         tr {

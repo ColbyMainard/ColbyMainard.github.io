@@ -35,7 +35,7 @@ $visionary_kinship_3: #3398db;
 $visionary_kinship_4: #e77e23;
 $visionary_kinship_5: #e74d3c;
 
-.workHistory {
+#workHistory {
     margin: auto;
     text-align: left;
     background-color: $calm_authority_1;
@@ -68,7 +68,7 @@ $visionary_kinship_5: #e74d3c;
     }
 }
 
-.education {
+#education {
     margin: auto;
     text-align: left;
     background-color: maroon;
@@ -97,6 +97,7 @@ $visionary_kinship_5: #e74d3c;
         }
     }
     table {
+        border-collapse: collapse;
         color: white;
         font-size: 1vw;
         border-color: white;
@@ -126,7 +127,7 @@ $visionary_kinship_5: #e74d3c;
     }
 }
 
-.projects {
+#projects {
     margin: auto;
     text-align: left;
     background-color: $smart_1;
@@ -179,7 +180,7 @@ $visionary_kinship_5: #e74d3c;
     }
 }
 
-.technicalSkills {
+#technicalSkills {
     margin: auto;
     text-align: left;
     background-color: black;
@@ -218,7 +219,7 @@ $visionary_kinship_5: #e74d3c;
     }
 }
 
-.otherSkills {
+#otherSkills {
     margin: auto;
     text-align: left;
     background-color: $sunset_glow_5;
@@ -257,7 +258,7 @@ $visionary_kinship_5: #e74d3c;
     }
 }
 
-.certifications {
+#certifications {
     margin: auto;
     text-align: left;
     background-color: $gryffon_5;
@@ -296,7 +297,7 @@ $visionary_kinship_5: #e74d3c;
     }
 }
 
-.languages {
+#languages {
     margin: auto;
     text-align: left;
     background-color: $visionary_kinship_5;

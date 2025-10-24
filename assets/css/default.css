@@ -4,26 +4,26 @@
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
 /* Visionary Kinship color palette from https://colormagic.app/palette/684cd204a1f3618a008a9255 */
-.workHistory {
+#workHistory {
   margin: auto;
   text-align: left;
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
   font-family: Tahoma, Verdana, sans-serif; }
-  .workHistory h1 {
+  #workHistory h1 {
     color: #5D6D7E;
     font-size: 5vw; }
-  .workHistory h2 {
+  #workHistory h2 {
     color: #85929E;
     font-size: 3vw; }
-  .workHistory h3 {
+  #workHistory h3 {
     color: #AAB7B8;
     font-size: 2vw; }
-  .workHistory p {
+  #workHistory p {
     color: #D5D5DB;
     font-size: 1vw; }
-  .workHistory button {
+  #workHistory button {
     border: 0.25vw solid #D5D5DB;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -33,43 +33,44 @@
     background-color: #34495E;
     font-size: 1vw; }
 
-.education {
+#education {
   margin: auto;
   text-align: left;
   background-color: maroon;
   width: 80%;
   border-radius: 10px; }
-  .education h1 {
+  #education h1 {
     color: white;
     font-size: 5vw; }
-  .education h2 {
+  #education h2 {
     color: white;
     font-size: 3vw; }
-  .education h3 {
+  #education h3 {
     color: white;
     font-size: 2vw; }
-  .education p {
+  #education p {
     color: white;
     font-size: 1vw; }
-  .education ul li {
+  #education ul li {
     color: white;
     font-size: 1vw; }
-  .education table {
+  #education table {
+    border-collapse: collapse;
     color: white;
     font-size: 1vw;
     border-color: white;
     border-style: solid; }
-    .education table tr th {
+    #education table tr th {
       border-top-style: double;
       border-right-style: double;
       border-bottom-style: double;
       border-left-style: double; }
-    .education table tr td {
+    #education table tr td {
       border-top-style: groove;
       border-right-style: groove;
       border-bottom-style: groove;
       border-left-style: groove; }
-  .education button {
+  #education button {
     border: 0.25vw solid white;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -79,7 +80,7 @@
     background-color: maroon;
     font-size: 1vw; }
 
-.projects {
+#projects {
   margin: auto;
   text-align: left;
   background-color: #1c1a3d;
@@ -90,31 +91,31 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .projects h1 {
+  #projects h1 {
     color: #f1e0ff;
     font-size: 5vw; }
-  .projects h2 {
+  #projects h2 {
     color: #d1c3e9;
     font-size: 3vw; }
-  .projects h3 {
+  #projects h3 {
     color: #8d7d9b;
     font-size: 2vw; }
-  .projects p {
+  #projects p {
     color: #4a4e8c;
     font-size: 1vw; }
-  .projects a:link {
+  #projects a:link {
     color: #4a4e8c;
     font-size: 1vw; }
-  .projects a:visited {
+  #projects a:visited {
     color: #8d7d9b;
     font-size: 1vw; }
-  .projects a:hover {
+  #projects a:hover {
     color: #4a4e8c;
     font-size: 1vw; }
-  .projects a:active {
+  #projects a:active {
     color: #8d7d9b;
     font-size: 1vw; }
-  .projects button {
+  #projects button {
     border: 0.25vw solid #f1e0ff;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -124,29 +125,29 @@
     background-color: #1c1a3d;
     font-size: 1vw; }
 
-.technicalSkills {
+#technicalSkills {
   margin: auto;
   text-align: left;
   background-color: black;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace; }
-  .technicalSkills h1 {
+  #technicalSkills h1 {
     color: greenyellow;
     font-size: 5vw; }
-  .technicalSkills h2 {
+  #technicalSkills h2 {
     color: greenyellow;
     font-size: 3vw; }
-  .technicalSkills h3 {
+  #technicalSkills h3 {
     color: greenyellow;
     font-size: 2vw; }
-  .technicalSkills p {
+  #technicalSkills p {
     color: greenyellow;
     font-size: 1vw; }
-  .technicalSkills ul li {
+  #technicalSkills ul li {
     color: greenyellow;
     font-size: 1vw; }
-  .technicalSkills button {
+  #technicalSkills button {
     border: 0.25vw solid greenyellow;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -156,29 +157,29 @@
     background-color: black;
     font-size: 1vw; }
 
-.otherSkills {
+#otherSkills {
   margin: auto;
   text-align: left;
   background-color: #d33131;
   width: 80%;
   border-radius: 10px;
   font-family: "Lucida Handwriting", cursive; }
-  .otherSkills h1 {
+  #otherSkills h1 {
     color: #ffb84d;
     font-size: 5vw; }
-  .otherSkills h2 {
+  #otherSkills h2 {
     color: #ff9900;
     font-size: 3vw; }
-  .otherSkills h3 {
+  #otherSkills h3 {
     color: #ff9900;
     font-size: 2vw; }
-  .otherSkills p {
+  #otherSkills p {
     color: #ff9900;
     font-size: 1vw; }
-  .otherSkills ul li {
+  #otherSkills ul li {
     color: #ff9900;
     font-size: 1vw; }
-  .otherSkills button {
+  #otherSkills button {
     border: 0.25vw solid #ff9900;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -188,29 +189,29 @@
     background-color: #d33131;
     font-size: 1vw; }
 
-.certifications {
+#certifications {
   margin: auto;
   text-align: left;
   background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace; }
-  .certifications h1 {
+  #certifications h1 {
     color: #ffcc00;
     font-size: 5vw; }
-  .certifications h2 {
+  #certifications h2 {
     color: #ffcc00;
     font-size: 3vw; }
-  .certifications h3 {
+  #certifications h3 {
     color: #ffcc00;
     font-size: 2vw; }
-  .certifications p {
+  #certifications p {
     color: #ffcc00;
     font-size: 1vw; }
-  .certifications ul li {
+  #certifications ul li {
     color: #ffcc00;
     font-size: 1vw; }
-  .certifications button {
+  #certifications button {
     border: 0.25vw solid #ffcc00;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -220,29 +221,29 @@
     background-color: #990000;
     font-size: 1vw; }
 
-.languages {
+#languages {
   margin: auto;
   text-align: left;
   background-color: #e74d3c;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace; }
-  .languages h1 {
+  #languages h1 {
     color: #1abc9c;
     font-size: 5vw; }
-  .languages h2 {
+  #languages h2 {
     color: #1abc9c;
     font-size: 3vw; }
-  .languages h3 {
+  #languages h3 {
     color: #1abc9c;
     font-size: 2vw; }
-  .languages p {
+  #languages p {
     color: #3398db;
     font-size: 1vw; }
-  .languages ul li {
+  #languages ul li {
     color: #3398db;
     font-size: 1vw; }
-  .languages button {
+  #languages button {
     border: 0.25vw solid #1abc9c;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -258,7 +259,7 @@
 /* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
 /* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
 /* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
-.fitness {
+#fitness {
   margin: auto;
   text-align: left;
   background-color: #d33131;
@@ -269,37 +270,37 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .fitness h1 {
+  #fitness h1 {
     color: #ffb84d;
     font-size: 5vw; }
-  .fitness h2 {
+  #fitness h2 {
     color: #ff9900;
     font-size: 3vw; }
-  .fitness h3 {
+  #fitness h3 {
     color: #ff9900;
     font-size: 2vw; }
-  .fitness p {
+  #fitness p {
     color: #ff9900;
     font-size: 1vw; }
-  .fitness ul li {
+  #fitness ul li {
     color: #ff9900;
     font-size: 1vw; }
-    .fitness ul li u {
+    #fitness ul li u {
       color: #ff9900;
       font-size: 1vw; }
-  .fitness a:link {
+  #fitness a:link {
     color: #ff9900;
     font-size: 1vw; }
-  .fitness a:visited {
+  #fitness a:visited {
     color: #ff9900;
     font-size: 1vw; }
-  .fitness a:hover {
+  #fitness a:hover {
     color: #ff9900;
     font-size: 1vw; }
-  .fitness a:active {
+  #fitness a:active {
     color: #ff9900;
     font-size: 1vw; }
-  .fitness button {
+  #fitness button {
     border: 0.25vw solid #ff9900;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -309,7 +310,7 @@
     background-color: #d33131;
     font-size: 1vw; }
 
-.quantumComputing {
+#quantumComputing {
   margin: auto;
   text-align: left;
   background-color: #34495E;
@@ -320,34 +321,34 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .quantumComputing h1 {
+  #quantumComputing h1 {
     color: #D5D5DB;
     font-size: 5vw; }
-  .quantumComputing h2 {
+  #quantumComputing h2 {
     color: #AAB7B8;
     font-size: 3vw; }
-  .quantumComputing h3 {
+  #quantumComputing h3 {
     color: #85929E;
     font-size: 2vw; }
-  .quantumComputing p {
+  #quantumComputing p {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing a:link {
+  #quantumComputing a:link {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing a:visited {
+  #quantumComputing a:visited {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing a:hover {
+  #quantumComputing a:hover {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing a:active {
+  #quantumComputing a:active {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing ul li {
+  #quantumComputing ul li {
     color: #5D6D7E;
     font-size: 1vw; }
-  .quantumComputing button {
+  #quantumComputing button {
     border: 0.25vw solid #D5D5DB;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -357,7 +358,7 @@
     background-color: #5D6D7E;
     font-size: 1vw; }
 
-.photography {
+#photography {
   margin: auto;
   text-align: left;
   background-color: #4f9c7e;
@@ -368,7 +369,7 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .photography img {
+  #photography img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -376,31 +377,31 @@
     height: auto;
     border: 1vw solid #f6e0a2;
     border-radius: 1%; }
-  .photography h1 {
+  #photography h1 {
     color: #e7693c;
     font-size: 5vw; }
-  .photography h2 {
+  #photography h2 {
     color: #f5a524;
     font-size: 3vw; }
-  .photography h3 {
+  #photography h3 {
     color: #f5a524;
     font-size: 2vw; }
-  .photography p {
+  #photography p {
     color: #f6e0a2;
     font-size: 1vw; }
-  .photography a:link {
+  #photography a:link {
     color: #f6e0a2;
     font-size: 1vw; }
-  .photography a:visited {
+  #photography a:visited {
     color: #a3d55d;
     font-size: 1vw; }
-  .photography a:hover {
+  #photography a:hover {
     color: #f6e0a2;
     font-size: 1vw; }
-  .photography a:active {
+  #photography a:active {
     color: #a3d55d;
     font-size: 1vw; }
-  .photography button {
+  #photography button {
     border: 0.25vw solid #e7693c;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -410,7 +411,7 @@
     background-color: #a3d55d;
     font-size: 1vw; }
 
-.dungeonsAndDragons {
+#dungeonsAndDragons {
   margin: auto;
   text-align: left;
   background-color: #4c3e3e;
@@ -421,34 +422,34 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .dungeonsAndDragons h1 {
+  #dungeonsAndDragons h1 {
     color: #d1945c;
     font-size: 5vw; }
-  .dungeonsAndDragons h2 {
+  #dungeonsAndDragons h2 {
     color: #c7a67a;
     font-size: 3vw; }
-  .dungeonsAndDragons h3 {
+  #dungeonsAndDragons h3 {
     color: #8a6a6a;
     font-size: 2vw; }
-  .dungeonsAndDragons p {
+  #dungeonsAndDragons p {
     color: #8a6a6a;
     font-size: 1vw; }
-  .dungeonsAndDragons a:link {
+  #dungeonsAndDragons a:link {
     color: #5a4e4e;
     font-size: 1vw; }
-  .dungeonsAndDragons a:visited {
+  #dungeonsAndDragons a:visited {
     color: #8a6a6a;
     font-size: 1vw; }
-  .dungeonsAndDragons a:hover {
+  #dungeonsAndDragons a:hover {
     color: #5a4e4e;
     font-size: 1vw; }
-  .dungeonsAndDragons a:active {
+  #dungeonsAndDragons a:active {
     color: #8a6a6a;
     font-size: 1vw; }
-  .dungeonsAndDragons ul li {
+  #dungeonsAndDragons ul li {
     color: #5a4e4e;
     font-size: 1vw; }
-  .dungeonsAndDragons button {
+  #dungeonsAndDragons button {
     border: 0.25vw solid #d1945c;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -458,7 +459,7 @@
     background-color: #5a4e4e;
     font-size: 1vw; }
 
-.history {
+#history {
   margin: auto;
   text-align: left;
   background-color: #895b29;
@@ -469,43 +470,44 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .history h1 {
+  #history h1 {
     color: #e9d9b9;
     font-size: 5vw; }
-  .history h2 {
+  #history h2 {
     color: #d5ccae;
     font-size: 3vw; }
-  .history h3 {
+  #history h3 {
     color: #d5ccae;
     font-size: 2vw; }
-  .history p {
+  #history p {
     color: #d5ccae;
     font-size: 1vw; }
-  .history blockquote {
+  #history blockquote {
     font-family: "Lucida Handwriting", cursive;
     color: #d5ccae;
     font-size: 1.5vw; }
-  .history a:link {
+  #history a:link {
     color: #d5ccae;
     font-size: 1vw; }
-  .history a:visited {
+  #history a:visited {
     color: #c2b180;
     font-size: 1vw; }
-  .history a:hover {
+  #history a:hover {
     color: #d5ccae;
     font-size: 1vw; }
-  .history a:active {
+  #history a:active {
     color: #c2b180;
     font-size: 1vw; }
-  .history ul li {
+  #history ul li {
     color: #d5ccae;
     font-size: 1vw; }
-  .history table {
+  #history table {
+    border-collapse: collapse;
     border-color: #d5ccae;
     border-style: solid; }
-    .history table tr {
+    #history table tr {
       border-color: #d5ccae; }
-      .history table tr th {
+      #history table tr th {
         border-color: #d5ccae;
         color: #d5ccae;
         font-size: 1vw;
@@ -517,19 +519,19 @@
         /* visited link */
         /* mouse over link */
         /* selected link */ }
-        .history table tr th a:link {
+        #history table tr th a:link {
           color: #d5ccae;
           font-size: 1vw; }
-        .history table tr th a:visited {
+        #history table tr th a:visited {
           color: #c2b180;
           font-size: 1vw; }
-        .history table tr th a:hover {
+        #history table tr th a:hover {
           color: #d5ccae;
           font-size: 1vw; }
-        .history table tr th a:active {
+        #history table tr th a:active {
           color: #c2b180;
           font-size: 1vw; }
-      .history table tr td {
+      #history table tr td {
         border-color: #d5ccae;
         color: #d5ccae;
         font-size: 1vw;
@@ -541,19 +543,19 @@
         /* visited link */
         /* mouse over link */
         /* selected link */ }
-        .history table tr td a:link {
+        #history table tr td a:link {
           color: #d5ccae;
           font-size: 1vw; }
-        .history table tr td a:visited {
+        #history table tr td a:visited {
           color: #c2b180;
           font-size: 1vw; }
-        .history table tr td a:hover {
+        #history table tr td a:hover {
           color: #d5ccae;
           font-size: 1vw; }
-        .history table tr td a:active {
+        #history table tr td a:active {
           color: #c2b180;
           font-size: 1vw; }
-  .history button {
+  #history button {
     border: 0.25vw solid #d5ccae;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -573,7 +575,7 @@
 /* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
 /* Emerald Efficiency palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 /* Purple Quantum https://colormagic.app/palette/68f429537470129f5e4b0d3d */
-.LLMOpinions {
+#LLMOpinions {
   margin: auto;
   text-align: left;
   background-color: #200b4b;
@@ -584,35 +586,35 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .LLMOpinions h1 {
+  #LLMOpinions h1 {
     font-size: 5vw;
     color: #ff3d94; }
-  .LLMOpinions h2 {
+  #LLMOpinions h2 {
     font-size: 3vw;
     color: #b5307e; }
-  .LLMOpinions h3 {
+  #LLMOpinions h3 {
     font-size: 2vw;
     color: #6a2a98; }
-  .LLMOpinions a:link {
+  #LLMOpinions a:link {
     font-size: 1vw;
     color: #6a2a98; }
-  .LLMOpinions a:visited {
+  #LLMOpinions a:visited {
     font-size: 1vw;
     color: #3f1c6d; }
-  .LLMOpinions a:hover {
+  #LLMOpinions a:hover {
     font-size: 1vw;
     color: #6a2a98; }
-  .LLMOpinions a:active {
+  #LLMOpinions a:active {
     font-size: 1vw;
     color: #3f1c6d; }
-  .LLMOpinions p {
+  #LLMOpinions p {
     font-size: 1vw;
     color: #6a2a98; }
-  .LLMOpinions blockquote {
+  #LLMOpinions blockquote {
     font-family: "Lucida Handwriting", cursive;
     font-size: 1.5vw;
     color: #6a2a98; }
-  .LLMOpinions button {
+  #LLMOpinions button {
     border: 0.25vw solid #ff3d94;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -622,7 +624,7 @@
     background-color: #200b4b;
     font-size: 1vw; }
 
-.AppStores {
+#AppStores {
   margin: auto;
   text-align: left;
   background-color: #5c6b8a;
@@ -633,31 +635,31 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .AppStores h1 {
+  #AppStores h1 {
     font-size: 5vw;
     color: #a2b8d2; }
-  .AppStores h2 {
+  #AppStores h2 {
     font-size: 3vw;
     color: #f5c9a8; }
-  .AppStores h3 {
+  #AppStores h3 {
     font-size: 2vw;
     color: #f07838; }
-  .AppStores a:link {
+  #AppStores a:link {
     font-size: 1vw;
     color: #f07838; }
-  .AppStores a:visited {
+  #AppStores a:visited {
     font-size: 1vw;
     color: #ba4c40; }
-  .AppStores a:hover {
+  #AppStores a:hover {
     font-size: 1vw;
     color: #f07838; }
-  .AppStores a:active {
+  #AppStores a:active {
     font-size: 1vw;
     color: #ba4c40; }
-  .AppStores p {
+  #AppStores p {
     font-size: 1vw;
     color: #f07838; }
-  .AppStores button {
+  #AppStores button {
     border: 0.25vw solid #ba4c40;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -667,7 +669,7 @@
     background-color: #5c6b8a;
     font-size: 1vw; }
 
-.KissMySaaS {
+#KissMySaaS {
   margin: auto;
   text-align: left;
   background-color: #691b1e;
@@ -678,37 +680,37 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .KissMySaaS h1 {
+  #KissMySaaS h1 {
     font-size: 5vw;
     color: #b82d28; }
-  .KissMySaaS h2 {
+  #KissMySaaS h2 {
     font-size: 3vw;
     color: #f05660; }
-  .KissMySaaS h3 {
+  #KissMySaaS h3 {
     font-size: 2vw;
     color: #f9a68b; }
-  .KissMySaaS a:link {
+  #KissMySaaS a:link {
     font-size: 1vw;
     color: #fce3d4; }
-  .KissMySaaS a:visited {
+  #KissMySaaS a:visited {
     font-size: 1vw;
     color: #f9a68b; }
-  .KissMySaaS a:hover {
+  #KissMySaaS a:hover {
     font-size: 1vw;
     color: #fce3d4; }
-  .KissMySaaS a:active {
+  #KissMySaaS a:active {
     font-size: 1vw;
     color: #f9a68b; }
-  .KissMySaaS ul li {
+  #KissMySaaS ul li {
     font-size: 1vw;
     color: #fce3d4; }
-  .KissMySaaS p {
+  #KissMySaaS p {
     font-size: 1vw;
     color: #fce3d4; }
-    .KissMySaaS p u {
+    #KissMySaaS p u {
       font-size: 1vw;
       color: #fce3d4; }
-  .KissMySaaS button {
+  #KissMySaaS button {
     border: 0.25vw solid #fce3d4;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -718,7 +720,7 @@
     background-color: #691b1e;
     font-size: 1vw; }
 
-.PrivacyStance {
+#PrivacyStance {
   margin: auto;
   text-align: left;
   background-color: #1f3a3d;
@@ -729,38 +731,38 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .PrivacyStance h1 {
+  #PrivacyStance h1 {
     font-size: 5vw;
     color: #f0f4f5; }
-  .PrivacyStance h2 {
+  #PrivacyStance h2 {
     font-size: 3vw;
     color: #a5e3e9; }
-  .PrivacyStance h3 {
+  #PrivacyStance h3 {
     font-size: 2vw;
     color: #5bc5c8; }
-  .PrivacyStance a:link {
+  #PrivacyStance a:link {
     font-size: 1vw;
     color: #2a7e7e; }
-  .PrivacyStance a:visited {
+  #PrivacyStance a:visited {
     font-size: 1vw;
     color: #5bc5c8; }
-  .PrivacyStance a:hover {
+  #PrivacyStance a:hover {
     font-size: 1vw;
     color: #2a7e7e; }
-  .PrivacyStance a:active {
+  #PrivacyStance a:active {
     font-size: 1vw;
     color: #5bc5c8; }
-  .PrivacyStance ul li {
+  #PrivacyStance ul li {
     font-size: 1vw;
     color: #2a7e7e; }
-  .PrivacyStance p {
+  #PrivacyStance p {
     font-size: 1vw;
     color: #2a7e7e; }
-  .PrivacyStance blockquote {
+  #PrivacyStance blockquote {
     font-family: "Lucida Handwriting", cursive;
     font-size: 1.5vw;
     color: #2a7e7e; }
-  .PrivacyStance button {
+  #PrivacyStance button {
     border: 0.25vw solid #f0f4f5;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -770,7 +772,7 @@
     background-color: #1f3a3d;
     font-size: 1vw; }
 
-.KAN {
+#KAN {
   margin: auto;
   text-align: left;
   background-color: #1d3a6d;
@@ -781,34 +783,34 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .KAN h1 {
+  #KAN h1 {
     font-size: 5vw;
     color: #d6e4f5; }
-  .KAN h2 {
+  #KAN h2 {
     font-size: 3vw;
     color: #a4c8df; }
-  .KAN h3 {
+  #KAN h3 {
     font-size: 2vw;
     color: #7bb7d1; }
-  .KAN a:link {
+  #KAN a:link {
     font-size: 1vw;
     color: #4aa0c4; }
-  .KAN a:visited {
+  #KAN a:visited {
     font-size: 1vw;
     color: #4aa0c4; }
-  .KAN a:hover {
+  #KAN a:hover {
     font-size: 1vw;
     color: #4aa0c4; }
-  .KAN a:active {
+  #KAN a:active {
     font-size: 1vw;
     color: #4aa0c4; }
-  .KAN p {
+  #KAN p {
     font-size: 1vw;
     color: #4aa0c4; }
-  .KAN ul li {
+  #KAN ul li {
     font-size: 1vw;
     color: #4aa0c4; }
-  .KAN button {
+  #KAN button {
     border: 0.25vw solid #d6e4f5;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -818,7 +820,7 @@
     background-color: #1d3a6d;
     font-size: 1vw; }
 
-.Cryptocurrency {
+#Cryptocurrency {
   margin: auto;
   text-align: left;
   background-color: #007a5e;
@@ -829,39 +831,40 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .Cryptocurrency h1 {
+  #Cryptocurrency h1 {
     font-size: 5vw;
     color: #e0f7fa; }
-  .Cryptocurrency h2 {
+  #Cryptocurrency h2 {
     font-size: 3vw;
     color: #a1d9b0; }
-  .Cryptocurrency h3 {
+  #Cryptocurrency h3 {
     font-size: 2vw;
     color: #a1d9b0; }
-  .Cryptocurrency a:link {
+  #Cryptocurrency a:link {
     font-size: 1vw;
     color: #a1d9b0; }
-  .Cryptocurrency a:visited {
+  #Cryptocurrency a:visited {
     font-size: 1vw;
     color: #a1d9b0; }
-  .Cryptocurrency a:hover {
+  #Cryptocurrency a:hover {
     font-size: 1vw;
     color: #a1d9b0; }
-  .Cryptocurrency a:active {
+  #Cryptocurrency a:active {
     font-size: 1vw;
     color: #a1d9b0; }
-  .Cryptocurrency p {
+  #Cryptocurrency p {
     font-size: 1vw;
     color: #a1d9b0; }
-  .Cryptocurrency ul li {
+  #Cryptocurrency ul li {
     font-size: 1vw;
     color: #a1d9b0; }
-  .Cryptocurrency table {
+  #Cryptocurrency table {
+    border-collapse: collapse;
     border-color: #a1d9b0;
     border-style: solid; }
-    .Cryptocurrency table tr {
+    #Cryptocurrency table tr {
       border-color: #a1d9b0; }
-      .Cryptocurrency table tr th {
+      #Cryptocurrency table tr th {
         border-color: #a1d9b0;
         color: #a1d9b0;
         font-size: 1vw;
@@ -873,19 +876,19 @@
         /* visited link */
         /* mouse over link */
         /* selected link */ }
-        .Cryptocurrency table tr th a:link {
+        #Cryptocurrency table tr th a:link {
           color: #a1d9b0;
           font-size: 1vw; }
-        .Cryptocurrency table tr th a:visited {
+        #Cryptocurrency table tr th a:visited {
           color: #a1d9b0;
           font-size: 1vw; }
-        .Cryptocurrency table tr th a:hover {
+        #Cryptocurrency table tr th a:hover {
           color: #a1d9b0;
           font-size: 1vw; }
-        .Cryptocurrency table tr th a:active {
+        #Cryptocurrency table tr th a:active {
           color: #a1d9b0;
           font-size: 1vw; }
-      .Cryptocurrency table tr td {
+      #Cryptocurrency table tr td {
         border-color: #a1d9b0;
         color: #a1d9b0;
         font-size: 1vw;
@@ -897,19 +900,19 @@
         /* visited link */
         /* mouse over link */
         /* selected link */ }
-        .Cryptocurrency table tr td a:link {
+        #Cryptocurrency table tr td a:link {
           color: #a1d9b0;
           font-size: 1vw; }
-        .Cryptocurrency table tr td a:visited {
+        #Cryptocurrency table tr td a:visited {
           color: #a1d9b0;
           font-size: 1vw; }
-        .Cryptocurrency table tr td a:hover {
+        #Cryptocurrency table tr td a:hover {
           color: #a1d9b0;
           font-size: 1vw; }
-        .Cryptocurrency table tr td a:active {
+        #Cryptocurrency table tr td a:active {
           color: #a1d9b0;
           font-size: 1vw; }
-  .Cryptocurrency button {
+  #Cryptocurrency button {
     border: 0.25vw solid #e0f7fa;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -919,7 +922,7 @@
     background-color: #007a5e;
     font-size: 1vw; }
 
-.FutureOfQuantum {
+#FutureOfQuantum {
   margin: auto;
   text-align: left;
   background-color: #1e1f2a;
@@ -930,39 +933,40 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  .FutureOfQuantum h1 {
+  #FutureOfQuantum h1 {
     font-size: 5vw;
     color: #e5c3f9; }
-  .FutureOfQuantum h2 {
+  #FutureOfQuantum h2 {
     font-size: 3vw;
     color: #e5c3f9; }
-  .FutureOfQuantum h3 {
+  #FutureOfQuantum h3 {
     font-size: 2vw;
     color: #e5c3f9; }
-  .FutureOfQuantum a:link {
+  #FutureOfQuantum a:link {
     font-size: 1vw;
     color: #8d6ab9; }
-  .FutureOfQuantum a:visited {
+  #FutureOfQuantum a:visited {
     font-size: 1vw;
     color: #8d6ab9; }
-  .FutureOfQuantum a:hover {
+  #FutureOfQuantum a:hover {
     font-size: 1vw;
     color: #8d6ab9; }
-  .FutureOfQuantum a:active {
+  #FutureOfQuantum a:active {
     font-size: 1vw;
     color: #8d6ab9; }
-  .FutureOfQuantum p {
+  #FutureOfQuantum p {
     font-size: 1vw;
     color: #8d6ab9; }
-  .FutureOfQuantum ul li {
+  #FutureOfQuantum ul li {
     font-size: 1vw;
     color: #8d6ab9; }
-  .FutureOfQuantum table {
+  #FutureOfQuantum table {
+    border-collapse: collapse;
     border-color: #8d6ab9;
     border-style: solid; }
-    .FutureOfQuantum table tr {
+    #FutureOfQuantum table tr {
       border-color: #8d6ab9; }
-      .FutureOfQuantum table tr th {
+      #FutureOfQuantum table tr th {
         border-color: #8d6ab9;
         color: #8d6ab9;
         font-size: 1vw;
@@ -974,19 +978,19 @@
         /* visited link */
         /* mouse over link */
         /* selected link */ }
-        .FutureOfQuantum table tr th a:link {
+        #FutureOfQuantum table tr th a:link {
           color: #8d6ab9;
           font-size: 1vw; }
-        .FutureOfQuantum table tr th a:visited {
+        #FutureOfQuantum table tr th a:visited {
           color: #8d6ab9;
           font-size: 1vw; }
-        .FutureOfQuantum table tr th a:hover {
+        #FutureOfQuantum table tr th a:hover {
           color: #8d6ab9;
           font-size: 1vw; }
-        .FutureOfQuantum table tr th a:active {
+        #FutureOfQuantum table tr th a:active {
           color: #8d6ab9;
           font-size: 1vw; }
-      .FutureOfQuantum table tr td {
+      #FutureOfQuantum table tr td {
         border-color: #8d6ab9;
         color: #8d6ab9;
         font-size: 1vw;
@@ -998,19 +1002,19 @@
         /* visited link */
         /* mouse over link */
         /* selected link */ }
-        .FutureOfQuantum table tr td a:link {
+        #FutureOfQuantum table tr td a:link {
           color: #8d6ab9;
           font-size: 1vw; }
-        .FutureOfQuantum table tr td a:visited {
+        #FutureOfQuantum table tr td a:visited {
           color: #8d6ab9;
           font-size: 1vw; }
-        .FutureOfQuantum table tr td a:hover {
+        #FutureOfQuantum table tr td a:hover {
           color: #8d6ab9;
           font-size: 1vw; }
-        .FutureOfQuantum table tr td a:active {
+        #FutureOfQuantum table tr td a:active {
           color: #8d6ab9;
           font-size: 1vw; }
-  .FutureOfQuantum button {
+  #FutureOfQuantum button {
     border: 0.25vw solid #e5c3f9;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -1044,18 +1048,18 @@ header {
   header p {
     color: #6b6b70;
     font-size: 1vw; }
-  header .pageMenu {
+  header #pageMenu {
     background-color: #d4d4d9;
     font-size: 1vw; }
-    header .pageMenu button {
+    header #pageMenu button {
       display: inline-block;
       border: 0.25vw solid #1a1a1e;
       color: #1a1a1e;
       margin: auto; }
-  header .siteMenu {
+  header #siteMenu {
     background-color: #d4d4d9;
     font-size: 1vw; }
-    header .siteMenu button {
+    header #siteMenu button {
       display: inline-block;
       border: 0.25vw solid #1a1a1e;
       color: #1a1a1e;
@@ -1090,37 +1094,37 @@ body {
 footer {
   text-align: center;
   background-color: #1c1a3d; }
-  footer .contactMe {
+  footer #contactMe {
     font-family: "Times New Roman", Times, serif;
     /* unvisited link */
     /* visited link */
     /* mouse over link */
     /* selected link */ }
-    footer .contactMe h1 {
+    footer #contactMe h1 {
       font-size: 5vw;
       color: #4a4e8c; }
-    footer .contactMe h2 {
+    footer #contactMe h2 {
       font-size: 3vw;
       color: #8d7d9b; }
-    footer .contactMe h3 {
+    footer #contactMe h3 {
       font-size: 2vw;
       color: #d1c3e9; }
-    footer .contactMe address {
+    footer #contactMe address {
       color: #f1e0ff;
       font-size: 1vw; }
-    footer .contactMe a:link {
+    footer #contactMe a:link {
       color: #f1e0ff;
       font-size: 1vw; }
-    footer .contactMe a:visited {
+    footer #contactMe a:visited {
       color: #d1c3e9;
       font-size: 1vw; }
-    footer .contactMe a:hover {
+    footer #contactMe a:hover {
       color: #f1e0ff;
       font-size: 1vw; }
-    footer .contactMe a:active {
+    footer #contactMe a:active {
       color: #d1c3e9;
       font-size: 1vw; }
-    footer .contactMe p {
+    footer #contactMe p {
       color: #f1e0ff;
       font-size: 1vw; }
 
