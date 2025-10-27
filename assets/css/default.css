@@ -1049,19 +1049,19 @@ header {
     color: #6b6b70;
     font-size: 1vw; }
   header #pageMenu {
-    background-color: #d4d4d9;
+    background-color: #1a1a1e;
     font-size: 1vw; }
     header #pageMenu button {
       display: inline-block;
-      border: 0.25vw solid #1a1a1e;
+      border: 0.25vw solid #d4d4d9;
       color: #1a1a1e;
       margin: auto; }
   header #siteMenu {
-    background-color: #d4d4d9;
+    background-color: #1a1a1e;
     font-size: 1vw; }
     header #siteMenu button {
       display: inline-block;
-      border: 0.25vw solid #1a1a1e;
+      border: 0.25vw solid #d4d4d9;
       color: #1a1a1e;
       margin: auto; }
 
