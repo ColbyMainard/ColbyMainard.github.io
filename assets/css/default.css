@@ -573,8 +573,9 @@
 /* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
 /* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
 /* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
-/* Emerald Efficiency palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
-/* Purple Quantum https://colormagic.app/palette/68f429537470129f5e4b0d3d */
+/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+/* Purple Quantum color palette from https://colormagic.app/palette/68f429537470129f5e4b0d3d */
+/* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
 #LLMOpinions {
   margin: auto;
   text-align: left;
@@ -1024,9 +1025,68 @@
     background-color: #1e1f2a;
     font-size: 1vw; }
 
+#AGI {
+  margin: auto;
+  text-align: left;
+  background-color: #20203c;
+  width: 80%;
+  border-radius: 10px;
+  font-family: Tahoma, Verdana, sans-serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #AGI h1 {
+    font-size: 5vw;
+    color: #ff5c5c; }
+  #AGI h2 {
+    font-size: 3vw;
+    color: #c2c2d1; }
+  #AGI h3 {
+    font-size: 2vw;
+    color: #c2c2d1; }
+  #AGI a:link {
+    font-size: 1vw;
+    color: #7a7a99; }
+  #AGI a:visited {
+    font-size: 1vw;
+    color: #7a7a99; }
+  #AGI a:hover {
+    font-size: 1vw;
+    color: #7a7a99; }
+  #AGI a:active {
+    font-size: 1vw;
+    color: #7a7a99; }
+  #AGI p {
+    font-size: 1vw;
+    color: #7a7a99; }
+  #AGI ul li {
+    font-size: 1vw;
+    color: #7a7a99; }
+  #AGI dl {
+    font-size: 1vw;
+    color: #7a7a99; }
+    #AGI dl dt {
+      font-weight: bold;
+      text-decoration: underline; }
+    #AGI dl dd {
+      margin: 0;
+      padding: 0 0 2em 0; }
+      #AGI dl dd ul li {
+        font-size: 1vw;
+        color: #7a7a99; }
+  #AGI button {
+    border: 0.25vw solid #ff5c5c;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #ff5c5c;
+    background-color: #20203c;
+    font-size: 1vw; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
-/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
 html {

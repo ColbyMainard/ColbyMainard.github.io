@@ -49,19 +49,26 @@ $digital_veil_3: #5bc5c8;
 $digital_veil_4: #a5e3e9;
 $digital_veil_5: #f0f4f5;
 
-/* Emerald Efficiency palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 $emerald_efficiency_1: #007a5e;
 $emerald_efficiency_2: #1d9a6a;
 $emerald_efficiency_3: #50c3a1;
 $emerald_efficiency_4: #a1d9b0;
 $emerald_efficiency_5: #e0f7fa;
 
-/* Purple Quantum https://colormagic.app/palette/68f429537470129f5e4b0d3d */
+/* Purple Quantum color palette from https://colormagic.app/palette/68f429537470129f5e4b0d3d */
 $purple_quantum_1: #1e1f2a;
 $purple_quantum_2: #3c2b5f;
 $purple_quantum_3: #5c4f8c;
 $purple_quantum_4: #8d6ab9;
 $purple_quantum_5: #e5c3f9;
+
+/* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
+$dark_blue_gray_1: #20203c;
+$dark_blue_gray_2: #7a7a99;
+$dark_blue_gray_3: #7a7a99;
+$dark_blue_gray_4: #c2c2d1;
+$dark_blue_gray_5: #ff5c5c;
 
 #LLMOpinions {
     margin: auto;
@@ -606,6 +613,83 @@ $purple_quantum_5: #e5c3f9;
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $purple_quantum_5;
         background-color: $purple_quantum_1;
+        font-size: 1vw;
+    }
+}
+
+#AGI {
+    margin: auto;
+    text-align: left;
+    background-color: $dark_blue_gray_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    h1 {
+        font-size: 5vw;
+        color: $dark_blue_gray_5;
+    }
+    h2 {
+        font-size: 3vw;
+        color: $dark_blue_gray_4;
+    }
+    h3 {
+        font-size: 2vw;
+        color: $dark_blue_gray_4;
+    }
+    /* unvisited link */
+    a:link {
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* visited link */
+    a:visited {
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* mouse over link */
+    a:hover {
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* selected link */
+    a:active {
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    p {
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    ul {
+        li {
+            font-size: 1vw;
+            color: $dark_blue_gray_3;
+        }
+    }
+    dl {
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+        dt {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        dd {
+            margin: 0;
+            padding: 0 0 2em 0;
+            ul {
+                li {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $dark_blue_gray_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $dark_blue_gray_5;
+        background-color: $dark_blue_gray_1;
         font-size: 1vw;
     }
 }
