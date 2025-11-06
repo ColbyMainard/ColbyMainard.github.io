@@ -1,0 +1,389 @@
+/* https://www.w3schools.com/Css/css_selectors.asp */
+
+/* Teal Shield color palette from https://colormagic.app/palette/690ad82aeebc052f2bce9d4a */ 
+$teal_shield_1: #1f3a3d;
+$teal_shield_2: #2b5c5f;
+$teal_shield_3: #3c7d80;
+$teal_shield_4: #4fbf8b;
+$teal_shield_5: #6ff1a1;
+
+/* Blue Resources color palette from https://colormagic.app/palette/690ad9cceebc052f2bce9d54 */ 
+$blue_resources_1: #3f89c6;
+$blue_resources_2: #5bb9e1;
+$blue_resources_3: #ade0e6;
+$blue_resources_4: #e7f8f3;
+$blue_resources_5: #f6f8f6;
+
+/* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */ 
+$neon_dusk_serenity_1: #1f1b79;
+$neon_dusk_serenity_2: #5c4091;
+$neon_dusk_serenity_3: #8b5aba;
+$neon_dusk_serenity_4: #d07e6c;
+$neon_dusk_serenity_5: #f9c54e;
+
+/* Shades of Blue color palette from https://colormagic.app/palette/690ade7beebc052f2bce9d86 */ 
+$shades_of_blue_1: #1f3a61;
+$shades_of_blue_2: #4a6d8c;
+$shades_of_blue_3: #85a4c1;
+$shades_of_blue_4: #c2d3e0;
+$shades_of_blue_5: #f1f5f8;
+
+#cybersecurityResources {
+    margin: auto;
+    text-align: left;
+    background-color: $teal_shield_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    h1 {
+        color: $teal_shield_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $teal_shield_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $teal_shield_4;
+        font-size: 2vw;
+    }
+    p {
+        color: $teal_shield_3;
+        font-size: 1vw;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        color: $teal_shield_3;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $teal_shield_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $teal_shield_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $teal_shield_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $teal_shield_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $teal_shield_3;
+            font-size: 1vw;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        border-color: $teal_shield_5;
+        border-style: solid;
+        tr {
+            border-color: $teal_shield_4;
+            th {
+                border-color: $teal_shield_4;
+                color: $teal_shield_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $teal_shield_3;
+                color: $teal_shield_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $teal_shield_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $teal_shield_5;
+        background-color: $teal_shield_1;
+        font-size: 1vw;
+    }
+}
+
+#artificialIntelligenceResources {
+    margin: auto;
+    text-align: left;
+    background-color: $blue_resources_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    h1 {
+        color: $blue_resources_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $blue_resources_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $blue_resources_3;
+        font-size: 2vw;
+    }
+    p {
+        color: $blue_resources_3;
+        font-size: 1vw;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        color: $blue_resources_3;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $blue_resources_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $blue_resources_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $blue_resources_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $blue_resources_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $blue_resources_3;
+            font-size: 1vw;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        border-color: $blue_resources_3;
+        border-style: solid;
+        tr {
+            border-color: $blue_resources_3;
+            th {
+                border-color: $blue_resources_3;
+                color: $blue_resources_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $blue_resources_3;
+                color: $blue_resources_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $blue_resources_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $blue_resources_5;
+        background-color: $blue_resources_1;
+        font-size: 1vw;
+    }
+}
+
+#cppResources {
+    margin: auto;
+    text-align: left;
+    background-color: $neon_dusk_serenity_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    h1 {
+        color: $neon_dusk_serenity_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $neon_dusk_serenity_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $neon_dusk_serenity_3;
+        font-size: 2vw;
+    }
+    p {
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        color: $neon_dusk_serenity_3;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $neon_dusk_serenity_3;
+            font-size: 1vw;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        border-color: $neon_dusk_serenity_3;
+        border-style: solid;
+        tr {
+            border-color: $neon_dusk_serenity_3;
+            th {
+                border-color: $neon_dusk_serenity_3;
+                color: $neon_dusk_serenity_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $neon_dusk_serenity_3;
+                color: $neon_dusk_serenity_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $neon_dusk_serenity_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $neon_dusk_serenity_5;
+        background-color: $neon_dusk_serenity_1;
+        font-size: 1vw;
+    }
+}
+
+#pythonResources {
+    margin: auto;
+    text-align: left;
+    background-color: $shades_of_blue_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    h1 {
+        color: $shades_of_blue_5;
+        font-size: 5vw;
+    }
+    h2 {
+        color: $shades_of_blue_4;
+        font-size: 3vw;
+    }
+    h3 {
+        color: $shades_of_blue_3;
+        font-size: 2vw;
+    }
+    p {
+        color: $shades_of_blue_3;
+        font-size: 1vw;
+    }
+    blockquote {
+        font-family: "Lucida Handwriting", cursive;
+        color: $shades_of_blue_3;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        color: $shades_of_blue_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        color: $shades_of_blue_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        color: $shades_of_blue_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        color: $shades_of_blue_3;
+        font-size: 1vw;
+    }
+    ul {
+        li {
+            color: $shades_of_blue_3;
+            font-size: 1vw;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        border-color: $shades_of_blue_3;
+        border-style: solid;
+        tr {
+            border-color: $shades_of_blue_3;
+            th {
+                border-color: $shades_of_blue_3;
+                color: $shades_of_blue_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $shades_of_blue_3;
+                color: $shades_of_blue_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+    button {
+        border: 0.25vw solid $shades_of_blue_5;
+        display: block; /* Ensures the button behaves as a block-level element */
+        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+        color: $shades_of_blue_5;
+        background-color: $shades_of_blue_1;
+        font-size: 1vw;
+    }
+}

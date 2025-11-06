@@ -886,6 +886,307 @@
     font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
+/* Teal Shield color palette from https://colormagic.app/palette/690ad82aeebc052f2bce9d4a */
+/* Blue Resources color palette from https://colormagic.app/palette/690ad9cceebc052f2bce9d54 */
+/* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
+/* Shades of Blue color palette from https://colormagic.app/palette/690ade7beebc052f2bce9d86 */
+#cybersecurityResources {
+  margin: auto;
+  text-align: left;
+  background-color: #1f3a3d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #cybersecurityResources h1 {
+    color: #6ff1a1;
+    font-size: 5vw; }
+  #cybersecurityResources h2 {
+    color: #4fbf8b;
+    font-size: 3vw; }
+  #cybersecurityResources h3 {
+    color: #4fbf8b;
+    font-size: 2vw; }
+  #cybersecurityResources p {
+    color: #3c7d80;
+    font-size: 1vw; }
+  #cybersecurityResources blockquote {
+    font-family: "Lucida Handwriting", cursive;
+    color: #3c7d80;
+    font-size: 1.5vw; }
+  #cybersecurityResources a:link {
+    color: #3c7d80;
+    font-size: 1vw; }
+  #cybersecurityResources a:visited {
+    color: #3c7d80;
+    font-size: 1vw; }
+  #cybersecurityResources a:hover {
+    color: #3c7d80;
+    font-size: 1vw; }
+  #cybersecurityResources a:active {
+    color: #3c7d80;
+    font-size: 1vw; }
+  #cybersecurityResources ul li {
+    color: #3c7d80;
+    font-size: 1vw; }
+  #cybersecurityResources table {
+    border-collapse: collapse;
+    border-color: #6ff1a1;
+    border-style: solid; }
+    #cybersecurityResources table tr {
+      border-color: #4fbf8b; }
+      #cybersecurityResources table tr th {
+        border-color: #4fbf8b;
+        color: #3c7d80;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #cybersecurityResources table tr td {
+        border-color: #3c7d80;
+        color: #3c7d80;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+  #cybersecurityResources button {
+    border: 0.25vw solid #6ff1a1;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #6ff1a1;
+    background-color: #1f3a3d;
+    font-size: 1vw; }
+
+#artificialIntelligenceResources {
+  margin: auto;
+  text-align: left;
+  background-color: #3f89c6;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #artificialIntelligenceResources h1 {
+    color: #f6f8f6;
+    font-size: 5vw; }
+  #artificialIntelligenceResources h2 {
+    color: #e7f8f3;
+    font-size: 3vw; }
+  #artificialIntelligenceResources h3 {
+    color: #ade0e6;
+    font-size: 2vw; }
+  #artificialIntelligenceResources p {
+    color: #ade0e6;
+    font-size: 1vw; }
+  #artificialIntelligenceResources blockquote {
+    font-family: "Lucida Handwriting", cursive;
+    color: #ade0e6;
+    font-size: 1.5vw; }
+  #artificialIntelligenceResources a:link {
+    color: #ade0e6;
+    font-size: 1vw; }
+  #artificialIntelligenceResources a:visited {
+    color: #ade0e6;
+    font-size: 1vw; }
+  #artificialIntelligenceResources a:hover {
+    color: #ade0e6;
+    font-size: 1vw; }
+  #artificialIntelligenceResources a:active {
+    color: #ade0e6;
+    font-size: 1vw; }
+  #artificialIntelligenceResources ul li {
+    color: #ade0e6;
+    font-size: 1vw; }
+  #artificialIntelligenceResources table {
+    border-collapse: collapse;
+    border-color: #ade0e6;
+    border-style: solid; }
+    #artificialIntelligenceResources table tr {
+      border-color: #ade0e6; }
+      #artificialIntelligenceResources table tr th {
+        border-color: #ade0e6;
+        color: #ade0e6;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #artificialIntelligenceResources table tr td {
+        border-color: #ade0e6;
+        color: #ade0e6;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+  #artificialIntelligenceResources button {
+    border: 0.25vw solid #f6f8f6;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #f6f8f6;
+    background-color: #3f89c6;
+    font-size: 1vw; }
+
+#cppResources {
+  margin: auto;
+  text-align: left;
+  background-color: #1f1b79;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #cppResources h1 {
+    color: #f9c54e;
+    font-size: 5vw; }
+  #cppResources h2 {
+    color: #d07e6c;
+    font-size: 3vw; }
+  #cppResources h3 {
+    color: #8b5aba;
+    font-size: 2vw; }
+  #cppResources p {
+    color: #8b5aba;
+    font-size: 1vw; }
+  #cppResources blockquote {
+    font-family: "Lucida Handwriting", cursive;
+    color: #8b5aba;
+    font-size: 1.5vw; }
+  #cppResources a:link {
+    color: #8b5aba;
+    font-size: 1vw; }
+  #cppResources a:visited {
+    color: #8b5aba;
+    font-size: 1vw; }
+  #cppResources a:hover {
+    color: #8b5aba;
+    font-size: 1vw; }
+  #cppResources a:active {
+    color: #8b5aba;
+    font-size: 1vw; }
+  #cppResources ul li {
+    color: #8b5aba;
+    font-size: 1vw; }
+  #cppResources table {
+    border-collapse: collapse;
+    border-color: #8b5aba;
+    border-style: solid; }
+    #cppResources table tr {
+      border-color: #8b5aba; }
+      #cppResources table tr th {
+        border-color: #8b5aba;
+        color: #8b5aba;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #cppResources table tr td {
+        border-color: #8b5aba;
+        color: #8b5aba;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+  #cppResources button {
+    border: 0.25vw solid #f9c54e;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #f9c54e;
+    background-color: #1f1b79;
+    font-size: 1vw; }
+
+#pythonResources {
+  margin: auto;
+  text-align: left;
+  background-color: #1f3a61;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #pythonResources h1 {
+    color: #f1f5f8;
+    font-size: 5vw; }
+  #pythonResources h2 {
+    color: #c2d3e0;
+    font-size: 3vw; }
+  #pythonResources h3 {
+    color: #85a4c1;
+    font-size: 2vw; }
+  #pythonResources p {
+    color: #85a4c1;
+    font-size: 1vw; }
+  #pythonResources blockquote {
+    font-family: "Lucida Handwriting", cursive;
+    color: #85a4c1;
+    font-size: 1.5vw; }
+  #pythonResources a:link {
+    color: #85a4c1;
+    font-size: 1vw; }
+  #pythonResources a:visited {
+    color: #85a4c1;
+    font-size: 1vw; }
+  #pythonResources a:hover {
+    color: #85a4c1;
+    font-size: 1vw; }
+  #pythonResources a:active {
+    color: #85a4c1;
+    font-size: 1vw; }
+  #pythonResources ul li {
+    color: #85a4c1;
+    font-size: 1vw; }
+  #pythonResources table {
+    border-collapse: collapse;
+    border-color: #85a4c1;
+    border-style: solid; }
+    #pythonResources table tr {
+      border-color: #85a4c1; }
+      #pythonResources table tr th {
+        border-color: #85a4c1;
+        color: #85a4c1;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #pythonResources table tr td {
+        border-color: #85a4c1;
+        color: #85a4c1;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+  #pythonResources button {
+    border: 0.25vw solid #f1f5f8;
+    display: block;
+    /* Ensures the button behaves as a block-level element */
+    margin: 0 auto;
+    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: #f1f5f8;
+    background-color: #1f3a61;
+    font-size: 1vw; }
+
+/* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
