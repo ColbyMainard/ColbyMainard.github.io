@@ -28,37 +28,39 @@ $gryffon_3: #ff6600;
 $gryffon_4: #cc3300;
 $gryffon_5: #990000;
 
-/* Visionary Kinship color palette from https://colormagic.app/palette/684cd204a1f3618a008a9255 */
-$visionary_kinship_1: #1abc9c;
-$visionary_kinship_2: #2ecc70;
-$visionary_kinship_3: #3398db;
-$visionary_kinship_4: #e77e23;
-$visionary_kinship_5: #e74d3c;
-
 #workHistory {
     margin: auto;
-    text-align: left;
     background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: "Courier New", monospace;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
+        text-align: left;
         color: $calm_authority_2;
         font-size: 5vw;
     }
     h2 {
+        text-align: left;
         color: $calm_authority_3;
         font-size: 3vw;
     }
     h3 {
+        text-align: left;
         color: $calm_authority_4;
         font-size: 2vw;
     }
     p {
+        text-align: left;
         color: $calm_authority_5;
         font-size: 1vw;
     }
     button {
+        text-align: left;
         border: 0.25vw solid $calm_authority_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
@@ -70,33 +72,43 @@ $visionary_kinship_5: #e74d3c;
 
 #education {
     margin: auto;
-    text-align: left;
     background-color: maroon;
     width: 80%;
     border-radius: 10px;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
         color:white;
         font-size: 5vw;
+        text-align: left;
     }
     h2 {
         color:white;
         font-size: 3vw;
+        text-align: left;
     }
     h3 {
         color:white;
         font-size: 2vw;
+        text-align: left;
     }
     p {
         color:white;
         font-size: 1vw;
+        text-align: left;
     }
     ul {
+        text-align: left;
         li {
             color: white;
             font-size: 1vw;
         }
     }
     table {
+        text-align: left;
         border-collapse: collapse;
         color: white;
         font-size: 1vw;
@@ -118,6 +130,7 @@ $visionary_kinship_5: #e74d3c;
         }
     }
     button {
+        text-align: left;
         border: 0.25vw solid white;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
@@ -129,48 +142,61 @@ $visionary_kinship_5: #e74d3c;
 
 #projects {
     margin: auto;
-    text-align: left;
     background-color: $smart_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
+        text-align: left;
         color: $smart_5;
         font-size: 5vw;
     }
     h2 {
+        text-align: left;
         color: $smart_4;
         font-size: 3vw;
     }
     h3 {
+        text-align: left;
         color: $smart_3;
         font-size: 2vw;
     }
     p {
+        text-align: left;
         color: $smart_2;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
+        text-align: left;
         color: $smart_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
+        text-align: left;
         color: $smart_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
+        text-align: left;
         color: $smart_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
+        text-align: left;
         color: $smart_3;
         font-size: 1vw;
     }
     button {
+        text-align: left;
         border: 0.25vw solid $smart_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
@@ -182,34 +208,44 @@ $visionary_kinship_5: #e74d3c;
 
 #technicalSkills {
     margin: auto;
-    text-align: left;
     background-color: black;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
+        text-align: left;
         color:greenyellow;
         font-size: 5vw;
     }
     h2 {
+        text-align: left;
         color:greenyellow;
         font-size: 3vw;
     }
     h3 {
+        text-align: left;
         color:greenyellow;
         font-size: 2vw;
     }
     p {
+        text-align: left;
         color:greenyellow;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
             color:greenyellow;
             font-size: 1vw;
         }
     }
     button {
+        text-align: left;
         border: 0.25vw solid greenyellow;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
@@ -221,34 +257,44 @@ $visionary_kinship_5: #e74d3c;
 
 #otherSkills {
     margin: auto;
-    text-align: left;
     background-color: $sunset_glow_5;
     width: 80%;
     border-radius: 10px;
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Courier New", monospace;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
+        text-align: left;
         color: $sunset_glow_1;
         font-size: 5vw;
     }
     h2 {
+        text-align: left;
         color: $sunset_glow_2;
         font-size: 3vw;
     }
     h3 {
+        text-align: left;
         color: $sunset_glow_2;
         font-size: 2vw;
     }
     p {
+        text-align: left;
         color: $sunset_glow_2;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
             color: $sunset_glow_2;
             font-size: 1vw;
         }
     }
     button {
+        text-align: left;
         border: 0.25vw solid $sunset_glow_2;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
@@ -260,34 +306,44 @@ $visionary_kinship_5: #e74d3c;
 
 #certifications {
     margin: auto;
-    text-align: left;
     background-color: $gryffon_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
+        text-align: left;
         color: $gryffon_1;
         font-size: 5vw;
     }
     h2 {
+        text-align: left;
         color: $gryffon_1;
         font-size: 3vw;
     }
     h3 {
+        text-align: left;
         color: $gryffon_1;
         font-size: 2vw;
     }
     p {
+        text-align: left;
         color: $gryffon_1;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
             color: $gryffon_1;
             font-size: 1vw;
         }
     }
     button {
+        text-align: left;
         border: 0.25vw solid $gryffon_1;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
@@ -299,39 +355,49 @@ $visionary_kinship_5: #e74d3c;
 
 #languages {
     margin: auto;
-    text-align: left;
-    background-color: $visionary_kinship_5;
+    background-color: $smart_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
+    span{
+        font-size: 100px;
+        float:center;
+        text-align: center;
+    }
     h1 {
-        color: $visionary_kinship_1;
+        text-align: left;
+        color: $smart_1;
         font-size: 5vw;
     }
     h2 {
-        color: $visionary_kinship_1;
+        text-align: left;
+        color: $smart_1;
         font-size: 3vw;
     }
     h3 {
-        color: $visionary_kinship_1;
+        text-align: left;
+        color: $smart_1;
         font-size: 2vw;
     }
     p {
-        color: $visionary_kinship_3;
+        text-align: left;
+        color: $smart_3;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
-            color: $visionary_kinship_3;
+            color: $smart_3;
             font-size: 1vw;
         }
     }
     button {
-        border: 0.25vw solid $visionary_kinship_1;
+        text-align: left;
+        border: 0.25vw solid $smart_1;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $visionary_kinship_1;
-        background-color: $visionary_kinship_5;
+        color: $smart_1;
+        background-color: $smart_5;
         font-size: 1vw;
     }
 }

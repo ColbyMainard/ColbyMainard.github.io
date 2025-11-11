@@ -3,27 +3,34 @@
 /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
-/* Visionary Kinship color palette from https://colormagic.app/palette/684cd204a1f3618a008a9255 */
 #workHistory {
   margin: auto;
-  text-align: left;
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-family: "Courier New", monospace; }
+  #workHistory span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #workHistory h1 {
+    text-align: left;
     color: #5D6D7E;
     font-size: 5vw; }
   #workHistory h2 {
+    text-align: left;
     color: #85929E;
     font-size: 3vw; }
   #workHistory h3 {
+    text-align: left;
     color: #AAB7B8;
     font-size: 2vw; }
   #workHistory p {
+    text-align: left;
     color: #D5D5DB;
     font-size: 1vw; }
   #workHistory button {
+    text-align: left;
     border: 0.25vw solid #D5D5DB;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -35,26 +42,36 @@
 
 #education {
   margin: auto;
-  text-align: left;
   background-color: maroon;
   width: 80%;
   border-radius: 10px; }
+  #education span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #education h1 {
     color: white;
-    font-size: 5vw; }
+    font-size: 5vw;
+    text-align: left; }
   #education h2 {
     color: white;
-    font-size: 3vw; }
+    font-size: 3vw;
+    text-align: left; }
   #education h3 {
     color: white;
-    font-size: 2vw; }
+    font-size: 2vw;
+    text-align: left; }
   #education p {
     color: white;
-    font-size: 1vw; }
-  #education ul li {
-    color: white;
-    font-size: 1vw; }
+    font-size: 1vw;
+    text-align: left; }
+  #education ul {
+    text-align: left; }
+    #education ul li {
+      color: white;
+      font-size: 1vw; }
   #education table {
+    text-align: left;
     border-collapse: collapse;
     color: white;
     font-size: 1vw;
@@ -71,6 +88,7 @@
       border-bottom-style: groove;
       border-left-style: groove; }
   #education button {
+    text-align: left;
     border: 0.25vw solid white;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -82,7 +100,6 @@
 
 #projects {
   margin: auto;
-  text-align: left;
   background-color: #1c1a3d;
   width: 80%;
   border-radius: 10px;
@@ -91,31 +108,44 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
+  #projects span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #projects h1 {
+    text-align: left;
     color: #f1e0ff;
     font-size: 5vw; }
   #projects h2 {
+    text-align: left;
     color: #d1c3e9;
     font-size: 3vw; }
   #projects h3 {
+    text-align: left;
     color: #8d7d9b;
     font-size: 2vw; }
   #projects p {
+    text-align: left;
     color: #4a4e8c;
     font-size: 1vw; }
   #projects a:link {
+    text-align: left;
     color: #4a4e8c;
     font-size: 1vw; }
   #projects a:visited {
+    text-align: left;
     color: #8d7d9b;
     font-size: 1vw; }
   #projects a:hover {
+    text-align: left;
     color: #4a4e8c;
     font-size: 1vw; }
   #projects a:active {
+    text-align: left;
     color: #8d7d9b;
     font-size: 1vw; }
   #projects button {
+    text-align: left;
     border: 0.25vw solid #f1e0ff;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -127,27 +157,37 @@
 
 #technicalSkills {
   margin: auto;
-  text-align: left;
   background-color: black;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace; }
+  #technicalSkills span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #technicalSkills h1 {
+    text-align: left;
     color: greenyellow;
     font-size: 5vw; }
   #technicalSkills h2 {
+    text-align: left;
     color: greenyellow;
     font-size: 3vw; }
   #technicalSkills h3 {
+    text-align: left;
     color: greenyellow;
     font-size: 2vw; }
   #technicalSkills p {
+    text-align: left;
     color: greenyellow;
     font-size: 1vw; }
-  #technicalSkills ul li {
-    color: greenyellow;
-    font-size: 1vw; }
+  #technicalSkills ul {
+    text-align: left; }
+    #technicalSkills ul li {
+      color: greenyellow;
+      font-size: 1vw; }
   #technicalSkills button {
+    text-align: left;
     border: 0.25vw solid greenyellow;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -159,27 +199,37 @@
 
 #otherSkills {
   margin: auto;
-  text-align: left;
   background-color: #d33131;
   width: 80%;
   border-radius: 10px;
-  font-family: "Lucida Handwriting", cursive; }
+  font-family: "Courier New", monospace; }
+  #otherSkills span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #otherSkills h1 {
+    text-align: left;
     color: #ffb84d;
     font-size: 5vw; }
   #otherSkills h2 {
+    text-align: left;
     color: #ff9900;
     font-size: 3vw; }
   #otherSkills h3 {
+    text-align: left;
     color: #ff9900;
     font-size: 2vw; }
   #otherSkills p {
+    text-align: left;
     color: #ff9900;
     font-size: 1vw; }
-  #otherSkills ul li {
-    color: #ff9900;
-    font-size: 1vw; }
+  #otherSkills ul {
+    text-align: left; }
+    #otherSkills ul li {
+      color: #ff9900;
+      font-size: 1vw; }
   #otherSkills button {
+    text-align: left;
     border: 0.25vw solid #ff9900;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -191,27 +241,37 @@
 
 #certifications {
   margin: auto;
-  text-align: left;
   background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace; }
+  #certifications span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #certifications h1 {
+    text-align: left;
     color: #ffcc00;
     font-size: 5vw; }
   #certifications h2 {
+    text-align: left;
     color: #ffcc00;
     font-size: 3vw; }
   #certifications h3 {
+    text-align: left;
     color: #ffcc00;
     font-size: 2vw; }
   #certifications p {
+    text-align: left;
     color: #ffcc00;
     font-size: 1vw; }
-  #certifications ul li {
-    color: #ffcc00;
-    font-size: 1vw; }
+  #certifications ul {
+    text-align: left; }
+    #certifications ul li {
+      color: #ffcc00;
+      font-size: 1vw; }
   #certifications button {
+    text-align: left;
     border: 0.25vw solid #ffcc00;
     display: block;
     /* Ensures the button behaves as a block-level element */
@@ -223,41 +283,50 @@
 
 #languages {
   margin: auto;
-  text-align: left;
-  background-color: #e74d3c;
+  background-color: #f1e0ff;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace; }
+  #languages span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
   #languages h1 {
-    color: #1abc9c;
+    text-align: left;
+    color: #1c1a3d;
     font-size: 5vw; }
   #languages h2 {
-    color: #1abc9c;
+    text-align: left;
+    color: #1c1a3d;
     font-size: 3vw; }
   #languages h3 {
-    color: #1abc9c;
+    text-align: left;
+    color: #1c1a3d;
     font-size: 2vw; }
   #languages p {
-    color: #3398db;
+    text-align: left;
+    color: #8d7d9b;
     font-size: 1vw; }
-  #languages ul li {
-    color: #3398db;
-    font-size: 1vw; }
+  #languages ul {
+    text-align: left; }
+    #languages ul li {
+      color: #8d7d9b;
+      font-size: 1vw; }
   #languages button {
-    border: 0.25vw solid #1abc9c;
+    text-align: left;
+    border: 0.25vw solid #1c1a3d;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #1abc9c;
-    background-color: #e74d3c;
+    color: #1c1a3d;
+    background-color: #f1e0ff;
     font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 /* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
-/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
 /* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
 #fitness {
   margin: auto;
@@ -265,7 +334,7 @@
   background-color: #d33131;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -316,7 +385,7 @@
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -361,10 +430,10 @@
 #photography {
   margin: auto;
   text-align: left;
-  background-color: #4f9c7e;
+  background-color: #e9d9b9;
   width: 80%;
   border-radius: 10px;
-  font-family: "Lucida Handwriting", cursive;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -375,40 +444,40 @@
     margin-right: auto;
     max-width: 90%;
     height: auto;
-    border: 1vw solid #f6e0a2;
+    border: 1vw solid #c2b180;
     border-radius: 1%; }
   #photography h1 {
-    color: #e7693c;
+    color: #895b29;
     font-size: 5vw; }
   #photography h2 {
-    color: #f5a524;
+    color: #a67c5e;
     font-size: 3vw; }
   #photography h3 {
-    color: #f5a524;
+    color: #a67c5e;
     font-size: 2vw; }
   #photography p {
-    color: #f6e0a2;
+    color: #c2b180;
     font-size: 1vw; }
   #photography a:link {
-    color: #f6e0a2;
+    color: #c2b180;
     font-size: 1vw; }
   #photography a:visited {
-    color: #a3d55d;
+    color: #d5ccae;
     font-size: 1vw; }
   #photography a:hover {
-    color: #f6e0a2;
+    color: #c2b180;
     font-size: 1vw; }
   #photography a:active {
-    color: #a3d55d;
+    color: #d5ccae;
     font-size: 1vw; }
   #photography button {
-    border: 0.25vw solid #e7693c;
+    border: 0.25vw solid #895b29;
     display: block;
     /* Ensures the button behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #e7693c;
-    background-color: #a3d55d;
+    color: #895b29;
+    background-color: #d5ccae;
     font-size: 1vw; }
 
 #dungeonsAndDragons {
@@ -417,7 +486,7 @@
   background-color: #4c3e3e;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -465,7 +534,7 @@
   background-color: #895b29;
   width: 80%;
   border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -483,7 +552,6 @@
     color: #d5ccae;
     font-size: 1vw; }
   #history blockquote {
-    font-family: "Lucida Handwriting", cursive;
     color: #d5ccae;
     font-size: 1.5vw; }
   #history a:link {
@@ -579,7 +647,7 @@
   background-color: #1d3a6d;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -627,7 +695,7 @@
   background-color: #007a5e;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -729,7 +797,7 @@
   background-color: #1e1f2a;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -831,7 +899,7 @@
   background-color: #20203c;
   width: 80%;
   border-radius: 10px;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -896,7 +964,7 @@
   background-color: #1f3a3d;
   width: 80%;
   border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -914,7 +982,6 @@
     color: #3c7d80;
     font-size: 1vw; }
   #cybersecurityResources blockquote {
-    font-family: "Lucida Handwriting", cursive;
     color: #3c7d80;
     font-size: 1.5vw; }
   #cybersecurityResources a:link {
@@ -970,7 +1037,7 @@
   background-color: #3f89c6;
   width: 80%;
   border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -988,7 +1055,6 @@
     color: #ade0e6;
     font-size: 1vw; }
   #artificialIntelligenceResources blockquote {
-    font-family: "Lucida Handwriting", cursive;
     color: #ade0e6;
     font-size: 1.5vw; }
   #artificialIntelligenceResources a:link {
@@ -1044,7 +1110,7 @@
   background-color: #1f1b79;
   width: 80%;
   border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -1062,7 +1128,6 @@
     color: #8b5aba;
     font-size: 1vw; }
   #cppResources blockquote {
-    font-family: "Lucida Handwriting", cursive;
     color: #8b5aba;
     font-size: 1.5vw; }
   #cppResources a:link {
@@ -1118,7 +1183,7 @@
   background-color: #1f3a61;
   width: 80%;
   border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
@@ -1136,7 +1201,6 @@
     color: #85a4c1;
     font-size: 1vw; }
   #pythonResources blockquote {
-    font-family: "Lucida Handwriting", cursive;
     color: #85a4c1;
     font-size: 1.5vw; }
   #pythonResources a:link {
@@ -1196,7 +1260,7 @@ html {
 header {
   text-align: center;
   background-color: #1a1a1e;
-  font-family: "Times New Roman", Times, serif; }
+  font-family: "Courier New", monospace; }
   header h1 {
     color: #a0a0b0;
     font-size: 5vw; }
@@ -1230,7 +1294,7 @@ body {
   margin: auto;
   text-align: center;
   background-color: #3e3e41;
-  font-family: Garamond, serif; }
+  font-family: "Courier New", monospace; }
   body h1 {
     color: #d4d4d9;
     font-size: 5vw; }
@@ -1256,7 +1320,7 @@ footer {
   text-align: center;
   background-color: #1c1a3d; }
   footer #contactMe {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Courier New", monospace;
     /* unvisited link */
     /* visited link */
     /* mouse over link */

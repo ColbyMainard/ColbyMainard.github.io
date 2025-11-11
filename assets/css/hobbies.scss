@@ -21,13 +21,6 @@ $dungeons_and_dragons_3: #8a6a6a;
 $dungeons_and_dragons_4: #c7a67a;
 $dungeons_and_dragons_5: #d1945c;
 
-/* Vivid Terrain color palette from https://colormagic.app/palette/68a2a5674ad85ebf78f88866 */
-$vivid_terrain_1: #4f9c7e;
-$vivid_terrain_2: #a3d55d;
-$vivid_terrain_3: #f6e0a2;
-$vivid_terrain_4: #f5a524;
-$vivid_terrain_5: #e7693c;
-
 /* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
 $brown_document_background_1: #e9d9b9;
 $brown_document_background_2: #d5ccae;
@@ -41,7 +34,7 @@ $brown_document_background_5: #895b29;
     background-color: $sunset_glow_5;
     width: 80%;
     border-radius: 10px;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: "Courier New", monospace;
     h1 {
         color: $sunset_glow_1;
         font-size: 5vw;
@@ -104,7 +97,7 @@ $brown_document_background_5: #895b29;
     background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: "Courier New", monospace;
     h1 {
         color: $calm_authority_5;
         font-size: 5vw;
@@ -160,61 +153,61 @@ $brown_document_background_5: #895b29;
 #photography {
     margin: auto;
     text-align: left;
-    background-color: $vivid_terrain_1;
+    background-color: $brown_document_background_1;
     width: 80%;
     border-radius: 10px;
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Courier New", monospace;
     img  {
         display: block;
         margin-left: auto;
         margin-right: auto;
         max-width: 90%;
         height: auto;
-        border: 1vw solid $vivid_terrain_3;
+        border: 1vw solid $brown_document_background_3;
         border-radius: 1%;
     }
     h1 {
-        color: $vivid_terrain_5;
+        color: $brown_document_background_5;
         font-size: 5vw;
     }
     h2 {
-        color: $vivid_terrain_4;
+        color: $brown_document_background_4;
         font-size: 3vw;
     }
     h3 {
-        color: $vivid_terrain_4;
+        color: $brown_document_background_4;
         font-size: 2vw;
     }
     p {
-        color: $vivid_terrain_3;
+        color: $brown_document_background_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
-        color: $vivid_terrain_3;
+        color: $brown_document_background_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $vivid_terrain_2;
+        color: $brown_document_background_2;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $vivid_terrain_3;
+        color: $brown_document_background_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $vivid_terrain_2;
+        color: $brown_document_background_2;
         font-size: 1vw;
     }
     button {
-        border: 0.25vw solid $vivid_terrain_5;
+        border: 0.25vw solid $brown_document_background_5;
         display: block; /* Ensures the button behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $vivid_terrain_5;
-        background-color: $vivid_terrain_2;
+        color: $brown_document_background_5;
+        background-color: $brown_document_background_2;
         font-size: 1vw;
     }
 }
@@ -225,7 +218,7 @@ $brown_document_background_5: #895b29;
     background-color: $dungeons_and_dragons_1;
     width: 80%;
     border-radius: 10px;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: "Courier New", monospace;
     h1 {
         color: $dungeons_and_dragons_5;
         font-size: 5vw;
@@ -284,7 +277,7 @@ $brown_document_background_5: #895b29;
     background-color: $brown_document_background_5;
     width: 80%;
     border-radius: 10px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Courier New", monospace;
     h1 {
         color: $brown_document_background_1;
         font-size: 5vw;
@@ -302,7 +295,6 @@ $brown_document_background_5: #895b29;
         font-size: 1vw;
     }
     blockquote {
-        font-family: "Lucida Handwriting", cursive;
         color: $brown_document_background_2;
         font-size: 1.5vw;
     }
