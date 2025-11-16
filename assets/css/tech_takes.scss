@@ -98,9 +98,10 @@ $dark_blue_gray_5: #ff5c5c;
             color: $luna_of_gale_4;
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $luna_of_gale_1;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $luna_of_gale_1;
         background-color: $luna_of_gale_5;
@@ -223,9 +224,10 @@ $dark_blue_gray_5: #ff5c5c;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $emerald_efficiency_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $emerald_efficiency_5;
         background-color: $emerald_efficiency_1;
@@ -348,9 +350,10 @@ $dark_blue_gray_5: #ff5c5c;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $purple_quantum_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $purple_quantum_5;
         background-color: $purple_quantum_1;
@@ -425,9 +428,10 @@ $dark_blue_gray_5: #ff5c5c;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $dark_blue_gray_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $dark_blue_gray_5;
         background-color: $dark_blue_gray_1;

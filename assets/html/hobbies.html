@@ -22,96 +22,18 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
-        <script>
-            function scrollToFitness(){
-                document.getElementById(
-                    "fitness"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToQuantumComputing(){
-                document.getElementById(
-                    "quantumComputing"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-            
-            function scrollToPhotography(){
-                document.getElementById(
-                    "photography"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-            
-            function scrollToDungeonsAndDragons(){
-                document.getElementById(
-                    "dungeonsAndDragons"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToHistory(){
-                document.getElementById(
-                    "history"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToContactMe(){
-                document.getElementById(
-                    "contactMe"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToTop(){
-                document.getElementById(
-                    "siteMenu"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-        </script>
         <script src="../js/send_email.js"></script>
     </head>
     <body>
         <header>
             <article class="siteMenu" id="siteMenu">
                 <nav>
-                    <button type="button" onclick="scrollToFitness()">Fitness</button>
-                    <button type="button" onclick="scrollToQuantumComputing()">Quantum Computing</button>
-                    <button type="button" onclick="scrollToPhotography()">Photography</button>
-                    <button type="button" onclick="scrollToDungeonsAndDragons()">Dungeons and Dragons</button>
-                    <button type="button" onclick="scrollToHistory()">History</button>
-                    <button type="button" onclick="scrollToContactMe()">Contact Me</button>
+                    <a href="#fitnessDiv">Fitness</a>
+                    <a href="#quantumComputingDiv">Quantum Computing</a>
+                    <a href="#photographyDiv">Photography</a>
+                    <a href="#dungeonsAndDragonsDiv">Dungeons and Dragons</a>
+                    <a href="#historyDiv">History</a>
+                    <a href="#contactMe">Contact Me</a>
                 </nav>
             </article>
             <br>
@@ -250,7 +172,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
             <div class="quantumComputingDiv" id="quantumComputingDiv">
@@ -274,10 +196,10 @@
                             Programming Quantum Computers: Essential Algorithms and Code Samples by Eric R. Johnston, Nic Harrigan, and Mercedes Gimeno-Segovia.
                         </a>
                     </p>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
-            <div class="photographyDiv" id="photography">
+            <div class="photographyDiv" id="photographyDiv">
                 <section class="photography" id="photography">
                     <h1>Photography</h1>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
@@ -292,7 +214,7 @@
                     <br>
                     <img src="../images/photographyHobby/DSC_0396.JPG" alt="Beautiful purple clouds" loading="lazy">
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
             <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">
@@ -316,7 +238,7 @@
                         Regardless of whether you have ten minutes or ten years of experience, it is a welcoming environment to enjoy a strong communal hobby.
                     </p>
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
             <div class="historyDiv" id="historyDiv">
@@ -476,7 +398,7 @@
                         </tr>
                     </table>
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
         </main>

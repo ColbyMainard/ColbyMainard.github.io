@@ -107,9 +107,10 @@ $shades_of_blue_5: #f1f5f8;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $teal_shield_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $teal_shield_5;
         background-color: $teal_shield_1;
@@ -196,9 +197,10 @@ $shades_of_blue_5: #f1f5f8;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $blue_resources_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $blue_resources_5;
         background-color: $blue_resources_1;
@@ -285,9 +287,10 @@ $shades_of_blue_5: #f1f5f8;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $neon_dusk_serenity_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $neon_dusk_serenity_5;
         background-color: $neon_dusk_serenity_1;
@@ -374,9 +377,10 @@ $shades_of_blue_5: #f1f5f8;
             }
         }
     }
-    button {
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $shades_of_blue_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $shades_of_blue_5;
         background-color: $shades_of_blue_1;

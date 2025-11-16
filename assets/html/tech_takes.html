@@ -22,95 +22,17 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
-        <script>
-            function scrollToPrivacyStance(){
-                document.getElementById(
-                    "PrivacyStance"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToKAN(){
-                document.getElementById(
-                    "KAN"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToCryptocurrency(){
-                document.getElementById(
-                    "Cryptocurrency"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToFutureOfQuantum(){
-                document.getElementById(
-                    "FutureOfQuantum"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToAGI(){
-                document.getElementById(
-                    "AGI"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToContactMe(){
-                document.getElementById(
-                    "contactMe"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-
-            function scrollToTop(){
-                document.getElementById(
-                    "siteMenu"
-                ).scrollIntoView(
-                    false,
-                    {
-                        behavior: "smooth"
-                    }
-                );
-            }
-        </script>
         <script src="../js/send_email.js"></script>
     </head>
     <body>
         <header>
             <article class="siteMenu" id="siteMenu">
                 <nav>
-                    <button type="button" onclick="scrollToKAN()">Kolmogorov-Arnold Networks</button>
-                    <button type="button" onclick="scrollToCryptocurrency()">Cryptocurrency Basics</button>
-                    <button type="button" onclick="scrollToFutureOfQuantum()">Future of Quantum Computing</button>
-                    <button type="button" onclick="scrollToAGI()">Artificial General Intelligence</button>
-                    <button type="button" onclick="scrollToContactMe()">Contact Me</button>
+                    <a href="#KANDiv">Kolmogorov-Arnold Networks</a>
+                    <a hjef="#cryptocurrencyDiv">Cryptocurrency Basics</a>
+                    <a href="#futureOfQuantumDiv">Future of Quantum Computing</a>
+                    <a href="#AGIDiv">Artificial General Intelligence</a>
+                    <a href="#contactMe">Contact Me</a>
                 </nav>
             </article>
             <br>
@@ -192,7 +114,7 @@
                         </ul>
                     </ul>
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
             <div class="CryptocurrencyDiv" id="CryptocurrencyDiv">
@@ -346,7 +268,7 @@
                         </ul>
                     </ul>
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
             <div class="FutureOfQuantumDiv" id="FutureOfQuantumDiv">
@@ -387,7 +309,7 @@
                         The main issues are going to be in prohibitive energy costs, cooling, and having enough qubits available to actually be functionally useful for consumer applications.
                     </p>
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
             <div class="AGIDiv" id="AGIDiv">
@@ -538,7 +460,7 @@
                         Otherwise, we had better start protecting every Sarah Connor we can.
                     </p>
                     <br>
-                    <button type="button" onclick="scrollToTop()">Back to Top</button>
+                    <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
         </main>

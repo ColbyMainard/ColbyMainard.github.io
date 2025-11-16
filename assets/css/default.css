@@ -29,11 +29,11 @@
     text-align: left;
     color: #D5D5DB;
     font-size: 1vw; }
-  #workHistory button {
-    text-align: left;
+  #workHistory .backToTop {
+    text-align: center;
     border: 0.25vw solid #D5D5DB;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #D5D5DB;
@@ -87,11 +87,11 @@
       border-right-style: groove;
       border-bottom-style: groove;
       border-left-style: groove; }
-  #education button {
-    text-align: left;
+  #education .backToTop {
+    text-align: center;
     border: 0.25vw solid white;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: white;
@@ -144,11 +144,11 @@
     text-align: left;
     color: #8d7d9b;
     font-size: 1vw; }
-  #projects button {
-    text-align: left;
+  #projects .backToTop {
+    text-align: center;
     border: 0.25vw solid #f1e0ff;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #f1e0ff;
@@ -186,11 +186,11 @@
     #technicalSkills ul li {
       color: greenyellow;
       font-size: 1vw; }
-  #technicalSkills button {
-    text-align: left;
+  #technicalSkills .backToTop {
+    text-align: center;
     border: 0.25vw solid greenyellow;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: greenyellow;
@@ -228,11 +228,11 @@
     #otherSkills ul li {
       color: #ff9900;
       font-size: 1vw; }
-  #otherSkills button {
-    text-align: left;
+  #otherSkills .backToTop {
+    text-align: center;
     border: 0.25vw solid #ff9900;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #ff9900;
@@ -270,11 +270,11 @@
     #certifications ul li {
       color: #ffcc00;
       font-size: 1vw; }
-  #certifications button {
-    text-align: left;
+  #certifications .backToTop {
+    text-align: center;
     border: 0.25vw solid #ffcc00;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #ffcc00;
@@ -312,11 +312,11 @@
     #languages ul li {
       color: #8d7d9b;
       font-size: 1vw; }
-  #languages button {
-    text-align: left;
+  #languages .backToTop {
+    text-align: center;
     border: 0.25vw solid #1c1a3d;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #1c1a3d;
@@ -369,10 +369,11 @@
   #fitness a:active {
     color: #ff9900;
     font-size: 1vw; }
-  #fitness button {
+  #fitness .backToTop {
+    text-align: center;
     border: 0.25vw solid #ff9900;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #ff9900;
@@ -417,10 +418,11 @@
   #quantumComputing ul li {
     color: #5D6D7E;
     font-size: 1vw; }
-  #quantumComputing button {
+  #quantumComputing .backToTop {
+    text-align: center;
     border: 0.25vw solid #D5D5DB;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #D5D5DB;
@@ -470,10 +472,11 @@
   #photography a:active {
     color: #d5ccae;
     font-size: 1vw; }
-  #photography button {
+  #photography .backToTop {
+    text-align: center;
     border: 0.25vw solid #895b29;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #895b29;
@@ -518,10 +521,11 @@
   #dungeonsAndDragons ul li {
     color: #5a4e4e;
     font-size: 1vw; }
-  #dungeonsAndDragons button {
+  #dungeonsAndDragons .backToTop {
+    text-align: center;
     border: 0.25vw solid #d1945c;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #d1945c;
@@ -623,10 +627,11 @@
         #history table tr td a:active {
           color: #c2b180;
           font-size: 1vw; }
-  #history button {
+  #history .backToTop {
+    text-align: center;
     border: 0.25vw solid #d5ccae;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #d5ccae;
@@ -679,10 +684,11 @@
   #KAN ul li {
     font-size: 1vw;
     color: #4aa0c4; }
-  #KAN button {
+  #KAN .backToTop {
+    text-align: center;
     border: 0.25vw solid #d6e4f5;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #d6e4f5;
@@ -781,10 +787,11 @@
         #Cryptocurrency table tr td a:active {
           color: #a1d9b0;
           font-size: 1vw; }
-  #Cryptocurrency button {
+  #Cryptocurrency .backToTop {
+    text-align: center;
     border: 0.25vw solid #e0f7fa;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #e0f7fa;
@@ -883,10 +890,11 @@
         #FutureOfQuantum table tr td a:active {
           color: #8d6ab9;
           font-size: 1vw; }
-  #FutureOfQuantum button {
+  #FutureOfQuantum .backToTop {
+    text-align: center;
     border: 0.25vw solid #e5c3f9;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #e5c3f9;
@@ -943,10 +951,11 @@
       #AGI dl dd ul li {
         font-size: 1vw;
         color: #7a7a99; }
-  #AGI button {
+  #AGI .backToTop {
+    text-align: center;
     border: 0.25vw solid #ff5c5c;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #ff5c5c;
@@ -1021,10 +1030,11 @@
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #cybersecurityResources button {
+  #cybersecurityResources .backToTop {
+    text-align: center;
     border: 0.25vw solid #6ff1a1;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #6ff1a1;
@@ -1094,10 +1104,11 @@
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #artificialIntelligenceResources button {
+  #artificialIntelligenceResources .backToTop {
+    text-align: center;
     border: 0.25vw solid #f6f8f6;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #f6f8f6;
@@ -1167,10 +1178,11 @@
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #cppResources button {
+  #cppResources .backToTop {
+    text-align: center;
     border: 0.25vw solid #f9c54e;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #f9c54e;
@@ -1240,10 +1252,11 @@
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #pythonResources button {
+  #pythonResources .backToTop {
+    text-align: center;
     border: 0.25vw solid #f1f5f8;
     display: block;
-    /* Ensures the button behaves as a block-level element */
+    /* Ensures the .backToTop behaves as a block-level element */
     margin: 0 auto;
     /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
     color: #f1f5f8;
@@ -1284,10 +1297,10 @@ header {
   header #siteMenu {
     background-color: #1a1a1e;
     font-size: 1vw; }
-    header #siteMenu button {
+    header #siteMenu a {
       display: inline-block;
       border: 0.25vw solid #d4d4d9;
-      color: #1a1a1e;
+      color: #d4d4d9;
       margin: auto; }
 
 body {

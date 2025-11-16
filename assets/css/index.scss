@@ -59,10 +59,10 @@ $gryffon_5: #990000;
         color: $calm_authority_5;
         font-size: 1vw;
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $calm_authority_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $calm_authority_5;
         background-color: $calm_authority_1;
@@ -129,10 +129,10 @@ $gryffon_5: #990000;
             }
         }
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid white;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color:white;
         background-color: maroon;
@@ -195,10 +195,10 @@ $gryffon_5: #990000;
         color: $smart_3;
         font-size: 1vw;
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $smart_5;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $smart_5;
         background-color: $smart_1;
@@ -244,10 +244,10 @@ $gryffon_5: #990000;
             font-size: 1vw;
         }
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid greenyellow;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color:greenyellow;
         background-color: black;
@@ -293,10 +293,10 @@ $gryffon_5: #990000;
             font-size: 1vw;
         }
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $sunset_glow_2;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $sunset_glow_2;
         background-color: $sunset_glow_5;
@@ -342,10 +342,10 @@ $gryffon_5: #990000;
             font-size: 1vw;
         }
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $gryffon_1;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $gryffon_1;
         background-color: $gryffon_5;
@@ -391,10 +391,10 @@ $gryffon_5: #990000;
             font-size: 1vw;
         }
     }
-    button {
-        text-align: left;
+    .backToTop {
+        text-align: center;
         border: 0.25vw solid $smart_1;
-        display: block; /* Ensures the button behaves as a block-level element */
+        display: block; /* Ensures the .backToTop behaves as a block-level element */
         margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
         color: $smart_1;
         background-color: $smart_5;
