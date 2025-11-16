@@ -48,10 +48,10 @@ header {
     #pageMenu {
         background-color: $noir_1;
         font-size: 1vw;
-        button {
+        a {
             display: inline-block;
             border: 0.25vw solid $noir_5;
-            color: $noir_1;
+            color: $noir_5;
             margin:auto;
         }
     }

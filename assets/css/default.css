@@ -1276,10 +1276,10 @@ header {
   header #pageMenu {
     background-color: #1a1a1e;
     font-size: 1vw; }
-    header #pageMenu button {
+    header #pageMenu a {
       display: inline-block;
       border: 0.25vw solid #d4d4d9;
-      color: #1a1a1e;
+      color: #d4d4d9;
       margin: auto; }
   header #siteMenu {
     background-color: #1a1a1e;
