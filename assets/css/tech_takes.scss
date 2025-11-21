@@ -1,46 +1,46 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 
-/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
-$luna_of_gale_1: #d6e4f5;
-$luna_of_gale_2: #a4c8df;
-$luna_of_gale_3: #7bb7d1;
-$luna_of_gale_4: #4aa0c4;
-$luna_of_gale_5: #1d3a6d;
+// /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
+// $luna_of_gale_1: #d6e4f5;
+// $luna_of_gale_2: #a4c8df;
+// $luna_of_gale_3: #7bb7d1;
+// $luna_of_gale_4: #4aa0c4;
+// $luna_of_gale_5: #1d3a6d;
 
-/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
-$blood_moon_1: #691b1e;
-$blood_moon_2: #b82d28;
-$blood_moon_3: #f05660;
-$blood_moon_4: #f9a68b;
-$blood_moon_5: #fce3d4;
+// /* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
+// $blood_moon_1: #691b1e;
+// $blood_moon_2: #b82d28;
+// $blood_moon_3: #f05660;
+// $blood_moon_4: #f9a68b;
+// $blood_moon_5: #fce3d4;
 
-/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
-$disturbed_1: #5c6b8a;
-$disturbed_2: #a2b8d2;
-$disturbed_3: #f5c9a8;
-$disturbed_4: #f07838;
-$disturbed_5: #ba4c40;
+// /* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
+// $disturbed_1: #5c6b8a;
+// $disturbed_2: #a2b8d2;
+// $disturbed_3: #f5c9a8;
+// $disturbed_4: #f07838;
+// $disturbed_5: #ba4c40;
 
-/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
-$digital_veil_1: #1f3a3d;
-$digital_veil_2: #2a7e7e;
-$digital_veil_3: #5bc5c8;
-$digital_veil_4: #a5e3e9;
-$digital_veil_5: #f0f4f5;
+// /* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
+// $digital_veil_1: #1f3a3d;
+// $digital_veil_2: #2a7e7e;
+// $digital_veil_3: #5bc5c8;
+// $digital_veil_4: #a5e3e9;
+// $digital_veil_5: #f0f4f5;
 
-/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
-$emerald_efficiency_1: #007a5e;
-$emerald_efficiency_2: #1d9a6a;
-$emerald_efficiency_3: #50c3a1;
-$emerald_efficiency_4: #a1d9b0;
-$emerald_efficiency_5: #e0f7fa;
+// /* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+// $emerald_efficiency_1: #007a5e;
+// $emerald_efficiency_2: #1d9a6a;
+// $emerald_efficiency_3: #50c3a1;
+// $emerald_efficiency_4: #a1d9b0;
+// $emerald_efficiency_5: #e0f7fa;
 
-/* Purple Quantum color palette from https://colormagic.app/palette/68f429537470129f5e4b0d3d */
-$purple_quantum_1: #1e1f2a;
-$purple_quantum_2: #3c2b5f;
-$purple_quantum_3: #5c4f8c;
-$purple_quantum_4: #8d6ab9;
-$purple_quantum_5: #e5c3f9;
+// /* Purple Quantum color palette from https://colormagic.app/palette/68f429537470129f5e4b0d3d */
+// $purple_quantum_1: #1e1f2a;
+// $purple_quantum_2: #3c2b5f;
+// $purple_quantum_3: #5c4f8c;
+// $purple_quantum_4: #8d6ab9;
+// $purple_quantum_5: #e5c3f9;
 
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
 $dark_blue_gray_1: #20203c;
@@ -51,366 +51,398 @@ $dark_blue_gray_5: #ff5c5c;
 
 #KAN {
     margin: auto;
-    text-align: left;
-    background-color: $luna_of_gale_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        font-size: 5vw;
-        color: $luna_of_gale_1;
-    }
-    h2 {
-        font-size: 3vw;
-        color: $luna_of_gale_2;
-    }
-    h3 {
-        font-size: 2vw;
-        color: $luna_of_gale_3;
-    }
-    /* unvisited link */
-    a:link {
-        font-size: 1vw;
-        color: $luna_of_gale_4;
-    }
-    /* visited link */
-    a:visited {
-        font-size: 1vw;
-        color: $luna_of_gale_4;
-    }
-    /* mouse over link */
-    a:hover {
-        font-size: 1vw;
-        color: $luna_of_gale_4;
-    }
-    /* selected link */
-    a:active {
-        font-size: 1vw;
-        color: $luna_of_gale_4;
-    }
-    p {
-        font-size: 1vw;
-        color: $luna_of_gale_4;
-    }
-    ul {
-        li {
-            font-size: 1vw;
-            color: $luna_of_gale_4;
-        }
-    }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $luna_of_gale_1;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $luna_of_gale_1;
-        background-color: $luna_of_gale_5;
-        font-size: 1vw;
-    }
-}
-
-#Cryptocurrency {
-    margin: auto;
-    text-align: left;
-    background-color: $emerald_efficiency_1;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        font-size: 5vw;
-        color: $emerald_efficiency_5;
-    }
-    h2 {
-        font-size: 3vw;
-        color: $emerald_efficiency_4;
-    }
-    h3 {
-        font-size: 2vw;
-        color: $emerald_efficiency_4;
-    }
-    /* unvisited link */
-    a:link {
-        font-size: 1vw;
-        color: $emerald_efficiency_4;
-    }
-    /* visited link */
-    a:visited {
-        font-size: 1vw;
-        color: $emerald_efficiency_4;
-    }
-    /* mouse over link */
-    a:hover {
-        font-size: 1vw;
-        color: $emerald_efficiency_4;
-    }
-    /* selected link */
-    a:active {
-        font-size: 1vw;
-        color: $emerald_efficiency_4;
-    }
-    p {
-        font-size: 1vw;
-        color: $emerald_efficiency_4;
-    }
-    ul {
-        li {
-            font-size: 1vw;
-            color: $emerald_efficiency_4;
-        }
-    }
-    table {
-        border-collapse: collapse;
-        border-color: $emerald_efficiency_4;
-        border-style: solid;
-        tr {
-            border-color: $emerald_efficiency_4;
-            th {
-                border-color: $emerald_efficiency_4;
-                color: $emerald_efficiency_4;
-                font-size: 1vw;
-                border-top-style: double;
-                border-right-style: double;
-                border-bottom-style: double;
-                border-left-style: double;
-                /* unvisited link */
-                a:link {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-                /* visited link */
-                a:visited {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-                /* mouse over link */
-                a:hover {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-                /* selected link */
-                a:active {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-            }
-            td {
-                border-color: $emerald_efficiency_4;
-                color: $emerald_efficiency_4;
-                font-size: 1vw;
-                border-top-style: groove;
-                border-right-style: groove;
-                border-bottom-style: groove;
-                border-left-style: groove;
-                /* unvisited link */
-                a:link {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-                /* visited link */
-                a:visited {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-                /* mouse over link */
-                a:hover {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-                /* selected link */
-                a:active {
-                    color: $emerald_efficiency_4;
-                    font-size: 1vw;
-                }
-            }
-        }
-    }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $emerald_efficiency_5;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $emerald_efficiency_5;
-        background-color: $emerald_efficiency_1;
-        font-size: 1vw;
-    }
-}
-
-#FutureOfQuantum {
-    margin: auto;
-    text-align: left;
-    background-color: $purple_quantum_1;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        font-size: 5vw;
-        color: $purple_quantum_5;
-    }
-    h2 {
-        font-size: 3vw;
-        color: $purple_quantum_5;
-    }
-    h3 {
-        font-size: 2vw;
-        color: $purple_quantum_5;
-    }
-    /* unvisited link */
-    a:link {
-        font-size: 1vw;
-        color: $purple_quantum_4;
-    }
-    /* visited link */
-    a:visited {
-        font-size: 1vw;
-        color: $purple_quantum_4;
-    }
-    /* mouse over link */
-    a:hover {
-        font-size: 1vw;
-        color: $purple_quantum_4;
-    }
-    /* selected link */
-    a:active {
-        font-size: 1vw;
-        color: $purple_quantum_4;
-    }
-    p {
-        font-size: 1vw;
-        color: $purple_quantum_4;
-    }
-    ul {
-        li {
-            font-size: 1vw;
-            color: $purple_quantum_4;
-        }
-    }
-    table {
-        border-collapse: collapse;
-        border-color: $purple_quantum_4;
-        border-style: solid;
-        tr {
-            border-color: $purple_quantum_4;
-            th {
-                border-color: $purple_quantum_4;
-                color: $purple_quantum_4;
-                font-size: 1vw;
-                border-top-style: double;
-                border-right-style: double;
-                border-bottom-style: double;
-                border-left-style: double;
-                /* unvisited link */
-                a:link {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-                /* visited link */
-                a:visited {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-                /* mouse over link */
-                a:hover {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-                /* selected link */
-                a:active {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-            }
-            td {
-                border-color: $purple_quantum_4;
-                color: $purple_quantum_4;
-                font-size: 1vw;
-                border-top-style: groove;
-                border-right-style: groove;
-                border-bottom-style: groove;
-                border-left-style: groove;
-                /* unvisited link */
-                a:link {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-                /* visited link */
-                a:visited {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-                /* mouse over link */
-                a:hover {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-                /* selected link */
-                a:active {
-                    color: $purple_quantum_4;
-                    font-size: 1vw;
-                }
-            }
-        }
-    }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $purple_quantum_5;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $purple_quantum_5;
-        background-color: $purple_quantum_1;
-        font-size: 1vw;
-    }
-}
-
-#AGI {
-    margin: auto;
-    text-align: left;
     background-color: $dark_blue_gray_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
+        text-align: left;
         font-size: 5vw;
         color: $dark_blue_gray_5;
     }
     h2 {
+        text-align: left;
         font-size: 3vw;
         color: $dark_blue_gray_4;
     }
     h3 {
+        text-align: left;
         font-size: 2vw;
-        color: $dark_blue_gray_4;
+        color: $dark_blue_gray_3;
     }
     /* unvisited link */
     a:link {
+        text-align: left;
         font-size: 1vw;
         color: $dark_blue_gray_3;
     }
     /* visited link */
     a:visited {
+        text-align: left;
         font-size: 1vw;
         color: $dark_blue_gray_3;
     }
     /* mouse over link */
     a:hover {
+        text-align: left;
         font-size: 1vw;
         color: $dark_blue_gray_3;
     }
     /* selected link */
     a:active {
+        text-align: left;
         font-size: 1vw;
         color: $dark_blue_gray_3;
     }
     p {
+        text-align: left;
         font-size: 1vw;
         color: $dark_blue_gray_3;
     }
     ul {
+        text-align: left;
+        li {
+            font-size: 1vw;
+            color: $dark_blue_gray_3;
+        }
+    }
+}
+
+#KAN.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $dark_blue_gray_3;
+    font-size: 1vw;
+}
+
+#Cryptocurrency {
+    margin: auto;
+    background-color: $dark_blue_gray_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
+        font-size: 5vw;
+        color: $dark_blue_gray_5;
+    }
+    h2 {
+        text-align: left;
+        font-size: 3vw;
+        color: $dark_blue_gray_4;
+    }
+    h3 {
+        text-align: left;
+        font-size: 2vw;
+        color: $dark_blue_gray_3;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    p {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    ul {
+        text-align: left;
+        li {
+            font-size: 1vw;
+            color: $dark_blue_gray_3;
+        }
+    }
+    table {
+        text-align: left;
+        border-collapse: collapse;
+        border-color: $dark_blue_gray_3;
+        border-style: solid;
+        tr {
+            border-color: $dark_blue_gray_3;
+            th {
+                border-color: $dark_blue_gray_3;
+                color: $dark_blue_gray_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+                /* unvisited link */
+                a:link {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* visited link */
+                a:visited {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* mouse over link */
+                a:hover {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* selected link */
+                a:active {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+            }
+            td {
+                border-color: $dark_blue_gray_3;
+                color: $dark_blue_gray_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+                /* unvisited link */
+                a:link {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* visited link */
+                a:visited {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* mouse over link */
+                a:hover {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* selected link */
+                a:active {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+            }
+        }
+    }
+}
+
+#Cryptocurrency.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $dark_blue_gray_3;
+    font-size: 1vw;
+}
+
+#FutureOfQuantum {
+    margin: auto;
+    background-color: $dark_blue_gray_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
+        font-size: 5vw;
+        color: $dark_blue_gray_5;
+    }
+    h2 {
+        text-align: left;
+        font-size: 3vw;
+        color: $dark_blue_gray_4;
+    }
+    h3 {
+        text-align: left;
+        font-size: 2vw;
+        color: $dark_blue_gray_3;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    p {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    ul {
+        text-align: left;
+        li {
+            font-size: 1vw;
+            color: $dark_blue_gray_3;
+        }
+    }
+    table {
+        text-align: left;
+        border-collapse: collapse;
+        border-color: $dark_blue_gray_3;
+        border-style: solid;
+        tr {
+            border-color: $dark_blue_gray_3;
+            th {
+                border-color: $dark_blue_gray_3;
+                color: $dark_blue_gray_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+                /* unvisited link */
+                a:link {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* visited link */
+                a:visited {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* mouse over link */
+                a:hover {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* selected link */
+                a:active {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+            }
+            td {
+                border-color: $dark_blue_gray_3;
+                color: $dark_blue_gray_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+                /* unvisited link */
+                a:link {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* visited link */
+                a:visited {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* mouse over link */
+                a:hover {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+                /* selected link */
+                a:active {
+                    font-size: 1vw;
+                    color: $dark_blue_gray_3;
+                }
+            }
+        }
+    }
+}
+
+#FutureOfQuantum.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $dark_blue_gray_3;
+    font-size: 1vw;
+}
+
+#AGI {
+    margin: auto;
+    background-color: $dark_blue_gray_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
+        font-size: 5vw;
+        color: $dark_blue_gray_5;
+    }
+    h2 {
+        text-align: left;
+        font-size: 3vw;
+        color: $dark_blue_gray_4;
+    }
+    h3 {
+        text-align: left;
+        font-size: 2vw;
+        color: $dark_blue_gray_4;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    p {
+        text-align: left;
+        font-size: 1vw;
+        color: $dark_blue_gray_3;
+    }
+    ul {
+        text-align: left;
         li {
             font-size: 1vw;
             color: $dark_blue_gray_3;
         }
     }
     dl {
+        text-align: left;
         font-size: 1vw;
         color: $dark_blue_gray_3;
         dt {
@@ -428,13 +460,12 @@ $dark_blue_gray_5: #ff5c5c;
             }
         }
     }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $dark_blue_gray_5;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $dark_blue_gray_5;
-        background-color: $dark_blue_gray_1;
-        font-size: 1vw;
-    }
+}
+
+#AGI.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $dark_blue_gray_3;
+    font-size: 1vw;
 }

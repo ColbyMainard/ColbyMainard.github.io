@@ -1,102 +1,141 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
-/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
 #workHistory {
   margin: auto;
-  background-color: #34495E;
+  background-color: #1c1a3d;
   width: 80%;
   border-radius: 10px;
-  font-family: "Courier New", monospace; }
-  #workHistory span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   #workHistory h1 {
     text-align: left;
-    color: #5D6D7E;
+    color: #f1e0ff;
     font-size: 5vw; }
   #workHistory h2 {
     text-align: left;
-    color: #85929E;
+    color: #d1c3e9;
     font-size: 3vw; }
   #workHistory h3 {
     text-align: left;
-    color: #AAB7B8;
+    color: #8d7d9b;
     font-size: 2vw; }
   #workHistory p {
     text-align: left;
-    color: #D5D5DB;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #workHistory .backToTop {
-    text-align: center;
-    border: 0.25vw solid #D5D5DB;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #D5D5DB;
-    background-color: #34495E;
+  #workHistory a:link {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
+  #workHistory a:visited {
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 1vw; }
+  #workHistory a:hover {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #workHistory a:active {
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 1vw; }
+
+#workHistory.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
 
 #education {
   margin: auto;
-  background-color: maroon;
+  background-color: #1c1a3d;
   width: 80%;
-  border-radius: 10px; }
-  #education span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
   #education h1 {
-    color: white;
-    font-size: 5vw;
-    text-align: left; }
+    text-align: left;
+    color: #f1e0ff;
+    font-size: 5vw; }
   #education h2 {
-    color: white;
-    font-size: 3vw;
-    text-align: left; }
+    text-align: left;
+    color: #d1c3e9;
+    font-size: 3vw; }
   #education h3 {
-    color: white;
-    font-size: 2vw;
-    text-align: left; }
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 2vw; }
   #education p {
-    color: white;
-    font-size: 1vw;
-    text-align: left; }
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #education a:link {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #education a:visited {
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 1vw; }
+  #education a:hover {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
   #education ul {
     text-align: left; }
     #education ul li {
-      color: white;
+      color: #4a4e8c;
       font-size: 1vw; }
   #education table {
     text-align: left;
     border-collapse: collapse;
-    color: white;
-    font-size: 1vw;
-    border-color: white;
+    border-color: #f1e0ff;
     border-style: solid; }
-    #education table tr th {
-      border-top-style: double;
-      border-right-style: double;
-      border-bottom-style: double;
-      border-left-style: double; }
-    #education table tr td {
-      border-top-style: groove;
-      border-right-style: groove;
-      border-bottom-style: groove;
-      border-left-style: groove; }
-  #education .backToTop {
-    text-align: center;
-    border: 0.25vw solid white;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: white;
-    background-color: maroon;
+    #education table tr {
+      border-color: #f1e0ff; }
+      #education table tr th {
+        border-color: #4a4e8c;
+        color: #4a4e8c;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #education table tr td {
+        border-color: #4a4e8c;
+        color: #4a4e8c;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+        #education table tr td ul li {
+          color: #4a4e8c;
+          font-size: 1vw; }
+  #education a:active {
+    text-align: left;
+    color: #8d7d9b;
     font-size: 1vw; }
+
+#education.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
 
 #projects {
   margin: auto;
@@ -108,10 +147,6 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #projects span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
   #projects h1 {
     text-align: left;
     color: #f1e0ff;
@@ -134,7 +169,7 @@
     font-size: 1vw; }
   #projects a:visited {
     text-align: left;
-    color: #8d7d9b;
+    color: #4a4e8c;
     font-size: 1vw; }
   #projects a:hover {
     text-align: left;
@@ -142,196 +177,22 @@
     font-size: 1vw; }
   #projects a:active {
     text-align: left;
-    color: #8d7d9b;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #projects .backToTop {
-    text-align: center;
-    border: 0.25vw solid #f1e0ff;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #f1e0ff;
-    background-color: #1c1a3d;
-    font-size: 1vw; }
+
+#projects.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
 
 #technicalSkills {
   margin: auto;
-  background-color: black;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace; }
-  #technicalSkills span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
-  #technicalSkills h1 {
-    text-align: left;
-    color: greenyellow;
-    font-size: 5vw; }
-  #technicalSkills h2 {
-    text-align: left;
-    color: greenyellow;
-    font-size: 3vw; }
-  #technicalSkills h3 {
-    text-align: left;
-    color: greenyellow;
-    font-size: 2vw; }
-  #technicalSkills p {
-    text-align: left;
-    color: greenyellow;
-    font-size: 1vw; }
-  #technicalSkills ul {
-    text-align: left; }
-    #technicalSkills ul li {
-      color: greenyellow;
-      font-size: 1vw; }
-  #technicalSkills .backToTop {
-    text-align: center;
-    border: 0.25vw solid greenyellow;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: greenyellow;
-    background-color: black;
-    font-size: 1vw; }
-
-#otherSkills {
-  margin: auto;
-  background-color: #d33131;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace; }
-  #otherSkills span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
-  #otherSkills h1 {
-    text-align: left;
-    color: #ffb84d;
-    font-size: 5vw; }
-  #otherSkills h2 {
-    text-align: left;
-    color: #ff9900;
-    font-size: 3vw; }
-  #otherSkills h3 {
-    text-align: left;
-    color: #ff9900;
-    font-size: 2vw; }
-  #otherSkills p {
-    text-align: left;
-    color: #ff9900;
-    font-size: 1vw; }
-  #otherSkills ul {
-    text-align: left; }
-    #otherSkills ul li {
-      color: #ff9900;
-      font-size: 1vw; }
-  #otherSkills .backToTop {
-    text-align: center;
-    border: 0.25vw solid #ff9900;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #ff9900;
-    background-color: #d33131;
-    font-size: 1vw; }
-
-#certifications {
-  margin: auto;
-  background-color: #990000;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace; }
-  #certifications span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
-  #certifications h1 {
-    text-align: left;
-    color: #ffcc00;
-    font-size: 5vw; }
-  #certifications h2 {
-    text-align: left;
-    color: #ffcc00;
-    font-size: 3vw; }
-  #certifications h3 {
-    text-align: left;
-    color: #ffcc00;
-    font-size: 2vw; }
-  #certifications p {
-    text-align: left;
-    color: #ffcc00;
-    font-size: 1vw; }
-  #certifications ul {
-    text-align: left; }
-    #certifications ul li {
-      color: #ffcc00;
-      font-size: 1vw; }
-  #certifications .backToTop {
-    text-align: center;
-    border: 0.25vw solid #ffcc00;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #ffcc00;
-    background-color: #990000;
-    font-size: 1vw; }
-
-#languages {
-  margin: auto;
-  background-color: #f1e0ff;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace; }
-  #languages span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
-  #languages h1 {
-    text-align: left;
-    color: #1c1a3d;
-    font-size: 5vw; }
-  #languages h2 {
-    text-align: left;
-    color: #1c1a3d;
-    font-size: 3vw; }
-  #languages h3 {
-    text-align: left;
-    color: #1c1a3d;
-    font-size: 2vw; }
-  #languages p {
-    text-align: left;
-    color: #8d7d9b;
-    font-size: 1vw; }
-  #languages ul {
-    text-align: left; }
-    #languages ul li {
-      color: #8d7d9b;
-      font-size: 1vw; }
-  #languages .backToTop {
-    text-align: center;
-    border: 0.25vw solid #1c1a3d;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #1c1a3d;
-    background-color: #f1e0ff;
-    font-size: 1vw; }
-
-/* https://www.w3schools.com/Css/css_selectors.asp */
-/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
-/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
-/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
-/* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
-#fitness {
-  margin: auto;
-  text-align: left;
-  background-color: #d33131;
+  background-color: #1c1a3d;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -339,50 +200,247 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #fitness h1 {
-    color: #ffb84d;
+  #technicalSkills span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
+  #technicalSkills h1 {
+    text-align: left;
+    color: #f1e0ff;
     font-size: 5vw; }
-  #fitness h2 {
-    color: #ff9900;
+  #technicalSkills h2 {
+    text-align: left;
+    color: #d1c3e9;
     font-size: 3vw; }
-  #fitness h3 {
-    color: #ff9900;
+  #technicalSkills h3 {
+    text-align: left;
+    color: #8d7d9b;
     font-size: 2vw; }
-  #fitness p {
-    color: #ff9900;
+  #technicalSkills p {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #fitness ul li {
-    color: #ff9900;
+  #technicalSkills a:link {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
-    #fitness ul li u {
-      color: #ff9900;
+  #technicalSkills a:link {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #technicalSkills a:visited {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #technicalSkills a:hover {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #technicalSkills a:active {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #technicalSkills ul {
+    text-align: left; }
+    #technicalSkills ul li {
+      color: #4a4e8c;
       font-size: 1vw; }
-  #fitness a:link {
-    color: #ff9900;
+
+#technicalSkills.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
+
+#otherSkills {
+  margin: auto;
+  background-color: #1c1a3d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #otherSkills span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
+  #otherSkills h1 {
+    text-align: left;
+    color: #f1e0ff;
+    font-size: 5vw; }
+  #otherSkills h2 {
+    text-align: left;
+    color: #d1c3e9;
+    font-size: 3vw; }
+  #otherSkills h3 {
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 2vw; }
+  #otherSkills p {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #fitness a:visited {
-    color: #ff9900;
+  #otherSkills a:link {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #fitness a:hover {
-    color: #ff9900;
+  #otherSkills a:visited {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #fitness a:active {
-    color: #ff9900;
+  #otherSkills a:hover {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
-  #fitness .backToTop {
-    text-align: center;
-    border: 0.25vw solid #ff9900;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #ff9900;
-    background-color: #d33131;
+  #otherSkills a:active {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #otherSkills ul {
+    text-align: left; }
+    #otherSkills ul li {
+      color: #4a4e8c;
+      font-size: 1vw; }
+
+#otherSkills.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
+
+#certifications {
+  margin: auto;
+  background-color: #1c1a3d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #certifications span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
+  #certifications h1 {
+    text-align: left;
+    color: #f1e0ff;
+    font-size: 5vw; }
+  #certifications h2 {
+    text-align: left;
+    color: #d1c3e9;
+    font-size: 3vw; }
+  #certifications h3 {
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 2vw; }
+  #certifications p {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #certifications a:link {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #certifications a:visited {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #certifications a:hover {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #certifications a:active {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #certifications ul {
+    text-align: left; }
+    #certifications ul li {
+      color: #4a4e8c;
+      font-size: 1vw; }
+
+#certifications.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
+
+#languages {
+  margin: auto;
+  background-color: #1c1a3d;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #languages span {
+    font-size: 100px;
+    float: center;
+    text-align: center; }
+  #languages h1 {
+    text-align: left;
+    color: #f1e0ff;
+    font-size: 5vw; }
+  #languages h2 {
+    text-align: left;
+    color: #d1c3e9;
+    font-size: 3vw; }
+  #languages h3 {
+    text-align: left;
+    color: #8d7d9b;
+    font-size: 2vw; }
+  #languages p {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #languages a:link {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #languages a:visited {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #languages a:hover {
+    text-align: left;
+    color: #4a4e8c;
+    font-size: 1vw; }
+  #languages a:active {
+    text-align: left;
+    color: #4a4e8c;
     font-size: 1vw; }
 
+#languages.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f1e0ff;
+  background-color: #1c1a3d;
+  font-size: 1vw; }
+
+/* https://www.w3schools.com/Css/css_selectors.asp */
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 #quantumComputing {
   margin: auto;
-  text-align: left;
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
@@ -392,47 +450,56 @@
   /* mouse over link */
   /* selected link */ }
   #quantumComputing h1 {
+    text-align: left;
     color: #D5D5DB;
     font-size: 5vw; }
   #quantumComputing h2 {
+    text-align: left;
     color: #AAB7B8;
     font-size: 3vw; }
   #quantumComputing h3 {
+    text-align: left;
     color: #85929E;
     font-size: 2vw; }
   #quantumComputing p {
+    text-align: left;
     color: #5D6D7E;
     font-size: 1vw; }
   #quantumComputing a:link {
+    text-align: left;
     color: #5D6D7E;
     font-size: 1vw; }
   #quantumComputing a:visited {
+    text-align: left;
     color: #5D6D7E;
     font-size: 1vw; }
   #quantumComputing a:hover {
+    text-align: left;
     color: #5D6D7E;
     font-size: 1vw; }
   #quantumComputing a:active {
+    text-align: left;
     color: #5D6D7E;
     font-size: 1vw; }
-  #quantumComputing ul li {
-    color: #5D6D7E;
-    font-size: 1vw; }
-  #quantumComputing .backToTop {
-    text-align: center;
-    border: 0.25vw solid #D5D5DB;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #D5D5DB;
-    background-color: #5D6D7E;
-    font-size: 1vw; }
+  #quantumComputing ul {
+    text-align: left; }
+    #quantumComputing ul li {
+      color: #5D6D7E;
+      font-size: 1vw; }
+
+#quantumComputing.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #D5D5DB;
+  background-color: #5D6D7E;
+  font-size: 1vw; }
 
 #photography {
   margin: auto;
-  text-align: left;
-  background-color: #e9d9b9;
+  background-color: #34495E;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -440,53 +507,57 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #photography img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90%;
-    height: auto;
-    border: 1vw solid #c2b180;
-    border-radius: 1%; }
   #photography h1 {
-    color: #895b29;
+    text-align: left;
+    color: #D5D5DB;
     font-size: 5vw; }
   #photography h2 {
-    color: #a67c5e;
+    text-align: left;
+    color: #AAB7B8;
     font-size: 3vw; }
   #photography h3 {
-    color: #a67c5e;
+    text-align: left;
+    color: #85929E;
     font-size: 2vw; }
   #photography p {
-    color: #c2b180;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #photography a:link {
-    color: #c2b180;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #photography a:visited {
-    color: #d5ccae;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #photography a:hover {
-    color: #c2b180;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #photography a:active {
-    color: #d5ccae;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
-  #photography .backToTop {
-    text-align: center;
-    border: 0.25vw solid #895b29;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #895b29;
-    background-color: #d5ccae;
-    font-size: 1vw; }
+  #photography ul {
+    text-align: left; }
+    #photography ul li {
+      color: #5D6D7E;
+      font-size: 1vw; }
+
+#photography.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #D5D5DB;
+  background-color: #5D6D7E;
+  font-size: 1vw; }
 
 #dungeonsAndDragons {
   margin: auto;
-  text-align: left;
-  background-color: #4c3e3e;
+  background-color: #34495E;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -495,47 +566,56 @@
   /* mouse over link */
   /* selected link */ }
   #dungeonsAndDragons h1 {
-    color: #d1945c;
+    text-align: left;
+    color: #D5D5DB;
     font-size: 5vw; }
   #dungeonsAndDragons h2 {
-    color: #c7a67a;
+    text-align: left;
+    color: #AAB7B8;
     font-size: 3vw; }
   #dungeonsAndDragons h3 {
-    color: #8a6a6a;
+    text-align: left;
+    color: #85929E;
     font-size: 2vw; }
   #dungeonsAndDragons p {
-    color: #8a6a6a;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #dungeonsAndDragons a:link {
-    color: #5a4e4e;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #dungeonsAndDragons a:visited {
-    color: #8a6a6a;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #dungeonsAndDragons a:hover {
-    color: #5a4e4e;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #dungeonsAndDragons a:active {
-    color: #8a6a6a;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
-  #dungeonsAndDragons ul li {
-    color: #5a4e4e;
-    font-size: 1vw; }
-  #dungeonsAndDragons .backToTop {
-    text-align: center;
-    border: 0.25vw solid #d1945c;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #d1945c;
-    background-color: #5a4e4e;
-    font-size: 1vw; }
+  #dungeonsAndDragons ul {
+    text-align: left; }
+    #dungeonsAndDragons ul li {
+      color: #5D6D7E;
+      font-size: 1vw; }
+
+#dungeonsAndDragons.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #D5D5DB;
+  background-color: #5D6D7E;
+  font-size: 1vw; }
 
 #history {
   margin: auto;
-  text-align: left;
-  background-color: #895b29;
+  background-color: #34495E;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -544,112 +624,88 @@
   /* mouse over link */
   /* selected link */ }
   #history h1 {
-    color: #e9d9b9;
+    text-align: left;
+    color: #D5D5DB;
     font-size: 5vw; }
   #history h2 {
-    color: #d5ccae;
+    text-align: left;
+    color: #AAB7B8;
     font-size: 3vw; }
   #history h3 {
-    color: #d5ccae;
+    text-align: left;
+    color: #85929E;
     font-size: 2vw; }
   #history p {
-    color: #d5ccae;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #history blockquote {
-    color: #d5ccae;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1.5vw; }
   #history a:link {
-    color: #d5ccae;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #history a:visited {
-    color: #c2b180;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #history a:hover {
-    color: #d5ccae;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
   #history a:active {
-    color: #c2b180;
+    text-align: left;
+    color: #5D6D7E;
     font-size: 1vw; }
-  #history ul li {
-    color: #d5ccae;
-    font-size: 1vw; }
+  #history ul {
+    text-align: left; }
+    #history ul li {
+      color: #5D6D7E;
+      font-size: 1vw; }
   #history table {
+    text-align: left;
     border-collapse: collapse;
-    border-color: #d5ccae;
+    border-color: #5D6D7E;
     border-style: solid; }
     #history table tr {
-      border-color: #d5ccae; }
+      border-color: #5D6D7E; }
       #history table tr th {
-        border-color: #d5ccae;
-        color: #d5ccae;
+        border-color: #5D6D7E;
+        color: #5D6D7E;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
-        border-left-style: double;
-        /* unvisited link */
-        /* visited link */
-        /* mouse over link */
-        /* selected link */ }
-        #history table tr th a:link {
-          color: #d5ccae;
-          font-size: 1vw; }
-        #history table tr th a:visited {
-          color: #c2b180;
-          font-size: 1vw; }
-        #history table tr th a:hover {
-          color: #d5ccae;
-          font-size: 1vw; }
-        #history table tr th a:active {
-          color: #c2b180;
-          font-size: 1vw; }
+        border-left-style: double; }
       #history table tr td {
-        border-color: #d5ccae;
-        color: #d5ccae;
+        border-color: #5D6D7E;
+        color: #5D6D7E;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
-        border-left-style: groove;
-        /* unvisited link */
-        /* visited link */
-        /* mouse over link */
-        /* selected link */ }
-        #history table tr td a:link {
-          color: #d5ccae;
+        border-left-style: groove; }
+        #history table tr td ul li {
+          color: #5D6D7E;
           font-size: 1vw; }
-        #history table tr td a:visited {
-          color: #c2b180;
-          font-size: 1vw; }
-        #history table tr td a:hover {
-          color: #d5ccae;
-          font-size: 1vw; }
-        #history table tr td a:active {
-          color: #c2b180;
-          font-size: 1vw; }
-  #history .backToTop {
-    text-align: center;
-    border: 0.25vw solid #d5ccae;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #d5ccae;
-    background-color: #895b29;
-    font-size: 1vw; }
+
+#history.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #D5D5DB;
+  background-color: #5D6D7E;
+  font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
-/* Blood Moon color palette from https://colormagic.app/palette/6713baf329b9e8776c834924 */
-/* Disturbed color palette from https://colormagic.app/palette/6715f176e7aeb007989f9a3d */
-/* Digital Veil color palette from https://colormagic.app/palette/68b4a013f32b0e3dc3e7440d */
-/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
-/* Purple Quantum color palette from https://colormagic.app/palette/68f429537470129f5e4b0d3d */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
 #KAN {
   margin: auto;
-  text-align: left;
-  background-color: #1d3a6d;
+  background-color: #20203c;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -658,47 +714,55 @@
   /* mouse over link */
   /* selected link */ }
   #KAN h1 {
+    text-align: left;
     font-size: 5vw;
-    color: #d6e4f5; }
+    color: #ff5c5c; }
   #KAN h2 {
+    text-align: left;
     font-size: 3vw;
-    color: #a4c8df; }
+    color: #c2c2d1; }
   #KAN h3 {
+    text-align: left;
     font-size: 2vw;
-    color: #7bb7d1; }
+    color: #7a7a99; }
   #KAN a:link {
+    text-align: left;
     font-size: 1vw;
-    color: #4aa0c4; }
+    color: #7a7a99; }
   #KAN a:visited {
+    text-align: left;
     font-size: 1vw;
-    color: #4aa0c4; }
+    color: #7a7a99; }
   #KAN a:hover {
+    text-align: left;
     font-size: 1vw;
-    color: #4aa0c4; }
+    color: #7a7a99; }
   #KAN a:active {
+    text-align: left;
     font-size: 1vw;
-    color: #4aa0c4; }
+    color: #7a7a99; }
   #KAN p {
+    text-align: left;
     font-size: 1vw;
-    color: #4aa0c4; }
-  #KAN ul li {
-    font-size: 1vw;
-    color: #4aa0c4; }
-  #KAN .backToTop {
-    text-align: center;
-    border: 0.25vw solid #d6e4f5;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #d6e4f5;
-    background-color: #1d3a6d;
-    font-size: 1vw; }
+    color: #7a7a99; }
+  #KAN ul {
+    text-align: left; }
+    #KAN ul li {
+      font-size: 1vw;
+      color: #7a7a99; }
+
+#KAN.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #7a7a99;
+  font-size: 1vw; }
 
 #Cryptocurrency {
   margin: auto;
-  text-align: left;
-  background-color: #007a5e;
+  background-color: #20203c;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -707,41 +771,52 @@
   /* mouse over link */
   /* selected link */ }
   #Cryptocurrency h1 {
+    text-align: left;
     font-size: 5vw;
-    color: #e0f7fa; }
+    color: #ff5c5c; }
   #Cryptocurrency h2 {
+    text-align: left;
     font-size: 3vw;
-    color: #a1d9b0; }
+    color: #c2c2d1; }
   #Cryptocurrency h3 {
+    text-align: left;
     font-size: 2vw;
-    color: #a1d9b0; }
+    color: #7a7a99; }
   #Cryptocurrency a:link {
+    text-align: left;
     font-size: 1vw;
-    color: #a1d9b0; }
+    color: #7a7a99; }
   #Cryptocurrency a:visited {
+    text-align: left;
     font-size: 1vw;
-    color: #a1d9b0; }
+    color: #7a7a99; }
   #Cryptocurrency a:hover {
+    text-align: left;
     font-size: 1vw;
-    color: #a1d9b0; }
+    color: #7a7a99; }
   #Cryptocurrency a:active {
+    text-align: left;
     font-size: 1vw;
-    color: #a1d9b0; }
+    color: #7a7a99; }
   #Cryptocurrency p {
+    text-align: left;
     font-size: 1vw;
-    color: #a1d9b0; }
-  #Cryptocurrency ul li {
-    font-size: 1vw;
-    color: #a1d9b0; }
+    color: #7a7a99; }
+  #Cryptocurrency ul {
+    text-align: left; }
+    #Cryptocurrency ul li {
+      font-size: 1vw;
+      color: #7a7a99; }
   #Cryptocurrency table {
+    text-align: left;
     border-collapse: collapse;
-    border-color: #a1d9b0;
+    border-color: #7a7a99;
     border-style: solid; }
     #Cryptocurrency table tr {
-      border-color: #a1d9b0; }
+      border-color: #7a7a99; }
       #Cryptocurrency table tr th {
-        border-color: #a1d9b0;
-        color: #a1d9b0;
+        border-color: #7a7a99;
+        color: #7a7a99;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
@@ -752,20 +827,20 @@
         /* mouse over link */
         /* selected link */ }
         #Cryptocurrency table tr th a:link {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #Cryptocurrency table tr th a:visited {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #Cryptocurrency table tr th a:hover {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #Cryptocurrency table tr th a:active {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
       #Cryptocurrency table tr td {
-        border-color: #a1d9b0;
-        color: #a1d9b0;
+        border-color: #7a7a99;
+        color: #7a7a99;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
@@ -776,32 +851,30 @@
         /* mouse over link */
         /* selected link */ }
         #Cryptocurrency table tr td a:link {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #Cryptocurrency table tr td a:visited {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #Cryptocurrency table tr td a:hover {
-          color: #a1d9b0;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #Cryptocurrency table tr td a:active {
-          color: #a1d9b0;
-          font-size: 1vw; }
-  #Cryptocurrency .backToTop {
-    text-align: center;
-    border: 0.25vw solid #e0f7fa;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #e0f7fa;
-    background-color: #007a5e;
-    font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
+
+#Cryptocurrency.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #7a7a99;
+  font-size: 1vw; }
 
 #FutureOfQuantum {
   margin: auto;
-  text-align: left;
-  background-color: #1e1f2a;
+  background-color: #20203c;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -810,41 +883,52 @@
   /* mouse over link */
   /* selected link */ }
   #FutureOfQuantum h1 {
+    text-align: left;
     font-size: 5vw;
-    color: #e5c3f9; }
+    color: #ff5c5c; }
   #FutureOfQuantum h2 {
+    text-align: left;
     font-size: 3vw;
-    color: #e5c3f9; }
+    color: #c2c2d1; }
   #FutureOfQuantum h3 {
+    text-align: left;
     font-size: 2vw;
-    color: #e5c3f9; }
+    color: #7a7a99; }
   #FutureOfQuantum a:link {
+    text-align: left;
     font-size: 1vw;
-    color: #8d6ab9; }
+    color: #7a7a99; }
   #FutureOfQuantum a:visited {
+    text-align: left;
     font-size: 1vw;
-    color: #8d6ab9; }
+    color: #7a7a99; }
   #FutureOfQuantum a:hover {
+    text-align: left;
     font-size: 1vw;
-    color: #8d6ab9; }
+    color: #7a7a99; }
   #FutureOfQuantum a:active {
+    text-align: left;
     font-size: 1vw;
-    color: #8d6ab9; }
+    color: #7a7a99; }
   #FutureOfQuantum p {
+    text-align: left;
     font-size: 1vw;
-    color: #8d6ab9; }
-  #FutureOfQuantum ul li {
-    font-size: 1vw;
-    color: #8d6ab9; }
+    color: #7a7a99; }
+  #FutureOfQuantum ul {
+    text-align: left; }
+    #FutureOfQuantum ul li {
+      font-size: 1vw;
+      color: #7a7a99; }
   #FutureOfQuantum table {
+    text-align: left;
     border-collapse: collapse;
-    border-color: #8d6ab9;
+    border-color: #7a7a99;
     border-style: solid; }
     #FutureOfQuantum table tr {
-      border-color: #8d6ab9; }
+      border-color: #7a7a99; }
       #FutureOfQuantum table tr th {
-        border-color: #8d6ab9;
-        color: #8d6ab9;
+        border-color: #7a7a99;
+        color: #7a7a99;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
@@ -855,20 +939,20 @@
         /* mouse over link */
         /* selected link */ }
         #FutureOfQuantum table tr th a:link {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #FutureOfQuantum table tr th a:visited {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #FutureOfQuantum table tr th a:hover {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #FutureOfQuantum table tr th a:active {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
       #FutureOfQuantum table tr td {
-        border-color: #8d6ab9;
-        color: #8d6ab9;
+        border-color: #7a7a99;
+        color: #7a7a99;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
@@ -879,31 +963,29 @@
         /* mouse over link */
         /* selected link */ }
         #FutureOfQuantum table tr td a:link {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #FutureOfQuantum table tr td a:visited {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #FutureOfQuantum table tr td a:hover {
-          color: #8d6ab9;
-          font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
         #FutureOfQuantum table tr td a:active {
-          color: #8d6ab9;
-          font-size: 1vw; }
-  #FutureOfQuantum .backToTop {
-    text-align: center;
-    border: 0.25vw solid #e5c3f9;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #e5c3f9;
-    background-color: #1e1f2a;
-    font-size: 1vw; }
+          font-size: 1vw;
+          color: #7a7a99; }
+
+#FutureOfQuantum.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #7a7a99;
+  font-size: 1vw; }
 
 #AGI {
   margin: auto;
-  text-align: left;
   background-color: #20203c;
   width: 80%;
   border-radius: 10px;
@@ -913,33 +995,44 @@
   /* mouse over link */
   /* selected link */ }
   #AGI h1 {
+    text-align: left;
     font-size: 5vw;
     color: #ff5c5c; }
   #AGI h2 {
+    text-align: left;
     font-size: 3vw;
     color: #c2c2d1; }
   #AGI h3 {
+    text-align: left;
     font-size: 2vw;
     color: #c2c2d1; }
   #AGI a:link {
+    text-align: left;
     font-size: 1vw;
     color: #7a7a99; }
   #AGI a:visited {
+    text-align: left;
     font-size: 1vw;
     color: #7a7a99; }
   #AGI a:hover {
+    text-align: left;
     font-size: 1vw;
     color: #7a7a99; }
   #AGI a:active {
+    text-align: left;
     font-size: 1vw;
     color: #7a7a99; }
   #AGI p {
+    text-align: left;
     font-size: 1vw;
     color: #7a7a99; }
-  #AGI ul li {
-    font-size: 1vw;
-    color: #7a7a99; }
+  #AGI ul {
+    text-align: left; }
+    #AGI ul li {
+      font-size: 1vw;
+      color: #7a7a99; }
   #AGI dl {
+    text-align: left;
     font-size: 1vw;
     color: #7a7a99; }
     #AGI dl dt {
@@ -951,26 +1044,21 @@
       #AGI dl dd ul li {
         font-size: 1vw;
         color: #7a7a99; }
-  #AGI .backToTop {
-    text-align: center;
-    border: 0.25vw solid #ff5c5c;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #ff5c5c;
-    background-color: #20203c;
-    font-size: 1vw; }
+
+#AGI.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #7a7a99;
+  font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* Teal Shield color palette from https://colormagic.app/palette/690ad82aeebc052f2bce9d4a */
-/* Blue Resources color palette from https://colormagic.app/palette/690ad9cceebc052f2bce9d54 */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
-/* Shades of Blue color palette from https://colormagic.app/palette/690ade7beebc052f2bce9d86 */
 #cybersecurityResources {
   margin: auto;
-  text-align: left;
-  background-color: #1f3a3d;
+  background-color: #1f1b79;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -979,72 +1067,83 @@
   /* mouse over link */
   /* selected link */ }
   #cybersecurityResources h1 {
-    color: #6ff1a1;
+    text-align: left;
+    color: #f9c54e;
     font-size: 5vw; }
   #cybersecurityResources h2 {
-    color: #4fbf8b;
+    text-align: left;
+    color: #d07e6c;
     font-size: 3vw; }
   #cybersecurityResources h3 {
-    color: #4fbf8b;
+    text-align: left;
+    color: #8b5aba;
     font-size: 2vw; }
   #cybersecurityResources p {
-    color: #3c7d80;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #cybersecurityResources blockquote {
-    color: #3c7d80;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1.5vw; }
   #cybersecurityResources a:link {
-    color: #3c7d80;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #cybersecurityResources a:visited {
-    color: #3c7d80;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #cybersecurityResources a:hover {
-    color: #3c7d80;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #cybersecurityResources a:active {
-    color: #3c7d80;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
-  #cybersecurityResources ul li {
-    color: #3c7d80;
-    font-size: 1vw; }
+  #cybersecurityResources ul {
+    text-align: left; }
+    #cybersecurityResources ul li {
+      color: #8b5aba;
+      font-size: 1vw; }
   #cybersecurityResources table {
+    text-align: left;
     border-collapse: collapse;
-    border-color: #6ff1a1;
+    border-color: #8b5aba;
     border-style: solid; }
     #cybersecurityResources table tr {
-      border-color: #4fbf8b; }
+      border-color: #8b5aba; }
       #cybersecurityResources table tr th {
-        border-color: #4fbf8b;
-        color: #3c7d80;
+        border-color: #8b5aba;
+        color: #8b5aba;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #cybersecurityResources table tr td {
-        border-color: #3c7d80;
-        color: #3c7d80;
+        border-color: #8b5aba;
+        color: #8b5aba;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #cybersecurityResources .backToTop {
-    text-align: center;
-    border: 0.25vw solid #6ff1a1;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #6ff1a1;
-    background-color: #1f3a3d;
-    font-size: 1vw; }
+
+#cybersecurityResources.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f9c54e;
+  background-color: #1f1b79;
+  font-size: 1vw; }
 
 #artificialIntelligenceResources {
   margin: auto;
-  text-align: left;
-  background-color: #3f89c6;
+  background-color: #1f1b79;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -1053,71 +1152,82 @@
   /* mouse over link */
   /* selected link */ }
   #artificialIntelligenceResources h1 {
-    color: #f6f8f6;
+    text-align: left;
+    color: #f9c54e;
     font-size: 5vw; }
   #artificialIntelligenceResources h2 {
-    color: #e7f8f3;
+    text-align: left;
+    color: #d07e6c;
     font-size: 3vw; }
   #artificialIntelligenceResources h3 {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 2vw; }
   #artificialIntelligenceResources p {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #artificialIntelligenceResources blockquote {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1.5vw; }
   #artificialIntelligenceResources a:link {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #artificialIntelligenceResources a:visited {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #artificialIntelligenceResources a:hover {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #artificialIntelligenceResources a:active {
-    color: #ade0e6;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
-  #artificialIntelligenceResources ul li {
-    color: #ade0e6;
-    font-size: 1vw; }
+  #artificialIntelligenceResources ul {
+    text-align: left; }
+    #artificialIntelligenceResources ul li {
+      color: #8b5aba;
+      font-size: 1vw; }
   #artificialIntelligenceResources table {
+    text-align: left;
     border-collapse: collapse;
-    border-color: #ade0e6;
+    border-color: #8b5aba;
     border-style: solid; }
     #artificialIntelligenceResources table tr {
-      border-color: #ade0e6; }
+      border-color: #8b5aba; }
       #artificialIntelligenceResources table tr th {
-        border-color: #ade0e6;
-        color: #ade0e6;
+        border-color: #8b5aba;
+        color: #8b5aba;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #artificialIntelligenceResources table tr td {
-        border-color: #ade0e6;
-        color: #ade0e6;
+        border-color: #8b5aba;
+        color: #8b5aba;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #artificialIntelligenceResources .backToTop {
-    text-align: center;
-    border: 0.25vw solid #f6f8f6;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #f6f8f6;
-    background-color: #3f89c6;
-    font-size: 1vw; }
+
+#artificialIntelligenceResources.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f9c54e;
+  background-color: #1f1b79;
+  font-size: 1vw; }
 
 #cppResources {
   margin: auto;
-  text-align: left;
   background-color: #1f1b79;
   width: 80%;
   border-radius: 10px;
@@ -1127,36 +1237,48 @@
   /* mouse over link */
   /* selected link */ }
   #cppResources h1 {
+    text-align: left;
     color: #f9c54e;
     font-size: 5vw; }
   #cppResources h2 {
+    text-align: left;
     color: #d07e6c;
     font-size: 3vw; }
   #cppResources h3 {
+    text-align: left;
     color: #8b5aba;
     font-size: 2vw; }
   #cppResources p {
+    text-align: left;
     color: #8b5aba;
     font-size: 1vw; }
   #cppResources blockquote {
+    text-align: left;
     color: #8b5aba;
     font-size: 1.5vw; }
   #cppResources a:link {
+    text-align: left;
     color: #8b5aba;
     font-size: 1vw; }
   #cppResources a:visited {
+    text-align: left;
     color: #8b5aba;
     font-size: 1vw; }
   #cppResources a:hover {
+    text-align: left;
     color: #8b5aba;
     font-size: 1vw; }
   #cppResources a:active {
+    text-align: left;
     color: #8b5aba;
     font-size: 1vw; }
-  #cppResources ul li {
-    color: #8b5aba;
-    font-size: 1vw; }
+  #cppResources ul {
+    text-align: left; }
+    #cppResources ul li {
+      color: #8b5aba;
+      font-size: 1vw; }
   #cppResources table {
+    text-align: left;
     border-collapse: collapse;
     border-color: #8b5aba;
     border-style: solid; }
@@ -1178,21 +1300,20 @@
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #cppResources .backToTop {
-    text-align: center;
-    border: 0.25vw solid #f9c54e;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #f9c54e;
-    background-color: #1f1b79;
-    font-size: 1vw; }
+
+#cppResources.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f9c54e;
+  background-color: #1f1b79;
+  font-size: 1vw; }
 
 #pythonResources {
   margin: auto;
-  text-align: left;
-  background-color: #1f3a61;
+  background-color: #1f1b79;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -1201,67 +1322,79 @@
   /* mouse over link */
   /* selected link */ }
   #pythonResources h1 {
-    color: #f1f5f8;
+    text-align: left;
+    color: #f9c54e;
     font-size: 5vw; }
   #pythonResources h2 {
-    color: #c2d3e0;
+    text-align: left;
+    color: #d07e6c;
     font-size: 3vw; }
   #pythonResources h3 {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 2vw; }
   #pythonResources p {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #pythonResources blockquote {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1.5vw; }
   #pythonResources a:link {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #pythonResources a:visited {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #pythonResources a:hover {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
   #pythonResources a:active {
-    color: #85a4c1;
+    text-align: left;
+    color: #8b5aba;
     font-size: 1vw; }
-  #pythonResources ul li {
-    color: #85a4c1;
-    font-size: 1vw; }
+  #pythonResources ul {
+    text-align: left; }
+    #pythonResources ul li {
+      color: #8b5aba;
+      font-size: 1vw; }
   #pythonResources table {
+    text-align: left;
     border-collapse: collapse;
-    border-color: #85a4c1;
+    border-color: #8b5aba;
     border-style: solid; }
     #pythonResources table tr {
-      border-color: #85a4c1; }
+      border-color: #8b5aba; }
       #pythonResources table tr th {
-        border-color: #85a4c1;
-        color: #85a4c1;
+        border-color: #8b5aba;
+        color: #8b5aba;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #pythonResources table tr td {
-        border-color: #85a4c1;
-        color: #85a4c1;
+        border-color: #8b5aba;
+        color: #8b5aba;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-  #pythonResources .backToTop {
-    text-align: center;
-    border: 0.25vw solid #f1f5f8;
-    display: block;
-    /* Ensures the .backToTop behaves as a block-level element */
-    margin: 0 auto;
-    /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: #f1f5f8;
-    background-color: #1f3a61;
-    font-size: 1vw; }
+
+#pythonResources.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f9c54e;
+  background-color: #1f1b79;
+  font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
@@ -1291,7 +1424,6 @@ header {
     font-size: 1vw; }
     header #pageMenu a {
       display: inline-block;
-      border: 0.25vw solid #d4d4d9;
       color: #d4d4d9;
       margin: auto; }
   header #siteMenu {
@@ -1299,7 +1431,6 @@ header {
     font-size: 1vw; }
     header #siteMenu a {
       display: inline-block;
-      border: 0.25vw solid #d4d4d9;
       color: #d4d4d9;
       margin: auto; }
 

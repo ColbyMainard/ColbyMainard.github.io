@@ -7,400 +7,333 @@ $calm_authority_3: #85929E;
 $calm_authority_4: #AAB7B8;
 $calm_authority_5: #D5D5DB;
 
-/* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
-$sunset_glow_1: #ffb84d;
-$sunset_glow_2: #ff9900;
-$sunset_glow_3: #f47b1f;
-$sunset_glow_4: #e64919;
-$sunset_glow_5: #d33131;
+// /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+// $sunset_glow_1: #ffb84d;
+// $sunset_glow_2: #ff9900;
+// $sunset_glow_3: #f47b1f;
+// $sunset_glow_4: #e64919;
+// $sunset_glow_5: #d33131;
 
-/* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
-$dungeons_and_dragons_1: #4c3e3e;
-$dungeons_and_dragons_2: #5a4e4e;
-$dungeons_and_dragons_3: #8a6a6a;
-$dungeons_and_dragons_4: #c7a67a;
-$dungeons_and_dragons_5: #d1945c;
+// /* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
+// $dungeons_and_dragons_1: #4c3e3e;
+// $dungeons_and_dragons_2: #5a4e4e;
+// $dungeons_and_dragons_3: #8a6a6a;
+// $dungeons_and_dragons_4: #c7a67a;
+// $dungeons_and_dragons_5: #d1945c;
 
-/* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
-$brown_document_background_1: #e9d9b9;
-$brown_document_background_2: #d5ccae;
-$brown_document_background_3: #c2b180;
-$brown_document_background_4: #a67c5e;
-$brown_document_background_5: #895b29;
-
-#fitness {
-    margin: auto;
-    text-align: left;
-    background-color: $sunset_glow_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        color: $sunset_glow_1;
-        font-size: 5vw;
-    }
-    h2 {
-        color: $sunset_glow_2;
-        font-size: 3vw;
-    }
-    h3 {
-        color: $sunset_glow_2;
-        font-size: 2vw;
-    }
-    p {
-        color: $sunset_glow_2;
-        font-size: 1vw;
-    }
-    ul {
-        li {
-            color: $sunset_glow_2;
-            font-size: 1vw;
-            u {
-                color: $sunset_glow_2;
-                font-size: 1vw;
-            }
-        }
-    }
-    /* unvisited link */
-    a:link {
-        color: $sunset_glow_2;
-        font-size: 1vw;
-    }
-    /* visited link */
-    a:visited {
-        color: $sunset_glow_2;
-        font-size: 1vw;
-    }
-    /* mouse over link */
-    a:hover {
-        color: $sunset_glow_2;
-        font-size: 1vw;
-    }
-    /* selected link */
-    a:active {
-        color: $sunset_glow_2;
-        font-size: 1vw;
-    }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $sunset_glow_2;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $sunset_glow_2;
-        background-color: $sunset_glow_5;
-        font-size: 1vw;
-    }
-}
+// /* Brown Document Background color palette from https://colormagic.app/palette/68d2eec4d1b879e8200cff38 */
+// $brown_document_background_1: #e9d9b9;
+// $brown_document_background_2: #d5ccae;
+// $brown_document_background_3: #c2b180;
+// $brown_document_background_4: #a67c5e;
+// $brown_document_background_5: #895b29;
 
 #quantumComputing {
     margin: auto;
-    text-align: left;
     background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
+        text-align: left;
         color: $calm_authority_5;
         font-size: 5vw;
     }
     h2 {
+        text-align: left;
         color: $calm_authority_4;
         font-size: 3vw;
     }
     h3 {
+        text-align: left;
         color: $calm_authority_3;
         font-size: 2vw;
     }
     p {
+        text-align: left;
         color: $calm_authority_2;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
+        text-align: left;
         color: $calm_authority_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
+        text-align: left;
         color: $calm_authority_2;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
+        text-align: left;
         color: $calm_authority_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
+        text-align: left;
         color: $calm_authority_2;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
             color: $calm_authority_2;
             font-size: 1vw;
         }
     }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $calm_authority_5;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $calm_authority_5;
-        background-color: $calm_authority_2;
-        font-size: 1vw;
-    }
+}
+
+#quantumComputing.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $calm_authority_5;
+    background-color: $calm_authority_2;
+    font-size: 1vw;
 }
 
 #photography {
     margin: auto;
-    text-align: left;
-    background-color: $brown_document_background_1;
+    background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
-    img  {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 90%;
-        height: auto;
-        border: 1vw solid $brown_document_background_3;
-        border-radius: 1%;
-    }
     h1 {
-        color: $brown_document_background_5;
+        text-align: left;
+        color: $calm_authority_5;
         font-size: 5vw;
     }
     h2 {
-        color: $brown_document_background_4;
+        text-align: left;
+        color: $calm_authority_4;
         font-size: 3vw;
     }
     h3 {
-        color: $brown_document_background_4;
+        text-align: left;
+        color: $calm_authority_3;
         font-size: 2vw;
     }
     p {
-        color: $brown_document_background_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
-        color: $brown_document_background_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $brown_document_background_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $brown_document_background_5;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $brown_document_background_5;
-        background-color: $brown_document_background_2;
-        font-size: 1vw;
+    ul {
+        text-align: left;
+        li {
+            color: $calm_authority_2;
+            font-size: 1vw;
+        }
     }
+}
+
+#photography.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $calm_authority_5;
+    background-color: $calm_authority_2;
+    font-size: 1vw;
 }
 
 #dungeonsAndDragons {
     margin: auto;
-    text-align: left;
-    background-color: $dungeons_and_dragons_1;
+    background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
-        color: $dungeons_and_dragons_5;
+        text-align: left;
+        color: $calm_authority_5;
         font-size: 5vw;
     }
     h2 {
-        color: $dungeons_and_dragons_4;
+        text-align: left;
+        color: $calm_authority_4;
         font-size: 3vw;
     }
     h3 {
-        color: $dungeons_and_dragons_3;
+        text-align: left;
+        color: $calm_authority_3;
         font-size: 2vw;
     }
     p {
-        color: $dungeons_and_dragons_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
-        color: $dungeons_and_dragons_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $dungeons_and_dragons_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $dungeons_and_dragons_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $dungeons_and_dragons_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
-            color: $dungeons_and_dragons_2;
+            color: $calm_authority_2;
             font-size: 1vw;
         }
     }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $dungeons_and_dragons_5;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $dungeons_and_dragons_5;
-        background-color: $dungeons_and_dragons_2;
-        font-size: 1vw;
-    }
+}
+
+#dungeonsAndDragons.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $calm_authority_5;
+    background-color: $calm_authority_2;
+    font-size: 1vw;
 }
 
 #history {
     margin: auto;
-    text-align: left;
-    background-color: $brown_document_background_5;
+    background-color: $calm_authority_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
-        color: $brown_document_background_1;
+        text-align: left;
+        color: $calm_authority_5;
         font-size: 5vw;
     }
     h2 {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_4;
         font-size: 3vw;
     }
     h3 {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_3;
         font-size: 2vw;
     }
     p {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     blockquote {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1.5vw;
     }
     /* unvisited link */
     a:link {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
-        color: $brown_document_background_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
-        color: $brown_document_background_2;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
-        color: $brown_document_background_3;
+        text-align: left;
+        color: $calm_authority_2;
         font-size: 1vw;
     }
     ul {
+        text-align: left;
         li {
-            color: $brown_document_background_2;
+            color: $calm_authority_2;
             font-size: 1vw;
         }
     }
     table {
+        text-align: left;
         border-collapse: collapse;
-        border-color: $brown_document_background_2;
+        border-color: $calm_authority_2;
         border-style: solid;
         tr {
-            border-color: $brown_document_background_2;
+            border-color: $calm_authority_2;
             th {
-                border-color: $brown_document_background_2;
-                color: $brown_document_background_2;
+                border-color: $calm_authority_2;
+                color: $calm_authority_2;
                 font-size: 1vw;
                 border-top-style: double;
                 border-right-style: double;
                 border-bottom-style: double;
                 border-left-style: double;
-                /* unvisited link */
-                a:link {
-                    color: $brown_document_background_2;
-                    font-size: 1vw;
-                }
-                /* visited link */
-                a:visited {
-                    color: $brown_document_background_3;
-                    font-size: 1vw;
-                }
-                /* mouse over link */
-                a:hover {
-                    color: $brown_document_background_2;
-                    font-size: 1vw;
-                }
-                /* selected link */
-                a:active {
-                    color: $brown_document_background_3;
-                    font-size: 1vw;
-                }
             }
             td {
-                border-color: $brown_document_background_2;
-                color: $brown_document_background_2;
+                border-color: $calm_authority_2;
+                color: $calm_authority_2;
                 font-size: 1vw;
                 border-top-style: groove;
                 border-right-style: groove;
                 border-bottom-style: groove;
                 border-left-style: groove;
-                /* unvisited link */
-                a:link {
-                    color: $brown_document_background_2;
-                    font-size: 1vw;
-                }
-                /* visited link */
-                a:visited {
-                    color: $brown_document_background_3;
-                    font-size: 1vw;
-                }
-                /* mouse over link */
-                a:hover {
-                    color: $brown_document_background_2;
-                    font-size: 1vw;
-                }
-                /* selected link */
-                a:active {
-                    color: $brown_document_background_3;
-                    font-size: 1vw;
+                ul {
+                    li {
+                        color: $calm_authority_2;
+                        font-size: 1vw;
+                    }
                 }
             }
         }
     }
-    .backToTop {
-        text-align: center;
-        border: 0.25vw solid $brown_document_background_2;
-        display: block; /* Ensures the .backToTop behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-        color: $brown_document_background_2;
-        background-color: $brown_document_background_5;
-        font-size: 1vw;
-    }
+}
+
+#history.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $calm_authority_5;
+    background-color: $calm_authority_2;
+    font-size: 1vw;
 }
