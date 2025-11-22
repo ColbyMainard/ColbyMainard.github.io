@@ -1,8 +1,9 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
 #workHistory {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -12,35 +13,35 @@
   /* selected link */ }
   #workHistory h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #workHistory h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #workHistory h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #workHistory p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #workHistory a:link {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #workHistory a:visited {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 1vw; }
   #workHistory a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #workHistory a:active {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 1vw; }
 
 #workHistory.backToTop {
@@ -49,13 +50,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 #education {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -65,67 +66,67 @@
   /* selected link */ }
   #education h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #education h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #education h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #education p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #education a:link {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #education a:visited {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 1vw; }
   #education a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
+    font-size: 1vw; }
+  #education a:active {
+    text-align: left;
+    color: #ff6600;
     font-size: 1vw; }
   #education ul {
     text-align: left; }
     #education ul li {
-      color: #4a4e8c;
+      color: #ff9900;
       font-size: 1vw; }
   #education table {
     text-align: left;
     border-collapse: collapse;
-    border-color: #f1e0ff;
+    border-color: #ffcc00;
     border-style: solid; }
     #education table tr {
-      border-color: #f1e0ff; }
+      border-color: #ffcc00; }
       #education table tr th {
-        border-color: #4a4e8c;
-        color: #4a4e8c;
+        border-color: #ff6600;
+        color: #ff6600;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #education table tr td {
-        border-color: #4a4e8c;
-        color: #4a4e8c;
+        border-color: #ff6600;
+        color: #ff6600;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
         #education table tr td ul li {
-          color: #4a4e8c;
+          color: #ff6600;
           font-size: 1vw; }
-  #education a:active {
-    text-align: left;
-    color: #8d7d9b;
-    font-size: 1vw; }
 
 #education.backToTop {
   text-align: center;
@@ -133,13 +134,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 #projects {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -149,35 +150,35 @@
   /* selected link */ }
   #projects h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #projects h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #projects h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #projects p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #projects a:link {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #projects a:visited {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #projects a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #projects a:active {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
 
 #projects.backToTop {
@@ -186,13 +187,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 #technicalSkills {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -200,50 +201,42 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #technicalSkills span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
   #technicalSkills h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #technicalSkills h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #technicalSkills h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #technicalSkills p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #technicalSkills a:link {
     text-align: left;
-    color: #4a4e8c;
-    font-size: 1vw; }
-  #technicalSkills a:link {
-    text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #technicalSkills a:visited {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #technicalSkills a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #technicalSkills a:active {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #technicalSkills ul {
     text-align: left; }
     #technicalSkills ul li {
-      color: #4a4e8c;
+      color: #ff9900;
       font-size: 1vw; }
 
 #technicalSkills.backToTop {
@@ -252,13 +245,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 #otherSkills {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -266,46 +259,42 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #otherSkills span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
   #otherSkills h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #otherSkills h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #otherSkills h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #otherSkills p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #otherSkills a:link {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #otherSkills a:visited {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #otherSkills a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #otherSkills a:active {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #otherSkills ul {
     text-align: left; }
     #otherSkills ul li {
-      color: #4a4e8c;
+      color: #ff9900;
       font-size: 1vw; }
 
 #otherSkills.backToTop {
@@ -314,13 +303,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 #certifications {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -328,46 +317,42 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #certifications span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
   #certifications h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #certifications h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #certifications h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #certifications p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #certifications a:link {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #certifications a:visited {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #certifications a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #certifications a:active {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #certifications ul {
     text-align: left; }
     #certifications ul li {
-      color: #4a4e8c;
+      color: #ff9900;
       font-size: 1vw; }
 
 #certifications.backToTop {
@@ -376,13 +361,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 #languages {
   margin: auto;
-  background-color: #1c1a3d;
+  background-color: #990000;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -390,41 +375,37 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #languages span {
-    font-size: 100px;
-    float: center;
-    text-align: center; }
   #languages h1 {
     text-align: left;
-    color: #f1e0ff;
+    color: #ffcc00;
     font-size: 5vw; }
   #languages h2 {
     text-align: left;
-    color: #d1c3e9;
+    color: #ff9900;
     font-size: 3vw; }
   #languages h3 {
     text-align: left;
-    color: #8d7d9b;
+    color: #ff6600;
     font-size: 2vw; }
   #languages p {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #languages a:link {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #languages a:visited {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #languages a:hover {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
   #languages a:active {
     text-align: left;
-    color: #4a4e8c;
+    color: #ff6600;
     font-size: 1vw; }
 
 #languages.backToTop {
@@ -433,8 +414,8 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f1e0ff;
-  background-color: #1c1a3d;
+  color: #ffcc00;
+  background-color: #990000;
   font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
@@ -1399,39 +1380,40 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
 html {
   scroll-behavior: smooth; }
 
 header {
   text-align: center;
-  background-color: #1a1a1e;
+  background-color: #007a5e;
   font-family: "Courier New", monospace; }
   header h1 {
-    color: #a0a0b0;
+    color: #e0f7fa;
     font-size: 5vw; }
   header h2 {
-    color: #a0a0b0;
+    color: #a1d9b0;
     font-size: 3vw; }
   header h3 {
-    color: #a0a0b0;
+    color: #50c3a1;
     font-size: 2vw; }
   header p {
-    color: #6b6b70;
+    color: #50c3a1;
     font-size: 1vw; }
   header #pageMenu {
-    background-color: #1a1a1e;
+    background-color: #007a5e;
     font-size: 1vw; }
     header #pageMenu a {
       display: inline-block;
-      color: #d4d4d9;
+      color: #e0f7fa;
       margin: auto; }
   header #siteMenu {
-    background-color: #1a1a1e;
+    background-color: #007a5e;
     font-size: 1vw; }
     header #siteMenu a {
       display: inline-block;
-      color: #d4d4d9;
+      color: #e0f7fa;
       margin: auto; }
 
 body {

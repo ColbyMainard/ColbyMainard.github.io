@@ -19,6 +19,13 @@ $smart_3: #8d7d9b;
 $smart_4: #d1c3e9; 
 $smart_5: #f1e0ff;
 
+/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+$emerald_efficiency_1: #007a5e;
+$emerald_efficiency_2: #1d9a6a;
+$emerald_efficiency_3: #50c3a1;
+$emerald_efficiency_4: #a1d9b0;
+$emerald_efficiency_5: #e0f7fa;
+
 /* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
 
 html{
@@ -27,39 +34,39 @@ html{
 
 header {
     text-align: center;
-    background-color: $noir_1;
+    background-color: $emerald_efficiency_1;
     font-family: "Courier New", monospace;
     h1 {
-        color: $noir_4;
+        color: $emerald_efficiency_5;
         font-size: 5vw;
     }
     h2 {
-        color: $noir_4;
+        color: $emerald_efficiency_4;
         font-size: 3vw;
     }
     h3 {
-        color: $noir_4;
+        color: $emerald_efficiency_3;
         font-size: 2vw;
     }
     p {
-        color: $noir_3;
+        color: $emerald_efficiency_3;
         font-size: 1vw;
     }
     #pageMenu {
-        background-color: $noir_1;
+        background-color: $emerald_efficiency_1;
         font-size: 1vw;
         a {
             display: inline-block;
-            color: $noir_5;
+            color: $emerald_efficiency_5;
             margin:auto;
         }
     }
     #siteMenu {
-        background-color: $noir_1;
+        background-color: $emerald_efficiency_1;
         font-size: 1vw;
         a {
             display: inline-block;
-            color: $noir_5;
+            color: $emerald_efficiency_5;
             margin:auto;
         }
     }
