@@ -106,47 +106,47 @@ body {
 
 footer {
     text-align: center;
-    background-color: $smart_1;
+    background-color: $emerald_efficiency_1;
     #contactMe {
         font-family: "Courier New", monospace;
         h1 {
             font-size: 5vw;
-            color: $smart_2;
+            color: $emerald_efficiency_2;
         }
         h2 {
             font-size: 3vw;
-            color: $smart_3;
+            color: $emerald_efficiency_3;
         }
         h3 {
             font-size: 2vw;
-            color: $smart_4;
+            color: $emerald_efficiency_4;
         }
         address {
-            color: $smart_5;
+            color: $emerald_efficiency_5;
             font-size: 1vw;
         }
         /* unvisited link */
         a:link {
-            color: $smart_5;
+            color: $emerald_efficiency_5;
             font-size: 1vw;
         }
         /* visited link */
         a:visited {
-            color: $smart_4;
+            color: $emerald_efficiency_4;
             font-size: 1vw;
         }
         /* mouse over link */
         a:hover {
-            color: $smart_5;
+            color: $emerald_efficiency_5;
             font-size: 1vw;
         }
         /* selected link */
         a:active {
-            color: $smart_4;
+            color: $emerald_efficiency_4;
             font-size: 1vw;
         }
         p {
-            color: $smart_5;
+            color: $emerald_efficiency_5;
             font-size: 1vw;
         }
     }

@@ -1444,7 +1444,7 @@ body {
 
 footer {
   text-align: center;
-  background-color: #1c1a3d; }
+  background-color: #007a5e; }
   footer #contactMe {
     font-family: "Courier New", monospace;
     /* unvisited link */
@@ -1453,30 +1453,30 @@ footer {
     /* selected link */ }
     footer #contactMe h1 {
       font-size: 5vw;
-      color: #4a4e8c; }
+      color: #1d9a6a; }
     footer #contactMe h2 {
       font-size: 3vw;
-      color: #8d7d9b; }
+      color: #50c3a1; }
     footer #contactMe h3 {
       font-size: 2vw;
-      color: #d1c3e9; }
+      color: #a1d9b0; }
     footer #contactMe address {
-      color: #f1e0ff;
+      color: #e0f7fa;
       font-size: 1vw; }
     footer #contactMe a:link {
-      color: #f1e0ff;
+      color: #e0f7fa;
       font-size: 1vw; }
     footer #contactMe a:visited {
-      color: #d1c3e9;
+      color: #a1d9b0;
       font-size: 1vw; }
     footer #contactMe a:hover {
-      color: #f1e0ff;
+      color: #e0f7fa;
       font-size: 1vw; }
     footer #contactMe a:active {
-      color: #d1c3e9;
+      color: #a1d9b0;
       font-size: 1vw; }
     footer #contactMe p {
-      color: #f1e0ff;
+      color: #e0f7fa;
       font-size: 1vw; }
 
 /*# sourceMappingURL=default.css.map */
