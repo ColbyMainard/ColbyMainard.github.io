@@ -6,8 +6,7 @@
         <link rel="stylesheet" href="./assets/css/default.css">
         <script src="./assets/js/current_time.js"></script>
         <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-        <meta http-equiv="X-Frame-Options" content="deny">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' www.googletagmanager.com www.google-analytics.com; connect-src www.google-analytics.com;">
         <!--configure X-Content-Type-Options later-->
         <!--Referrer-Policy-->
         <!--Permissions-Policy-->
@@ -32,7 +31,6 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
-        <script src="./assets/js/send_email.js"></script>
     </head>
     <body>
         <header>
