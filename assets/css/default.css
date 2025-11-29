@@ -365,59 +365,6 @@
   background-color: #990000;
   font-size: 1vw; }
 
-#languages {
-  margin: auto;
-  background-color: #990000;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #languages h1 {
-    text-align: left;
-    color: #ffcc00;
-    font-size: 5vw; }
-  #languages h2 {
-    text-align: left;
-    color: #ff9900;
-    font-size: 3vw; }
-  #languages h3 {
-    text-align: left;
-    color: #ff6600;
-    font-size: 2vw; }
-  #languages p {
-    text-align: left;
-    color: #ff6600;
-    font-size: 1vw; }
-  #languages a:link {
-    text-align: left;
-    color: #ff6600;
-    font-size: 1vw; }
-  #languages a:visited {
-    text-align: left;
-    color: #ff6600;
-    font-size: 1vw; }
-  #languages a:hover {
-    text-align: left;
-    color: #ff6600;
-    font-size: 1vw; }
-  #languages a:active {
-    text-align: left;
-    color: #ff6600;
-    font-size: 1vw; }
-
-#languages.backToTop {
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
-  font-size: 1vw; }
-
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 #quantumComputing {
