@@ -1,9 +1,9 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
+/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
 #workHistory {
   margin: auto;
-  background-color: #990000;
+  background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -13,35 +13,35 @@
   /* selected link */ }
   #workHistory h1 {
     text-align: left;
-    color: #ffcc00;
+    color: #ff3d94;
     font-size: 5vw; }
   #workHistory h2 {
     text-align: left;
-    color: #ff9900;
+    color: #b5307e;
     font-size: 3vw; }
   #workHistory h3 {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 2vw; }
   #workHistory p {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #workHistory a:link {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #workHistory a:visited {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #workHistory a:hover {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #workHistory a:active {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
 
 #workHistory.backToTop {
@@ -50,13 +50,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
+  color: #ff3d94;
+  background-color: #200b4b;
   font-size: 1vw; }
 
 #education {
   margin: auto;
-  background-color: #990000;
+  background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -66,66 +66,66 @@
   /* selected link */ }
   #education h1 {
     text-align: left;
-    color: #ffcc00;
+    color: #ff3d94;
     font-size: 5vw; }
   #education h2 {
     text-align: left;
-    color: #ff9900;
+    color: #b5307e;
     font-size: 3vw; }
   #education h3 {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 2vw; }
   #education p {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #education a:link {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #education a:visited {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #education a:hover {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #education a:active {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #education ul {
     text-align: left; }
     #education ul li {
-      color: #ff9900;
+      color: #6a2a98;
       font-size: 1vw; }
   #education table {
     text-align: left;
     border-collapse: collapse;
-    border-color: #ffcc00;
+    border-color: #6a2a98;
     border-style: solid; }
     #education table tr {
-      border-color: #ffcc00; }
+      border-color: #6a2a98; }
       #education table tr th {
-        border-color: #ff6600;
-        color: #ff6600;
+        border-color: #6a2a98;
+        color: #6a2a98;
         font-size: 1vw;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #education table tr td {
-        border-color: #ff6600;
-        color: #ff6600;
+        border-color: #6a2a98;
+        color: #6a2a98;
         font-size: 1vw;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
         #education table tr td ul li {
-          color: #ff6600;
+          color: #6a2a98;
           font-size: 1vw; }
 
 #education.backToTop {
@@ -134,13 +134,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
+  color: #ff3d94;
+  background-color: #200b4b;
   font-size: 1vw; }
 
 #projects {
   margin: auto;
-  background-color: #990000;
+  background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -150,35 +150,35 @@
   /* selected link */ }
   #projects h1 {
     text-align: left;
-    color: #ffcc00;
+    color: #ff3d94;
     font-size: 5vw; }
   #projects h2 {
     text-align: left;
-    color: #ff9900;
+    color: #b5307e;
     font-size: 3vw; }
   #projects h3 {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 2vw; }
   #projects p {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #projects a:link {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #projects a:visited {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #projects a:hover {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #projects a:active {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
 
 #projects.backToTop {
@@ -187,13 +187,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
+  color: #ff3d94;
+  background-color: #200b4b;
   font-size: 1vw; }
 
 #technicalSkills {
   margin: auto;
-  background-color: #990000;
+  background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -203,40 +203,40 @@
   /* selected link */ }
   #technicalSkills h1 {
     text-align: left;
-    color: #ffcc00;
+    color: #ff3d94;
     font-size: 5vw; }
   #technicalSkills h2 {
     text-align: left;
-    color: #ff9900;
+    color: #b5307e;
     font-size: 3vw; }
   #technicalSkills h3 {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 2vw; }
   #technicalSkills p {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #technicalSkills a:link {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #technicalSkills a:visited {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #technicalSkills a:hover {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #technicalSkills a:active {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #technicalSkills ul {
     text-align: left; }
     #technicalSkills ul li {
-      color: #ff9900;
+      color: #6a2a98;
       font-size: 1vw; }
 
 #technicalSkills.backToTop {
@@ -245,13 +245,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
+  color: #ff3d94;
+  background-color: #200b4b;
   font-size: 1vw; }
 
 #otherSkills {
   margin: auto;
-  background-color: #990000;
+  background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -261,40 +261,40 @@
   /* selected link */ }
   #otherSkills h1 {
     text-align: left;
-    color: #ffcc00;
+    color: #ff3d94;
     font-size: 5vw; }
   #otherSkills h2 {
     text-align: left;
-    color: #ff9900;
+    color: #b5307e;
     font-size: 3vw; }
   #otherSkills h3 {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 2vw; }
   #otherSkills p {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #otherSkills a:link {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #otherSkills a:visited {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #otherSkills a:hover {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #otherSkills a:active {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #otherSkills ul {
     text-align: left; }
     #otherSkills ul li {
-      color: #ff9900;
+      color: #6a2a98;
       font-size: 1vw; }
 
 #otherSkills.backToTop {
@@ -303,13 +303,13 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
+  color: #ff3d94;
+  background-color: #200b4b;
   font-size: 1vw; }
 
 #certifications {
   margin: auto;
-  background-color: #990000;
+  background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -319,40 +319,40 @@
   /* selected link */ }
   #certifications h1 {
     text-align: left;
-    color: #ffcc00;
+    color: #ff3d94;
     font-size: 5vw; }
   #certifications h2 {
     text-align: left;
-    color: #ff9900;
+    color: #b5307e;
     font-size: 3vw; }
   #certifications h3 {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 2vw; }
   #certifications p {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #certifications a:link {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #certifications a:visited {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #certifications a:hover {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #certifications a:active {
     text-align: left;
-    color: #ff6600;
+    color: #6a2a98;
     font-size: 1vw; }
   #certifications ul {
     text-align: left; }
     #certifications ul li {
-      color: #ff9900;
+      color: #6a2a98;
       font-size: 1vw; }
 
 #certifications.backToTop {
@@ -361,8 +361,8 @@
   /* Ensures the link to the top behaves as a block-level element */
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ffcc00;
-  background-color: #990000;
+  color: #ff3d94;
+  background-color: #200b4b;
   font-size: 1vw; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */

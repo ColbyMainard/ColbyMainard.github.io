@@ -21,61 +21,68 @@ $smart_3: #8d7d9b;
 $smart_4: #d1c3e9; 
 $smart_5: #f1e0ff;
 
-/* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */ 
-$gryffon_1: #ffcc00;
-$gryffon_2: #ff9900;
-$gryffon_3: #ff6600;
-$gryffon_4: #cc3300;
-$gryffon_5: #990000;
+// /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */ 
+// $gryffon_1: #ffcc00;
+// $gryffon_2: #ff9900;
+// $gryffon_3: #ff6600;
+// $gryffon_4: #cc3300;
+// $gryffon_5: #990000;
+
+/* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
+$cyberpunk_dreams_1: #ff3d94;
+$cyberpunk_dreams_2: #b5307e;
+$cyberpunk_dreams_3: #6a2a98;
+$cyberpunk_dreams_4: #3f1c6d;
+$cyberpunk_dreams_5: #200b4b;
 
 #workHistory {
     margin: auto;
-    background-color: $gryffon_5;
+    background-color: $cyberpunk_dreams_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $gryffon_1;
+        color: $cyberpunk_dreams_1;
         font-size: 5vw;
     }
     h2 {
         text-align: left;
-        color: $gryffon_2;
+        color: $cyberpunk_dreams_2;
         font-size: 3vw;
     }
     h3 {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 2vw;
     }
     p {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
 }
@@ -84,78 +91,78 @@ $gryffon_5: #990000;
     text-align: center;
     display: block; /* Ensures the link to the top behaves as a block-level element */
     margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $gryffon_1;
-    background-color: $gryffon_5;
+    color: $cyberpunk_dreams_1;
+    background-color: $cyberpunk_dreams_5;
     font-size: 1vw;
 }
 
 #education {
     margin: auto;
-    background-color: $gryffon_5;
+    background-color: $cyberpunk_dreams_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $gryffon_1;
+        color: $cyberpunk_dreams_1;
         font-size: 5vw;
     }
     h2 {
         text-align: left;
-        color: $gryffon_2;
+        color: $cyberpunk_dreams_2;
         font-size: 3vw;
     }
     h3 {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 2vw;
     }
     p {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     ul {
         text-align: left;
         li {
-            color: $gryffon_2;
+            color: $cyberpunk_dreams_3;
             font-size: 1vw;
         }
     }
     table {
         text-align: left;
         border-collapse: collapse;
-        border-color: $gryffon_1;
+        border-color: $cyberpunk_dreams_3;
         border-style: solid;
         tr {
-            border-color: $gryffon_1;
+            border-color: $cyberpunk_dreams_3;
             th {
-                border-color: $gryffon_3;
-                color: $gryffon_3;
+                border-color: $cyberpunk_dreams_3;
+                color: $cyberpunk_dreams_3;
                 font-size: 1vw;
                 border-top-style: double;
                 border-right-style: double;
@@ -163,8 +170,8 @@ $gryffon_5: #990000;
                 border-left-style: double;
             }
             td {
-                border-color: $gryffon_3;
-                color: $gryffon_3;
+                border-color: $cyberpunk_dreams_3;
+                color: $cyberpunk_dreams_3;
                 font-size: 1vw;
                 border-top-style: groove;
                 border-right-style: groove;
@@ -172,7 +179,7 @@ $gryffon_5: #990000;
                 border-left-style: groove;
                 ul {
                     li {
-                        color: $gryffon_3;
+                        color: $cyberpunk_dreams_3;
                         font-size: 1vw;
                     }
                 }
@@ -185,59 +192,59 @@ $gryffon_5: #990000;
     text-align: center;
     display: block; /* Ensures the link to the top behaves as a block-level element */
     margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $gryffon_1;
-    background-color: $gryffon_5;
+    color: $cyberpunk_dreams_1;
+    background-color: $cyberpunk_dreams_5;
     font-size: 1vw;
 }
 
 #projects {
     margin: auto;
-    background-color: $gryffon_5;
+    background-color: $cyberpunk_dreams_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $gryffon_1;
+        color: $cyberpunk_dreams_1;
         font-size: 5vw;
     }
     h2 {
         text-align: left;
-        color: $gryffon_2;
+        color: $cyberpunk_dreams_2;
         font-size: 3vw;
     }
     h3 {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 2vw;
     }
     p {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
 }
@@ -246,65 +253,65 @@ $gryffon_5: #990000;
     text-align: center;
     display: block; /* Ensures the link to the top behaves as a block-level element */
     margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $gryffon_1;
-    background-color: $gryffon_5;
+    color: $cyberpunk_dreams_1;
+    background-color: $cyberpunk_dreams_5;
     font-size: 1vw;
 }
 
 #technicalSkills {
     margin: auto;
-    background-color: $gryffon_5;
+    background-color: $cyberpunk_dreams_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $gryffon_1;
+        color: $cyberpunk_dreams_1;
         font-size: 5vw;
     }
     h2 {
         text-align: left;
-        color: $gryffon_2;
+        color: $cyberpunk_dreams_2;
         font-size: 3vw;
     }
     h3 {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 2vw;
     }
     p {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     ul {
         text-align: left;
         li {
-            color: $gryffon_2;
+            color: $cyberpunk_dreams_3;
             font-size: 1vw;
         }
     }
@@ -314,65 +321,65 @@ $gryffon_5: #990000;
     text-align: center;
     display: block; /* Ensures the link to the top behaves as a block-level element */
     margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $gryffon_1;
-    background-color: $gryffon_5;
+    color: $cyberpunk_dreams_1;
+    background-color: $cyberpunk_dreams_5;
     font-size: 1vw;
 }
 
 #otherSkills {
     margin: auto;
-    background-color: $gryffon_5;
+    background-color: $cyberpunk_dreams_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $gryffon_1;
+        color: $cyberpunk_dreams_1;
         font-size: 5vw;
     }
     h2 {
         text-align: left;
-        color: $gryffon_2;
+        color: $cyberpunk_dreams_2;
         font-size: 3vw;
     }
     h3 {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 2vw;
     }
     p {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     ul {
         text-align: left;
         li {
-            color: $gryffon_2;
+            color: $cyberpunk_dreams_3;
             font-size: 1vw;
         }
     }
@@ -382,65 +389,65 @@ $gryffon_5: #990000;
     text-align: center;
     display: block; /* Ensures the link to the top behaves as a block-level element */
     margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $gryffon_1;
-    background-color: $gryffon_5;
+    color: $cyberpunk_dreams_1;
+    background-color: $cyberpunk_dreams_5;
     font-size: 1vw;
 }
 
 #certifications {
     margin: auto;
-    background-color: $gryffon_5;
+    background-color: $cyberpunk_dreams_5;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $gryffon_1;
+        color: $cyberpunk_dreams_1;
         font-size: 5vw;
     }
     h2 {
         text-align: left;
-        color: $gryffon_2;
+        color: $cyberpunk_dreams_2;
         font-size: 3vw;
     }
     h3 {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 2vw;
     }
     p {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $gryffon_3;
+        color: $cyberpunk_dreams_3;
         font-size: 1vw;
     }
     ul {
         text-align: left;
         li {
-            color: $gryffon_2;
+            color: $cyberpunk_dreams_3;
             font-size: 1vw;
         }
     }
@@ -450,7 +457,7 @@ $gryffon_5: #990000;
     text-align: center;
     display: block; /* Ensures the link to the top behaves as a block-level element */
     margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $gryffon_1;
-    background-color: $gryffon_5;
+    color: $cyberpunk_dreams_1;
+    background-color: $cyberpunk_dreams_5;
     font-size: 1vw;
 }
