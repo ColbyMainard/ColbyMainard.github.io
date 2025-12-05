@@ -1324,6 +1324,176 @@
   background-color: #1f1b79;
   font-size: 1vw; }
 
+#scriptingResources {
+  margin: auto;
+  background-color: #1f1b79;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #scriptingResources h1 {
+    text-align: left;
+    color: #f9c54e;
+    font-size: 5vw; }
+  #scriptingResources h2 {
+    text-align: left;
+    color: #d07e6c;
+    font-size: 3vw; }
+  #scriptingResources h3 {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 2vw; }
+  #scriptingResources p {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #scriptingResources blockquote {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1.5vw; }
+  #scriptingResources a:link {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #scriptingResources a:visited {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #scriptingResources a:hover {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #scriptingResources a:active {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #scriptingResources ul {
+    text-align: left; }
+    #scriptingResources ul li {
+      color: #8b5aba;
+      font-size: 1vw; }
+  #scriptingResources table {
+    text-align: left;
+    border-collapse: collapse;
+    border-color: #8b5aba;
+    border-style: solid; }
+    #scriptingResources table tr {
+      border-color: #8b5aba; }
+      #scriptingResources table tr th {
+        border-color: #8b5aba;
+        color: #8b5aba;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #scriptingResources table tr td {
+        border-color: #8b5aba;
+        color: #8b5aba;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+
+#scriptingResources.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f9c54e;
+  background-color: #1f1b79;
+  font-size: 1vw; }
+
+#operatingSystemsResources {
+  margin: auto;
+  background-color: #1f1b79;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #operatingSystemsResources h1 {
+    text-align: left;
+    color: #f9c54e;
+    font-size: 5vw; }
+  #operatingSystemsResources h2 {
+    text-align: left;
+    color: #d07e6c;
+    font-size: 3vw; }
+  #operatingSystemsResources h3 {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 2vw; }
+  #operatingSystemsResources p {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #operatingSystemsResources blockquote {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1.5vw; }
+  #operatingSystemsResources a:link {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #operatingSystemsResources a:visited {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #operatingSystemsResources a:hover {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #operatingSystemsResources a:active {
+    text-align: left;
+    color: #8b5aba;
+    font-size: 1vw; }
+  #operatingSystemsResources ul {
+    text-align: left; }
+    #operatingSystemsResources ul li {
+      color: #8b5aba;
+      font-size: 1vw; }
+  #operatingSystemsResources table {
+    text-align: left;
+    border-collapse: collapse;
+    border-color: #8b5aba;
+    border-style: solid; }
+    #operatingSystemsResources table tr {
+      border-color: #8b5aba; }
+      #operatingSystemsResources table tr th {
+        border-color: #8b5aba;
+        color: #8b5aba;
+        font-size: 1vw;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #operatingSystemsResources table tr td {
+        border-color: #8b5aba;
+        color: #8b5aba;
+        font-size: 1vw;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+
+#operatingSystemsResources.backToTop {
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #f9c54e;
+  background-color: #1f1b79;
+  font-size: 1vw; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */

@@ -420,10 +420,210 @@ $neon_dusk_serenity_5: #f9c54e;
 }
 
 #pythonResources.backToTop {
-        text-align: center;
-        display: block; /* Ensures the link to the top behaves as a block-level element */
-        margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $neon_dusk_serenity_5;
+    background-color: $neon_dusk_serenity_1;
+    font-size: 1vw;
+}
+
+#scriptingResources {
+    margin: auto;
+    background-color: $neon_dusk_serenity_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
         color: $neon_dusk_serenity_5;
-        background-color: $neon_dusk_serenity_1;
+        font-size: 5vw;
+    }
+    h2 {
+        text-align: left;
+        color: $neon_dusk_serenity_4;
+        font-size: 3vw;
+    }
+    h3 {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 2vw;
+    }
+    p {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
         font-size: 1vw;
     }
+    blockquote {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    ul {
+        text-align: left;
+        li {
+            color: $neon_dusk_serenity_3;
+            font-size: 1vw;
+        }
+    }
+    table {
+        text-align: left;
+        border-collapse: collapse;
+        border-color: $neon_dusk_serenity_3;
+        border-style: solid;
+        tr {
+            border-color: $neon_dusk_serenity_3;
+            th {
+                border-color: $neon_dusk_serenity_3;
+                color: $neon_dusk_serenity_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $neon_dusk_serenity_3;
+                color: $neon_dusk_serenity_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+}
+
+#scriptingResources.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $neon_dusk_serenity_5;
+    background-color: $neon_dusk_serenity_1;
+    font-size: 1vw;
+}
+
+#operatingSystemsResources {
+    margin: auto;
+    background-color: $neon_dusk_serenity_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
+        color: $neon_dusk_serenity_5;
+        font-size: 5vw;
+    }
+    h2 {
+        text-align: left;
+        color: $neon_dusk_serenity_4;
+        font-size: 3vw;
+    }
+    h3 {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 2vw;
+    }
+    p {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    blockquote {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1.5vw;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        color: $neon_dusk_serenity_3;
+        font-size: 1vw;
+    }
+    ul {
+        text-align: left;
+        li {
+            color: $neon_dusk_serenity_3;
+            font-size: 1vw;
+        }
+    }
+    table {
+        text-align: left;
+        border-collapse: collapse;
+        border-color: $neon_dusk_serenity_3;
+        border-style: solid;
+        tr {
+            border-color: $neon_dusk_serenity_3;
+            th {
+                border-color: $neon_dusk_serenity_3;
+                color: $neon_dusk_serenity_3;
+                font-size: 1vw;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $neon_dusk_serenity_3;
+                color: $neon_dusk_serenity_3;
+                font-size: 1vw;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+}
+
+#operatingSystemsResources.backToTop {
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $neon_dusk_serenity_5;
+    background-color: $neon_dusk_serenity_1;
+    font-size: 1vw;
+}
