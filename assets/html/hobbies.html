@@ -3,13 +3,17 @@
     <head>
         <title>Hobbies</title>
         <meta name="author" content="Colby Mainard">
+        
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="../images/favicon.png"/>
         <link rel="stylesheet" href="../css/default.css">
         <meta charset="UTF-8">
+        
         <!-- add recommended features from https://securityheaders.com/ -->
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com/"> -->
+        <add name="X-Frame-Options" value="SAMEORIGIN"/>
+        
+        <!-- Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q4KZE3X1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
