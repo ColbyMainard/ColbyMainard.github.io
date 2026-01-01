@@ -40,7 +40,10 @@
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
         <script>
+            const fs = require('fs/promises');
+            const path = require('path');
             async function fetchAndLoadModule(url) {
+                //Load a javascript module
                 try {
                     // 1. Fetch the module source code as plain text
                     const response = await fetch(url);
@@ -64,8 +67,38 @@
                     console.error('Failed to load module:', error);
                 }
             }
+            /**
+             * Recursively walks through a directory and yields file paths.
+             * @param {string} dir The directory path to start from.
+             */
+            async function* walk(dir) {
+                for await (const d of await fs.opendir(dir)) {
+                    const entry = path.join(dir, d.name);
+                    if (d.isDirectory()) {
+                        yield* walk(entry); // Recursively call and yield from the subdirectory
+                    } else if (d.isFile()) {
+                        yield entry; // Yield the file path
+                    }
+                }
+            }
+
+            function getExtension(filename) {
+                // Splits the filename by the dot separator and returns the last element
+                return filename.split('.').pop();
+            }
+
             fetchAndLoadModule("./assets/css/default.css");
             fetchAndLoadModule("./assets/js/index.js");
+            (async () => {
+                const directoryPath = './node_modules'; // Replace with your path
+                console.log(`--- Files in ${directoryPath} ---`);
+                for await (const p of walk(directoryPath)) {
+                    console.log(p);
+                    if(getExtension(p).endsWith("js")){
+                        fetchAndLoadModule(p);
+                    }
+                }
+            })();
         </script>
         <script src="./assets/js/index.js" type="module"></script>
     </head>
