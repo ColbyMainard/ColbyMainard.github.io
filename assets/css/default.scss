@@ -38,23 +38,23 @@ header {
     font-family: "Courier New", monospace;
     h1 {
         color: $emerald_efficiency_5;
-        font-size: 5vw;
+        font-size: 500%;
     }
     h2 {
         color: $emerald_efficiency_4;
-        font-size: 3vw;
+        font-size: 300%;
     }
     h3 {
         color: $emerald_efficiency_3;
-        font-size: 2vw;
+        font-size: 200%;
     }
     p {
         color: $emerald_efficiency_3;
-        font-size: 1vw;
+        font-size: 100%;
     }
     #pageMenu {
         background-color: $emerald_efficiency_1;
-        font-size: 1vw;
+        font-size: 100%;
         a {
             display: inline-block;
             color: $emerald_efficiency_5;
@@ -63,7 +63,7 @@ header {
     }
     #siteMenu {
         background-color: $emerald_efficiency_1;
-        font-size: 1vw;
+        font-size: 100%;
         a {
             display: inline-block;
             color: $emerald_efficiency_5;
@@ -79,19 +79,19 @@ body {
     font-family: "Courier New", monospace;
     h1 {
         color: $noir_5;
-        font-size: 5vw;
+        font-size: 500%;
     }
     h2 {
         color: $noir_5;
-        font-size: 3vw;
+        font-size: 300%;
     }
     h3 {
         color: $noir_5;
-        font-size: 2vw;
+        font-size: 200%;
     }
     p {
         color: $noir_4;
-        font-size: 1vw;
+        font-size: 100%;
     }
     img {
         display: block;
@@ -99,7 +99,7 @@ body {
         margin-right: auto;
         max-width: 60%;
         height: auto;
-        border: 1vw solid $noir_1;
+        border: 1% solid $noir_1;
         border-radius: 1%;
     }
 }
@@ -110,44 +110,44 @@ footer {
     #contactMe {
         font-family: "Courier New", monospace;
         h1 {
-            font-size: 5vw;
+            font-size: 500%;
             color: $emerald_efficiency_2;
         }
         h2 {
-            font-size: 3vw;
+            font-size: 300%;
             color: $emerald_efficiency_3;
         }
         h3 {
-            font-size: 2vw;
+            font-size: 200%;
             color: $emerald_efficiency_4;
         }
         address {
             color: $emerald_efficiency_5;
-            font-size: 1vw;
+            font-size: 100%;
         }
         /* unvisited link */
         a:link {
             color: $emerald_efficiency_5;
-            font-size: 1vw;
+            font-size: 100%;
         }
         /* visited link */
         a:visited {
             color: $emerald_efficiency_4;
-            font-size: 1vw;
+            font-size: 100%;
         }
         /* mouse over link */
         a:hover {
             color: $emerald_efficiency_5;
-            font-size: 1vw;
+            font-size: 100%;
         }
         /* selected link */
         a:active {
             color: $emerald_efficiency_4;
-            font-size: 1vw;
+            font-size: 100%;
         }
         p {
             color: $emerald_efficiency_5;
-            font-size: 1vw;
+            font-size: 100%;
         }
     }
 }

@@ -14,35 +14,35 @@
   #workHistory h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 5vw; }
+    font-size: 500%; }
   #workHistory h2 {
     text-align: left;
     color: #b5307e;
-    font-size: 3vw; }
+    font-size: 300%; }
   #workHistory h3 {
     text-align: left;
     color: #6a2a98;
-    font-size: 2vw; }
+    font-size: 200%; }
   #workHistory p {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #workHistory a:link {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #workHistory a:visited {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #workHistory a:hover {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #workHistory a:active {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
 
 #workHistory.backToTop {
   text-align: center;
@@ -52,7 +52,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #ff3d94;
   background-color: #200b4b;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #education {
   margin: auto;
@@ -67,40 +67,40 @@
   #education h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 5vw; }
+    font-size: 500%; }
   #education h2 {
     text-align: left;
     color: #b5307e;
-    font-size: 3vw; }
+    font-size: 300%; }
   #education h3 {
     text-align: left;
     color: #6a2a98;
-    font-size: 2vw; }
+    font-size: 200%; }
   #education p {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #education a:link {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #education a:visited {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #education a:hover {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #education a:active {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #education ul {
     text-align: left; }
     #education ul li {
       color: #6a2a98;
-      font-size: 1vw; }
+      font-size: 100%; }
   #education table {
     text-align: left;
     border-collapse: collapse;
@@ -111,7 +111,7 @@
       #education table tr th {
         border-color: #6a2a98;
         color: #6a2a98;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -119,14 +119,14 @@
       #education table tr td {
         border-color: #6a2a98;
         color: #6a2a98;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
         #education table tr td ul li {
           color: #6a2a98;
-          font-size: 1vw; }
+          font-size: 100%; }
 
 #education.backToTop {
   text-align: center;
@@ -136,7 +136,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #ff3d94;
   background-color: #200b4b;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #projects {
   margin: auto;
@@ -151,35 +151,35 @@
   #projects h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 5vw; }
+    font-size: 500%; }
   #projects h2 {
     text-align: left;
     color: #b5307e;
-    font-size: 3vw; }
+    font-size: 300%; }
   #projects h3 {
     text-align: left;
     color: #6a2a98;
-    font-size: 2vw; }
+    font-size: 200%; }
   #projects p {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #projects a:link {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #projects a:visited {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #projects a:hover {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #projects a:active {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
 
 #projects.backToTop {
   text-align: center;
@@ -189,7 +189,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #ff3d94;
   background-color: #200b4b;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #technicalSkills {
   margin: auto;
@@ -204,40 +204,40 @@
   #technicalSkills h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 5vw; }
+    font-size: 500%; }
   #technicalSkills h2 {
     text-align: left;
     color: #b5307e;
-    font-size: 3vw; }
+    font-size: 300%; }
   #technicalSkills h3 {
     text-align: left;
     color: #6a2a98;
-    font-size: 2vw; }
+    font-size: 200%; }
   #technicalSkills p {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #technicalSkills a:link {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #technicalSkills a:visited {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #technicalSkills a:hover {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #technicalSkills a:active {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #technicalSkills ul {
     text-align: left; }
     #technicalSkills ul li {
       color: #6a2a98;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 #technicalSkills.backToTop {
   text-align: center;
@@ -247,7 +247,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #ff3d94;
   background-color: #200b4b;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #otherSkills {
   margin: auto;
@@ -262,40 +262,40 @@
   #otherSkills h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 5vw; }
+    font-size: 500%; }
   #otherSkills h2 {
     text-align: left;
     color: #b5307e;
-    font-size: 3vw; }
+    font-size: 300%; }
   #otherSkills h3 {
     text-align: left;
     color: #6a2a98;
-    font-size: 2vw; }
+    font-size: 200%; }
   #otherSkills p {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #otherSkills a:link {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #otherSkills a:visited {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #otherSkills a:hover {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #otherSkills a:active {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #otherSkills ul {
     text-align: left; }
     #otherSkills ul li {
       color: #6a2a98;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 #otherSkills.backToTop {
   text-align: center;
@@ -305,7 +305,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #ff3d94;
   background-color: #200b4b;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #certifications {
   margin: auto;
@@ -320,40 +320,40 @@
   #certifications h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 5vw; }
+    font-size: 500%; }
   #certifications h2 {
     text-align: left;
     color: #b5307e;
-    font-size: 3vw; }
+    font-size: 300%; }
   #certifications h3 {
     text-align: left;
     color: #6a2a98;
-    font-size: 2vw; }
+    font-size: 200%; }
   #certifications p {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #certifications a:link {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #certifications a:visited {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #certifications a:hover {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #certifications a:active {
     text-align: left;
     color: #6a2a98;
-    font-size: 1vw; }
+    font-size: 100%; }
   #certifications ul {
     text-align: left; }
     #certifications ul li {
       color: #6a2a98;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 #certifications.backToTop {
   text-align: center;
@@ -363,7 +363,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #ff3d94;
   background-color: #200b4b;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
@@ -380,40 +380,40 @@
   #quantumComputing h1 {
     text-align: left;
     color: #D5D5DB;
-    font-size: 5vw; }
+    font-size: 500%; }
   #quantumComputing h2 {
     text-align: left;
     color: #AAB7B8;
-    font-size: 3vw; }
+    font-size: 300%; }
   #quantumComputing h3 {
     text-align: left;
     color: #85929E;
-    font-size: 2vw; }
+    font-size: 200%; }
   #quantumComputing p {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #quantumComputing a:link {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #quantumComputing a:visited {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #quantumComputing a:hover {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #quantumComputing a:active {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #quantumComputing ul {
     text-align: left; }
     #quantumComputing ul li {
       color: #5D6D7E;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 #quantumComputing.backToTop {
   text-align: center;
@@ -423,7 +423,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #D5D5DB;
   background-color: #5D6D7E;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #photography {
   margin: auto;
@@ -438,40 +438,40 @@
   #photography h1 {
     text-align: left;
     color: #D5D5DB;
-    font-size: 5vw; }
+    font-size: 500%; }
   #photography h2 {
     text-align: left;
     color: #AAB7B8;
-    font-size: 3vw; }
+    font-size: 300%; }
   #photography h3 {
     text-align: left;
     color: #85929E;
-    font-size: 2vw; }
+    font-size: 200%; }
   #photography p {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #photography a:link {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #photography a:visited {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #photography a:hover {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #photography a:active {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #photography ul {
     text-align: left; }
     #photography ul li {
       color: #5D6D7E;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 #photography.backToTop {
   text-align: center;
@@ -481,7 +481,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #D5D5DB;
   background-color: #5D6D7E;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #dungeonsAndDragons {
   margin: auto;
@@ -496,40 +496,40 @@
   #dungeonsAndDragons h1 {
     text-align: left;
     color: #D5D5DB;
-    font-size: 5vw; }
+    font-size: 500%; }
   #dungeonsAndDragons h2 {
     text-align: left;
     color: #AAB7B8;
-    font-size: 3vw; }
+    font-size: 300%; }
   #dungeonsAndDragons h3 {
     text-align: left;
     color: #85929E;
-    font-size: 2vw; }
+    font-size: 200%; }
   #dungeonsAndDragons p {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #dungeonsAndDragons a:link {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #dungeonsAndDragons a:visited {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #dungeonsAndDragons a:hover {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #dungeonsAndDragons a:active {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #dungeonsAndDragons ul {
     text-align: left; }
     #dungeonsAndDragons ul li {
       color: #5D6D7E;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 #dungeonsAndDragons.backToTop {
   text-align: center;
@@ -539,7 +539,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #D5D5DB;
   background-color: #5D6D7E;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #history {
   margin: auto;
@@ -554,44 +554,44 @@
   #history h1 {
     text-align: left;
     color: #D5D5DB;
-    font-size: 5vw; }
+    font-size: 500%; }
   #history h2 {
     text-align: left;
     color: #AAB7B8;
-    font-size: 3vw; }
+    font-size: 300%; }
   #history h3 {
     text-align: left;
     color: #85929E;
-    font-size: 2vw; }
+    font-size: 200%; }
   #history p {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #history blockquote {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #history a:link {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #history a:visited {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #history a:hover {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #history a:active {
     text-align: left;
     color: #5D6D7E;
-    font-size: 1vw; }
+    font-size: 100%; }
   #history ul {
     text-align: left; }
     #history ul li {
       color: #5D6D7E;
-      font-size: 1vw; }
+      font-size: 100%; }
   #history table {
     text-align: left;
     border-collapse: collapse;
@@ -602,7 +602,7 @@
       #history table tr th {
         border-color: #5D6D7E;
         color: #5D6D7E;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -610,14 +610,14 @@
       #history table tr td {
         border-color: #5D6D7E;
         color: #5D6D7E;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
         #history table tr td ul li {
           color: #5D6D7E;
-          font-size: 1vw; }
+          font-size: 100%; }
 
 #history.backToTop {
   text-align: center;
@@ -627,7 +627,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #D5D5DB;
   background-color: #5D6D7E;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
@@ -643,40 +643,40 @@
   /* selected link */ }
   #KAN h1 {
     text-align: left;
-    font-size: 5vw;
+    font-size: 500%;
     color: #ff5c5c; }
   #KAN h2 {
     text-align: left;
-    font-size: 3vw;
+    font-size: 300%;
     color: #c2c2d1; }
   #KAN h3 {
     text-align: left;
-    font-size: 2vw;
+    font-size: 200%;
     color: #7a7a99; }
   #KAN a:link {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #KAN a:visited {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #KAN a:hover {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #KAN a:active {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #KAN p {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #KAN ul {
     text-align: left; }
     #KAN ul li {
-      font-size: 1vw;
+      font-size: 100%;
       color: #7a7a99; }
 
 #KAN.backToTop {
@@ -686,7 +686,7 @@
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #7a7a99;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #Cryptocurrency {
   margin: auto;
@@ -700,40 +700,40 @@
   /* selected link */ }
   #Cryptocurrency h1 {
     text-align: left;
-    font-size: 5vw;
+    font-size: 500%;
     color: #ff5c5c; }
   #Cryptocurrency h2 {
     text-align: left;
-    font-size: 3vw;
+    font-size: 300%;
     color: #c2c2d1; }
   #Cryptocurrency h3 {
     text-align: left;
-    font-size: 2vw;
+    font-size: 200%;
     color: #7a7a99; }
   #Cryptocurrency a:link {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #Cryptocurrency a:visited {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #Cryptocurrency a:hover {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #Cryptocurrency a:active {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #Cryptocurrency p {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #Cryptocurrency ul {
     text-align: left; }
     #Cryptocurrency ul li {
-      font-size: 1vw;
+      font-size: 100%;
       color: #7a7a99; }
   #Cryptocurrency table {
     text-align: left;
@@ -745,7 +745,7 @@
       #Cryptocurrency table tr th {
         border-color: #7a7a99;
         color: #7a7a99;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -755,21 +755,21 @@
         /* mouse over link */
         /* selected link */ }
         #Cryptocurrency table tr th a:link {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #Cryptocurrency table tr th a:visited {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #Cryptocurrency table tr th a:hover {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #Cryptocurrency table tr th a:active {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
       #Cryptocurrency table tr td {
         border-color: #7a7a99;
         color: #7a7a99;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -779,16 +779,16 @@
         /* mouse over link */
         /* selected link */ }
         #Cryptocurrency table tr td a:link {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #Cryptocurrency table tr td a:visited {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #Cryptocurrency table tr td a:hover {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #Cryptocurrency table tr td a:active {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
 
 #Cryptocurrency.backToTop {
@@ -798,7 +798,7 @@
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #7a7a99;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #FutureOfQuantum {
   margin: auto;
@@ -812,40 +812,40 @@
   /* selected link */ }
   #FutureOfQuantum h1 {
     text-align: left;
-    font-size: 5vw;
+    font-size: 500%;
     color: #ff5c5c; }
   #FutureOfQuantum h2 {
     text-align: left;
-    font-size: 3vw;
+    font-size: 300%;
     color: #c2c2d1; }
   #FutureOfQuantum h3 {
     text-align: left;
-    font-size: 2vw;
+    font-size: 200%;
     color: #7a7a99; }
   #FutureOfQuantum a:link {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #FutureOfQuantum a:visited {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #FutureOfQuantum a:hover {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #FutureOfQuantum a:active {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #FutureOfQuantum p {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #FutureOfQuantum ul {
     text-align: left; }
     #FutureOfQuantum ul li {
-      font-size: 1vw;
+      font-size: 100%;
       color: #7a7a99; }
   #FutureOfQuantum table {
     text-align: left;
@@ -857,7 +857,7 @@
       #FutureOfQuantum table tr th {
         border-color: #7a7a99;
         color: #7a7a99;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -867,21 +867,21 @@
         /* mouse over link */
         /* selected link */ }
         #FutureOfQuantum table tr th a:link {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #FutureOfQuantum table tr th a:visited {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #FutureOfQuantum table tr th a:hover {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #FutureOfQuantum table tr th a:active {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
       #FutureOfQuantum table tr td {
         border-color: #7a7a99;
         color: #7a7a99;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -891,16 +891,16 @@
         /* mouse over link */
         /* selected link */ }
         #FutureOfQuantum table tr td a:link {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #FutureOfQuantum table tr td a:visited {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #FutureOfQuantum table tr td a:hover {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
         #FutureOfQuantum table tr td a:active {
-          font-size: 1vw;
+          font-size: 100%;
           color: #7a7a99; }
 
 #FutureOfQuantum.backToTop {
@@ -910,7 +910,7 @@
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #7a7a99;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #AGI {
   margin: auto;
@@ -924,44 +924,44 @@
   /* selected link */ }
   #AGI h1 {
     text-align: left;
-    font-size: 5vw;
+    font-size: 500%;
     color: #ff5c5c; }
   #AGI h2 {
     text-align: left;
-    font-size: 3vw;
+    font-size: 300%;
     color: #c2c2d1; }
   #AGI h3 {
     text-align: left;
-    font-size: 2vw;
+    font-size: 200%;
     color: #c2c2d1; }
   #AGI a:link {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #AGI a:visited {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #AGI a:hover {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #AGI a:active {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #AGI p {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
   #AGI ul {
     text-align: left; }
     #AGI ul li {
-      font-size: 1vw;
+      font-size: 100%;
       color: #7a7a99; }
   #AGI dl {
     text-align: left;
-    font-size: 1vw;
+    font-size: 100%;
     color: #7a7a99; }
     #AGI dl dt {
       font-weight: bold;
@@ -970,7 +970,7 @@
       margin: 0;
       padding: 0 0 2em 0; }
       #AGI dl dd ul li {
-        font-size: 1vw;
+        font-size: 100%;
         color: #7a7a99; }
 
 #AGI.backToTop {
@@ -980,7 +980,7 @@
   margin: 0 auto;
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #7a7a99;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
@@ -997,44 +997,44 @@
   #cybersecurityResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 5vw; }
+    font-size: 500%; }
   #cybersecurityResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 3vw; }
+    font-size: 300%; }
   #cybersecurityResources h3 {
     text-align: left;
     color: #8b5aba;
-    font-size: 2vw; }
+    font-size: 200%; }
   #cybersecurityResources p {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cybersecurityResources blockquote {
     text-align: left;
     color: #8b5aba;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #cybersecurityResources a:link {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cybersecurityResources a:visited {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cybersecurityResources a:hover {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cybersecurityResources a:active {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cybersecurityResources ul {
     text-align: left; }
     #cybersecurityResources ul li {
       color: #8b5aba;
-      font-size: 1vw; }
+      font-size: 100%; }
   #cybersecurityResources table {
     text-align: left;
     border-collapse: collapse;
@@ -1045,7 +1045,7 @@
       #cybersecurityResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -1053,7 +1053,7 @@
       #cybersecurityResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -1067,7 +1067,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #f9c54e;
   background-color: #1f1b79;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #artificialIntelligenceResources {
   margin: auto;
@@ -1082,44 +1082,44 @@
   #artificialIntelligenceResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 5vw; }
+    font-size: 500%; }
   #artificialIntelligenceResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 3vw; }
+    font-size: 300%; }
   #artificialIntelligenceResources h3 {
     text-align: left;
     color: #8b5aba;
-    font-size: 2vw; }
+    font-size: 200%; }
   #artificialIntelligenceResources p {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #artificialIntelligenceResources blockquote {
     text-align: left;
     color: #8b5aba;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #artificialIntelligenceResources a:link {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #artificialIntelligenceResources a:visited {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #artificialIntelligenceResources a:hover {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #artificialIntelligenceResources a:active {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #artificialIntelligenceResources ul {
     text-align: left; }
     #artificialIntelligenceResources ul li {
       color: #8b5aba;
-      font-size: 1vw; }
+      font-size: 100%; }
   #artificialIntelligenceResources table {
     text-align: left;
     border-collapse: collapse;
@@ -1130,7 +1130,7 @@
       #artificialIntelligenceResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -1138,7 +1138,7 @@
       #artificialIntelligenceResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -1152,7 +1152,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #f9c54e;
   background-color: #1f1b79;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #cppResources {
   margin: auto;
@@ -1167,44 +1167,44 @@
   #cppResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 5vw; }
+    font-size: 500%; }
   #cppResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 3vw; }
+    font-size: 300%; }
   #cppResources h3 {
     text-align: left;
     color: #8b5aba;
-    font-size: 2vw; }
+    font-size: 200%; }
   #cppResources p {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cppResources blockquote {
     text-align: left;
     color: #8b5aba;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #cppResources a:link {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cppResources a:visited {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cppResources a:hover {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cppResources a:active {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #cppResources ul {
     text-align: left; }
     #cppResources ul li {
       color: #8b5aba;
-      font-size: 1vw; }
+      font-size: 100%; }
   #cppResources table {
     text-align: left;
     border-collapse: collapse;
@@ -1215,7 +1215,7 @@
       #cppResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -1223,7 +1223,7 @@
       #cppResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -1237,7 +1237,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #f9c54e;
   background-color: #1f1b79;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #pythonResources {
   margin: auto;
@@ -1252,44 +1252,44 @@
   #pythonResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 5vw; }
+    font-size: 500%; }
   #pythonResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 3vw; }
+    font-size: 300%; }
   #pythonResources h3 {
     text-align: left;
     color: #8b5aba;
-    font-size: 2vw; }
+    font-size: 200%; }
   #pythonResources p {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #pythonResources blockquote {
     text-align: left;
     color: #8b5aba;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #pythonResources a:link {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #pythonResources a:visited {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #pythonResources a:hover {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #pythonResources a:active {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #pythonResources ul {
     text-align: left; }
     #pythonResources ul li {
       color: #8b5aba;
-      font-size: 1vw; }
+      font-size: 100%; }
   #pythonResources table {
     text-align: left;
     border-collapse: collapse;
@@ -1300,7 +1300,7 @@
       #pythonResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -1308,7 +1308,7 @@
       #pythonResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -1322,7 +1322,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #f9c54e;
   background-color: #1f1b79;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #scriptingResources {
   margin: auto;
@@ -1337,44 +1337,44 @@
   #scriptingResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 5vw; }
+    font-size: 500%; }
   #scriptingResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 3vw; }
+    font-size: 300%; }
   #scriptingResources h3 {
     text-align: left;
     color: #8b5aba;
-    font-size: 2vw; }
+    font-size: 200%; }
   #scriptingResources p {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #scriptingResources blockquote {
     text-align: left;
     color: #8b5aba;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #scriptingResources a:link {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #scriptingResources a:visited {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #scriptingResources a:hover {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #scriptingResources a:active {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #scriptingResources ul {
     text-align: left; }
     #scriptingResources ul li {
       color: #8b5aba;
-      font-size: 1vw; }
+      font-size: 100%; }
   #scriptingResources table {
     text-align: left;
     border-collapse: collapse;
@@ -1385,7 +1385,7 @@
       #scriptingResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -1393,7 +1393,7 @@
       #scriptingResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -1407,7 +1407,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #f9c54e;
   background-color: #1f1b79;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 #operatingSystemsResources {
   margin: auto;
@@ -1422,44 +1422,44 @@
   #operatingSystemsResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 5vw; }
+    font-size: 500%; }
   #operatingSystemsResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 3vw; }
+    font-size: 300%; }
   #operatingSystemsResources h3 {
     text-align: left;
     color: #8b5aba;
-    font-size: 2vw; }
+    font-size: 200%; }
   #operatingSystemsResources p {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #operatingSystemsResources blockquote {
     text-align: left;
     color: #8b5aba;
-    font-size: 1.5vw; }
+    font-size: 150%; }
   #operatingSystemsResources a:link {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #operatingSystemsResources a:visited {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #operatingSystemsResources a:hover {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #operatingSystemsResources a:active {
     text-align: left;
     color: #8b5aba;
-    font-size: 1vw; }
+    font-size: 100%; }
   #operatingSystemsResources ul {
     text-align: left; }
     #operatingSystemsResources ul li {
       color: #8b5aba;
-      font-size: 1vw; }
+      font-size: 100%; }
   #operatingSystemsResources table {
     text-align: left;
     border-collapse: collapse;
@@ -1470,7 +1470,7 @@
       #operatingSystemsResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
@@ -1478,7 +1478,7 @@
       #operatingSystemsResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
-        font-size: 1vw;
+        font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
         border-bottom-style: groove;
@@ -1492,7 +1492,7 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #f9c54e;
   background-color: #1f1b79;
-  font-size: 1vw; }
+  font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
@@ -1508,26 +1508,26 @@ header {
   font-family: "Courier New", monospace; }
   header h1 {
     color: #e0f7fa;
-    font-size: 5vw; }
+    font-size: 500%; }
   header h2 {
     color: #a1d9b0;
-    font-size: 3vw; }
+    font-size: 300%; }
   header h3 {
     color: #50c3a1;
-    font-size: 2vw; }
+    font-size: 200%; }
   header p {
     color: #50c3a1;
-    font-size: 1vw; }
+    font-size: 100%; }
   header #pageMenu {
     background-color: #007a5e;
-    font-size: 1vw; }
+    font-size: 100%; }
     header #pageMenu a {
       display: inline-block;
       color: #e0f7fa;
       margin: auto; }
   header #siteMenu {
     background-color: #007a5e;
-    font-size: 1vw; }
+    font-size: 100%; }
     header #siteMenu a {
       display: inline-block;
       color: #e0f7fa;
@@ -1540,23 +1540,23 @@ body {
   font-family: "Courier New", monospace; }
   body h1 {
     color: #d4d4d9;
-    font-size: 5vw; }
+    font-size: 500%; }
   body h2 {
     color: #d4d4d9;
-    font-size: 3vw; }
+    font-size: 300%; }
   body h3 {
     color: #d4d4d9;
-    font-size: 2vw; }
+    font-size: 200%; }
   body p {
     color: #a0a0b0;
-    font-size: 1vw; }
+    font-size: 100%; }
   body img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 60%;
     height: auto;
-    border: 1vw solid #1a1a1e;
+    border: 1% solid #1a1a1e;
     border-radius: 1%; }
 
 footer {
@@ -1569,31 +1569,31 @@ footer {
     /* mouse over link */
     /* selected link */ }
     footer #contactMe h1 {
-      font-size: 5vw;
+      font-size: 500%;
       color: #1d9a6a; }
     footer #contactMe h2 {
-      font-size: 3vw;
+      font-size: 300%;
       color: #50c3a1; }
     footer #contactMe h3 {
-      font-size: 2vw;
+      font-size: 200%;
       color: #a1d9b0; }
     footer #contactMe address {
       color: #e0f7fa;
-      font-size: 1vw; }
+      font-size: 100%; }
     footer #contactMe a:link {
       color: #e0f7fa;
-      font-size: 1vw; }
+      font-size: 100%; }
     footer #contactMe a:visited {
       color: #a1d9b0;
-      font-size: 1vw; }
+      font-size: 100%; }
     footer #contactMe a:hover {
       color: #e0f7fa;
-      font-size: 1vw; }
+      font-size: 100%; }
     footer #contactMe a:active {
       color: #a1d9b0;
-      font-size: 1vw; }
+      font-size: 100%; }
     footer #contactMe p {
       color: #e0f7fa;
-      font-size: 1vw; }
+      font-size: 100%; }
 
 /*# sourceMappingURL=default.css.map */

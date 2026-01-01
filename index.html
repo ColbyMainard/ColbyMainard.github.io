@@ -31,6 +31,35 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
+        <script>
+            async function fetchAndLoadModule(url) {
+                try {
+                    // 1. Fetch the module source code as plain text
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const moduleText = await response.text();
+
+                    // 2. Encode the text as a base64 data URL to bypass potential MIME type issues
+                    const dataUrl = 'data:text/javascript;base64,' + btoa(moduleText);
+
+                    // 3. Dynamically import the module from the data URL
+                    const module = await import(dataUrl);
+        
+                    // Use the module's exports
+                    console.log('Module loaded successfully:', module);
+                    if (module.exportedFunction) {
+                        module.exportedFunction();
+                    }
+                } catch (error) {
+                    console.error('Failed to load module:', error);
+                }
+            }
+            fetchAndLoadModule("./assets/css/default.css");
+            fetchAndLoadModule("./assets/js/index.js");
+        </script>
+        <script src="./assets/js/index.js" type="module"></script>
     </head>
     <body>
         <header>
@@ -113,9 +142,10 @@
                     <h3>Texas A&M University</h3>
                     <p><u>Start Date:</u> June 2019</p>
                     <p><u>End Date:</u> August 2019</p>
-                    <P>
+                    <p>
                         Identify and correct erroneous research paper attribution for professors (utilizing domain / subject matter as a filter methodology) employing both manual review and automation.
-                    </P>
+                    </p>
+                    <br>
                     <a href="#siteMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
