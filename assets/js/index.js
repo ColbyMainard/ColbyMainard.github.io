@@ -2,9 +2,9 @@ import {
     animate,
     onScroll,
     utils,
-} from 'animejs';
-import React from 'react';
-import * as d3 from 'd3';
+} from '../../node_modules/animejs';
+import React from '../../node_modules/react';
+import * as d3 from '../../node_modules/d3';
 
 // AnimeJS animations
 const debug = true;
