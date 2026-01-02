@@ -23,6 +23,31 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script>
+            AOS.init(
+                {
+                    // Global settings:
+                    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                    initClassName: 'aos-init', // class applied after initialization
+                    animatedClassName: 'aos-animate', // class applied on animation
+                    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+                    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                    offset: 120, // offset (in px) from the original trigger point
+                    delay: 0, // values from 0 to 3000, with step 50ms
+                    duration: 400, // values from 0 to 3000, with step 50ms
+                    easing: 'ease', // default easing for AOS animations
+                    once: false, // whether animation should happen only once - while scrolling down
+                    mirror: false, // whether elements should animate out while scrolling past them
+                    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+                }
+            );
+        </script>
     </head>
     <body>
         <header>
@@ -46,10 +71,34 @@
             </article>
         </header>
         <main class="main" id="main">
-            <h1>Interests / Hobbies</h1>
-            <br>
-            <img src="../images/miscellaneous/DEFCON33.jpeg" alt="DEFCON33 Trip Photo" loading="lazy">
-            <div class="quantumComputingDiv" id="quantumComputingDiv">
+            <div 
+                class="introSectionDiv" 
+                id="introSectionDiv"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-quart"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
+                <h1>Interests / Hobbies</h1>
+                <br>
+                <img src="../images/miscellaneous/DEFCON33.jpeg" alt="DEFCON33 Trip Photo" loading="lazy">
+            </div>
+            <div 
+                class="quantumComputingDiv" 
+                id="quantumComputingDiv"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-quart"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
                 <section class="quantumComputing" id="quantumComputing">
                     <h1>Quantum Computing</h1>
                     <p>
@@ -71,10 +120,21 @@
                         </a>
                     </p>
                     <br>
-                    <a href="#siteMenu" class="backToTop">Back to Top</a>
+                    <a href="#pageMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
-            <div class="photographyDiv" id="photographyDiv">
+            <div 
+                class="photographyDiv" 
+                id="photographyDiv"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-quart"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
                 <section class="photography" id="photography">
                     <h1>Photography</h1>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
@@ -89,10 +149,21 @@
                     <br>
                     <img src="../images/photographyHobby/DSC_0396.JPG" alt="Beautiful purple clouds" loading="lazy">
                     <br>
-                    <a href="#siteMenu" class="backToTop">Back to Top</a>
+                    <a href="#pageMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
-            <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">
+            <div 
+                class="dungeonsAndDragonsDiv" 
+                id="dungeonsAndDragonsDiv"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-quart"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
                 <section class="dungeonsAndDragons" id="dungeonsAndDragons">
                     <h1>Dungeons and Dragons</h1>
                     <p>
@@ -113,10 +184,21 @@
                         Regardless of whether you have ten minutes or ten years of experience, it is a welcoming environment to enjoy a strong communal hobby.
                     </p>
                     <br>
-                    <a href="#siteMenu" class="backToTop">Back to Top</a>
+                    <a href="#pageMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
-            <div class="historyDiv" id="historyDiv">
+            <div 
+                class="historyDiv" 
+                id="historyDiv"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-quart"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
                 <section class="history" id="history">
                     <h1>History</h1>
                     <h2>Why</h2>
@@ -273,7 +355,7 @@
                         </tr>
                     </table>
                     <br>
-                    <a href="#siteMenu" class="backToTop">Back to Top</a>
+                    <a href="#pageMenu" class="backToTop">Back to Top</a>
                 </section>
             </div>
         </main>
