@@ -39,68 +39,9 @@
             gtag('js', new Date());
             gtag('config', 'G-G9Q4KZE3X1');
         </script>
-        <script>
-            import fs from 'fs/promises';
-            import path from 'path';
-            async function fetchAndLoadModule(url) {
-                //Load a javascript module
-                try {
-                    // 1. Fetch the module source code as plain text
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const moduleText = await response.text();
-
-                    // 2. Encode the text as a base64 data URL to bypass potential MIME type issues
-                    const dataUrl = 'data:text/javascript;base64,' + btoa(moduleText);
-
-                    // 3. Dynamically import the module from the data URL
-                    const module = await import(dataUrl);
-        
-                    // Use the module's exports
-                    console.log('Module loaded successfully:', module);
-                    if (module.exportedFunction) {
-                        module.exportedFunction();
-                    }
-                } catch (error) {
-                    console.error('Failed to load module:', error);
-                }
-            }
-            /**
-             * Recursively walks through a directory and yields file paths.
-             * @param {string} dir The directory path to start from.
-             */
-            async function* walk(dir) {
-                for await (const d of await fs.opendir(dir)) {
-                    const entry = path.join(dir, d.name);
-                    if (d.isDirectory()) {
-                        yield* walk(entry); // Recursively call and yield from the subdirectory
-                    } else if (d.isFile()) {
-                        yield entry; // Yield the file path
-                    }
-                }
-            }
-
-            function getExtension(filename) {
-                // Splits the filename by the dot separator and returns the last element
-                return filename.split('.').pop();
-            }
-
-            fetchAndLoadModule("./assets/css/default.css");
-            fetchAndLoadModule("./assets/js/index.js");
-            (async () => {
-                const directoryPath = './node_modules'; // Replace with your path
-                console.log(`--- Files in ${directoryPath} ---`);
-                for await (const p of walk(directoryPath)) {
-                    console.log(p);
-                    if(getExtension(p).endsWith("js")){
-                        fetchAndLoadModule(p);
-                    }
-                }
-            })();
-        </script>
-        <script src="./assets/js/index.js" type="module"></script>
+        <!-- <script src="./node_modules/animejs/dist/bundles/anime.esm.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script type="module" src="./assets/js/index.js"></script>
     </head>
     <body>
         <header>

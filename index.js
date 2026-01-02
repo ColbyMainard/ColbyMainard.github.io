@@ -1,16 +1,8 @@
-import {
-    animate,
-    onScroll,
-    utils,
-} from '../../node_modules/animejs';
-import React from '../../node_modules/react';
-import * as d3 from '../../node_modules/d3';
-
 // AnimeJS animations
 const debug = true;
-let [ $workHistoryContainer ] = utils.$('#workHistory');
+let [ $workHistoryContainer ] = utils.$('#workHistoryDiv');
 let workHistoryAnimation = animate(
-    "#workHistory",
+    "#workHistoryDiv",
     {
         duration: 600,
         loop: true,
@@ -19,9 +11,9 @@ let workHistoryAnimation = animate(
     }
 );
 
-let [ $educationContainer ] = utils.$('#education');
+let [ $educationContainer ] = utils.$('#educationDiv');
 let educationAnimation = animate(
-    "#education",
+    "#educationDiv",
     {
         duration: 600,
         loop: true,
@@ -30,9 +22,9 @@ let educationAnimation = animate(
     }
 );
 
-let [ $projectsContainer ] = utils.$('#projects');
+let [ $projectsContainer ] = utils.$('#projectsDiv');
 let projectsAnimation = animate(
-    "#projects",
+    "#projectsDiv",
     {
         duration: 600,
         loop: true,
@@ -41,9 +33,9 @@ let projectsAnimation = animate(
     }
 );
 
-let [ $technicalSkillsContainer ] = utils.$('#technicalSkills');
+let [ $technicalSkillsContainer ] = utils.$('#technicalSkillsDiv');
 let technicalSkillsAnimation = animate(
-    "#technicalSkills",
+    "#technicalSkillsDiv",
     {
         duration: 600,
         loop: true,
@@ -52,9 +44,9 @@ let technicalSkillsAnimation = animate(
     }
 );
 
-let [ $certificationsContainer ] = utils.$('#certifications');
+let [ $certificationsContainer ] = utils.$('#certificationsDiv');
 let certificationsAnimation = animate(
-    "#certifications",
+    "#certificationsDiv",
     {
         duration: 600,
         loop: true,
@@ -63,9 +55,9 @@ let certificationsAnimation = animate(
     }
 );
 
-let [ $contactMeContainer ] = utils.$('#contactMe');
+let [ $contactMeContainer ] = utils.$('#contactMeDiv');
 let contactMeAnimation = animate(
-    "#contactMe",
+    "#contactMeDiv",
     {
         duration: 600,
         loop: true,
