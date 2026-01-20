@@ -45,6 +45,7 @@
     font-size: 100%; }
 
 #workHistory.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -129,6 +130,7 @@
           font-size: 100%; }
 
 #education.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -182,6 +184,7 @@
     font-size: 100%; }
 
 #projects.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -240,6 +243,7 @@
       font-size: 100%; }
 
 #technicalSkills.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -298,6 +302,7 @@
       font-size: 100%; }
 
 #otherSkills.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -356,6 +361,7 @@
       font-size: 100%; }
 
 #certifications.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -416,6 +422,7 @@
       font-size: 100%; }
 
 #quantumComputing.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -474,6 +481,7 @@
       font-size: 100%; }
 
 #photography.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -532,6 +540,7 @@
       font-size: 100%; }
 
 #dungeonsAndDragons.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -620,6 +629,7 @@
           font-size: 100%; }
 
 #history.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -680,6 +690,7 @@
       color: #7a7a99; }
 
 #KAN.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -792,6 +803,7 @@
           color: #7a7a99; }
 
 #Cryptocurrency.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -904,6 +916,7 @@
           color: #7a7a99; }
 
 #FutureOfQuantum.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -974,6 +987,78 @@
         color: #7a7a99; }
 
 #AGI.backToTop {
+  width: 80%;
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #7a7a99;
+  font-size: 100%; }
+
+#Privacy {
+  margin: auto;
+  background-color: #20203c;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #Privacy h1 {
+    text-align: left;
+    font-size: 500%;
+    color: #ff5c5c; }
+  #Privacy h2 {
+    text-align: left;
+    font-size: 300%;
+    color: #c2c2d1; }
+  #Privacy h3 {
+    text-align: left;
+    font-size: 200%;
+    color: #c2c2d1; }
+  #Privacy a:link {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #Privacy a:visited {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #Privacy a:hover {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #Privacy a:active {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #Privacy p {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #Privacy ul {
+    text-align: left; }
+    #Privacy ul li {
+      font-size: 100%;
+      color: #7a7a99; }
+  #Privacy dl {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+    #Privacy dl dt {
+      font-weight: bold;
+      text-decoration: underline; }
+    #Privacy dl dd {
+      margin: 0;
+      padding: 0 0 2em 0; }
+      #Privacy dl dd ul li {
+        font-size: 100%;
+        color: #7a7a99; }
+
+#Privacy.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1060,6 +1145,7 @@
         border-left-style: groove; }
 
 #cybersecurityResources.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1070,6 +1156,7 @@
   font-size: 100%; }
 
 #artificialIntelligenceResources {
+  width: 80%;
   margin: auto;
   background-color: #1f1b79;
   width: 80%;
@@ -1145,6 +1232,7 @@
         border-left-style: groove; }
 
 #artificialIntelligenceResources.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1230,6 +1318,7 @@
         border-left-style: groove; }
 
 #cppResources.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1315,6 +1404,7 @@
         border-left-style: groove; }
 
 #pythonResources.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1400,6 +1490,7 @@
         border-left-style: groove; }
 
 #scriptingResources.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1485,6 +1576,7 @@
         border-left-style: groove; }
 
 #operatingSystemsResources.backToTop {
+  width: 80%;
   text-align: center;
   display: block;
   /* Ensures the link to the top behaves as a block-level element */
@@ -1503,6 +1595,7 @@ html {
   scroll-behavior: smooth; }
 
 header {
+  width: 100%;
   text-align: center;
   background-color: #007a5e;
   font-family: "Courier New", monospace; }
@@ -1534,6 +1627,7 @@ header {
       margin: auto; }
 
 body {
+  width: 100%;
   margin: auto;
   text-align: center;
   background-color: #3e3e41;
@@ -1560,6 +1654,7 @@ body {
     border-radius: 1%; }
 
 footer {
+  width: 100%;
   text-align: center;
   background-color: #007a5e; }
   footer #contactMe {

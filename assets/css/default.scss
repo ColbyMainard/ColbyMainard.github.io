@@ -33,6 +33,7 @@ html{
 }
 
 header {
+    width: 100%;
     text-align: center;
     background-color: $emerald_efficiency_1;
     font-family: "Courier New", monospace;
@@ -73,6 +74,7 @@ header {
 }
 
 body {
+    width: 100%;
     margin: auto;
     text-align: center;
     background-color: $noir_2;
@@ -105,6 +107,7 @@ body {
 }
 
 footer {
+    width: 100%;
     text-align: center;
     background-color: $emerald_efficiency_1;
     #contactMe {
