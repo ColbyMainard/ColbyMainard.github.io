@@ -99,7 +99,4 @@ User-agent: YandexAdditionalBot
 User-agent: YouBot
 Disallow: /
 
-User-agent: *
-Disallow: /.github/
-
 Sitemap: https://www.colbymainard.github.io/sitemap.xml
