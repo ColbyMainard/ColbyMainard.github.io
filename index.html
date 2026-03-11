@@ -32,31 +32,8 @@
         <!-- Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q4KZE3X1"></script>
         <script src="./assets/js/google_analytics.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script>
-            AOS.init(
-                {
-                    // Global settings:
-                    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-                    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-                    initClassName: 'aos-init', // class applied after initialization
-                    animatedClassName: 'aos-animate', // class applied on animation
-                    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-                    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-                    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-                    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-                    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-                    offset: 120, // offset (in px) from the original trigger point
-                    delay: 0, // values from 0 to 3000, with step 50ms
-                    duration: 400, // values from 0 to 3000, with step 50ms
-                    easing: 'ease', // default easing for AOS animations
-                    once: false, // whether animation should happen only once - while scrolling down
-                    mirror: false, // whether elements should animate out while scrolling past them
-                    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-                }
-            );
-        </script>
+        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     </head>
     <body>
         <header>
@@ -81,18 +58,7 @@
             </article>
         </header>
         <main class="main" id="main">
-            <div 
-                class="introSectionDiv" 
-                id="introSectionDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+            <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Colby Mainard</h1>
                 <h2>Machine Learning Expert</h2>
                 <p>
@@ -105,18 +71,7 @@
                     Comfortable designing novel foundational models (e.g. variational auto-encoders, image/text classification, generative adversarial networks) as well as building upon foundational models (including LLMs).
                 </p>
             </div>
-            <div 
-                class="workHistoryDiv" 
-                id="workHistoryDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+            <div class="workHistoryDiv" id="workHistoryDiv">
                 <section class="workHistory" id="workHistory">
                     <h1>Work History</h1>
                     <svg width="20%" viewBox="0 0 300 200">
@@ -184,18 +139,7 @@
                 </section>
             </div>
             <br>
-            <div 
-                class="educationDiv" 
-                id="educationDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+            <div class="educationDiv" id="educationDiv">
                 <section class="education" id="education">
                     <h1>Education</h1>
                     <svg width="20%" viewBox="0 0 300 200">
@@ -1475,18 +1419,7 @@
                 </section>
             </div>
             <br>
-            <div 
-                class="projectsDiv" 
-                id="projectsDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+            <div class="projectsDiv" id="projectsDiv">
                 <section class="projects" id="projects">
                     <h1>Projects</h1>
                     <svg width="20%" viewBox="0 0 300 200">
@@ -1535,18 +1468,7 @@
                 </section>
             </div>
             <br>
-            <div 
-                class="technicalSkillsDiv" 
-                id="technicalSkillsDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+            <div class="technicalSkillsDiv" id="technicalSkillsDiv">
                 <section class="technicalSkills" id="technicalSkills">
                     <h1>Technical Skills</h1>
                     <svg width="20%" viewBox="0 0 300 200">
@@ -1948,14 +1870,6 @@
             <div 
                 class="certificationsDiv" 
                 id="certificationsDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
             >
                 <section class="certifications" id="certifications">
                     <h1>Certifications</h1>
@@ -1984,14 +1898,6 @@
             <div 
                 class="otherSkillsDiv" 
                 id="otherSkillsDiv"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out-quart"
-                data-aos-mirror="false"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
             >
                 <section class="otherSkills" id="otherSkills">
                     <h1>Other Skills</h1>
