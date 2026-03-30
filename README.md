@@ -1,11 +1,16 @@
 # ColbyMainard.github.io: Colby Mainard's Personal Website
-## Public landing page to give personal context in a professionally digestible way
+
+## A personal website to highlight my skills, knowledge, and interests
+
 ### Work History
-Previous and current roles, with descriptions
+I discuss both current and previous roles I held, with descriptions where possible. 
+
 ### Education
-Going over college education and course expectations to highlight competencies
+Going over my college education and course expectations to highlight competencies and knowledge.
+
 ### Projects
-A combination of personal and academic projects
+A combination of personal and academic projects.
+
 ### Technical Skills
 Technical skills I have used, including:
     - Programming languages
@@ -15,21 +20,25 @@ Technical skills I have used, including:
     - Competencies
     - Cloud
     - Miscellaneous other skills without an easily-defined category
+
+### Technical Resources
+
 ### Other Skills
-More general soft/non-technical skills.
-Mainly focused on business and interpersonal.
+More general soft/non-technical skills I possess, mainly focused on business and interpersonal.
+
 ### Certifications
-Other certifications I have.
-Currently cloud focused.
+Other certifications I have, which are currently cloud-computing focused.
+
 ### Hobbies
 Going over hobbies on a separate webpage.
 Hobbies include:
-    - Fitness
     - Quantum Computing
     - Photography
     - Dungeons and Dragons
     - History
+
 ### Languages
 Languages I can speak.
+
 ### Technical Opinions
 Going over my stance on certain technologies on a different webpage
