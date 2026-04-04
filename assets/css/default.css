@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
@@ -381,6 +382,78 @@
   background-color: #200b4b;
   font-size: 100%; }
 
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ * Without JS, the .js-animations class is never added and
+ * content remains fully visible.
+ */
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+html.js-animations #workHistory > h1,
+html.js-animations #workHistory > h2,
+html.js-animations #workHistory > h3,
+html.js-animations #workHistory > p,
+html.js-animations #workHistory > ul,
+html.js-animations #workHistory > svg,
+html.js-animations #workHistory > table,
+html.js-animations #workHistory > a,
+html.js-animations #workHistory > address,
+html.js-animations #education > h1,
+html.js-animations #education > h2,
+html.js-animations #education > h3,
+html.js-animations #education > p,
+html.js-animations #education > ul,
+html.js-animations #education > svg,
+html.js-animations #education > table,
+html.js-animations #education > a,
+html.js-animations #education > address,
+html.js-animations #projects > h1,
+html.js-animations #projects > h2,
+html.js-animations #projects > h3,
+html.js-animations #projects > p,
+html.js-animations #projects > ul,
+html.js-animations #projects > svg,
+html.js-animations #projects > table,
+html.js-animations #projects > a,
+html.js-animations #projects > address,
+html.js-animations #technicalSkills > h1,
+html.js-animations #technicalSkills > h2,
+html.js-animations #technicalSkills > h3,
+html.js-animations #technicalSkills > p,
+html.js-animations #technicalSkills > ul,
+html.js-animations #technicalSkills > svg,
+html.js-animations #technicalSkills > table,
+html.js-animations #technicalSkills > a,
+html.js-animations #technicalSkills > address,
+html.js-animations #certifications > h1,
+html.js-animations #certifications > h2,
+html.js-animations #certifications > h3,
+html.js-animations #certifications > p,
+html.js-animations #certifications > ul,
+html.js-animations #certifications > svg,
+html.js-animations #certifications > table,
+html.js-animations #certifications > a,
+html.js-animations #certifications > address,
+html.js-animations #otherSkills > h1,
+html.js-animations #otherSkills > h2,
+html.js-animations #otherSkills > h3,
+html.js-animations #otherSkills > p,
+html.js-animations #otherSkills > ul,
+html.js-animations #otherSkills > svg,
+html.js-animations #otherSkills > table,
+html.js-animations #otherSkills > a,
+html.js-animations #otherSkills > address,
+html.js-animations #contactMe > h1,
+html.js-animations #contactMe > h2,
+html.js-animations #contactMe > h3,
+html.js-animations #contactMe > p,
+html.js-animations #contactMe > ul,
+html.js-animations #contactMe > svg,
+html.js-animations #contactMe > table,
+html.js-animations #contactMe > a,
+html.js-animations #contactMe > address {
+  opacity: 0; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 #quantumComputing {
@@ -648,6 +721,68 @@
   color: #D5D5DB;
   background-color: #5D6D7E;
   font-size: 100%; }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+html.js-animations #quantumComputing > h1,
+html.js-animations #quantumComputing > h2,
+html.js-animations #quantumComputing > h3,
+html.js-animations #quantumComputing > p,
+html.js-animations #quantumComputing > ul,
+html.js-animations #quantumComputing > svg,
+html.js-animations #quantumComputing > img,
+html.js-animations #quantumComputing > table,
+html.js-animations #quantumComputing > blockquote,
+html.js-animations #quantumComputing > a,
+html.js-animations #quantumComputing > address,
+html.js-animations #photography > h1,
+html.js-animations #photography > h2,
+html.js-animations #photography > h3,
+html.js-animations #photography > p,
+html.js-animations #photography > ul,
+html.js-animations #photography > svg,
+html.js-animations #photography > img,
+html.js-animations #photography > table,
+html.js-animations #photography > blockquote,
+html.js-animations #photography > a,
+html.js-animations #photography > address,
+html.js-animations #dungeonsAndDragons > h1,
+html.js-animations #dungeonsAndDragons > h2,
+html.js-animations #dungeonsAndDragons > h3,
+html.js-animations #dungeonsAndDragons > p,
+html.js-animations #dungeonsAndDragons > ul,
+html.js-animations #dungeonsAndDragons > svg,
+html.js-animations #dungeonsAndDragons > img,
+html.js-animations #dungeonsAndDragons > table,
+html.js-animations #dungeonsAndDragons > blockquote,
+html.js-animations #dungeonsAndDragons > a,
+html.js-animations #dungeonsAndDragons > address,
+html.js-animations #history > h1,
+html.js-animations #history > h2,
+html.js-animations #history > h3,
+html.js-animations #history > p,
+html.js-animations #history > ul,
+html.js-animations #history > svg,
+html.js-animations #history > img,
+html.js-animations #history > table,
+html.js-animations #history > blockquote,
+html.js-animations #history > a,
+html.js-animations #history > address,
+html.js-animations #contactMe > h1,
+html.js-animations #contactMe > h2,
+html.js-animations #contactMe > h3,
+html.js-animations #contactMe > p,
+html.js-animations #contactMe > ul,
+html.js-animations #contactMe > svg,
+html.js-animations #contactMe > img,
+html.js-animations #contactMe > table,
+html.js-animations #contactMe > blockquote,
+html.js-animations #contactMe > a,
+html.js-animations #contactMe > address {
+  opacity: 0; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
@@ -1076,6 +1211,67 @@
   /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
   color: #7a7a99;
   font-size: 100%; }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+html.js-animations #KAN > h1,
+html.js-animations #KAN > h2,
+html.js-animations #KAN > h3,
+html.js-animations #KAN > p,
+html.js-animations #KAN > ul,
+html.js-animations #KAN > dl,
+html.js-animations #KAN > table,
+html.js-animations #KAN > a,
+html.js-animations #KAN > address,
+html.js-animations #Cryptocurrency > h1,
+html.js-animations #Cryptocurrency > h2,
+html.js-animations #Cryptocurrency > h3,
+html.js-animations #Cryptocurrency > p,
+html.js-animations #Cryptocurrency > ul,
+html.js-animations #Cryptocurrency > dl,
+html.js-animations #Cryptocurrency > table,
+html.js-animations #Cryptocurrency > a,
+html.js-animations #Cryptocurrency > address,
+html.js-animations #FutureOfQuantum > h1,
+html.js-animations #FutureOfQuantum > h2,
+html.js-animations #FutureOfQuantum > h3,
+html.js-animations #FutureOfQuantum > p,
+html.js-animations #FutureOfQuantum > ul,
+html.js-animations #FutureOfQuantum > dl,
+html.js-animations #FutureOfQuantum > table,
+html.js-animations #FutureOfQuantum > a,
+html.js-animations #FutureOfQuantum > address,
+html.js-animations #AGI > h1,
+html.js-animations #AGI > h2,
+html.js-animations #AGI > h3,
+html.js-animations #AGI > p,
+html.js-animations #AGI > ul,
+html.js-animations #AGI > dl,
+html.js-animations #AGI > table,
+html.js-animations #AGI > a,
+html.js-animations #AGI > address,
+html.js-animations #Privacy > h1,
+html.js-animations #Privacy > h2,
+html.js-animations #Privacy > h3,
+html.js-animations #Privacy > p,
+html.js-animations #Privacy > ul,
+html.js-animations #Privacy > dl,
+html.js-animations #Privacy > table,
+html.js-animations #Privacy > a,
+html.js-animations #Privacy > address,
+html.js-animations #contactMe > h1,
+html.js-animations #contactMe > h2,
+html.js-animations #contactMe > h3,
+html.js-animations #contactMe > p,
+html.js-animations #contactMe > ul,
+html.js-animations #contactMe > dl,
+html.js-animations #contactMe > table,
+html.js-animations #contactMe > a,
+html.js-animations #contactMe > address {
+  opacity: 0; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
@@ -1595,6 +1791,83 @@
   color: #f9c54e;
   background-color: #1f1b79;
   font-size: 100%; }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+html.js-animations #cybersecurityResources > h1,
+html.js-animations #cybersecurityResources > h2,
+html.js-animations #cybersecurityResources > h3,
+html.js-animations #cybersecurityResources > p,
+html.js-animations #cybersecurityResources > ul,
+html.js-animations #cybersecurityResources > svg,
+html.js-animations #cybersecurityResources > table,
+html.js-animations #cybersecurityResources > blockquote,
+html.js-animations #cybersecurityResources > a,
+html.js-animations #cybersecurityResources > address,
+html.js-animations #artificialIntelligenceResources > h1,
+html.js-animations #artificialIntelligenceResources > h2,
+html.js-animations #artificialIntelligenceResources > h3,
+html.js-animations #artificialIntelligenceResources > p,
+html.js-animations #artificialIntelligenceResources > ul,
+html.js-animations #artificialIntelligenceResources > svg,
+html.js-animations #artificialIntelligenceResources > table,
+html.js-animations #artificialIntelligenceResources > blockquote,
+html.js-animations #artificialIntelligenceResources > a,
+html.js-animations #artificialIntelligenceResources > address,
+html.js-animations #cppResources > h1,
+html.js-animations #cppResources > h2,
+html.js-animations #cppResources > h3,
+html.js-animations #cppResources > p,
+html.js-animations #cppResources > ul,
+html.js-animations #cppResources > svg,
+html.js-animations #cppResources > table,
+html.js-animations #cppResources > blockquote,
+html.js-animations #cppResources > a,
+html.js-animations #cppResources > address,
+html.js-animations #pythonResources > h1,
+html.js-animations #pythonResources > h2,
+html.js-animations #pythonResources > h3,
+html.js-animations #pythonResources > p,
+html.js-animations #pythonResources > ul,
+html.js-animations #pythonResources > svg,
+html.js-animations #pythonResources > table,
+html.js-animations #pythonResources > blockquote,
+html.js-animations #pythonResources > a,
+html.js-animations #pythonResources > address,
+html.js-animations #scriptingResources > h1,
+html.js-animations #scriptingResources > h2,
+html.js-animations #scriptingResources > h3,
+html.js-animations #scriptingResources > p,
+html.js-animations #scriptingResources > ul,
+html.js-animations #scriptingResources > svg,
+html.js-animations #scriptingResources > table,
+html.js-animations #scriptingResources > blockquote,
+html.js-animations #scriptingResources > a,
+html.js-animations #scriptingResources > address,
+html.js-animations #operatingSystemsResources > h1,
+html.js-animations #operatingSystemsResources > h2,
+html.js-animations #operatingSystemsResources > h3,
+html.js-animations #operatingSystemsResources > p,
+html.js-animations #operatingSystemsResources > ul,
+html.js-animations #operatingSystemsResources > svg,
+html.js-animations #operatingSystemsResources > table,
+html.js-animations #operatingSystemsResources > blockquote,
+html.js-animations #operatingSystemsResources > a,
+html.js-animations #operatingSystemsResources > address,
+html.js-animations #contactMe > h1,
+html.js-animations #contactMe > h2,
+html.js-animations #contactMe > h3,
+html.js-animations #contactMe > p,
+html.js-animations #contactMe > ul,
+html.js-animations #contactMe > svg,
+html.js-animations #contactMe > table,
+html.js-animations #contactMe > blockquote,
+html.js-animations #contactMe > a,
+html.js-animations #contactMe > address {
+  opacity: 0; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */

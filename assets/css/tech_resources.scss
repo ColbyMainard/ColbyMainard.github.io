@@ -634,3 +634,22 @@ $neon_dusk_serenity_5: #f9c54e;
     background-color: $neon_dusk_serenity_1;
     font-size: 100%;
 }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations {
+    #introSectionDiv,
+    #cybersecurityResources,
+    #artificialIntelligenceResources,
+    #cppResources,
+    #pythonResources,
+    #scriptingResources,
+    #operatingSystemsResources,
+    #contactMe {
+        > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a, > address {
+            opacity: 0;
+        }
+    }
+}

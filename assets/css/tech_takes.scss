@@ -560,3 +560,21 @@ $dark_blue_gray_5: #ff5c5c;
     color: $dark_blue_gray_3;
     font-size: 100%;
 }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations {
+    #introSectionDiv,
+    #KAN,
+    #Cryptocurrency,
+    #FutureOfQuantum,
+    #AGI,
+    #Privacy,
+    #contactMe {
+        > h1, > h2, > h3, > p, > ul, > dl, > table, > a, > address {
+            opacity: 0;
+        }
+    }
+}

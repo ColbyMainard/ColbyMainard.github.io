@@ -341,3 +341,20 @@ $calm_authority_5: #D5D5DB;
     background-color: $calm_authority_2;
     font-size: 100%;
 }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations {
+    #introSectionDiv,
+    #quantumComputing,
+    #photography,
+    #dungeonsAndDragons,
+    #history,
+    #contactMe {
+        > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address {
+            opacity: 0;
+        }
+    }
+}

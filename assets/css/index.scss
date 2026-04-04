@@ -481,3 +481,24 @@ $cyberpunk_dreams_5: #200b4b;
     background-color: $cyberpunk_dreams_5;
     font-size: 100%;
 }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ * Without JS, the .js-animations class is never added and
+ * content remains fully visible.
+ */
+html.js-animations {
+    #introSectionDiv,
+    #workHistory,
+    #education,
+    #projects,
+    #technicalSkills,
+    #certifications,
+    #otherSkills,
+    #contactMe {
+        > h1, > h2, > h3, > p, > ul, > svg, > table, > a, > address {
+            opacity: 0;
+        }
+    }
+}
