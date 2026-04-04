@@ -37,8 +37,5 @@ Hobbies include:
     - Dungeons and Dragons
     - History
 
-### Languages
-Languages I can speak.
-
 ### Technical Opinions
-Going over my stance on certain technologies on a different webpage
+Going over my stance on certain technologies, relevant trends, and tech news
