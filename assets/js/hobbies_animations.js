@@ -34,19 +34,17 @@
      * Intro — Fade in heading, image scales up
      */
     function animateIntro(el) {
-        var tl = anime.timeline({ easing: "easeOutExpo" });
+        var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add({
-            targets: el.querySelector("h1"),
+        tl.add(el.querySelector("h1"), {
             opacity: [0, 1],
             translateY: ["-40px", "0px"],
             duration: 800
-        }).add({
-            targets: el.querySelector("img"),
+        }).add(el.querySelector("img"), {
             opacity: [0, 1],
             scale: [0.85, 1],
             duration: 700
-        }, "-=400");
+        }, ">-400");
     }
 
     /**
@@ -54,27 +52,24 @@
      * Superposition shimmer, matching the tech_takes quantum style
      */
     function animateQuantum(el) {
-        var tl = anime.timeline({ easing: "easeOutSine" });
+        var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             scale: [1.15, 0.95, 1],
             duration: 900
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [1.08, 0.98, 1],
             duration: 700,
             delay: anime.stagger(100)
-        }, "-=400").add({
-            targets: directChildren(el, "p, ul, a"),
+        }, ">-400").add(directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             scale: [1.03, 1],
             translateY: ["15px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -82,26 +77,23 @@
      * Elements bloom outward from center
      */
     function animatePhotography(el) {
-        var tl = anime.timeline({ easing: "easeOutBack" });
+        var tl = anime.createTimeline({ ease: "outBack" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             scale: [0.3, 1],
             duration: 800
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [0.5, 1],
             duration: 600,
             delay: anime.stagger(100)
-        }, "-=400").add({
-            targets: directChildren(el, "p, ul, img, a"),
+        }, ">-400").add(directChildren(el, "p, ul, img, a"), {
             opacity: [0, 1],
             scale: [0.8, 1],
             duration: 500,
             delay: anime.stagger(80)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -109,28 +101,25 @@
      * Adventurous, dramatic entrance like a quest reveal
      */
     function animateDnD(el) {
-        var tl = anime.timeline({ easing: "easeOutBounce" });
+        var tl = anime.createTimeline({ ease: "outBounce" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateX: ["-80px", "0px"],
             duration: 900
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateX: ["-60px", "0px"],
             duration: 700,
             delay: anime.stagger(100),
-            easing: "easeOutQuart"
-        }, "-=400").add({
-            targets: directChildren(el, "p, ul, a"),
+            ease: "outQuart"
+        }, ">-400").add(directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             translateX: ["-40px", "0px"],
             duration: 500,
             delay: anime.stagger(60),
-            easing: "easeOutQuart"
-        }, "-=300");
+            ease: "outQuart"
+        }, ">-300");
     }
 
     /**
@@ -138,36 +127,32 @@
      * Elements emerge slowly like uncovering ancient text
      */
     function animateHistory(el) {
-        var tl = anime.timeline({ easing: "easeOutCubic" });
+        var tl = anime.createTimeline({ ease: "outCubic" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateY: ["50px", "0px"],
             duration: 800
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateY: ["40px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, "-=400").add({
-            targets: directChildren(el, "p, blockquote, ul, table, a"),
+        }, ">-400").add(directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
      * Contact/Footer — Simple fade in
      */
     function animateContact(el) {
-        var tl = anime.timeline({ easing: "easeOutSine" });
+        var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add({
-            targets: el.querySelectorAll("h2, p, a"),
+        tl.add(el.querySelectorAll("h2, p, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

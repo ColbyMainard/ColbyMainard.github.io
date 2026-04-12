@@ -2,7 +2,7 @@
 
 ## Overview
 
-AnimeJS v3.2.2 timeline animations were added to all four pages of the site. Each content section within a page has a unique animation style that triggers once as the user scrolls it into view. Elements within the same section share a consistent animation style, coordinated through AnimeJS timelines.
+AnimeJS v4.3.5 timeline animations were added to all four pages of the site. Each content section within a page has a unique animation style that triggers once as the user scrolls it into view. Elements within the same section share a consistent animation style, coordinated through AnimeJS timelines.
 
 ## Architecture
 
@@ -23,7 +23,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 
 2. **Scroll Trigger (Intersection Observer)**: Each section is observed with a low threshold (`0.02`) and a bottom margin offset (`-50px`). As soon as 2% of a section enters the viewport, its animation fires once and the observer disconnects for that section.
 
-3. **Timeline Coordination (AnimeJS)**: Each section's animation is built as an `anime.timeline()`. Elements within the same section are staggered using relative offsets (e.g., `"-=300"`) so that headings appear first, followed by SVGs/images, then body content.
+3. **Timeline Coordination (AnimeJS)**: Each section's animation is built as an `anime.createTimeline()`. Elements within the same section are staggered using relative offsets (e.g., `">-300"`) so that headings appear first, followed by SVGs/images, then body content.
 
 ### Design Decisions
 
@@ -116,11 +116,12 @@ The exact list of child selectors varies by page based on what element types are
 Each HTML page received two script tags in the `<head>`:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
+<script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
 <script src="../js/{page}_animations.js" defer></script>
 ```
 
-AnimeJS is loaded from the jsDelivr CDN. The page-specific animation file uses `defer` to ensure it runs after the DOM is parsed.
+AnimeJS v4 is ESM-only. The importmap resolves the `animejs` specifier to jsDelivr's `+esm` endpoint, which serves the package's declared entry point with the correct MIME type and CORS headers. The inline module script imports all named exports (`createTimeline`, `stagger`, etc.) and assigns them to `window.anime` so the deferred animation files can access them as globals. The page-specific animation file uses `defer` to ensure it runs after the DOM is parsed and after the module script has executed.
 
 ## Pending
 

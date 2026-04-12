@@ -36,20 +36,18 @@
      * Intro — Fade in + drop from above
      */
     function animateIntro(el) {
-        var tl = anime.timeline({ easing: "easeOutExpo" });
+        var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add({
-            targets: el.querySelector("h1"),
+        tl.add(el.querySelector("h1"), {
             opacity: [0, 1],
             translateY: ["-40px", "0px"],
             duration: 800
-        }).add({
-            targets: el.querySelectorAll("p"),
+        }).add(el.querySelectorAll("p"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 600,
             delay: anime.stagger(150)
-        }, "-=400");
+        }, ">-400");
     }
 
     /**
@@ -57,31 +55,27 @@
      * Rapid opacity flicker then settle, elements slide from alternating sides
      */
     function animateCybersecurity(el) {
-        var tl = anime.timeline({ easing: "easeOutQuart" });
+        var tl = anime.createTimeline({ ease: "outQuart" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 0.3, 0, 0.6, 0, 1],
             translateX: ["-10px", "5px", "-3px", "0px"],
             duration: 900
-        }).add({
-            targets: directChildren(el, "svg"),
+        }).add(directChildren(el, "svg"), {
             opacity: [0, 1],
             scale: [0.7, 1],
             duration: 500
-        }, "-=400").add({
-            targets: directChildren(el, "h2"),
+        }, ">-400").add(directChildren(el, "h2"), {
             opacity: [0, 0.4, 0, 1],
             translateX: ["30px", "-8px", "0px"],
             duration: 700,
             delay: anime.stagger(100)
-        }, "-=200").add({
-            targets: directChildren(el, "h3, p, blockquote, ul, table, a"),
+        }, ">-200").add(directChildren(el, "h3, p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateX: ["-20px", "4px", "0px"],
             duration: 500,
             delay: anime.stagger(50)
-        }, "-=400");
+        }, ">-400");
     }
 
     /**
@@ -89,34 +83,30 @@
      * Neural-network inspired: elements bloom outward from center
      */
     function animateAI(el) {
-        var tl = anime.timeline({ easing: "easeOutBack" });
+        var tl = anime.createTimeline({ ease: "outBack" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             scale: [0.4, 1],
             duration: 800
-        }).add({
-            targets: directChildren(el, "svg"),
+        }).add(directChildren(el, "svg"), {
             opacity: [0, 1],
             scale: [0.2, 1],
             rotate: ["8deg", "0deg"],
             duration: 600
-        }, "-=400").add({
-            targets: directChildren(el, "h2, h3"),
+        }, ">-400").add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [0.7, 1],
             translateY: ["15px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, "-=300").add({
-            targets: directChildren(el, "p, blockquote, ul, table, a"),
+        }, ">-300").add(directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             scale: [0.9, 1],
             translateY: ["20px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -124,31 +114,27 @@
      * Methodical, precise entrance matching the language's nature
      */
     function animateCpp(el) {
-        var tl = anime.timeline({ easing: "easeOutCubic" });
+        var tl = anime.createTimeline({ ease: "outCubic" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateX: ["-70px", "0px"],
             duration: 700
-        }).add({
-            targets: directChildren(el, "svg"),
+        }).add(directChildren(el, "svg"), {
             opacity: [0, 1],
             translateX: ["-50px", "0px"],
             duration: 500
-        }, "-=300").add({
-            targets: directChildren(el, "h2, h3"),
+        }, ">-300").add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateX: ["-50px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
-        }, "-=200").add({
-            targets: directChildren(el, "p, blockquote, ul, table, a"),
+        }, ">-200").add(directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateX: ["-30px", "0px"],
             duration: 500,
             delay: anime.stagger(50)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -156,31 +142,27 @@
      * Smooth and flowing, contrasting with C++
      */
     function animatePython(el) {
-        var tl = anime.timeline({ easing: "easeOutSine" });
+        var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateX: ["70px", "0px"],
             duration: 700
-        }).add({
-            targets: directChildren(el, "svg"),
+        }).add(directChildren(el, "svg"), {
             opacity: [0, 1],
             translateX: ["50px", "0px"],
             duration: 500
-        }, "-=300").add({
-            targets: directChildren(el, "h2, h3"),
+        }, ">-300").add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateX: ["50px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
-        }, "-=200").add({
-            targets: directChildren(el, "p, blockquote, ul, table, a"),
+        }, ">-200").add(directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateX: ["30px", "0px"],
             duration: 500,
             delay: anime.stagger(50)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -188,31 +170,27 @@
      * Command-line feel: text appearing line by line
      */
     function animateScripting(el) {
-        var tl = anime.timeline({ easing: "easeOutExpo" });
+        var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateY: ["50px", "0px"],
             duration: 700
-        }).add({
-            targets: directChildren(el, "svg"),
+        }).add(directChildren(el, "svg"), {
             opacity: [0, 1],
             translateY: ["40px", "0px"],
             duration: 500
-        }, "-=300").add({
-            targets: directChildren(el, "h2, h3"),
+        }, ">-300").add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateY: ["35px", "0px"],
             duration: 500,
             delay: anime.stagger(100)
-        }, "-=200").add({
-            targets: directChildren(el, "p, blockquote, ul, table, a"),
+        }, ">-200").add(directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateY: ["25px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -220,43 +198,38 @@
      * Layered drop, like OS abstraction layers stacking
      */
     function animateOS(el) {
-        var tl = anime.timeline({ easing: "easeOutBounce" });
+        var tl = anime.createTimeline({ ease: "outBounce" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateY: ["-50px", "0px"],
             duration: 800
-        }).add({
-            targets: directChildren(el, "svg"),
+        }).add(directChildren(el, "svg"), {
             opacity: [0, 1],
             translateY: ["-30px", "0px"],
             duration: 500,
-            easing: "easeOutQuart"
-        }, "-=400").add({
-            targets: directChildren(el, "h2, h3"),
+            ease: "outQuart"
+        }, ">-400").add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateY: ["-30px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, "-=200").add({
-            targets: directChildren(el, "p, blockquote, ul, table, a"),
+        }, ">-200").add(directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateY: ["-20px", "0px"],
             duration: 500,
             delay: anime.stagger(60),
-            easing: "easeOutQuart"
-        }, "-=300");
+            ease: "outQuart"
+        }, ">-300");
     }
 
     /**
      * Contact/Footer — Simple fade in
      */
     function animateContact(el) {
-        var tl = anime.timeline({ easing: "easeOutSine" });
+        var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add({
-            targets: el.querySelectorAll("h2, p, a"),
+        tl.add(el.querySelectorAll("h2, p, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

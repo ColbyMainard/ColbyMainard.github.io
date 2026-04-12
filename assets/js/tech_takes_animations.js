@@ -35,20 +35,18 @@
      * Intro — Fade in + drop from above
      */
     function animateIntro(el) {
-        var tl = anime.timeline({ easing: "easeOutExpo" });
+        var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add({
-            targets: el.querySelector("h1"),
+        tl.add(el.querySelector("h1"), {
             opacity: [0, 1],
             translateY: ["-40px", "0px"],
             duration: 800
-        }).add({
-            targets: el.querySelectorAll("p"),
+        }).add(el.querySelectorAll("p"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 600,
             delay: anime.stagger(150)
-        }, "-=400");
+        }, ">-400");
     }
 
     /**
@@ -56,27 +54,24 @@
      * Mathematical, structured entrance
      */
     function animateKAN(el) {
-        var tl = anime.timeline({ easing: "easeOutCubic" });
+        var tl = anime.createTimeline({ ease: "outCubic" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateX: ["-70px", "0px"],
             rotate: ["-2deg", "0deg"],
             duration: 700
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateX: ["-50px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
-        }, "-=300").add({
-            targets: directChildren(el, "p, ul, a"),
+        }, ">-300").add(directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             translateX: ["-30px", "0px"],
             duration: 500,
             delay: anime.stagger(50)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -84,26 +79,23 @@
      * Digital currency feel with a subtle glitch entrance
      */
     function animateCrypto(el) {
-        var tl = anime.timeline({ easing: "easeOutQuart" });
+        var tl = anime.createTimeline({ ease: "outQuart" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 0.3, 0, 0.7, 1],
             scale: [0.8, 1],
             duration: 900
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [0.85, 1],
             duration: 600,
             delay: anime.stagger(100)
-        }, "-=400").add({
-            targets: directChildren(el, "p, ul, table, a"),
+        }, ">-400").add(directChildren(el, "p, ul, table, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 500,
             delay: anime.stagger(50)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -111,27 +103,24 @@
      * Quantum superposition: elements shimmer into existence
      */
     function animateQuantum(el) {
-        var tl = anime.timeline({ easing: "easeOutSine" });
+        var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             scale: [1.15, 0.95, 1],
             duration: 900
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [1.08, 0.98, 1],
             duration: 700,
             delay: anime.stagger(100)
-        }, "-=400").add({
-            targets: directChildren(el, "p, ul, table, a"),
+        }, ">-400").add(directChildren(el, "p, ul, table, a"), {
             opacity: [0, 1],
             scale: [1.03, 1],
             translateY: ["15px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -139,26 +128,23 @@
      * Intelligence expanding outward
      */
     function animateAGI(el) {
-        var tl = anime.timeline({ easing: "easeOutBack" });
+        var tl = anime.createTimeline({ ease: "outBack" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateX: ["80px", "0px"],
             duration: 700
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateX: ["60px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
-        }, "-=300").add({
-            targets: directChildren(el, "p, ul, dl, a"),
+        }, ">-300").add(directChildren(el, "p, ul, dl, a"), {
             opacity: [0, 1],
             translateX: ["40px", "0px"],
             duration: 500,
             delay: anime.stagger(50)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
@@ -166,36 +152,32 @@
      * Hidden becoming visible, emerging from obscurity
      */
     function animatePrivacy(el) {
-        var tl = anime.timeline({ easing: "easeOutExpo" });
+        var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add({
-            targets: directChildren(el, "h1"),
+        tl.add(directChildren(el, "h1"), {
             opacity: [0, 1],
             translateY: ["60px", "0px"],
             duration: 800
-        }).add({
-            targets: directChildren(el, "h2, h3"),
+        }).add(directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateY: ["45px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, "-=400").add({
-            targets: directChildren(el, "p, ul, dl, a"),
+        }, ">-400").add(directChildren(el, "p, ul, dl, a"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
-        }, "-=300");
+        }, ">-300");
     }
 
     /**
      * Contact/Footer — Simple fade in
      */
     function animateContact(el) {
-        var tl = anime.timeline({ easing: "easeOutSine" });
+        var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add({
-            targets: el.querySelectorAll("h2, p, a"),
+        tl.add(el.querySelectorAll("h2, p, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

@@ -34,7 +34,8 @@
         <script src="./assets/js/google_analytics.js"></script>
 
         <!-- AnimeJS for animations -->
-        <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
+        <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="./assets/js/index_animations.js" defer></script>
     </head>
     <body>
