@@ -22,6 +22,14 @@ Technical skills I have used, including:
     - Miscellaneous other skills without an easily-defined category
 
 ### Technical Resources
+Discussing resources that were useful for myself and that I would similarly recommend to beginners, organized by topic.
+Topics include:
+    - Cybersecurity
+    - Artificial Intelligence
+    - C++
+    - Python
+    - Scripting
+    - Operating Systems
 
 ### Other Skills
 More general soft/non-technical skills I possess, mainly focused on business and interpersonal.
@@ -38,4 +46,4 @@ Hobbies include:
     - History
 
 ### Technical Opinions
-Going over my stance on certain technologies, relevant trends, and tech news
+Going over my stance on certain technologies, relevant trends, and tech news.

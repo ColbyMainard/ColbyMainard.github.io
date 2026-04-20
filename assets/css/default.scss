@@ -224,6 +224,54 @@ body {
     }
 }
 
+.floatingBackToTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid $emerald_efficiency_3;
+    background-color: rgba($emerald_efficiency_1, 0.92);
+    color: $emerald_efficiency_5;
+    font-family: "Courier New", monospace;
+    font-size: 160%;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    z-index: 200;
+
+    &.visible {
+        pointer-events: auto;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $emerald_efficiency_2;
+        border-color: $emerald_efficiency_5;
+        color: $emerald_efficiency_5;
+        outline: none;
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+    }
+}
+
+@media (max-width: 768px) {
+    .floatingBackToTop {
+        bottom: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        font-size: 140%;
+    }
+}
+
 footer {
     width: 100%;
     text-align: center;

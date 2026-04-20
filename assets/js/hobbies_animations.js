@@ -31,16 +31,30 @@
     }
 
     /**
+     * Helper: add a timeline step only when the target list is non-empty.
+     * AnimeJS throws "No target found" if given an empty array.
+     */
+    function addStep(tl, targets, params, position) {
+        var hasTargets = targets && (targets.length === undefined ? true : targets.length > 0);
+        if (!hasTargets) return tl;
+        if (position !== undefined) {
+            return tl.add(targets, params, position);
+        }
+        return tl.add(targets, params);
+    }
+
+    /**
      * Intro — Fade in heading, image scales up
      */
     function animateIntro(el) {
         var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add(el.querySelector("h1"), {
+        addStep(tl, el.querySelector("h1"), {
             opacity: [0, 1],
             translateY: ["-40px", "0px"],
             duration: 800
-        }).add(el.querySelector("img"), {
+        });
+        addStep(tl, el.querySelector("img"), {
             opacity: [0, 1],
             scale: [0.85, 1],
             duration: 700
@@ -54,16 +68,18 @@
     function animateQuantum(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h1"), {
             opacity: [0, 1],
             scale: [1.15, 0.95, 1],
             duration: 900
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [1.08, 0.98, 1],
             duration: 700,
             delay: anime.stagger(100)
-        }, ">-400").add(directChildren(el, "p, ul, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             scale: [1.03, 1],
             translateY: ["15px", "0px"],
@@ -79,16 +95,18 @@
     function animatePhotography(el) {
         var tl = anime.createTimeline({ ease: "outBack" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h1"), {
             opacity: [0, 1],
             scale: [0.3, 1],
             duration: 800
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             scale: [0.5, 1],
             duration: 600,
             delay: anime.stagger(100)
-        }, ">-400").add(directChildren(el, "p, ul, img, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, img, a"), {
             opacity: [0, 1],
             scale: [0.8, 1],
             duration: 500,
@@ -103,17 +121,19 @@
     function animateDnD(el) {
         var tl = anime.createTimeline({ ease: "outBounce" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h1"), {
             opacity: [0, 1],
             translateX: ["-80px", "0px"],
             duration: 900
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateX: ["-60px", "0px"],
             duration: 700,
             delay: anime.stagger(100),
             ease: "outQuart"
-        }, ">-400").add(directChildren(el, "p, ul, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             translateX: ["-40px", "0px"],
             duration: 500,
@@ -129,16 +149,18 @@
     function animateHistory(el) {
         var tl = anime.createTimeline({ ease: "outCubic" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h1"), {
             opacity: [0, 1],
             translateY: ["50px", "0px"],
             duration: 800
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h2, h3"), {
             opacity: [0, 1],
             translateY: ["40px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, ">-400").add(directChildren(el, "p, blockquote, ul, table, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,
@@ -152,7 +174,7 @@
     function animateContact(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add(el.querySelectorAll("h2, p, a"), {
+        addStep(tl, el.querySelectorAll("h2, p, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

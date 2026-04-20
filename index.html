@@ -16,8 +16,12 @@
         -->
         <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
 
-        <link rel="manifest" href="manifest.json">
-        
+        <!--
+            The manifest link is injected dynamically by service_worker_register.js
+            so that it is only added when the page is served over http(s). This avoids
+            CORS errors that browsers raise when fetching the manifest from file://.
+        -->
+
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
@@ -38,6 +42,8 @@
         <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="./assets/js/index_animations.js" defer></script>
         <script src="./assets/js/navbar.js" defer></script>
+        <script src="./assets/js/back_to_top.js" defer></script>
+        <script src="./assets/js/service_worker_register.js" defer></script>
     </head>
     <body>
         <header>
@@ -1483,10 +1489,10 @@
                     <h3>Research Project</h3>
                     <h3>Summer 2019</h3>
                     <p>
-                        Under direction of Dr. Ritchey, Texas A&M, extended research into 
+                        Under direction of Dr. Ritchey, Texas A&M, extended research into
                         <a href="https://en.wikipedia.org/wiki/Steganography">
                             steganography
-                        </a>techniques using Sudoku puzzles. 
+                        </a>techniques using Sudoku puzzles.
                         The hypothesis tested is that steganography combined with cryptography may offer a powerful secondary approach for certain cybersecurity applications.
                     </p>
                     <br>
