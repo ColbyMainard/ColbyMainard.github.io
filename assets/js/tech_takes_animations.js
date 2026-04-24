@@ -16,6 +16,7 @@
         quantum: "#FutureOfQuantum",
         agi: "#AGI",
         privacy: "#Privacy",
+        productPlacement: "#ProductPlacement",
         contact: "#contactMe"
     };
 
@@ -172,6 +173,34 @@
     }
 
     /**
+     * Product Placement — Cinematic focus pull
+     * Elements start oversized and slightly rotated, then settle into sharp
+     * focus like a broadcast camera zooming in on a logo.
+     */
+    function animateProductPlacement(el) {
+        var tl = anime.createTimeline({ ease: "outQuint" });
+
+        tl.add(directChildren(el, "h1"), {
+            opacity: [0, 1],
+            scale: [1.3, 1],
+            rotate: ["2deg", "0deg"],
+            duration: 900
+        }).add(directChildren(el, "h2, h3"), {
+            opacity: [0, 1],
+            scale: [1.15, 1],
+            rotate: ["1.5deg", "0deg"],
+            duration: 650,
+            delay: anime.stagger(90)
+        }, ">-400").add(directChildren(el, "p, ul, dl, table, a"), {
+            opacity: [0, 1],
+            scale: [1.05, 1],
+            translateY: ["20px", "0px"],
+            duration: 550,
+            delay: anime.stagger(55)
+        }, ">-300");
+    }
+
+    /**
      * Contact/Footer — Simple fade in
      */
     function animateContact(el) {
@@ -192,6 +221,7 @@
         quantum: animateQuantum,
         agi: animateAGI,
         privacy: animatePrivacy,
+        productPlacement: animateProductPlacement,
         contact: animateContact
     };
 

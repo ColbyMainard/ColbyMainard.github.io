@@ -561,6 +561,74 @@ $dark_blue_gray_5: #ff5c5c;
     font-size: 100%;
 }
 
+#ProductPlacement {
+    margin: auto;
+    background-color: $dark_blue_gray_1;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
+        font-size: 500%;
+        color: $dark_blue_gray_5;
+    }
+    h2 {
+        text-align: left;
+        font-size: 300%;
+        color: $dark_blue_gray_4;
+    }
+    h3 {
+        text-align: left;
+        font-size: 200%;
+        color: $dark_blue_gray_3;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        font-size: 100%;
+        color: $dark_blue_gray_3;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        font-size: 100%;
+        color: $dark_blue_gray_3;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        font-size: 100%;
+        color: $dark_blue_gray_3;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        font-size: 100%;
+        color: $dark_blue_gray_3;
+    }
+    p {
+        text-align: left;
+        font-size: 100%;
+        color: $dark_blue_gray_3;
+    }
+    ul {
+        text-align: left;
+        li {
+            font-size: 100%;
+            color: $dark_blue_gray_3;
+        }
+    }
+}
+
+#ProductPlacement.backToTop {
+    width: 80%;
+    text-align: center;
+    display: block; /* Ensures the link to the top behaves as a block-level element */
+    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+    color: $dark_blue_gray_3;
+    font-size: 100%;
+}
+
 /*
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
@@ -572,6 +640,7 @@ html.js-animations {
     #FutureOfQuantum,
     #AGI,
     #Privacy,
+    #ProductPlacement,
     #contactMe {
         > h1, > h2, > h3, > p, > ul, > dl, > table, > a, > address {
             opacity: 0;

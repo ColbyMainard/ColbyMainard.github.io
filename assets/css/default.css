@@ -1212,6 +1212,64 @@ html.js-animations #contactMe > address {
   color: #7a7a99;
   font-size: 100%; }
 
+#ProductPlacement {
+  margin: auto;
+  background-color: #20203c;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #ProductPlacement h1 {
+    text-align: left;
+    font-size: 500%;
+    color: #ff5c5c; }
+  #ProductPlacement h2 {
+    text-align: left;
+    font-size: 300%;
+    color: #c2c2d1; }
+  #ProductPlacement h3 {
+    text-align: left;
+    font-size: 200%;
+    color: #7a7a99; }
+  #ProductPlacement a:link {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #ProductPlacement a:visited {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #ProductPlacement a:hover {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #ProductPlacement a:active {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #ProductPlacement p {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #ProductPlacement ul {
+    text-align: left; }
+    #ProductPlacement ul li {
+      font-size: 100%;
+      color: #7a7a99; }
+
+#ProductPlacement.backToTop {
+  width: 80%;
+  text-align: center;
+  display: block;
+  /* Ensures the link to the top behaves as a block-level element */
+  margin: 0 auto;
+  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
+  color: #7a7a99;
+  font-size: 100%; }
+
 /*
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
@@ -1262,6 +1320,15 @@ html.js-animations #Privacy > dl,
 html.js-animations #Privacy > table,
 html.js-animations #Privacy > a,
 html.js-animations #Privacy > address,
+html.js-animations #ProductPlacement > h1,
+html.js-animations #ProductPlacement > h2,
+html.js-animations #ProductPlacement > h3,
+html.js-animations #ProductPlacement > p,
+html.js-animations #ProductPlacement > ul,
+html.js-animations #ProductPlacement > dl,
+html.js-animations #ProductPlacement > table,
+html.js-animations #ProductPlacement > a,
+html.js-animations #ProductPlacement > address,
 html.js-animations #contactMe > h1,
 html.js-animations #contactMe > h2,
 html.js-animations #contactMe > h3,

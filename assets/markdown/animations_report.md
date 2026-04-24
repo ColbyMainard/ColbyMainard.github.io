@@ -75,6 +75,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 | Quantum Computing | Scale oscillation | `easeOutSine` | Superposition shimmer |
 | AGI | Slide from right + expand | `easeOutBack` | Intelligence expanding |
 | Privacy | Rise from bottom | `easeOutExpo` | Hidden becoming visible |
+| Product Placement | Cinematic focus pull (scale down + slight rotation settle) | `easeOutQuint` | Broadcast camera zooming in to lock on a logo |
 | Contact | Simple fade | `easeOutSine` | Clean exit |
 
 ### hobbies.html
@@ -132,3 +133,18 @@ sass --trace ./assets/css/default.scss ./assets/css/default.css
 ```
 
 Without compilation, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there may be a brief flash of unstyled content before JS executes since the CSS doesn't yet include the `opacity: 0` rules.
+
+## Changelog
+
+### Product Placement section added (tech_takes.html)
+
+A new `#ProductPlacement` section ("Product Placement in Sports Marketing") was added to `tech_takes.html`. To keep it consistent with the rest of the page, the following changes were made:
+
+- **`assets/css/tech_takes.scss`**: `#ProductPlacement` was appended to the selector list inside the `html.js-animations` initial-state block, so its direct children (`h1, h2, h3, p, ul, dl, table, a, address`) start at `opacity: 0` before animation.
+- **`assets/css/default.css`**: Recompiled from `default.scss` (via WSL, since `sass` had issues running directly on Windows) to pick up the new initial-state rule.
+- **`assets/js/tech_takes_animations.js`**:
+    - Added `productPlacement: "#ProductPlacement"` to the `sections` map.
+    - Added `animateProductPlacement(el)` — a "cinematic focus pull" timeline on `easeOutQuint`. The `h1` starts at `scale: 1.3` with a `2deg` rotation and settles to `scale: 1` at `0deg` (duration 900ms). Subheadings (`h2`, `h3`) follow with `scale: 1.15 → 1` and `1.5deg → 0deg`, staggered by 90ms. Body elements (`p, ul, dl, table, a`) finish with a subtle `scale: 1.05 → 1` and a 20px rise, staggered by 55ms. The relative offsets (`">-400"`, `">-300"`) overlap phases so the section reads as one continuous camera move rather than three separate beats.
+    - Registered `productPlacement: animateProductPlacement` in `animationMap`.
+
+The easing (`easeOutQuint`) was chosen because it is not yet used elsewhere on the page, and its strong late deceleration matches the feel of a broadcast camera snapping into focus on an on-field logo — thematically appropriate for a section about product placement visibility, orientation, and motion blur.
