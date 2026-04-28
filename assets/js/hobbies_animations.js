@@ -63,7 +63,8 @@
 
     /**
      * Quantum Computing — Scale oscillation
-     * Superposition shimmer, matching the tech_takes quantum style
+     * Superposition shimmer, matching the tech_takes quantum style.
+     * The video iframe shimmers in last as the section's visual centerpiece.
      */
     function animateQuantum(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
@@ -85,6 +86,11 @@
             translateY: ["15px", "0px"],
             duration: 500,
             delay: anime.stagger(60)
+        }, ">-300");
+        addStep(tl, directChildren(el, "iframe"), {
+            opacity: [0, 1],
+            scale: [1.10, 0.96, 1],
+            duration: 900
         }, ">-300");
     }
 

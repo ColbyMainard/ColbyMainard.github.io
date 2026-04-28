@@ -317,7 +317,7 @@ html.js-animations {
     #dungeonsAndDragons,
     #history,
     #contactMe {
-        > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address {
+        > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address, > iframe {
             opacity: 0;
         }
     }
