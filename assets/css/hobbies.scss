@@ -85,16 +85,10 @@ $calm_authority_5: #D5D5DB;
             font-size: 100%;
         }
     }
-}
-
-#quantumComputing.backToTop {
-    width: 80%;
-    text-align: center;
-    display: block; /* Ensures the link to the top behaves as a block-level element */
-    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $calm_authority_5;
-    background-color: $calm_authority_2;
-    font-size: 100%;
+    iframe {
+        width:560px; 
+        height: 315px;
+    }
 }
 
 #photography {
@@ -156,16 +150,6 @@ $calm_authority_5: #D5D5DB;
     }
 }
 
-#photography.backToTop {
-    width: 80%;
-    text-align: center;
-    display: block; /* Ensures the link to the top behaves as a block-level element */
-    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $calm_authority_5;
-    background-color: $calm_authority_2;
-    font-size: 100%;
-}
-
 #dungeonsAndDragons {
     margin: auto;
     background-color: $calm_authority_1;
@@ -223,16 +207,6 @@ $calm_authority_5: #D5D5DB;
             font-size: 100%;
         }
     }
-}
-
-#dungeonsAndDragons.backToTop {
-    width: 80%;
-    text-align: center;
-    display: block; /* Ensures the link to the top behaves as a block-level element */
-    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $calm_authority_5;
-    background-color: $calm_authority_2;
-    font-size: 100%;
 }
 
 #history {
@@ -330,16 +304,6 @@ $calm_authority_5: #D5D5DB;
             }
         }
     }
-}
-
-#history.backToTop {
-    width: 80%;
-    text-align: center;
-    display: block; /* Ensures the link to the top behaves as a block-level element */
-    margin: 0 auto; /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-    color: $calm_authority_5;
-    background-color: $calm_authority_2;
-    font-size: 100%;
 }
 
 /*

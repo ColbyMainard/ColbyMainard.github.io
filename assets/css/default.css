@@ -50,17 +50,6 @@
       color: #6a2a98;
       font-size: 100%; }
 
-#workHistory.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ff3d94;
-  background-color: #200b4b;
-  font-size: 100%; }
-
 #education {
   margin: auto;
   background-color: #200b4b;
@@ -135,17 +124,6 @@
           color: #6a2a98;
           font-size: 100%; }
 
-#education.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ff3d94;
-  background-color: #200b4b;
-  font-size: 100%; }
-
 #projects {
   margin: auto;
   background-color: #200b4b;
@@ -193,17 +171,6 @@
     #projects ul li {
       color: #6a2a98;
       font-size: 100%; }
-
-#projects.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ff3d94;
-  background-color: #200b4b;
-  font-size: 100%; }
 
 #technicalSkills {
   margin: auto;
@@ -253,17 +220,6 @@
       color: #6a2a98;
       font-size: 100%; }
 
-#technicalSkills.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ff3d94;
-  background-color: #200b4b;
-  font-size: 100%; }
-
 #otherSkills {
   margin: auto;
   background-color: #200b4b;
@@ -312,17 +268,6 @@
       color: #6a2a98;
       font-size: 100%; }
 
-#otherSkills.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ff3d94;
-  background-color: #200b4b;
-  font-size: 100%; }
-
 #certifications {
   margin: auto;
   background-color: #200b4b;
@@ -370,17 +315,6 @@
     #certifications ul li {
       color: #6a2a98;
       font-size: 100%; }
-
-#certifications.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #ff3d94;
-  background-color: #200b4b;
-  font-size: 100%; }
 
 /*
  * Animation initial states — only applied when JS is active.
@@ -503,17 +437,9 @@ html.js-animations #contactMe > address {
     #quantumComputing ul li {
       color: #5D6D7E;
       font-size: 100%; }
-
-#quantumComputing.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #D5D5DB;
-  background-color: #5D6D7E;
-  font-size: 100%; }
+  #quantumComputing iframe {
+    width: 560px;
+    height: 315px; }
 
 #photography {
   margin: auto;
@@ -563,17 +489,6 @@ html.js-animations #contactMe > address {
       color: #5D6D7E;
       font-size: 100%; }
 
-#photography.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #D5D5DB;
-  background-color: #5D6D7E;
-  font-size: 100%; }
-
 #dungeonsAndDragons {
   margin: auto;
   background-color: #34495E;
@@ -621,17 +536,6 @@ html.js-animations #contactMe > address {
     #dungeonsAndDragons ul li {
       color: #5D6D7E;
       font-size: 100%; }
-
-#dungeonsAndDragons.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #D5D5DB;
-  background-color: #5D6D7E;
-  font-size: 100%; }
 
 #history {
   margin: auto;
@@ -710,17 +614,6 @@ html.js-animations #contactMe > address {
         #history table tr td ul li {
           color: #5D6D7E;
           font-size: 100%; }
-
-#history.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #D5D5DB;
-  background-color: #5D6D7E;
-  font-size: 100%; }
 
 /*
  * Animation initial states — only applied when JS is active.
@@ -834,16 +727,6 @@ html.js-animations #contactMe > address {
       font-size: 100%;
       color: #7a7a99; }
 
-#KAN.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #7a7a99;
-  font-size: 100%; }
-
 #Cryptocurrency {
   margin: auto;
   background-color: #20203c;
@@ -946,16 +829,6 @@ html.js-animations #contactMe > address {
         #Cryptocurrency table tr td a:active {
           font-size: 100%;
           color: #7a7a99; }
-
-#Cryptocurrency.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #7a7a99;
-  font-size: 100%; }
 
 #FutureOfQuantum {
   margin: auto;
@@ -1060,16 +933,6 @@ html.js-animations #contactMe > address {
           font-size: 100%;
           color: #7a7a99; }
 
-#FutureOfQuantum.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #7a7a99;
-  font-size: 100%; }
-
 #AGI {
   margin: auto;
   background-color: #20203c;
@@ -1130,16 +993,6 @@ html.js-animations #contactMe > address {
       #AGI dl dd ul li {
         font-size: 100%;
         color: #7a7a99; }
-
-#AGI.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #7a7a99;
-  font-size: 100%; }
 
 #Privacy {
   margin: auto;
@@ -1202,16 +1055,6 @@ html.js-animations #contactMe > address {
         font-size: 100%;
         color: #7a7a99; }
 
-#Privacy.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #7a7a99;
-  font-size: 100%; }
-
 #ProductPlacement {
   margin: auto;
   background-color: #20203c;
@@ -1259,16 +1102,6 @@ html.js-animations #contactMe > address {
     #ProductPlacement ul li {
       font-size: 100%;
       color: #7a7a99; }
-
-#ProductPlacement.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #7a7a99;
-  font-size: 100%; }
 
 /*
  * Animation initial states — only applied when JS is active.
@@ -1417,17 +1250,6 @@ html.js-animations #contactMe > address {
         border-bottom-style: groove;
         border-left-style: groove; }
 
-#cybersecurityResources.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f9c54e;
-  background-color: #1f1b79;
-  font-size: 100%; }
-
 #artificialIntelligenceResources {
   width: 80%;
   margin: auto;
@@ -1504,17 +1326,6 @@ html.js-animations #contactMe > address {
         border-bottom-style: groove;
         border-left-style: groove; }
 
-#artificialIntelligenceResources.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f9c54e;
-  background-color: #1f1b79;
-  font-size: 100%; }
-
 #cppResources {
   margin: auto;
   background-color: #1f1b79;
@@ -1589,17 +1400,6 @@ html.js-animations #contactMe > address {
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-
-#cppResources.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f9c54e;
-  background-color: #1f1b79;
-  font-size: 100%; }
 
 #pythonResources {
   margin: auto;
@@ -1676,17 +1476,6 @@ html.js-animations #contactMe > address {
         border-bottom-style: groove;
         border-left-style: groove; }
 
-#pythonResources.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f9c54e;
-  background-color: #1f1b79;
-  font-size: 100%; }
-
 #scriptingResources {
   margin: auto;
   background-color: #1f1b79;
@@ -1762,17 +1551,6 @@ html.js-animations #contactMe > address {
         border-bottom-style: groove;
         border-left-style: groove; }
 
-#scriptingResources.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f9c54e;
-  background-color: #1f1b79;
-  font-size: 100%; }
-
 #operatingSystemsResources {
   margin: auto;
   background-color: #1f1b79;
@@ -1847,17 +1625,6 @@ html.js-animations #contactMe > address {
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
-
-#operatingSystemsResources.backToTop {
-  width: 80%;
-  text-align: center;
-  display: block;
-  /* Ensures the link to the top behaves as a block-level element */
-  margin: 0 auto;
-  /* Sets top/bottom margin to 0 and left/right margin to auto, effectively centering it horizontally */
-  color: #f9c54e;
-  background-color: #1f1b79;
-  font-size: 100%; }
 
 /*
  * Animation initial states — only applied when JS is active.
