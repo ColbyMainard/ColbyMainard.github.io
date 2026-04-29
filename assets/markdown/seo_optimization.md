@@ -257,7 +257,6 @@ Add explicit `width` and `height` here too (same CLS reason as 3.1).
 
 The repo currently ships several files that should not be in the deployed artifact:
 - `assets/css/default.css.map` (32 KB SCSS source map — useful in dev, not prod)
-- `assets/images/favicon.xcf` (16 KB Gimp source)
 
 Two paths to resolve:
 - **If GitHub Pages serves the repo root directly** (most likely — check `.github/workflows/static.yml` if it exists): add a `.nojekyll` if not present, then either `git rm` these files from version control, or re-run `sass` without `--source-map` (sass writes the map by default; pass `--no-source-map`).
@@ -356,6 +355,77 @@ Set up a simple referral-tracking habit (no code change needed):
 - Use Google Analytics 4 (already on the site) **Referral acquisition report** weekly: which external domains are sending traffic? Each new referrer is a backlink to log.
 - Use [ahrefs.com/backlink-checker](https://ahrefs.com/backlink-checker) (free tier, 100 backlinks visible) monthly to track backlink count and domain ratings.
 - Track which Technical Stances pieces drive the most return visits — those are the linkbait formats this specific audience responds to. Double down.
+
+---
+
+## Phase 5 — Additional considerations
+
+These items surfaced during planning but weren't part of the original four-phase scope. Some are worth folding in if scope expands; others are long-term strategic notes.
+
+### 5.1 Trust & E-E-A-T signals (Google quality rater framework)
+
+Google's quality rater guidelines weight Experience, Expertise, Authoritativeness, and Trustworthiness as central ranking signals.
+
+- **Privacy policy page** — Google Analytics is loaded on every page with no disclosure. A privacy policy is required by Google Analytics' own ToS, by GDPR for any EU traffic, and by CCPA for California traffic. Add `assets/html/privacy.html` linked from the footer; cover what GA collects, the Microsoft/Google verification meta tags, and the email contact method.
+- **Visible "Last reviewed" dates** on technical claims, not just "Last updated" — signals factual maintenance to both Google and readers. Existing Tech Takes lastmod dates work; consider explicit "Reviewed: YYYY-MM-DD" lines for older pieces (KAN piece is from October 2025 and the field has moved since).
+- **Citations to peer-reviewed sources** inline within Tech Takes pieces — converts opinion into authoritative reference. Each piece should cite at least one primary source (paper, RFC, official documentation) using `<a href>` with descriptive anchor text.
+- **Custom 404 page** — GitHub Pages serves a generic 404 by default. Add `404.html` at the repo root, styled to match the site (reuses `default.css`), with site navigation and a search-friendly suggestions list. Reduces bounce rate on broken inbound links.
+
+### 5.2 AI-assistant discoverability
+
+The current `robots.txt` blocks every AI-related user-agent indiscriminately. There's a meaningful operational distinction worth exploiting:
+
+- **Training bots** (GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, ChatGPT Agent, CCBot) — scrape pages to train future models. Blocking is reasonable; you receive no direct traffic from them.
+- **Live-search bots** (ChatGPT-User, Claude-User, Perplexity-User, OAI-SearchBot, Claude-SearchBot) — fetch pages on demand to answer real-time user queries in tools like ChatGPT search and Perplexity. **Blocking these removes the site from AI search results**, where recruiter and tech-enthusiast audiences increasingly begin their queries.
+
+Consider allowing live-search agents while continuing to block training crawlers. This is a per-bot edit during Phase 1.1 — split the existing list into two stanzas.
+
+Additionally, consider an `llms.txt` file at the repo root: an emerging convention summarizing the site in plain markdown for LLM consumption. Low cost, low risk, modest upside as the standard solidifies.
+
+### 5.3 Engagement / dwell-time signals (Chrome UX Report inputs)
+
+Google increasingly weights real-world engagement metrics surfaced through CrUX. Content-side levers:
+
+- **Estimated reading time** at the top of each Tech Takes piece (e.g., "12 min read"). A ~5-line vanilla-JS snippet computing word-count / 200 wpm; no new dependency.
+- **Table of contents** at the top of long pieces — anchor links inside the page. Also enables Google's SERP "Jump to" links.
+- **"Related posts" footer** on each Tech Take linking the other five — short blurb + section ID. Increases pages-per-session.
+- **Code blocks with syntax highlighting** for any code examples — Prism.js or highlight.js (~10 KB). Visual signal of technical content; engagement uplift on technical pieces.
+
+### 5.4 Schema.org refinements beyond Phase 2.6
+
+The Phase 2.6 schemas (Person, Article, BreadcrumbList) cover the highest-impact rich-result eligibility. Additional schemas worth considering:
+
+- **`WebSite` schema with `SearchAction`** on `index.html` — makes the site eligible for the SERP sitelinks search box (the in-result search field under top results for branded queries).
+- **`Course` schema entries** for the M.S. AI/ML coursework already listed on `index.html` — surfaces the page in education-related searches.
+- **`SoftwareSourceCode` schema** per project, once GitHub repo links are added (Phase 4 dependency).
+- **`ProfilePage` schema** as a complement to `Person` — explicitly types `index.html` as a profile page, improving entity disambiguation.
+
+### 5.5 Topic architecture (pillar-and-spoke clustering)
+
+The current 4-page flat structure limits topical authority signals. Topic clusters concentrate internal-link equity on a single hub page that becomes the canonical authority for a topic:
+
+- A pillar page like "AI Engineering Notes" linking to each Tech Take as a spoke (KAN, AGI, sports CV, etc.).
+- Each spoke links back to the pillar with descriptive anchor text.
+- Pillar pages outrank standalone posts because they accumulate internal-link equity from every spoke.
+- The same model could work for Cybersecurity (resources page as pillar, individual takes as spokes) and Quantum.
+
+This is a 3–6 month evolution, not an immediate change. Worth designing intentionally as Phase 4 content is added rather than retrofitting later.
+
+### 5.6 Backlink tactics beyond Phase 4.3
+
+- **Cross-post Tech Takes to dev.to or Hashnode** with `<link rel="canonical">` pointing back here. Gets the post seen by external audiences without splitting SEO authority — Google honors the canonical and credits the original.
+- **HARO (Help A Reporter Out) / Qwoted responses** on ML/CV topics — journalists cite sources, often with high-DA backlinks. Time investment is ~30 min per query response.
+- **Wikipedia citations** where genuinely qualified. High-DA, durable, hard to earn. Realistic angles: editing pages on KAN, sports analytics, or ML-driven cybersecurity to cite a primary source you've written. Avoid linking your own opinion pieces — Wikipedia rejects those.
+- **Podcast guest appearances** — pitching with a specific case-study angle. The sports CV pipeline retrospective is the strongest hook. The existing Tech Resources page already enumerates podcasts you listen to; that's the natural target list.
+
+### 5.7 Privacy / regional compliance
+
+Only material if Google Analytics shows meaningful EU or California traffic.
+
+- **Cookie consent banner** — Google Analytics sets cookies, creating GDPR exposure for EU traffic. A simple one-time banner (e.g., Cookie Consent by Osano, ~5 KB) handles the legal requirement without dragging in a full CMP.
+- **Privacy policy** (also referenced in 5.1) — required by Google Analytics' own ToS regardless of jurisdiction.
+
+These can be deferred until the GA "Geographic" report shows measurable EU/CA presence; act on them once it does.
 
 ---
 
