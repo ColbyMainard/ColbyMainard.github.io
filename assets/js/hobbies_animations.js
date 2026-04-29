@@ -69,12 +69,12 @@
     function animateQuantum(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scale: [1.15, 0.95, 1],
             duration: 900
         });
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [1.08, 0.98, 1],
             duration: 700,
@@ -101,12 +101,12 @@
     function animatePhotography(el) {
         var tl = anime.createTimeline({ ease: "outBack" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scale: [0.3, 1],
             duration: 800
         });
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [0.5, 1],
             duration: 600,
@@ -127,12 +127,12 @@
     function animateDnD(el) {
         var tl = anime.createTimeline({ ease: "outBounce" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateX: ["-80px", "0px"],
             duration: 900
         });
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["-60px", "0px"],
             duration: 700,
@@ -155,12 +155,12 @@
     function animateHistory(el) {
         var tl = anime.createTimeline({ ease: "outCubic" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateY: ["50px", "0px"],
             duration: 800
         });
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["40px", "0px"],
             duration: 600,

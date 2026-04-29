@@ -71,7 +71,7 @@
     function animateCybersecurity(el) {
         var tl = anime.createTimeline({ ease: "outQuart" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 0.3, 0, 0.6, 0, 1],
             translateX: ["-10px", "5px", "-3px", "0px"],
             duration: 900
@@ -81,13 +81,13 @@
             scale: [0.7, 1],
             duration: 500
         }, ">-400");
-        addStep(tl, directChildren(el, "h2"), {
+        addStep(tl, directChildren(el, "h3"), {
             opacity: [0, 0.4, 0, 1],
             translateX: ["30px", "-8px", "0px"],
             duration: 700,
             delay: anime.stagger(100)
         }, ">-200");
-        addStep(tl, directChildren(el, "h3, p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "h4, p, blockquote, ul, table, a"), {
             opacity: [0, 1],
             translateX: ["-20px", "4px", "0px"],
             duration: 500,
@@ -102,7 +102,7 @@
     function animateAI(el) {
         var tl = anime.createTimeline({ ease: "outBack" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scale: [0.4, 1],
             duration: 800
@@ -113,7 +113,7 @@
             rotate: ["8deg", "0deg"],
             duration: 600
         }, ">-400");
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [0.7, 1],
             translateY: ["15px", "0px"],
@@ -136,7 +136,7 @@
     function animateCpp(el) {
         var tl = anime.createTimeline({ ease: "outCubic" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateX: ["-70px", "0px"],
             duration: 700
@@ -146,7 +146,7 @@
             translateX: ["-50px", "0px"],
             duration: 500
         }, ">-300");
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["-50px", "0px"],
             duration: 500,
@@ -167,7 +167,7 @@
     function animatePython(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateX: ["70px", "0px"],
             duration: 700
@@ -177,7 +177,7 @@
             translateX: ["50px", "0px"],
             duration: 500
         }, ">-300");
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["50px", "0px"],
             duration: 500,
@@ -198,7 +198,7 @@
     function animateScripting(el) {
         var tl = anime.createTimeline({ ease: "outExpo" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateY: ["50px", "0px"],
             duration: 700
@@ -208,7 +208,7 @@
             translateY: ["40px", "0px"],
             duration: 500
         }, ">-300");
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["35px", "0px"],
             duration: 500,
@@ -229,7 +229,7 @@
     function animateOS(el) {
         var tl = anime.createTimeline({ ease: "outBounce" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateY: ["-50px", "0px"],
             duration: 800
@@ -240,7 +240,7 @@
             duration: 500,
             ease: "outQuart"
         }, ">-400");
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["-30px", "0px"],
             duration: 600,

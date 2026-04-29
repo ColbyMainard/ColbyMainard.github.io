@@ -2,6 +2,10 @@
  * AnimeJS timeline animations for tech_takes.html
  * Each opinion section has a unique animation style, synced via timelines.
  * Animations trigger on scroll via Intersection Observer.
+ *
+ * Heading-level note: the page uses a single page-topic <h1>; each opinion
+ * section's title is an <h2>, with sub-headings as <h3>/<h4>. The selectors
+ * below reflect that hierarchy (after the SEO heading-hierarchy fix).
  */
 
 (function () {
@@ -33,16 +37,31 @@
     }
 
     /**
+     * Helper: add a timeline step only when the target list is non-empty.
+     * AnimeJS warns "No target found" if given an empty array or null,
+     * so guard every .add() call through this wrapper.
+     */
+    function addStep(tl, targets, params, position) {
+        var hasTargets = targets && (targets.length === undefined ? true : targets.length > 0);
+        if (!hasTargets) return tl;
+        if (position !== undefined) {
+            return tl.add(targets, params, position);
+        }
+        return tl.add(targets, params);
+    }
+
+    /**
      * Intro — Fade in + drop from above
      */
     function animateIntro(el) {
         var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add(el.querySelector("h1"), {
+        addStep(tl, el.querySelector("h1"), {
             opacity: [0, 1],
             translateY: ["-40px", "0px"],
             duration: 800
-        }).add(el.querySelectorAll("p"), {
+        });
+        addStep(tl, el.querySelectorAll("p"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 600,
@@ -52,22 +71,24 @@
 
     /**
      * KAN (Kolmogorov-Arnold Networks) — Slide from left with rotation
-     * Mathematical, structured entrance
+     * Mathematical, structured entrance.
      */
     function animateKAN(el) {
         var tl = anime.createTimeline({ ease: "outCubic" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateX: ["-70px", "0px"],
             rotate: ["-2deg", "0deg"],
             duration: 700
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["-50px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
-        }, ">-300").add(directChildren(el, "p, ul, a"), {
+        }, ">-300");
+        addStep(tl, directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             translateX: ["-30px", "0px"],
             duration: 500,
@@ -77,21 +98,23 @@
 
     /**
      * Cryptocurrency — Scale + flicker
-     * Digital currency feel with a subtle glitch entrance
+     * Digital currency feel with a subtle glitch entrance.
      */
     function animateCrypto(el) {
         var tl = anime.createTimeline({ ease: "outQuart" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 0.3, 0, 0.7, 1],
             scale: [0.8, 1],
             duration: 900
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [0.85, 1],
             duration: 600,
             delay: anime.stagger(100)
-        }, ">-400").add(directChildren(el, "p, ul, table, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, table, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 500,
@@ -101,21 +124,23 @@
 
     /**
      * Future of Quantum — Fade with scale oscillation
-     * Quantum superposition: elements shimmer into existence
+     * Quantum superposition: elements shimmer into existence.
      */
     function animateQuantum(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scale: [1.15, 0.95, 1],
             duration: 900
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [1.08, 0.98, 1],
             duration: 700,
             delay: anime.stagger(100)
-        }, ">-400").add(directChildren(el, "p, ul, table, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, table, a"), {
             opacity: [0, 1],
             scale: [1.03, 1],
             translateY: ["15px", "0px"],
@@ -126,21 +151,23 @@
 
     /**
      * AGI — Slide from right + expand
-     * Intelligence expanding outward
+     * Intelligence expanding outward.
      */
     function animateAGI(el) {
         var tl = anime.createTimeline({ ease: "outBack" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateX: ["80px", "0px"],
             duration: 700
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["60px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
-        }, ">-300").add(directChildren(el, "p, ul, dl, a"), {
+        }, ">-300");
+        addStep(tl, directChildren(el, "p, ul, dl, a"), {
             opacity: [0, 1],
             translateX: ["40px", "0px"],
             duration: 500,
@@ -150,21 +177,23 @@
 
     /**
      * Privacy — Rise from bottom
-     * Hidden becoming visible, emerging from obscurity
+     * Hidden becoming visible, emerging from obscurity.
      */
     function animatePrivacy(el) {
         var tl = anime.createTimeline({ ease: "outExpo" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateY: ["60px", "0px"],
             duration: 800
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["45px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, ">-400").add(directChildren(el, "p, ul, dl, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, dl, a"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,
@@ -180,18 +209,20 @@
     function animateProductPlacement(el) {
         var tl = anime.createTimeline({ ease: "outQuint" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scale: [1.3, 1],
             rotate: ["2deg", "0deg"],
             duration: 900
-        }).add(directChildren(el, "h2, h3"), {
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [1.15, 1],
             rotate: ["1.5deg", "0deg"],
             duration: 650,
             delay: anime.stagger(90)
-        }, ">-400").add(directChildren(el, "p, ul, dl, table, a"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, dl, table, a"), {
             opacity: [0, 1],
             scale: [1.05, 1],
             translateY: ["20px", "0px"],
@@ -201,12 +232,14 @@
     }
 
     /**
-     * Contact/Footer — Simple fade in
+     * Contact/Footer — Simple fade in.
+     * The footer h2 ("Contact:") is not part of the section-h1 demotion
+     * so it remains an h2.
      */
     function animateContact(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add(el.querySelectorAll("h2, p, a"), {
+        addStep(tl, el.querySelectorAll("h2, p, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

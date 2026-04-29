@@ -2,6 +2,10 @@
  * AnimeJS timeline animations for index.html
  * Each content section has a unique animation style, synced via timelines.
  * Animations trigger on scroll via Intersection Observer.
+ *
+ * Heading-level note: the page uses a single page-topic <h1>; each section's
+ * title is an <h2>, with <h3>/<h4> inside. The selectors below reflect that
+ * hierarchy (after the SEO heading-hierarchy fix).
  */
 
 (function () {
@@ -26,57 +30,6 @@
     var animated = {};
 
     /**
-     * Intro Section — Fade in + drop from above
-     * h1 drops, h2 scales in, paragraphs stagger up
-     */
-    function animateIntro(el) {
-        var tl = anime.createTimeline({ ease: "outExpo" });
-
-        tl.add(el.querySelector("h1"), {
-            opacity: [0, 1],
-            translateY: ["-40px", "0px"],
-            duration: 800
-        }).add(el.querySelector("h2"), {
-            opacity: [0, 1],
-            scale: [0.8, 1],
-            duration: 600
-        }, ">-400").add(el.querySelectorAll("p"), {
-            opacity: [0, 1],
-            translateY: ["30px", "0px"],
-            duration: 600,
-            delay: anime.stagger(150)
-        }, ">-300");
-    }
-
-    /**
-     * Work History — Slide from left
-     * h1 slides, SVG scales in, job entries stagger from left
-     */
-    function animateWork(el) {
-        var tl = anime.createTimeline({ ease: "outQuart" });
-
-        tl.add(directChildren(el, "h1"), {
-            opacity: [0, 1],
-            translateX: ["-80px", "0px"],
-            duration: 700
-        }).add(directChildren(el, "svg"), {
-            opacity: [0, 1],
-            scale: [0.5, 1],
-            duration: 500
-        }, ">-300").add(directChildren(el, "h2"), {
-            opacity: [0, 1],
-            translateX: ["-60px", "0px"],
-            duration: 500,
-            delay: anime.stagger(120)
-        }, ">-200").add(directChildren(el, "h3, p, ul, a"), {
-            opacity: [0, 1],
-            translateX: ["-40px", "0px"],
-            duration: 500,
-            delay: anime.stagger(60)
-        }, ">-300");
-    }
-
-    /**
      * Helper: select only direct children matching a selector.
      * Prevents animating deeply nested elements in large sections.
      */
@@ -88,30 +41,104 @@
     }
 
     /**
+     * Helper: add a timeline step only when the target list is non-empty.
+     * AnimeJS warns "No target found" if given an empty array or null,
+     * so guard every .add() call through this wrapper.
+     */
+    function addStep(tl, targets, params, position) {
+        var hasTargets = targets && (targets.length === undefined ? true : targets.length > 0);
+        if (!hasTargets) return tl;
+        if (position !== undefined) {
+            return tl.add(targets, params, position);
+        }
+        return tl.add(targets, params);
+    }
+
+    /**
+     * Intro Section — Fade in + drop from above
+     * Page-topic h1 drops, intro-subtitle h2 scales in, paragraphs stagger up.
+     */
+    function animateIntro(el) {
+        var tl = anime.createTimeline({ ease: "outExpo" });
+
+        addStep(tl, el.querySelector("h1"), {
+            opacity: [0, 1],
+            translateY: ["-40px", "0px"],
+            duration: 800
+        });
+        addStep(tl, el.querySelector("h2"), {
+            opacity: [0, 1],
+            scale: [0.8, 1],
+            duration: 600
+        }, ">-400");
+        addStep(tl, el.querySelectorAll("p"), {
+            opacity: [0, 1],
+            translateY: ["30px", "0px"],
+            duration: 600,
+            delay: anime.stagger(150)
+        }, ">-300");
+    }
+
+    /**
+     * Work History — Slide from left
+     * Section h2 slides, SVG scales in, company h3s stagger from left,
+     * role h4 + content fades in.
+     */
+    function animateWork(el) {
+        var tl = anime.createTimeline({ ease: "outQuart" });
+
+        addStep(tl, directChildren(el, "h2"), {
+            opacity: [0, 1],
+            translateX: ["-80px", "0px"],
+            duration: 700
+        });
+        addStep(tl, directChildren(el, "svg"), {
+            opacity: [0, 1],
+            scale: [0.5, 1],
+            duration: 500
+        }, ">-300");
+        addStep(tl, directChildren(el, "h3"), {
+            opacity: [0, 1],
+            translateX: ["-60px", "0px"],
+            duration: 500,
+            delay: anime.stagger(120)
+        }, ">-200");
+        addStep(tl, directChildren(el, "h4, p, ul, a"), {
+            opacity: [0, 1],
+            translateX: ["-40px", "0px"],
+            duration: 500,
+            delay: anime.stagger(60)
+        }, ">-300");
+    }
+
+    /**
      * Education — Fade + slight rotation
-     * h1 rotates in, SVG spins subtly, table/content fades up.
-     * Uses direct children only because this section has deeply
-     * nested tables with hundreds of inner elements.
+     * Section h2 rotates in, SVG spins subtly, degree h3 + university h4
+     * + table/content fades up. Uses direct children only because this
+     * section has deeply nested tables with hundreds of inner elements.
      */
     function animateEducation(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             rotate: ["-3deg", "0deg"],
             translateY: ["-30px", "0px"],
             duration: 700
-        }).add(directChildren(el, "svg"), {
+        });
+        addStep(tl, directChildren(el, "svg"), {
             opacity: [0, 1],
             rotate: ["-15deg", "0deg"],
             duration: 600
-        }, ">-300").add(directChildren(el, "h2, h3"), {
+        }, ">-300");
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             rotate: ["-2deg", "0deg"],
             duration: 500,
             delay: anime.stagger(100)
-        }, ">-200").add(directChildren(el, "ul, table, p, a"), {
+        }, ">-200");
+        addStep(tl, directChildren(el, "ul, table, p, a"), {
             opacity: [0, 1],
             translateY: ["25px", "0px"],
             duration: 600,
@@ -121,26 +148,29 @@
 
     /**
      * Projects — Slide from right
-     * Mirror of work history direction for visual contrast
+     * Mirror of work history direction for visual contrast.
      */
     function animateProjects(el) {
         var tl = anime.createTimeline({ ease: "outQuart" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateX: ["80px", "0px"],
             duration: 700
-        }).add(directChildren(el, "svg"), {
+        });
+        addStep(tl, directChildren(el, "svg"), {
             opacity: [0, 1],
             scale: [0.3, 1],
             rotate: ["10deg", "0deg"],
             duration: 600
-        }, ">-300").add(directChildren(el, "h2, h3"), {
+        }, ">-300");
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["60px", "0px"],
             duration: 500,
             delay: anime.stagger(100)
-        }, ">-200").add(directChildren(el, "p, ul, a"), {
+        }, ">-200");
+        addStep(tl, directChildren(el, "p, ul, a"), {
             opacity: [0, 1],
             translateX: ["40px", "0px"],
             duration: 500,
@@ -150,26 +180,29 @@
 
     /**
      * Technical Skills — Cascade/waterfall from top
-     * Elements drop in sequentially like building blocks
+     * Elements drop in sequentially like building blocks.
      */
     function animateTechnicalSkills(el) {
         var tl = anime.createTimeline({ ease: "outBounce" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateY: ["-50px", "0px"],
             duration: 800
-        }).add(directChildren(el, "svg"), {
+        });
+        addStep(tl, directChildren(el, "svg"), {
             opacity: [0, 1],
             translateY: ["-30px", "0px"],
             duration: 500,
             ease: "outQuart"
-        }, ">-400").add(directChildren(el, "h2"), {
+        }, ">-400");
+        addStep(tl, directChildren(el, "h3"), {
             opacity: [0, 1],
             translateY: ["-30px", "0px"],
             duration: 600,
             delay: anime.stagger(100)
-        }, ">-200").add(directChildren(el, "ul, a"), {
+        }, ">-200");
+        addStep(tl, directChildren(el, "ul, a"), {
             opacity: [0, 1],
             translateY: ["-20px", "0px"],
             duration: 500,
@@ -180,21 +213,23 @@
 
     /**
      * Certifications — Zoom/scale from center
-     * Certificate-like presentation effect
+     * Certificate-like presentation effect.
      */
     function animateCertifications(el) {
         var tl = anime.createTimeline({ ease: "outBack" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scale: [0.5, 1],
             duration: 700
-        }).add(directChildren(el, "svg"), {
+        });
+        addStep(tl, directChildren(el, "svg"), {
             opacity: [0, 1],
             scale: [0.2, 1],
             rotate: ["-5deg", "0deg"],
             duration: 600
-        }, ">-300").add(directChildren(el, "h2, ul, a"), {
+        }, ">-300");
+        addStep(tl, directChildren(el, "h3, ul, a"), {
             opacity: [0, 1],
             scale: [0.8, 1],
             duration: 500,
@@ -204,25 +239,28 @@
 
     /**
      * Other Skills — Rise from bottom
-     * Elements float upward into place
+     * Elements float upward into place.
      */
     function animateOtherSkills(el) {
         var tl = anime.createTimeline({ ease: "outCubic" });
 
-        tl.add(directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             translateY: ["50px", "0px"],
             duration: 700
-        }).add(directChildren(el, "svg"), {
+        });
+        addStep(tl, directChildren(el, "svg"), {
             opacity: [0, 1],
             translateY: ["40px", "0px"],
             duration: 500
-        }, ">-300").add(directChildren(el, "h2"), {
+        }, ">-300");
+        addStep(tl, directChildren(el, "h3"), {
             opacity: [0, 1],
             translateY: ["35px", "0px"],
             duration: 500,
             delay: anime.stagger(120)
-        }, ">-200").add(directChildren(el, "ul, a"), {
+        }, ">-200");
+        addStep(tl, directChildren(el, "ul, a"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,
@@ -231,12 +269,14 @@
     }
 
     /**
-     * Contact/Footer — Simple fade in
+     * Contact/Footer — Simple fade in.
+     * The footer h2 ("Contact:") is not part of the section-h1 demotion
+     * so it remains an h2.
      */
     function animateContact(el) {
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        tl.add(el.querySelectorAll("h2, p, a"), {
+        addStep(tl, el.querySelectorAll("h2, p, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,
