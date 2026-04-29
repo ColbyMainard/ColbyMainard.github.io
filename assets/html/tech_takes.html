@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Technical Stances</title>
+        <title>Technical Stances — Colby Mainard | Opinions on AI, Quantum, Privacy</title>
         <meta name="author" content="Colby Mainard">
 
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Canonical URL and social sharing cards -->
+        <link rel="canonical" href="https://colbymainard.github.io/assets/html/tech_takes.html">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://colbymainard.github.io/assets/html/tech_takes.html">
+        <meta property="og:title" content="Technical Stances — Colby Mainard">
+        <meta property="og:description" content="In-depth technical opinions on Kolmogorov-Arnold Networks, cryptocurrency security, quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.">
+        <meta property="og:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+        <meta property="og:site_name" content="Colby Mainard">
+        <meta name="linkedin:card" content="summary">
+        <meta name="linkedin:title" content="Technical Stances — Colby Mainard">
+        <meta name="linkedin:description" content="In-depth technical opinions on Kolmogorov-Arnold Networks, cryptocurrency security, quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.">
+        <meta name="linkedin:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+
+        <!-- Icons and theme -->
         <link rel="icon" type="image/png" href="../images/favicon.png"/>
+        <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+        <meta name="theme-color" content="#000000">
+
         <link rel="stylesheet" href="../css/default.css">
         <meta charset="UTF-8">
-        <meta name="description" content="Technical Stances on Professional Website">
+        <meta name="description" content="In-depth technical opinions on Kolmogorov-Arnold Networks, cryptocurrency security, quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.">
         <meta name="keywords" content="artificial intelligence, machine learning, cybersecurity, privacy, technical stances, Kolmogorov-Arnold Networks, cryptocurrency, quantum computing">
-        <meta name="author" content="Colby Mainard">
-        
-        <!-- add recommended features from https://securityheaders.com/ -->
-        <add name="X-Frame-Options" value="SAMEORIGIN"/>
+
+        <!-- CSP frame-ancestors (static-HTML equivalent of X-Frame-Options) -->
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
 
         <!-- Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q4KZE3X1"></script>
@@ -27,21 +44,113 @@
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
         <script src="../js/service_worker_register.js" defer></script>
+
+        <!-- JSON-LD: BreadcrumbList -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://colbymainard.github.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Technical Stances", "item": "https://colbymainard.github.io/assets/html/tech_takes.html"}
+          ]
+        }
+        </script>
+
+        <!-- JSON-LD: Article schemas (one per Tech Take) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Kolmogorov-Arnold Networks (KANs)",
+          "datePublished": "2025-10-07",
+          "dateModified": "2025-10-07",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Staying Safe with Cryptocurrency",
+          "datePublished": "2025-11-29",
+          "dateModified": "2025-11-29",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Future of Quantum Computing",
+          "datePublished": "2025-10-18",
+          "dateModified": "2025-10-18",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Artificial General Intelligence: More Buzzword Than Threat",
+          "datePublished": "2025-10-28",
+          "dateModified": "2025-10-28",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Post-Internet Privacy",
+          "datePublished": "2026-01-20",
+          "dateModified": "2026-01-20",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Product Placement in Sports Marketing",
+          "datePublished": "2026-04-23",
+          "dateModified": "2026-04-23",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#productPlacementDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#productPlacementDiv"
+        }
+        </script>
     </head>
     <body>
         <header>
-            <article class="pageMenu" id="pageMenu">
+            <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
                 <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
+                <nav aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
                     <a href="./hobbies.html">Hobbies</a>
                     <a href="./tech_resources.html">Technical Resources</a>
                 </nav>
-            </article>
-            <article class="siteMenu" id="siteMenu">
-                <nav>
+            </div>
+            <div class="siteMenu" id="siteMenu">
+                <nav aria-label="Page sections">
                     <a href="#KANDiv">Kolmogorov-Arnold Networks</a>
                     <a href="#cryptocurrencyDiv">Cryptocurrency Basics</a>
                     <a href="#futureOfQuantumDiv">Future of Quantum Computing</a>
@@ -50,7 +159,7 @@
                     <a href="#productPlacementDiv">Product Placement in Sports Marketing</a>
                     <a href="#contactMe">Contact Me</a>
                 </nav>
-            </article>
+            </div>
         </header>
         <main class="main" id="main">
             <div class="introSectionDiv" id="introSectionDiv">
@@ -64,9 +173,9 @@
             </div>
             <div class="KANDiv" id="KANDiv">
                 <section class="KAN" id="KAN">
-                    <h1>Kolmogorov-Arnold Networks (KANs)</h1>
+                    <h2>Kolmogorov-Arnold Networks (KANs)</h2>
                     <p><u>Last Updated:</u> October 7th, 2025</p>
-                    <h2>What are they?</h2>
+                    <h3>What are they?</h3>
                     <p>
                         <a href="https://arxiv.org/abs/2404.19756">
                             Kolmogorov-Arnold Networks
@@ -80,8 +189,8 @@
                         Because of this, each perceptron is much more robust than comparable MLPs.
                         This additional robustness allows KANs to use fewer perceptrons to achieve similar performance.
                     </p>
-                    <h2>Pros</h2>
-                    <h3>Improved interoperability</h3>
+                    <h3>Pros</h3>
+                    <h4>Improved interoperability</h4>
                     <p>
                         Thanks to each node of the KAN learning it's own spline, this would allow users to visualize how a change of input impacts the output of that node.
                         Once a user understands each node as well as how data flows through the network, it would be possible to visualize how changing an input would change outputs.
@@ -91,15 +200,15 @@
                         KANs, by comparison, have very few units composing it.
                         This makes the combinatorial amount of visualizations are easier to merge together to make an interpretable model that is much more approachable for the average human.
                     </p>
-                    <h3>Accuracy</h3>
+                    <h4>Accuracy</h4>
                     <p>
                         Because each node of the KAN learns it's own activation function in addition to learning weights, each node can more accurately fit a component of the problem.
                         Since activation functions are typically defined by the user for MLPs, there is no guarantee that the function chosen by the user is the best possible.
                         Even when taking into account the use of hyperparameter tuning, this tends to yield only the best activation function of those tested.
                         The exclusion of poor activation functions does not exhaustively that the best activation function was chosen to fit the data to the exclusion of all others.
                     </p>
-                    <h2>Cons</h2>
-                    <h3>Less developer support</h3>
+                    <h3>Cons</h3>
+                    <h4>Less developer support</h4>
                     <p>
                         As the paper I was able to find for this demo was only released in 2024, most AI developers haven't had much time to play with this relatively new technology.
                         The fact that LLMs have consumed so much of attention from non-technical users has redirected the efforts and limited time that developers have to keep up-to-date on current technologies.
@@ -107,7 +216,7 @@
                         Despite the fact that some technologies in the proof-of-concept phase could perform better than widely-available technologies, developers need to be both aware of new technology and have the resources to integrate it.
                         Combining the novelty of KANs and the extremely fast, chaotic impact of AI on business strategies has lead to a lack of resources to explore how KANs could change the game fundamentally.
                     </p>
-                    <h3>Parallel Processing / Speed</h3>
+                    <h4>Parallel Processing / Speed</h4>
                     <p>
                         There are several features that have limited the max speed of KANs, like:
                     </p>
@@ -134,9 +243,9 @@
             </div>
             <div class="CryptocurrencyDiv" id="CryptocurrencyDiv">
                 <section class="Cryptocurrency" id="Cryptocurrency">
-                    <h1>Staying Safe with Cryptocurrency</h1>
+                    <h2>Staying Safe with Cryptocurrency</h2>
                     <p><u>Last Updated:</u> November 29th, 2025</p>
-                    <h2>What are cryptocurrencies?</h2>
+                    <h3>What are cryptocurrencies?</h3>
                     <p>
                         <a href="https://en.wikipedia.org/wiki/Cryptocurrency">
                             Cryptocurrency
@@ -150,7 +259,7 @@
                         Proof-of-work and proof-of-stake are two common solutions to the problem.
                         Proof-of-work is designed to reward those who put work into maintaining the blockchain, while proof-of-stake is designed to reward those most invested in the cryptocurrency's correctness.
                     </p>
-                    <h2>Pros and Cons of Investing in Crypto</h2>
+                    <h3>Pros and Cons of Investing in Crypto</h3>
                     <p>
                         To establish what the cryptocurrency market, I will compare and contrast it with more traditional securities.
                         Traditional securities include things like stocks and exchange-traded funds (ETFs).
@@ -206,7 +315,7 @@
                         </tr>
                     </table>
                     <ul></ul>
-                    <h2>Which cryptocurrencies are (relatively) safe?</h2>
+                    <h3>Which cryptocurrencies are (relatively) safe?</h3>
                     <p>
                         It is worth noting that cryptocurrency is much more volatile than traditional securities.
                         Even with traditional securities, it is wise to not invest more than you can afford to lose.
@@ -257,7 +366,7 @@
                             </td>
                         </tr>
                     </table>
-                    <h2>Recommended list of supplies to start</h2>
+                    <h3>Recommended list of supplies to start</h3>
                     <p></p>
                     <ul>
                         <li>Cold Wallet</li>
@@ -288,9 +397,9 @@
             </div>
             <div class="FutureOfQuantumDiv" id="FutureOfQuantumDiv">
                 <section class="FutureOfQuantum" id="FutureOfQuantum">
-                    <h1>Future of Quantum Computing</h1>
+                    <h2>Future of Quantum Computing</h2>
                     <p><u>Last Updated:</u> October 18, 2025</p>
-                    <h2>What is quantum computing?</h2>
+                    <h3>What is quantum computing?</h3>
                     <p>
                         <a href="https://www.nist.gov/quantum-information-science/quantum-computing-explained">
                             Quantum computing
@@ -299,7 +408,7 @@
                         Qubits, like traditional bits, are able to take on values.
                         Traditional bits have no uncertainty and always take the value of either true or false, while Qubits can have uncertainty by taking a state that is a combination between true and false.
                     </p>
-                    <h2>Where is quantum computing most useful?</h2>
+                    <h3>Where is quantum computing most useful?</h3>
                     <p>
                         Because of the fundamental difference in how the underlying hardware handles uncertainty, algorithms can be written to take advantage of this.
                         Uncertainty collapses upon reading the state of the qubits, and this collapse propagates through the circuit by virtue of how quantum physics behaves.
@@ -310,7 +419,7 @@
                         </a>These problems tend to grow exponentially or worse on digital hardware.
                         Quantum, however, grows its computing power exponentially with the number of qubits the quantum computer has.
                     </p>
-                    <h2>Where will quantum computing likely go?</h2>
+                    <h3>Where will quantum computing likely go?</h3>
                     <p>
                         Quantum computing is still in its infancy. 
                         Because of that, all guesses are where it will take computing is speculation at best.
@@ -328,9 +437,9 @@
             </div>
             <div class="AGIDiv" id="AGIDiv">
                 <section class="AGI" id="AGI">
-                    <h1>Artificial General Intelligence: More Buzzword Than Threat</h1>
+                    <h2>Artificial General Intelligence: More Buzzword Than Threat</h2>
                     <p><u>Last Updated:</u> October 28, 2025</p>
-                    <h2>What is Artificial General Intelligence (AGI)?</h2>
+                    <h3>What is Artificial General Intelligence (AGI)?</h3>
                     <p>
                         <a href="https://www.livescience.com/technology/artificial-intelligence/what-is-artificial-general-intelligence-agi">
                             AGI
@@ -339,8 +448,8 @@
                         Current state-of-the-art models, by contrast, are defined as narrow.
                         While they can perform at or above human competency levels for one task, they struggle to generalize to unrelated tasks.
                     </p>
-                    <h2>When will it get here?</h2>
-                    <h3>The factors involved</h3>
+                    <h3>When will it get here?</h3>
+                    <h4>The factors involved</h4>
                     <p>
                         <a href="https://www.livescience.com/technology/artificial-intelligence/agi-could-now-arrive-as-early-as-2026-but-not-all-scientists-agree">
                             While some feel confident it will arrive by 2026,
@@ -463,7 +572,7 @@
                             </ul>
                         </dd>
                     </dl>
-                    <h3>Where should we aim for?</h3>
+                    <h4>Where should we aim for?</h4>
                     <p>
                         Assuming AGI is achieved, I believe the best outcome would be where AGI supports but does not replace humanity.
                         Many initial versions of a technology are not feature complete.
@@ -481,9 +590,9 @@
                 id="PrivacyDiv"
             >
                 <section class="Privacy" id="Privacy">
-                    <h1>Post-Internet Privacy</h1>
+                    <h2>Post-Internet Privacy</h2>
                     <p><u>Last Updated:</u> January 20, 2026</p>
-                    <h2>What has put software against privacy?</h2>
+                    <h3>What has put software against privacy?</h3>
                     <p>
                         From the start, the internet was designed to allow users to democratize information.
                         However, most servers cost money to set up. 
@@ -492,7 +601,7 @@
                         To offset costs, many services supplement income by integrating with advertizing.
                         When putting advertisements on the internet, it improves conversion rate if the advertiser can hyper-target advertisements to only their ideal audience.
                     </p>
-                    <h2>Why should anyone care?</h2>
+                    <h3>Why should anyone care?</h3>
                     <p>
                         Sadly, many online services have experienced security breaches.
                         This means that most people who have been online long enough have experienced at least one data breach in their life.
@@ -502,7 +611,7 @@
                         Simply monitoring if your information was in a breach is retroactive, and can never completely repair the breach of privacy.
                         Because of this, steps must be taken by both individuals and services.
                     </p>
-                    <h2>Protecting Privacy on the User Side</h2>
+                    <h3>Protecting Privacy on the User Side</h3>
                     <p>
                         As a user, it can feel like there isn't much you can do.
                         However, it is possible to take at least some ways to fight back.
@@ -538,7 +647,7 @@
                             <li>By using unique passwords for each service, use strong passwords, and turning on multi-factor authentication (MFA) can prevent hackers from using this style of attack.</li>
                         </ul>
                     </ul>
-                    <h2>Respecting Privacy on the Server Side</h2>
+                    <h3>Respecting Privacy on the Server Side</h3>
                     <p></p>
                     <ul>
                         <li>Differential Privacy</li>
@@ -571,15 +680,15 @@
             </div>
             <div class="productPlacementDiv" id="productPlacementDiv">
                 <section class="ProductPlacement" id="ProductPlacement">
-                    <h1>Product Placement in Sports Marketing</h1>
+                    <h2>Product Placement in Sports Marketing</h2>
                     <p><u>Last Updated:</u> April 23, 2026</p>
-                    <h2>The Basics of the Niche</h2>
+                    <h3>The Basics of the Niche</h3>
                     <p>
                         Any time a logo is seen next to a professional athlete, the brand behind the logo likely paid for that placement.
                         These logos could be placed on anything from jersey patches to in-stadium assets to shoes.
                         However, it is not always obvious how this placement is valued
                     </p>
-                    <h2>What to Keep in Mind</h2>
+                    <h3>What to Keep in Mind</h3>
                     <p>
                         As a Machine Learning Engineer, I formerly managed various computer vision pipelines for many leagues, including:
                     </p>
@@ -591,32 +700,32 @@
                         <li>PFL</li>
                         <li>NFL</li>
                     </ul>
-                    <h3>Size</h3>
+                    <h4>Size</h4>
                     <p>
                         Intuitively, the larger a logo is, the easier it is for both the human eye and a computer vision model to pick it up.
                         You additionally get more screen real estate.
                     </p>
-                    <h3>Orientation</h3>
+                    <h4>Orientation</h4>
                     <p>
                         Should your logo not be radially-symmetrical, rotating it may require more effort for the human eye to consciously pick it up.
                         It also could make it more difficult for computer vision models to track it.
                     </p>
-                    <h3>Occlusion</h3>
+                    <h4>Occlusion</h4>
                     <p>
                         For obvious reasons, if something or someone is between the camera and the logo, the logo will not be visible.
                         In cases of partial occlusion, how much of the logo can be occluded before it is difficult to truly recognize.
                     </p>
-                    <h3>Motion Blur</h3>
+                    <h4>Motion Blur</h4>
                     <p>
                         As athletes, environment, and camera angles change, this can easily cause motion blur.
                         This motion blur, most obvious in NASCAR, make it more difficult to clearly identify a logo.
                     </p>
-                    <h3>Digitally-Enhanced vs. Analog Assets</h3>
+                    <h4>Digitally-Enhanced vs. Analog Assets</h4>
                     <p>
                         Certain assets, like virtual glass the NHL has been experimenting with or digitally-enhanced dasherboards (DEDs), are made more clear by reducing natural motion blur.
                         Analog assets, however, experience all effects of the camera lens would subject them to.
                     </p>
-                    <h3>Relative Clutter</h3>
+                    <h4>Relative Clutter</h4>
                     <p>
                         In product placement environments, it is common to have other objects in the scene.
                         These other items could draw attention away from your logo.

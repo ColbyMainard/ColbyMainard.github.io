@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hobbies</title>
+        <title>Hobbies — Colby Mainard | Photography, Quantum Computing, D&amp;D, History</title>
         <meta name="author" content="Colby Mainard">
-        
+
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Canonical URL and social sharing cards -->
+        <link rel="canonical" href="https://colbymainard.github.io/assets/html/hobbies.html">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://colbymainard.github.io/assets/html/hobbies.html">
+        <meta property="og:title" content="Hobbies — Colby Mainard">
+        <meta property="og:description" content="Colby Mainard's hobbies: landscape photography, self-taught quantum computing, Dungeons &amp; Dragons in Austin, and history.">
+        <meta property="og:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+        <meta property="og:site_name" content="Colby Mainard">
+        <meta name="linkedin:card" content="summary">
+        <meta name="linkedin:title" content="Hobbies — Colby Mainard">
+        <meta name="linkedin:description" content="Colby Mainard's hobbies: landscape photography, self-taught quantum computing, Dungeons &amp; Dragons in Austin, and history.">
+        <meta name="linkedin:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+
+        <!-- Icons and theme -->
         <link rel="icon" type="image/png" href="../images/favicon.png"/>
+        <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+        <meta name="theme-color" content="#000000">
+
         <link rel="stylesheet" href="../css/default.css">
         <meta charset="UTF-8">
-        <meta name="description" content="Hobbies on Professional Website">
+        <meta name="description" content="Colby Mainard's hobbies: landscape photography, self-taught quantum computing, Dungeons &amp; Dragons in Austin, and history.">
         <meta name="keywords" content="photography, dungeons and dragons, history, quantum computing, hobbies">
-        <meta name="author" content="Colby Mainard">
+
+        <!-- CSP frame-ancestors (static-HTML equivalent of X-Frame-Options) -->
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
 
         <!-- Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q4KZE3X1"></script>
@@ -24,44 +44,56 @@
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
         <script src="../js/service_worker_register.js" defer></script>
+
+        <!-- JSON-LD: BreadcrumbList -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://colbymainard.github.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Hobbies", "item": "https://colbymainard.github.io/assets/html/hobbies.html"}
+          ]
+        }
+        </script>
     </head>
     <body>
         <header>
-            <article class="pageMenu" id="pageMenu">
+            <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
                 <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
+                <nav aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
                     <a href="./hobbies.html">Hobbies</a>
                     <a href="./tech_resources.html">Technical Resources</a>
                 </nav>
-            </article>
-            <article class="siteMenu" id="siteMenu">
-                <nav>
+            </div>
+            <div class="siteMenu" id="siteMenu">
+                <nav aria-label="Page sections">
                     <a href="#quantumComputingDiv">Quantum Computing</a>
                     <a href="#photographyDiv">Photography</a>
                     <a href="#dungeonsAndDragonsDiv">Dungeons and Dragons</a>
                     <a href="#historyDiv">History</a>
                     <a href="#contactMe">Contact Me</a>
                 </nav>
-            </article>
+            </div>
         </header>
         <main class="main" id="main">
             <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Interests / Hobbies</h1>
                 <br>
-                <img src="../images/miscellaneous/DEFCON33.jpeg" alt="DEFCON33 Trip Photo" loading="lazy">
+                <img src="../images/miscellaneous/DEFCON33.jpeg" alt="DEFCON33 Trip Photo" width="2100" height="2800" loading="lazy" decoding="async">
             </div>
             <div class="quantumComputingDiv" id="quantumComputingDiv">
                 <section class="quantumComputing" id="quantumComputing">
-                    <h1>Quantum Computing</h1>
+                    <h2>Quantum Computing</h2>
                     <p>
                         This area of nascent technology appears unapproachable, the easiest way to visualize this would be rotating a circle, sphere, or hypersphere (ball in 4+ dimensions) in such a way that its north pole is pointing towards the correct answer. 
                         Each qubit, in this case, would keep track of the rotation of data in this space along a particular dimension. 
                         The YouTube channel 3Blue1Brown has an excellent brief explainer below.
                     </p>
-                    <iframe src="https://www.youtube-nocookie.com/embed/RQWpF2Gb-gU" title="Quantum Computing Explainer 3Blue1Brown" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube-nocookie.com/embed/RQWpF2Gb-gU" title="Quantum Computing Explainer 3Blue1Brown" width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <p>
                         While the list of widely-available algorithms for quantum computers are somewhat limited, I was able to teach myself to a reasonably-fine-grain level with 
                         <a href="https://www.goodreads.com/book/show/49786117-quantum-computing">
@@ -77,24 +109,24 @@
             </div>
             <div class="photographyDiv" id="photographyDiv">
                 <section class="photography" id="photography">
-                    <h1>Photography</h1>
+                    <h2>Photography</h2>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
                     <br>
-                    <img src="../images/photographyHobby/DSC_0004.JPG" alt="Up-close flower" loading="lazy">
+                    <img src="../images/photographyHobby/DSC_0004.JPG" alt="Up-close flower" width="3000" height="2000" loading="lazy" decoding="async">
                     <br>
-                    <img src="../images/photographyHobby/DSC_0023.JPG" alt="Cloudy orange sun" loading="lazy">
+                    <img src="../images/photographyHobby/DSC_0023.JPG" alt="Cloudy orange sun" width="3000" height="2000" loading="lazy" decoding="async">
                     <br>
-                    <img src="../images/photographyHobby/DSC_0110.JPG" alt="Sunset hidden behind trees" loading="lazy">
+                    <img src="../images/photographyHobby/DSC_0110.JPG" alt="Sunset hidden behind trees" width="3000" height="2000" loading="lazy" decoding="async">
                     <br>
-                    <img src="../images/photographyHobby/DSC_0237.JPG" alt="Sunset hidden behind trees 2" loading="lazy">
+                    <img src="../images/photographyHobby/DSC_0237.JPG" alt="Sunset hidden behind trees 2" width="3000" height="2000" loading="lazy" decoding="async">
                     <br>
-                    <img src="../images/photographyHobby/DSC_0396.JPG" alt="Beautiful purple clouds" loading="lazy">
+                    <img src="../images/photographyHobby/DSC_0396.JPG" alt="Beautiful purple clouds" width="3000" height="2000" loading="lazy" decoding="async">
                     <br>
                 </section>
             </div>
             <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">
                 <section class="dungeonsAndDragons" id="dungeonsAndDragons">
-                    <h1>Dungeons and Dragons</h1>
+                    <h2>Dungeons and Dragons</h2>
                     <p>
                         I started playing the 5th edition of this tabletop game in 2023 to experience a classic game and join the nerd culture in Austin, TX, and haven't looked back! 
                         Not only is it a near-infinite source of potential entertainment, but has lead to new friendships.
@@ -117,8 +149,8 @@
             </div>
             <div class="historyDiv" id="historyDiv">
                 <section class="history" id="history">
-                    <h1>History</h1>
-                    <h2>Why</h2>
+                    <h2>History</h2>
+                    <h3>Why</h3>
                     <p>
                         I have two main reasons that drew me into history: academic interest and personal curiosity. 
                     </p>
@@ -174,7 +206,7 @@
                             </a>
                         </li>
                     </ul>
-                    <h2>Interesting Podcasts</h2>
+                    <h3>Interesting Podcasts</h3>
                     <table>
                         <tr>
                             <th>

@@ -31,7 +31,7 @@ With this understanding, it is likely that future colleagues and employers would
 
 ## Commands
 
-- `sass --trace ./assets/css/default.scss ./assets/css/default.css`: Convert default scss file to CSS
+- `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css`: Convert default scss file to CSS for production. Omit `--no-source-map` for local dev if you want source maps; the `assets/css/*.css.map` glob is gitignored so dev maps won't be committed.
 - `npm install <package-name>`: Installing a library that might be useful.
 
 ## Architecture

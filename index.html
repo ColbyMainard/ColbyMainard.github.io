@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <!--https://www.w3schools.com/html/default.asp-->
-        <title>Colby Mainard's Website</title>
+        <title>Colby Mainard — Machine Learning Engineer | AI, Computer Vision, Deep Learning</title>
         <link rel="stylesheet" href="./assets/css/default.css">
         <meta charset="UTF-8">
-        <meta name="description" content="Professional Website.">
+        <meta name="description" content="Colby Mainard is a Machine Learning Engineer specializing in computer vision, deep learning, and AI for sports analytics, cybersecurity, and medical imaging. M.S. Computer Science, Texas A&amp;M.">
         <meta name="keywords" content="computer vision, natural language processing, autonomous vehicles, facial tracking, sports marketing, artificial intelligence, machine learning, cybersecurity">
         <meta name="author" content="Colby Mainard">
         <!--
@@ -24,14 +24,31 @@
 
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Canonical URL and social sharing cards -->
+        <link rel="canonical" href="https://colbymainard.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://colbymainard.github.io/">
+        <meta property="og:title" content="Colby Mainard — Machine Learning Engineer">
+        <meta property="og:description" content="Colby Mainard is a Machine Learning Engineer specializing in computer vision, deep learning, and AI for sports analytics, cybersecurity, and medical imaging.">
+        <meta property="og:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+        <meta property="og:site_name" content="Colby Mainard">
+        <meta name="linkedin:card" content="summary">
+        <meta name="linkedin:title" content="Colby Mainard — Machine Learning Engineer">
+        <meta name="linkedin:description" content="Colby Mainard is a Machine Learning Engineer specializing in computer vision, deep learning, and AI for sports analytics, cybersecurity, and medical imaging.">
+        <meta name="linkedin:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+
+        <!-- Icons and theme -->
         <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
-        
+        <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+        <meta name="theme-color" content="#000000">
+
         <!--Setting up tags for search engine verification-->
         <meta name="google-site-verification" content="LqOVTw1vRp28p5VNBCRWWOsZHXbZeZteA7rHCZi8bwQ" />
         <meta name="msvalidate.01" content="96DC561C2A904478B8F425694CAF638F" />
 
-        <!-- add recommended features from https://securityheaders.com/ -->
-        <add name="X-Frame-Options" value="SAMEORIGIN"/>
+        <!-- CSP frame-ancestors (static-HTML equivalent of X-Frame-Options) -->
+        <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self'">
 
         <!-- Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9Q4KZE3X1"></script>
@@ -44,21 +61,42 @@
         <script src="./assets/js/navbar.js" defer></script>
         <script src="./assets/js/back_to_top.js" defer></script>
         <script src="./assets/js/service_worker_register.js" defer></script>
+
+        <!-- JSON-LD: Person schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Colby Mainard",
+          "url": "https://colbymainard.github.io/",
+          "jobTitle": "AI/ML Engineer",
+          "worksFor": {"@type": "Organization", "name": "RiskScout"},
+          "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Texas A&M University", "sameAs": "https://www.tamu.edu/"}],
+          "knowsAbout": [
+            "Machine Learning", "Computer Vision", "Deep Learning",
+            "Natural Language Processing", "Generative Adversarial Networks",
+            "Variational Autoencoders", "Cybersecurity", "Anti-Money Laundering"
+          ],
+          "sameAs": ["https://www.linkedin.com/in/colby-mainard/"],
+          "email": "mailto:colby.mainard@proton.me",
+          "description": "Machine Learning Engineer specializing in computer vision and AI, with experience in sports analytics, cybersecurity, and medical imaging."
+        }
+        </script>
     </head>
     <body>
         <header>
-            <article class="pageMenu" id="pageMenu">
+            <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
                 <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav>
+                <nav aria-label="Site navigation">
                     <a href="./index.html">Home</a>
                     <a href="./assets/html/tech_takes.html">Technical Stances</a>
                     <a href="./assets/html/hobbies.html">Hobbies</a>
                     <a href="./assets/html/tech_resources.html">Technical Resources</a>
                 </nav>
-            </article>
-            <article class="siteMenu" id="siteMenu">
-                <nav>
+            </div>
+            <div class="siteMenu" id="siteMenu">
+                <nav aria-label="Page sections">
                     <a href="#workHistoryDiv">Work History</a>
                     <a href="#educationDiv">Education</a>
                     <a href="#projectsDiv">Projects</a>
@@ -66,7 +104,7 @@
                     <a href="#technicalSkillsDiv">Technical Skills</a>
                     <a href="#contactMe">Contact Me</a>
                 </nav>
-            </article>
+            </div>
         </header>
         <main class="main" id="main">
             <div class="introSectionDiv" id="introSectionDiv">
@@ -84,14 +122,14 @@
             </div>
             <div class="workHistoryDiv" id="workHistoryDiv">
                 <section class="workHistory" id="workHistory">
-                    <h1>Work History</h1>
+                    <h2>Work History</h2>
                     <svg width="20%" viewBox="0 0 300 200">
                         <rect width="250" height="150" x="25" y="25" rx="20" ry="20" fill="#AA7333"/>
                         <rect width="250" height="50" x="25" y="25" rx="20" ry="20" fill="#996222"/>
                         <polyline points="100,25 125,3 150,3 175,3 200,25" style="fill:none;stroke:#AA7333;stroke-width:3" />
                     </svg>
-                    <h2>RiskScout</h2>
-                    <h3>AI/ML Engineer</h3>
+                    <h3>RiskScout</h3>
+                    <h4>AI/ML Engineer</h4>
                     <p><u>Start Date:</u> March 2026</p>
                     <p><u>End Date:</u> Present</p>
                     <ul>
@@ -111,8 +149,8 @@
                             Prioritize secure handling of sensitive financial and personally identifiable information, following industry best practices and regulatory requirements.
                         </li>
                     </ul>
-                    <h2>MVP</h2>
-                    <h3>Machine Learning Engineer</h3>
+                    <h3>MVP</h3>
+                    <h4>Machine Learning Engineer</h4>
                     <p><u>Start Date:</u> September 2023</p>
                     <p><u>End Date:</u> March 2026</p>
                     <ul>
@@ -135,8 +173,8 @@
                             Contributed to Databricks-based workflows and notebooks; supported migration of internal Django/Flask services to third-party vendor solutions.
                         </li>
                     </ul>
-                    <h2>Vectra</h2>
-                    <h3>Software Engineer II</h3>
+                    <h3>Vectra</h3>
+                    <h4>Software Engineer II</h4>
                     <p><u>Start Date:</u> January 2022</p>
                     <p><u>End Date:</u> April 2023</p>
                     <ul>
@@ -150,8 +188,8 @@
                             Supported production ML workflows by improving reliability, performance, and maintainability of core data infrastructure.
                         </li>
                     </ul>
-                    <h2>Shiseido Americas</h2>
-                    <h3>Internship</h3>
+                    <h3>Shiseido Americas</h3>
+                    <h4>Internship</h4>
                     <p><u>Start Date:</u> June 2020</p>
                     <p><u>End Date:</u> August 2020</p>
                     <ul>
@@ -159,8 +197,8 @@
                         <li>Prototyped intermediate landmark generation techniques (e.g., convex hull–based methods) using Python, OpenCV, Keras, and scikit-learn.</li>
                     </ul>
                     <br>
-                    <h2>Summer Student Assistant</h2>
-                    <h3>Texas A&M University</h3>
+                    <h3>Summer Student Assistant</h3>
+                    <h4>Texas A&M University</h4>
                     <p><u>Start Date:</u> June 2019</p>
                     <p><u>End Date:</u> August 2019</p>
                     <p>
@@ -172,15 +210,15 @@
             <br>
             <div class="educationDiv" id="educationDiv">
                 <section class="education" id="education">
-                    <h1>Education</h1>
+                    <h2>Education</h2>
                     <svg width="20%" viewBox="0 0 300 200">
                         <ellipse rx="50" ry="35" cx="150" cy="78" style="fill:black;stroke:white;stroke-width:3" /> 
                         <polygon points="150,3 250,53, 150,103 50,53" style="fill:black;stroke:white;stroke-width:3"/> 
                         <line x1="75" y1="53" x2="75" y2="100" style="stroke:red;stroke-width:3"/>
                         <circle r="5" cx="75" cy="100" fill="red"/>
                     </svg>
-                    <h2>Masters of Computer Science</h2>
-                    <h3>Texas A&M University</h3>
+                    <h3>Masters of Computer Science</h3>
+                    <h4>Texas A&M University</h4>
                     <ul>
                         <li><u>Focuses:</u></li>
                         <ul>
@@ -475,8 +513,8 @@
                             </td>
                         </tr>
                     </table>
-                    <h2>Bachelors of Science, Computer Science</h2>
-                    <h3>Texas A&M University</h3>
+                    <h3>Bachelors of Science, Computer Science</h3>
+                    <h4>Texas A&M University</h4>
                     <ul>
                         <li><u>Minors:</u></li>
                         <ul>
@@ -1451,16 +1489,16 @@
             <br>
             <div class="projectsDiv" id="projectsDiv">
                 <section class="projects" id="projects">
-                    <h1>Projects</h1>
+                    <h2>Projects</h2>
                     <svg width="20%" viewBox="0 0 300 200">
                         <rect width="120" height="120" x="100" y="30" rx="20" ry="20" fill="black" />
                         <text x="120" y="90" fill="#ADFF2F" font-size="35">&lt;</text>
                         <text x="150" y="100" fill="#ADFF2F" font-size="35">/</text>
                         <text x="180" y="110" fill="#ADFF2F" font-size="35">&gt;</text>
                     </svg>
-                    <h2>COVID-19 Diagnosis ML Model</h2>
-                    <h3>Design and Build Model</h3>
-                    <h3>Fall 2020</h3>
+                    <h3>COVID-19 Diagnosis ML Model</h3>
+                    <h4>Design and Build Model</h4>
+                    <h4>Fall 2020</h4>
                     <ul>
                         <li>
                             Designed, trained, and validated deep learning models in Keras to classify COVID-19 from chest X-ray imagery.
@@ -1472,9 +1510,9 @@
                             Achieved 94% classification accuracy; solution ranked top 2 out of 20 competing teams.
                         </li>
                     </ul>
-                    <h2>AutoDrive Autonomous Vehicle</h2>
-                    <h3>Testing</h3>
-                    <h3>Spring 2020</h3>
+                    <h3>AutoDrive Autonomous Vehicle</h3>
+                    <h4>Testing</h4>
+                    <h4>Spring 2020</h4>
                     <ul>
                         <li>
                             Expanded virtual testing infrastructure to better reflect real-world driving scenarios as a part of the continuing Texas A&M <a href="http://autodrive.tamu.edu/autodrive-old/team.html">AutoDrive</a> team.
@@ -1483,9 +1521,9 @@
                             Implemented tooling to convert HD LiveMap (HDLM) data into Unreal Engine 4 environments for simulation-based validation.
                         </li>
                     </ul>
-                    <h2>Steganography</h2>
-                    <h3>Research Project</h3>
-                    <h3>Summer 2019</h3>
+                    <h3>Steganography</h3>
+                    <h4>Research Project</h4>
+                    <h4>Summer 2019</h4>
                     <p>
                         Under direction of Dr. Ritchey, Texas A&M, extended research into
                         <a href="https://en.wikipedia.org/wiki/Steganography">
@@ -1499,7 +1537,7 @@
             <br>
             <div class="technicalSkillsDiv" id="technicalSkillsDiv">
                 <section class="technicalSkills" id="technicalSkills">
-                    <h1>Technical Skills</h1>
+                    <h2>Technical Skills</h2>
                     <svg width="20%" viewBox="0 0 300 200">
                         <rect width="280" height="180" x="10" y="10" rx="20" ry="20" fill="black"/>
                         <rect width="50" height="50" x="125" y="75" stroke="#ADFF2F" stroke-width="3" fill="black"/>
@@ -1532,7 +1570,7 @@
                         <line x1="260" y1="170" x2="160" y2="170" style="stroke:#ADFF2F;stroke-width:3"/>
                         <line x1="160" y1="170" x2="160" y2="125" style="stroke:#ADFF2F;stroke-width:3"/>
                     </svg>
-                    <h2>Programming Languages:</h2>
+                    <h3>Programming Languages:</h3>
                     <ul>
                         <li>C</li>
                         <li>C++</li>
@@ -1548,7 +1586,7 @@
                         <li>NI LabVIEW</li>
                         <li>Common Lisp</li>
                     </ul>
-                    <h2>AI / ML Tools:</h2>
+                    <h3>AI / ML Tools:</h3>
                     <ul>
                         <li>Keras</li>
                         <li>Hyperopt</li>
@@ -1568,7 +1606,7 @@
                         <li>Ultralytics</li>
                         <li>MLFlow</li>
                     </ul>
-                    <h2>Database Technologies:</h2>
+                    <h3>Database Technologies:</h3>
                     <ul>
                         <li>Relational Database Management Systems (RDBMS)</li>
                         <ul>
@@ -1583,7 +1621,7 @@
                             <li>CouchDB</li>
                         </ul>
                     </ul>
-                    <h2>Operating Systems:</h2>
+                    <h3>Operating Systems:</h3>
                     <ul>
                         <li>Windows</li>
                         <li>Ubuntu</li>
@@ -1591,7 +1629,7 @@
                         <li>Kali Linux</li>
                         <li>macOS</li>
                     </ul>
-                    <h2>Cybersecurity:</h2>
+                    <h3>Cybersecurity:</h3>
                     <ul>
                         <li>Packet Switching</li>
                         <li>Denial of Service / Distributed Denial of Service</li>
@@ -1700,7 +1738,7 @@
                         <li>Metamorphic Viruses</li>
                         <li>Botnets</li>
                     </ul>
-                    <h2>Competencies:</h2>
+                    <h3>Competencies:</h3>
                     <ul>
                         <li>Artificial Intelligence (AI) / Machine Learning (ML)</li>
                         <ul>
@@ -1820,7 +1858,7 @@
                         </ul>
                         <li>Multithreaded Development</li>
                     </ul>
-                    <h2>Cloud:</h2>
+                    <h3>Cloud:</h3>
                     <ul>
                         <li>Amazon Web Services (AWS)</li>
                         <ul>
@@ -1831,7 +1869,7 @@
                         <li>Microsoft Azure</li>
                         <li>Databricks</li>
                     </ul>
-                    <h2>Miscellaneous:</h2>
+                    <h3>Miscellaneous:</h3>
                     <ul>
                         <li>Test Driven Development (TDD)</li>
                         <li>Behavior Driven Development (BDD)</li>
@@ -1900,7 +1938,7 @@
                 id="certificationsDiv"
             >
                 <section class="certifications" id="certifications">
-                    <h1>Certifications</h1>
+                    <h2>Certifications</h2>
                     <svg width="20%" viewBox="0 0 300 200">
                         <rect width="280" height="180" x="10" y="10" rx="0" ry="0" fill="black"/>
                         <rect width="240" height="140" x="30" y="30" rx="0" ry="0" fill="#800000"/>
@@ -1909,7 +1947,7 @@
                         <rect width="150" height="10" x="75" y="90" rx="0" ry="0" fill="gray"/>
                         <rect width="150" height="10" x="75" y="120" rx="0" ry="0" fill="gray"/>
                     </svg>
-                    <h2>Cloud Computing</h2>
+                    <h3>Cloud Computing</h3>
                     <ul>
                         <li>AWS Certified Cloud Practitioner</li>
                         <li>Microsoft Azure Fundamentals (AZ 900)</li>
@@ -1927,13 +1965,13 @@
                 id="otherSkillsDiv"
             >
                 <section class="otherSkills" id="otherSkills">
-                    <h1>Other Skills</h1>
+                    <h2>Other Skills</h2>
                     <svg width="20%" viewBox="0 0 300 200">
                         <rect width="100" height="180" x="100" y="10" rx="20" ry="20" fill="gray"/>
                         <rect width="80" height="160" x="110" y="20" rx="20" ry="20" fill="white"/>
                         <polyline points="130,15 135,30 165,30 170,15" style="fill:none;stroke:gray;stroke-width:3"/>
                     </svg>
-                    <h2>Interpersonal:</h2>
+                    <h3>Interpersonal:</h3>
                     <ul>
                         <li>Teamwork</li>
                         <li>Leadership</li>
@@ -1942,7 +1980,7 @@
                         <li>Collaboration</li>
                         <li>Innovation</li>
                     </ul>
-                    <h2>Miscellaneous:</h2>
+                    <h3>Miscellaneous:</h3>
                     <ul>
                         <li>Problem Solving</li>
                         <li>Curiosity</li>

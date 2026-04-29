@@ -24,6 +24,10 @@
     text-align: left;
     color: #6a2a98;
     font-size: 200%; }
+  #workHistory h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
   #workHistory p {
     text-align: left;
     color: #6a2a98;
@@ -72,6 +76,10 @@
     text-align: left;
     color: #6a2a98;
     font-size: 200%; }
+  #education h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
   #education p {
     text-align: left;
     color: #6a2a98;
@@ -146,6 +154,10 @@
     text-align: left;
     color: #6a2a98;
     font-size: 200%; }
+  #projects h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
   #projects p {
     text-align: left;
     color: #6a2a98;
@@ -194,6 +206,10 @@
     text-align: left;
     color: #6a2a98;
     font-size: 200%; }
+  #technicalSkills h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
   #technicalSkills p {
     text-align: left;
     color: #6a2a98;
@@ -242,6 +258,10 @@
     text-align: left;
     color: #6a2a98;
     font-size: 200%; }
+  #otherSkills h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
   #otherSkills p {
     text-align: left;
     color: #6a2a98;
@@ -290,6 +310,10 @@
     text-align: left;
     color: #6a2a98;
     font-size: 200%; }
+  #certifications h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
   #certifications p {
     text-align: left;
     color: #6a2a98;
@@ -706,6 +730,10 @@ html.js-animations #contactMe > iframe {
     text-align: left;
     font-size: 200%;
     color: #7a7a99; }
+  #KAN h4 {
+    text-align: left;
+    font-size: 175%;
+    color: #7a7a99; }
   #KAN a:link {
     text-align: left;
     font-size: 100%;
@@ -753,6 +781,10 @@ html.js-animations #contactMe > iframe {
   #Cryptocurrency h3 {
     text-align: left;
     font-size: 200%;
+    color: #7a7a99; }
+  #Cryptocurrency h4 {
+    text-align: left;
+    font-size: 175%;
     color: #7a7a99; }
   #Cryptocurrency a:link {
     text-align: left;
@@ -857,6 +889,10 @@ html.js-animations #contactMe > iframe {
     text-align: left;
     font-size: 200%;
     color: #7a7a99; }
+  #FutureOfQuantum h4 {
+    text-align: left;
+    font-size: 175%;
+    color: #7a7a99; }
   #FutureOfQuantum a:link {
     text-align: left;
     font-size: 100%;
@@ -960,6 +996,10 @@ html.js-animations #contactMe > iframe {
     text-align: left;
     font-size: 200%;
     color: #c2c2d1; }
+  #AGI h4 {
+    text-align: left;
+    font-size: 175%;
+    color: #7a7a99; }
   #AGI a:link {
     text-align: left;
     font-size: 100%;
@@ -1021,6 +1061,10 @@ html.js-animations #contactMe > iframe {
     text-align: left;
     font-size: 200%;
     color: #c2c2d1; }
+  #Privacy h4 {
+    text-align: left;
+    font-size: 175%;
+    color: #7a7a99; }
   #Privacy a:link {
     text-align: left;
     font-size: 100%;
@@ -1081,6 +1125,10 @@ html.js-animations #contactMe > iframe {
   #ProductPlacement h3 {
     text-align: left;
     font-size: 200%;
+    color: #7a7a99; }
+  #ProductPlacement h4 {
+    text-align: left;
+    font-size: 175%;
     color: #7a7a99; }
   #ProductPlacement a:link {
     text-align: left;
@@ -1926,5 +1974,3 @@ footer {
     footer #contactMe p {
       color: #e0f7fa;
       font-size: 100%; }
-
-/*# sourceMappingURL=default.css.map */

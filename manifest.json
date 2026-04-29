@@ -1,15 +1,17 @@
 {
-    "name": "Colby Mainard's Website",
+    "name": "Colby Mainard — Machine Learning Engineer",
     "short_name": "Colby Mainard",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#000000",
-    "description": "A progressive web app containing an introduction.",
+    "theme_color": "#000000",
+    "description": "Personal website of Colby Mainard, ML engineer specializing in computer vision and AI.",
     "icons": [
         {
             "src": "./assets/images/favicon.png",
             "sizes": "256x256",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
