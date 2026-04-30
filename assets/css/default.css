@@ -1756,11 +1756,272 @@ html.js-animations #contactMe > a,
 html.js-animations #contactMe > address {
   opacity: 0; }
 
+/* Professional Blue color palette from https://colormagic.app/palette/69f2a139972c6bd335822170 */
+#analyticsDiv {
+  margin: auto;
+  background-color: #200b4b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #analyticsDiv h1 {
+    text-align: left;
+    color: #ff3d94;
+    font-size: 500%; }
+  #analyticsDiv h2 {
+    text-align: left;
+    color: #b5307e;
+    font-size: 300%; }
+  #analyticsDiv h3 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 200%; }
+  #analyticsDiv h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
+  #analyticsDiv p {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #analyticsDiv a:link {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #analyticsDiv a:visited {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #analyticsDiv a:hover {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #analyticsDiv a:active {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #analyticsDiv ul {
+    text-align: left; }
+    #analyticsDiv ul li {
+      color: #6a2a98;
+      font-size: 100%; }
+
+#thirdPartyDiv {
+  margin: autos;
+  background-color: #200b4b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #thirdPartyDiv h1 {
+    text-align: left;
+    color: #ff3d94;
+    font-size: 500%; }
+  #thirdPartyDiv h2 {
+    text-align: left;
+    color: #b5307e;
+    font-size: 300%; }
+  #thirdPartyDiv h3 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 200%; }
+  #thirdPartyDiv h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
+  #thirdPartyDiv p {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #thirdPartyDiv a:link {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #thirdPartyDiv a:visited {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #thirdPartyDiv a:hover {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #thirdPartyDiv a:active {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #thirdPartyDiv ul {
+    text-align: left; }
+    #thirdPartyDiv ul li {
+      color: #6a2a98;
+      font-size: 100%; }
+
+#serviceWorkerDiv {
+  margin: auto;
+  background-color: #200b4b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #serviceWorkerDiv h1 {
+    text-align: left;
+    color: #ff3d94;
+    font-size: 500%; }
+  #serviceWorkerDiv h2 {
+    text-align: left;
+    color: #b5307e;
+    font-size: 300%; }
+  #serviceWorkerDiv h3 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 200%; }
+  #serviceWorkerDiv h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
+  #serviceWorkerDiv p {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #serviceWorkerDiv a:link {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #serviceWorkerDiv a:visited {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #serviceWorkerDiv a:hover {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #serviceWorkerDiv a:active {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #serviceWorkerDiv ul {
+    text-align: left; }
+    #serviceWorkerDiv ul li {
+      color: #6a2a98;
+      font-size: 100%; }
+
+#verificationDiv {
+  margin: auto;
+  background-color: #200b4b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #verificationDiv h1 {
+    text-align: left;
+    color: #ff3d94;
+    font-size: 500%; }
+  #verificationDiv h2 {
+    text-align: left;
+    color: #b5307e;
+    font-size: 300%; }
+  #verificationDiv h3 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 200%; }
+  #verificationDiv h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
+  #verificationDiv p {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #verificationDiv a:link {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #verificationDiv a:visited {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #verificationDiv a:hover {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #verificationDiv a:active {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #verificationDiv ul {
+    text-align: left; }
+    #verificationDiv ul li {
+      color: #6a2a98;
+      font-size: 100%; }
+
+#rightsDiv {
+  margin: auto;
+  background-color: #200b4b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #rightsDiv h1 {
+    text-align: left;
+    color: #ff3d94;
+    font-size: 500%; }
+  #rightsDiv h2 {
+    text-align: left;
+    color: #b5307e;
+    font-size: 300%; }
+  #rightsDiv h3 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 200%; }
+  #rightsDiv h4 {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 175%; }
+  #rightsDiv p {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #rightsDiv a:link {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #rightsDiv a:visited {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #rightsDiv a:hover {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #rightsDiv a:active {
+    text-align: left;
+    color: #6a2a98;
+    font-size: 100%; }
+  #rightsDiv ul {
+    text-align: left; }
+    #rightsDiv ul li {
+      color: #6a2a98;
+      font-size: 100%; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
-/* can be compiled to css with `sass --trace ./assets/css/default.scss ./assets/css/default.css` */
+/* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
 html {
   scroll-behavior: smooth; }
 
