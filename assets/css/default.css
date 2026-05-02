@@ -1232,36 +1232,6 @@ html.js-animations #contactMe > address {
   color: #c2c2d1;
   font-size: 95%; }
 
-/* Table of contents inside the intro section */
-#introSectionDiv .tableOfContents {
-  margin: 2em auto 1em auto;
-  width: 80%;
-  max-width: 80%;
-  background-color: #20203c;
-  border: 1px solid #7a7a99;
-  border-radius: 8px;
-  padding: 1em 1.5em;
-  text-align: left;
-  font-family: "Courier New", monospace; }
-  #introSectionDiv .tableOfContents .tocHeading {
-    margin: 0 0 0.5em 0;
-    color: #ff5c5c;
-    font-size: 110%;
-    text-align: left; }
-  #introSectionDiv .tableOfContents .tocList {
-    margin: 0.25em 0;
-    padding-left: 1.75em;
-    text-align: left; }
-    #introSectionDiv .tableOfContents .tocList li {
-      margin: 0.4em 0;
-      color: #c2c2d1;
-      font-size: 100%; }
-      #introSectionDiv .tableOfContents .tocList li a {
-        color: #c2c2d1;
-        text-decoration: underline; }
-      #introSectionDiv .tableOfContents .tocList li a:hover {
-        color: #ff5c5c; }
-
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
 #cybersecurityResources {
