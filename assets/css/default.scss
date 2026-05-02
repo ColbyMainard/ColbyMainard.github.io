@@ -273,6 +273,42 @@ body {
     }
 }
 
+/* Inline + block code styling.
+ * For syntax highlighting on <pre><code class="language-X"> blocks, drop in
+ * Prism.js (https://prismjs.com/) — these base styles are designed to remain
+ * reasonable both with and without it. */
+code {
+    font-family: "Courier New", monospace;
+    font-size: 95%;
+    background-color: rgba($noir_1, 0.6);
+    color: $emerald_efficiency_4;
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    border: 1px solid rgba($emerald_efficiency_3, 0.25);
+}
+
+pre {
+    text-align: left;
+    background-color: $noir_1;
+    color: $noir_5;
+    border: 1px solid rgba($emerald_efficiency_3, 0.3);
+    border-radius: 6px;
+    padding: 1em 1.25em;
+    margin: 1em auto;
+    max-width: 80%;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+    font-size: 95%;
+    line-height: 1.5;
+
+    code {
+        background: transparent;
+        border: none;
+        padding: 0;
+        color: inherit;
+    }
+}
+
 footer {
     width: 100%;
     text-align: center;

@@ -1226,6 +1226,42 @@ html.js-animations #contactMe > a,
 html.js-animations #contactMe > address {
   opacity: 0; }
 
+/* Reading-time pill rendered next to "Last Updated:" */
+.readingTime {
+  font-style: italic;
+  color: #c2c2d1;
+  font-size: 95%; }
+
+/* Table of contents inside the intro section */
+#introSectionDiv .tableOfContents {
+  margin: 2em auto 1em auto;
+  width: 80%;
+  max-width: 80%;
+  background-color: #20203c;
+  border: 1px solid #7a7a99;
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  text-align: left;
+  font-family: "Courier New", monospace; }
+  #introSectionDiv .tableOfContents .tocHeading {
+    margin: 0 0 0.5em 0;
+    color: #ff5c5c;
+    font-size: 110%;
+    text-align: left; }
+  #introSectionDiv .tableOfContents .tocList {
+    margin: 0.25em 0;
+    padding-left: 1.75em;
+    text-align: left; }
+    #introSectionDiv .tableOfContents .tocList li {
+      margin: 0.4em 0;
+      color: #c2c2d1;
+      font-size: 100%; }
+      #introSectionDiv .tableOfContents .tocList li a {
+        color: #c2c2d1;
+        text-decoration: underline; }
+      #introSectionDiv .tableOfContents .tocList li a:hover {
+        color: #ff5c5c; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
 #cybersecurityResources {
@@ -2198,6 +2234,38 @@ body {
     width: 44px;
     height: 44px;
     font-size: 140%; } }
+/* Inline + block code styling.
+ * For syntax highlighting on <pre><code class="language-X"> blocks, drop in
+ * Prism.js (https://prismjs.com/) — these base styles are designed to remain
+ * reasonable both with and without it. */
+code {
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  background-color: rgba(26, 26, 30, 0.6);
+  color: #a1d9b0;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  border: 1px solid rgba(80, 195, 161, 0.25); }
+
+pre {
+  text-align: left;
+  background-color: #1a1a1e;
+  color: #d4d4d9;
+  border: 1px solid rgba(80, 195, 161, 0.3);
+  border-radius: 6px;
+  padding: 1em 1.25em;
+  margin: 1em auto;
+  max-width: 80%;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  line-height: 1.5; }
+  pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit; }
+
 footer {
   width: 100%;
   text-align: center;

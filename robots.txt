@@ -1,4 +1,14 @@
-# AI/training bots and miscellaneous crawlers - blocked
+# robots.txt
+# Two stanzas:
+#   1. Training / scraping bots are blocked. They scrape pages to train future
+#      models or harvest data; the site receives no direct traffic from them.
+#   2. Live-search / AI-assistant bots are allowed. They fetch pages on demand
+#      to answer real-time user queries (ChatGPT search, Claude search,
+#      Perplexity, DuckAssist, etc). Blocking these would remove the site from
+#      AI-assisted search results, where recruiter and tech-enthusiast
+#      audiences increasingly begin queries.
+
+# === Training / scraping bots — blocked ===
 User-agent: AddSearchBot
 Disallow: /
 
@@ -47,15 +57,6 @@ Disallow: /
 User-agent: ChatGPT Agent
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: Claude-SearchBot
-Disallow: /
-
-User-agent: Claude-User
-Disallow: /
-
 User-agent: Claude-Web
 Disallow: /
 
@@ -87,9 +88,6 @@ User-agent: Devin
 Disallow: /
 
 User-agent: Diffbot
-Disallow: /
-
-User-agent: DuckAssistBot
 Disallow: /
 
 User-agent: Echobot Bot
@@ -179,12 +177,6 @@ Disallow: /
 User-agent: meta-webindexer
 Disallow: /
 
-User-agent: MistralAI-User
-Disallow: /
-
-User-agent: MistralAI-User/1.0
-Disallow: /
-
 User-agent: MyCentralAIScraperBot
 Disallow: /
 
@@ -192,9 +184,6 @@ User-agent: netEstate Imprint Crawler
 Disallow: /
 
 User-agent: NovaAct
-Disallow: /
-
-User-agent: OAI-SearchBot
 Disallow: /
 
 User-agent: omgili
@@ -216,9 +205,6 @@ User-agent: Panscient
 Disallow: /
 
 User-agent: panscient.com
-Disallow: /
-
-User-agent: Perplexity-User
 Disallow: /
 
 User-agent: PerplexityBot
@@ -296,7 +282,34 @@ Disallow: /
 User-agent: YouBot
 Disallow: /
 
-# All other crawlers allowed
+# === Live-search / AI-assistant bots — allowed ===
+# These fetch on-demand to answer real-time user queries; allowing them keeps
+# the site eligible to surface in AI-assisted search results.
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: MistralAI-User/1.0
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# === All other crawlers allowed ===
 User-agent: *
 Allow: /
 

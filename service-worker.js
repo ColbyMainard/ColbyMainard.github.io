@@ -4,12 +4,13 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
     "./",
     "./index.html",
+    "./llms.txt",
     "./manifest.json",
     "./assets/html/hobbies.html",
     "./assets/html/tech_takes.html",
@@ -25,6 +26,7 @@ const PRECACHE_URLS = [
     "./assets/js/service_worker_register.js",
     "./assets/js/tech_resources_animations.js",
     "./assets/js/tech_takes_animations.js",
+    "./assets/js/tech_takes_engagement.js",
     "./assets/images/favicon.png",
     "./assets/images/miscellaneous/DEFCON33.jpeg",
     "./assets/images/photographyHobby/DSC_0004.JPG",
