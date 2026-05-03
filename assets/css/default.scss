@@ -309,6 +309,176 @@ pre {
     }
 }
 
+/* Cookie consent banner — fixed bottom strip explaining analytics cookies.
+ * Hidden until the JS module attaches it; .visible fades it in. */
+.cookieConsent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+    background-color: rgba($noir_1, 0.97);
+    border-top: 2px solid $emerald_efficiency_3;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+    padding: 16px 20px;
+    color: $noir_5;
+    font-family: "Courier New", monospace;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .cookieConsent-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .cookieConsent-message {
+        flex: 1 1 auto;
+        margin: 0;
+        color: $noir_5;
+        font-size: 95%;
+        line-height: 1.5;
+
+        a {
+            color: $emerald_efficiency_3;
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                color: $emerald_efficiency_5;
+            }
+        }
+    }
+
+    .cookieConsent-actions {
+        flex: 0 0 auto;
+        display: flex;
+        gap: 12px;
+    }
+
+    .cookieConsent-button {
+        font-family: "Courier New", monospace;
+        font-size: 95%;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .cookieConsent-accept {
+        background-color: $emerald_efficiency_2;
+        border: 2px solid $emerald_efficiency_3;
+        color: $emerald_efficiency_5;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            background-color: $emerald_efficiency_1;
+            border-color: $emerald_efficiency_5;
+            outline: none;
+        }
+
+        &:focus-visible {
+            box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+        }
+    }
+
+    .cookieConsent-reject {
+        background-color: transparent;
+        border: 2px solid $emerald_efficiency_3;
+        color: $emerald_efficiency_4;
+
+        &:hover,
+        &:focus {
+            background-color: rgba($emerald_efficiency_3, 0.15);
+            color: $emerald_efficiency_5;
+            outline: none;
+        }
+
+        &:focus-visible {
+            box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cookieConsent {
+        padding: 14px 16px;
+
+        .cookieConsent-inner {
+            flex-direction: column;
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .cookieConsent-message {
+            text-align: center;
+        }
+
+        .cookieConsent-actions {
+            justify-content: center;
+        }
+
+        .cookieConsent-button {
+            flex: 1 1 0;
+        }
+    }
+}
+
+/* Inline preferences controls used on the Privacy Policy page so visitors
+ * can change their consent decision after the banner has been dismissed. */
+.cookiePreferences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 16px 0;
+    text-align: left;
+}
+
+.cookiePreferences-button {
+    font-family: "Courier New", monospace;
+    font-size: 95%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    background-color: transparent;
+    border: 2px solid $emerald_efficiency_3;
+    color: $emerald_efficiency_5;
+
+    &:hover,
+    &:focus {
+        background-color: rgba($emerald_efficiency_3, 0.15);
+        outline: none;
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+    }
+}
+
+.cookiePreferences-accept {
+    background-color: $emerald_efficiency_2;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        background-color: $emerald_efficiency_1;
+        border-color: $emerald_efficiency_5;
+    }
+}
+
 footer {
     width: 100%;
     text-align: center;

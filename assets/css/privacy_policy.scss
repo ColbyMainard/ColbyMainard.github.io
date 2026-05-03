@@ -324,3 +324,67 @@ $professional_blue_5: #bf3a2b;
         }
     }
 }
+
+#preferencesDiv {
+    margin: auto;
+    background-color: $professional_blue_5;
+    width: 80%;
+    border-radius: 10px;
+    font-family: "Courier New", monospace;
+    h1 {
+        text-align: left;
+        color: $professional_blue_1;
+        font-size: 500%;
+    }
+    h2 {
+        text-align: left;
+        color: $professional_blue_2;
+        font-size: 300%;
+    }
+    h3 {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 200%;
+    }
+    h4 {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 175%;
+    }
+    p {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 100%;
+    }
+    /* unvisited link */
+    a:link {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 100%;
+    }
+    /* visited link */
+    a:visited {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 100%;
+    }
+    /* mouse over link */
+    a:hover {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 100%;
+    }
+    /* selected link */
+    a:active {
+        text-align: left;
+        color: $professional_blue_3;
+        font-size: 100%;
+    }
+    ul {
+        text-align: left;
+        li {
+            color: $professional_blue_3;
+            font-size: 100%;
+        }
+    }
+}

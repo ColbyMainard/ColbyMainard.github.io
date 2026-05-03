@@ -2023,6 +2023,58 @@ html.js-animations #contactMe > address {
       color: #f1c40e;
       font-size: 100%; }
 
+#preferencesDiv {
+  margin: auto;
+  background-color: #bf3a2b;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #preferencesDiv h1 {
+    text-align: left;
+    color: #4b91e2;
+    font-size: 500%; }
+  #preferencesDiv h2 {
+    text-align: left;
+    color: #51b39f;
+    font-size: 300%; }
+  #preferencesDiv h3 {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 200%; }
+  #preferencesDiv h4 {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 175%; }
+  #preferencesDiv p {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 100%; }
+  #preferencesDiv a:link {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 100%; }
+  #preferencesDiv a:visited {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 100%; }
+  #preferencesDiv a:hover {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 100%; }
+  #preferencesDiv a:active {
+    text-align: left;
+    color: #f1c40e;
+    font-size: 100%; }
+  #preferencesDiv ul {
+    text-align: left; }
+    #preferencesDiv ul li {
+      color: #f1c40e;
+      font-size: 100%; }
+
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
@@ -2235,6 +2287,124 @@ pre {
     border: none;
     padding: 0;
     color: inherit; }
+
+/* Cookie consent banner — fixed bottom strip explaining analytics cookies.
+ * Hidden until the JS module attaches it; .visible fades it in. */
+.cookieConsent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  background-color: rgba(26, 26, 30, 0.97);
+  border-top: 2px solid #50c3a1;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+  padding: 16px 20px;
+  color: #d4d4d9;
+  font-family: "Courier New", monospace;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none; }
+  .cookieConsent.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; }
+  .cookieConsent .cookieConsent-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left; }
+  .cookieConsent .cookieConsent-message {
+    flex: 1 1 auto;
+    margin: 0;
+    color: #d4d4d9;
+    font-size: 95%;
+    line-height: 1.5; }
+    .cookieConsent .cookieConsent-message a {
+      color: #50c3a1;
+      text-decoration: underline; }
+      .cookieConsent .cookieConsent-message a:hover, .cookieConsent .cookieConsent-message a:focus {
+        color: #e0f7fa; }
+  .cookieConsent .cookieConsent-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 12px; }
+  .cookieConsent .cookieConsent-button {
+    font-family: "Courier New", monospace;
+    font-size: 95%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
+  .cookieConsent .cookieConsent-accept {
+    background-color: #1d9a6a;
+    border: 2px solid #50c3a1;
+    color: #e0f7fa;
+    font-weight: bold; }
+    .cookieConsent .cookieConsent-accept:hover, .cookieConsent .cookieConsent-accept:focus {
+      background-color: #007a5e;
+      border-color: #e0f7fa;
+      outline: none; }
+    .cookieConsent .cookieConsent-accept:focus-visible {
+      box-shadow: 0 0 0 3px rgba(80, 195, 161, 0.6); }
+  .cookieConsent .cookieConsent-reject {
+    background-color: transparent;
+    border: 2px solid #50c3a1;
+    color: #a1d9b0; }
+    .cookieConsent .cookieConsent-reject:hover, .cookieConsent .cookieConsent-reject:focus {
+      background-color: rgba(80, 195, 161, 0.15);
+      color: #e0f7fa;
+      outline: none; }
+    .cookieConsent .cookieConsent-reject:focus-visible {
+      box-shadow: 0 0 0 3px rgba(80, 195, 161, 0.6); }
+
+@media (max-width: 768px) {
+  .cookieConsent {
+    padding: 14px 16px; }
+    .cookieConsent .cookieConsent-inner {
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch; }
+    .cookieConsent .cookieConsent-message {
+      text-align: center; }
+    .cookieConsent .cookieConsent-actions {
+      justify-content: center; }
+    .cookieConsent .cookieConsent-button {
+      flex: 1 1 0; } }
+/* Inline preferences controls used on the Privacy Policy page so visitors
+ * can change their consent decision after the banner has been dismissed. */
+.cookiePreferences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+  text-align: left; }
+
+.cookiePreferences-button {
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  background-color: transparent;
+  border: 2px solid #50c3a1;
+  color: #e0f7fa; }
+  .cookiePreferences-button:hover, .cookiePreferences-button:focus {
+    background-color: rgba(80, 195, 161, 0.15);
+    outline: none; }
+  .cookiePreferences-button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(80, 195, 161, 0.6); }
+
+.cookiePreferences-accept {
+  background-color: #1d9a6a;
+  font-weight: bold; }
+  .cookiePreferences-accept:hover, .cookiePreferences-accept:focus {
+    background-color: #007a5e;
+    border-color: #e0f7fa; }
 
 footer {
   width: 100%;
