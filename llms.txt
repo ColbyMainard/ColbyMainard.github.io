@@ -11,14 +11,14 @@ vision. Domain experience spans:
 
 - Computer vision pipelines for professional sports broadcasts (NFL, NHL, MLB,
   NBA, PGA, PFL)
-- AI/ML for cybersecurity threat detection
+- AI/ML for network security threat detection
 - Image-based machine learning for medical diagnostics
-- Anti-money laundering (AML) and fraud detection at a fintech company
+- Anti-money laundering (AML) and fraud detection at a FinTech company
 - Facial-tracking research for a cosmetics company
-- Computational biology / bioinformatics research
+- Computational biology / bioinformatics coursework
 
-Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports CV), Vectra
-(cybersecurity), Shiseido Americas (facial tracking), Texas A&M (research).
+Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports CV), Vectra AI 
+(cybersecurity), Shiseido Americas (facial tracking), Texas A&M (steganography).
 
 Canonical domain: https://colbymainard.github.io
 
@@ -49,4 +49,5 @@ remain blocked via robots.txt.
 
 - Email: colby.mainard@proton.me
 - LinkedIn: https://www.linkedin.com/in/colby-mainard/
-- PGP: 36FF 3C61 A08A 76C9 18C8 FE15 C3DA F3D9 1351 22BE
+- PGP Hash: 36FF 3C61 A08A 76C9 18C8 FE15 C3DA F3D9 1351 22BE
+- PGP File Location: https://colbymainard.github.io/assets/other/pgp_email_key.asc
