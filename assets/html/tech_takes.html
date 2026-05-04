@@ -126,7 +126,7 @@
           "@type": "Article",
           "headline": "Product Placement in Sports Marketing",
           "datePublished": "2026-04-23",
-          "dateModified": "2026-04-23",
+          "dateModified": "2026-05-03",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "publisher": {"@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#productPlacementDiv",
@@ -582,10 +582,7 @@
                     <br>
                 </section>
             </div>
-            <div
-                class="PrivacyDiv"
-                id="PrivacyDiv"
-            >
+            <div class="PrivacyDiv" id="PrivacyDiv">
                 <section class="Privacy" id="Privacy">
                     <h2>Post-Internet Privacy</h2>
                     <p><u>Last Updated:</u> January 20, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
@@ -678,12 +675,13 @@
             <div class="productPlacementDiv" id="productPlacementDiv">
                 <section class="ProductPlacement" id="ProductPlacement">
                     <h2>Product Placement in Sports Marketing</h2>
-                    <p><u>Last Updated:</u> April 23, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
+                    <p><u>Last Updated:</u> May 3, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
                     <h3>The Basics of the Niche</h3>
                     <p>
                         Any time a logo is seen next to a professional athlete, the brand behind the logo likely paid for that placement.
-                        These logos could be placed on anything from jersey patches to in-stadium assets to shoes.
-                        However, it is not always obvious how this placement is valued
+                        These logos could be placed on anything from jersey patches and shoes to stadium naming rights and other signage.
+                        However, it is not always obvious how this placement is valued.
+                        It was my job at MVP to help both brands and sports teams/athletes determine a fair market value for product and logo placements.
                     </p>
                     <h3>What to Keep in Mind</h3>
                     <p>
@@ -700,22 +698,25 @@
                     <h4>Size</h4>
                     <p>
                         Intuitively, the larger a logo is, the easier it is for both the human eye and a computer vision model to pick it up.
-                        You additionally get more screen real estate.
+                        It would additionally get more screen real estate.
+                        However, there is increased risk of occlusion and other factors interfering with the recognizability of the logo.
                     </p>
                     <h4>Orientation</h4>
                     <p>
-                        Should your logo not be radially-symmetrical, rotating it may require more effort for the human eye to consciously pick it up.
+                        Should a logo not be radially-symmetrical, rotating it may require more effort for the human eye to consciously pick it up.
+                        Depending on whether using object detection or instance segmentation models are being used, this could also interfere with the estimates of screen real estate used.
                         It also could make it more difficult for computer vision models to track it.
                     </p>
                     <h4>Occlusion</h4>
                     <p>
                         For obvious reasons, if something or someone is between the camera and the logo, the logo will not be visible.
-                        In cases of partial occlusion, how much of the logo can be occluded before it is difficult to truly recognize.
+                        In cases of partial occlusion, it is important to consider how much of the logo can be occluded before it is difficult to truly recognize.
                     </p>
                     <h4>Motion Blur</h4>
                     <p>
                         As athletes, environment, and camera angles change, this can easily cause motion blur.
-                        This motion blur, most obvious in NASCAR, make it more difficult to clearly identify a logo.
+                        This motion blur, most obvious in high-speed sports like NASCAR, can make it more difficult to clearly identify a logo.
+                        Reduced visual sharpness can make it more difficult to definitively and meaningfully attribute certain regions of the screen to a particular brand.
                     </p>
                     <h4>Digitally-Enhanced vs. Analog Assets</h4>
                     <p>
@@ -727,6 +728,12 @@
                         In product placement environments, it is common to have other objects in the scene.
                         These other items could draw attention away from your logo.
                         This is especially true if these other items also have clearly-visible logos.
+                    </p>
+                    <h4>Context of Placement</h4>
+                    <p>
+                        What is occurring on screen can be as important as actually getting a logo on screen in the first place.
+                        Events that have relatively high stakes or emotion associated with them are more likely to get more viewership per second by orders of magnitude.
+                        Because of this, areas of the field/arena that share proximity to the goal are more likely to indirectly bring additional value.
                     </p>
                     <br>
                 </section>
