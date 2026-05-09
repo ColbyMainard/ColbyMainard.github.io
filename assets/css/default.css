@@ -1156,6 +1156,58 @@ html.js-animations #contactMe > iframe {
       font-size: 100%;
       color: #7a7a99; }
 
+#CybersecurityVSCulture {
+  margin: auto;
+  background-color: #20203c;
+  width: 80%;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #CybersecurityVSCulture h1 {
+    text-align: left;
+    font-size: 500%;
+    color: #ff5c5c; }
+  #CybersecurityVSCulture h2 {
+    text-align: left;
+    font-size: 300%;
+    color: #c2c2d1; }
+  #CybersecurityVSCulture h3 {
+    text-align: left;
+    font-size: 200%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture h4 {
+    text-align: left;
+    font-size: 175%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture a:link {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture a:visited {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture a:hover {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture a:active {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture p {
+    text-align: left;
+    font-size: 100%;
+    color: #7a7a99; }
+  #CybersecurityVSCulture ul {
+    text-align: left; }
+    #CybersecurityVSCulture ul li {
+      font-size: 100%;
+      color: #7a7a99; }
+
 /*
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
