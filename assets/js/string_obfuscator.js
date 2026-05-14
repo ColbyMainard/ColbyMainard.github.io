@@ -48,9 +48,11 @@ function obfuscated_html_comment_generator(input_str){
 function obfuscated_webpage_element_maker(input_str){
     return webpage_poisoned_element_maker(
         fake_task_completion_adder(
-            basic_instruction_override_adder(
-                role_manipulation_DAN_adder(
-                    input_str
+            base64_obfuscation_adder(
+                basic_instruction_override_adder(
+                    role_manipulation_DAN_adder(
+                        input_str
+                    )
                 )
             )
         )
