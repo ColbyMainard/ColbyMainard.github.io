@@ -1,49 +1,42 @@
 # Colby Mainard — Personal Website
 
-> Personal website of Colby Mainard, a Machine Learning Engineer specializing in
-> computer vision, deep learning, and AI. The site presents work history,
-> education, technical skills, projects, certifications, hobbies, technical
-> opinions, and curated technical reading recommendations.
+> Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-Colby Mainard holds an M.S. in Computer Science from Texas A&M University with a
-focus on artificial intelligence, machine learning, deep learning, and computer
-vision. Domain experience spans:
+Colby Mainard holds an M.S. in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision.
 
-- Computer vision pipelines for professional sports broadcasts (NFL, NHL, MLB,
-  NBA, PGA, PFL)
+Domain experience spans:
+
+- Computer vision pipelines for professional sports broadcasts and social media (NFL, NHL, MLB, NBA, PGA, PFL)
 - AI/ML for network security threat detection
 - Image-based machine learning for medical diagnostics
 - Anti-money laundering (AML) and fraud detection at a FinTech company
 - Facial-tracking research for a cosmetics company
 - Computational biology / bioinformatics coursework
+- Autonomous vehicle testing using video game engines
 
-Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports CV), Vectra AI 
-(cybersecurity), Shiseido Americas (facial tracking), Texas A&M (steganography).
+Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports CV), Vectra AI (cybersecurity), Shiseido Americas (facial tracking).
 
 Canonical domain: https://colbymainard.github.io
 
+## Intended audience
+
+- Potential colleagues
+- Future coworkers
+- Technical recruiters
+- Fellow AI/ML enthusiasts
+- Computer Science students
+
 ## Pages
 
-- [Home / Resume](https://colbymainard.github.io/index.html): Work history,
-  education, projects, certifications, technical skills, contact info.
-- [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html):
-  Long-form opinion pieces on Kolmogorov-Arnold Networks, cryptocurrency
-  security, the future of quantum computing, AGI hype, post-internet privacy,
-  and product placement in sports marketing.
-- [Hobbies](https://colbymainard.github.io/assets/html/hobbies.html):
-  Photography, quantum computing self-study, Dungeons & Dragons, history.
-- [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html):
-  Curated reading list and resources covering cybersecurity, AI/ML, C/C++,
-  Python, scripting, and operating systems.
-- [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html):
-  Site privacy policy.
+- [Home / Resume](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, contact info.
+- [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html): Long-form opinion pieces on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.
+- [Hobbies](https://colbymainard.github.io/assets/html/hobbies.html): Photography, quantum computing self-study, Dungeons & Dragons, history.
+- [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html): Curated reading list and resources covering cybersecurity, AI/ML, C/C++, Python, scripting, and operating systems.
+- [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): Site privacy policy.
 
 ## Discoverability for AI assistants
 
-This site allows live-search / AI-assistant bots (ChatGPT-User, Claude-User,
-Claude-SearchBot, Perplexity-User, OAI-SearchBot, MistralAI-User, DuckAssistBot)
-to fetch pages on demand to answer real-time user queries. Training crawlers
-remain blocked via robots.txt.
+This site allows live-search / AI-assistant bots (ChatGPT-User, Claude-User, Claude-SearchBot, Perplexity-User, OAI-SearchBot, MistralAI-User, DuckAssistBot) to fetch pages on demand to answer real-time user queries. Training crawlers remain blocked via robots.txt.
 
 ## Contact
 
