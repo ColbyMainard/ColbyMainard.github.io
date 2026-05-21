@@ -6,15 +6,15 @@ Colby Mainard holds an M.S. in Computer Science from Texas A&M University with a
 
 Domain experience spans:
 
-- Computer vision pipelines for professional sports broadcasts and social media (NFL, NHL, MLB, NBA, PGA, PFL)
-- AI/ML for network security threat detection
+- Computer vision pipelines for professional sports broadcasts and social media at MVP on behalf of various leagues / teams (NFL, NHL, MLB, NBA, PGA, PFL)
+- AI/ML for network security threat detection at Vectra AI
 - Image-based machine learning for medical diagnostics
-- Anti-money laundering (AML) and fraud detection at a FinTech company
+- Anti-money laundering (AML) and fraud detection at RiskScout (a FinTech company)
 - Facial-tracking research for a cosmetics company
 - Computational biology / bioinformatics coursework
-- Autonomous vehicle testing using video game engines
+- Autonomous vehicle testing using Unreal Engine 4
 
-Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports CV), Vectra AI (cybersecurity), Shiseido Americas (facial tracking).
+Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports marketing CV), Vectra AI (cybersecurity), Shiseido Americas (facial tracking).
 
 Canonical domain: https://colbymainard.github.io
 
