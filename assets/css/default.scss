@@ -479,6 +479,56 @@ pre {
     }
 }
 
+/* Copy-to-clipboard utility — small button injected by clipboard.js
+ * next to the email address and PGP fingerprint in the contact footer.
+ * Tooltip ("Copied!") slides in via AnimeJS and self-removes. */
+.copyToClipboard {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    font-family: "Courier New", monospace;
+    font-size: 95%;
+    line-height: 1;
+    color: $emerald_efficiency_5;
+    background-color: rgba($emerald_efficiency_2, 0.55);
+    border: 1px solid $emerald_efficiency_3;
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: baseline;
+    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+
+    &:hover,
+    &:focus {
+        background-color: $emerald_efficiency_2;
+        border-color: $emerald_efficiency_5;
+        color: $emerald_efficiency_5;
+        outline: none;
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 2px rgba($emerald_efficiency_3, 0.55);
+    }
+
+    &.copied {
+        background-color: $emerald_efficiency_3;
+        border-color: $emerald_efficiency_5;
+        color: $noir_1;
+    }
+}
+
+.copyTooltip {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 8px;
+    font-family: "Courier New", monospace;
+    font-size: 85%;
+    color: $noir_1;
+    background-color: $emerald_efficiency_4;
+    border-radius: 3px;
+    opacity: 0;
+    vertical-align: baseline;
+}
+
 footer {
     width: 100%;
     text-align: center;

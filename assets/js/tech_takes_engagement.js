@@ -1,10 +1,15 @@
 /**
  * tech_takes_engagement.js
  *
- * Populates per-section reading-time estimates on tech_takes.html. For each
- * <span data-reading-time> placeholder, walks up to the nearest <section>,
- * counts words in that section's text content, and renders an "X min read"
- * value at 200 wpm. Pure word-count / WPM, no external dependency.
+ * Two engagement features for tech_takes.html:
+ *   1. Per-section reading-time estimates: for each
+ *      <span data-reading-time> placeholder, walks up to the nearest
+ *      <section>, counts words, and renders "X min read" at 200 wpm.
+ *   2. Reading progress bar fixed to the top of the viewport that fills
+ *      left-to-right as the user scrolls down. Uses a passive scroll
+ *      listener and rAF coalescing to stay cheap.
+ *
+ * Pure DOM, no external dependency.
  */
 
 (function () {
@@ -40,9 +45,71 @@
         });
     }
 
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", populateReadingTimes);
-    } else {
+    /* ------------------- Reading progress bar ------------------- */
+
+    var progressBar;
+    var progressFill;
+    var rafQueued = false;
+
+    function createProgressBar() {
+        var bar = document.createElement("div");
+        bar.id = "reading-progress";
+        bar.setAttribute("role", "progressbar");
+        bar.setAttribute("aria-label", "Reading progress");
+        bar.setAttribute("aria-valuemin", "0");
+        bar.setAttribute("aria-valuemax", "100");
+        bar.setAttribute("aria-valuenow", "0");
+
+        var fill = document.createElement("div");
+        fill.className = "reading-progress-fill";
+        bar.appendChild(fill);
+
+        document.body.insertBefore(bar, document.body.firstChild);
+        return { bar: bar, fill: fill };
+    }
+
+    function computeProgress() {
+        var doc = document.documentElement;
+        var scrollTop = window.pageYOffset || doc.scrollTop || 0;
+        var max = (doc.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+        if (max <= 0) return 0;
+        var pct = (scrollTop / max) * 100;
+        if (pct < 0) pct = 0;
+        if (pct > 100) pct = 100;
+        return pct;
+    }
+
+    function updateProgress() {
+        rafQueued = false;
+        if (!progressFill || !progressBar) return;
+        var pct = computeProgress();
+        progressFill.style.width = pct + "%";
+        progressBar.setAttribute("aria-valuenow", Math.round(pct).toString());
+    }
+
+    function onScrollOrResize() {
+        if (rafQueued) return;
+        rafQueued = true;
+        window.requestAnimationFrame(updateProgress);
+    }
+
+    function initProgressBar() {
+        var parts = createProgressBar();
+        progressBar = parts.bar;
+        progressFill = parts.fill;
+        window.addEventListener("scroll", onScrollOrResize, { passive: true });
+        window.addEventListener("resize", onScrollOrResize, { passive: true });
+        updateProgress();
+    }
+
+    function init() {
         populateReadingTimes();
+        initProgressBar();
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
     }
 })();
