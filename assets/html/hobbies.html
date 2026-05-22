@@ -52,6 +52,22 @@
           ]
         }
         </script>
+
+        <!-- JSON-LD: ItemList of hobby sections -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Hobbies and Personal Interests",
+          "description": "Personal interests outside of professional work: quantum computing self-study, landscape photography, Dungeons & Dragons, and history.",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Quantum Computing", "url": "https://colbymainard.github.io/assets/html/hobbies.html#quantumComputingDiv"},
+            {"@type": "ListItem", "position": 2, "name": "Photography", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv"},
+            {"@type": "ListItem", "position": 3, "name": "Dungeons and Dragons", "url": "https://colbymainard.github.io/assets/html/hobbies.html#dungeonsAndDragonsDiv"},
+            {"@type": "ListItem", "position": 4, "name": "History", "url": "https://colbymainard.github.io/assets/html/hobbies.html#historyDiv"}
+          ]
+        }
+        </script>
     </head>
     <body>
         <header>
@@ -91,14 +107,17 @@
                     </p>
                     <iframe src="https://www.youtube-nocookie.com/embed/RQWpF2Gb-gU" title="Quantum Computing Explainer 3Blue1Brown" width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <p>
-                        While the list of widely-available algorithms for quantum computers are somewhat limited, I was able to teach myself to a reasonably-fine-grain level with 
+                        While the list of widely-available algorithms for quantum computers are somewhat limited, I was able to teach myself to a reasonably fine-grain level with
                         <a href="https://www.goodreads.com/book/show/49786117-quantum-computing">
                             Quantum Computing: An Applied Approach by Jack D. Hidary
-                        </a> 
+                        </a>
                         and
                         <a href="https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/">
                             Programming Quantum Computers: Essential Algorithms and Code Samples by Eric R. Johnston, Nic Harrigan, and Mercedes Gimeno-Segovia.
                         </a>
+                    </p>
+                    <p>
+                        For an engineering-focused perspective on where this technology is likely to go next, see my <a href="./tech_takes.html#FutureOfQuantumDiv">opinion on the future of quantum computing</a>.
                     </p>
                     <br>
                 </section>

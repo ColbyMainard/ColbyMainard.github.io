@@ -53,6 +53,24 @@
           ]
         }
         </script>
+
+        <!-- JSON-LD: ItemList of resource categories -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Technical Resource Categories",
+          "description": "Curated reading list grouped by topic: cybersecurity, AI/ML, C/C++, Python, scripting, and operating systems.",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Cybersecurity", "url": "https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv"},
+            {"@type": "ListItem", "position": 2, "name": "Artificial Intelligence", "url": "https://colbymainard.github.io/assets/html/tech_resources.html#artificialIntelligenceResourcesDiv"},
+            {"@type": "ListItem", "position": 3, "name": "C/C++", "url": "https://colbymainard.github.io/assets/html/tech_resources.html#cppResourcesDiv"},
+            {"@type": "ListItem", "position": 4, "name": "Python", "url": "https://colbymainard.github.io/assets/html/tech_resources.html#pythonResourcesDiv"},
+            {"@type": "ListItem", "position": 5, "name": "Scripting", "url": "https://colbymainard.github.io/assets/html/tech_resources.html#scriptingResourcesDiv"},
+            {"@type": "ListItem", "position": 6, "name": "Operating Systems", "url": "https://colbymainard.github.io/assets/html/tech_resources.html#operatingSystemsResourcesDiv"}
+          ]
+        }
+        </script>
     </head>
     <body>
         <header>
@@ -82,13 +100,13 @@
             <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Technical Resources</h1>
                 <p>
-                    Everyone is curious about existing technology. 
+                    Everyone is curious about existing technology.
                 </p>
                 <p>
                     However, it is not always obvious where to start when it comes to being informed.
                 </p>
                 <p>
-                    Below is a list of resources I put together, categorized by subject.
+                    Below is a curated list of AI/ML, cybersecurity, and programming resources I put together, categorized by subject.
                 </p>
             </div>
             <div class="cybersecurityResourcesDiv" id="cybersecurityResourcesDiv">
@@ -738,6 +756,9 @@
             <div class="artificialIntelligenceResourcesDiv" id="artificialIntelligenceResourcesDiv">
                 <section class="artificialIntelligenceResources" id="artificialIntelligenceResources">
                     <h2>Artificial Intelligence</h2>
+                    <p>
+                        These pair well with my <a href="./tech_takes.html#AGIDiv">opinion on AGI hype</a> and <a href="./tech_takes.html#KANDiv">deep-dive on Kolmogorov-Arnold Networks</a>.
+                    </p>
                     <h3>Books</h3>
                     <table>
                         <tr>

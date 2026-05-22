@@ -54,6 +54,21 @@
         }
         </script>
 
+        <!-- JSON-LD: Blog schema (wraps the per-Article schemas below) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "@id": "https://colbymainard.github.io/assets/html/tech_takes.html#blog",
+          "name": "Technical Opinions — Colby Mainard",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html",
+          "inLanguage": "en",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "description": "Long-form opinions on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing."
+        }
+        </script>
+
         <!-- JSON-LD: Article schemas (one per Tech Take) -->
         <script type="application/ld+json">
         {
