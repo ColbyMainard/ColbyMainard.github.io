@@ -2,7 +2,7 @@
 
 > Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-> Last updated: 2026-05-21
+> Last updated: 2026-05-24
 
 Colby Mainard holds an M.S. in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision.
 
@@ -55,6 +55,14 @@ Canonical domain: https://colbymainard.github.io
   - [Python](https://colbymainard.github.io/assets/html/tech_resources.html#pythonResourcesDiv)
   - [Scripting](https://colbymainard.github.io/assets/html/tech_resources.html#scriptingResourcesDiv)
   - [Operating Systems](https://colbymainard.github.io/assets/html/tech_resources.html#operatingSystemsResourcesDiv)
+- [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides covering data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.
+  - [Data Engineering](https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv)
+  - [Computer Vision](https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv)
+  - [Generative AI](https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv)
+  - [Natural Language Processing](https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv)
+  - [Reinforcement Learning](https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv)
+  - [Software Engineering](https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv)
+  - [Cybersecurity](https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv)
 - [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): Site privacy policy.
 
 ## Discoverability for AI assistants

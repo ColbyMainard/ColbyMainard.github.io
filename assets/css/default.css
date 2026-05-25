@@ -2099,6 +2099,187 @@ html.js-animations #contactMe > address {
       font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
+/* Techno Serenity color palette https://colormagic.app/palette/6a125efefcd02ac9540f7feb */
+#dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
+  margin: auto;
+  background-color: #1f3a61;
+  width: 80%;
+  border-radius: 10px;
+  padding: 1.5em 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #dataEngineeringGuide h1, #computerVisionGuide h1, #generativeAIGuide h1, #nlpGuide h1, #reinforcementLearningGuide h1, #softwareEngineeringGuide h1, #cybersecurityGuide h1 {
+    text-align: left;
+    color: #e0f5f2;
+    font-size: 500%; }
+  #dataEngineeringGuide h2, #computerVisionGuide h2, #generativeAIGuide h2, #nlpGuide h2, #reinforcementLearningGuide h2, #softwareEngineeringGuide h2, #cybersecurityGuide h2 {
+    text-align: left;
+    color: #e0f5f2;
+    font-size: 300%; }
+  #dataEngineeringGuide h3, #computerVisionGuide h3, #generativeAIGuide h3, #nlpGuide h3, #reinforcementLearningGuide h3, #softwareEngineeringGuide h3, #cybersecurityGuide h3 {
+    text-align: left;
+    color: #a3d5e0;
+    font-size: 200%; }
+  #dataEngineeringGuide h4, #computerVisionGuide h4, #generativeAIGuide h4, #nlpGuide h4, #reinforcementLearningGuide h4, #softwareEngineeringGuide h4, #cybersecurityGuide h4 {
+    text-align: left;
+    color: #a3d5e0;
+    font-size: 175%; }
+  #dataEngineeringGuide p, #computerVisionGuide p, #generativeAIGuide p, #nlpGuide p, #reinforcementLearningGuide p, #softwareEngineeringGuide p, #cybersecurityGuide p {
+    text-align: left;
+    color: #77a3b1;
+    font-size: 100%; }
+  #dataEngineeringGuide u, #computerVisionGuide u, #generativeAIGuide u, #nlpGuide u, #reinforcementLearningGuide u, #softwareEngineeringGuide u, #cybersecurityGuide u {
+    color: #a3d5e0; }
+  #dataEngineeringGuide blockquote, #computerVisionGuide blockquote, #generativeAIGuide blockquote, #nlpGuide blockquote, #reinforcementLearningGuide blockquote, #softwareEngineeringGuide blockquote, #cybersecurityGuide blockquote {
+    text-align: left;
+    color: #77a3b1;
+    font-size: 150%; }
+  #dataEngineeringGuide a:link, #computerVisionGuide a:link, #generativeAIGuide a:link, #nlpGuide a:link, #reinforcementLearningGuide a:link, #softwareEngineeringGuide a:link, #cybersecurityGuide a:link {
+    text-align: left;
+    color: #a3d5e0;
+    font-size: 100%; }
+  #dataEngineeringGuide a:visited, #computerVisionGuide a:visited, #generativeAIGuide a:visited, #nlpGuide a:visited, #reinforcementLearningGuide a:visited, #softwareEngineeringGuide a:visited, #cybersecurityGuide a:visited {
+    text-align: left;
+    color: #a3d5e0;
+    font-size: 100%; }
+  #dataEngineeringGuide a:hover, #computerVisionGuide a:hover, #generativeAIGuide a:hover, #nlpGuide a:hover, #reinforcementLearningGuide a:hover, #softwareEngineeringGuide a:hover, #cybersecurityGuide a:hover {
+    text-align: left;
+    color: #e0f5f2;
+    font-size: 100%; }
+  #dataEngineeringGuide a:active, #computerVisionGuide a:active, #generativeAIGuide a:active, #nlpGuide a:active, #reinforcementLearningGuide a:active, #softwareEngineeringGuide a:active, #cybersecurityGuide a:active {
+    text-align: left;
+    color: #e0f5f2;
+    font-size: 100%; }
+  #dataEngineeringGuide ul, #computerVisionGuide ul, #generativeAIGuide ul, #nlpGuide ul, #reinforcementLearningGuide ul, #softwareEngineeringGuide ul, #cybersecurityGuide ul {
+    text-align: left; }
+    #dataEngineeringGuide ul li, #computerVisionGuide ul li, #generativeAIGuide ul li, #nlpGuide ul li, #reinforcementLearningGuide ul li, #softwareEngineeringGuide ul li, #cybersecurityGuide ul li {
+      color: #77a3b1;
+      font-size: 100%; }
+  #dataEngineeringGuide table, #computerVisionGuide table, #generativeAIGuide table, #nlpGuide table, #reinforcementLearningGuide table, #softwareEngineeringGuide table, #cybersecurityGuide table {
+    text-align: left;
+    border-collapse: collapse;
+    border-color: #77a3b1;
+    border-style: solid; }
+    #dataEngineeringGuide table tr, #computerVisionGuide table tr, #generativeAIGuide table tr, #nlpGuide table tr, #reinforcementLearningGuide table tr, #softwareEngineeringGuide table tr, #cybersecurityGuide table tr {
+      border-color: #77a3b1; }
+      #dataEngineeringGuide table tr th, #computerVisionGuide table tr th, #generativeAIGuide table tr th, #nlpGuide table tr th, #reinforcementLearningGuide table tr th, #softwareEngineeringGuide table tr th, #cybersecurityGuide table tr th {
+        border-color: #77a3b1;
+        color: #77a3b1;
+        font-size: 100%;
+        border-top-style: double;
+        border-right-style: double;
+        border-bottom-style: double;
+        border-left-style: double; }
+      #dataEngineeringGuide table tr td, #computerVisionGuide table tr td, #generativeAIGuide table tr td, #nlpGuide table tr td, #reinforcementLearningGuide table tr td, #softwareEngineeringGuide table tr td, #cybersecurityGuide table tr td {
+        border-color: #77a3b1;
+        color: #77a3b1;
+        font-size: 100%;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-left-style: groove; }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ */
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > div.guideInfographic,
+html.js-animations #dataEngineeringGuide > h1,
+html.js-animations #dataEngineeringGuide > h2,
+html.js-animations #dataEngineeringGuide > h3,
+html.js-animations #dataEngineeringGuide > p,
+html.js-animations #dataEngineeringGuide > ul,
+html.js-animations #dataEngineeringGuide > svg,
+html.js-animations #dataEngineeringGuide > table,
+html.js-animations #dataEngineeringGuide > blockquote,
+html.js-animations #dataEngineeringGuide > a,
+html.js-animations #dataEngineeringGuide > address,
+html.js-animations #dataEngineeringGuide > div.guideInfographic,
+html.js-animations #computerVisionGuide > h1,
+html.js-animations #computerVisionGuide > h2,
+html.js-animations #computerVisionGuide > h3,
+html.js-animations #computerVisionGuide > p,
+html.js-animations #computerVisionGuide > ul,
+html.js-animations #computerVisionGuide > svg,
+html.js-animations #computerVisionGuide > table,
+html.js-animations #computerVisionGuide > blockquote,
+html.js-animations #computerVisionGuide > a,
+html.js-animations #computerVisionGuide > address,
+html.js-animations #computerVisionGuide > div.guideInfographic,
+html.js-animations #generativeAIGuide > h1,
+html.js-animations #generativeAIGuide > h2,
+html.js-animations #generativeAIGuide > h3,
+html.js-animations #generativeAIGuide > p,
+html.js-animations #generativeAIGuide > ul,
+html.js-animations #generativeAIGuide > svg,
+html.js-animations #generativeAIGuide > table,
+html.js-animations #generativeAIGuide > blockquote,
+html.js-animations #generativeAIGuide > a,
+html.js-animations #generativeAIGuide > address,
+html.js-animations #generativeAIGuide > div.guideInfographic,
+html.js-animations #nlpGuide > h1,
+html.js-animations #nlpGuide > h2,
+html.js-animations #nlpGuide > h3,
+html.js-animations #nlpGuide > p,
+html.js-animations #nlpGuide > ul,
+html.js-animations #nlpGuide > svg,
+html.js-animations #nlpGuide > table,
+html.js-animations #nlpGuide > blockquote,
+html.js-animations #nlpGuide > a,
+html.js-animations #nlpGuide > address,
+html.js-animations #nlpGuide > div.guideInfographic,
+html.js-animations #reinforcementLearningGuide > h1,
+html.js-animations #reinforcementLearningGuide > h2,
+html.js-animations #reinforcementLearningGuide > h3,
+html.js-animations #reinforcementLearningGuide > p,
+html.js-animations #reinforcementLearningGuide > ul,
+html.js-animations #reinforcementLearningGuide > svg,
+html.js-animations #reinforcementLearningGuide > table,
+html.js-animations #reinforcementLearningGuide > blockquote,
+html.js-animations #reinforcementLearningGuide > a,
+html.js-animations #reinforcementLearningGuide > address,
+html.js-animations #reinforcementLearningGuide > div.guideInfographic,
+html.js-animations #softwareEngineeringGuide > h1,
+html.js-animations #softwareEngineeringGuide > h2,
+html.js-animations #softwareEngineeringGuide > h3,
+html.js-animations #softwareEngineeringGuide > p,
+html.js-animations #softwareEngineeringGuide > ul,
+html.js-animations #softwareEngineeringGuide > svg,
+html.js-animations #softwareEngineeringGuide > table,
+html.js-animations #softwareEngineeringGuide > blockquote,
+html.js-animations #softwareEngineeringGuide > a,
+html.js-animations #softwareEngineeringGuide > address,
+html.js-animations #softwareEngineeringGuide > div.guideInfographic,
+html.js-animations #cybersecurityGuide > h1,
+html.js-animations #cybersecurityGuide > h2,
+html.js-animations #cybersecurityGuide > h3,
+html.js-animations #cybersecurityGuide > p,
+html.js-animations #cybersecurityGuide > ul,
+html.js-animations #cybersecurityGuide > svg,
+html.js-animations #cybersecurityGuide > table,
+html.js-animations #cybersecurityGuide > blockquote,
+html.js-animations #cybersecurityGuide > a,
+html.js-animations #cybersecurityGuide > address,
+html.js-animations #cybersecurityGuide > div.guideInfographic,
+html.js-animations #contactMe > h1,
+html.js-animations #contactMe > h2,
+html.js-animations #contactMe > h3,
+html.js-animations #contactMe > p,
+html.js-animations #contactMe > ul,
+html.js-animations #contactMe > svg,
+html.js-animations #contactMe > table,
+html.js-animations #contactMe > blockquote,
+html.js-animations #contactMe > a,
+html.js-animations #contactMe > address,
+html.js-animations #contactMe > div.guideInfographic {
+  opacity: 0; }
+
+/* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */

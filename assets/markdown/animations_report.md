@@ -14,6 +14,7 @@ AnimeJS v4.3.5 timeline animations were added to all four pages of the site. Eac
 | `assets/js/tech_resources_animations.js` | Animations for `tech_resources.html` |
 | `assets/js/tech_takes_animations.js` | Animations for `tech_takes.html` |
 | `assets/js/hobbies_animations.js` | Animations for `hobbies.html` |
+| `assets/js/guides_animations.js` | Animations for `guides.html` |
 
 Each page has a dedicated animation file rather than a shared one, because section IDs and animation styles are page-specific.
 
@@ -89,6 +90,24 @@ Each page has a dedicated animation file rather than a shared one, because secti
 | History | Rise from bottom | `easeOutCubic` | Uncovering ancient text |
 | Contact | Simple fade | `easeOutSine` | Clean exit |
 
+### guides.html
+
+All seven guide sections share a single `animateGuide` timeline rather than each receiving a bespoke style. This is a deliberate departure from the other pages: the guides are meant to read as a uniform reference collection where no topic visually dominates the others, and seven distinct entrance styles on a single long page would feel noisy rather than expressive. Visual identity comes from the page-specific "Guides Aurora" color palette in `guides.scss`, not from per-section animation choreography.
+
+| Section | Style | Easing | Rationale |
+|---|---|---|---|
+| Intro | Fade + drop from above | `easeOutExpo` | Consistent with other pages |
+| Data Engineering | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` — uniform across all guides |
+| Computer Vision | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
+| Generative AI | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
+| Natural Language Processing | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
+| Reinforcement Learning | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
+| Software Engineering | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
+| Cybersecurity | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
+| Contact | Simple fade | `easeOutSine` | Clean exit |
+
+Within each guide timeline, the `h2` heading enters first (700ms, 40px rise), `h3` subheadings follow with an 80ms stagger and 30px rise, and body elements (`p, blockquote, ul, table, a, svg`) finish with a 50ms stagger and 20px rise. Relative offsets (`">-300"`) overlap the phases so each guide reads as one continuous reveal.
+
 ## SCSS Changes
 
 Animation initial-state rules were appended to each page's SCSS file:
@@ -97,6 +116,7 @@ Animation initial-state rules were appended to each page's SCSS file:
 - `assets/css/tech_resources.scss`
 - `assets/css/tech_takes.scss`
 - `assets/css/hobbies.scss`
+- `assets/css/guides.scss`
 
 All use the same pattern:
 
@@ -148,3 +168,18 @@ A new `#ProductPlacement` section ("Product Placement in Sports Marketing") was 
     - Registered `productPlacement: animateProductPlacement` in `animationMap`.
 
 The easing (`easeOutQuint`) was chosen because it is not yet used elsewhere on the page, and its strong late deceleration matches the feel of a broadcast camera snapping into focus on an on-field logo — thematically appropriate for a section about product placement visibility, orientation, and motion blur.
+
+### Guides page added (guides.html)
+
+A new `guides.html` page was added containing seven topical starter guides (Data Engineering, Computer Vision, Generative AI, NLP, Reinforcement Learning, Software Engineering, Cybersecurity). The animation work for it:
+
+- **`assets/js/guides_animations.js`** (new): Mirrors the `tech_resources_animations.js` scaffolding — `js-animations` guard class, `directChildren` and `addStep` helpers, IntersectionObserver with the standard `0.02` threshold and `-50px` bottom inset. The `sections` map covers `#introSectionDiv`, all seven `#xxxGuide` sections, and `#contactMe`.
+    - `animateIntro(el)` and `animateContact(el)` are copied verbatim from the existing pattern.
+    - `animateGuide(el)` is a single shared timeline used by all seven guides: `h2` rises 40px (700ms), `h3` rises 30px staggered 80ms (`">-300"`), then body elements (`p, blockquote, ul, table, a, svg`) rise 20px staggered 50ms (`">-300"`). Easing is `easeOutExpo` throughout.
+    - `animationMap` registers each guide key against the shared `animateGuide` function rather than a per-section variant.
+- **`assets/css/guides.scss`** (new): An `html.js-animations` block sets `opacity: 0` on direct children (`h1, h2, h3, p, ul, svg, table, blockquote, a, address`) of `#introSectionDiv`, every `#xxxGuide`, and `#contactMe` — same selector list as `tech_resources.scss`.
+- **`assets/css/default.scss`**: `@import "guides";` appended to the import list.
+- **`assets/css/default.css`**: Recompiled from `default.scss` to pick up the new initial-state rules.
+- **`assets/html/guides.html`**: Includes the standard AnimeJS importmap, the inline module that exposes `window.anime`, and `<script src="../js/guides_animations.js" defer></script>` in the head — identical pattern to the other animated pages.
+
+The decision to use one shared `animateGuide` rather than seven bespoke styles is documented in the Animation Styles by Page table above: seven distinct entrance styles on a single long page would compete for attention rather than support reading, and the guides are meant to be a uniform reference rather than a showcase of distinct topics.

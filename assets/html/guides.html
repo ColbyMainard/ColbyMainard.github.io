@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--https://www.w3schools.com/html/default.asp-->
+        <title>Guides — Colby Mainard | Data, AI, ML, Software & Cybersecurity</title>
+        <meta name="author" content="Colby Mainard">
+
+        <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Canonical URL and social sharing cards -->
+        <link rel="canonical" href="https://colbymainard.github.io/assets/html/guides.html">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://colbymainard.github.io/assets/html/guides.html">
+        <meta property="og:title" content="Guides — Colby Mainard">
+        <meta property="og:description" content="Plain-spoken starter guides on data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity — written by ML engineer Colby Mainard.">
+        <meta property="og:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+        <meta property="og:site_name" content="Colby Mainard">
+        <meta name="linkedin:card" content="summary">
+        <meta name="linkedin:title" content="Guides — Colby Mainard">
+        <meta name="linkedin:description" content="Plain-spoken starter guides on data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity — written by ML engineer Colby Mainard.">
+        <meta name="linkedin:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+
+        <!-- Icons and theme -->
+        <link rel="icon" type="image/png" href="../images/favicon.png"/>
+        <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+        <meta name="theme-color" content="#000000">
+
+        <link rel="stylesheet" href="../css/default.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Plain-spoken starter guides on data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity — written by ML engineer Colby Mainard.">
+        <meta name="keywords" content="guides, data engineering, computer vision, generative ai, natural language processing, reinforcement learning, software engineering, cybersecurity">
+
+        <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
+        <script src="../js/cookie_consent.js" defer></script>
+
+        <!-- AnimeJS for animations -->
+        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
+        <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
+        <script src="../js/guides_animations.js" defer></script>
+        <script src="../js/guides_interactive.js" defer></script>
+        <script src="../js/navbar.js" defer></script>
+        <script src="../js/back_to_top.js" defer></script>
+        <script src="../js/clipboard.js" defer></script>
+        <script src="../js/service_worker_register.js" defer></script>
+
+        <!-- JSON-LD: BreadcrumbList -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://colbymainard.github.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://colbymainard.github.io/assets/html/guides.html"}
+          ]
+        }
+        </script>
+
+        <!-- JSON-LD: ItemList of guide topics -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Technical Guides",
+          "description": "Starter guides on data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Data Engineering", "url": "https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv"},
+            {"@type": "ListItem", "position": 2, "name": "Computer Vision", "url": "https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv"},
+            {"@type": "ListItem", "position": 3, "name": "Generative AI", "url": "https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv"},
+            {"@type": "ListItem", "position": 4, "name": "Natural Language Processing", "url": "https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv"},
+            {"@type": "ListItem", "position": 5, "name": "Reinforcement Learning", "url": "https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv"},
+            {"@type": "ListItem", "position": 6, "name": "Software Engineering", "url": "https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv"},
+            {"@type": "ListItem", "position": 7, "name": "Cybersecurity", "url": "https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv"}
+          ]
+        }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="pageMenu" id="pageMenu">
+                <span class="nav-brand">Colby Mainard</span>
+                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <nav aria-label="Site navigation">
+                    <a href="../../index.html">Home</a>
+                    <a href="./tech_takes.html">Technical Stances</a>
+                    <a href="./hobbies.html">Hobbies</a>
+                    <a href="./tech_resources.html">Technical Resources</a>
+                    <a href="./guides.html">Guides</a>
+                </nav>
+            </div>
+            <div class="siteMenu" id="siteMenu">
+                <nav aria-label="Page sections">
+                    <a href="#dataEngineeringGuideDiv">Data Engineering</a>
+                    <a href="#computerVisionGuideDiv">Computer Vision</a>
+                    <a href="#generativeAIGuideDiv">Generative AI</a>
+                    <a href="#nlpGuideDiv">Natural Language Processing</a>
+                    <a href="#reinforcementLearningGuideDiv">Reinforcement Learning</a>
+                    <a href="#softwareEngineeringGuideDiv">Software Engineering</a>
+                    <a href="#cybersecurityGuideDiv">Cybersecurity</a>
+                    <a href="#contactMe">Contact Me</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main" id="main">
+            <div class="introSectionDiv" id="introSectionDiv">
+                <h1>Guides</h1>
+                <p>
+                    It is apparent that data engineering, software engineering, and artificial intelligence will remain in high demand for automation for the foreseeable future.
+                    However, many beginners may not know where to start and what to focus on.
+                    The goal of this page is to provide that starting point for many to understand the relevance of a field in addition to tools useful to start their journey.
+                </p>
+            </div>
+            <div class="dataEngineeringGuideDiv" id="dataEngineeringGuideDiv">
+                <section class="dataEngineeringGuide" id="dataEngineeringGuide">
+                    <h2>Data Engineering Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Data engineering is the discipline of moving, shaping, and storing data so that downstream applications have consistent and stable datasets to work with. 
+                    </p>
+                    <h3>The Importance of Clean Data</h3>
+                    <p>
+                        Real world data often has missing or contradictory values in ways that make it harder to assume anything about what can be assumed about input.
+                        Common issues can include:
+                    </p>
+                    <ul>
+                        <li>Duplicate rows/columns</li>
+                        <li>Extreme outliers</li>
+                        <li>Irrelevant data</li>
+                        <li>Inconsistent capitalization</li>
+                        <li>Inconsistent data types</li>
+                        <li>Inconsistent formatting</li>
+                        <li>Columns contradicting each other</li>
+                        <li>Inconsistent language (e.g. Chinese vs English)</li>
+                        <li>Missing values (e.g. optional columns)</li>
+                    </ul>
+                    <p>
+                        While exact policy will vary by project, I would recommend the following:
+                    </p>
+                    <ul>
+                        <li>Deduplicate data in a consistent policy</li>
+                        <li>Remove outliers</li>
+                        <li>Remove unused data early and aggressively</li>
+                        <li>Capitalize data using a consistent policy</li>
+                        <li>Cast data to consistent types</li>
+                        <li>Format all classes of the same type to the same format</li>
+                        <li>Determine which columns are considered the source of truth in the event of a conflict</li>
+                        <li>Each language might need its own preprocessing steps depending on character set and task</li>
+                        <li>Impute value via either a default or estimate based on other columns</li>
+                    </ul>
+                    <h3>Handling User Data Responsibly</h3>
+                    <p>
+                        Many times, data being passed into algorithms can contain personally-identifiable information (PII).
+                        However, if this data is improperly handled, there are a myriad of potential consequences, like:
+                    </p>
+                    <ul>
+                        <li>Loss of trust</li>
+                        <li>Public relations nightmares</li>
+                        <li>Legal consequences</li>
+                    </ul>
+                    <p>
+                        I would recommend looking at the following to consider as a part of your pipeline:
+                    </p>
+                    <ul>
+                        <li>Hashing sensitive fields to make it less readable</li>
+                        <li>Salting sensitive fields to prevent frequency analysis</li>
+                        <li>Least privileged access to data</li>
+                        <li>Add cybersecurity checks to monitor and verify proper access</li>
+                        <li>Check regulations regarding data being handled</li>
+                        <li>Add <i>k</i>-anonymity and differential privacy to add noise for attackers</li>
+                    </ul>
+                    <h3>Data Velocity</h3>
+                    <p>
+                        The amount of data going through any particular pipeline over a unit of time will determine the robustness of infrastructure required.
+                        For example, text tends to have a lower overall processing and storage cost per sample than audio, with images/video being some of the most complex computing requirements.
+                        RAM, CPU, and GPU needs will largely be determined by the amount and types of data being handled regularly.
+                    </p>
+                    <h3>Batch vs Real-time</h3>
+                    <p>
+                        User needs will also impact the algorithm choices.
+                        When responses are required in real or near-real time, that usually places a maximum complexity of processing and the amount of compute that would be required to be kept online at any particular time.
+                        If a user can wait for a response, however, it would make sense to either bundle requests together for efficiency or add additional processing power.
+                    </p>
+                    <h3>Common Libraries / Tools</h3>
+                    <ul>
+                        <li>Pandas for CSV exploration</li>
+                        <li>Polars for high-speed tabular data processing</li>
+                        <li>Spark for distributed high-speed tabular data processing</li>
+                        <li>SQLAlchemy for handling interactions with SQL databases</li>
+                        <li>BeautifulSoup4 for web crawling for data</li>
+                        <li>Docker / Kubernetes for managing complex microservice architectures</li>
+                        <li>virtualenv for managing secrets</li>
+                    </ul>
+                    <p>
+                        For more resources about applications of data engineering in artificial intelligence, check out <a href="./tech_resources.html#artificialIntelligenceResourcesDiv">my list of AI resources.</a>
+                    </p>
+                </section>
+            </div>
+            <div class="computerVisionGuideDiv" id="computerVisionGuideDiv">
+                <section class="computerVisionGuide" id="computerVisionGuide">
+                    <h2>Computer Vision Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Computer vision is particularly concerned with turning unstructured image data into a more structured analysis.
+                        Each pixel in an image is its own feature and contains little to no metadata and fuzzy decision boundaries (e.g. defining an exact edge)/
+                    </p>
+                    <h3>Problem Classes</h3>
+                    <p>
+                        While there are many different problems can be solved via computer vision, it often boils down to one or more of the following categories:
+                    </p>
+                    <ul>
+                        <li>Object classification</li>
+                        <li>Instance Segmentation</li>
+                        <li>Semantic Segmentation</li>
+                        <li>Image classification</li>
+                        <li>Pose estimation</li>
+                    </ul>
+                    <h4>Object Classification</h4>
+                    <p>
+                        Object classification can be used draw bounding boxes around objects that the algorithm has been trained to find.
+                        This is best for finding regions of an image that might be interesting for further processing.
+                    </p>
+                    <h4>Instance Segmentation</h4>
+                    <p>
+                        Instance segmentation is similar to object classification but uses bounding polygons for more fidelity.
+                        This is best for determining which pixels belong to a particular object.
+                    </p>
+                    <h4>Semantic Segmentation</h4>
+                    <p>
+                        Semantic segmentation labels each pixel as a particular class but doesn't assign any pixel to a particular object.
+                        This is best used for determining if you need labels for each pixel of an image, but doesn't assign a pixel to any particular object.
+                    </p>
+                    <h4>Image Classification</h4>
+                    <p>
+                        Image classification places the whole image into pre-defined categories.
+                        This is best for preprocessing of an image to determine if an image has properties of interest (e.g. contains dog, is a commercial).
+                    </p>
+                    <h4>Pose Estimation</h4>
+                    <p>
+                        Pose estimation is used for finding the position of a human's limbs in 2D/3D space.
+                        This is best for applications where knowledge of where particular pieces of human anatomy are in real space (e.g. movement tracking).
+                    </p>
+                    <h3>Choosing Models</h3>
+                    <p>
+                        I would recommend considering things like resource constraints, performance requirements, and infrastructure capacity to make decisions regarding models.
+                        As neural networks grow in size (e.g. number of weights/layers), they tend to gain performance to a degree at the cost of higher compute requirements and power consumption.
+                        Balancing these concerns will allow you to optimize the user experience.
+                    </p>
+                    <h3>Data Normalization Considerations</h3>
+                    <p>
+                        When building a computer vision pipeline, much thought needs to go into the data format expected.
+                        For example, many of the below are common concerns:
+                    </p>
+                    <ul>
+                        <li>Number of channels (e.g. color vs grayscale)</li>
+                        <li>Width and height of image in pixels</li>
+                        <li>Rotation of training/test images for generality</li>
+                        <li>Adding noise to train/test images for generality</li>
+                        <li>Occlusion of portions of the image for generality</li>
+                    </ul>
+                    <h3>Common Libraries / Tools</h3>
+                    <ul>
+                        <li>Ultralytics for pre-built foundational models in many common tasks</li>
+                        <li>PyTorch for building research networks</li>
+                        <li>TensorFlow for building more performant networks</li>
+                        <li>Keras for flexibility in swapping between PyTorch and TensorFlow</li>
+                        <li>OpenCV for advanced programmatic image manipulation</li>
+                        <li>Numpy for manipulating input and output</li>
+                    </ul>
+                    <p>
+                        For more resources about applications of computer vision, check out <a href="./tech_resources.html#artificialIntelligenceResourcesDiv">my list of AI resources.</a>
+                    </p>
+                </section>
+            </div>
+            <div class="generativeAIGuideDiv" id="generativeAIGuideDiv">
+                <section class="generativeAIGuide" id="generativeAIGuide">
+                    <h2>Generative AI Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Generative artificial intelligence (GenAI) refers to various content (e.g. text, images, video) generated directly by a machine learning model.
+                        As of the time of writing, the most well-known example would likely be Large Language Models (LLMs) like Anthropic's Claude or OpenAI's ChatGPT.
+                    </p>
+                    <h3>Underlying Tech</h3>
+                    <p>
+                        While the exact structure of the neural network will vary by application, it converts a specified input to novel data of a similar format.
+                        In the example of LLMs, input would be a text prompt and output would be a response to the text.
+                        Deepfakes, by contrast, would be audio/images/video of a specified person.
+                        Vision Language Models (VLMs) can handle both visual information and human language working in concert.
+                    </p>
+                    <h3>Generative Adversarial Networks (GANs)</h3>
+                    <p>
+                        These are the predecessor of modern GenAI.
+                        One of the most obvious differences was the introduction of the Transformer/MultiHeaded attention layers and the architectural flexibility it allows.
+                    </p>
+                    <h3>Common Libraries / Tools</h3>
+                    <ul>
+                        <li>HuggingFace's transformer package for pre-built foundational models in many common tasks</li>
+                        <li>Ollama for deploying common production models</li>
+                        <li>PyTorch for building research networks</li>
+                        <li>CrewAI/Smolagents for building custom agents</li>
+                        <li>TensorFlow for building more performant networks</li>
+                        <li>Keras for flexibility in swapping between PyTorch and TensorFlow</li>
+                        <li>Numpy for manipulating input and output</li>
+                    </ul>
+                    <p>
+                        For more resources regarding generative artificial intelligence, check out <a href="./tech_resources.html#artificialIntelligenceResourcesDiv">my list of AI resources.</a>
+                    </p>
+                </section>
+            </div>
+            <div class="nlpGuideDiv" id="nlpGuideDiv">
+                <section class="nlpGuide" id="nlpGuide">
+                    <h2>Natural Language Processing Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Natural language processing (NLP) is the branch of artificial intelligence concerns with analysis of human language.
+                    </p>
+                    <h3>Sentiment Analysis</h3>
+                    <p>
+                        Oftentimes, it is useful to be able to autonomously determine the sentiment someone holds about the topic they are speaking about.
+                        Neural networks of this flavor take in tokenized text and output a measurement of positive or negative sentiment (e.g. category labels).
+                    </p>
+                    <h3>Topic Detection</h3>
+                    <p>
+                        Deterministic algorithms tend to fail at detecting the true topic of a particular text.
+                        Some neural networks can bin texts into categories (e.g. tech, recent events, poetry).
+                    </p>
+                    <h3>Data Normalization Concerns</h3>
+                    <p>
+                        Neural networks are often sensitive to small perturbations in their inputs that humans may not be.
+                        When preparing to design and train a neural network for NLP purposes, it is often wise to consider the following:
+                    </p>
+                    <ul>
+                        <li>How should data (e.g. letters/words) be tokenized?</li>
+                        <li>What should the length of text be in tokens provided to the model?</li>
+                        <li>Which languages are expected for the model to handle?</li>
+                        <li>How should text with ambiguity (e.g. humor, sarcasm, riddles, contradictions) be handled?</li>
+                    </ul>
+                    <h3>Common Libraries / Tools</h3>
+                    <ul>
+                        <li>NLTK for natural language preprocessing</li>
+                        <li>PyTorch for building research networks</li>
+                        <li>CrewAI/Smolagents for building custom agents</li>
+                        <li>TensorFlow for building more performant networks</li>
+                        <li>Keras for flexibility in swapping between PyTorch and TensorFlow</li>
+                        <li>Numpy for manipulating input and output</li>
+                    </ul>
+                    <p>
+                        For more resources about natural language processing, check out <a href="./tech_resources.html#artificialIntelligenceResourcesDiv">my list of AI resources.</a>
+                    </p>
+                </section>
+            </div>
+            <div class="reinforcementLearningGuideDiv" id="reinforcementLearningGuideDiv">
+                <section class="reinforcementLearningGuide" id="reinforcementLearningGuide">
+                    <h2>Reinforcement Learning Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Reinforcement learning (RL) is the branch of artificial intelligence concerned with learning optimal policies for behavior.
+                        Specifically, reinforcement learning optimizes a reward function in a noisy, dynamic environments.
+                        Most techniques assumes that there is an intelligent agent that takes actions in an environment and then measures it's current state and the reward from the actions taken.
+                    </p>
+                    <h3>Techniques</h3>
+                    <p>
+                        Several reinforcement learning techniques are widely available for use.
+                        While the uses and exact math underpinning each are subtly different, the goal remains the same: determine the best action to take for any particular state.
+                        Some of the most popular techniques can include:
+                    </p>
+                    <ul>
+                        <li>Proximal Policy Optimization</li>
+                        <li>Q-Learning</li>
+                        <li>Monte Carlo</li>
+                        <li>Deep Q Network</li>
+                    </ul>
+                    <h4>Proximal Policy Optimization (PPO)</h4>
+                    <p>
+                        The basic strategy of PPO is to place an agent in an environment and let it randomly explore.
+                        After a while, the agent should have enough data to update policies based on which actions lead to particular rewards in an environment.
+                    </p>
+                    <h4>Q-Learning</h4>
+                    <p>
+                        If foreknowledge of the environment is available ahead of time and there are a finite number of actions in each state, it is possible to learn rewards for each action at each state.
+                        Based on that, it is possible to follow the optimal action at each state and estimate the future value of taking actions at any particular state.
+                    </p>
+                    <h4>Monte Carlo</h4>
+                    <p>
+                        This technique relies upon being placed in a certain state and being allowed to perform pseudorandom walks through the environment.
+                        After enough pseudorandom walks, it would be possible to estimate the expected present and future value of any action in a given state.
+                        Once there is some understanding of these expected values it would be possible for the agent to determine an optimal policy to maximize expected value in any situation.
+                    </p>
+                    <h4>Deep Q Network</h4>
+                    <p>
+                        When the environment is not known ahead of time, it is difficult to understand all of the variables that might impact a decision at any particular state in a robust way.
+                        Because of this, it becomes harder for developers to make sure all variables are directly built into the model appropriately.
+                        Neural networks can then be trained on the rewards earned by action/state combos and then be used to project the expected future value in these unknown environments.
+                    </p>
+                    <h3>Applications</h3>
+                    <p>
+                        This is the most common form of semi-supervised machine learning.
+                        In semi-supervised learning, it is usually very clear to measure the quality of a solution objectively (e.g. high score in a video game).
+                        However, it might not always be obvious to humans the most optimal strategy or if higher scores are available beyond their current ability in an environment.
+                    </p>
+                    <p>
+                        For more resources about reinforcement learning, check out <a href="./tech_resources.html#artificialIntelligenceResourcesDiv">my list of AI resources.</a>
+                    </p>
+                </section>
+            </div>
+            <div class="softwareEngineeringGuideDiv" id="softwareEngineeringGuideDiv">
+                <section class="softwareEngineeringGuide" id="softwareEngineeringGuide">
+                    <h2>Software Engineering Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Software engineering has many definitions. 
+                        For my purposes, I will define it as the process of designing software systems in a way to be both easy to maintain while remaining usable for the the end user.
+                    </p>
+                    <h3>Why GenAI Can't Kill Software Engineering</h3>
+                    <p>
+                        Let's be honest: GenAI can write a sufficiently solid first draft of code to achieve known features.
+                        However, this is rarely the issue for most large projects.
+                        GenAI tends to struggle in many complex tasks, like:
+                    </p>
+                    <ul>
+                        <li>Understanding personal taste of the end users</li>
+                        <li>Intuition regarding human needs</li>
+                        <li>Flushing out hidden requirements the user never actually specified</li>
+                        <li>Designing user interfaces that humans consider easy-to-use</li>
+                        <li>Understanding unstated priorities that users may have</li>
+                    </ul>
+                    <h3>Practical Concerns</h3>
+                    <blockquote>
+                        "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live." - 
+                        <a href="https://sercankulcu.github.io/posts/2025/02/clean-code-psychopath/">
+                            John Woods
+                        </a>
+                    </blockquote>
+                    <p>
+                        Eventually, every line of code in a repo will need to be updated or otherwise replaced once no longer needed.
+                        These requests for the edits can frequently come after the original author has retired, died, or otherwise left the organization maintaining the code.
+                        Because of this, it is best practice to design the code along principles that make hand-off of responsibility easier.
+                        I would recommend <a href="https://www.thriftbooks.com/w/clean-code/56164605/?resultid=a3d4b7a7-9737-4503-a96d-bdb68f75ab1f#edition=73791835&idiq=85730671">Clean Code: A Handbook of Agile Software Craftsmanship</a> for the low-level code standards.
+                        However, this is often not enough for substantially new projects. 
+                        To design systems from the ground-up responsibly, I would recommend <a href="https://www.thriftbooks.com/w/design-patterns-elements-of-reusable-object-oriented-software-addison-wesley-professional-computing-series_erich-gamma/248223/item/1029544/?mkwid=%7cdc&pcrid=76897273066017&pkw=&pmt=be&slid=&product=1029544&plc=&pgrid=1230353808544789&ptaid=pla-4580496747882805&utm_source=bing&utm_medium=cpc&utm_campaign=Shopping+-+High+Vol+Scarce+-+%2410+-+%2450&utm_term=&utm_content=%7cdc%7cpcrid%7c76897273066017%7cpkw%7c%7cpmt%7cbe%7cproduct%7c1029544%7cslid%7c%7cpgrid%7c1230353808544789%7cptaid%7cpla-4580496747882805%7c&msclkid=8999e8dc55b215633a1782cf98bc2b5f#idiq=1029544&edition=1874193">Design Patterns: Elements of Reusable Object-Oriented Software.</a>
+                    </p>
+                    <p>
+                        There are several directions you could go after this.
+                        For resources to learn programming languages, I would recommend either my list of <a href="./tech_resources.html#pythonResourcesDiv">Python</a> or <a href="./tech_resources.html">C++</a> resources.
+                        Others may find my compilation of <a href="./tech_resources.html#scriptingResourcesDiv">scripting</a> or <a href="./tech_resources.html#operatingSystemsResourcesDiv">operating systems.</a>
+                    </p>
+                </section>
+            </div>
+            <div class="cybersecurityGuideDiv" id="cybersecurityGuideDiv">
+                <section class="cybersecurityGuide" id="cybersecurityGuide">
+                    <h2>Cybersecurity Guide</h2>
+                    <p><u>Last Updated:</u> May 25, 2026</p>
+                    <p>
+                        Cybersecurity is the practice of hardening computer systems and those who use them against malicious individuals.
+                        This could look like securing computer networks, patching hardware and software vulnerabilities, or social engineering training.
+                    </p>
+                    <h3>Best Practices</h3>
+                    <p>
+                        Non-technical users may feel like there is nothing that can be done. 
+                        While they may not have the tools to find zero-day vulnerabilities, there are several practices that can give them some security.
+                    </p>
+                    <ul>
+                        <li>Update programs and operating systems regularly to get security patches</li>
+                        <li>Use penetration tests or similar when possible</li>
+                        <li>Enable multi-factor authentication for online accounts where possible</li>
+                        <li>Use strong passwords that are unique to an individual site</li>
+                        <li>Consider password managers like 1Password to help keep track of credentials digitally</li>
+                        <li>Install applications from trusted sources only</li>
+                        <li>Delete unused applications and online accounts to minimize your digital footprint</li>
+                        <li>Make answers to security questions something that doesn't line up with what would be available online (e.g. wrong answers only)</li>
+                        <li>Do not post about being at an event until after you have returned from the event</li>
+                        <li>Ignore all scam emails and delete immediately - they may contain malware</li>
+                    </ul>
+                    <h3>Fields in Cybersecurity</h3>
+                    <p>
+                        Many think that cybersecurity is a monolithic topic, but there are many 
+                    </p>
+                    <ul>
+                        <li>Network Security</li>
+                        <li>Application Security</li>
+                        <li>Digital Forensics</li>
+                        <li>Cloud Security</li>
+                        <li>Ethical Hacking</li>
+                        <li>Governance, Risk, and Compliance (GRC)</li>
+                    </ul>
+                    <h4>Network Security</h4>
+                    <p>
+                        Network security is primarily concerned with making it difficult for those with malicious intent to gain and escalate access to computer networks.
+                        Many attacks come over wireless networks at some level, and catching/blocking these issues early is the best way to avoid a sizable cybersecurity event.
+                    </p>
+                    <h4>Application Security</h4>
+                    <p>
+                        Each application needs to make sure it safeguards users without them consciously thinking about it.
+                        Application security does this by securing the whole software development life cycle.
+                        By doing so, it removes bugs that malicious actors could use to attack users as soon as possible.
+                    </p>
+                    <h4>Digital Forensics</h4>
+                    <p>
+                        Understanding the state of a computer can be useful in both file recovery and criminal cases with a digital component.
+                        However, cyber attackers often go to great lengths to hide their malware from security.
+                        Digital forensics builds the tools and processes that are needed to analyze both the digital artifacts and behaviors that were seen before a system was damaged and restore as much as possible.
+                    </p>
+                    <h4>Cloud Security</h4>
+                    <p>
+                        Many companies have their digital operations at least partly in the cloud. 
+                        However, many security steps that could be taken for computers that could be stored within physical reach.
+                        Cloud security focuses on responsibly configuring cloud environments to protect resources.
+                    </p>
+                    <h4>Ethical Hacking</h4>
+                    <p>
+                        Most have some level of cybersecurity practices to mitigate the risks and likelihood of cyberattacks.
+                        Cyber attackers, however, usually go out of their way to hide their activity until they have completely dismantled your defenses.
+                        This makes it difficult for someone who developed the defenses to understand concerns they may have overlooked.
+                        Ethical hacking, or penetration testing, focuses on hiring talented individuals to attempt to defeat the defenses and report back with relative strengths and weaknesses.
+                        Once these strengths and weaknesses are known, it is possible to then improve a cybersecurity stance in a logical and impartial way.
+                    </p>
+                    <h4>Governance, Risk, and Compliance (GRC)</h4>
+                    <p>
+                        It is impossible to design defenses if it is not established how data and systems should be protected.
+                        GRC focuses on establishing protocols on how confidentiality, integrity, and availability should be guaranteed at a system level.
+                    </p>
+                    <h3>Common Libraries / Tools</h3>
+                    <ul>
+                        <li>Ghidra - demystifying binaries</li>
+                        <li>Scapy - working with network packet captures</li>
+                        <li>Metasploit - penetration testing for known vulnerabilities</li>
+                        <li>Scrapy - web scraping</li>
+                        <li>BeautifulSoup - alternate web scraping</li>
+                        <li>Nmap - Exploring what devices are available within a particular IP range</li>
+                        <li>Hashcat - Breaking cryptographic hashes</li>
+                        <li>John the Ripper - Password Cracking</li>
+                        <li>Netcat - Reading and writing network data</li>
+                        <li>Aircrack-ng - Testing security of various WiFi networks</li>
+                        <li>APKTool - Looking for vulnerabilities in APK files</li>
+                        <li>SQLMap - Looking for SQL injection vulnerabilities</li>
+                        <li>Dirb - brute forcing URLs on web servers</li>
+                        <li>Reaver - Looking for WPS Vulnerabilities</li>
+                        <li>XSStrike - Finding and exploiting cross-site scripting (XSS)</li>
+                        <li>Nikto - Web server scanning</li>
+                        <li>Autopsy - Data recovery and file system analysis</li>
+                        <li>Maltego - Freemium open-source intelligence (OSINT) searches</li>
+                        <li>Burpsuite - Freemium penetration testing suite</li>
+                        <li>Wireshark - Recording and exploring network packet captures</li>
+                        <li>Social Engineering Toolkit - Building out social engineering campaigns for penetration testing</li>
+                    </ul>
+                    <p>
+                        For more resources about cybersecurity, check out <a href="./tech_resources.html#cybersecurityResourcesDiv">my list of cybersecurity resources.</a>
+                    </p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <section class="contactMe" id="contactMe">
+                <h2>Contact:</h2>
+                <p>Email:
+                    <a href="mailto:colby.mainard@proton.me">
+                        colby.mainard@proton.me
+                    </a>
+                </p>
+                <p>LinkedIn:
+                    <a href="https://www.linkedin.com/in/colby-mainard/">
+                        https://www.linkedin.com/in/colby-mainard/
+                    </a>
+                </p>
+                <p>
+                    PGP key:
+                    <a href="../other/pgp_email_key.asc">
+                        36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE
+                    </a>
+                </p>
+                <p>
+                    <a href="./privacy.html">Privacy Policy</a>
+                </p>
+                <br>
+            </section>
+        </footer>
+    </body>
+</html>
