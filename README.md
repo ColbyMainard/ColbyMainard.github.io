@@ -36,6 +36,18 @@ Topics include:
     - Scripting
     - Operating Systems
 
+### Guides
+
+Plain-spoken starter guides covering core technical domains, intended for readers new to each area.
+Topics include:
+    - Data Engineering
+    - Computer Vision
+    - Generative AI
+    - Natural Language Processing
+    - Reinforcement Learning
+    - Software Engineering
+    - Cybersecurity
+
 ### Other Skills
 
 More general soft/non-technical skills I possess, mainly focused on business and interpersonal.
