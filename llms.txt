@@ -2,35 +2,33 @@
 
 > Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-> Last updated: 2026-05-24
+> Last updated: 2026-06-01
 
-Colby Mainard holds an M.S. in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision.
+Colby Mainard holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision.
+In addition, he also holds a Bachelors of Science in Computer Science from Texas A&M University, with double minors in Business and Cybersecurity.
 
 Domain experience spans:
 
 - Computer vision pipelines for professional sports broadcasts and social media at MVP on behalf of various leagues / teams (NFL, NHL, MLB, NBA, PGA, PFL)
 - AI/ML for network security threat detection at Vectra AI
 - Image-based machine learning for medical diagnostics
-- Anti-money laundering (AML) and fraud detection at RiskScout (a FinTech company)
+- Anti-money laundering (AML) and bank security at RiskScout (a FinTech company)
 - Facial-tracking research for a cosmetics company
 - Computational biology / bioinformatics coursework
 - Autonomous vehicle testing using Unreal Engine 4
-
-Currently an AI/ML Engineer at RiskScout. Previously: MVP (sports marketing CV), Vectra AI (cybersecurity), Shiseido Americas (facial tracking).
 
 Canonical domain: https://colbymainard.github.io
 
 ## Intended audience
 
 - Potential colleagues
-- Future coworkers
 - Technical recruiters
 - Fellow AI/ML enthusiasts
 - Computer Science students
 
 ## Pages
 
-- [Home / Resume](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, contact info.
+- [Home / Professional Background](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, contact info.
   - [Work History](https://colbymainard.github.io/index.html#workHistoryDiv)
   - [Education](https://colbymainard.github.io/index.html#educationDiv)
   - [Projects](https://colbymainard.github.io/index.html#projectsDiv)
