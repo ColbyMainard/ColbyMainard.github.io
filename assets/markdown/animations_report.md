@@ -9,7 +9,7 @@ AnimeJS v4.3.5 timeline animations were added to all four pages of the site. Eac
 ### File Structure
 
 | File | Purpose |
-|---|---|
+| --- | --- |
 | `assets/js/animations.js` | Animations for `index.html` |
 | `assets/js/tech_resources_animations.js` | Animations for `tech_resources.html` |
 | `assets/js/tech_takes_animations.js` | Animations for `tech_takes.html` |
@@ -43,7 +43,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 ### index.html
 
 | Section | Style | Easing | Rationale |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Intro | Fade + drop from above | `easeOutExpo` | Dramatic first impression |
 | Work History | Slide from left | `easeOutQuart` | Professional, directional |
 | Education | Fade + slight rotation | `easeOutSine` | Turning pages of a book |
@@ -56,7 +56,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 ### tech_resources.html
 
 | Section | Style | Easing | Rationale |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Intro | Fade + drop | `easeOutExpo` | Consistent with other pages |
 | Cybersecurity | Glitch/flicker + alternating slides | `easeOutQuart` | Hacker aesthetic |
 | AI | Scale + bloom outward | `easeOutBack` | Neural network expansion |
@@ -69,7 +69,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 ### tech_takes.html
 
 | Section | Style | Easing | Rationale |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Intro | Fade + drop | `easeOutExpo` | Consistent with other pages |
 | KAN | Slide from left + rotation | `easeOutCubic` | Mathematical, structured |
 | Cryptocurrency | Scale + flicker | `easeOutQuart` | Digital currency glitch |
@@ -82,7 +82,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 ### hobbies.html
 
 | Section | Style | Easing | Rationale |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Intro | Fade heading + image scale | `easeOutExpo` | Photo showcase entrance |
 | Quantum Computing | Scale oscillation | `easeOutSine` | Consistent with tech_takes quantum |
 | Photography | Zoom + bloom from center | `easeOutBack` | Camera aperture opening |
@@ -95,7 +95,7 @@ Each page has a dedicated animation file rather than a shared one, because secti
 All seven guide sections share a single `animateGuide` timeline rather than each receiving a bespoke style. This is a deliberate departure from the other pages: the guides are meant to read as a uniform reference collection where no topic visually dominates the others, and seven distinct entrance styles on a single long page would feel noisy rather than expressive. Visual identity comes from the page-specific "Guides Aurora" color palette in `guides.scss`, not from per-section animation choreography.
 
 | Section | Style | Easing | Rationale |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Intro | Fade + drop from above | `easeOutExpo` | Consistent with other pages |
 | Data Engineering | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` — uniform across all guides |
 | Computer Vision | Rise from bottom + staggered children | `easeOutExpo` | Shared `animateGuide` |
@@ -163,9 +163,9 @@ A new `#ProductPlacement` section ("Product Placement in Sports Marketing") was 
 - **`assets/css/tech_takes.scss`**: `#ProductPlacement` was appended to the selector list inside the `html.js-animations` initial-state block, so its direct children (`h1, h2, h3, p, ul, dl, table, a, address`) start at `opacity: 0` before animation.
 - **`assets/css/default.css`**: Recompiled from `default.scss` (via WSL, since `sass` had issues running directly on Windows) to pick up the new initial-state rule.
 - **`assets/js/tech_takes_animations.js`**:
-    - Added `productPlacement: "#ProductPlacement"` to the `sections` map.
-    - Added `animateProductPlacement(el)` — a "cinematic focus pull" timeline on `easeOutQuint`. The `h1` starts at `scale: 1.3` with a `2deg` rotation and settles to `scale: 1` at `0deg` (duration 900ms). Subheadings (`h2`, `h3`) follow with `scale: 1.15 → 1` and `1.5deg → 0deg`, staggered by 90ms. Body elements (`p, ul, dl, table, a`) finish with a subtle `scale: 1.05 → 1` and a 20px rise, staggered by 55ms. The relative offsets (`">-400"`, `">-300"`) overlap phases so the section reads as one continuous camera move rather than three separate beats.
-    - Registered `productPlacement: animateProductPlacement` in `animationMap`.
+  - Added `productPlacement: "#ProductPlacement"` to the `sections` map.
+  - Added `animateProductPlacement(el)` — a "cinematic focus pull" timeline on `easeOutQuint`. The `h1` starts at `scale: 1.3` with a `2deg` rotation and settles to `scale: 1` at `0deg` (duration 900ms). Subheadings (`h2`, `h3`) follow with `scale: 1.15 → 1` and `1.5deg → 0deg`, staggered by 90ms. Body elements (`p, ul, dl, table, a`) finish with a subtle `scale: 1.05 → 1` and a 20px rise, staggered by 55ms. The relative offsets (`">-400"`, `">-300"`) overlap phases so the section reads as one continuous camera move rather than three separate beats.
+  - Registered `productPlacement: animateProductPlacement` in `animationMap`.
 
 The easing (`easeOutQuint`) was chosen because it is not yet used elsewhere on the page, and its strong late deceleration matches the feel of a broadcast camera snapping into focus on an on-field logo — thematically appropriate for a section about product placement visibility, orientation, and motion blur.
 
@@ -174,9 +174,9 @@ The easing (`easeOutQuint`) was chosen because it is not yet used elsewhere on t
 A new `guides.html` page was added containing seven topical starter guides (Data Engineering, Computer Vision, Generative AI, NLP, Reinforcement Learning, Software Engineering, Cybersecurity). The animation work for it:
 
 - **`assets/js/guides_animations.js`** (new): Mirrors the `tech_resources_animations.js` scaffolding — `js-animations` guard class, `directChildren` and `addStep` helpers, IntersectionObserver with the standard `0.02` threshold and `-50px` bottom inset. The `sections` map covers `#introSectionDiv`, all seven `#xxxGuide` sections, and `#contactMe`.
-    - `animateIntro(el)` and `animateContact(el)` are copied verbatim from the existing pattern.
-    - `animateGuide(el)` is a single shared timeline used by all seven guides: `h2` rises 40px (700ms), `h3` rises 30px staggered 80ms (`">-300"`), then body elements (`p, blockquote, ul, table, a, svg`) rise 20px staggered 50ms (`">-300"`). Easing is `easeOutExpo` throughout.
-    - `animationMap` registers each guide key against the shared `animateGuide` function rather than a per-section variant.
+  - `animateIntro(el)` and `animateContact(el)` are copied verbatim from the existing pattern.
+  - `animateGuide(el)` is a single shared timeline used by all seven guides: `h2` rises 40px (700ms), `h3` rises 30px staggered 80ms (`">-300"`), then body elements (`p, blockquote, ul, table, a, svg`) rise 20px staggered 50ms (`">-300"`). Easing is `easeOutExpo` throughout.
+  - `animationMap` registers each guide key against the shared `animateGuide` function rather than a per-section variant.
 - **`assets/css/guides.scss`** (new): An `html.js-animations` block sets `opacity: 0` on direct children (`h1, h2, h3, p, ul, svg, table, blockquote, a, address`) of `#introSectionDiv`, every `#xxxGuide`, and `#contactMe` — same selector list as `tech_resources.scss`.
 - **`assets/css/default.scss`**: `@import "guides";` appended to the import list.
 - **`assets/css/default.css`**: Recompiled from `default.scss` to pick up the new initial-state rules.
