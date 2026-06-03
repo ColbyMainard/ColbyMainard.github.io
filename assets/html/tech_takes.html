@@ -235,22 +235,28 @@
                         There are several features that have limited the max speed of KANs, like:
                     </p>
                     <ul>
-                        <li>More complex logic</li>
-                        <ul>
-                            <li>Internal logic learns both activation function and weights/biases.</li>
-                            <li>Harder to cache and make operation possible to run in a batch.</li>
-                            <li>Developments that would allow KANs to take advantage of hardware like single instruction multiple data (SIMD) and graphics processing units (GPU) not implemented yet.</li>
-                        </ul>
-                        <li>Integration with MLPs</li>
-                        <ul>
-                            <li>Certain tasks may make more sense to leave implemented in MLPs, as performance is more of a known quantity.</li>
-                            <li>Libraries designed to make this manageable for the average don't exist at the time of writing.</li>
-                        </ul>
-                        <li>Saving and sharing KAN models with others</li>
-                        <ul>
-                            <li>No standard interchange format currently exists (to my knowledge).</li>
-                            <li>Interchange and save formats would need to not interfere with optimizations to make KAN speed comparable to MLPs.</li>
-                        </ul>
+                        <li>
+                            More complex logic
+                            <ul>
+                                <li>Internal logic learns both activation function and weights/biases.</li>
+                                <li>Harder to cache and make operation possible to run in a batch.</li>
+                                <li>Developments that would allow KANs to take advantage of hardware like single instruction multiple data (SIMD) and graphics processing units (GPU) not implemented yet.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Integration with MLPs
+                            <ul>
+                                <li>Certain tasks may make more sense to leave implemented in MLPs, as performance is more of a known quantity.</li>
+                                <li>Libraries designed to make this manageable for the average don't exist at the time of writing.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Saving and sharing KAN models with others
+                            <ul>
+                                <li>No standard interchange format currently exists (to my knowledge).</li>
+                                <li>Interchange and save formats would need to not interfere with optimizations to make KAN speed comparable to MLPs.</li>
+                            </ul>
+                        </li>
                     </ul>
                     <br>
                 </section>
@@ -328,7 +334,6 @@
                             </td>
                         </tr>
                     </table>
-                    <ul></ul>
                     <h3>Which cryptocurrencies are (relatively) safe?</h3>
                     <p>
                         It is worth noting that cryptocurrency is much more volatile than traditional securities.
@@ -383,28 +388,36 @@
                     <h3>Recommended list of supplies to start</h3>
                     <p></p>
                     <ul>
-                        <li>Cold Wallet</li>
-                        <ul>
-                            <li>Best for cryptocurrency stores for those who do not want frequent access to their cryptocurrency stores</li>
-                            <li>Cold wallets make it harder for scammers to access.</li>
-                            <li>Don't lose access to the cold wallet though - could cause issues accessing assets.</li>
-                        </ul>
-                        <li>Hot Wallet</li>
-                        <ul>
-                            <li>Best for cryptocurrency stores that will be rebalanced somewhat regularly/frequently.</li>
-                            <li>Makes it quicker and easier to trade crypto faster.</li>
-                            <li>Scammers often attempt to target these to steal cryptocurrency - internet connected wallets tend to be easier to steal from.</li>
-                        </ul>
-                        <li>Knowledge of the cryptocurrency space</li>
-                        <ul>
-                            <li>Trading things you don't understand is an easy way to lose money.</li>
-                            <li>Having an intuition for any space you are operating in would allow for improved safety and intelligent behavior.</li>
-                        </ul>
-                        <li>Strong cybersecurity/operational security</li>
-                        <ul>
-                            <li>Anywhere there is money stored on a computer, scammers and hackers will follow.</li>
-                            <li>Placing effective barriers between hackers and your money makes it harder for them to steal it.</li>
-                        </ul>
+                        <li>
+                            Cold Wallet
+                            <ul>
+                                <li>Best for cryptocurrency stores for those who do not want frequent access to their cryptocurrency stores</li>
+                                <li>Cold wallets make it harder for scammers to access.</li>
+                                <li>Don't lose access to the cold wallet though - could cause issues accessing assets.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Hot Wallet
+                            <ul>
+                                <li>Best for cryptocurrency stores that will be rebalanced somewhat regularly/frequently.</li>
+                                <li>Makes it quicker and easier to trade crypto faster.</li>
+                                <li>Scammers often attempt to target these to steal cryptocurrency - internet connected wallets tend to be easier to steal from.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Knowledge of the cryptocurrency space
+                            <ul>
+                                <li>Trading things you don't understand is an easy way to lose money.</li>
+                                <li>Having an intuition for any space you are operating in would allow for improved safety and intelligent behavior.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Strong cybersecurity/operational security
+                            <ul>
+                                <li>Anywhere there is money stored on a computer, scammers and hackers will follow.</li>
+                                <li>Placing effective barriers between hackers and your money makes it harder for them to steal it.</li>
+                            </ul>
+                        </li>
                     </ul>
                     <br>
                 </section>
@@ -628,63 +641,80 @@
                         However, it is possible to take at least some ways to fight back.
                     </p>
                     <ul>
-                        <li>Avoid Logins Where Possible</li>
-                        <ul>
-                            <li>Most logins allow the site to track internet traffic back to one consistent identity.</li>
-                            <li>Furthermore, most accounts are associated with personally-identifiable information (PII) like email and phone number.</li>
-                            <li>With insufficient anonymization, it would be possible to track activity across accounts via logins.</li>
-                        </ul>
-                        <li>Use Privacy-Preserving Browsers</li>
-                        <ul>
-                            <li>Even the most technical person might not remember to take all steps necessary to protect themselves every time they open a new browser window.</li>
-                            <li>Using a browser that automatically handles that can help.</li>
-                            <li>While best-known for allowing access to the dark web, I would recommend browsers like <a href="https://www.torproject.org/">TOR</a> to browse the clear web.</li>
-                        </ul>
-                        <li>Consider a VPN</li>
-                        <ul>
-                            <li>Information about your ISP and IP address can help track you across sites and narrow down your physical location.</li>
-                            <li>Using a VPN can help obfuscate that information.</li>
-                        </ul>
-                        <li>Avoid Services Selling User Information</li>
-                        <ul>
-                            <li>Certain services are more openly selling user information.</li>
-                            <li>By not using these services, you reduce the amount of data they have available to sell.</li>
-                            <li>This reduction to their revenue, in large enough amounts, can force the hand of the business to improve their practices.</li>
-                        </ul>
-                        <li>Strong Password Security</li>
-                        <ul>
-                            <li>Many users reuse passwords across multiple sites.</li>
-                            <li>When passwords are released for one site, many hackers automatically attempt to use the password on other sites to see what other access they can gain.</li>
-                            <li>By using unique passwords for each service, use strong passwords, and turning on multi-factor authentication (MFA) can prevent hackers from using this style of attack.</li>
-                        </ul>
+                        <li>
+                            Avoid Logins Where Possible
+                            <ul>
+                                <li>Most logins allow the site to track internet traffic back to one consistent identity.</li>
+                                <li>Furthermore, most accounts are associated with personally-identifiable information (PII) like email and phone number.</li>
+                                <li>With insufficient anonymization, it would be possible to track activity across accounts via logins.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Use Privacy-Preserving Browsers
+                            <ul>
+                                <li>Even the most technical person might not remember to take all steps necessary to protect themselves every time they open a new browser window.</li>
+                                <li>Using a browser that automatically handles that can help.</li>
+                                <li>While best-known for allowing access to the dark web, I would recommend browsers like <a href="https://www.torproject.org/">TOR</a> to browse the clear web.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Consider a VPN
+                            <ul>
+                                <li>Information about your ISP and IP address can help track you across sites and narrow down your physical location.</li>
+                                <li>Using a VPN can help obfuscate that information.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Avoid Services Selling User Information
+                            <ul>
+                                <li>Certain services are selling user information in various forms.</li>
+                                <li>By not using these services, you reduce the amount of data they have available to sell.</li>
+                                <li>This reduction to their revenue, in large enough amounts, can force the hand of the business to improve their practices.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Strong Password Security
+                            <ul>
+                                <li>Many users reuse passwords across multiple sites.</li>
+                                <li>When passwords are released for one site, many hackers automatically attempt to use the password on other sites to see what other access they can gain.</li>
+                                <li>By using unique passwords for each service, use strong passwords, and turning on multi-factor authentication (MFA) can prevent hackers from using this style of attack.</li>
+                            </ul>
+                        </li>
                     </ul>
                     <h3>Respecting Privacy on the Server Side</h3>
-                    <p></p>
                     <ul>
-                        <li>Differential Privacy</li>
-                        <ul>
-                            <li>Sometimes, it can be valuable to access databases to view statistics around certain fields.</li>
-                            <li>However, malicious queries could be used to figure out information about individual users.</li>
-                            <li>For example, a combination of gender, zip code, and birthday can identify up to <a href="https://aboutmyinfo.org/identity/about">87% of the US population.</a></li>
-                            <li>By adding noise to these queries, it is possible to foil such attempts while still being informative.</li>
-                        </ul>
-                        <li>Federated Learning</li>
-                        <ul>
-                            <li>For security purposes, certain data should not leave a particular device.</li>
-                            <li>However, certain ML models need large amounts of data.</li>
-                            <li>To train while respecting privacy, it would be best to train local models and then merge them together off-device.</li>
-                            <li>This could also be combined with differential privacy to prevent malicious individuals to infer information from models stolen while in transit.</li>
-                        </ul>
-                        <li>Opt-In Defaults</li>
-                        <ul>
-                            <li>Users should be informed about data that is being collected as well as exactly what it is being used for.</li>
-                            <li>This not only helps preserve privacy, but helps build trust with users.</li>
-                        </ul>
-                        <li>Strong Cybersecurity</li>
-                        <ul>
-                            <li>Data leaks can destroy reputation and user trust.</li>
-                            <li>To prevent this, making sure to have robust cybersecurity tools and policies can prevent cyberattacks that would require remediation.</li>
-                        </ul>
+                        <li>
+                            Differential Privacy
+                            <ul>
+                                <li>Sometimes, it can be valuable to access databases to view statistics around certain fields.</li>
+                                <li>However, malicious queries could be used to figure out information about individual users.</li>
+                                <li>For example, a combination of gender, zip code, and birthday can identify up to <a href="https://aboutmyinfo.org/identity/about">87% of the US population.</a></li>
+                                <li>By adding noise to these queries, it is possible to foil such attempts while still being informative.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Federated Learning
+                            <ul>
+                                <li>For security purposes, certain data should not leave a particular device.</li>
+                                <li>However, certain ML models need large amounts of data.</li>
+                                <li>To train while respecting privacy, it would be best to train local models and then merge them together off-device.</li>
+                                <li>This could also be combined with differential privacy to prevent malicious individuals to infer information from models stolen while in transit.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Opt-In Defaults
+                            <ul>
+                                <li>Users should be informed about data that is being collected as well as exactly what it is being used for.</li>
+                                <li>This not only helps preserve privacy, but helps build trust with users.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Strong Cybersecurity
+                            <ul>
+                                <li>Data leaks can destroy reputation and user trust.</li>
+                                <li>To prevent this, making sure to have robust cybersecurity tools and policies can prevent cyberattacks that would require remediation.</li>
+                            </ul>
+                        </li>
                     </ul>
                     <br>
                 </section>
