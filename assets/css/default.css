@@ -2287,6 +2287,19 @@ html.js-animations #contactMe > div.guideInfographic {
 html {
   scroll-behavior: smooth; }
 
+/* Visually-hidden utility: keeps content available to screen readers while
+   removing it from the visual layout. Used for accessible table <caption>s. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
 header {
   width: 100%;
   text-align: center;

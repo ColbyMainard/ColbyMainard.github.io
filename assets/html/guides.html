@@ -78,8 +78,8 @@
         <header>
             <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
-                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav aria-label="Site navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
+                <nav id="primaryNav" aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
                     <a href="./hobbies.html">Hobbies</a>
@@ -88,7 +88,7 @@
                 </nav>
             </div>
             <div class="siteMenu" id="siteMenu">
-                <nav aria-label="Page sections">
+                <nav id="sectionNav" aria-label="Page sections">
                     <a href="#dataEngineeringGuideDiv">Data Engineering</a>
                     <a href="#computerVisionGuideDiv">Computer Vision</a>
                     <a href="#generativeAIGuideDiv">Generative AI</a>

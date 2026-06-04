@@ -154,8 +154,8 @@
         <header>
             <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
-                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav aria-label="Site navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
+                <nav id="primaryNav" aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
                     <a href="./hobbies.html">Hobbies</a>
@@ -164,7 +164,7 @@
                 </nav>
             </div>
             <div class="siteMenu" id="siteMenu">
-                <nav aria-label="Page sections">
+                <nav id="sectionNav" aria-label="Page sections">
                     <a href="#KANDiv">Kolmogorov-Arnold Networks</a>
                     <a href="#cryptocurrencyDiv">Cryptocurrency Basics</a>
                     <a href="#futureOfQuantumDiv">Future of Quantum Computing</a>
@@ -285,13 +285,14 @@
                         Traditional securities include things like stocks and exchange-traded funds (ETFs).
                     </p>
                     <table>
+                        <caption class="visually-hidden">Traditional securities compared with cryptocurrency</caption>
                         <tr>
-                            <th>Category</th>
-                            <th>Traditional Securities</th>
-                            <th>Cryptocurrency</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Traditional Securities</th>
+                            <th scope="col">Cryptocurrency</th>
                         </tr>
                         <tr>
-                            <th>Asset types</th>
+                            <th scope="row">Asset types</th>
                             <td>
                                 This usually represents partial ownership of companies or other assets.
                             </td>
@@ -301,7 +302,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Regulation</th>
+                            <th scope="row">Regulation</th>
                             <td>
                                 Traditional securities are very heavily regulated and often have very strict financial reporting requirements.
                                 Violating these laws can lead to various fines and jail time for those who knowingly violate these regulations.
@@ -312,7 +313,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Volatility</th>
+                            <th scope="row">Volatility</th>
                             <td>
                                 As there is an underlying asset, prices of this security will be related to the underlying value of the asset and sentiment of future performance.
                                 The underlying assets serve as a base that reduces the variability.
@@ -323,7 +324,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Intended Purpose</th>
+                            <th scope="row">Intended Purpose</th>
                             <td>
                                 This is usually used to transfer ownership of publicly-traded entities.
                                 Due to this, it is a good way for publicly traded companies to raise capitals and for investors to gain access to partial business ownership.
@@ -341,9 +342,10 @@
                         While I do not have cryptocurrency holdings, I can recommend several cryptocurrencies that tend to be more stable.
                     </p>
                     <table>
+                        <caption class="visually-hidden">Relatively stable cryptocurrencies and their differentiation</caption>
                         <tr>
-                            <th>Cryptocurrency</th>
-                            <th>Differentiation in the Market</th>
+                            <th scope="col">Cryptocurrency</th>
+                            <th scope="col">Differentiation in the Market</th>
                         </tr>
                         <tr>
                             <td><a href="https://money.usnews.com/investing/articles/the-history-of-bitcoin">Bitcoin</a></td>

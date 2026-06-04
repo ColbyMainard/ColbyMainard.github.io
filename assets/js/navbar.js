@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (toggleBtn) {
         toggleBtn.addEventListener('click', function () {
-            toggleBtn.classList.toggle('active');
+            var isOpen = toggleBtn.classList.toggle('active');
             if (pageNav) pageNav.classList.toggle('open');
             if (siteNav) siteNav.classList.toggle('open');
+            toggleBtn.setAttribute('aria-expanded', String(isOpen));
         });
     }
 

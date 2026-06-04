@@ -77,8 +77,8 @@
         <header>
             <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
-                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav aria-label="Site navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
+                <nav id="primaryNav" aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
                     <a href="./hobbies.html">Hobbies</a>
@@ -87,7 +87,7 @@
                 </nav>
             </div>
             <div class="siteMenu" id="siteMenu">
-                <nav aria-label="Page sections">
+                <nav id="sectionNav" aria-label="Page sections">
                     <a href="#cybersecurityResourcesDiv">Cybersecurity</a>
                     <a href="#artificialIntelligenceResourcesDiv">Artificial Intelligence</a>
                     <a href="#cppResourcesDiv">C/C++</a>
@@ -116,9 +116,10 @@
                     <h2>Cybersecurity</h2>
                     <h3>Certifications</h3>
                     <table>
+                        <caption class="visually-hidden">Cybersecurity certifications</caption>
                         <tr>
-                            <th>Name</th>
-                            <th>Description</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
                         </tr>
                         <tr>
                             <td>Certified Information Systems Security Professional (CISSP)</td>
@@ -143,10 +144,11 @@
                     </table>
                     <h3>Books</h3>
                     <table>
+                        <caption class="visually-hidden">Cybersecurity books</caption>
                         <tr>
-                            <th>Title</th>
-                            <th>Author(s)</th>
-                            <th>Benefits</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author(s)</th>
+                            <th scope="col">Benefits</th>
                         </tr>
                         <tr>
                             <td>Open Source Intelligence Techniques</td>
@@ -699,9 +701,10 @@
                     </table>
                     <h3>Podcasts</h3>
                     <table>
+                        <caption class="visually-hidden">Cybersecurity podcasts</caption>
                         <tr>
-                            <th>Name</th>
-                            <th>Link</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Link</th>
                         </tr>
                         <tr>
                             <td>Hacked</td>
@@ -763,10 +766,11 @@
                     </p>
                     <h3>Books</h3>
                     <table>
+                        <caption class="visually-hidden">Artificial intelligence books</caption>
                         <tr>
-                            <th>Title</th>
-                            <th>Author(s)</th>
-                            <th>Benefits</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author(s)</th>
+                            <th scope="col">Benefits</th>
                         </tr>
                         <tr>
                             <td>Neural Networks and Deep Learning</td>
@@ -1048,9 +1052,10 @@
                     </table>
                     <h3>Podcasts</h3>
                     <table>
+                        <caption class="visually-hidden">Artificial intelligence podcasts</caption>
                         <tr>
-                            <th>Name</th>
-                            <th>Link</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Link</th>
                         </tr>
                         <tr>
                             <td>AI Breakdown</td>
@@ -1069,10 +1074,11 @@
                     <h2>C/C++</h2>
                     <h3>Books</h3>
                     <table>
+                        <caption class="visually-hidden">C and C++ books</caption>
                         <tr>
-                            <th>Title</th>
-                            <th>Author(s)</th>
-                            <th>Benefits</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author(s)</th>
+                            <th scope="col">Benefits</th>
                         </tr>
                         <tr>
                             <td>C++ Primer</td>
@@ -1130,10 +1136,11 @@
                     <h2>Python Resources</h2>
                     <h3>Books</h3>
                     <table>
+                        <caption class="visually-hidden">Python books</caption>
                         <tr>
-                            <th>Title</th>
-                            <th>Author(s)</th>
-                            <th>Benefits</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author(s)</th>
+                            <th scope="col">Benefits</th>
                         </tr>
                         <tr>
                             <td>Learning Python</td>
@@ -1158,10 +1165,11 @@
                 <section class="scriptingResources" id="scriptingResources">
                     <h2>Scripting</h2>
                     <table>
+                        <caption class="visually-hidden">Scripting books</caption>
                         <tr>
-                            <th>Title</th>
-                            <th>Author(s)</th>
-                            <th>Benefits</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author(s)</th>
+                            <th scope="col">Benefits</th>
                         </tr>
                         <tr>
                             <td>Regular Expressions Cookbook</td>
@@ -1297,10 +1305,11 @@
                 <section class="operatingSystemsResources" id="operatingSystemsResources">
                     <h2>Operating Systems</h2>
                     <table>
+                        <caption class="visually-hidden">Operating systems books</caption>
                         <tr>
-                            <th>Title</th>
-                            <th>Author(s)</th>
-                            <th>Benefits</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author(s)</th>
+                            <th scope="col">Benefits</th>
                         </tr>
                         <tr>
                             <td>Operating Systems: Principles and Practice</td>

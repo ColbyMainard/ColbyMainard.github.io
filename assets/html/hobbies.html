@@ -74,8 +74,8 @@
         <header>
             <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
-                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav aria-label="Site navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
+                <nav id="primaryNav" aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
                     <a href="./hobbies.html">Hobbies</a>
@@ -84,7 +84,7 @@
                 </nav>
             </div>
             <div class="siteMenu" id="siteMenu">
-                <nav aria-label="Page sections">
+                <nav id="sectionNav" aria-label="Page sections">
                     <a href="#quantumComputingDiv">Quantum Computing</a>
                     <a href="#photographyDiv">Photography</a>
                     <a href="#dungeonsAndDragonsDiv">Dungeons and Dragons</a>
@@ -225,14 +225,15 @@
                     </ul>
                     <h3>Interesting Podcasts</h3>
                     <table>
+                        <caption class="visually-hidden">Interesting podcasts</caption>
                         <tr>
-                            <th>
+                            <th scope="col">
                                 Podcast Name
                             </th>
-                            <th>
+                            <th scope="col">
                                 Why I like it
                             </th>
-                            <th>
+                            <th scope="col">
                                 Link
                             </th>
                         </tr>

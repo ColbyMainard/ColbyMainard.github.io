@@ -128,8 +128,8 @@
         <header>
             <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
-                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-                <nav aria-label="Site navigation">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
+                <nav id="primaryNav" aria-label="Site navigation">
                     <a href="./index.html">Home</a>
                     <a href="./assets/html/tech_takes.html">Technical Stances</a>
                     <a href="./assets/html/hobbies.html">Hobbies</a>
@@ -138,7 +138,7 @@
                 </nav>
             </div>
             <div class="siteMenu" id="siteMenu">
-                <nav aria-label="Page sections">
+                <nav id="sectionNav" aria-label="Page sections">
                     <a href="#workHistoryDiv">Work History</a>
                     <a href="#educationDiv">Education</a>
                     <a href="#projectsDiv">Projects</a>
@@ -165,7 +165,7 @@
             <div class="workHistoryDiv" id="workHistoryDiv">
                 <section class="workHistory" id="workHistory">
                     <h2>Work History</h2>
-                    <svg width="20%" viewBox="0 0 300 200">
+                    <svg width="20%" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
                         <rect width="250" height="150" x="25" y="25" rx="20" ry="20" fill="#AA7333"/>
                         <rect width="250" height="50" x="25" y="25" rx="20" ry="20" fill="#996222"/>
                         <polyline points="100,25 125,3 150,3 175,3 200,25" style="fill:none;stroke:#AA7333;stroke-width:3" />
@@ -253,7 +253,7 @@
             <div class="educationDiv" id="educationDiv">
                 <section class="education" id="education">
                     <h2>Education</h2>
-                    <svg width="20%" viewBox="0 0 300 200">
+                    <svg width="20%" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
                         <ellipse rx="50" ry="35" cx="150" cy="78" style="fill:black;stroke:white;stroke-width:3" /> 
                         <polygon points="150,3 250,53, 150,103 50,53" style="fill:black;stroke:white;stroke-width:3"/> 
                         <line x1="75" y1="53" x2="75" y2="100" style="stroke:red;stroke-width:3"/>
@@ -274,13 +274,14 @@
                     </ul>
                     <p>Relevant Courses</p>
                     <table>
+                        <caption class="visually-hidden">Relevant graduate coursework</caption>
                         <tr>
-                            <th>Course Name</th>
-                            <th>Course Number</th>
-                            <th>Brief Description</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Course Number</th>
+                            <th scope="col">Brief Description</th>
                         </tr>
                         <tr>
-                            <th>Analysis of Algorithms</th>
+                            <th scope="row">Analysis of Algorithms</th>
                             <td>CSCE 629</td>
                             <td>
                                 <u>Should gain knowledge of the following:</u>
@@ -332,7 +333,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Artificial Intelligence</th>
+                            <th scope="row">Artificial Intelligence</th>
                             <td>CSCE 625</td>
                             <td>
                                 <u>Goals include:</u>
@@ -376,7 +377,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Computational Biology</th>
+                            <th scope="row">Computational Biology</th>
                             <td>CSCE 628</td>
                             <td>
                                 <u>Topics discussed:</u>
@@ -396,7 +397,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Data Mining and Analysis</th>
+                            <th scope="row">Data Mining and Analysis</th>
                             <td>CSCE 676</td>
                             <td>
                                 <u>Course covers:</u>
@@ -439,7 +440,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Deep Learning</th>
+                            <th scope="row">Deep Learning</th>
                             <td>CSCE 636</td>
                             <td>
                                 <u>Topics include:</u>
@@ -451,7 +452,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Machine Learning</th>
+                            <th scope="row">Machine Learning</th>
                             <td>CSCE 633</td>
                             <td>
                                 <u>Goals include:</u> 
@@ -488,7 +489,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Operating Systems</th>
+                            <th scope="row">Operating Systems</th>
                             <td>CSCE 611</td>
                             <td>
                                 <u>Goals include:</u>
@@ -520,7 +521,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Parallel Computing</th>
+                            <th scope="row">Parallel Computing</th>
                             <td>CSCE 735</td>
                             <td>
                                 <u>Goals include:</u>
@@ -532,7 +533,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Software Engineering</th>
+                            <th scope="row">Software Engineering</th>
                             <td>CSCE 606</td>
                             <td>
                                 <u>Topics:</u>
@@ -585,13 +586,14 @@
                     </ul>
                     <p>Relevant Courses</p>
                     <table>
+                        <caption class="visually-hidden">Relevant undergraduate coursework</caption>
                         <tr>
-                            <th>Course Name</th>
-                            <th>Course Number</th>
-                            <th>Description</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Course Number</th>
+                            <th scope="col">Description</th>
                         </tr>
                         <tr>
-                            <th>Artificial Intelligence</th>
+                            <th scope="row">Artificial Intelligence</th>
                             <td>CSCE 420</td>
                             <td>
                                 <u>Topics:</u>
@@ -620,7 +622,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Computer & Network Security</th>
+                            <th scope="row">Computer & Network Security</th>
                             <td>CSCE 465</td>
                             <td>
                                 <u>Topics:</u>
@@ -649,7 +651,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Computer Organization</th>
+                            <th scope="row">Computer Organization</th>
                             <td>CSCE 312</td>
                             <td>
                                 <u>Course Expectations and Topics:</u>
@@ -672,7 +674,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Data Structures & Algorithms</th>
+                            <th scope="row">Data Structures & Algorithms</th>
                             <td>CSCE 221</td>
                             <td>
                                 <u>Learning Objectives:</u>
@@ -699,7 +701,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Design and Analysis of Algorithms</th>
+                            <th scope="row">Design and Analysis of Algorithms</th>
                             <td>CSCE 411</td>
                             <td>
                                 <u>Course Goals:</u>
@@ -732,7 +734,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Discrete Structural Computing</th>
+                            <th scope="row">Discrete Structural Computing</th>
                             <td>CSCE 222</td>
                             <td>
                                 <u>Topics:</u>
@@ -783,7 +785,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Honors Foundations of Engineering I</th>
+                            <th scope="row">Honors Foundations of Engineering I</th>
                             <td>ENGR 111</td>
                             <td>
                                 <u>Course Goals:</u>
@@ -797,7 +799,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Honors Foundations of Engineering II</th>
+                            <th scope="row">Honors Foundations of Engineering II</th>
                             <td>ENGR 112</td>
                             <td>
                                 <u>Course Goals:</u>
@@ -815,7 +817,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Human-Computer Interaction</th>
+                            <th scope="row">Human-Computer Interaction</th>
                             <td>CSCE 436</td>
                             <td>
                                 <u>Learning Outcomes:</u>
@@ -829,7 +831,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Introduction to Computer Systems</th>
+                            <th scope="row">Introduction to Computer Systems</th>
                             <td>CSCE 313</td>
                             <td>
                                 <u>Topics include:</u>
@@ -851,7 +853,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Introduction to Programming Design Concepts</th>
+                            <th scope="row">Introduction to Programming Design Concepts</th>
                             <td>CSCE 121</td>
                             <td>
                                 <u>Topics include:</u>
@@ -872,7 +874,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Linear Algebra</th>
+                            <th scope="row">Linear Algebra</th>
                             <td>MATH 304</td>
                             <td>
                                 <u>Topics:</u>
@@ -891,7 +893,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Parallel Computing</th>
+                            <th scope="row">Parallel Computing</th>
                             <td>CSCE 435</td>
                             <td>
                                 <u>Topics:</u>
@@ -918,7 +920,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Principles of Statistics I</th>
+                            <th scope="row">Principles of Statistics I</th>
                             <td>STAT 211</td>
                             <td>
                                 <u>Learning Objectives:</u>
@@ -941,7 +943,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Programming Studio</th>
+                            <th scope="row">Programming Studio</th>
                             <td>CSCE 315</td>
                             <td>
                                 <u>Objectives:</u>
@@ -976,7 +978,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Software Engineering</th>
+                            <th scope="row">Software Engineering</th>
                             <td>CSCE 431</td>
                             <td>
                                 <u>Topics include:</u>
@@ -994,7 +996,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Engineering Mathematics I (Calculus)</th>
+                            <th scope="row">Engineering Mathematics I (Calculus)</th>
                             <td>MATH 151</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1036,7 +1038,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Principles of Economics</th>
+                            <th scope="row">Principles of Economics</th>
                             <td>ECON 202</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1064,7 +1066,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Forensic Investigations</th>
+                            <th scope="row">Forensic Investigations</th>
                             <td>FIVS 123</td>
                             <td>
                                 <u>Students will be able to:</u>
@@ -1146,7 +1148,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Engineering Mathematics II (Calculus II)</th>
+                            <th scope="row">Engineering Mathematics II (Calculus II)</th>
                             <td>MATH 152</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1181,7 +1183,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Fundamentals of Ecology</th>
+                            <th scope="row">Fundamentals of Ecology</th>
                             <td>RENR 205</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1204,7 +1206,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Engineering Mathematics III (Calculus III)</th>
+                            <th scope="row">Engineering Mathematics III (Calculus III)</th>
                             <td>MATH 251</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1219,7 +1221,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Business Information System Concept</th>
+                            <th scope="row">Business Information System Concept</th>
                             <td>ISTM 209</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1252,7 +1254,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Intro to World Theatre</th>
+                            <th scope="row">Intro to World Theatre</th>
                             <td>THAR 209</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1266,7 +1268,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Technical Business Writing</th>
+                            <th scope="row">Technical Business Writing</th>
                             <td>ENGL 210</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1293,7 +1295,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Newtonian Mechanics for Engineering and Science</th>
+                            <th scope="row">Newtonian Mechanics for Engineering and Science</th>
                             <td>PHYS 218</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1324,7 +1326,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Electricity and Magnetism for Engineering and Science</th>
+                            <th scope="row">Electricity and Magnetism for Engineering and Science</th>
                             <td>PHYS 208</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1363,7 +1365,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Olympics Studies</th>
+                            <th scope="row">Olympics Studies</th>
                             <td>SPMT 220</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1410,7 +1412,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Financial Accounting</th>
+                            <th scope="row">Financial Accounting</th>
                             <td>ACCT 209</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1441,7 +1443,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Business Government and Society</th>
+                            <th scope="row">Business Government and Society</th>
                             <td>MGMT 209</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1461,7 +1463,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Survey of Management Principles</th>
+                            <th scope="row">Survey of Management Principles</th>
                             <td>MGMT 309</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1483,7 +1485,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>State and Local Government</th>
+                            <th scope="row">State and Local Government</th>
                             <td>POLS 207</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1511,7 +1513,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Principles of Marketing</th>
+                            <th scope="row">Principles of Marketing</th>
                             <td>MKTG 409</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1555,7 +1557,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Ethics and Engineering</th>
+                            <th scope="row">Ethics and Engineering</th>
                             <td>ENGR 482</td>
                             <td>
                                 <u>Goals include:</u>
@@ -1570,7 +1572,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Survey of Finance Principles</th>
+                            <th scope="row">Survey of Finance Principles</th>
                             <td>FINC 409</td>
                             <td>
                                 <u>Topics include:</u>
@@ -1598,7 +1600,7 @@
             <div class="projectsDiv" id="projectsDiv">
                 <section class="projects" id="projects">
                     <h2>Projects</h2>
-                    <svg width="20%" viewBox="0 0 300 200">
+                    <svg width="20%" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
                         <rect width="120" height="120" x="100" y="30" rx="20" ry="20" fill="black" />
                         <text x="120" y="90" fill="#ADFF2F" font-size="35">&lt;</text>
                         <text x="150" y="100" fill="#ADFF2F" font-size="35">/</text>
@@ -1646,7 +1648,7 @@
             <div class="technicalSkillsDiv" id="technicalSkillsDiv">
                 <section class="technicalSkills" id="technicalSkills">
                     <h2>Technical Skills</h2>
-                    <svg width="20%" viewBox="0 0 300 200">
+                    <svg width="20%" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
                         <rect width="280" height="180" x="10" y="10" rx="20" ry="20" fill="black"/>
                         <rect width="50" height="50" x="125" y="75" stroke="#ADFF2F" stroke-width="3" fill="black"/>
                         <circle cx="30" cy="26" r="10" stroke="#ADFF2F" stroke-width="3" fill="black"/>
@@ -2081,7 +2083,7 @@
             >
                 <section class="certifications" id="certifications">
                     <h2>Certifications</h2>
-                    <svg width="20%" viewBox="0 0 300 200">
+                    <svg width="20%" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
                         <rect width="280" height="180" x="10" y="10" rx="0" ry="0" fill="black"/>
                         <rect width="240" height="140" x="30" y="30" rx="0" ry="0" fill="#800000"/>
                         <rect width="200" height="100" x="50" y="50" rx="0" ry="0" fill="white"/>
@@ -2110,7 +2112,7 @@
             >
                 <section class="otherSkills" id="otherSkills">
                     <h2>Other Skills</h2>
-                    <svg width="20%" viewBox="0 0 300 200">
+                    <svg width="20%" viewBox="0 0 300 200" aria-hidden="true" focusable="false">
                         <rect width="100" height="180" x="100" y="10" rx="20" ry="20" fill="gray"/>
                         <rect width="80" height="160" x="110" y="20" rx="20" ry="20" fill="white"/>
                         <polyline points="130,15 135,30 165,30 170,15" style="fill:none;stroke:gray;stroke-width:3"/>
