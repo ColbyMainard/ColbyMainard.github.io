@@ -37,7 +37,7 @@ The page currently has 48+ books across six domains (cybersecurity, AI/ML, C/C++
 **Example of the format change:**
 
 | Book | Level | Read After | Topics |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | *C++ Primer* | Beginner | — | Syntax, OOP, STL fundamentals |
 | *Effective Modern C++* | Intermediate | C++ Primer | Move semantics, lambdas, smart pointers |
 | *Mastering the C++17 STL* | Advanced | Effective Modern C++ | Algorithms, containers, performance internals |
@@ -109,7 +109,7 @@ Each of these submissions is a direct backlink opportunity, and the `awesome-*` 
 **Example framework structure:**
 
 | Factor | Weight | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Frame area coverage (% of screen) | High | Logarithmic relationship — doubling size does not double value |
 | Occlusion percentage | High (negative) | >50% occlusion reduces value more than proportionally due to recognition failure |
 | Motion blur severity | Medium (negative) | Affects recognition threshold; frame-by-frame analysis needed |
@@ -181,7 +181,7 @@ The easiest path is to reproduce a table from the original Liu et al. paper with
 **Suggested table format:**
 
 | Benchmark | KAN Parameters | MLP Parameters | KAN Training Time | MLP Training Time | KAN Accuracy | MLP Accuracy |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | [Dataset] | [N] | [N] | [Xs] | [Xs] | [%] | [%] |
 
 ---
@@ -223,7 +223,7 @@ The easiest path is to reproduce a table from the original Liu et al. paper with
 **Example rows:**
 
 | Tool | Subfield | Level | Platform | Cost | Use Case |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | Wireshark | Network | Beginner | Cross-platform | Free | Packet capture and protocol analysis |
 | Nmap | Network | Beginner | Cross-platform | Free | Network discovery and port scanning |
 | Metasploit | Ethical Hacking | Intermediate | Linux/Cross | Free (community) | Exploit development and execution framework |
