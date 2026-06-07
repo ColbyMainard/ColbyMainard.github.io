@@ -129,7 +129,7 @@
           "@type": "Article",
           "headline": "Post-Internet Privacy",
           "datePublished": "2026-01-20",
-          "dateModified": "2026-01-20",
+          "dateModified": "2026-06-06",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "publisher": {"@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv",
@@ -617,7 +617,7 @@
             <div class="PrivacyDiv" id="PrivacyDiv">
                 <section class="Privacy" id="Privacy">
                     <h2>Post-Internet Privacy</h2>
-                    <p><u>Last Updated:</u> January 20, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
+                    <p><u>Last Updated:</u> June 6, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
                     <h3>What has put software against privacy?</h3>
                     <p>
                         From the start, the internet was designed to allow users to democratize information.
@@ -636,6 +636,25 @@
                     <p>
                         Simply monitoring if your information was in a breach is retroactive, and can never completely repair the breach of privacy.
                         Because of this, steps must be taken by both individuals and services.
+                    </p>
+                    <h3>Threat Models</h3>
+                    <p>
+                        [Placeholder — to be written: introduce threat modeling, i.e. why framing privacy advice around specific adversaries (who wants the data, and how they obtain it) is more useful than a generic checklist of precautions.]
+                    </p>
+                    <p>
+                        Who you are will impact which entities will attempt get your data and what lengths they are willing/able to go to.
+                        Advertisers, for example, often don't care about a single person's identity. 
+                        Instead, they care about matching each device to attributes of the user (e.g. age, race, gender, interests) and marketing this data to companies using targeted marketing.
+                        Cybercrime groups tend to target financial data and access.
+                        While many cybercrime groups go after access to companies with deeper pockets, scammers are not above going after individuals.
+                        Nation-state groups, who tend to use the most advanced, focus on political goals like espionage and sabotage of individuals/groups they deem adversarial.
+                    </p>
+                    <p>
+                        The goals of each group will impact the tools and techniques used.
+                        Stumping advertisers is as simple as obfuscating your identity to make it more difficult to track your behavior across the web, as they often have very limited access to your local device.
+                        Cybercrime groups tend to be somewhat more complicated, as they have access to a wider range of tools and ethics are optional. 
+                        The best way to fend off these groups is to make it more costly to hack you than they can expect to make back, often by making it more difficult for them to deploy their tools.
+                        Nation-state groups are the hardest to fend off, as they weigh national security as more important than  
                     </p>
                     <h3>Protecting Privacy on the User Side</h3>
                     <p>
@@ -657,6 +676,7 @@
                                 <li>Even the most technical person might not remember to take all steps necessary to protect themselves every time they open a new browser window.</li>
                                 <li>Using a browser that automatically handles that can help.</li>
                                 <li>While best-known for allowing access to the dark web, I would recommend browsers like <a href="https://www.torproject.org/">TOR</a> to browse the clear web.</li>
+                                <li>For those who believe TOR might be a bit overkill, <a href="https://librewolf.net/">LibreWolf</a> is also a strong choice.</li>
                             </ul>
                         </li>
                         <li>
@@ -680,6 +700,13 @@
                                 <li>Many users reuse passwords across multiple sites.</li>
                                 <li>When passwords are released for one site, many hackers automatically attempt to use the password on other sites to see what other access they can gain.</li>
                                 <li>By using unique passwords for each service, use strong passwords, and turning on multi-factor authentication (MFA) can prevent hackers from using this style of attack.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Install Security Updates
+                            <ul>
+                                <li><a href="https://nikolaroza.com/patch-management-statistics-facts-trends/">Approximately 80%</a> of cyberattacks are caused by unpatched vulnerabilities.</li>
+                                <li>The sooner the patch is applied, the less time hackers have time to exploit known vulnerabilities.</li>
                             </ul>
                         </li>
                     </ul>
