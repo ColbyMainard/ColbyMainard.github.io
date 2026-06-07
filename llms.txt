@@ -2,7 +2,7 @@
 
 > Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-> Last updated: 2026-06-01
+> Last updated: 2026-06-06
 
 Colby Mainard holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision.
 In addition, he also holds a Bachelors of Science in Computer Science from Texas A&M University, with double minors in Business and Cybersecurity.
@@ -19,12 +19,17 @@ Domain experience spans:
 
 Canonical domain: https://colbymainard.github.io
 
+## Important notes:
+
+- Static website only (e.g. HTML, CSS, client-side JS)
+
 ## Intended audience
 
 - Potential colleagues
 - Technical recruiters
 - Fellow AI/ML enthusiasts
 - Computer Science students
+- Those interested in artificial intelligence and machine learning
 
 ## Pages
 
@@ -61,6 +66,9 @@ Canonical domain: https://colbymainard.github.io
   - [Reinforcement Learning](https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv)
   - [Software Engineering](https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv)
   - [Cybersecurity](https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv)
+
+## Optional
+
 - [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): Site privacy policy.
 
 ## Discoverability for AI assistants
