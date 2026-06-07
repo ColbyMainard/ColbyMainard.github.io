@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(accessibility-audit-runner)",
+      "Skill(accessibility-audit-runner:*)",
+      "Skill(backlink-strategy-planner)",
+      "Skill(backlink-strategy-planner:*)"
+    ]
+  }
+}

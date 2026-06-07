@@ -34,38 +34,10 @@ Canonical domain: https://colbymainard.github.io
 ## Pages
 
 - [Home / Professional Background](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, contact info.
-  - [Work History](https://colbymainard.github.io/index.html#workHistoryDiv)
-  - [Education](https://colbymainard.github.io/index.html#educationDiv)
-  - [Projects](https://colbymainard.github.io/index.html#projectsDiv)
-  - [Certifications](https://colbymainard.github.io/index.html#certificationsDiv)
-  - [Technical Skills](https://colbymainard.github.io/index.html#technicalSkillsDiv)
 - [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html): Long-form opinion pieces on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.
-  - [Kolmogorov-Arnold Networks](https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv)
-  - [Staying Safe with Cryptocurrency](https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv)
-  - [Future of Quantum Computing](https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv)
-  - [Artificial General Intelligence](https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv)
-  - [Post-Internet Privacy](https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv)
-  - [Product Placement in Sports Marketing](https://colbymainard.github.io/assets/html/tech_takes.html#productPlacementDiv)
 - [Hobbies](https://colbymainard.github.io/assets/html/hobbies.html): Photography, quantum computing self-study, Dungeons & Dragons, history.
-  - [Quantum Computing](https://colbymainard.github.io/assets/html/hobbies.html#quantumComputingDiv)
-  - [Photography](https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv)
-  - [Dungeons and Dragons](https://colbymainard.github.io/assets/html/hobbies.html#dungeonsAndDragonsDiv)
-  - [History](https://colbymainard.github.io/assets/html/hobbies.html#historyDiv)
 - [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html): Curated reading list and resources covering cybersecurity, AI/ML, C/C++, Python, scripting, and operating systems.
-  - [Cybersecurity](https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv)
-  - [Artificial Intelligence](https://colbymainard.github.io/assets/html/tech_resources.html#artificialIntelligenceResourcesDiv)
-  - [C/C++](https://colbymainard.github.io/assets/html/tech_resources.html#cppResourcesDiv)
-  - [Python](https://colbymainard.github.io/assets/html/tech_resources.html#pythonResourcesDiv)
-  - [Scripting](https://colbymainard.github.io/assets/html/tech_resources.html#scriptingResourcesDiv)
-  - [Operating Systems](https://colbymainard.github.io/assets/html/tech_resources.html#operatingSystemsResourcesDiv)
 - [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides covering data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.
-  - [Data Engineering](https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv)
-  - [Computer Vision](https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv)
-  - [Generative AI](https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv)
-  - [Natural Language Processing](https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv)
-  - [Reinforcement Learning](https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv)
-  - [Software Engineering](https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv)
-  - [Cybersecurity](https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv)
 
 ## Optional
 
