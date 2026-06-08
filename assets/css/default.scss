@@ -50,24 +50,11 @@ $emerald_efficiency_5: #e0f7fa;
     border: 0;
 }
 
-/* Skip-to-content link (WCAG 2.4.1 Bypass Blocks): off-screen until focused,
-   then pinned to the top-left so keyboard users can bypass the header nav.
-   Positioned (not display:none) so it stays in the tab order. */
+/* Skip-to-content link (WCAG 2.4.1 Bypass Blocks): exposed to screen readers only.
+   Uses the visually-hidden technique so it stays in the accessibility tree and the
+   tab order, but never renders visually — not even on keyboard focus. */
 .skip-link {
-    position: absolute;
-    top: -48px;
-    left: 8px;
-    z-index: 1000; /* above sticky header (100) and reading-progress bar */
-    padding: 8px 16px;
-    background-color: $emerald_efficiency_1;
-    color: $emerald_efficiency_5;
-    text-decoration: none;
-    font-family: "Courier New", monospace;
-    border-radius: 0 0 6px 6px;
-
-    &:focus {
-        top: 0;
-    }
+    @extend .visually-hidden;
 }
 
 /* <main> is focused programmatically by the skip link; don't paint a ring. */

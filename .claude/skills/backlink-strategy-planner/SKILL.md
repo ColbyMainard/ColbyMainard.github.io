@@ -3,7 +3,7 @@ name: "backlink-strategy-planner"
 description: |
   A backlink strategy planning guide. This tool analyzes the content of HTML
   Triggers on: backlink strategy planner, backlink strategy generator
-  Trigger with phrases like "accessibility audit runner", "accessibility runner", "accessibility".
+  Use when analyzing or auditing backlink strategies and increasing visibility. Trigger with phrases like "backlink strategy planner", "backlink strategy", "backlink planning".
 allowed-tools: "Read"
 version: 1.0.0
 author: "Colby Mainard <colby.mainard@proton.me>"
@@ -12,7 +12,7 @@ compatible-with: claude-code
 
 # Backlink Strategy Planner
 
-Based on [50 Proven Backlink Building Strategies for 2025: Complete Guide with Statistics](https://blog.ranklogs.com/1190/backlink-building-strategies/)
+Based on [50 Proven Backlink Building Strategies for 2025: Complete Guide with Statistics](https://blog.ranklogs.com/1190/backlink-building-strategies/), [15 Effective Backlinking Strategies Any Beginner Can Use](https://abun.com/15-effective-backlinking-strategies-any-beginner-can-use), and [How to Get Backlinks in 2026: 10 Tactics That Actually Work](https://www.semrush.com/blog/how-to-get-backlinks/).
 
 ## Goal
 
@@ -131,3 +131,36 @@ If individuals post content that revolves around important news or unique insigh
 ### Developing shareable tools
 
 Creating shareable tools and resources is also a great way to build backlinks, as it encourages users to share them if they consider those tools helpful. Moreover, these tools also attract mentions from other sites. Individuals must follow some ways and strategies to create content that people want to share.
+
+## Requirements
+
+- Any outreach should be done direct to the community of interest - assume journalists are unnecessary 3rd parties.
+- Content can be promoted via both community outreach and creating content that naturally attracts backlinks.
+- Prioritize getting links from sites that are authoritative, relevant, unique, and natural.
+
+### Priorities
+
+- *Relevance*: The source and page are tightly aligned with your topic
+- *Trust*: Real editorial standards, real audience, low spam footprint 
+- *Context*: The mention explains what you do and why you matter, not just a naked URL 
+- *Co-citation proximity*: You appear near authoritative brands and concepts in your space (when your brand shows up alongside trusted names that AI systems already recognize, those systems start to treat you as a peer) 
+- *Persistence*: The page stays live, updated, and continues to get crawled and cited 
+- *Retrievability*: The mention exists in formats AI systems can reliably extract: body copy, resource lists, podcast show notes and transcripts, YouTube descriptions, and newsletter archives
+
+## Frequently Asked Questions
+
+### What is the importance of backlinking in SEO?
+
+Backlinking helps search engines understand that your website is trustworthy and authoritative. High-quality backlinks can improve your site’s ranking on search engine results pages.
+
+### How can beginners find websites for backlinking?
+
+Beginners can start by reaching out to blogs and websites in their niche, engaging in guest blogging, and using tools like Google Search to find backlink opportunities.
+
+### What types of backlinks should I avoid?
+
+Avoid low-quality or spammy backlinks, like those from link farms or unrelated sites. These can harm your site’s reputation and ranking.
+
+### Is it better to have more backlinks or higher quality backlinks?
+
+It’s better to have high-quality backlinks from reputable sources. Quantity is less important than the relevance and authority of the linking site.
