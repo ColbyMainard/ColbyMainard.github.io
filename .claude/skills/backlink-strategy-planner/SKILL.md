@@ -137,6 +137,7 @@ Creating shareable tools and resources is also a great way to build backlinks, a
 - Any outreach should be done direct to the community of interest - assume journalists are unnecessary 3rd parties.
 - Content can be promoted via both community outreach and creating content that naturally attracts backlinks.
 - Prioritize getting links from sites that are authoritative, relevant, unique, and natural.
+- Avoid self-promotion via social media posts. All social media platforms that allow that are saturated.
 
 ### Priorities
 
@@ -149,10 +150,6 @@ Creating shareable tools and resources is also a great way to build backlinks, a
 
 ## Frequently Asked Questions
 
-### What is the importance of backlinking in SEO?
-
-Backlinking helps search engines understand that your website is trustworthy and authoritative. High-quality backlinks can improve your site’s ranking on search engine results pages.
-
 ### How can beginners find websites for backlinking?
 
 Beginners can start by reaching out to blogs and websites in their niche, engaging in guest blogging, and using tools like Google Search to find backlink opportunities.
@@ -164,3 +161,16 @@ Avoid low-quality or spammy backlinks, like those from link farms or unrelated s
 ### Is it better to have more backlinks or higher quality backlinks?
 
 It’s better to have high-quality backlinks from reputable sources. Quantity is less important than the relevance and authority of the linking site.
+
+## Output
+
+For each part of the proposed plan, please make sure each part has all of the below components.
+
+| Component | Expectations |
+| --------- | ------------ |
+| Pros      | Detailed reasoning behind why this part of the plan will have a meaningful impact |
+| Cons      | Detailed analysis of potential pitfalls that would make this portion fail |
+| Internal Code/Content Steps | Exact steps that should be taken to get backlinks |
+| External Reach-out Steps | Detailed plans regarding which sites to reach out to |
+| Expected Success Rate | How much effort is expected to implement the strategy |
+| Expected Effort Level | How much time and effort would be required to implement the strategy |

@@ -50,13 +50,6 @@ $emerald_efficiency_5: #e0f7fa;
     border: 0;
 }
 
-/* Skip-to-content link (WCAG 2.4.1 Bypass Blocks): exposed to screen readers only.
-   Uses the visually-hidden technique so it stays in the accessibility tree and the
-   tab order, but never renders visually — not even on keyboard focus. */
-.skip-link {
-    @extend .visually-hidden;
-}
-
 /* <main> is focused programmatically by the skip link; don't paint a ring. */
 main.main:focus {
     outline: none;
