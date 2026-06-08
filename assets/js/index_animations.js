@@ -11,6 +11,15 @@
 (function () {
     "use strict";
 
+    // Respect the user's reduced-motion preference: skip all entrance
+    // animations entirely. Because the opacity-hiding CSS is gated on the
+    // .js-animations class (added just below), NOT adding it leaves content
+    // in its natural, fully-visible state.
+    if (window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
     // Mark body so CSS can hide elements only when JS is active
     document.documentElement.classList.add("js-animations");
 

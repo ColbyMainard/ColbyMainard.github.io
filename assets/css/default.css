@@ -412,6 +412,77 @@ html.js-animations #contactMe > a,
 html.js-animations #contactMe > address {
   opacity: 0; }
 
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+  html.js-animations #workHistory > h1,
+  html.js-animations #workHistory > h2,
+  html.js-animations #workHistory > h3,
+  html.js-animations #workHistory > p,
+  html.js-animations #workHistory > ul,
+  html.js-animations #workHistory > svg,
+  html.js-animations #workHistory > table,
+  html.js-animations #workHistory > a,
+  html.js-animations #workHistory > address,
+  html.js-animations #education > h1,
+  html.js-animations #education > h2,
+  html.js-animations #education > h3,
+  html.js-animations #education > p,
+  html.js-animations #education > ul,
+  html.js-animations #education > svg,
+  html.js-animations #education > table,
+  html.js-animations #education > a,
+  html.js-animations #education > address,
+  html.js-animations #projects > h1,
+  html.js-animations #projects > h2,
+  html.js-animations #projects > h3,
+  html.js-animations #projects > p,
+  html.js-animations #projects > ul,
+  html.js-animations #projects > svg,
+  html.js-animations #projects > table,
+  html.js-animations #projects > a,
+  html.js-animations #projects > address,
+  html.js-animations #technicalSkills > h1,
+  html.js-animations #technicalSkills > h2,
+  html.js-animations #technicalSkills > h3,
+  html.js-animations #technicalSkills > p,
+  html.js-animations #technicalSkills > ul,
+  html.js-animations #technicalSkills > svg,
+  html.js-animations #technicalSkills > table,
+  html.js-animations #technicalSkills > a,
+  html.js-animations #technicalSkills > address,
+  html.js-animations #certifications > h1,
+  html.js-animations #certifications > h2,
+  html.js-animations #certifications > h3,
+  html.js-animations #certifications > p,
+  html.js-animations #certifications > ul,
+  html.js-animations #certifications > svg,
+  html.js-animations #certifications > table,
+  html.js-animations #certifications > a,
+  html.js-animations #certifications > address,
+  html.js-animations #otherSkills > h1,
+  html.js-animations #otherSkills > h2,
+  html.js-animations #otherSkills > h3,
+  html.js-animations #otherSkills > p,
+  html.js-animations #otherSkills > ul,
+  html.js-animations #otherSkills > svg,
+  html.js-animations #otherSkills > table,
+  html.js-animations #otherSkills > a,
+  html.js-animations #otherSkills > address,
+  html.js-animations #contactMe > h1,
+  html.js-animations #contactMe > h2,
+  html.js-animations #contactMe > h3,
+  html.js-animations #contactMe > p,
+  html.js-animations #contactMe > ul,
+  html.js-animations #contactMe > svg,
+  html.js-animations #contactMe > table,
+  html.js-animations #contactMe > a,
+  html.js-animations #contactMe > address {
+    opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 #quantumComputing {
@@ -706,6 +777,74 @@ html.js-animations #contactMe > address,
 html.js-animations #contactMe > iframe {
   opacity: 0; }
 
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > iframe,
+  html.js-animations #quantumComputing > h1,
+  html.js-animations #quantumComputing > h2,
+  html.js-animations #quantumComputing > h3,
+  html.js-animations #quantumComputing > p,
+  html.js-animations #quantumComputing > ul,
+  html.js-animations #quantumComputing > svg,
+  html.js-animations #quantumComputing > img,
+  html.js-animations #quantumComputing > table,
+  html.js-animations #quantumComputing > blockquote,
+  html.js-animations #quantumComputing > a,
+  html.js-animations #quantumComputing > address,
+  html.js-animations #quantumComputing > iframe,
+  html.js-animations #photography > h1,
+  html.js-animations #photography > h2,
+  html.js-animations #photography > h3,
+  html.js-animations #photography > p,
+  html.js-animations #photography > ul,
+  html.js-animations #photography > svg,
+  html.js-animations #photography > img,
+  html.js-animations #photography > table,
+  html.js-animations #photography > blockquote,
+  html.js-animations #photography > a,
+  html.js-animations #photography > address,
+  html.js-animations #photography > iframe,
+  html.js-animations #dungeonsAndDragons > h1,
+  html.js-animations #dungeonsAndDragons > h2,
+  html.js-animations #dungeonsAndDragons > h3,
+  html.js-animations #dungeonsAndDragons > p,
+  html.js-animations #dungeonsAndDragons > ul,
+  html.js-animations #dungeonsAndDragons > svg,
+  html.js-animations #dungeonsAndDragons > img,
+  html.js-animations #dungeonsAndDragons > table,
+  html.js-animations #dungeonsAndDragons > blockquote,
+  html.js-animations #dungeonsAndDragons > a,
+  html.js-animations #dungeonsAndDragons > address,
+  html.js-animations #dungeonsAndDragons > iframe,
+  html.js-animations #history > h1,
+  html.js-animations #history > h2,
+  html.js-animations #history > h3,
+  html.js-animations #history > p,
+  html.js-animations #history > ul,
+  html.js-animations #history > svg,
+  html.js-animations #history > img,
+  html.js-animations #history > table,
+  html.js-animations #history > blockquote,
+  html.js-animations #history > a,
+  html.js-animations #history > address,
+  html.js-animations #history > iframe,
+  html.js-animations #contactMe > h1,
+  html.js-animations #contactMe > h2,
+  html.js-animations #contactMe > h3,
+  html.js-animations #contactMe > p,
+  html.js-animations #contactMe > ul,
+  html.js-animations #contactMe > svg,
+  html.js-animations #contactMe > img,
+  html.js-animations #contactMe > table,
+  html.js-animations #contactMe > blockquote,
+  html.js-animations #contactMe > a,
+  html.js-animations #contactMe > address,
+  html.js-animations #contactMe > iframe {
+    opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
 #KAN {
@@ -1226,6 +1365,77 @@ html.js-animations #contactMe > a,
 html.js-animations #contactMe > address {
   opacity: 0; }
 
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+  html.js-animations #KAN > h1,
+  html.js-animations #KAN > h2,
+  html.js-animations #KAN > h3,
+  html.js-animations #KAN > p,
+  html.js-animations #KAN > ul,
+  html.js-animations #KAN > dl,
+  html.js-animations #KAN > table,
+  html.js-animations #KAN > a,
+  html.js-animations #KAN > address,
+  html.js-animations #Cryptocurrency > h1,
+  html.js-animations #Cryptocurrency > h2,
+  html.js-animations #Cryptocurrency > h3,
+  html.js-animations #Cryptocurrency > p,
+  html.js-animations #Cryptocurrency > ul,
+  html.js-animations #Cryptocurrency > dl,
+  html.js-animations #Cryptocurrency > table,
+  html.js-animations #Cryptocurrency > a,
+  html.js-animations #Cryptocurrency > address,
+  html.js-animations #FutureOfQuantum > h1,
+  html.js-animations #FutureOfQuantum > h2,
+  html.js-animations #FutureOfQuantum > h3,
+  html.js-animations #FutureOfQuantum > p,
+  html.js-animations #FutureOfQuantum > ul,
+  html.js-animations #FutureOfQuantum > dl,
+  html.js-animations #FutureOfQuantum > table,
+  html.js-animations #FutureOfQuantum > a,
+  html.js-animations #FutureOfQuantum > address,
+  html.js-animations #AGI > h1,
+  html.js-animations #AGI > h2,
+  html.js-animations #AGI > h3,
+  html.js-animations #AGI > p,
+  html.js-animations #AGI > ul,
+  html.js-animations #AGI > dl,
+  html.js-animations #AGI > table,
+  html.js-animations #AGI > a,
+  html.js-animations #AGI > address,
+  html.js-animations #Privacy > h1,
+  html.js-animations #Privacy > h2,
+  html.js-animations #Privacy > h3,
+  html.js-animations #Privacy > p,
+  html.js-animations #Privacy > ul,
+  html.js-animations #Privacy > dl,
+  html.js-animations #Privacy > table,
+  html.js-animations #Privacy > a,
+  html.js-animations #Privacy > address,
+  html.js-animations #ProductPlacement > h1,
+  html.js-animations #ProductPlacement > h2,
+  html.js-animations #ProductPlacement > h3,
+  html.js-animations #ProductPlacement > p,
+  html.js-animations #ProductPlacement > ul,
+  html.js-animations #ProductPlacement > dl,
+  html.js-animations #ProductPlacement > table,
+  html.js-animations #ProductPlacement > a,
+  html.js-animations #ProductPlacement > address,
+  html.js-animations #contactMe > h1,
+  html.js-animations #contactMe > h2,
+  html.js-animations #contactMe > h3,
+  html.js-animations #contactMe > p,
+  html.js-animations #contactMe > ul,
+  html.js-animations #contactMe > dl,
+  html.js-animations #contactMe > table,
+  html.js-animations #contactMe > a,
+  html.js-animations #contactMe > address {
+    opacity: 1 !important; } }
 /* Reading-time pill rendered next to "Last Updated:" */
 .readingTime {
   font-style: italic;
@@ -1785,6 +1995,84 @@ html.js-animations #contactMe > a,
 html.js-animations #contactMe > address {
   opacity: 0; }
 
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address,
+  html.js-animations #cybersecurityResources > h1,
+  html.js-animations #cybersecurityResources > h2,
+  html.js-animations #cybersecurityResources > h3,
+  html.js-animations #cybersecurityResources > p,
+  html.js-animations #cybersecurityResources > ul,
+  html.js-animations #cybersecurityResources > svg,
+  html.js-animations #cybersecurityResources > table,
+  html.js-animations #cybersecurityResources > blockquote,
+  html.js-animations #cybersecurityResources > a,
+  html.js-animations #cybersecurityResources > address,
+  html.js-animations #artificialIntelligenceResources > h1,
+  html.js-animations #artificialIntelligenceResources > h2,
+  html.js-animations #artificialIntelligenceResources > h3,
+  html.js-animations #artificialIntelligenceResources > p,
+  html.js-animations #artificialIntelligenceResources > ul,
+  html.js-animations #artificialIntelligenceResources > svg,
+  html.js-animations #artificialIntelligenceResources > table,
+  html.js-animations #artificialIntelligenceResources > blockquote,
+  html.js-animations #artificialIntelligenceResources > a,
+  html.js-animations #artificialIntelligenceResources > address,
+  html.js-animations #cppResources > h1,
+  html.js-animations #cppResources > h2,
+  html.js-animations #cppResources > h3,
+  html.js-animations #cppResources > p,
+  html.js-animations #cppResources > ul,
+  html.js-animations #cppResources > svg,
+  html.js-animations #cppResources > table,
+  html.js-animations #cppResources > blockquote,
+  html.js-animations #cppResources > a,
+  html.js-animations #cppResources > address,
+  html.js-animations #pythonResources > h1,
+  html.js-animations #pythonResources > h2,
+  html.js-animations #pythonResources > h3,
+  html.js-animations #pythonResources > p,
+  html.js-animations #pythonResources > ul,
+  html.js-animations #pythonResources > svg,
+  html.js-animations #pythonResources > table,
+  html.js-animations #pythonResources > blockquote,
+  html.js-animations #pythonResources > a,
+  html.js-animations #pythonResources > address,
+  html.js-animations #scriptingResources > h1,
+  html.js-animations #scriptingResources > h2,
+  html.js-animations #scriptingResources > h3,
+  html.js-animations #scriptingResources > p,
+  html.js-animations #scriptingResources > ul,
+  html.js-animations #scriptingResources > svg,
+  html.js-animations #scriptingResources > table,
+  html.js-animations #scriptingResources > blockquote,
+  html.js-animations #scriptingResources > a,
+  html.js-animations #scriptingResources > address,
+  html.js-animations #operatingSystemsResources > h1,
+  html.js-animations #operatingSystemsResources > h2,
+  html.js-animations #operatingSystemsResources > h3,
+  html.js-animations #operatingSystemsResources > p,
+  html.js-animations #operatingSystemsResources > ul,
+  html.js-animations #operatingSystemsResources > svg,
+  html.js-animations #operatingSystemsResources > table,
+  html.js-animations #operatingSystemsResources > blockquote,
+  html.js-animations #operatingSystemsResources > a,
+  html.js-animations #operatingSystemsResources > address,
+  html.js-animations #contactMe > h1,
+  html.js-animations #contactMe > h2,
+  html.js-animations #contactMe > h3,
+  html.js-animations #contactMe > p,
+  html.js-animations #contactMe > ul,
+  html.js-animations #contactMe > svg,
+  html.js-animations #contactMe > table,
+  html.js-animations #contactMe > blockquote,
+  html.js-animations #contactMe > a,
+  html.js-animations #contactMe > address {
+    opacity: 1 !important; } }
 /* Professional Blue color palette from https://colormagic.app/palette/69f2a139972c6bd335822170 */
 #analyticsDiv {
   margin: auto;
@@ -2279,14 +2567,110 @@ html.js-animations #contactMe > address,
 html.js-animations #contactMe > div.guideInfographic {
   opacity: 0; }
 
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > div.guideInfographic,
+  html.js-animations #dataEngineeringGuide > h1,
+  html.js-animations #dataEngineeringGuide > h2,
+  html.js-animations #dataEngineeringGuide > h3,
+  html.js-animations #dataEngineeringGuide > p,
+  html.js-animations #dataEngineeringGuide > ul,
+  html.js-animations #dataEngineeringGuide > svg,
+  html.js-animations #dataEngineeringGuide > table,
+  html.js-animations #dataEngineeringGuide > blockquote,
+  html.js-animations #dataEngineeringGuide > a,
+  html.js-animations #dataEngineeringGuide > address,
+  html.js-animations #dataEngineeringGuide > div.guideInfographic,
+  html.js-animations #computerVisionGuide > h1,
+  html.js-animations #computerVisionGuide > h2,
+  html.js-animations #computerVisionGuide > h3,
+  html.js-animations #computerVisionGuide > p,
+  html.js-animations #computerVisionGuide > ul,
+  html.js-animations #computerVisionGuide > svg,
+  html.js-animations #computerVisionGuide > table,
+  html.js-animations #computerVisionGuide > blockquote,
+  html.js-animations #computerVisionGuide > a,
+  html.js-animations #computerVisionGuide > address,
+  html.js-animations #computerVisionGuide > div.guideInfographic,
+  html.js-animations #generativeAIGuide > h1,
+  html.js-animations #generativeAIGuide > h2,
+  html.js-animations #generativeAIGuide > h3,
+  html.js-animations #generativeAIGuide > p,
+  html.js-animations #generativeAIGuide > ul,
+  html.js-animations #generativeAIGuide > svg,
+  html.js-animations #generativeAIGuide > table,
+  html.js-animations #generativeAIGuide > blockquote,
+  html.js-animations #generativeAIGuide > a,
+  html.js-animations #generativeAIGuide > address,
+  html.js-animations #generativeAIGuide > div.guideInfographic,
+  html.js-animations #nlpGuide > h1,
+  html.js-animations #nlpGuide > h2,
+  html.js-animations #nlpGuide > h3,
+  html.js-animations #nlpGuide > p,
+  html.js-animations #nlpGuide > ul,
+  html.js-animations #nlpGuide > svg,
+  html.js-animations #nlpGuide > table,
+  html.js-animations #nlpGuide > blockquote,
+  html.js-animations #nlpGuide > a,
+  html.js-animations #nlpGuide > address,
+  html.js-animations #nlpGuide > div.guideInfographic,
+  html.js-animations #reinforcementLearningGuide > h1,
+  html.js-animations #reinforcementLearningGuide > h2,
+  html.js-animations #reinforcementLearningGuide > h3,
+  html.js-animations #reinforcementLearningGuide > p,
+  html.js-animations #reinforcementLearningGuide > ul,
+  html.js-animations #reinforcementLearningGuide > svg,
+  html.js-animations #reinforcementLearningGuide > table,
+  html.js-animations #reinforcementLearningGuide > blockquote,
+  html.js-animations #reinforcementLearningGuide > a,
+  html.js-animations #reinforcementLearningGuide > address,
+  html.js-animations #reinforcementLearningGuide > div.guideInfographic,
+  html.js-animations #softwareEngineeringGuide > h1,
+  html.js-animations #softwareEngineeringGuide > h2,
+  html.js-animations #softwareEngineeringGuide > h3,
+  html.js-animations #softwareEngineeringGuide > p,
+  html.js-animations #softwareEngineeringGuide > ul,
+  html.js-animations #softwareEngineeringGuide > svg,
+  html.js-animations #softwareEngineeringGuide > table,
+  html.js-animations #softwareEngineeringGuide > blockquote,
+  html.js-animations #softwareEngineeringGuide > a,
+  html.js-animations #softwareEngineeringGuide > address,
+  html.js-animations #softwareEngineeringGuide > div.guideInfographic,
+  html.js-animations #cybersecurityGuide > h1,
+  html.js-animations #cybersecurityGuide > h2,
+  html.js-animations #cybersecurityGuide > h3,
+  html.js-animations #cybersecurityGuide > p,
+  html.js-animations #cybersecurityGuide > ul,
+  html.js-animations #cybersecurityGuide > svg,
+  html.js-animations #cybersecurityGuide > table,
+  html.js-animations #cybersecurityGuide > blockquote,
+  html.js-animations #cybersecurityGuide > a,
+  html.js-animations #cybersecurityGuide > address,
+  html.js-animations #cybersecurityGuide > div.guideInfographic,
+  html.js-animations #contactMe > h1,
+  html.js-animations #contactMe > h2,
+  html.js-animations #contactMe > h3,
+  html.js-animations #contactMe > p,
+  html.js-animations #contactMe > ul,
+  html.js-animations #contactMe > svg,
+  html.js-animations #contactMe > table,
+  html.js-animations #contactMe > blockquote,
+  html.js-animations #contactMe > a,
+  html.js-animations #contactMe > address,
+  html.js-animations #contactMe > div.guideInfographic {
+    opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
 /* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 /* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
-html {
-  scroll-behavior: smooth; }
-
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth; } }
 /* Visually-hidden utility: keeps content available to screen readers while
    removing it from the visual layout. Used for accessible table <caption>s. */
 .visually-hidden {
@@ -2299,6 +2683,28 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0; }
+
+/* Skip-to-content link (WCAG 2.4.1 Bypass Blocks): off-screen until focused,
+   then pinned to the top-left so keyboard users can bypass the header nav.
+   Positioned (not display:none) so it stays in the tab order. */
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 8px;
+  z-index: 1000;
+  /* above sticky header (100) and reading-progress bar */
+  padding: 8px 16px;
+  background-color: #007a5e;
+  color: #e0f7fa;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  border-radius: 0 0 6px 6px; }
+  .skip-link:focus {
+    top: 0; }
+
+/* <main> is focused programmatically by the skip link; don't paint a ring. */
+main.main:focus {
+  outline: none; }
 
 header {
   width: 100%;

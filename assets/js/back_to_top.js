@@ -11,6 +11,12 @@
     var button;
     var visible = false;
 
+    // Re-checked on each use so toggling the OS setting mid-session is honored.
+    function prefersReducedMotion() {
+        return window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+
     function createButton() {
         var btn = document.createElement("button");
         btn.type = "button";
@@ -24,6 +30,10 @@
     }
 
     function scrollToTop() {
+        if (prefersReducedMotion()) {
+            window.scrollTo(0, 0);
+            return;
+        }
         if (typeof window.anime !== "undefined" && window.anime.animate) {
             var scroller = { y: window.pageYOffset || document.documentElement.scrollTop };
             window.anime.animate(scroller, {
@@ -42,7 +52,7 @@
     function setVisible(next) {
         if (next === visible) return;
         visible = next;
-        if (typeof window.anime !== "undefined" && window.anime.animate) {
+        if (!prefersReducedMotion() && typeof window.anime !== "undefined" && window.anime.animate) {
             window.anime.animate(button, {
                 opacity: next ? [parseFloat(getComputedStyle(button).opacity) || 0, 1] : [parseFloat(getComputedStyle(button).opacity) || 1, 0],
                 translateY: next ? ["20px", "0px"] : ["0px", "20px"],

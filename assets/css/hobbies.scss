@@ -322,3 +322,23 @@ html.js-animations {
         }
     }
 }
+
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+    html.js-animations {
+        #introSectionDiv,
+        #quantumComputing,
+        #photography,
+        #dungeonsAndDragons,
+        #history,
+        #contactMe {
+            > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address, > iframe {
+                opacity: 1 !important;
+            }
+        }
+    }
+}
