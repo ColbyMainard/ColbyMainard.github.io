@@ -75,3 +75,16 @@ Current topics include:
     - Artificial General Intelligence
     - Privacy
     - Product Placement in Sports Marketing
+
+## Architecture
+
+- `/assets/css`: CSS and Sassy CSS files allowing for layout specification to webpages.
+- `/assets/html`: Contains all non-index HTML files.
+- `/assets/images`: Images that will be displayed in some of the webpages.
+- `/assets/js`: Custom JavaScript files.
+- `/assets/markdown/`: Markdown files for various projects and reports on progress.
+- `/assets/other`: Files that are useful for the website but do not fit into any other category
+- `/index.html`": The landing page for the website.
+- `/manifest.json`: A manifest in JSON format to describe the site bots and search engine crawlers.
+- `/robots.txt`: Specifying a web scraping policy to bots.
+- `/sitemap.xml`: A mapping of pages and last update time.

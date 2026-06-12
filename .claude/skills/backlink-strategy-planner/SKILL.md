@@ -1,7 +1,7 @@
 ---
 name: "backlink-strategy-planner"
 description: |
-  A backlink strategy planning guide. This tool analyzes the content of HTML
+  A backlink strategy planning guide. This tool analyzes the content of HTML and generates custom strategies for improving backlinks.
   Triggers on: backlink strategy planner, backlink strategy generator
   Use when analyzing or auditing backlink strategies and increasing visibility. Trigger with phrases like "backlink strategy planner", "backlink strategy", "backlink planning".
 allowed-tools: "Read"
@@ -17,6 +17,25 @@ Based on [50 Proven Backlink Building Strategies for 2025: Complete Guide with S
 ## Goal
 
 Recommend a customized backlink strategy based on both the current content of HTML files and the strategies that each page could look to incorporate. Each strategy selected should blend seamlessly with existing content.
+
+## Requirements
+
+- Any outreach should be done direct to the community of interest - assume journalists are unnecessary 3rd parties.
+- Content can be promoted via both community outreach and creating content that naturally attracts backlinks.
+- Prioritize getting links from sites that are authoritative, relevant, unique, and natural.
+- Avoid self-promotion via social media posts. Assume all social media platforms (Reddit, FaceBook, Twitter, Instagram) that allow self-promotion are over-saturated.
+- Outreach plans should include links to the communities/podcasts/etc mentioned in the plan.
+- Suggestions should focus on modifying/optimizing existing content first. 
+- Only suggest new content when there is a genuine gap.
+
+### Priorities
+
+- *Relevance*: The source and page are tightly aligned with your topic
+- *Trust*: Real editorial standards, real audience, low spam footprint
+- *Context*: The mention explains what you do and why you matter, not just a naked URL
+- *Co-citation proximity*: You appear near authoritative brands and concepts in your space (when your brand shows up alongside trusted names that AI systems already recognize, those systems start to treat you as a peer)
+- *Persistence*: The page stays live, updated, and continues to get crawled and cited
+- *Retrievability*: The mention exists in formats AI systems can reliably extract: body copy, resource lists, podcast show notes and transcripts, YouTube descriptions, and newsletter archives
 
 ## Strategies
 
@@ -56,14 +75,6 @@ One can comment on trending topics and get backlinks from blogs and websites rel
 
 It is also an excellent strategy for individuals to appear on industry podcasts to build quality backlinks and increase their brand’s visibility online. Some podcast websites also link to guest websites that provide high-quality backlinks. According to Edison Research’s report, around 41% of Americans aged 12 and older listen to podcasts monthly, among which 5% of the listeners check out guest-recommended websites.
 
-### Virtual event speaking opportunities
-
-Individuals should also consider attending virtual conferences and workshops. These types of virtual events usually feature guest speakers, and their event pages sometimes include profile links to the speaker’s website. According to PCMA, a study has shown that virtual events have around 60% to 70% of attendee engagement rates, increasing the potential exposure.
-
-### Collaborative webinar hosting
-
-Individuals can also collaborate with other professionals to host a webinar. This way, they can get backlinks from their co-hosts and the event page. According to getcontrast, about 91% of B2B professionals think webinars are the preferred type of content.
-
 ### Professional community engagement
 
 Engaging and building relationships with professional communities online or offline is also a great way to create backlinks. According to a LinkedIn survey, 61% of its users think community groups are great places to discover helpful content.
@@ -71,10 +82,6 @@ Engaging and building relationships with professional communities online or offl
 ### Industry forum participation
 
 Industry forums are also suitable for backlink opportunities. Participating in industry forums allows individuals to engage in discussions and share their thoughts with others. This builds credibility, and the chances of getting backlinks increase.
-
-### Expert group moderation
-
-Individuals can also moderate expert groups within a group of industry professionals. This can take place on various platforms like Facebook or LinkedIn. When a person moderates a group, the participants may link back to their content when it aligns with their discussions.
 
 ### Creating comprehensive guides
 
@@ -88,60 +95,51 @@ Individuals can develop free tools and resources that solve particular problems,
 
 Individuals can post pre-designed templates, such as resume templates, project management spreadsheets, Trello templates, etc. since these frameworks simplify work and save time. Websites usually link to templates as a helpful tool for their audiences. A study by Canva shows that content containing templates drives up to 50% more engagement and shares than non-template content.
 
-### Creating an educational video series
-
-Informative Video content is one of the most engaging forms of knowledge for the audience.  If individuals post informative videos, others may find answers to their questions and link back to their websites. According to HubSpot, “the websites that use video content have 53 times more chances to rank on the first page Google results than content without a video.”
-
 ### Building resource directories
 
 Individuals can also consider posting comprehensive lists or directories of resources or tools related to their niche. Bloggers often link back to them if they find them helpful. According to Backlinko, well-executed resource pages can attract more backlinks.
-
-### Creating API documentation
-
-Individuals can also consider publishing well-organized documentation for application programming interfaces (APIs) that developers can integrate with their systems. According to a Postman survey, about 89% of developers think well-developed API documentation is essential.
 
 ### Industry alliance building
 
 Forming alliances or relationships with other companies related to our niche creates a trusted environment, and the companies backlink each other’s content. According to CoSchedule’s report, companies in alliance with other companies have 60% higher domain authority.
 
-### Mobile optimization for link-worthy content
-
-Mobile optimization is necessary to ensure a seamless user experience on mobile devices; that’s why individuals should use responsive designs and ensure easy navigation. According to BrowserStack.com, 92.3% of internet users access the internet using mobile phones.
-
-### Creating newsworthy content
-
-If individuals post content that revolves around important news or unique insight, it can be picked up by news agencies and influencers, consequently building backlinks.
-
 ### Developing shareable tools
 
 Creating shareable tools and resources is also a great way to build backlinks, as it encourages users to share them if they consider those tools helpful. Moreover, these tools also attract mentions from other sites. Individuals must follow some ways and strategies to create content that people want to share.
-
-## Requirements
-
-- Any outreach should be done direct to the community of interest - assume journalists are unnecessary 3rd parties.
-- Content can be promoted via both community outreach and creating content that naturally attracts backlinks.
-- Prioritize getting links from sites that are authoritative, relevant, unique, and natural.
-- Avoid self-promotion via social media posts. Assume all social media platforms (Reddit, FaceBook, Twitter, Instagram) that allow self-promotion are over-saturated.
-- Outreach plans should include links to the communities/podcasts/etc mentioned in the plan.
-
-### Priorities
-
-- *Relevance*: The source and page are tightly aligned with your topic
-- *Trust*: Real editorial standards, real audience, low spam footprint
-- *Context*: The mention explains what you do and why you matter, not just a naked URL
-- *Co-citation proximity*: You appear near authoritative brands and concepts in your space (when your brand shows up alongside trusted names that AI systems already recognize, those systems start to treat you as a peer)
-- *Persistence*: The page stays live, updated, and continues to get crawled and cited
-- *Retrievability*: The mention exists in formats AI systems can reliably extract: body copy, resource lists, podcast show notes and transcripts, YouTube descriptions, and newsletter archives
 
 ## Output
 
 For each part of the proposed plan, please make sure each part has all of the below components.
 
-| Component | Expectations |
-| --------- | ------------ |
-| Pros      | Detailed reasoning behind why this part of the plan will have a meaningful impact |
-| Cons      | Detailed analysis of potential pitfalls that would make this portion fail |
-| Internal Code/Content Steps | Exact steps that should be taken to get backlinks |
-| External Reach-out Steps | Detailed plans regarding which sites to reach out to |
-| Expected Success Rate | How much effort is expected to implement the strategy |
-| Expected Effort Level | How much time and effort would be required to implement the strategy |
+| Component                   | Expectations                                                                      |
+| --------------------------- | --------------------------------------------------------------------------------- |
+| Pros                        | Detailed reasoning behind why this part of the plan will have a meaningful impact |
+| Cons                        | Detailed analysis of potential pitfalls that would make this portion fail         |
+| Internal Code/Content Steps | Exact steps that should be taken to get backlinks                                 |
+| External Reach-out Steps    | Detailed plans regarding which sites to reach out to                              |
+| Expected Success Rate       | How much effort is expected to implement the strategy                             |
+| Expected Effort Level       | How much time and effort would be required to implement the strategy              |
+
+### Pros
+
+When reading the plan, it is critical for end users to understand why particular steps are being recommended. Explain in-depth why these steps will be helpful.
+
+### Cons
+
+Not all steps are going to be right for every project or individual. Cons should be highlighted so the site maintainer can make informed decisions about whether the trade-off is worth it.
+
+### Internal Code/Content Steps
+
+For new content or modifying existing content, it is important to have an intelligent, detailed, and cohesive plan for updating content.
+
+### External Reach-out Steps
+
+When reaching out to external entities, please write a detailed strategy as to which individuals/communities to reach out to, as well as providing steps and templates.
+
+### Expected Success Rate
+
+Users care about the expected success rate of any backlink strategy in gaining genuine backlinks.
+
+### Expected Effort Level
+
+Users care about how much time and resources each strategy would take. Estimate the expected time and other resources involved in actually implement the strategy, as well as the assumptions that influence that.

@@ -10,7 +10,6 @@ This site is designed as a semi-professional landing page to perform a variety o
 
 With this understanding, it is likely that future colleagues and employers would care mostly about things like competencies, skills, and held beliefs. Fellow technology enthusiasts would likely care about things like hobbies and technical resources.
 
-
 ## Code Style
 
 ### HTML
@@ -32,20 +31,6 @@ With this understanding, it is likely that future colleagues and employers would
 ## Commands
 
 - `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css`: Convert default scss file to CSS for production. Omit `--no-source-map` for local dev if you want source maps; the `assets/css/*.css.map` glob is gitignored so dev maps won't be committed.
-- `npm install <package-name>`: Installing a library that might be useful.
-
-## Architecture
-
-- `/assets/css`: CSS and Sassy CSS files allowing for layout specification to webpages.
-- `/assets/html`: Contains all non-index HTML files.
-- `/assets/images`: Images that will be displayed in some of the webpages.
-- `/assets/js`: Custom JavaScript files.
-- `/assets/markdown/`: Markdown files for various projects and reports on progress.
-- `/assets/other`: Files that are useful for the website but do not fit into any other category
-- `/index.html`": The landing page for the website.
-- `/manifest.json`: A manifest in JSON format to describe the site bots and search engine crawlers.
-- `/robots.txt`: Specifying a web scraping policy to bots.
-- `/sitemap.xml`: A mapping of pages and last update time.
 
 ## Important Notes
 
