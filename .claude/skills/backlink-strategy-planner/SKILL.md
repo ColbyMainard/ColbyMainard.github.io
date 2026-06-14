@@ -24,9 +24,9 @@ Recommend a customized backlink strategy based on both the current content of HT
 - Content can be promoted via both community outreach and creating content that naturally attracts backlinks.
 - Prioritize getting links from sites that are authoritative, relevant, unique, and natural.
 - Avoid self-promotion via social media posts. Assume all social media platforms (Reddit, FaceBook, Twitter, Instagram) that allow self-promotion are over-saturated.
-- Outreach plans should include links to the communities/podcasts/etc mentioned in the plan.
-- Suggestions should focus on modifying/optimizing existing content first. 
-- Only suggest new content when there is a genuine gap.
+- Any suggested outreach strategies should include links to the communities/podcasts/etc mentioned in the plan.
+- Suggestions should focus on modifying/optimizing existing content first.
+- Interactivity and visualizations tend to make pages stickier. For sections without either, please recommend some.
 
 ### Priorities
 
