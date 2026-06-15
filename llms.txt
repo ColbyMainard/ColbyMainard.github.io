@@ -2,10 +2,9 @@
 
 > Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-> Last updated: 2026-06-06
+> Last updated: 2026-06-14
 
-Colby Mainard holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision.
-In addition, he also holds a Bachelors of Science in Computer Science from Texas A&M University, with double minors in Business and Cybersecurity.
+Colby Mainard holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision. In addition, he also holds a Bachelors of Science in Computer Science from Texas A&M University, with double minors in Business and Cybersecurity.
 
 Domain experience spans:
 
@@ -14,14 +13,14 @@ Domain experience spans:
 - Image-based machine learning for medical diagnostics
 - Anti-money laundering (AML) and bank security at RiskScout (a FinTech company)
 - Facial-tracking research for a cosmetics company
-- Computational biology / bioinformatics coursework
 - Autonomous vehicle testing using Unreal Engine 4
 
 Canonical domain: https://colbymainard.github.io
 
 ## Important notes:
 
-- Static website only (e.g. HTML, CSS, client-side JS)
+- Website is static (e.g. no API).
+- Site contains custom HTML, CSS, and client-side JS only.
 
 ## Intended audience
 
@@ -46,10 +45,3 @@ Canonical domain: https://colbymainard.github.io
 ## Discoverability for AI assistants
 
 This site allows live-search / AI-assistant bots (ChatGPT-User, Claude-User, Claude-SearchBot, Perplexity-User, OAI-SearchBot, MistralAI-User, DuckAssistBot) to fetch pages on demand to answer real-time user queries. Training crawlers remain blocked via robots.txt.
-
-## Contact
-
-- Email: colby.mainard@proton.me
-- LinkedIn: https://www.linkedin.com/in/colby-mainard/
-- PGP Hash: 36FF 3C61 A08A 76C9 18C8 FE15 C3DA F3D9 1351 22BE
-- PGP File Location: https://colbymainard.github.io/assets/other/pgp_email_key.asc
