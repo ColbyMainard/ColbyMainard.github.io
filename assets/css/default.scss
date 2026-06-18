@@ -100,6 +100,12 @@ header {
         &.active {
             background-color: rgba($emerald_efficiency_3, 0.3);
         }
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($emerald_efficiency_5, 0.85);
+            border-radius: 4px;
+        }
     }
 
     #pageMenu {
@@ -136,6 +142,12 @@ header {
                 border-bottom-color: $emerald_efficiency_5;
                 font-weight: bold;
             }
+
+            &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba($emerald_efficiency_5, 0.85);
+                border-radius: 4px;
+            }
         }
     }
 
@@ -167,6 +179,12 @@ header {
             &:hover {
                 color: $emerald_efficiency_5;
                 background-color: rgba($emerald_efficiency_3, 0.1);
+            }
+
+            &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba($emerald_efficiency_5, 0.85);
+                border-radius: 4px;
             }
         }
     }

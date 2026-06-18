@@ -2724,6 +2724,10 @@ header {
       background-color: rgba(80, 195, 161, 0.2); }
     header .nav-toggle.active {
       background-color: rgba(80, 195, 161, 0.3); }
+    header .nav-toggle:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
+      border-radius: 4px; }
   header #pageMenu {
     background-color: #006b52;
     border-bottom: 1px solid rgba(80, 195, 161, 0.2);
@@ -2751,6 +2755,10 @@ header {
         color: #e0f7fa;
         border-bottom-color: #e0f7fa;
         font-weight: bold; }
+      header #pageMenu a:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
+        border-radius: 4px; }
   header #siteMenu {
     background-color: #007a5e;
     padding: 0; }
@@ -2773,6 +2781,10 @@ header {
       header #siteMenu a:hover {
         color: #e0f7fa;
         background-color: rgba(80, 195, 161, 0.1); }
+      header #siteMenu a:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
+        border-radius: 4px; }
 
 @media (max-width: 768px) {
   header .nav-toggle {

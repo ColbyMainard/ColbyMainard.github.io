@@ -2,18 +2,9 @@
 
 > Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-> Last updated: 2026-06-14
+> Last updated: 2026-06-17
 
 Colby Mainard holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision. In addition, he also holds a Bachelors of Science in Computer Science from Texas A&M University, with double minors in Business and Cybersecurity.
-
-Domain experience spans:
-
-- Computer vision pipelines for professional sports broadcasts and social media at MVP on behalf of various leagues / teams (NFL, NHL, MLB, NBA, PGA, PFL)
-- AI/ML for network security threat detection at Vectra AI
-- Image-based machine learning for medical diagnostics
-- Anti-money laundering (AML) and bank security at RiskScout (a FinTech company)
-- Facial-tracking research for a cosmetics company
-- Autonomous vehicle testing using Unreal Engine 4
 
 Canonical domain: https://colbymainard.github.io
 
@@ -38,10 +29,6 @@ Canonical domain: https://colbymainard.github.io
 - [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html): Curated reading list and resources covering cybersecurity, AI/ML, C/C++, Python, scripting, and operating systems.
 - [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides covering data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.
 
-## Optional
+### Optional
 
 - [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): Site privacy policy.
-
-## Discoverability for AI assistants
-
-This site allows live-search / AI-assistant bots (ChatGPT-User, Claude-User, Claude-SearchBot, Perplexity-User, OAI-SearchBot, MistralAI-User, DuckAssistBot) to fetch pages on demand to answer real-time user queries. Training crawlers remain blocked via robots.txt.
