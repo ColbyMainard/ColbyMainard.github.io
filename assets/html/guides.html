@@ -285,7 +285,7 @@
                     <h3>Batch vs Real-time</h3>
                     <p>
                         User needs will also impact the algorithm choices.
-                        When responses are required in real or near-real time, that usually places a maximum complexity of processing and the amount of compute that would be required to be kept online at any particular time.
+                        When responses are required in real or near-real time, that caps how complex the processing can be and forces more compute to stay online continuously.
                         If a user can wait for a response, however, it would make sense to either bundle requests together for efficiency or add additional processing power.
                     </p>
                     <h3>Common Libraries / Tools</h3>
@@ -335,7 +335,7 @@
                     <h4>Semantic Segmentation</h4>
                     <p>
                         Semantic segmentation labels each pixel as a particular class but doesn't assign any pixel to a particular object.
-                        This is best used for determining if you need labels for each pixel of an image, but doesn't assign a pixel to any particular object.
+                        This is best when you need a class label for every pixel — say, separating road from sky — but don't need to tell two cars apart.
                     </p>
                     <h4>Image Classification</h4>
                     <p>
@@ -345,7 +345,7 @@
                     <h4>Pose Estimation</h4>
                     <p>
                         Pose estimation is used for finding the position of a human's limbs in 2D/3D space.
-                        This is best for applications where knowledge of where particular pieces of human anatomy are in real space (e.g. movement tracking).
+                        This is best for applications that need to know where particular parts of the body are in real space (e.g. movement tracking).
                     </p>
                     <h3>Choosing Models</h3>
                     <p>
