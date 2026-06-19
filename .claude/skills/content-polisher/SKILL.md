@@ -54,13 +54,8 @@ E – Envision Your Impact: How do you want to help others? What change do you w
 #### [Make Yourself Your Own Brand By Starting A Personal Blog](https://blog.contentgorilla.co/starting-a-personal-blog/)
 
 - *Create A Promotional Strategy*: If you have been searching for “how to turn your blog into a business”, you need to create a promotional strategy. Start by adding social media icons to your blog’s navigation bar. Add links and social media hashtags to stir the viewers into action.
-
 - *Plan Your Content*: Create a schedule to post regularly on your blog. You can create a content calendar as well. Try to post a blog twice a week. This will keep your audience interested and will also improve the incoming traffic to your blog.
-
 - *Focus on SEO*: Boosting your personal blog means creating an SEO strategy. You need to optimize your content by carrying out keyword research and adding relevant keywords to your blog. Implementing SEO strategies will quickly boost your blog’s ranking and increase your online visibility.
-
 - *Update Your Blog*: Keep revamping the content of your blog. Talk about the latest trends and topics related to your blog’s niche. Search for popular modern blogs on the internet. Write new blog posts that touch on the same topics but are better in quality and engagement.
-
 - *Leverage CTAs*: There is a higher chance of improving your blog’s visibility by adding a call to action as people love to click on new things. Use attention-grabbing headlines as your CTAs and direct the visitors toward other resources on your website.
-
 - *Share Personal Anecdotes*: The key to creating a successful personal blog is to talk about your journey. Let your readers know what you are doing on a weekend or how you plan to spend your vacations. Spontaneity and originality will help your audience feel connected and boost your blog’s visibility.
