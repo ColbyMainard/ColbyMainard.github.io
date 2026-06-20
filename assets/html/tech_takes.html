@@ -155,6 +155,7 @@
         </script>
     </head>
     <body>
+        <a href="#main" class="visually-hidden">Skip to main content</a>
         <header>
             <div class="pageMenu" id="pageMenu">
                 <span class="nav-brand">Colby Mainard</span>
@@ -179,7 +180,7 @@
                 </nav>
             </div>
         </header>
-        <main class="main" id="main">
+        <main class="main" id="main" tabindex="-1">
             <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Technological Opinions</h1>
                 <p>
@@ -199,7 +200,7 @@
                             Kolmogorov-Arnold Networks
                         </a>are an interesting alternative to the current neural network technology based on multi-layer perceptrons (MLPs).
                         The internal structure of a traditional neural network is a set of perceptrons organized into layers.
-                        Each perceptron takes a set of inputs as numbers as a matrix, performing a linear transformation (e.g. matrix multiplication), and outputting a numerical value.
+                        Each perceptron takes a set of numbers, applies a linear transformation (such as matrix multiplication), and outputs a single value.
                         Predetermined activation functions (e.g. sigmoid and rectified linear unit) are then applied to outputs of each perceptron and passed from layer to layer until the neural network has arrived at an answer.
                         In this structure, it is common to have many different perceptrons, each solving a minuscule portion of the problem.
                         KANs, on the other hand, are interesting because they do not rely on predetermined activation functions.
@@ -213,8 +214,8 @@
                         Thanks to each node of the KAN learning its own spline, this would allow users to visualize how a change of input impacts the output of that node.
                         Once a user understands each node as well as how data flows through the network, it would be possible to visualize how changing an input would change outputs.
                         When comparing this to MLPs, it is much more difficult to determine how weights and activation functions have meaning in a larger context.
-                        Not only are there arbitrarily many perceptrons in current neural network architectures, many of these perceptrons interact with each other by virtue of this architecture.
-                        Because of this, it is almost impossible to generate a visualization that both generalizes the patterns that the MLPs discovered and is easily comprehended by the human mind.
+                        Current architectures use a very large number of perceptrons, and they interact heavily with one another.
+                        Those factors make it nearly impossible to draw a single picture that both captures what the network learned and stays easy for a person to grasp.
                         KANs, by comparison, have very few units composing it.
                         This makes the many possible visualizations easier to merge into an interpretable model that is much more approachable for the average person.
                     </p>
