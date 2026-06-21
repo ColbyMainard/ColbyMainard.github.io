@@ -1,71 +1,99 @@
 ---
 name: "search-engine-optimization"
 description: |
-  Use this to gain additional impressions and clicks on search engines.
+  Audits the site's pages and recommends concrete on-page and technical SEO improvements, saved as a dated markdown report.
   Triggers on: search engine optimization, SEO
   Use when cleaning up content. Trigger with phrases like "seo", and "search engine optimization".
-allowed-tools: "Read"
-version: 1.0.0
+allowed-tools: "Read, Write"
+version: 1.1.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
 
+# Search Engine Optimization
+
+## Role and context
+
+Act as an SEO specialist for **Colby Mainard's personal website** — a static, client-side-only site served from GitHub Pages with no server-side processing. Its audience is potential colleagues, potential employers, and fellow technology enthusiasts.
+
+The site already has SEO infrastructure. **Respect and extend it; do not duplicate or break it:**
+
+- Each page embeds one or more `schema.org` JSON-LD blocks (`<script type="application/ld+json">`) in its `<head>`. Preserve existing blocks; extend them where useful.
+- `sitemap.xml`, `robots.txt`, and `llms.txt` live at the repo root.
+- `manifest.json` and `service-worker.js` provide PWA/offline support. The `<link rel="manifest">` is injected by `service_worker_register.js` at runtime — never recommend hardcoding it into the HTML.
+- Pages are responsive and load few external dependencies, which already helps page-speed signals.
+
+Pages in scope:
+
+| Page | Topic |
+| ---- | ----- |
+| `index.html` | Work history, education, projects, skills, certifications |
+| `assets/html/guides.html` | Beginner guides across technical domains |
+| `assets/html/tech_resources.html` | Recommended learning resources by topic |
+| `assets/html/tech_takes.html` | Technical opinions and commentary |
+| `assets/html/hobbies.html` | Quantum computing, photography, D&D, history |
+| `assets/html/privacy.html` | Privacy policy |
+
+Sources: [15 SEO Techniques to Improve Rankings and Drive More Traffic](https://searchatlas.com/blog/seo-techniques/) and [SEO Techniques (seo.com)](https://www.seo.com/blog/seo-techniques/).
+
 ## Goal
 
-The entire point of having a website is making sure that it gets seen.
+Audit the pages above and recommend concrete on-page and technical SEO improvements that increase impressions and clicks, tailored to each page's topic and search intent.
 
-## Strategies
+## Scope — and what belongs to other skills
 
-### Sources
+- **This skill:** on-page SEO (titles, meta descriptions, headings, structured data, internal links, keywords) and technical SEO (sitemap, canonical, crawlability).
+- Off-page link building and outreach → use **backlink-strategy-planner**.
+- Prose quality and readability → use **content-polisher**.
+- Alt text and semantic structure for assistive tech → use **accessibility-audit-runner** (note: good accessibility also helps SEO).
 
-- [15 SEO Techniques to Improve Rankings and Drive More Traffic](https://searchatlas.com/blog/seo-techniques/)
-- [](https://www.seo.com/blog/seo-techniques/)
+## Inputs — read before auditing
 
-### Optimize for Conversational and Voice Search
+For each page, read its `<head>` (`<title>`, meta description, canonical, JSON-LD), its heading structure, and its body copy. Also read `sitemap.xml` and `robots.txt`. Base every recommendation on what the pages actually contain — note the keyword/intent each page targets and what is missing.
 
-- Use full-sentence questions as headers, especially with informational or local intent. 
-- Answer directly below with 1–2 sentence summaries, using natural language and clear definitions.
-- Add schema markups such as FAQ, Q&A, and HowTo to increase your content’s eligibility for voice-friendly SERP features.
+## Techniques (select what each page needs)
 
-### Refresh Outdated Pages With New Data
+### On-page
 
-Refreshing outdated pages with new data involves updating existing content with current information, statistics, and examples to maintain relevance and freshness signals. 
+- **Metadata:** a unique, descriptive `<title>` (~50–60 characters) and meta description (~150–160 characters) per page, written to match the page's search intent.
+- **Headings:** exactly one `<h1>` per page; use full-sentence question headers for informational intent and answer directly in 1–2 sentences below (this targets featured snippets, "People Also Ask," and voice search).
+- **Structured data:** extend the existing JSON-LD — e.g. `FAQPage`/`HowTo` on guides, `BreadcrumbList` for nested pages, `Person`/`WebSite` on the landing page. Preserve what is already there.
+- **Internal links:** link related pages to each other, using the target page's primary keyword as the anchor text.
+- **E-E-A-T:** support claims with quotes, citations, and a clear author identity to signal Experience, Expertise, Authoritativeness, and Trustworthiness.
+- **Keywords:** identify one primary keyword/intent per page and use it naturally in the title, `<h1>`, first paragraph, and at least one subheading.
 
-Refreshing outdated pages with new data is a fast, low-effort SEO technique that improves rankings, reclaims lost traffic, and aligns content with current search intent. Google favors recently updated pages that reflect the most accurate, relevant information.
+### Technical
 
-### Create Link-Worthy Assets 
+- Keep `sitemap.xml` `<lastmod>` values accurate when content changes, and ensure every page is listed.
+- Confirm a canonical URL is declared per page.
+- Preserve crawlability (`robots.txt`, `llms.txt`) and the responsive, low-dependency, PWA setup that aids page speed.
 
-Creating link-worthy assets is an SEO content technique that involves publishing tools, data, or resources that naturally attract backlinks. Link-worthy assets earn links passively over time because they provide unique value to your industry.
+### Content freshness
 
-To create link-worthy assets, follow the steps below.
+- Refresh outdated pages with current data and examples. Google favors recently updated pages that reflect accurate, relevant information.
 
-1. Identify gaps in your niche. What data, tools, or resources are missing?
-2. Build high-utility formats like calculators, templates, interactive maps, comparison tables, or visual timelines.
-3. Add original research, survey results, or industry benchmarks that are frequently cited.
+## Process
 
-Examples of link-worthy content include cost calculators, free SEO tools, or long-form explainers with embedded data visualizations. Link-worthy assets strengthen topical authority and generate organic backlinks from trusted sources.
+1. Read the inputs for the page(s) in scope.
+2. For each page, determine its primary keyword/intent, then audit its title, meta description, headings, JSON-LD, and internal links.
+3. Recommend specific changes, showing **current → suggested** for metadata and headings.
+4. Collect site-wide technical items separately.
+5. Save the audit to `assets/markdown/seo-report-YYYY-MM-DD.md`, using today's date. Recommend changes **in the report** — do not edit the site files yourself, and never alter existing schema.org blocks or the runtime-injected manifest link.
 
-### Optimize for featured snippets and “People Also Ask” (PAA)
-Not all search results are the same — that’s why you should research the topics you write about before drafting your page to make sure you match the page format.
+## Output format
 
-Featured snippets and PAA are two different SERP features you can target within your content. This position on the SERPs is known as “Position 0,” since users don’t have to click on the result, and it appears above all other results.
+For each page, a table of recommended changes:
 
-### Reach out to companies for backlinks
+| Element | Current | Suggested | Why |
+| ------- | ------- | --------- | --- |
+| Title tag / Meta description / H1 / Target keyword / Structured data / Internal links | What the page has now | The recommended change | One-sentence rationale |
 
-In terms of off-page SEO techniques, earning backlinks may be the most important. Backlinks from authoritative sources tell Google that other sites think that yours is trustworthy. You want to get as many backlinks as you can from reputable sources. These SEO tactics are vital for improving your website’s authority and search engine ranking.
+Then a single site-wide technical checklist:
 
-### Use quotes and research for E-E-A-T
+| Item | Status | Action |
+| ---- | ------ | ------ |
+| Sitemap accuracy, canonical tags, crawlability, page speed, etc. | OK / needs work | What to do |
 
-Google defines high-quality pages with the Experience, Expertise, Authoritativeness, and Trustworthiness (E-E-A-T) scale. So, what is E-E-A-T? This system helps Google rank the best pages for searchers, and targeting these metrics can help you show your E-E-A-T credibility.
+## Tone
 
-Trustworthiness comes from a mix of all three of these components, and if you lack any, Google will deem your website and brand unreliable. That’s why adding quotes and research can help you build out your site.
-
-### Add internal links to help with page rankings
-
-Linking between pages makes it easier to show connections between topics and pages on your site. Plus, it’s an easy way to help users browse other pages and show Google how your site all connects.
-
-Add internal links throughout your site to other relevant pages. Try to use the target keyword for the landing page as the anchor text in your link to reinforce the page topic.
-
-### Optimize metadata to create seamless search results
-
-Metadata is the information Google grabs from your page to post in the SERPs. With metadata, if you don’t submit it yourself, Google will usually pull the beginning of your article, which might not really speak to what your page is about.
+Practical and specific. Tie each recommendation to the keyword or search intent it serves, show current → suggested so the change is concrete, and keep rationales plain. Recommend; the maintainer decides what to apply.

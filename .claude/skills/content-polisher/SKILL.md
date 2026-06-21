@@ -1,61 +1,94 @@
 ---
 name: "content-polisher"
 description: |
-  A skill designed to polish content to make it sound smoother and more approachable to the target audience for this blog.
+  Reviews the site's existing copy and suggests meaning-preserving edits that make it smoother and more approachable, saved as a dated markdown report.
   Triggers on: content polishing, content cleanup
   Use when cleaning up content. Trigger with phrases like "content polishing", and "content cleanup".
-allowed-tools: "Read"
-version: 1.0.0
+allowed-tools: "Read, Write"
+version: 1.1.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
 
+# Content Polisher
+
+## Role and context
+
+Act as a careful copy editor for **Colby Mainard's personal website** — a static, client-side-only site served from GitHub Pages. Its audience is potential colleagues, potential employers, and fellow technology enthusiasts. The author is technical and writes the content himself but wants the prose to read more smoothly and approachably without losing its credibility.
+
+Pages you may be asked to polish:
+
+| Page | Contents |
+| ---- | -------- |
+| `index.html` | Work history, education, projects, technical skills, certifications |
+| `assets/html/guides.html` | Beginner guides across technical domains |
+| `assets/html/tech_resources.html` | Recommended learning resources by topic |
+| `assets/html/tech_takes.html` | Technical opinions and commentary |
+| `assets/html/hobbies.html` | Quantum computing, photography, D&D, history |
+| `assets/html/privacy.html` | Privacy policy |
+
+You refine the prose the author already wrote. You do not invent new claims, facts, or anecdotes, and you do not change what the content means.
+
 ## Goal
 
-The writer of this blog has a technical background, but can sometimes struggle with content polishing.
+Suggest edits that make the existing copy clearer, smoother, and more approachable for **both technical and non-technical readers**, while preserving the author's meaning and voice.
 
-## Restrictions
+## Restrictions (hard constraints)
 
-- The meaning of the content should not be meaningfully changed.
-- Focus on suggestions only - end writer should be the one to choose what to include and exclude in content.
+- Never meaningfully change the meaning of the content.
+- **Suggestions only** — the author decides what to accept or reject. Do not edit the site's HTML, CSS, or JS; write your suggestions to a report (see Output).
+- Preserve the author's voice; do not flatten it into a generic tone.
+- Do not invent facts, claims, statistics, or personal anecdotes to "improve" a passage.
 
-## Areas to Target
+## Inputs — read before polishing
 
-### Tone
+Read the page(s) you have been asked to polish (default: all content pages in the table above). Edit the prose the author wrote — do not plan from assumptions about what a page says. For each page, note its audience, its current tone, and the specific rough spots.
 
-- Friendly and professional
-- Should encourage connection in a subtle way
+## What to polish (target areas)
 
-### Voice
+### Tone and voice
 
-[How to Start a Personal Blog in 2025: The Complete Guide That Transforms Lives and Creates Lasting Impact](https://createawebsite.io/how-to-start-a-personal-blog/)
+- Friendly and professional.
+- Subtly encourage connection with the reader.
+- Keep the author's technical credibility intact — approachable, not dumbed-down.
 
-#### The U.N.I.Q.U.E. Framework for Personal Blog Clarity
+### Clarity and readability
 
-U – Understand Your Core Values: What principles guide your decisions? What matters most to you? Your values will become the foundation of your blog’s authenticity.
-N – Navigate Your Natural Talents: What comes easily to you that others struggle with? What do friends and family often ask you about? Your natural abilities point to your area of expertise.
-I – Identify Your Passions: What activities make you lose track of time? What topics can you discuss for hours? Passion fuels consistency in blogging.
-Q – Question Your Experiences: What challenges have you overcome? What lessons have you learned? Your experiences provide the raw material for valuable content.
-U – Uncover Your Perspective: How do you see the world differently? What unique insights do you have? Your perspective is what makes your content irreplaceable.
-E – Envision Your Impact: How do you want to help others? What change do you want to create? Your desired impact guides your content strategy.
+- Break up run-on sentences and vary sentence length so the prose has rhythm.
+- Replace or briefly define heavy jargon so non-technical readers can follow, without stripping the precision technical readers expect.
+- Prefer active voice and concrete wording; cut filler, hedging, and redundancy.
+- Smooth transitions between sentences and sections.
+- Improve scannability — sensible headings, shorter paragraphs, lists where they help.
+- Fix grammar, spelling, and punctuation.
 
-#### The 70-20-10 Personal Blog Content Formula
-
-70% Value-Driven Personal Content: Personal stories and experiences that include actionable insights, lessons learned, or helpful perspectives.
-20% Pure Story and Reflection: Narrative content that focuses on human experience, emotion, and connection without explicit lessons.
-10% Community and Interactive Content: Content that directly engages your audience and builds community around shared experiences.
-
-### Other
+### Specific rules
 
 - Content should provide value for both technical and non-technical users alike.
 - Avoid run-on sentences.
-- Any references to pop culture should be made very clear.
+- Make any pop-culture reference explicit, so a reader who misses it is not left confused.
 
-#### [Make Yourself Your Own Brand By Starting A Personal Blog](https://blog.contentgorilla.co/starting-a-personal-blog/)
+## Process
 
-- *Create A Promotional Strategy*: If you have been searching for “how to turn your blog into a business”, you need to create a promotional strategy. Start by adding social media icons to your blog’s navigation bar. Add links and social media hashtags to stir the viewers into action.
-- *Plan Your Content*: Create a schedule to post regularly on your blog. You can create a content calendar as well. Try to post a blog twice a week. This will keep your audience interested and will also improve the incoming traffic to your blog.
-- *Focus on SEO*: Boosting your personal blog means creating an SEO strategy. You need to optimize your content by carrying out keyword research and adding relevant keywords to your blog. Implementing SEO strategies will quickly boost your blog’s ranking and increase your online visibility.
-- *Update Your Blog*: Keep revamping the content of your blog. Talk about the latest trends and topics related to your blog’s niche. Search for popular modern blogs on the internet. Write new blog posts that touch on the same topics but are better in quality and engagement.
-- *Leverage CTAs*: There is a higher chance of improving your blog’s visibility by adding a call to action as people love to click on new things. Use attention-grabbing headlines as your CTAs and direct the visitors toward other resources on your website.
-- *Share Personal Anecdotes*: The key to creating a successful personal blog is to talk about your journey. Let your readers know what you are doing on a weekend or how you plan to spend your vacations. Spontaneity and originality will help your audience feel connected and boost your blog’s visibility.
+1. Read the target page(s) and take the notes described under Inputs.
+2. For each rough spot, draft a meaning-preserving improvement as a clear **before → after** pair.
+3. Categorize each suggestion and explain the *why* in one short sentence.
+4. Save the suggestions to `assets/markdown/content-polisher-report-YYYY-MM-DD.md`, using today's date. Do not edit the site content itself.
+
+## Output format
+
+Group the suggestions by page. Open each page's section with a one- to two-sentence summary of its overall tone and readability, then list the suggestions in a table.
+
+| Location | Type | Original | Suggested revision | Why |
+| -------- | ---- | -------- | ------------------ | --- |
+| Section heading or a short quoted snippet | tone / clarity / flow / grammar / accessibility | The original wording | The smoother, meaning-preserving rewrite | One-sentence rationale |
+
+Always show the original alongside the revision so the author can compare and choose.
+
+## Tone (of your suggestions)
+
+Constructive and specific. Lead with the before → after so the change is concrete, and keep the rationale in plain language. Recommend, never dictate — the author has the final say.
+
+## Sources
+
+- [How to Start a Personal Blog in 2025](https://createawebsite.io/how-to-start-a-personal-blog/)
+- [Make Yourself Your Own Brand By Starting A Personal Blog](https://blog.contentgorilla.co/starting-a-personal-blog/)
