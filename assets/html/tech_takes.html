@@ -193,16 +193,16 @@
             <div class="KANDiv" id="KANDiv">
                 <section class="KAN" id="KAN">
                     <h2>Kolmogorov-Arnold Networks (KANs)</h2>
-                    <p><u>Last Updated:</u> June 19, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
+                    <p><u>Last Updated:</u> June 21, 2026 &middot; <span class="readingTime" data-reading-time></span></p>
                     <h3>What are they?</h3>
                     <p>
-                        <a href="https://arxiv.org/abs/2404.19756">
-                            Kolmogorov-Arnold Networks
-                        </a>are an interesting alternative to the current neural network technology based on multi-layer perceptrons (MLPs).
+                        <a href="https://arxiv.org/abs/2404.19756">Kolmogorov-Arnold Networks</a> are an interesting alternative to the current neural network technology based on multi-layer perceptrons (MLPs).
                         The internal structure of a traditional neural network is a set of perceptrons organized into layers.
                         Each perceptron takes a set of numbers, applies a linear transformation (such as matrix multiplication), and outputs a single value.
                         Predetermined activation functions (e.g. sigmoid and rectified linear unit) are then applied to outputs of each perceptron and passed from layer to layer until the neural network has arrived at an answer.
                         In this structure, it is common to have many different perceptrons, each solving a minuscule portion of the problem.
+                    </p>
+                    <p>
                         KANs, on the other hand, are interesting because they do not rely on predetermined activation functions.
                         Each perceptron in a KAN is responsible for learning its own activation function with splines.
                         Because of this, each perceptron is much more robust than comparable MLPs.
@@ -216,7 +216,7 @@
                         When comparing this to MLPs, it is much more difficult to determine how weights and activation functions have meaning in a larger context.
                         Current architectures use a very large number of perceptrons, and they interact heavily with one another.
                         Those factors make it nearly impossible to draw a single picture that both captures what the network learned and stays easy for a person to grasp.
-                        KANs, by comparison, have very few units composing it.
+                        KANs, by comparison, are composed of very few units that handle more complex operations.
                         This makes the many possible visualizations easier to merge into an interpretable model that is much more approachable for the average person.
                     </p>
                     <h4>Accuracy</h4>
