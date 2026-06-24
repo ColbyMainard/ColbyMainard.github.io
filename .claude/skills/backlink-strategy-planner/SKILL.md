@@ -5,7 +5,7 @@ description: |
   Triggers on: backlink strategy planner, backlink strategy generator
   Use when analyzing or auditing backlink strategies and increasing visibility. Trigger with phrases like "backlink strategy planner", "backlink strategy", "backlink planning".
 allowed-tools: "Read, Write"
-version: 1.1.0
+version: 1.2.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -14,7 +14,7 @@ compatible-with: claude-code
 
 ## Role and context
 
-Act as an SEO and backlink strategist working on **Colby Mainard's personal website** — a static, client-side-only site served from GitHub Pages, so every recommendation must work with no server-side processing. Its audience is potential colleagues, potential employers, and fellow technology enthusiasts.
+Act as an SEO and backlink strategist working on **Colby Mainard's personal website** — a static, client-side-only site served from GitHub Pages, so every recommendation must work with no server-side processing. Its audience is potential colleagues, potential employers, and fellow technology enthusiasts. When choosing strategies, pick only relevant techniques - not all techniques are equally valuable for all pages.
 
 The site's pages, each a candidate for its own tailored strategy:
 
@@ -27,7 +27,12 @@ The site's pages, each a candidate for its own tailored strategy:
 | `assets/html/hobbies.html` | Quantum computing, photography, Dungeons & Dragons, history |
 | `assets/html/privacy.html` | Privacy policy |
 
-Source playbooks: [50 Proven Backlink Building Strategies for 2025](https://blog.ranklogs.com/1190/backlink-building-strategies/) and [How to Get Backlinks in 2026: 10 Tactics That Actually Work](https://www.semrush.com/blog/how-to-get-backlinks/).
+Source playbooks:
+
+- [50 Proven Backlink Building Strategies for 2025](https://blog.ranklogs.com/1190/backlink-building-strategies/)
+- [How to Get Backlinks in 2026: 10 Tactics That Actually Work](https://www.semrush.com/blog/how-to-get-backlinks/)
+- [Best 20 Backlink Strategies to boost SEO & Branding](https://www.manuelawillbold.com/top-backlink-strategies-for-seo/)
+- [Link-Building Strategies](https://nowthisdigital.com/link-building-strategies/)
 
 ## Goal
 
@@ -62,10 +67,6 @@ Do not plan from assumptions — base every recommendation on what the pages act
 - **Persistence** — the page stays live, updated, and continues to get crawled and cited.
 - **Retrievability** — the mention lives in formats AI systems can reliably extract: body copy, resource lists, podcast show notes and transcripts, video descriptions, newsletter archives.
 
-## Strategy menu
-
-Select only the few strategies that genuinely fit each page — do not apply all of them. Match each to the page's topic, audience, and the priorities above.
-
 ### 1. On-site linkable assets
 
 - **Comprehensive guides** — long-form, example-rich coverage of a topic with onward links; longer guides earn disproportionately more links.
@@ -84,6 +85,8 @@ For any section that is static text only, recommend a concrete, client-side-frie
 - Interactive slideshows or timelines that add motion to otherwise static assets.
 - Embedded resources (diagrams, comparison tables) inside any visual or video content.
 
+Keep any such addition intuitive and dependency-light so it runs from both `file://` and `https://` (the site's only external library is AnimeJS). Interactive assets raise dwell time and are themselves linkable — once one is live, it becomes a target for the outreach steps below.
+
 ### 3. Expert authority and co-citation
 
 - **Expert roundups** featuring recognized voices on the topic (who may link back).
@@ -95,6 +98,54 @@ For any section that is static text only, recommend a concrete, client-side-frie
 - **Professional communities** aligned with the page's topic.
 - **Niche industry forums** and discussion groups where genuine participation builds credibility.
 - **Topic-specific podcasts** — many link to guests in their show notes and transcripts.
+
+### 5. Skyscraper technique
+
+Find an existing page on the same topic that already attracts quality backlinks, publish something clearly more thorough and current, then ask the sites linking to the weaker page to link to the better one instead. Best suited to topics where the maintainer has the depth to genuinely out-research the incumbent.
+
+- Identify a well-linked competitor page, using the page's own subject as the seed.
+- Build a markedly better version on-site: deeper coverage, current examples, original diagrams or data.
+- Reach out directly to the specific sites linking to the weaker page (name concrete targets and supply a template in the Output format). The aim is citations and referral traffic from peers and educators — not sales leads.
+
+### 6. Internal linking
+
+A supporting on-site tactic: link related pages to one another with descriptive anchor text so authority and context flow between them and readers discover more of the site. This page set is small and thematically connected — a guide, its matching `tech_resources` section, and a related `tech_takes` opinion naturally reference one another.
+
+- Add a link only where the connection is real (guide → resource list for the same topic → relevant opinion piece), never as filler.
+- Use specific, descriptive anchors ("reinforcement learning guide"), not repeated exact-match keywords — keyword-stuffed anchors read as manipulation.
+- This tactic is on-site only; its **Outreach steps** entry in the Output format is "N/A — internal."
+
+### 7. Content syndication
+
+Republish a full piece (a guide or opinion) on a developer-publishing platform that honors a canonical link — Medium, dev.to, or Hashnode — with the canonical URL pointing back to the GitHub Pages original. This reaches a second audience and earns a contextual link without a duplicate-content penalty. It is distinct from the social self-promotion ruled out in Requirements: syndication republishes the whole article under a canonical tag rather than dropping promo links into a feed. LinkedIn's article feature is a reasonable professional-network option for the same purpose.
+
+- Syndicate selectively — one or two pieces strong enough to stand alone, not the whole site.
+- Set the canonical to the on-site URL so the original keeps its ranking authority.
+- Because the site is static, the canonical lives in the syndication platform's own canonical field; there is no server redirect to manage.
+
+### 8. Pillar pages and definitive-resource positioning
+
+Consolidate scattered coverage of one core topic into a single comprehensive hub page that becomes the obvious thing to link to. Where the site currently spreads a topic across a guide, a resource list, and an opinion, a well-structured pillar page (linking out to those details) gives other sites one authoritative URL to cite instead of several thinner ones.
+
+- Choose a topic the site covers in depth and that others in the field actively reference (e.g. one of the AI/ML or cybersecurity areas).
+- Structure it as a definitive overview that links out to the site's existing detailed pages (pairs naturally with Internal linking).
+- Keep it evergreen — revisit and update it so it stays the current best reference and keeps earning citations.
+
+### 9. Question-targeted ("what is" / "how to") series
+
+Add concise entries that answer the foundational "what is X" and "how do I do Y" questions in the site's topics, formatted to win question-based searches and to be quotable by AI answer engines. The guides page already embeds `HowTo` structured data — extend that pattern rather than inventing a new one.
+
+- Target real questions a beginner in the topic asks; the guides' existing audience is the model.
+- Answer each directly and self-containedly so the passage is extractable as a citation.
+- Mark up new how-to entries with the same `HowTo`/`FAQ` JSON-LD the site already uses, keeping the structured data valid.
+
+### 10. Sourced expert quotes in existing content
+
+Strengthen an existing page by weaving in a short, properly attributed quote from a recognized voice on the topic, then letting that person know they are featured — many will share or link to the page. This differs from the expert roundup in #3: no new post is solicited; you cite a public statement already on record and add credibility to content that already exists.
+
+- Quote real, attributable sources (a talk, paper, or post) and link to the original.
+- Notify the person that the mention is live — briefly, and without a link request.
+- Use sparingly, only where the quote genuinely supports the point; decorative quotes add nothing.
 
 ## Process
 
@@ -132,7 +183,7 @@ Give an intelligent, detailed, cohesive plan for creating or modifying the conte
 
 ### Outreach steps
 
-Name specific individuals, communities, forums, or podcasts (with direct links), and provide a concrete outreach template for each.
+Name specific individuals, communities, forums, or podcasts (with direct links), and provide a concrete outreach template for each. For a purely on-site tactic such as internal linking, mark this "N/A — internal" rather than inventing outreach.
 
 ### Expected success rate
 
