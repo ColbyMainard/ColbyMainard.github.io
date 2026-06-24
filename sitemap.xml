@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://colbymainard.github.io/</loc>
-		<lastmod>2026-06-20</lastmod>
+		<lastmod>2026-06-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -14,7 +14,7 @@
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/tech_resources.html</loc>
-		<lastmod>2026-06-20</lastmod>
+		<lastmod>2026-06-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -26,7 +26,7 @@
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/hobbies.html</loc>
-		<lastmod>2026-06-21</lastmod>
+		<lastmod>2026-06-23</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.6</priority>
 	</url>

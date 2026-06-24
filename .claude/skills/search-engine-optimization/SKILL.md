@@ -5,7 +5,7 @@ description: |
   Triggers on: search engine optimization, SEO
   Use when cleaning up content. Trigger with phrases like "seo", and "search engine optimization".
 allowed-tools: "Read, Write"
-version: 1.1.0
+version: 1.1.1
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -49,7 +49,7 @@ Audit the pages above and recommend concrete on-page and technical SEO improveme
 
 ## Inputs — read before auditing
 
-For each page, read its `<head>` (`<title>`, meta description, canonical, JSON-LD), its heading structure, and its body copy. Also read `sitemap.xml` and `robots.txt`. Base every recommendation on what the pages actually contain — note the keyword/intent each page targets and what is missing.
+For each page, read its `<head>` (`<title>`, meta description, canonical, JSON-LD), its heading structure, and its body copy. Also read `sitemap.xml`, `robots.txt`, and `llms.txt`. Base every recommendation on what the pages actually contain — note the keyword/intent each page targets and what is missing.
 
 ## Techniques (select what each page needs)
 

@@ -5,7 +5,7 @@ description: |
   Triggers on: content polishing, content cleanup
   Use when cleaning up content. Trigger with phrases like "content polishing", and "content cleanup".
 allowed-tools: "Read, Write"
-version: 1.1.0
+version: 1.1.1
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -42,7 +42,7 @@ Suggest edits that make the existing copy clearer, smoother, and more approachab
 
 ## Inputs — read before polishing
 
-Read the page(s) you have been asked to polish (default: all content pages in the table above). Edit the prose the author wrote — do not plan from assumptions about what a page says. For each page, note its audience, its current tone, and the specific rough spots.
+Read the page(s) you have been asked to polish (default: all content pages in the table above). Work from the prose the author actually wrote — do not plan from assumptions about what a page says. For each page, note its audience, its current tone, and the specific rough spots.
 
 ## What to polish (target areas)
 
