@@ -1,8 +1,10 @@
 @charset "UTF-8";
-/* https://www.w3schools.com/Css/css_selectors.asp */
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 /* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+/* https://www.w3schools.com/Css/css_selectors.asp */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
-#workHistory {
+#workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
   margin: auto;
   background-color: #200b4b;
   width: 80%;
@@ -12,333 +14,74 @@
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #workHistory h1 {
+  #workHistory h1, #education h1, #projects h1, #technicalSkills h1, #otherSkills h1, #certifications h1 {
     text-align: left;
     color: #ff3d94;
     font-size: 500%; }
-  #workHistory h2 {
+  #workHistory h2, #education h2, #projects h2, #technicalSkills h2, #otherSkills h2, #certifications h2 {
     text-align: left;
     color: #b5307e;
     font-size: 300%; }
-  #workHistory h3 {
+  #workHistory h3, #education h3, #projects h3, #technicalSkills h3, #otherSkills h3, #certifications h3 {
     text-align: left;
     color: #b5307e;
     font-size: 200%; }
-  #workHistory h4 {
+  #workHistory h4, #education h4, #projects h4, #technicalSkills h4, #otherSkills h4, #certifications h4 {
     text-align: left;
     color: #b5307e;
     font-size: 175%; }
-  #workHistory p {
+  #workHistory p, #education p, #projects p, #technicalSkills p, #otherSkills p, #certifications p {
     text-align: left;
     color: #b5307e;
     font-size: 100%; }
-  #workHistory a:link {
+  #workHistory a:link, #education a:link, #projects a:link, #technicalSkills a:link, #otherSkills a:link, #certifications a:link {
     text-align: left;
     color: #b5307e;
     font-size: 100%; }
-  #workHistory a:visited {
+  #workHistory a:visited, #education a:visited, #projects a:visited, #technicalSkills a:visited, #otherSkills a:visited, #certifications a:visited {
     text-align: left;
     color: #b5307e;
     font-size: 100%; }
-  #workHistory a:hover {
+  #workHistory a:hover, #education a:hover, #projects a:hover, #technicalSkills a:hover, #otherSkills a:hover, #certifications a:hover {
     text-align: left;
     color: #b5307e;
     font-size: 100%; }
-  #workHistory a:active {
+  #workHistory a:active, #education a:active, #projects a:active, #technicalSkills a:active, #otherSkills a:active, #certifications a:active {
     text-align: left;
     color: #b5307e;
     font-size: 100%; }
-  #workHistory ul {
+  #workHistory ul, #education ul, #projects ul, #technicalSkills ul, #otherSkills ul, #certifications ul {
     text-align: left; }
-    #workHistory ul li {
+    #workHistory ul li, #education ul li, #projects ul li, #technicalSkills ul li, #otherSkills ul li, #certifications ul li {
       color: #b5307e;
       font-size: 100%; }
 
-#education {
-  margin: auto;
-  background-color: #200b4b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #education h1 {
-    text-align: left;
-    color: #ff3d94;
-    font-size: 500%; }
-  #education h2 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 300%; }
-  #education h3 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 200%; }
-  #education h4 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 175%; }
-  #education p {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #education a:link {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #education a:visited {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #education a:hover {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #education a:active {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #education ul {
-    text-align: left; }
-    #education ul li {
+#education table {
+  text-align: left;
+  border-collapse: collapse;
+  border-color: #b5307e;
+  border-style: solid; }
+  #education table tr {
+    border-color: #b5307e; }
+    #education table tr th {
+      border-color: #b5307e;
       color: #b5307e;
-      font-size: 100%; }
-  #education table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #b5307e;
-    border-style: solid; }
-    #education table tr {
-      border-color: #b5307e; }
-      #education table tr th {
-        border-color: #b5307e;
+      font-size: 100%;
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double; }
+    #education table tr td {
+      border-color: #b5307e;
+      color: #b5307e;
+      font-size: 100%;
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove; }
+      #education table tr td ul li {
         color: #b5307e;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #education table tr td {
-        border-color: #b5307e;
-        color: #b5307e;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-        #education table tr td ul li {
-          color: #b5307e;
-          font-size: 100%; }
-
-#projects {
-  margin: auto;
-  background-color: #200b4b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #projects h1 {
-    text-align: left;
-    color: #ff3d94;
-    font-size: 500%; }
-  #projects h2 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 300%; }
-  #projects h3 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 200%; }
-  #projects h4 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 175%; }
-  #projects p {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #projects a:link {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #projects a:visited {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #projects a:hover {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #projects a:active {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #projects ul {
-    text-align: left; }
-    #projects ul li {
-      color: #b5307e;
-      font-size: 100%; }
-
-#technicalSkills {
-  margin: auto;
-  background-color: #200b4b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #technicalSkills h1 {
-    text-align: left;
-    color: #ff3d94;
-    font-size: 500%; }
-  #technicalSkills h2 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 300%; }
-  #technicalSkills h3 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 200%; }
-  #technicalSkills h4 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 175%; }
-  #technicalSkills p {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #technicalSkills a:link {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #technicalSkills a:visited {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #technicalSkills a:hover {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #technicalSkills a:active {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #technicalSkills ul {
-    text-align: left; }
-    #technicalSkills ul li {
-      color: #b5307e;
-      font-size: 100%; }
-
-#otherSkills {
-  margin: auto;
-  background-color: #200b4b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #otherSkills h1 {
-    text-align: left;
-    color: #ff3d94;
-    font-size: 500%; }
-  #otherSkills h2 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 300%; }
-  #otherSkills h3 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 200%; }
-  #otherSkills h4 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 175%; }
-  #otherSkills p {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #otherSkills a:link {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #otherSkills a:visited {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #otherSkills a:hover {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #otherSkills a:active {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #otherSkills ul {
-    text-align: left; }
-    #otherSkills ul li {
-      color: #b5307e;
-      font-size: 100%; }
-
-#certifications {
-  margin: auto;
-  background-color: #200b4b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #certifications h1 {
-    text-align: left;
-    color: #ff3d94;
-    font-size: 500%; }
-  #certifications h2 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 300%; }
-  #certifications h3 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 200%; }
-  #certifications h4 {
-    text-align: left;
-    color: #b5307e;
-    font-size: 175%; }
-  #certifications p {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #certifications a:link {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #certifications a:visited {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #certifications a:hover {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #certifications a:active {
-    text-align: left;
-    color: #b5307e;
-    font-size: 100%; }
-  #certifications ul {
-    text-align: left; }
-    #certifications ul li {
-      color: #b5307e;
-      font-size: 100%; }
+        font-size: 100%; }
 
 /*
  * Animation initial states — only applied when JS is active.
@@ -485,7 +228,7 @@ html.js-animations #contactMe > address {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
-#quantumComputing {
+#quantumComputing, #photography, #dungeonsAndDragons, #history {
   margin: auto;
   background-color: #34495E;
   width: 80%;
@@ -495,220 +238,78 @@ html.js-animations #contactMe > address {
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #quantumComputing h1 {
+  #quantumComputing h1, #photography h1, #dungeonsAndDragons h1, #history h1 {
     text-align: left;
     color: #D5D5DB;
     font-size: 500%; }
-  #quantumComputing h2 {
+  #quantumComputing h2, #photography h2, #dungeonsAndDragons h2, #history h2 {
     text-align: left;
     color: #AAB7B8;
     font-size: 300%; }
-  #quantumComputing h3 {
+  #quantumComputing h3, #photography h3, #dungeonsAndDragons h3, #history h3 {
     text-align: left;
     color: #85929E;
     font-size: 200%; }
-  #quantumComputing p {
+  #quantumComputing p, #photography p, #dungeonsAndDragons p, #history p {
     text-align: left;
     color: #5D6D7E;
     font-size: 100%; }
-  #quantumComputing a:link {
+  #quantumComputing a:link, #photography a:link, #dungeonsAndDragons a:link, #history a:link {
     text-align: left;
     color: #5D6D7E;
     font-size: 100%; }
-  #quantumComputing a:visited {
+  #quantumComputing a:visited, #photography a:visited, #dungeonsAndDragons a:visited, #history a:visited {
     text-align: left;
     color: #5D6D7E;
     font-size: 100%; }
-  #quantumComputing a:hover {
+  #quantumComputing a:hover, #photography a:hover, #dungeonsAndDragons a:hover, #history a:hover {
     text-align: left;
     color: #5D6D7E;
     font-size: 100%; }
-  #quantumComputing a:active {
+  #quantumComputing a:active, #photography a:active, #dungeonsAndDragons a:active, #history a:active {
     text-align: left;
     color: #5D6D7E;
     font-size: 100%; }
-  #quantumComputing ul {
+  #quantumComputing ul, #photography ul, #dungeonsAndDragons ul, #history ul {
     text-align: left; }
-    #quantumComputing ul li {
-      color: #5D6D7E;
-      font-size: 100%; }
-  #quantumComputing iframe {
-    width: 560px;
-    height: 315px; }
-
-#photography {
-  margin: auto;
-  background-color: #34495E;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #photography h1 {
-    text-align: left;
-    color: #D5D5DB;
-    font-size: 500%; }
-  #photography h2 {
-    text-align: left;
-    color: #AAB7B8;
-    font-size: 300%; }
-  #photography h3 {
-    text-align: left;
-    color: #85929E;
-    font-size: 200%; }
-  #photography p {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #photography a:link {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #photography a:visited {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #photography a:hover {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #photography a:active {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #photography ul {
-    text-align: left; }
-    #photography ul li {
+    #quantumComputing ul li, #photography ul li, #dungeonsAndDragons ul li, #history ul li {
       color: #5D6D7E;
       font-size: 100%; }
 
-#dungeonsAndDragons {
-  margin: auto;
-  background-color: #34495E;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #dungeonsAndDragons h1 {
-    text-align: left;
-    color: #D5D5DB;
-    font-size: 500%; }
-  #dungeonsAndDragons h2 {
-    text-align: left;
-    color: #AAB7B8;
-    font-size: 300%; }
-  #dungeonsAndDragons h3 {
-    text-align: left;
-    color: #85929E;
-    font-size: 200%; }
-  #dungeonsAndDragons p {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #dungeonsAndDragons a:link {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #dungeonsAndDragons a:visited {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #dungeonsAndDragons a:hover {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #dungeonsAndDragons a:active {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #dungeonsAndDragons ul {
-    text-align: left; }
-    #dungeonsAndDragons ul li {
-      color: #5D6D7E;
-      font-size: 100%; }
+#quantumComputing iframe {
+  width: 560px;
+  height: 315px; }
 
-#history {
-  margin: auto;
-  background-color: #34495E;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #history h1 {
-    text-align: left;
-    color: #D5D5DB;
-    font-size: 500%; }
-  #history h2 {
-    text-align: left;
-    color: #AAB7B8;
-    font-size: 300%; }
-  #history h3 {
-    text-align: left;
-    color: #85929E;
-    font-size: 200%; }
-  #history p {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #history blockquote {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 150%; }
-  #history a:link {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #history a:visited {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #history a:hover {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #history a:active {
-    text-align: left;
-    color: #5D6D7E;
-    font-size: 100%; }
-  #history ul {
-    text-align: left; }
-    #history ul li {
+#history blockquote {
+  text-align: left;
+  color: #5D6D7E;
+  font-size: 150%; }
+#history table {
+  text-align: left;
+  border-collapse: collapse;
+  border-color: #5D6D7E;
+  border-style: solid; }
+  #history table tr {
+    border-color: #5D6D7E; }
+    #history table tr th {
+      border-color: #5D6D7E;
       color: #5D6D7E;
-      font-size: 100%; }
-  #history table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #5D6D7E;
-    border-style: solid; }
-    #history table tr {
-      border-color: #5D6D7E; }
-      #history table tr th {
-        border-color: #5D6D7E;
+      font-size: 100%;
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double; }
+    #history table tr td {
+      border-color: #5D6D7E;
+      color: #5D6D7E;
+      font-size: 100%;
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove; }
+      #history table tr td ul li {
         color: #5D6D7E;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #history table tr td {
-        border-color: #5D6D7E;
-        color: #5D6D7E;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-        #history table tr td ul li {
-          color: #5D6D7E;
-          font-size: 100%; }
+        font-size: 100%; }
 
 /*
  * Animation initial states — only applied when JS is active.
@@ -847,7 +448,9 @@ html.js-animations #contactMe > iframe {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
-#KAN {
+/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3;
+   #AGI and #Privacy override it to $dark_blue_gray_4 below. */
+#KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement {
   margin: auto;
   background-color: #20203c;
   width: 80%;
@@ -857,443 +460,125 @@ html.js-animations #contactMe > iframe {
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #KAN h1 {
+  #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1 {
     text-align: left;
     font-size: 500%;
     color: #ff5c5c; }
-  #KAN h2 {
+  #KAN h2, #Cryptocurrency h2, #FutureOfQuantum h2, #AGI h2, #Privacy h2, #ProductPlacement h2 {
     text-align: left;
     font-size: 300%;
     color: #c2c2d1; }
-  #KAN h3 {
+  #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3 {
     text-align: left;
     font-size: 200%;
     color: #7a7a99; }
-  #KAN h4 {
+  #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4 {
     text-align: left;
     font-size: 175%;
     color: #7a7a99; }
-  #KAN a:link {
+  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link {
     text-align: left;
     font-size: 100%;
     color: #7a7a99; }
-  #KAN a:visited {
+  #KAN a:visited, #Cryptocurrency a:visited, #FutureOfQuantum a:visited, #AGI a:visited, #Privacy a:visited, #ProductPlacement a:visited {
     text-align: left;
     font-size: 100%;
     color: #7a7a99; }
-  #KAN a:hover {
+  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover {
     text-align: left;
     font-size: 100%;
     color: #7a7a99; }
-  #KAN a:active {
+  #KAN a:active, #Cryptocurrency a:active, #FutureOfQuantum a:active, #AGI a:active, #Privacy a:active, #ProductPlacement a:active {
     text-align: left;
     font-size: 100%;
     color: #7a7a99; }
-  #KAN p {
+  #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p {
     text-align: left;
     font-size: 100%;
     color: #7a7a99; }
-  #KAN ul {
+  #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul {
     text-align: left; }
-    #KAN ul li {
+    #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li {
       font-size: 100%;
       color: #7a7a99; }
 
-#Cryptocurrency {
-  margin: auto;
-  background-color: #20203c;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #Cryptocurrency h1 {
-    text-align: left;
-    font-size: 500%;
-    color: #ff5c5c; }
-  #Cryptocurrency h2 {
-    text-align: left;
-    font-size: 300%;
-    color: #c2c2d1; }
-  #Cryptocurrency h3 {
-    text-align: left;
-    font-size: 200%;
-    color: #7a7a99; }
-  #Cryptocurrency h4 {
-    text-align: left;
-    font-size: 175%;
-    color: #7a7a99; }
-  #Cryptocurrency a:link {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Cryptocurrency a:visited {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Cryptocurrency a:hover {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Cryptocurrency a:active {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Cryptocurrency p {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Cryptocurrency ul {
-    text-align: left; }
-    #Cryptocurrency ul li {
+/* Shared table styling for opinions that include a comparison table. */
+#Cryptocurrency table, #FutureOfQuantum table {
+  text-align: left;
+  border-collapse: collapse;
+  border-color: #7a7a99;
+  border-style: solid; }
+  #Cryptocurrency table tr, #FutureOfQuantum table tr {
+    border-color: #7a7a99; }
+    #Cryptocurrency table tr th, #FutureOfQuantum table tr th {
+      border-color: #7a7a99;
+      color: #7a7a99;
       font-size: 100%;
-      color: #7a7a99; }
-  #Cryptocurrency table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #7a7a99;
-    border-style: solid; }
-    #Cryptocurrency table tr {
-      border-color: #7a7a99; }
-      #Cryptocurrency table tr th {
-        border-color: #7a7a99;
-        color: #7a7a99;
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double;
+      /* unvisited link */
+      /* visited link */
+      /* mouse over link */
+      /* selected link */ }
+      #Cryptocurrency table tr th a:link, #FutureOfQuantum table tr th a:link {
         font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double;
-        /* unvisited link */
-        /* visited link */
-        /* mouse over link */
-        /* selected link */ }
-        #Cryptocurrency table tr th a:link {
-          font-size: 100%;
-          color: #7a7a99; }
-        #Cryptocurrency table tr th a:visited {
-          font-size: 100%;
-          color: #7a7a99; }
-        #Cryptocurrency table tr th a:hover {
-          font-size: 100%;
-          color: #7a7a99; }
-        #Cryptocurrency table tr th a:active {
-          font-size: 100%;
-          color: #7a7a99; }
-      #Cryptocurrency table tr td {
-        border-color: #7a7a99;
-        color: #7a7a99;
+        color: #7a7a99; }
+      #Cryptocurrency table tr th a:visited, #FutureOfQuantum table tr th a:visited {
         font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove;
-        /* unvisited link */
-        /* visited link */
-        /* mouse over link */
-        /* selected link */ }
-        #Cryptocurrency table tr td a:link {
-          font-size: 100%;
-          color: #7a7a99; }
-        #Cryptocurrency table tr td a:visited {
-          font-size: 100%;
-          color: #7a7a99; }
-        #Cryptocurrency table tr td a:hover {
-          font-size: 100%;
-          color: #7a7a99; }
-        #Cryptocurrency table tr td a:active {
-          font-size: 100%;
-          color: #7a7a99; }
-
-#FutureOfQuantum {
-  margin: auto;
-  background-color: #20203c;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #FutureOfQuantum h1 {
-    text-align: left;
-    font-size: 500%;
-    color: #ff5c5c; }
-  #FutureOfQuantum h2 {
-    text-align: left;
-    font-size: 300%;
-    color: #c2c2d1; }
-  #FutureOfQuantum h3 {
-    text-align: left;
-    font-size: 200%;
-    color: #7a7a99; }
-  #FutureOfQuantum h4 {
-    text-align: left;
-    font-size: 175%;
-    color: #7a7a99; }
-  #FutureOfQuantum a:link {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #FutureOfQuantum a:visited {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #FutureOfQuantum a:hover {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #FutureOfQuantum a:active {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #FutureOfQuantum p {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #FutureOfQuantum ul {
-    text-align: left; }
-    #FutureOfQuantum ul li {
+        color: #7a7a99; }
+      #Cryptocurrency table tr th a:hover, #FutureOfQuantum table tr th a:hover {
+        font-size: 100%;
+        color: #7a7a99; }
+      #Cryptocurrency table tr th a:active, #FutureOfQuantum table tr th a:active {
+        font-size: 100%;
+        color: #7a7a99; }
+    #Cryptocurrency table tr td, #FutureOfQuantum table tr td {
+      border-color: #7a7a99;
+      color: #7a7a99;
       font-size: 100%;
-      color: #7a7a99; }
-  #FutureOfQuantum table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #7a7a99;
-    border-style: solid; }
-    #FutureOfQuantum table tr {
-      border-color: #7a7a99; }
-      #FutureOfQuantum table tr th {
-        border-color: #7a7a99;
-        color: #7a7a99;
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove;
+      /* unvisited link */
+      /* visited link */
+      /* mouse over link */
+      /* selected link */ }
+      #Cryptocurrency table tr td a:link, #FutureOfQuantum table tr td a:link {
         font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double;
-        /* unvisited link */
-        /* visited link */
-        /* mouse over link */
-        /* selected link */ }
-        #FutureOfQuantum table tr th a:link {
-          font-size: 100%;
-          color: #7a7a99; }
-        #FutureOfQuantum table tr th a:visited {
-          font-size: 100%;
-          color: #7a7a99; }
-        #FutureOfQuantum table tr th a:hover {
-          font-size: 100%;
-          color: #7a7a99; }
-        #FutureOfQuantum table tr th a:active {
-          font-size: 100%;
-          color: #7a7a99; }
-      #FutureOfQuantum table tr td {
-        border-color: #7a7a99;
-        color: #7a7a99;
+        color: #7a7a99; }
+      #Cryptocurrency table tr td a:visited, #FutureOfQuantum table tr td a:visited {
         font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove;
-        /* unvisited link */
-        /* visited link */
-        /* mouse over link */
-        /* selected link */ }
-        #FutureOfQuantum table tr td a:link {
-          font-size: 100%;
-          color: #7a7a99; }
-        #FutureOfQuantum table tr td a:visited {
-          font-size: 100%;
-          color: #7a7a99; }
-        #FutureOfQuantum table tr td a:hover {
-          font-size: 100%;
-          color: #7a7a99; }
-        #FutureOfQuantum table tr td a:active {
-          font-size: 100%;
-          color: #7a7a99; }
-
-#AGI {
-  margin: auto;
-  background-color: #20203c;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #AGI h1 {
-    text-align: left;
-    font-size: 500%;
-    color: #ff5c5c; }
-  #AGI h2 {
-    text-align: left;
-    font-size: 300%;
-    color: #c2c2d1; }
-  #AGI h3 {
-    text-align: left;
-    font-size: 200%;
-    color: #c2c2d1; }
-  #AGI h4 {
-    text-align: left;
-    font-size: 175%;
-    color: #7a7a99; }
-  #AGI a:link {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #AGI a:visited {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #AGI a:hover {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #AGI a:active {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #AGI p {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #AGI ul {
-    text-align: left; }
-    #AGI ul li {
-      font-size: 100%;
-      color: #7a7a99; }
-  #AGI dl {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-    #AGI dl dt {
-      font-weight: bold;
-      text-decoration: underline; }
-    #AGI dl dd {
-      margin: 0;
-      padding: 0 0 2em 0; }
-      #AGI dl dd ul li {
+        color: #7a7a99; }
+      #Cryptocurrency table tr td a:hover, #FutureOfQuantum table tr td a:hover {
+        font-size: 100%;
+        color: #7a7a99; }
+      #Cryptocurrency table tr td a:active, #FutureOfQuantum table tr td a:active {
         font-size: 100%;
         color: #7a7a99; }
 
-#Privacy {
-  margin: auto;
-  background-color: #20203c;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #Privacy h1 {
-    text-align: left;
-    font-size: 500%;
-    color: #ff5c5c; }
-  #Privacy h2 {
-    text-align: left;
-    font-size: 300%;
-    color: #c2c2d1; }
-  #Privacy h3 {
-    text-align: left;
-    font-size: 200%;
-    color: #c2c2d1; }
-  #Privacy h4 {
-    text-align: left;
-    font-size: 175%;
-    color: #7a7a99; }
-  #Privacy a:link {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Privacy a:visited {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Privacy a:hover {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Privacy a:active {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Privacy p {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #Privacy ul {
-    text-align: left; }
-    #Privacy ul li {
+/* Shared definition-list styling for opinions that use a glossary. */
+#AGI dl, #Privacy dl {
+  text-align: left;
+  font-size: 100%;
+  color: #7a7a99; }
+  #AGI dl dt, #Privacy dl dt {
+    font-weight: bold;
+    text-decoration: underline; }
+  #AGI dl dd, #Privacy dl dd {
+    margin: 0;
+    padding: 0 0 2em 0; }
+    #AGI dl dd ul li, #Privacy dl dd ul li {
       font-size: 100%;
       color: #7a7a99; }
-  #Privacy dl {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-    #Privacy dl dt {
-      font-weight: bold;
-      text-decoration: underline; }
-    #Privacy dl dd {
-      margin: 0;
-      padding: 0 0 2em 0; }
-      #Privacy dl dd ul li {
-        font-size: 100%;
-        color: #7a7a99; }
 
-#ProductPlacement {
-  margin: auto;
-  background-color: #20203c;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #ProductPlacement h1 {
-    text-align: left;
-    font-size: 500%;
-    color: #ff5c5c; }
-  #ProductPlacement h2 {
-    text-align: left;
-    font-size: 300%;
-    color: #c2c2d1; }
-  #ProductPlacement h3 {
-    text-align: left;
-    font-size: 200%;
-    color: #7a7a99; }
-  #ProductPlacement h4 {
-    text-align: left;
-    font-size: 175%;
-    color: #7a7a99; }
-  #ProductPlacement a:link {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #ProductPlacement a:visited {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #ProductPlacement a:hover {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #ProductPlacement a:active {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #ProductPlacement p {
-    text-align: left;
-    font-size: 100%;
-    color: #7a7a99; }
-  #ProductPlacement ul {
-    text-align: left; }
-    #ProductPlacement ul li {
-      font-size: 100%;
-      color: #7a7a99; }
+#AGI h3 {
+  color: #c2c2d1; }
+
+#Privacy h3 {
+  color: #c2c2d1; }
 
 /*
  * Animation initial states — only applied when JS is active.
@@ -1467,7 +752,7 @@ html.js-animations #contactMe > address {
     transition: none; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
-#cybersecurityResources {
+#cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources {
   margin: auto;
   background-color: #1f1b79;
   width: 80%;
@@ -1477,55 +762,55 @@ html.js-animations #contactMe > address {
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #cybersecurityResources h1 {
+  #cybersecurityResources h1, #artificialIntelligenceResources h1, #cppResources h1, #pythonResources h1, #scriptingResources h1, #operatingSystemsResources h1 {
     text-align: left;
     color: #f9c54e;
     font-size: 500%; }
-  #cybersecurityResources h2 {
+  #cybersecurityResources h2, #artificialIntelligenceResources h2, #cppResources h2, #pythonResources h2, #scriptingResources h2, #operatingSystemsResources h2 {
     text-align: left;
     color: #d07e6c;
     font-size: 300%; }
-  #cybersecurityResources h3 {
+  #cybersecurityResources h3, #artificialIntelligenceResources h3, #cppResources h3, #pythonResources h3, #scriptingResources h3, #operatingSystemsResources h3 {
     text-align: left;
     color: #8b5aba;
     font-size: 200%; }
-  #cybersecurityResources p {
+  #cybersecurityResources p, #artificialIntelligenceResources p, #cppResources p, #pythonResources p, #scriptingResources p, #operatingSystemsResources p {
     text-align: left;
     color: #8b5aba;
     font-size: 100%; }
-  #cybersecurityResources blockquote {
+  #cybersecurityResources blockquote, #artificialIntelligenceResources blockquote, #cppResources blockquote, #pythonResources blockquote, #scriptingResources blockquote, #operatingSystemsResources blockquote {
     text-align: left;
     color: #8b5aba;
     font-size: 150%; }
-  #cybersecurityResources a:link {
+  #cybersecurityResources a:link, #artificialIntelligenceResources a:link, #cppResources a:link, #pythonResources a:link, #scriptingResources a:link, #operatingSystemsResources a:link {
     text-align: left;
     color: #8b5aba;
     font-size: 100%; }
-  #cybersecurityResources a:visited {
+  #cybersecurityResources a:visited, #artificialIntelligenceResources a:visited, #cppResources a:visited, #pythonResources a:visited, #scriptingResources a:visited, #operatingSystemsResources a:visited {
     text-align: left;
     color: #8b5aba;
     font-size: 100%; }
-  #cybersecurityResources a:hover {
+  #cybersecurityResources a:hover, #artificialIntelligenceResources a:hover, #cppResources a:hover, #pythonResources a:hover, #scriptingResources a:hover, #operatingSystemsResources a:hover {
     text-align: left;
     color: #8b5aba;
     font-size: 100%; }
-  #cybersecurityResources a:active {
+  #cybersecurityResources a:active, #artificialIntelligenceResources a:active, #cppResources a:active, #pythonResources a:active, #scriptingResources a:active, #operatingSystemsResources a:active {
     text-align: left;
     color: #8b5aba;
     font-size: 100%; }
-  #cybersecurityResources ul {
+  #cybersecurityResources ul, #artificialIntelligenceResources ul, #cppResources ul, #pythonResources ul, #scriptingResources ul, #operatingSystemsResources ul {
     text-align: left; }
-    #cybersecurityResources ul li {
+    #cybersecurityResources ul li, #artificialIntelligenceResources ul li, #cppResources ul li, #pythonResources ul li, #scriptingResources ul li, #operatingSystemsResources ul li {
       color: #8b5aba;
       font-size: 100%; }
-  #cybersecurityResources table {
+  #cybersecurityResources table, #artificialIntelligenceResources table, #cppResources table, #pythonResources table, #scriptingResources table, #operatingSystemsResources table {
     text-align: left;
     border-collapse: collapse;
     border-color: #8b5aba;
     border-style: solid; }
-    #cybersecurityResources table tr {
+    #cybersecurityResources table tr, #artificialIntelligenceResources table tr, #cppResources table tr, #pythonResources table tr, #scriptingResources table tr, #operatingSystemsResources table tr {
       border-color: #8b5aba; }
-      #cybersecurityResources table tr th {
+      #cybersecurityResources table tr th, #artificialIntelligenceResources table tr th, #cppResources table tr th, #pythonResources table tr th, #scriptingResources table tr th, #operatingSystemsResources table tr th {
         border-color: #8b5aba;
         color: #8b5aba;
         font-size: 100%;
@@ -1533,383 +818,7 @@ html.js-animations #contactMe > address {
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
-      #cybersecurityResources table tr td {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-
-#artificialIntelligenceResources {
-  width: 80%;
-  margin: auto;
-  background-color: #1f1b79;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #artificialIntelligenceResources h1 {
-    text-align: left;
-    color: #f9c54e;
-    font-size: 500%; }
-  #artificialIntelligenceResources h2 {
-    text-align: left;
-    color: #d07e6c;
-    font-size: 300%; }
-  #artificialIntelligenceResources h3 {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 200%; }
-  #artificialIntelligenceResources p {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #artificialIntelligenceResources blockquote {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 150%; }
-  #artificialIntelligenceResources a:link {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #artificialIntelligenceResources a:visited {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #artificialIntelligenceResources a:hover {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #artificialIntelligenceResources a:active {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #artificialIntelligenceResources ul {
-    text-align: left; }
-    #artificialIntelligenceResources ul li {
-      color: #8b5aba;
-      font-size: 100%; }
-  #artificialIntelligenceResources table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #8b5aba;
-    border-style: solid; }
-    #artificialIntelligenceResources table tr {
-      border-color: #8b5aba; }
-      #artificialIntelligenceResources table tr th {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #artificialIntelligenceResources table tr td {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-
-#cppResources {
-  margin: auto;
-  background-color: #1f1b79;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #cppResources h1 {
-    text-align: left;
-    color: #f9c54e;
-    font-size: 500%; }
-  #cppResources h2 {
-    text-align: left;
-    color: #d07e6c;
-    font-size: 300%; }
-  #cppResources h3 {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 200%; }
-  #cppResources p {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #cppResources blockquote {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 150%; }
-  #cppResources a:link {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #cppResources a:visited {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #cppResources a:hover {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #cppResources a:active {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #cppResources ul {
-    text-align: left; }
-    #cppResources ul li {
-      color: #8b5aba;
-      font-size: 100%; }
-  #cppResources table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #8b5aba;
-    border-style: solid; }
-    #cppResources table tr {
-      border-color: #8b5aba; }
-      #cppResources table tr th {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #cppResources table tr td {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-
-#pythonResources {
-  margin: auto;
-  background-color: #1f1b79;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #pythonResources h1 {
-    text-align: left;
-    color: #f9c54e;
-    font-size: 500%; }
-  #pythonResources h2 {
-    text-align: left;
-    color: #d07e6c;
-    font-size: 300%; }
-  #pythonResources h3 {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 200%; }
-  #pythonResources p {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #pythonResources blockquote {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 150%; }
-  #pythonResources a:link {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #pythonResources a:visited {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #pythonResources a:hover {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #pythonResources a:active {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #pythonResources ul {
-    text-align: left; }
-    #pythonResources ul li {
-      color: #8b5aba;
-      font-size: 100%; }
-  #pythonResources table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #8b5aba;
-    border-style: solid; }
-    #pythonResources table tr {
-      border-color: #8b5aba; }
-      #pythonResources table tr th {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #pythonResources table tr td {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-
-#scriptingResources {
-  margin: auto;
-  background-color: #1f1b79;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #scriptingResources h1 {
-    text-align: left;
-    color: #f9c54e;
-    font-size: 500%; }
-  #scriptingResources h2 {
-    text-align: left;
-    color: #d07e6c;
-    font-size: 300%; }
-  #scriptingResources h3 {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 200%; }
-  #scriptingResources p {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #scriptingResources blockquote {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 150%; }
-  #scriptingResources a:link {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #scriptingResources a:visited {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #scriptingResources a:hover {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #scriptingResources a:active {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #scriptingResources ul {
-    text-align: left; }
-    #scriptingResources ul li {
-      color: #8b5aba;
-      font-size: 100%; }
-  #scriptingResources table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #8b5aba;
-    border-style: solid; }
-    #scriptingResources table tr {
-      border-color: #8b5aba; }
-      #scriptingResources table tr th {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #scriptingResources table tr td {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-left-style: groove; }
-
-#operatingSystemsResources {
-  margin: auto;
-  background-color: #1f1b79;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #operatingSystemsResources h1 {
-    text-align: left;
-    color: #f9c54e;
-    font-size: 500%; }
-  #operatingSystemsResources h2 {
-    text-align: left;
-    color: #d07e6c;
-    font-size: 300%; }
-  #operatingSystemsResources h3 {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 200%; }
-  #operatingSystemsResources p {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #operatingSystemsResources blockquote {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 150%; }
-  #operatingSystemsResources a:link {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #operatingSystemsResources a:visited {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #operatingSystemsResources a:hover {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #operatingSystemsResources a:active {
-    text-align: left;
-    color: #8b5aba;
-    font-size: 100%; }
-  #operatingSystemsResources ul {
-    text-align: left; }
-    #operatingSystemsResources ul li {
-      color: #8b5aba;
-      font-size: 100%; }
-  #operatingSystemsResources table {
-    text-align: left;
-    border-collapse: collapse;
-    border-color: #8b5aba;
-    border-style: solid; }
-    #operatingSystemsResources table tr {
-      border-color: #8b5aba; }
-      #operatingSystemsResources table tr th {
-        border-color: #8b5aba;
-        color: #8b5aba;
-        font-size: 100%;
-        border-top-style: double;
-        border-right-style: double;
-        border-bottom-style: double;
-        border-left-style: double; }
-      #operatingSystemsResources table tr td {
+      #cybersecurityResources table tr td, #artificialIntelligenceResources table tr td, #cppResources table tr td, #pythonResources table tr td, #scriptingResources table tr td, #operatingSystemsResources table tr td {
         border-color: #8b5aba;
         color: #8b5aba;
         font-size: 100%;
@@ -2074,7 +983,7 @@ html.js-animations #contactMe > address {
   html.js-animations #contactMe > address {
     opacity: 1 !important; } }
 /* Professional Blue color palette from https://colormagic.app/palette/69f2a139972c6bd335822170 */
-#analyticsDiv {
+#analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv {
   margin: auto;
   background-color: #bf3a2b;
   width: 80%;
@@ -2084,305 +993,45 @@ html.js-animations #contactMe > address {
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #analyticsDiv h1 {
+  #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1 {
     text-align: left;
     color: #4b91e2;
     font-size: 500%; }
-  #analyticsDiv h2 {
+  #analyticsDiv h2, #thirdPartyDiv h2, #serviceWorkerDiv h2, #verificationDiv h2, #rightsDiv h2, #preferencesDiv h2 {
     text-align: left;
     color: #51b39f;
     font-size: 300%; }
-  #analyticsDiv h3 {
+  #analyticsDiv h3, #thirdPartyDiv h3, #serviceWorkerDiv h3, #verificationDiv h3, #rightsDiv h3, #preferencesDiv h3 {
     text-align: left;
     color: #f1c40e;
     font-size: 200%; }
-  #analyticsDiv h4 {
+  #analyticsDiv h4, #thirdPartyDiv h4, #serviceWorkerDiv h4, #verificationDiv h4, #rightsDiv h4, #preferencesDiv h4 {
     text-align: left;
     color: #f1c40e;
     font-size: 175%; }
-  #analyticsDiv p {
+  #analyticsDiv p, #thirdPartyDiv p, #serviceWorkerDiv p, #verificationDiv p, #rightsDiv p, #preferencesDiv p {
     text-align: left;
     color: #f1c40e;
     font-size: 100%; }
-  #analyticsDiv a:link {
+  #analyticsDiv a:link, #thirdPartyDiv a:link, #serviceWorkerDiv a:link, #verificationDiv a:link, #rightsDiv a:link, #preferencesDiv a:link {
     text-align: left;
     color: #f1c40e;
     font-size: 100%; }
-  #analyticsDiv a:visited {
+  #analyticsDiv a:visited, #thirdPartyDiv a:visited, #serviceWorkerDiv a:visited, #verificationDiv a:visited, #rightsDiv a:visited, #preferencesDiv a:visited {
     text-align: left;
     color: #f1c40e;
     font-size: 100%; }
-  #analyticsDiv a:hover {
+  #analyticsDiv a:hover, #thirdPartyDiv a:hover, #serviceWorkerDiv a:hover, #verificationDiv a:hover, #rightsDiv a:hover, #preferencesDiv a:hover {
     text-align: left;
     color: #f1c40e;
     font-size: 100%; }
-  #analyticsDiv a:active {
+  #analyticsDiv a:active, #thirdPartyDiv a:active, #serviceWorkerDiv a:active, #verificationDiv a:active, #rightsDiv a:active, #preferencesDiv a:active {
     text-align: left;
     color: #f1c40e;
     font-size: 100%; }
-  #analyticsDiv ul {
+  #analyticsDiv ul, #thirdPartyDiv ul, #serviceWorkerDiv ul, #verificationDiv ul, #rightsDiv ul, #preferencesDiv ul {
     text-align: left; }
-    #analyticsDiv ul li {
-      color: #f1c40e;
-      font-size: 100%; }
-
-#thirdPartyDiv {
-  margin: auto;
-  background-color: #bf3a2b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #thirdPartyDiv h1 {
-    text-align: left;
-    color: #4b91e2;
-    font-size: 500%; }
-  #thirdPartyDiv h2 {
-    text-align: left;
-    color: #51b39f;
-    font-size: 300%; }
-  #thirdPartyDiv h3 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 200%; }
-  #thirdPartyDiv h4 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 175%; }
-  #thirdPartyDiv p {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #thirdPartyDiv a:link {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #thirdPartyDiv a:visited {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #thirdPartyDiv a:hover {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #thirdPartyDiv a:active {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #thirdPartyDiv ul {
-    text-align: left; }
-    #thirdPartyDiv ul li {
-      color: #f1c40e;
-      font-size: 100%; }
-
-#serviceWorkerDiv {
-  margin: auto;
-  background-color: #bf3a2b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #serviceWorkerDiv h1 {
-    text-align: left;
-    color: #4b91e2;
-    font-size: 500%; }
-  #serviceWorkerDiv h2 {
-    text-align: left;
-    color: #51b39f;
-    font-size: 300%; }
-  #serviceWorkerDiv h3 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 200%; }
-  #serviceWorkerDiv h4 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 175%; }
-  #serviceWorkerDiv p {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #serviceWorkerDiv a:link {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #serviceWorkerDiv a:visited {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #serviceWorkerDiv a:hover {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #serviceWorkerDiv a:active {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #serviceWorkerDiv ul {
-    text-align: left; }
-    #serviceWorkerDiv ul li {
-      color: #f1c40e;
-      font-size: 100%; }
-
-#verificationDiv {
-  margin: auto;
-  background-color: #bf3a2b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #verificationDiv h1 {
-    text-align: left;
-    color: #4b91e2;
-    font-size: 500%; }
-  #verificationDiv h2 {
-    text-align: left;
-    color: #51b39f;
-    font-size: 300%; }
-  #verificationDiv h3 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 200%; }
-  #verificationDiv h4 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 175%; }
-  #verificationDiv p {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #verificationDiv a:link {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #verificationDiv a:visited {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #verificationDiv a:hover {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #verificationDiv a:active {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #verificationDiv ul {
-    text-align: left; }
-    #verificationDiv ul li {
-      color: #f1c40e;
-      font-size: 100%; }
-
-#rightsDiv {
-  margin: auto;
-  background-color: #bf3a2b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #rightsDiv h1 {
-    text-align: left;
-    color: #4b91e2;
-    font-size: 500%; }
-  #rightsDiv h2 {
-    text-align: left;
-    color: #51b39f;
-    font-size: 300%; }
-  #rightsDiv h3 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 200%; }
-  #rightsDiv h4 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 175%; }
-  #rightsDiv p {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #rightsDiv a:link {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #rightsDiv a:visited {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #rightsDiv a:hover {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #rightsDiv a:active {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #rightsDiv ul {
-    text-align: left; }
-    #rightsDiv ul li {
-      color: #f1c40e;
-      font-size: 100%; }
-
-#preferencesDiv {
-  margin: auto;
-  background-color: #bf3a2b;
-  width: 80%;
-  border-radius: 10px;
-  font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
-  #preferencesDiv h1 {
-    text-align: left;
-    color: #4b91e2;
-    font-size: 500%; }
-  #preferencesDiv h2 {
-    text-align: left;
-    color: #51b39f;
-    font-size: 300%; }
-  #preferencesDiv h3 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 200%; }
-  #preferencesDiv h4 {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 175%; }
-  #preferencesDiv p {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #preferencesDiv a:link {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #preferencesDiv a:visited {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #preferencesDiv a:hover {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #preferencesDiv a:active {
-    text-align: left;
-    color: #f1c40e;
-    font-size: 100%; }
-  #preferencesDiv ul {
-    text-align: left; }
-    #preferencesDiv ul li {
+    #analyticsDiv ul li, #thirdPartyDiv ul li, #serviceWorkerDiv ul li, #verificationDiv ul li, #rightsDiv ul li, #preferencesDiv ul li {
       color: #f1c40e;
       font-size: 100%; }
 
@@ -2664,9 +1313,6 @@ html.js-animations #contactMe > div.guideInfographic {
   html.js-animations #contactMe > div.guideInfographic {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
-/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 /* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
 @media (prefers-reduced-motion: no-preference) {
   html {

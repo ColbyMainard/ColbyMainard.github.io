@@ -1,20 +1,20 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 
-/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */ 
+/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 $calm_authority_1: #34495E;
 $calm_authority_2: #5D6D7E;
 $calm_authority_3: #85929E;
 $calm_authority_4: #AAB7B8;
 $calm_authority_5: #D5D5DB;
 
-// /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+// /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 // $sunset_glow_1: #ffb84d;
 // $sunset_glow_2: #ff9900;
 // $sunset_glow_3: #f47b1f;
 // $sunset_glow_4: #e64919;
 // $sunset_glow_5: #d33131;
 
-// /* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */ 
+// /* Dungeons and Dragons color palette from https://colormagic.app/palette/6715d701695c5016fd048a70 */
 // $dungeons_and_dragons_1: #4c3e3e;
 // $dungeons_and_dragons_2: #5a4e4e;
 // $dungeons_and_dragons_3: #8a6a6a;
@@ -28,7 +28,7 @@ $calm_authority_5: #D5D5DB;
 // $brown_document_background_4: #a67c5e;
 // $brown_document_background_5: #895b29;
 
-#quantumComputing {
+%hobbySection {
     margin: auto;
     background-color: $calm_authority_1;
     width: 80%;
@@ -85,191 +85,25 @@ $calm_authority_5: #D5D5DB;
             font-size: 100%;
         }
     }
+}
+
+#quantumComputing {
+    @extend %hobbySection;
     iframe {
-        width:560px; 
+        width:560px;
         height: 315px;
     }
 }
 
-#photography {
-    margin: auto;
-    background-color: $calm_authority_1;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $calm_authority_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $calm_authority_4;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $calm_authority_3;
-        font-size: 200%;
-    }
-    p {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $calm_authority_2;
-            font-size: 100%;
-        }
-    }
-}
-
-#dungeonsAndDragons {
-    margin: auto;
-    background-color: $calm_authority_1;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $calm_authority_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $calm_authority_4;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $calm_authority_3;
-        font-size: 200%;
-    }
-    p {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $calm_authority_2;
-            font-size: 100%;
-        }
-    }
-}
+#photography { @extend %hobbySection; }
+#dungeonsAndDragons { @extend %hobbySection; }
 
 #history {
-    margin: auto;
-    background-color: $calm_authority_1;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $calm_authority_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $calm_authority_4;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $calm_authority_3;
-        font-size: 200%;
-    }
-    p {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
+    @extend %hobbySection;
     blockquote {
         text-align: left;
         color: $calm_authority_2;
         font-size: 150%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $calm_authority_2;
-            font-size: 100%;
-        }
     }
     table {
         text-align: left;

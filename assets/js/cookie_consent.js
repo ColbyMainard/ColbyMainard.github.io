@@ -73,7 +73,7 @@
         var wrap = document.createElement("div");
         wrap.className = "cookieConsent";
         wrap.id = "cookieConsent";
-        wrap.setAttribute("role", "dialog");
+        wrap.setAttribute("role", "region");
         wrap.setAttribute("aria-live", "polite");
         wrap.setAttribute("aria-label", "Cookie consent");
 

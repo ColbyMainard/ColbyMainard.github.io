@@ -1,27 +1,20 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 
-// /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */ 
+// /* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
 // $calm_authority_1: #34495E;
 // $calm_authority_2: #5D6D7E;
 // $calm_authority_3: #85929E;
 // $calm_authority_4: #AAB7B8;
 // $calm_authority_5: #D5D5DB;
 
-// /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */ 
+// /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 // $sunset_glow_1: #ffb84d;
 // $sunset_glow_2: #ff9900;
 // $sunset_glow_3: #f47b1f;
 // $sunset_glow_4: #e64919;
 // $sunset_glow_5: #d33131;
 
-/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-$smart_1: #1c1a3d; 
-$smart_2: #4a4e8c; 
-$smart_3: #8d7d9b; 
-$smart_4: #d1c3e9; 
-$smart_5: #f1e0ff;
-
-// /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */ 
+// /* Gryffon color palette from https://colormagic.app/palette/6779bc949b262de07643d116 */
 // $gryffon_1: #ffcc00;
 // $gryffon_2: #ff9900;
 // $gryffon_3: #ff6600;
@@ -35,7 +28,7 @@ $cyberpunk_dreams_3: #6a2a98;
 $cyberpunk_dreams_4: #3f1c6d;
 $cyberpunk_dreams_5: #200b4b;
 
-#workHistory {
+%indexSection {
     margin: auto;
     background-color: $cyberpunk_dreams_5;
     width: 80%;
@@ -99,68 +92,10 @@ $cyberpunk_dreams_5: #200b4b;
     }
 }
 
+#workHistory { @extend %indexSection; }
+
 #education {
-    margin: auto;
-    background-color: $cyberpunk_dreams_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $cyberpunk_dreams_1;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 200%;
-    }
-    h4 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 175%;
-    }
-    p {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $cyberpunk_dreams_2;
-            font-size: 100%;
-        }
-    }
+    @extend %indexSection;
     table {
         text-align: left;
         border-collapse: collapse;
@@ -196,261 +131,10 @@ $cyberpunk_dreams_5: #200b4b;
     }
 }
 
-#projects {
-    margin: auto;
-    background-color: $cyberpunk_dreams_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $cyberpunk_dreams_1;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 200%;
-    }
-    h4 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 175%;
-    }
-    p {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $cyberpunk_dreams_2;
-            font-size: 100%;
-        }
-    }
-}
-
-#technicalSkills {
-    margin: auto;
-    background-color: $cyberpunk_dreams_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $cyberpunk_dreams_1;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 200%;
-    }
-    h4 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 175%;
-    }
-    p {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $cyberpunk_dreams_2;
-            font-size: 100%;
-        }
-    }
-}
-
-#otherSkills {
-    margin: auto;
-    background-color: $cyberpunk_dreams_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $cyberpunk_dreams_1;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 200%;
-    }
-    h4 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 175%;
-    }
-    p {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $cyberpunk_dreams_2;
-            font-size: 100%;
-        }
-    }
-}
-
-#certifications {
-    margin: auto;
-    background-color: $cyberpunk_dreams_5;
-    width: 80%;
-    border-radius: 10px;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $cyberpunk_dreams_1;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 200%;
-    }
-    h4 {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 175%;
-    }
-    p {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $cyberpunk_dreams_2;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $cyberpunk_dreams_2;
-            font-size: 100%;
-        }
-    }
-}
+#projects { @extend %indexSection; }
+#technicalSkills { @extend %indexSection; }
+#otherSkills { @extend %indexSection; }
+#certifications { @extend %indexSection; }
 
 /*
  * Animation initial states — only applied when JS is active.

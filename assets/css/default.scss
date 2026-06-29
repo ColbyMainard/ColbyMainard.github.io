@@ -1,13 +1,4 @@
-@import "index";
-@import "hobbies";
-@import "tech_takes";
-@import "tech_resources";
-@import "privacy_policy";
-@import "guides";
-
-/* https://www.w3schools.com/Css/css_selectors.asp */
-
-/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */ 
+/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
 $noir_1: #1a1a1e;
 $noir_2: #3e3e41;
 $noir_3: #6b6b70;
@@ -27,6 +18,15 @@ $emerald_efficiency_2: #1d9a6a;
 $emerald_efficiency_3: #50c3a1;
 $emerald_efficiency_4: #a1d9b0;
 $emerald_efficiency_5: #e0f7fa;
+
+@import "index";
+@import "hobbies";
+@import "tech_takes";
+@import "tech_resources";
+@import "privacy_policy";
+@import "guides";
+
+/* https://www.w3schools.com/Css/css_selectors.asp */
 
 /* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
 

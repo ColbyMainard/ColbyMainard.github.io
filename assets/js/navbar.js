@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         a.href = href;
         if (a.pathname === currentPath) {
             link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
         }
     });
 });

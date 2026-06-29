@@ -2,7 +2,7 @@
 
 > Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
 
-> Last updated: 2026-06-20
+> Last updated: 2026-06-28
 
 Colby Mainard is an experienced AI/ML Engineer.
 He also holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision. 

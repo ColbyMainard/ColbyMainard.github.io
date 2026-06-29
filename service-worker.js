@@ -107,7 +107,7 @@ self.addEventListener("fetch", function (event) {
                 });
                 return response;
             }).catch(function () {
-                return cached;
+                return caches.match("./index.html");
             });
         })
     );
