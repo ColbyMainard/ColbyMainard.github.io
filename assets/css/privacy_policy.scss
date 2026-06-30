@@ -1,69 +1,69 @@
-/* Professional Blue color palette from https://colormagic.app/palette/69f2a139972c6bd335822170 */
-$professional_blue_1: #4b91e2;
-$professional_blue_2: #51b39f;
-$professional_blue_3: #f1c40e;
-$professional_blue_4: #e77e23;
-$professional_blue_5: #bf3a2b;
+// Refined Professionalism from https://piktochart.com/blog/professional-color-palette/
+$refined_professionalism_1: #2C3E50;
+$refined_professionalism_2: #34495E;
+$refined_professionalism_3: #16A085;
+$refined_professionalism_4: #F39C12;
+$refined_professionalism_5: #F7F9F9;
 
 %privacySection {
     margin: auto;
-    background-color: $professional_blue_5;
+    background-color: $refined_professionalism_1;
     width: 80%;
     border-radius: 10px;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
-        color: $professional_blue_1;
+        color: $refined_professionalism_5;
         font-size: 500%;
     }
     h2 {
         text-align: left;
-        color: $professional_blue_2;
+        color: $refined_professionalism_4;
         font-size: 300%;
     }
     h3 {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 200%;
     }
     h4 {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 175%;
     }
     p {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 100%;
     }
     /* unvisited link */
     a:link {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 100%;
     }
     /* visited link */
     a:visited {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 100%;
     }
     /* mouse over link */
     a:hover {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 100%;
     }
     /* selected link */
     a:active {
         text-align: left;
-        color: $professional_blue_3;
+        color: $refined_professionalism_3;
         font-size: 100%;
     }
     ul {
         text-align: left;
         li {
-            color: $professional_blue_3;
+            color: $refined_professionalism_3;
             font-size: 100%;
         }
     }

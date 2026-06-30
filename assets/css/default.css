@@ -982,10 +982,9 @@ html.js-animations #contactMe > address {
   html.js-animations #contactMe > a,
   html.js-animations #contactMe > address {
     opacity: 1 !important; } }
-/* Professional Blue color palette from https://colormagic.app/palette/69f2a139972c6bd335822170 */
 #analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv {
   margin: auto;
-  background-color: #bf3a2b;
+  background-color: #2C3E50;
   width: 80%;
   border-radius: 10px;
   font-family: "Courier New", monospace;
@@ -995,44 +994,44 @@ html.js-animations #contactMe > address {
   /* selected link */ }
   #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1 {
     text-align: left;
-    color: #4b91e2;
+    color: #F7F9F9;
     font-size: 500%; }
   #analyticsDiv h2, #thirdPartyDiv h2, #serviceWorkerDiv h2, #verificationDiv h2, #rightsDiv h2, #preferencesDiv h2 {
     text-align: left;
-    color: #51b39f;
+    color: #F39C12;
     font-size: 300%; }
   #analyticsDiv h3, #thirdPartyDiv h3, #serviceWorkerDiv h3, #verificationDiv h3, #rightsDiv h3, #preferencesDiv h3 {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 200%; }
   #analyticsDiv h4, #thirdPartyDiv h4, #serviceWorkerDiv h4, #verificationDiv h4, #rightsDiv h4, #preferencesDiv h4 {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 175%; }
   #analyticsDiv p, #thirdPartyDiv p, #serviceWorkerDiv p, #verificationDiv p, #rightsDiv p, #preferencesDiv p {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 100%; }
   #analyticsDiv a:link, #thirdPartyDiv a:link, #serviceWorkerDiv a:link, #verificationDiv a:link, #rightsDiv a:link, #preferencesDiv a:link {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 100%; }
   #analyticsDiv a:visited, #thirdPartyDiv a:visited, #serviceWorkerDiv a:visited, #verificationDiv a:visited, #rightsDiv a:visited, #preferencesDiv a:visited {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 100%; }
   #analyticsDiv a:hover, #thirdPartyDiv a:hover, #serviceWorkerDiv a:hover, #verificationDiv a:hover, #rightsDiv a:hover, #preferencesDiv a:hover {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 100%; }
   #analyticsDiv a:active, #thirdPartyDiv a:active, #serviceWorkerDiv a:active, #verificationDiv a:active, #rightsDiv a:active, #preferencesDiv a:active {
     text-align: left;
-    color: #f1c40e;
+    color: #16A085;
     font-size: 100%; }
   #analyticsDiv ul, #thirdPartyDiv ul, #serviceWorkerDiv ul, #verificationDiv ul, #rightsDiv ul, #preferencesDiv ul {
     text-align: left; }
     #analyticsDiv ul li, #thirdPartyDiv ul li, #serviceWorkerDiv ul li, #verificationDiv ul li, #rightsDiv ul li, #preferencesDiv ul li {
-      color: #f1c40e;
+      color: #16A085;
       font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */

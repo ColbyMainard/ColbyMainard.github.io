@@ -25,13 +25,9 @@
         btn.setAttribute("title", ariaLabel);
         btn.setAttribute("data-clipboard-value", valueToCopy);
         btn.textContent = COPY_GLYPH;
+        // A native <button> already synthesizes a click on Enter/Space, so no
+        // separate keydown handler is needed (one would fire the copy twice).
         btn.addEventListener("click", onClick);
-        btn.addEventListener("keydown", function (event) {
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                onClick.call(btn, event);
-            }
-        });
         return btn;
     }
 

@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v28";
+const CACHE_VERSION = "v29";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -18,6 +18,7 @@ const PRECACHE_URLS = [
     "./assets/html/guides.html",
     "./assets/html/privacy.html",
     "./assets/css/default.css",
+    "./assets/js/animation_helpers.js",
     "./assets/js/back_to_top.js",
     "./assets/js/cookie_consent.js",
     "./assets/js/current_time.js",
@@ -82,8 +83,8 @@ self.addEventListener("fetch", function (event) {
             fetch(request).then(function (response) {
                 const clone = response.clone();
                 caches.open(CACHE_NAME).then(function (cache) {
-                    cache.put(request, clone);
-                });
+                    return cache.put(request, clone);
+                }).catch(function () { /* cache write failed; the network response is still served */ });
                 return response;
             }).catch(function () {
                 return caches.match(request).then(function (cached) {
@@ -103,11 +104,15 @@ self.addEventListener("fetch", function (event) {
                 }
                 const clone = response.clone();
                 caches.open(CACHE_NAME).then(function (cache) {
-                    cache.put(request, clone);
-                });
+                    return cache.put(request, clone);
+                }).catch(function () { /* cache write failed; the network response is still served */ });
                 return response;
             }).catch(function () {
-                return caches.match("./index.html");
+                // Sub-resource fetch failed with no cache hit: let the browser
+                // handle it natively (native error) rather than returning
+                // index.html — handing HTML to a request that expected CSS/JS.
+                // The index.html fallback is reserved for navigations (above).
+                return undefined;
             });
         })
     );

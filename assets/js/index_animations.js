@@ -20,6 +20,15 @@
         return;
     }
 
+    // Degrade gracefully if the AnimeJS CDN/module failed or the shared
+    // helpers didn't load: leave content fully visible by NOT adding
+    // js-animations (the opacity-hiding CSS keys on that class).
+    if (typeof anime === "undefined" || !window.AnimationHelpers) return;
+
+    var directChildren = window.AnimationHelpers.directChildren;
+    var addStep = window.AnimationHelpers.addStep;
+    var animateContact = window.AnimationHelpers.animateContact;
+
     // Mark body so CSS can hide elements only when JS is active
     document.documentElement.classList.add("js-animations");
 
@@ -37,31 +46,6 @@
 
     // Track which sections have already been animated
     var animated = {};
-
-    /**
-     * Helper: select only direct children matching a selector.
-     * Prevents animating deeply nested elements in large sections.
-     */
-    function directChildren(el, selector) {
-        return Array.prototype.filter.call(
-            el.children,
-            function (child) { return child.matches(selector); }
-        );
-    }
-
-    /**
-     * Helper: add a timeline step only when the target list is non-empty.
-     * AnimeJS warns "No target found" if given an empty array or null,
-     * so guard every .add() call through this wrapper.
-     */
-    function addStep(tl, targets, params, position) {
-        var hasTargets = targets && (targets.length === undefined ? true : targets.length > 0);
-        if (!hasTargets) return tl;
-        if (position !== undefined) {
-            return tl.add(targets, params, position);
-        }
-        return tl.add(targets, params);
-    }
 
     /**
      * Intro Section — Fade in + drop from above
@@ -277,22 +261,6 @@
         }, ">-300");
     }
 
-    /**
-     * Contact/Footer — Simple fade in.
-     * The footer h2 ("Contact:") is not part of the section-h1 demotion
-     * so it remains an h2.
-     */
-    function animateContact(el) {
-        var tl = anime.createTimeline({ ease: "outSine" });
-
-        addStep(tl, el.querySelectorAll("h2, p, a"), {
-            opacity: [0, 1],
-            translateY: ["20px", "0px"],
-            duration: 600,
-            delay: anime.stagger(100)
-        });
-    }
-
     // Map section keys to their animation functions
     var animationMap = {
         intro: animateIntro,
@@ -332,6 +300,9 @@
     function init() {
         var observer = new IntersectionObserver(onIntersect, {
             threshold: 0.02,
+            // Trigger ~50px before a section reaches the viewport's bottom edge,
+            // matching the other *_animations.js pages for consistent timing.
+            rootMargin: "0px 0px -50px 0px"
         });
 
         Object.keys(sections).forEach(function (key) {

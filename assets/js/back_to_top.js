@@ -10,6 +10,7 @@
     var SHOW_AFTER = 400;
     var button;
     var visible = false;
+    var hideTimer = null;
 
     // Re-checked on each use so toggling the OS setting mid-session is honored.
     function prefersReducedMotion() {
@@ -52,6 +53,14 @@
     function setVisible(next) {
         if (next === visible) return;
         visible = next;
+
+        // Cancel a pending hide so a stale ~320ms timeout can't strip "visible"
+        // after a newer show during rapid scrolling.
+        if (hideTimer !== null) {
+            clearTimeout(hideTimer);
+            hideTimer = null;
+        }
+
         if (!prefersReducedMotion() && typeof window.anime !== "undefined" && window.anime.animate) {
             window.anime.animate(button, {
                 opacity: next ? [parseFloat(getComputedStyle(button).opacity) || 0, 1] : [parseFloat(getComputedStyle(button).opacity) || 1, 0],
@@ -62,8 +71,9 @@
             if (next) {
                 button.classList.add("visible");
             } else {
-                setTimeout(function () {
-                    if (!visible) button.classList.remove("visible");
+                hideTimer = setTimeout(function () {
+                    button.classList.remove("visible");
+                    hideTimer = null;
                 }, 320);
             }
         } else {

@@ -1,36 +1,28 @@
 # Colby Mainard — Personal Website
 
-> Personal website of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and AI. The site presents work history, education, technical skills, projects, certifications, hobbies, technical opinions, and curated technical reading recommendations.
+> Personal website and professional portfolio of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and applied AI for sports analytics, cybersecurity, and financial technology. The site documents his work history, education, projects, technical skills, certifications, technical opinions, beginner-friendly guides, curated learning resources, and hobbies.
 
-> Last updated: 2026-06-28
+Colby Mainard is an AI/ML Engineer (currently at RiskScout). He holds an Masters in Computer Science from Texas A&M University — concentrating in artificial intelligence, machine learning, deep learning, and computer vision — and a B.S. in Computer Science from Texas A&M with minors in Business and Cybersecurity.
 
-Colby Mainard is an experienced AI/ML Engineer.
-He also holds a Masters in Computer Science from Texas A&M University with a focus on artificial intelligence, machine learning, deep learning, and computer vision. 
-This is further supported by his Bachelors of Science in Computer Science from Texas A&M University, with double minors in Business and Cybersecurity.
+Core expertise: computer vision, deep learning, natural language processing, generative models (GANs, VAEs, transformers), reinforcement learning, and security-focused ML (fraud detection, anomaly detection, anti-money laundering). Common tools: Python, PyTorch, TensorFlow, Keras, OpenCV, SQL, AWS, and Docker.
 
-Canonical domain: https://colbymainard.github.io
+**Canonical URL:** https://colbymainard.github.io/
 
-## Important notes:
+**Last updated:** 2026-06-29
 
-- Website is static (e.g. no API).
-- Site contains custom HTML, CSS, and client-side JS only.
+## Site notes
 
-## Intended audience
-
-- Potential colleagues
-- Technical recruiters
-- Fellow AI/ML enthusiasts
-- Computer Science students
-- Those interested in artificial intelligence and machine learning
+- Static site: client-side HTML, CSS, and JavaScript only — no backend, server-side processing, or API.
+- Intended audience: potential colleagues, technical recruiters, fellow AI/ML enthusiasts, and computer science students.
 
 ## Pages
 
-- [Home / Professional Background](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, contact info.
+- [Home / Professional Background](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, and contact information.
+- [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides for newcomers to data engineering, computer vision, generative AI, natural language processing, reinforcement learning, software engineering, and cybersecurity.
 - [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html): Long-form opinion pieces on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.
-- [Hobbies](https://colbymainard.github.io/assets/html/hobbies.html): Photography, quantum computing self-study, Dungeons & Dragons, history.
-- [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html): Curated reading list and resources covering cybersecurity, AI/ML, C/C++, Python, scripting, and operating systems.
-- [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides covering data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.
+- [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html): Curated reading lists and learning resources covering cybersecurity, AI/ML, C/C++, Python, scripting, and operating systems.
+- [Hobbies](https://colbymainard.github.io/assets/html/hobbies.html): Photography, quantum-computing self-study, Dungeons & Dragons, and history.
 
-### Optional
+## Optional
 
-- [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): Site privacy policy.
+- [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): How the site handles cookies, analytics, and visitor data.

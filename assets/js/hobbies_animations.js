@@ -16,6 +16,15 @@
         return;
     }
 
+    // Degrade gracefully if the AnimeJS CDN/module failed or the shared
+    // helpers didn't load: leave content fully visible by NOT adding
+    // js-animations (the opacity-hiding CSS keys on that class).
+    if (typeof anime === "undefined" || !window.AnimationHelpers) return;
+
+    var directChildren = window.AnimationHelpers.directChildren;
+    var addStep = window.AnimationHelpers.addStep;
+    var animateContact = window.AnimationHelpers.animateContact;
+
     document.documentElement.classList.add("js-animations");
 
     var sections = {
@@ -28,29 +37,6 @@
     };
 
     var animated = {};
-
-    /**
-     * Helper: select only direct children matching a selector.
-     */
-    function directChildren(el, selector) {
-        return Array.prototype.filter.call(
-            el.children,
-            function (child) { return child.matches(selector); }
-        );
-    }
-
-    /**
-     * Helper: add a timeline step only when the target list is non-empty.
-     * AnimeJS throws "No target found" if given an empty array.
-     */
-    function addStep(tl, targets, params, position) {
-        var hasTargets = targets && (targets.length === undefined ? true : targets.length > 0);
-        if (!hasTargets) return tl;
-        if (position !== undefined) {
-            return tl.add(targets, params, position);
-        }
-        return tl.add(targets, params);
-    }
 
     /**
      * Intro — Fade in heading, image scales up
@@ -181,20 +167,6 @@
             duration: 500,
             delay: anime.stagger(60)
         }, ">-300");
-    }
-
-    /**
-     * Contact/Footer — Simple fade in
-     */
-    function animateContact(el) {
-        var tl = anime.createTimeline({ ease: "outSine" });
-
-        addStep(tl, el.querySelectorAll("h2, p, a"), {
-            opacity: [0, 1],
-            translateY: ["20px", "0px"],
-            duration: 600,
-            delay: anime.stagger(100)
-        });
     }
 
     var animationMap = {
