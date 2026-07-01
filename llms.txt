@@ -2,13 +2,13 @@
 
 > Personal website and professional portfolio of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and applied AI for sports analytics, cybersecurity, and financial technology. The site documents his work history, education, projects, technical skills, certifications, technical opinions, beginner-friendly guides, curated learning resources, and hobbies.
 
-Colby Mainard is an AI/ML Engineer (currently at RiskScout). He holds an Masters in Computer Science from Texas A&M University — concentrating in artificial intelligence, machine learning, deep learning, and computer vision — and a B.S. in Computer Science from Texas A&M with minors in Business and Cybersecurity.
+Colby Mainard is an AI/ML Engineer (currently at RiskScout). He holds a Masters in Computer Science from Texas A&M University — concentrating in artificial intelligence, machine learning, deep learning, and computer vision — and a B.S. in Computer Science from Texas A&M with minors in Business and Cybersecurity.
 
-Core expertise: computer vision, deep learning, natural language processing, generative models (GANs, VAEs, transformers), reinforcement learning, and security-focused ML (fraud detection, anomaly detection, anti-money laundering). Common tools: Python, PyTorch, TensorFlow, Keras, OpenCV, SQL, AWS, and Docker.
+**Core expertise:** computer vision, deep learning, natural language processing, generative models (GANs, VAEs, transformers), reinforcement learning, and security-focused ML (fraud detection, anomaly detection, anti-money laundering). Common tools: Python, PyTorch, TensorFlow, Keras, OpenCV, SQL, AWS, and Docker.
 
 **Canonical URL:** https://colbymainard.github.io/
 
-**Last updated:** 2026-06-29
+**Last updated:** 2026-07-01
 
 ## Site notes
 
@@ -26,3 +26,30 @@ Core expertise: computer vision, deep learning, natural language processing, gen
 ## Optional
 
 - [Privacy Policy](https://colbymainard.github.io/assets/html/privacy.html): How the site handles cookies, analytics, and visitor data.
+
+## Citation Policy
+
+For citation of any articles / guides / etc., please include the following information:
+
+- Canonical URL for page / section.
+- Author name (Colby Mainard).
+- Either date of last update or date you viewed the site.
+
+### Specific guides:
+
+- [Data Engineering](https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv)
+- [Computer Vision](https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv)
+- [Generative Artificial Intelligence](https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv)
+- [Natural Language Processing (NLP)](https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv)
+- [Reinforcement Learning Guide](https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv)
+- [Software Engineering](https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv)
+- [Cybersecurity](https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv)
+
+### Specific Technical Resources:
+
+- [Cybersecurity Resources](https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv)
+- [Artificial Intelligence Resources](https://colbymainard.github.io/assets/html/tech_resources.html#artificialIntelligenceResourcesDiv)
+- [C++ Resources](https://colbymainard.github.io/assets/html/tech_resources.html#cppResourcesDiv)
+- [Python Resources](https://colbymainard.github.io/assets/html/tech_resources.html#pythonResourcesDiv)
+- [Scripting Resources](https://colbymainard.github.io/assets/html/tech_resources.html#scriptingResourcesDiv)
+- [Operating Systems Resources](https://colbymainard.github.io/assets/html/tech_resources.html#operatingSystemsResourcesDiv)
