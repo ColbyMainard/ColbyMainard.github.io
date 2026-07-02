@@ -45,7 +45,10 @@
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
 $dark_blue_gray_1: #20203c;
 $dark_blue_gray_2: #7a7a99;
-$dark_blue_gray_3: #7a7a99;
+/* _3 tuned brighter than the source #7a7a99 (3.80:1, failed WCAG AA) so body
+   paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
+   5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
+$dark_blue_gray_3: #9a9ac2;
 $dark_blue_gray_4: #c2c2d1;
 $dark_blue_gray_5: #ff5c5c;
 

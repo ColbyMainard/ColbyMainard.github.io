@@ -23,7 +23,9 @@
 
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
 $cyberpunk_dreams_1: #ff3d94;
-$cyberpunk_dreams_2: #b5307e;
+/* _2 tuned brighter than the source #b5307e (3.05:1, failed WCAG AA) so body
+   text, links, list items and table cells clear AA at 4.89:1 on the _5 bg. */
+$cyberpunk_dreams_2: #e64d9e;
 $cyberpunk_dreams_3: #6a2a98;
 $cyberpunk_dreams_4: #3f1c6d;
 $cyberpunk_dreams_5: #200b4b;

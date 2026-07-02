@@ -4,6 +4,8 @@
 /* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
+/* _2 tuned brighter than the source #b5307e (3.05:1, failed WCAG AA) so body
+   text, links, list items and table cells clear AA at 4.89:1 on the _5 bg. */
 #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
   margin: auto;
   background-color: #200b4b;
@@ -20,67 +22,67 @@
     font-size: 500%; }
   #workHistory h2, #education h2, #projects h2, #technicalSkills h2, #otherSkills h2, #certifications h2 {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 300%; }
   #workHistory h3, #education h3, #projects h3, #technicalSkills h3, #otherSkills h3, #certifications h3 {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 200%; }
   #workHistory h4, #education h4, #projects h4, #technicalSkills h4, #otherSkills h4, #certifications h4 {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 175%; }
   #workHistory p, #education p, #projects p, #technicalSkills p, #otherSkills p, #certifications p {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 100%; }
   #workHistory a:link, #education a:link, #projects a:link, #technicalSkills a:link, #otherSkills a:link, #certifications a:link {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 100%; }
   #workHistory a:visited, #education a:visited, #projects a:visited, #technicalSkills a:visited, #otherSkills a:visited, #certifications a:visited {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 100%; }
   #workHistory a:hover, #education a:hover, #projects a:hover, #technicalSkills a:hover, #otherSkills a:hover, #certifications a:hover {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 100%; }
   #workHistory a:active, #education a:active, #projects a:active, #technicalSkills a:active, #otherSkills a:active, #certifications a:active {
     text-align: left;
-    color: #b5307e;
+    color: #e64d9e;
     font-size: 100%; }
   #workHistory ul, #education ul, #projects ul, #technicalSkills ul, #otherSkills ul, #certifications ul {
     text-align: left; }
     #workHistory ul li, #education ul li, #projects ul li, #technicalSkills ul li, #otherSkills ul li, #certifications ul li {
-      color: #b5307e;
+      color: #e64d9e;
       font-size: 100%; }
 
 #education table {
   text-align: left;
   border-collapse: collapse;
-  border-color: #b5307e;
+  border-color: #e64d9e;
   border-style: solid; }
   #education table tr {
-    border-color: #b5307e; }
+    border-color: #e64d9e; }
     #education table tr th {
-      border-color: #b5307e;
-      color: #b5307e;
+      border-color: #e64d9e;
+      color: #e64d9e;
       font-size: 100%;
       border-top-style: double;
       border-right-style: double;
       border-bottom-style: double;
       border-left-style: double; }
     #education table tr td {
-      border-color: #b5307e;
-      color: #b5307e;
+      border-color: #e64d9e;
+      color: #e64d9e;
       font-size: 100%;
       border-top-style: groove;
       border-right-style: groove;
       border-bottom-style: groove;
       border-left-style: groove; }
       #education table tr td ul li {
-        color: #b5307e;
+        color: #e64d9e;
         font-size: 100%; }
 
 /*
@@ -227,7 +229,12 @@ html.js-animations #contactMe > address {
   html.js-animations #contactMe > address {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
+/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette
+ * Light tones _2–_5 are tuned brighter than the source palette so body text (_2)
+ * and every heading tier clear WCAG AA on the _1 background, while preserving the
+ * light-on-slate ramp (body dimmest, h1 brightest):
+ *   _2 body/links/table 5.13:1, _3 h3 5.64:1, _4 h2 6.57:1, _5 h1 7.69:1.
+ * (Source values were _2 #5D6D7E 1.75:1, _3 #85929E 2.92:1, _4 #AAB7B8 4.50:1.) */
 #quantumComputing, #photography, #dungeonsAndDragons, #history {
   margin: auto;
   background-color: #34495E;
@@ -240,40 +247,40 @@ html.js-animations #contactMe > address {
   /* selected link */ }
   #quantumComputing h1, #photography h1, #dungeonsAndDragons h1, #history h1 {
     text-align: left;
-    color: #D5D5DB;
+    color: #E7EAEC;
     font-size: 500%; }
   #quantumComputing h2, #photography h2, #dungeonsAndDragons h2, #history h2 {
     text-align: left;
-    color: #AAB7B8;
+    color: #D3DADE;
     font-size: 300%; }
   #quantumComputing h3, #photography h3, #dungeonsAndDragons h3, #history h3 {
     text-align: left;
-    color: #85929E;
+    color: #C2CBD1;
     font-size: 200%; }
   #quantumComputing p, #photography p, #dungeonsAndDragons p, #history p {
     text-align: left;
-    color: #5D6D7E;
+    color: #B8C2C9;
     font-size: 100%; }
   #quantumComputing a:link, #photography a:link, #dungeonsAndDragons a:link, #history a:link {
     text-align: left;
-    color: #5D6D7E;
+    color: #B8C2C9;
     font-size: 100%; }
   #quantumComputing a:visited, #photography a:visited, #dungeonsAndDragons a:visited, #history a:visited {
     text-align: left;
-    color: #5D6D7E;
+    color: #B8C2C9;
     font-size: 100%; }
   #quantumComputing a:hover, #photography a:hover, #dungeonsAndDragons a:hover, #history a:hover {
     text-align: left;
-    color: #5D6D7E;
+    color: #B8C2C9;
     font-size: 100%; }
   #quantumComputing a:active, #photography a:active, #dungeonsAndDragons a:active, #history a:active {
     text-align: left;
-    color: #5D6D7E;
+    color: #B8C2C9;
     font-size: 100%; }
   #quantumComputing ul, #photography ul, #dungeonsAndDragons ul, #history ul {
     text-align: left; }
     #quantumComputing ul li, #photography ul li, #dungeonsAndDragons ul li, #history ul li {
-      color: #5D6D7E;
+      color: #B8C2C9;
       font-size: 100%; }
 
 #quantumComputing iframe {
@@ -282,33 +289,33 @@ html.js-animations #contactMe > address {
 
 #history blockquote {
   text-align: left;
-  color: #5D6D7E;
+  color: #B8C2C9;
   font-size: 150%; }
 #history table {
   text-align: left;
   border-collapse: collapse;
-  border-color: #5D6D7E;
+  border-color: #B8C2C9;
   border-style: solid; }
   #history table tr {
-    border-color: #5D6D7E; }
+    border-color: #B8C2C9; }
     #history table tr th {
-      border-color: #5D6D7E;
-      color: #5D6D7E;
+      border-color: #B8C2C9;
+      color: #B8C2C9;
       font-size: 100%;
       border-top-style: double;
       border-right-style: double;
       border-bottom-style: double;
       border-left-style: double; }
     #history table tr td {
-      border-color: #5D6D7E;
-      color: #5D6D7E;
+      border-color: #B8C2C9;
+      color: #B8C2C9;
       font-size: 100%;
       border-top-style: groove;
       border-right-style: groove;
       border-bottom-style: groove;
       border-left-style: groove; }
       #history table tr td ul li {
-        color: #5D6D7E;
+        color: #B8C2C9;
         font-size: 100%; }
 
 /*
@@ -448,6 +455,9 @@ html.js-animations #contactMe > iframe {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
+/* _3 tuned brighter than the source #7a7a99 (3.80:1, failed WCAG AA) so body
+   paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
+   5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3;
    #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement {
@@ -471,48 +481,48 @@ html.js-animations #contactMe > iframe {
   #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3 {
     text-align: left;
     font-size: 200%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4 {
     text-align: left;
     font-size: 175%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link {
     text-align: left;
     font-size: 100%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN a:visited, #Cryptocurrency a:visited, #FutureOfQuantum a:visited, #AGI a:visited, #Privacy a:visited, #ProductPlacement a:visited {
     text-align: left;
     font-size: 100%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover {
     text-align: left;
     font-size: 100%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN a:active, #Cryptocurrency a:active, #FutureOfQuantum a:active, #AGI a:active, #Privacy a:active, #ProductPlacement a:active {
     text-align: left;
     font-size: 100%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p {
     text-align: left;
     font-size: 100%;
-    color: #7a7a99; }
+    color: #9a9ac2; }
   #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul {
     text-align: left; }
     #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li {
       font-size: 100%;
-      color: #7a7a99; }
+      color: #9a9ac2; }
 
 /* Shared table styling for opinions that include a comparison table. */
 #Cryptocurrency table, #FutureOfQuantum table {
   text-align: left;
   border-collapse: collapse;
-  border-color: #7a7a99;
+  border-color: #9a9ac2;
   border-style: solid; }
   #Cryptocurrency table tr, #FutureOfQuantum table tr {
-    border-color: #7a7a99; }
+    border-color: #9a9ac2; }
     #Cryptocurrency table tr th, #FutureOfQuantum table tr th {
-      border-color: #7a7a99;
-      color: #7a7a99;
+      border-color: #9a9ac2;
+      color: #9a9ac2;
       font-size: 100%;
       border-top-style: double;
       border-right-style: double;
@@ -524,19 +534,19 @@ html.js-animations #contactMe > iframe {
       /* selected link */ }
       #Cryptocurrency table tr th a:link, #FutureOfQuantum table tr th a:link {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
       #Cryptocurrency table tr th a:visited, #FutureOfQuantum table tr th a:visited {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
       #Cryptocurrency table tr th a:hover, #FutureOfQuantum table tr th a:hover {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
       #Cryptocurrency table tr th a:active, #FutureOfQuantum table tr th a:active {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
     #Cryptocurrency table tr td, #FutureOfQuantum table tr td {
-      border-color: #7a7a99;
-      color: #7a7a99;
+      border-color: #9a9ac2;
+      color: #9a9ac2;
       font-size: 100%;
       border-top-style: groove;
       border-right-style: groove;
@@ -548,22 +558,22 @@ html.js-animations #contactMe > iframe {
       /* selected link */ }
       #Cryptocurrency table tr td a:link, #FutureOfQuantum table tr td a:link {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
       #Cryptocurrency table tr td a:visited, #FutureOfQuantum table tr td a:visited {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
       #Cryptocurrency table tr td a:hover, #FutureOfQuantum table tr td a:hover {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
       #Cryptocurrency table tr td a:active, #FutureOfQuantum table tr td a:active {
         font-size: 100%;
-        color: #7a7a99; }
+        color: #9a9ac2; }
 
 /* Shared definition-list styling for opinions that use a glossary. */
 #AGI dl, #Privacy dl {
   text-align: left;
   font-size: 100%;
-  color: #7a7a99; }
+  color: #9a9ac2; }
   #AGI dl dt, #Privacy dl dt {
     font-weight: bold;
     text-decoration: underline; }
@@ -572,7 +582,7 @@ html.js-animations #contactMe > iframe {
     padding: 0 0 2em 0; }
     #AGI dl dd ul li, #Privacy dl dd ul li {
       font-size: 100%;
-      color: #7a7a99; }
+      color: #9a9ac2; }
 
 #AGI h3 {
   color: #c2c2d1; }
@@ -752,6 +762,8 @@ html.js-animations #contactMe > address {
     transition: none; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
+/* _3 tuned brighter than the source #8b5aba (2.86:1, failed WCAG AA) so body
+   text, links, h3, blockquotes and every table cell clear AA at 5.27:1 on _1. */
 #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources {
   margin: auto;
   background-color: #1f1b79;
@@ -772,55 +784,55 @@ html.js-animations #contactMe > address {
     font-size: 300%; }
   #cybersecurityResources h3, #artificialIntelligenceResources h3, #cppResources h3, #pythonResources h3, #scriptingResources h3, #operatingSystemsResources h3 {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 200%; }
   #cybersecurityResources p, #artificialIntelligenceResources p, #cppResources p, #pythonResources p, #scriptingResources p, #operatingSystemsResources p {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 100%; }
   #cybersecurityResources blockquote, #artificialIntelligenceResources blockquote, #cppResources blockquote, #pythonResources blockquote, #scriptingResources blockquote, #operatingSystemsResources blockquote {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 150%; }
   #cybersecurityResources a:link, #artificialIntelligenceResources a:link, #cppResources a:link, #pythonResources a:link, #scriptingResources a:link, #operatingSystemsResources a:link {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 100%; }
   #cybersecurityResources a:visited, #artificialIntelligenceResources a:visited, #cppResources a:visited, #pythonResources a:visited, #scriptingResources a:visited, #operatingSystemsResources a:visited {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 100%; }
   #cybersecurityResources a:hover, #artificialIntelligenceResources a:hover, #cppResources a:hover, #pythonResources a:hover, #scriptingResources a:hover, #operatingSystemsResources a:hover {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 100%; }
   #cybersecurityResources a:active, #artificialIntelligenceResources a:active, #cppResources a:active, #pythonResources a:active, #scriptingResources a:active, #operatingSystemsResources a:active {
     text-align: left;
-    color: #8b5aba;
+    color: #b88ce0;
     font-size: 100%; }
   #cybersecurityResources ul, #artificialIntelligenceResources ul, #cppResources ul, #pythonResources ul, #scriptingResources ul, #operatingSystemsResources ul {
     text-align: left; }
     #cybersecurityResources ul li, #artificialIntelligenceResources ul li, #cppResources ul li, #pythonResources ul li, #scriptingResources ul li, #operatingSystemsResources ul li {
-      color: #8b5aba;
+      color: #b88ce0;
       font-size: 100%; }
   #cybersecurityResources table, #artificialIntelligenceResources table, #cppResources table, #pythonResources table, #scriptingResources table, #operatingSystemsResources table {
     text-align: left;
     border-collapse: collapse;
-    border-color: #8b5aba;
+    border-color: #b88ce0;
     border-style: solid; }
     #cybersecurityResources table tr, #artificialIntelligenceResources table tr, #cppResources table tr, #pythonResources table tr, #scriptingResources table tr, #operatingSystemsResources table tr {
-      border-color: #8b5aba; }
+      border-color: #b88ce0; }
       #cybersecurityResources table tr th, #artificialIntelligenceResources table tr th, #cppResources table tr th, #pythonResources table tr th, #scriptingResources table tr th, #operatingSystemsResources table tr th {
-        border-color: #8b5aba;
-        color: #8b5aba;
+        border-color: #b88ce0;
+        color: #b88ce0;
         font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #cybersecurityResources table tr td, #artificialIntelligenceResources table tr td, #cppResources table tr td, #pythonResources table tr td, #scriptingResources table tr td, #operatingSystemsResources table tr td {
-        border-color: #8b5aba;
-        color: #8b5aba;
+        border-color: #b88ce0;
+        color: #b88ce0;
         font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
@@ -982,7 +994,10 @@ html.js-animations #contactMe > address {
   html.js-animations #contactMe > a,
   html.js-animations #contactMe > address {
     opacity: 1 !important; } }
-#analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv {
+/* _3 tuned brighter than the source #16A085 (3.35:1, failed WCAG AA) so body
+   text, links and h3/h4 clear AA at 5.22:1 on the _1 bg — important for this
+   page's legal-disclosure readability. */
+#analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv, #changesDiv {
   margin: auto;
   background-color: #2C3E50;
   width: 80%;
@@ -992,50 +1007,53 @@ html.js-animations #contactMe > address {
   /* visited link */
   /* mouse over link */
   /* selected link */ }
-  #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1 {
+  #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1, #changesDiv h1 {
     text-align: left;
     color: #F7F9F9;
     font-size: 500%; }
-  #analyticsDiv h2, #thirdPartyDiv h2, #serviceWorkerDiv h2, #verificationDiv h2, #rightsDiv h2, #preferencesDiv h2 {
+  #analyticsDiv h2, #thirdPartyDiv h2, #serviceWorkerDiv h2, #verificationDiv h2, #rightsDiv h2, #preferencesDiv h2, #changesDiv h2 {
     text-align: left;
     color: #F39C12;
     font-size: 300%; }
-  #analyticsDiv h3, #thirdPartyDiv h3, #serviceWorkerDiv h3, #verificationDiv h3, #rightsDiv h3, #preferencesDiv h3 {
+  #analyticsDiv h3, #thirdPartyDiv h3, #serviceWorkerDiv h3, #verificationDiv h3, #rightsDiv h3, #preferencesDiv h3, #changesDiv h3 {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 200%; }
-  #analyticsDiv h4, #thirdPartyDiv h4, #serviceWorkerDiv h4, #verificationDiv h4, #rightsDiv h4, #preferencesDiv h4 {
+  #analyticsDiv h4, #thirdPartyDiv h4, #serviceWorkerDiv h4, #verificationDiv h4, #rightsDiv h4, #preferencesDiv h4, #changesDiv h4 {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 175%; }
-  #analyticsDiv p, #thirdPartyDiv p, #serviceWorkerDiv p, #verificationDiv p, #rightsDiv p, #preferencesDiv p {
+  #analyticsDiv p, #thirdPartyDiv p, #serviceWorkerDiv p, #verificationDiv p, #rightsDiv p, #preferencesDiv p, #changesDiv p {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 100%; }
-  #analyticsDiv a:link, #thirdPartyDiv a:link, #serviceWorkerDiv a:link, #verificationDiv a:link, #rightsDiv a:link, #preferencesDiv a:link {
+  #analyticsDiv a:link, #thirdPartyDiv a:link, #serviceWorkerDiv a:link, #verificationDiv a:link, #rightsDiv a:link, #preferencesDiv a:link, #changesDiv a:link {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 100%; }
-  #analyticsDiv a:visited, #thirdPartyDiv a:visited, #serviceWorkerDiv a:visited, #verificationDiv a:visited, #rightsDiv a:visited, #preferencesDiv a:visited {
+  #analyticsDiv a:visited, #thirdPartyDiv a:visited, #serviceWorkerDiv a:visited, #verificationDiv a:visited, #rightsDiv a:visited, #preferencesDiv a:visited, #changesDiv a:visited {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 100%; }
-  #analyticsDiv a:hover, #thirdPartyDiv a:hover, #serviceWorkerDiv a:hover, #verificationDiv a:hover, #rightsDiv a:hover, #preferencesDiv a:hover {
+  #analyticsDiv a:hover, #thirdPartyDiv a:hover, #serviceWorkerDiv a:hover, #verificationDiv a:hover, #rightsDiv a:hover, #preferencesDiv a:hover, #changesDiv a:hover {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 100%; }
-  #analyticsDiv a:active, #thirdPartyDiv a:active, #serviceWorkerDiv a:active, #verificationDiv a:active, #rightsDiv a:active, #preferencesDiv a:active {
+  #analyticsDiv a:active, #thirdPartyDiv a:active, #serviceWorkerDiv a:active, #verificationDiv a:active, #rightsDiv a:active, #preferencesDiv a:active, #changesDiv a:active {
     text-align: left;
-    color: #16A085;
+    color: #22c9a8;
     font-size: 100%; }
-  #analyticsDiv ul, #thirdPartyDiv ul, #serviceWorkerDiv ul, #verificationDiv ul, #rightsDiv ul, #preferencesDiv ul {
+  #analyticsDiv ul, #thirdPartyDiv ul, #serviceWorkerDiv ul, #verificationDiv ul, #rightsDiv ul, #preferencesDiv ul, #changesDiv ul {
     text-align: left; }
-    #analyticsDiv ul li, #thirdPartyDiv ul li, #serviceWorkerDiv ul li, #verificationDiv ul li, #rightsDiv ul li, #preferencesDiv ul li {
-      color: #16A085;
+    #analyticsDiv ul li, #thirdPartyDiv ul li, #serviceWorkerDiv ul li, #verificationDiv ul li, #rightsDiv ul li, #preferencesDiv ul li, #changesDiv ul li {
+      color: #22c9a8;
       font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Techno Serenity color palette https://colormagic.app/palette/6a125efefcd02ac9540f7feb */
+/* _3 tuned brighter than the source #77a3b1 (4.17:1, narrowly failed WCAG AA)
+   so body paragraphs, list items, blockquotes and table cells clear AA at
+   5.57:1 on the _1 bg, staying dimmer than _4 (used for headings/links). */
 #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
   margin: auto;
   background-color: #1f3a61;
@@ -1067,13 +1085,13 @@ html.js-animations #contactMe > address {
     font-size: 175%; }
   #dataEngineeringGuide p, #computerVisionGuide p, #generativeAIGuide p, #nlpGuide p, #reinforcementLearningGuide p, #softwareEngineeringGuide p, #cybersecurityGuide p {
     text-align: left;
-    color: #77a3b1;
+    color: #8fbccb;
     font-size: 100%; }
   #dataEngineeringGuide u, #computerVisionGuide u, #generativeAIGuide u, #nlpGuide u, #reinforcementLearningGuide u, #softwareEngineeringGuide u, #cybersecurityGuide u {
     color: #a3d5e0; }
   #dataEngineeringGuide blockquote, #computerVisionGuide blockquote, #generativeAIGuide blockquote, #nlpGuide blockquote, #reinforcementLearningGuide blockquote, #softwareEngineeringGuide blockquote, #cybersecurityGuide blockquote {
     text-align: left;
-    color: #77a3b1;
+    color: #8fbccb;
     font-size: 150%; }
   #dataEngineeringGuide a:link, #computerVisionGuide a:link, #generativeAIGuide a:link, #nlpGuide a:link, #reinforcementLearningGuide a:link, #softwareEngineeringGuide a:link, #cybersecurityGuide a:link {
     text-align: left;
@@ -1094,26 +1112,26 @@ html.js-animations #contactMe > address {
   #dataEngineeringGuide ul, #computerVisionGuide ul, #generativeAIGuide ul, #nlpGuide ul, #reinforcementLearningGuide ul, #softwareEngineeringGuide ul, #cybersecurityGuide ul {
     text-align: left; }
     #dataEngineeringGuide ul li, #computerVisionGuide ul li, #generativeAIGuide ul li, #nlpGuide ul li, #reinforcementLearningGuide ul li, #softwareEngineeringGuide ul li, #cybersecurityGuide ul li {
-      color: #77a3b1;
+      color: #8fbccb;
       font-size: 100%; }
   #dataEngineeringGuide table, #computerVisionGuide table, #generativeAIGuide table, #nlpGuide table, #reinforcementLearningGuide table, #softwareEngineeringGuide table, #cybersecurityGuide table {
     text-align: left;
     border-collapse: collapse;
-    border-color: #77a3b1;
+    border-color: #8fbccb;
     border-style: solid; }
     #dataEngineeringGuide table tr, #computerVisionGuide table tr, #generativeAIGuide table tr, #nlpGuide table tr, #reinforcementLearningGuide table tr, #softwareEngineeringGuide table tr, #cybersecurityGuide table tr {
-      border-color: #77a3b1; }
+      border-color: #8fbccb; }
       #dataEngineeringGuide table tr th, #computerVisionGuide table tr th, #generativeAIGuide table tr th, #nlpGuide table tr th, #reinforcementLearningGuide table tr th, #softwareEngineeringGuide table tr th, #cybersecurityGuide table tr th {
-        border-color: #77a3b1;
-        color: #77a3b1;
+        border-color: #8fbccb;
+        color: #8fbccb;
         font-size: 100%;
         border-top-style: double;
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
       #dataEngineeringGuide table tr td, #computerVisionGuide table tr td, #generativeAIGuide table tr td, #nlpGuide table tr td, #reinforcementLearningGuide table tr td, #softwareEngineeringGuide table tr td, #cybersecurityGuide table tr td {
-        border-color: #77a3b1;
-        color: #77a3b1;
+        border-color: #8fbccb;
+        color: #8fbccb;
         font-size: 100%;
         border-top-style: groove;
         border-right-style: groove;
@@ -1470,7 +1488,10 @@ body {
     color: #d4d4d9;
     font-size: 200%; }
   body p {
-    color: #a0a0b0;
+    /* $noir_4 (#a0a0b0) on $noir_2 is only 4.14:1; $noir_5 clears WCAG AA
+       (7.22:1). This global rule styles the #introSectionDiv lead paragraph
+       on every page (section partials override their own <p> color). */
+    color: #d4d4d9;
     font-size: 100%; }
   body img {
     display: block;

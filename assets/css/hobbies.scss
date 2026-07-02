@@ -1,11 +1,16 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 
-/* Calm Authority color palette from https://piktochart.com/tips/professional-color-palette */
+/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette
+ * Light tones _2–_5 are tuned brighter than the source palette so body text (_2)
+ * and every heading tier clear WCAG AA on the _1 background, while preserving the
+ * light-on-slate ramp (body dimmest, h1 brightest):
+ *   _2 body/links/table 5.13:1, _3 h3 5.64:1, _4 h2 6.57:1, _5 h1 7.69:1.
+ * (Source values were _2 #5D6D7E 1.75:1, _3 #85929E 2.92:1, _4 #AAB7B8 4.50:1.) */
 $calm_authority_1: #34495E;
-$calm_authority_2: #5D6D7E;
-$calm_authority_3: #85929E;
-$calm_authority_4: #AAB7B8;
-$calm_authority_5: #D5D5DB;
+$calm_authority_2: #B8C2C9;
+$calm_authority_3: #C2CBD1;
+$calm_authority_4: #D3DADE;
+$calm_authority_5: #E7EAEC;
 
 // /* Sunset Glow color palette from https://colormagic.app/palette/6730825daab946028bff7622 */
 // $sunset_glow_1: #ffb84d;

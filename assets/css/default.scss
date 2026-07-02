@@ -251,7 +251,10 @@ body {
         font-size: 200%;
     }
     p {
-        color: $noir_4;
+        /* $noir_4 (#a0a0b0) on $noir_2 is only 4.14:1; $noir_5 clears WCAG AA
+           (7.22:1). This global rule styles the #introSectionDiv lead paragraph
+           on every page (section partials override their own <p> color). */
+        color: $noir_5;
         font-size: 100%;
     }
     img {

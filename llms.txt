@@ -1,14 +1,41 @@
-# Colby Mainard — Personal Website
+# Colby Mainard — AI/ML Engineer & Personal Website
 
-> Personal website and professional portfolio of Colby Mainard, a Machine Learning Engineer specializing in computer vision, deep learning, and applied AI for sports analytics, cybersecurity, and financial technology. The site documents his work history, education, projects, technical skills, certifications, technical opinions, beginner-friendly guides, curated learning resources, and hobbies.
+> Personal website and professional portfolio of Colby Mainard, an AI/Machine Learning Engineer specializing in computer vision, deep learning, and applied AI. He builds security-focused ML systems (fraud detection, anomaly detection, anti-money laundering) and applies AI to sports analytics, cybersecurity, and financial technology. The site documents his work history, education, projects, technical skills, certifications, technical opinions, beginner-friendly AI/ML guides, curated learning resources, and hobbies.
 
-Colby Mainard is an AI/ML Engineer (currently at RiskScout). He holds a Masters in Computer Science from Texas A&M University — concentrating in artificial intelligence, machine learning, deep learning, and computer vision — and a B.S. in Computer Science from Texas A&M with minors in Business and Cybersecurity.
+Colby Mainard is an AI/ML Engineer (currently at RiskScout). He holds a Master's in Computer Science from Texas A&M University — concentrating in artificial intelligence, machine learning, deep learning, and computer vision — and a B.S. in Computer Science from Texas A&M with minors in Business and Cybersecurity.
 
-**Core expertise:** computer vision, deep learning, natural language processing, generative models (GANs, VAEs, transformers), reinforcement learning, and security-focused ML (fraud detection, anomaly detection, anti-money laundering). Common tools: Python, PyTorch, TensorFlow, Keras, OpenCV, SQL, AWS, and Docker.
+**Core expertise:** computer vision, deep learning, natural language processing, generative models (GANs, VAEs, transformers), reinforcement learning, and security-focused ML (fraud detection, anomaly detection, anti-money laundering).
+
+**Primary tools & technologies:** Python, PyTorch, TensorFlow, Keras, OpenCV, SQL, AWS, and Docker.
+
+**Application domains:** sports analytics, cybersecurity, and financial technology (fintech).
 
 **Canonical URL:** https://colbymainard.github.io/
 
 **Last updated:** 2026-07-01
+
+## Key facts
+
+- **Site Author:** Colby Mainard
+- **Role:** AI/Machine Learning Engineer
+- **Current employer:** RiskScout
+- **Education:** Masters and Bachelors of Science in Computer Science, Texas A&M University (graduate concentration in AI, machine learning, deep learning, and computer vision; undergraduate minors in Business and Cybersecurity)
+- **Specialties:** computer vision, deep learning, NLP, generative AI, reinforcement learning, and security/fraud ML
+- **Site type:** static, client-side personal portfolio and technical-writing site
+
+## Frequently asked questions
+
+**Who is Colby Mainard?**
+Colby Mainard is an AI/Machine Learning Engineer specializing in computer vision, deep learning, and applied AI. He currently works at RiskScout and holds Master's and Bachelor's degrees in Computer Science from Texas A&M University.
+
+**What does Colby Mainard specialize in?**
+Computer vision, deep learning, natural language processing, generative models (GANs, VAEs, transformers), reinforcement learning, and security-focused machine learning — including fraud detection, anomaly detection, and anti-money laundering.
+
+**Where did Colby Mainard study?**
+Texas A&M University, earning a Master's in Computer Science (concentrating in AI, machine learning, deep learning, and computer vision) and a B.S. in Computer Science with minors in Business and Cybersecurity.
+
+**What can I find on Colby Mainard's website?**
+His professional background (work history, education, projects, certifications, and technical skills), beginner-friendly guides to major technical domains, long-form technical opinion pieces, curated learning resources, and personal hobbies.
 
 ## Site notes
 

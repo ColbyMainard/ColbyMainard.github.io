@@ -17,7 +17,9 @@
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
 $neon_dusk_serenity_1: #1f1b79;
 $neon_dusk_serenity_2: #5c4091;
-$neon_dusk_serenity_3: #8b5aba;
+/* _3 tuned brighter than the source #8b5aba (2.86:1, failed WCAG AA) so body
+   text, links, h3, blockquotes and every table cell clear AA at 5.27:1 on _1. */
+$neon_dusk_serenity_3: #b88ce0;
 $neon_dusk_serenity_4: #d07e6c;
 $neon_dusk_serenity_5: #f9c54e;
 
