@@ -1,5 +1,5 @@
 ---
-name: code-reviewer
+name: website-code-reviewer
 description: Reviews code for overall quality
 model: sonnet
 tools: Read

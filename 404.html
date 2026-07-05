@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            GitHub Pages serves this file's CONTENT at whatever missing URL was
+            requested (e.g. /some/missing/path), so every internal path below is
+            root-absolute (/assets/..., /index.html) — a relative path would
+            resolve against the phantom directory of the missing URL.
+            Consequence: this page will NOT style or script correctly when opened
+            from file:// — acceptable, because 404 handling is inherently an
+            HTTP-server feature.
+        -->
+        <title>Page Not Found (404) — Colby Mainard</title>
+        <meta name="author" content="Colby Mainard">
+
+        <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Social sharing cards. No canonical link: this page is noindex, and a
+             canonical on a noindex page sends search engines mixed signals. -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://colbymainard.github.io/404.html">
+        <meta property="og:title" content="Page Not Found — Colby Mainard">
+        <meta property="og:description" content="404 error page for colbymainard.github.io — the requested page could not be found. Links back to the home page, guides, technical stances, resources, and hobbies.">
+        <meta property="og:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+        <meta property="og:site_name" content="Colby Mainard">
+        <meta name="linkedin:card" content="summary">
+        <meta name="linkedin:title" content="Page Not Found — Colby Mainard">
+        <meta name="linkedin:description" content="404 error page for colbymainard.github.io — the requested page could not be found. Links back to the home page, guides, technical stances, resources, and hobbies.">
+        <meta name="linkedin:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Page Not Found — Colby Mainard">
+        <meta name="twitter:description" content="404 error page for colbymainard.github.io — the requested page could not be found. Links back to the home page, guides, technical stances, resources, and hobbies.">
+        <meta name="twitter:image" content="https://colbymainard.github.io/assets/images/favicon.png">
+
+        <!-- Icons and theme -->
+        <link rel="icon" type="image/png" href="/assets/images/favicon.png"/>
+        <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+        <meta name="theme-color" content="#000000">
+
+        <link rel="stylesheet" href="./assets/css/default.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="404 error page for colbymainard.github.io — the requested page could not be found. Links back to the home page, guides, technical stances, resources, and hobbies.">
+        <meta name="keywords" content="404, page not found, error page, Colby Mainard">
+
+        <!-- /404.html itself is fetchable with HTTP 200, so tell search engines not to index it. -->
+        <meta name="robots" content="noindex, follow">
+
+        <!--
+            No cookie_consent.js or service_worker_register.js on this page. Both
+            compute relative paths that break when this file is rendered at an
+            arbitrary missing URL, and nothing here loads analytics, so no consent
+            banner is needed. The service worker still registers from every real
+            page.
+        -->
+
+        <!-- AnimeJS for animations -->
+        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
+        <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
+        <script src="/assets/js/animation_helpers.js" defer></script>
+        <script src="/assets/js/404_animations.js" defer></script>
+        <script src="/assets/js/navbar.js" defer></script>
+        <script src="/assets/js/back_to_top.js" defer></script>
+        <script src="/assets/js/clipboard.js" defer></script>
+
+        <!-- JSON-LD: BreadcrumbList -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://colbymainard.github.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Page Not Found", "item": "https://colbymainard.github.io/404.html"}
+          ]
+        }
+        </script>
+    </head>
+    <body>
+        <a href="#main" class="visually-hidden">Skip to main content</a>
+        <header>
+            <div class="pageMenu" id="pageMenu">
+                <span class="nav-brand">Colby Mainard</span>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
+                <nav id="primaryNav" aria-label="Site navigation">
+                    <a href="/index.html">Home</a>
+                    <a href="/assets/html/tech_takes.html">Technical Stances</a>
+                    <a href="/assets/html/hobbies.html">Hobbies</a>
+                    <a href="/assets/html/tech_resources.html">Technical Resources</a>
+                    <a href="/assets/html/guides.html">Guides</a>
+                </nav>
+            </div>
+            <div class="siteMenu" id="siteMenu">
+                <nav id="sectionNav" aria-label="Page sections">
+                    <a href="#notFoundDiv">What Happened</a>
+                    <a href="#helpfulLinksDiv">Where To Next</a>
+                    <a href="#contactMe">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main" id="main" tabindex="-1">
+            <div class="introSectionDiv" id="introSectionDiv">
+                <p class="errorCode" aria-hidden="true">404</p>
+                <h1>Page Not Found</h1>
+                <p>
+                    The address you followed doesn't match any page on this site. Nothing is broken on your end &mdash; the link is likely stale, mistyped, or pointing at something that has moved.
+                </p>
+            </div>
+
+            <div class="notFoundDiv" id="notFoundDiv">
+                <section class="notFound" id="notFound">
+                    <h2>What Happened?</h2>
+                    <p>
+                        This is a small, static site, so there are only a handful of places a URL can point &mdash; and this wasn't one of them. If you typed the address by hand, double-check it for typos; paths here are case-sensitive. If you followed a link from another site or an old bookmark, the page may have been renamed or reorganized since that link was made.
+                    </p>
+                    <p>
+                        If you're convinced something should be here, let me know using the contact details in the footer &mdash; broken inbound links are worth fixing.
+                    </p>
+                </section>
+            </div>
+
+            <div class="helpfulLinksDiv" id="helpfulLinksDiv">
+                <section class="helpfulLinks" id="helpfulLinks">
+                    <h2>Where To Next?</h2>
+                    <p>Every page on this site is one hop away:</p>
+                    <ul>
+                        <li><a href="/index.html">Home</a> &mdash; work history, education, projects, technical skills, and certifications.</li>
+                        <li><a href="/assets/html/tech_takes.html">Technical Stances</a> &mdash; long-form opinions on quantum computing, AGI hype, privacy, and more.</li>
+                        <li><a href="/assets/html/hobbies.html">Hobbies</a> &mdash; photography, quantum-computing self-study, D&amp;D, and history.</li>
+                        <li><a href="/assets/html/tech_resources.html">Technical Resources</a> &mdash; curated reading lists for cybersecurity, AI/ML, C++, Python, and operating systems.</li>
+                        <li><a href="/assets/html/guides.html">Guides</a> &mdash; beginner-friendly introductions to major technical domains.</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <section class="contactMe" id="contactMe">
+                <h2>Contact:</h2>
+                <p>Email:
+                    <a href="mailto:colby.mainard@proton.me">
+                        colby.mainard@proton.me
+                    </a>
+                </p>
+                <p>LinkedIn:
+                    <a href="https://www.linkedin.com/in/colby-mainard/">
+                        https://www.linkedin.com/in/colby-mainard/
+                    </a>
+                </p>
+                <p>
+                    PGP key:
+                    <a href="/assets/other/pgp_email_key.asc">
+                        36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE
+                    </a>
+                </p>
+                <p>
+                    <a href="/assets/html/privacy.html">Privacy Policy</a>
+                </p>
+            </section>
+        </footer>
+    </body>
+</html>

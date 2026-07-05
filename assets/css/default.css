@@ -1329,6 +1329,121 @@ html.js-animations #contactMe > div.guideInfographic {
   html.js-animations #contactMe > address,
   html.js-animations #contactMe > div.guideInfographic {
     opacity: 1 !important; } }
+/* Signal Lost color palette — original warm-ember ramp for the 404 error page.
+   Contrast on the _1 background: _3 body text 8.1:1, _4 links 10.2:1, _5
+   headings 13.7:1 — all clear WCAG AA (>=4.5:1 for body text). _2 is
+   decorative only (shadows; never use it for text). The .errorCode figure
+   uses _4 on the global noir_2 body background: 7.2:1. */
+/* Oversized decorative "404" figure in the intro (aria-hidden in the markup;
+   the h1 carries the accessible page state). Sits on the global noir_2 body
+   background. .errorCode exists only on 404.html, so nothing leaks. */
+#introSectionDiv .errorCode {
+  color: #f2cfa0;
+  font-family: "Courier New", monospace;
+  font-size: 1000%;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  margin: 0.25em 0 0 0;
+  text-shadow: 6px 6px 0 rgba(107, 58, 58, 0.85), 12px 12px 0 rgba(0, 0, 0, 0.35); }
+
+@media (max-width: 768px) {
+  #introSectionDiv .errorCode {
+    font-size: 600%; } }
+#notFound, #helpfulLinks {
+  margin: auto;
+  background-color: #3a1f1f;
+  width: 80%;
+  border-radius: 10px;
+  padding: 1.5em 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: "Courier New", monospace;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  #notFound h2, #helpfulLinks h2 {
+    text-align: left;
+    color: #fdf3e3;
+    font-size: 300%; }
+  #notFound h3, #helpfulLinks h3 {
+    text-align: left;
+    color: #f2cfa0;
+    font-size: 200%; }
+  #notFound p, #helpfulLinks p {
+    text-align: left;
+    color: #e8b48f;
+    font-size: 100%; }
+  #notFound a:link, #helpfulLinks a:link {
+    text-align: left;
+    color: #f2cfa0;
+    font-size: 100%; }
+  #notFound a:visited, #helpfulLinks a:visited {
+    text-align: left;
+    color: #f2cfa0;
+    font-size: 100%; }
+  #notFound a:hover, #helpfulLinks a:hover {
+    text-align: left;
+    color: #fdf3e3;
+    font-size: 100%; }
+  #notFound a:active, #helpfulLinks a:active {
+    text-align: left;
+    color: #fdf3e3;
+    font-size: 100%; }
+  #notFound ul, #helpfulLinks ul {
+    text-align: left; }
+    #notFound ul li, #helpfulLinks ul li {
+      color: #e8b48f;
+      font-size: 100%; }
+
+/*
+ * Animation initial states — only applied when JS is active.
+ * Elements start invisible; AnimeJS animates them into view.
+ * (The #introSectionDiv / #contactMe gates duplicate what other per-page
+ * partials already emit — the established per-partial convention.)
+ */
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > a,
+html.js-animations #notFound > h1,
+html.js-animations #notFound > h2,
+html.js-animations #notFound > h3,
+html.js-animations #notFound > p,
+html.js-animations #notFound > ul,
+html.js-animations #notFound > a,
+html.js-animations #contactMe > h1,
+html.js-animations #contactMe > h2,
+html.js-animations #contactMe > h3,
+html.js-animations #contactMe > p,
+html.js-animations #contactMe > ul,
+html.js-animations #contactMe > a {
+  opacity: 0; }
+html.js-animations #helpfulLinks {
+  /* li (not > ul) so the page links can stagger in individually */ }
+  html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, html.js-animations #helpfulLinks li {
+    opacity: 0; }
+
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > a,
+  html.js-animations #notFound > h1,
+  html.js-animations #notFound > h2,
+  html.js-animations #notFound > h3,
+  html.js-animations #notFound > p,
+  html.js-animations #notFound > ul,
+  html.js-animations #notFound > a,
+  html.js-animations #contactMe > h1,
+  html.js-animations #contactMe > h2,
+  html.js-animations #contactMe > h3,
+  html.js-animations #contactMe > p,
+  html.js-animations #contactMe > ul,
+  html.js-animations #contactMe > a {
+    opacity: 1 !important; }
+  html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, html.js-animations #helpfulLinks li {
+    opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
 @media (prefers-reduced-motion: no-preference) {

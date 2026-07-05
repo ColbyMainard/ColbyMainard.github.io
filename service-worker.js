@@ -4,12 +4,13 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v30";
+const CACHE_VERSION = "v32";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
     "./",
     "./index.html",
+    "./404.html",
     "./llms.txt",
     "./manifest.json",
     "./assets/html/hobbies.html",
@@ -18,6 +19,7 @@ const PRECACHE_URLS = [
     "./assets/html/guides.html",
     "./assets/html/privacy.html",
     "./assets/css/default.css",
+    "./assets/js/404_animations.js",
     "./assets/js/animation_helpers.js",
     "./assets/js/back_to_top.js",
     "./assets/js/cookie_consent.js",
@@ -81,10 +83,15 @@ self.addEventListener("fetch", function (event) {
     if (request.mode === "navigate") {
         event.respondWith(
             fetch(request).then(function (response) {
-                const clone = response.clone();
-                caches.open(CACHE_NAME).then(function (cache) {
-                    return cache.put(request, clone);
-                }).catch(function () { /* cache write failed; the network response is still served */ });
+                // GitHub Pages answers missing URLs with the 404.html body and
+                // status 404; only cache successful navigations so mistyped
+                // URLs don't permanently store junk copies of the error page.
+                if (response && response.ok) {
+                    const clone = response.clone();
+                    caches.open(CACHE_NAME).then(function (cache) {
+                        return cache.put(request, clone);
+                    }).catch(function () { /* cache write failed; the network response is still served */ });
+                }
                 return response;
             }).catch(function () {
                 return caches.match(request).then(function (cached) {

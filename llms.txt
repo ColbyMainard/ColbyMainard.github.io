@@ -8,11 +8,11 @@ Colby Mainard is an AI/ML Engineer (currently at RiskScout). He holds a Master's
 
 **Primary tools & technologies:** Python, PyTorch, TensorFlow, Keras, OpenCV, SQL, AWS, and Docker.
 
-**Application domains:** sports analytics, cybersecurity, and financial technology (fintech).
+**Application domains:** sports analytics, cybersecurity, and financial technology (FinTech).
 
 **Canonical URL:** https://colbymainard.github.io/
 
-**Last updated:** 2026-07-01
+**Last updated:** 2026-07-05
 
 ## Key facts
 
