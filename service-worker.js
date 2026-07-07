@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v33";
+const CACHE_VERSION = "v34";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -40,7 +40,8 @@ const PRECACHE_URLS = [
     "./assets/images/photographyHobby/DSC_0023.JPG",
     "./assets/images/photographyHobby/DSC_0110.JPG",
     "./assets/images/photographyHobby/DSC_0237.JPG",
-    "./assets/images/photographyHobby/DSC_0396.JPG"
+    "./assets/images/photographyHobby/DSC_0396.JPG",
+    "./assets/other/pgp_email_key.asc"
 ];
 
 self.addEventListener("install", function (event) {
