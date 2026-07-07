@@ -126,6 +126,9 @@
 
         var emailLink = contact.querySelector('a[href^="mailto:"]');
         attachToLink(emailLink, "Copy email address");
+
+        var pgpLink = contact.querySelector('a[href$="pgp_email_key.asc"]');
+        attachToLink(pgpLink, "Copy PGP fingerprint");
     }
 
     if (document.readyState === "loading") {

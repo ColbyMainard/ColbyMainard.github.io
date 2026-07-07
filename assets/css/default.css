@@ -1484,7 +1484,8 @@ header {
     letter-spacing: 1px;
     text-decoration: none; }
     header .nav-brand:hover {
-      color: #50c3a1; }
+      /* _4 = 3.31:1 on _1 — AA for this large bold text; _3 fails at 2.45:1 */
+      color: #a1d9b0; }
   header .nav-toggle {
     display: none;
     background: none;
@@ -1518,7 +1519,8 @@ header {
       gap: 0; }
     header #pageMenu a {
       display: inline-block;
-      color: #a1d9b0;
+      /* _5 = 5.85:1 on the darkened strip (AA); _4 was 4.05:1 */
+      color: #e0f7fa;
       text-decoration: none;
       padding: 14px 24px;
       font-size: 95%;
@@ -1548,7 +1550,8 @@ header {
       gap: 0; }
     header #siteMenu a {
       display: inline-block;
-      color: #50c3a1;
+      /* _5 = 4.78:1 on _1 (AA); _3 was 2.45:1 */
+      color: #e0f7fa;
       text-decoration: none;
       padding: 10px 18px;
       font-size: 85%;
@@ -1558,7 +1561,8 @@ header {
         border-left: none; }
       header #siteMenu a:hover {
         color: #e0f7fa;
-        background-color: rgba(80, 195, 161, 0.1); }
+        /* darken, not tint: a _3 tint under _5 text tops out ≈4.3:1 */
+        background-color: #00614a; }
       header #siteMenu a:focus-visible {
         outline: none;
         box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
@@ -1815,14 +1819,17 @@ pre {
   font-size: 95%;
   line-height: 1;
   color: #e0f7fa;
-  background-color: rgba(29, 154, 106, 0.55);
+  /* $noir_1 base (cookie-banner scheme) — every emerald tint clears AA on it;
+   * the old 55% _2 blend left the _5 glyph at ≈3.8:1 */
+  background-color: #1a1a1e;
   border: 1px solid #50c3a1;
   border-radius: 4px;
   cursor: pointer;
   vertical-align: baseline;
   transition: background-color 0.15s, border-color 0.15s, color 0.15s; }
   .copyToClipboard:hover, .copyToClipboard:focus {
-    background-color: #1d9a6a;
+    /* mirrors .cookieConsent-accept:hover — _5 on _1 = 4.78:1; _2 was 3.2:1 */
+    background-color: #007a5e;
     border-color: #e0f7fa;
     color: #e0f7fa;
     outline: none; }
@@ -1852,7 +1859,8 @@ footer {
   footer #contactMe {
     font-family: "Courier New", monospace;
     /* unvisited link */
-    /* visited link */
+    /* visited link — _5 like :link (no emerald tint between _4 and _5
+     * reaches 4.5:1 on _1); visited is distinguished by underline style */
     /* mouse over link */
     /* selected link */ }
     footer #contactMe h1 {
@@ -1860,7 +1868,8 @@ footer {
       color: #1d9a6a; }
     footer #contactMe h2 {
       font-size: 300%;
-      color: #50c3a1; }
+      /* _4 = 3.31:1 on _1 — AA for 48px text; _3 was 2.45:1 */
+      color: #a1d9b0; }
     footer #contactMe h3 {
       font-size: 200%;
       color: #a1d9b0; }
@@ -1871,8 +1880,9 @@ footer {
       color: #e0f7fa;
       font-size: 100%; }
     footer #contactMe a:visited {
-      color: #a1d9b0;
-      font-size: 100%; }
+      color: #e0f7fa;
+      font-size: 100%;
+      text-decoration: underline dotted; }
     footer #contactMe a:hover {
       color: #e0f7fa;
       font-size: 100%; }

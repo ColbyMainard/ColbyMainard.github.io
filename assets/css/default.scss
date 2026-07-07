@@ -76,7 +76,8 @@ header {
         text-decoration: none;
 
         &:hover {
-            color: $emerald_efficiency_3;
+            /* _4 = 3.31:1 on _1 — AA for this large bold text; _3 fails at 2.45:1 */
+            color: $emerald_efficiency_4;
         }
     }
 
@@ -124,7 +125,8 @@ header {
 
         a {
             display: inline-block;
-            color: $emerald_efficiency_4;
+            /* _5 = 5.85:1 on the darkened strip (AA); _4 was 4.05:1 */
+            color: $emerald_efficiency_5;
             text-decoration: none;
             padding: 14px 24px;
             font-size: 95%;
@@ -166,7 +168,8 @@ header {
 
         a {
             display: inline-block;
-            color: $emerald_efficiency_3;
+            /* _5 = 4.78:1 on _1 (AA); _3 was 2.45:1 */
+            color: $emerald_efficiency_5;
             text-decoration: none;
             padding: 10px 18px;
             font-size: 85%;
@@ -179,7 +182,8 @@ header {
 
             &:hover {
                 color: $emerald_efficiency_5;
-                background-color: rgba($emerald_efficiency_3, 0.1);
+                /* darken, not tint: a _3 tint under _5 text tops out ≈4.3:1 */
+                background-color: darken($emerald_efficiency_1, 5%);
             }
 
             &:focus-visible {
@@ -534,7 +538,9 @@ pre {
     font-size: 95%;
     line-height: 1;
     color: $emerald_efficiency_5;
-    background-color: rgba($emerald_efficiency_2, 0.55);
+    /* $noir_1 base (cookie-banner scheme) — every emerald tint clears AA on it;
+     * the old 55% _2 blend left the _5 glyph at ≈3.8:1 */
+    background-color: $noir_1;
     border: 1px solid $emerald_efficiency_3;
     border-radius: 4px;
     cursor: pointer;
@@ -543,7 +549,8 @@ pre {
 
     &:hover,
     &:focus {
-        background-color: $emerald_efficiency_2;
+        /* mirrors .cookieConsent-accept:hover — _5 on _1 = 4.78:1; _2 was 3.2:1 */
+        background-color: $emerald_efficiency_1;
         border-color: $emerald_efficiency_5;
         color: $emerald_efficiency_5;
         outline: none;
@@ -585,7 +592,8 @@ footer {
         }
         h2 {
             font-size: 300%;
-            color: $emerald_efficiency_3;
+            /* _4 = 3.31:1 on _1 — AA for 48px text; _3 was 2.45:1 */
+            color: $emerald_efficiency_4;
         }
         h3 {
             font-size: 200%;
@@ -600,10 +608,12 @@ footer {
             color: $emerald_efficiency_5;
             font-size: 100%;
         }
-        /* visited link */
+        /* visited link — _5 like :link (no emerald tint between _4 and _5
+         * reaches 4.5:1 on _1); visited is distinguished by underline style */
         a:visited {
-            color: $emerald_efficiency_4;
+            color: $emerald_efficiency_5;
             font-size: 100%;
+            text-decoration: underline dotted;
         }
         /* mouse over link */
         a:hover {
