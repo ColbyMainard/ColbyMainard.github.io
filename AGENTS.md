@@ -7,7 +7,7 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 - **What this is:** Colby Mainard's personal website — a static, **client-side-only** site.
 - **Hosting:** GitHub Pages. There is **no server-side processing, no build server, and no runtime backend**. Everything must work as plain files served statically.
 - **Audience:** potential colleagues, potential employers, and fellow technology enthusiasts. Keep content credible and professional.
-- **Must work from both `file://` and `https://` origins.** Test patterns that browsers restrict on `file://` (see CORS below). Sole exception: `404.html` (see repo map).
+- **Must work from both `file://` and `https://` origins.** Test patterns that browsers restrict on `file://` (see CORS below). Known caveat: `404.html` degrades at nested missing URLs (see repo map).
 - **No build step is required to view the site.** The only compile step is SCSS → CSS (see Build & deploy).
 
 ## Repository map
@@ -15,7 +15,7 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 | Path | What it holds |
 | ---- | ------------- |
 | `index.html` | Landing page (work history, education, projects, skills, certifications). One of two HTML files at repo root (see `404.html`). |
-| `404.html` | Custom GitHub Pages error page. Its content is served at whatever missing URL was requested, so all its internal paths are root-absolute and it deliberately omits `cookie_consent.js`/`service_worker_register.js` (their relative-path logic breaks at arbitrary depths) — do not "normalize" either choice. Consequently it does not style on `file://`. |
+| `404.html` | Custom GitHub Pages error page. Its content is served at whatever missing URL was requested. It deliberately omits `cookie_consent.js`/`service_worker_register.js` (their relative-path logic breaks at arbitrary depths) — do not "normalize" that. Its other paths are deliberately relative like every page's (only the icon links and the footer PGP/privacy links are root-absolute), so it styles from `file://` and at top-level missing URLs but renders unstyled, with broken internal links, at nested missing URLs (e.g. `/dir/typo`) — an accepted tradeoff; do not convert it back to root-absolute unasked. |
 | `assets/html/` | All non-index pages: `tech_takes.html`, `hobbies.html`, `tech_resources.html`, `guides.html`, `privacy.html`. |
 | `assets/css/` | `default.scss` (single compile entry) + 7 per-page partials; compiled `default.css` (committed); `*.css.map` (gitignored). |
 | `assets/js/` | Shared scripts, per-page `*_animations.js`, and page helpers. All client-side. |
@@ -51,7 +51,7 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 - **Client-side only.** Every script must run with no server and tolerate a `file://` origin.
 - **Minimal dependencies.** AnimeJS is the *only* external library, loaded from a CDN via an `importmap` plus a small module shim that exposes it as `window.anime`. The deferred `*_animations.js` files are **classic scripts** that consume that global, with `animation_helpers.js` providing shared animation utilities. Before adding any npm dependency, **confirm with the user**; prefer generic JS / NodeJS with few transitive deps.
 - **Shared deferred scripts loaded on every page:** `cookie_consent.js`, `navbar.js`, `back_to_top.js`, `clipboard.js`, `service_worker_register.js` — and on animated pages, `animation_helpers.js` + the page's own `*_animations.js`, plus occasional helpers (e.g. `tech_takes_engagement.js` reading-time).
-- **Known exceptions — do not "normalize" them:** `privacy.html` loads no AnimeJS/animation scripts at all; `404.html` omits `cookie_consent.js`/`service_worker_register.js` and uses root-absolute paths (see repo map).
+- **Known exceptions — do not "normalize" them:** `privacy.html` loads no AnimeJS/animation scripts at all; `404.html` omits `cookie_consent.js`/`service_worker_register.js`, and its relative paths are intentional (see repo map).
 - `cookie_consent.js` **gates Google Analytics** — GA does not load until the visitor grants consent. Do not load analytics before consent.
 - `service_worker_register.js` registers `service-worker.js` and **injects the `<link rel="manifest">` at runtime**, only over `http(s)` (browsers block manifest fetches from `file://`).
 - `navbar.js` drives the responsive nav toggle and shared header markup; keep the header consistent across pages.
