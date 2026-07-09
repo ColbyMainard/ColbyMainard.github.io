@@ -3,8 +3,13 @@
  *
  * Shared helpers for the per-page *_animations.js entrance animations.
  * Exposes window.AnimationHelpers =
- * { directChildren, addStep, animateContact, prefersReducedMotion }
- * so the five animation scripts don't each re-declare identical copies.
+ * { directChildren, addStep, animateContact, prefersReducedMotion, run }
+ * so the six animation scripts don't each re-declare identical copies. `run`
+ * owns the boilerplate they used to duplicate outright: the reduced-motion
+ * bail-out, the anime-availability guard, the .js-animations toggle, and the
+ * single-shot IntersectionObserver that fires each section's animation on
+ * first entry — leaving each page script to declare only its section map and
+ * its per-section animation functions.
  *
  * Classic (non-module) deferred script — must load BEFORE each page's
  * *_animations.js so the global is ready when that script runs. animateContact
@@ -71,10 +76,73 @@
         });
     }
 
+    /**
+     * Orchestrate a page's scroll-triggered entrance animations. Each
+     * *_animations.js builds a { key: "#selector" } section map plus a matching
+     * { key: fn(el) } animation map and hands both here — this owns the wiring
+     * every page used to copy verbatim.
+     *
+     * NOT adding the .js-animations class is the graceful-degradation path: the
+     * opacity-hiding CSS keys on that class, so when we bail (reduced motion, or
+     * anime failed to load) content is left in its natural, fully-visible state.
+     * The complementary !window.AnimationHelpers guard lives in each page
+     * script, since it can't call run() if this file didn't load at all.
+     */
+    function run(sections, animationMap) {
+        if (prefersReducedMotion()) return;
+        if (typeof anime === "undefined") return;
+
+        // Mark the document so CSS hides elements only when JS will animate them.
+        document.documentElement.classList.add("js-animations");
+
+        var animated = {};
+
+        function onIntersect(entries, observer) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+
+                var el = entry.target;
+                var key = el.getAttribute("data-animate");
+                if (!key || animated[key]) return;
+
+                animated[key] = true;
+                observer.unobserve(el);
+
+                if (animationMap[key]) {
+                    animationMap[key](el);
+                }
+            });
+        }
+
+        function init() {
+            var observer = new IntersectionObserver(onIntersect, {
+                threshold: 0.02,
+                // Trigger ~50px before a section reaches the viewport's bottom
+                // edge, matching timing across every animated page.
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            Object.keys(sections).forEach(function (key) {
+                var el = document.querySelector(sections[key]);
+                if (el) {
+                    el.setAttribute("data-animate", key);
+                    observer.observe(el);
+                }
+            });
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init);
+        } else {
+            init();
+        }
+    }
+
     window.AnimationHelpers = {
         directChildren: directChildren,
         addStep: addStep,
         animateContact: animateContact,
-        prefersReducedMotion: prefersReducedMotion
+        prefersReducedMotion: prefersReducedMotion,
+        run: run
     };
 })();

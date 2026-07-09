@@ -8,25 +8,15 @@
 (function () {
     "use strict";
 
-    // Respect the user's reduced-motion preference: skip all entrance
-    // animations entirely. Because the opacity-hiding CSS is gated on the
-    // .js-animations class (added just below), NOT adding it leaves content
-    // in its natural, fully-visible state.
-    if (window.matchMedia &&
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        return;
-    }
-
-    // Degrade gracefully if the AnimeJS CDN/module failed or the shared
-    // helpers didn't load: leave content fully visible by NOT adding
-    // js-animations (the opacity-hiding CSS keys on that class).
-    if (typeof anime === "undefined" || !window.AnimationHelpers) return;
+    // The reduced-motion / anime guards, the .js-animations toggle, and the
+    // IntersectionObserver wiring now live in animation_helpers.js `run`. Bail
+    // only if that shared file didn't load, since without it there is nothing
+    // to hook into (content then stays in its natural, fully-visible state).
+    if (!window.AnimationHelpers) return;
 
     var directChildren = window.AnimationHelpers.directChildren;
     var addStep = window.AnimationHelpers.addStep;
     var animateContact = window.AnimationHelpers.animateContact;
-
-    document.documentElement.classList.add("js-animations");
 
     var sections = {
         intro: "#introSectionDiv",
@@ -39,8 +29,6 @@
         cybersecurity: "#cybersecurityGuide",
         contact: "#contactMe"
     };
-
-    var animated = {};
 
     /**
      * Intro — Fade in + drop from above
@@ -99,41 +87,7 @@
         contact: animateContact
     };
 
-    function onIntersect(entries, observer) {
-        entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-
-            var el = entry.target;
-            var key = el.getAttribute("data-animate");
-            if (!key || animated[key]) return;
-
-            animated[key] = true;
-            observer.unobserve(el);
-
-            if (animationMap[key]) {
-                animationMap[key](el);
-            }
-        });
-    }
-
-    function init() {
-        var observer = new IntersectionObserver(onIntersect, {
-            threshold: 0.02,
-            rootMargin: "0px 0px -50px 0px"
-        });
-
-        Object.keys(sections).forEach(function (key) {
-            var el = document.querySelector(sections[key]);
-            if (el) {
-                el.setAttribute("data-animate", key);
-                observer.observe(el);
-            }
-        });
-    }
-
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", init);
-    } else {
-        init();
-    }
+    // Hand the section map and animations to the shared orchestrator, which
+    // wires up the IntersectionObserver and honors reduced-motion.
+    window.AnimationHelpers.run(sections, animationMap);
 })();
