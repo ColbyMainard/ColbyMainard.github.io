@@ -95,8 +95,10 @@ $calm_authority_5: #E7EAEC;
 #quantumComputing {
     @extend %hobbySection;
     iframe {
-        width:560px;
-        height: 315px;
+        width: 560px;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
     }
 }
 

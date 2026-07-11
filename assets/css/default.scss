@@ -76,8 +76,10 @@ header {
         text-decoration: none;
 
         &:hover {
-            /* _4 = 3.31:1 on _1 — AA for this large bold text; _3 fails at 2.45:1 */
-            color: $emerald_efficiency_4;
+            /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1,
+               AA only while this text stays above the large-text cutoff (~0.5px
+               to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
+            text-decoration: underline;
         }
     }
 
@@ -425,14 +427,15 @@ pre {
     }
 
     .cookieConsent-accept {
-        background-color: $emerald_efficiency_2;
+        /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
+        background-color: $emerald_efficiency_1;
         border: 2px solid $emerald_efficiency_3;
         color: $emerald_efficiency_5;
         font-weight: bold;
 
         &:hover,
         &:focus {
-            background-color: $emerald_efficiency_1;
+            background-color: darken($emerald_efficiency_1, 5%);
             border-color: $emerald_efficiency_5;
             outline: none;
         }
@@ -517,67 +520,15 @@ pre {
 }
 
 .cookiePreferences-accept {
-    background-color: $emerald_efficiency_2;
+    /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
+    background-color: $emerald_efficiency_1;
     font-weight: bold;
 
     &:hover,
     &:focus {
-        background-color: $emerald_efficiency_1;
+        background-color: darken($emerald_efficiency_1, 5%);
         border-color: $emerald_efficiency_5;
     }
-}
-
-/* Copy-to-clipboard utility — small button injected by clipboard.js
- * next to the email address and PGP fingerprint in the contact footer.
- * Tooltip ("Copied!") slides in via AnimeJS and self-removes. */
-.copyToClipboard {
-    display: inline-block;
-    margin-left: 6px;
-    padding: 1px 7px;
-    font-family: "Courier New", monospace;
-    font-size: 95%;
-    line-height: 1;
-    color: $emerald_efficiency_5;
-    /* $noir_1 base (cookie-banner scheme) — every emerald tint clears AA on it;
-     * the old 55% _2 blend left the _5 glyph at ≈3.8:1 */
-    background-color: $noir_1;
-    border: 1px solid $emerald_efficiency_3;
-    border-radius: 4px;
-    cursor: pointer;
-    vertical-align: baseline;
-    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
-
-    &:hover,
-    &:focus {
-        /* mirrors .cookieConsent-accept:hover — _5 on _1 = 4.78:1; _2 was 3.2:1 */
-        background-color: $emerald_efficiency_1;
-        border-color: $emerald_efficiency_5;
-        color: $emerald_efficiency_5;
-        outline: none;
-    }
-
-    &:focus-visible {
-        box-shadow: 0 0 0 2px rgba($emerald_efficiency_3, 0.55);
-    }
-
-    &.copied {
-        background-color: $emerald_efficiency_3;
-        border-color: $emerald_efficiency_5;
-        color: $noir_1;
-    }
-}
-
-.copyTooltip {
-    display: inline-block;
-    margin-left: 6px;
-    padding: 2px 8px;
-    font-family: "Courier New", monospace;
-    font-size: 85%;
-    color: $noir_1;
-    background-color: $emerald_efficiency_4;
-    border-radius: 3px;
-    opacity: 0;
-    vertical-align: baseline;
 }
 
 footer {

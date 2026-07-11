@@ -2,11 +2,12 @@
 # Two stanzas:
 #   1. Training / scraping bots are blocked. They scrape pages to train future
 #      models or harvest data; the site receives no direct traffic from them.
-#   2. Live-search / AI-assistant bots are allowed. They fetch pages on demand
-#      to answer real-time user queries (ChatGPT search, Claude search,
-#      Perplexity, DuckAssist, etc). Blocking these would remove the site from
-#      AI-assisted search results, where recruiter and tech-enthusiast
-#      audiences increasingly begin queries.
+#   2. Live-search, AI-assistant, and link-preview bots are allowed. They fetch
+#      pages on demand to serve a real user action (ChatGPT search, Claude
+#      search, Perplexity, DuckAssist, Siri/Spotlight suggestions, social link
+#      previews). Blocking these would remove the site from AI-assisted search
+#      results, where recruiter and tech-enthusiast audiences increasingly
+#      begin queries, and would strip the preview card from shared links.
 
 # === Training / scraping bots — blocked ===
 User-agent: AddSearchBot
@@ -30,9 +31,8 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
-User-agent: Applebot
-Disallow: /
-
+# Applebot-Extended is Apple's AI-training agent; plain Applebot (Siri/Spotlight
+# search) is allowed in the second stanza.
 User-agent: Applebot-Extended
 Disallow: /
 
@@ -97,9 +97,6 @@ User-agent: EchoboxBot
 Disallow: /
 
 User-agent: FacebookBot
-Disallow: /
-
-User-agent: facebookexternalhit
 Disallow: /
 
 User-agent: Factset_spyderbot
@@ -282,9 +279,16 @@ Disallow: /
 User-agent: YouBot
 Disallow: /
 
-# === Live-search / AI-assistant bots — allowed ===
-# These fetch on-demand to answer real-time user queries; allowing them keeps
-# the site eligible to surface in AI-assisted search results.
+# === Live-search / AI-assistant / link-preview bots — allowed ===
+# These fetch on-demand in response to a real user action; allowing them keeps
+# the site eligible to surface in AI-assisted search results and keeps shared
+# links rendering their preview cards.
+
+# Applebot powers Siri/Spotlight search suggestions; Apple's AI training uses
+# Applebot-Extended, which stays blocked above.
+User-agent: Applebot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
@@ -295,6 +299,12 @@ User-agent: Claude-User
 Allow: /
 
 User-agent: DuckAssistBot
+Allow: /
+
+# facebookexternalhit renders the preview card when links are shared on
+# Facebook, Messenger, and WhatsApp; Meta's training/scraping agents
+# (FacebookBot, meta-externalagent, meta-externalfetcher) stay blocked above.
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: MistralAI-User

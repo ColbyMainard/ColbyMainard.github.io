@@ -285,7 +285,9 @@ html.js-animations #contactMe > address {
 
 #quantumComputing iframe {
   width: 560px;
-  height: 315px; }
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto; }
 
 #history blockquote {
   text-align: left;
@@ -1484,8 +1486,10 @@ header {
     letter-spacing: 1px;
     text-decoration: none; }
     header .nav-brand:hover {
-      /* _4 = 3.31:1 on _1 — AA for this large bold text; _3 fails at 2.45:1 */
-      color: #a1d9b0; }
+      /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1,
+         AA only while this text stays above the large-text cutoff (~0.5px
+         to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
+      text-decoration: underline; }
   header .nav-toggle {
     display: none;
     background: none;
@@ -1742,12 +1746,13 @@ pre {
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
   .cookieConsent .cookieConsent-accept {
-    background-color: #1d9a6a;
+    /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
+    background-color: #007a5e;
     border: 2px solid #50c3a1;
     color: #e0f7fa;
     font-weight: bold; }
     .cookieConsent .cookieConsent-accept:hover, .cookieConsent .cookieConsent-accept:focus {
-      background-color: #007a5e;
+      background-color: #00614a;
       border-color: #e0f7fa;
       outline: none; }
     .cookieConsent .cookieConsent-accept:focus-visible {
@@ -1802,55 +1807,12 @@ pre {
     box-shadow: 0 0 0 3px rgba(80, 195, 161, 0.6); }
 
 .cookiePreferences-accept {
-  background-color: #1d9a6a;
+  /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
+  background-color: #007a5e;
   font-weight: bold; }
   .cookiePreferences-accept:hover, .cookiePreferences-accept:focus {
-    background-color: #007a5e;
+    background-color: #00614a;
     border-color: #e0f7fa; }
-
-/* Copy-to-clipboard utility — small button injected by clipboard.js
- * next to the email address and PGP fingerprint in the contact footer.
- * Tooltip ("Copied!") slides in via AnimeJS and self-removes. */
-.copyToClipboard {
-  display: inline-block;
-  margin-left: 6px;
-  padding: 1px 7px;
-  font-family: "Courier New", monospace;
-  font-size: 95%;
-  line-height: 1;
-  color: #e0f7fa;
-  /* $noir_1 base (cookie-banner scheme) — every emerald tint clears AA on it;
-   * the old 55% _2 blend left the _5 glyph at ≈3.8:1 */
-  background-color: #1a1a1e;
-  border: 1px solid #50c3a1;
-  border-radius: 4px;
-  cursor: pointer;
-  vertical-align: baseline;
-  transition: background-color 0.15s, border-color 0.15s, color 0.15s; }
-  .copyToClipboard:hover, .copyToClipboard:focus {
-    /* mirrors .cookieConsent-accept:hover — _5 on _1 = 4.78:1; _2 was 3.2:1 */
-    background-color: #007a5e;
-    border-color: #e0f7fa;
-    color: #e0f7fa;
-    outline: none; }
-  .copyToClipboard:focus-visible {
-    box-shadow: 0 0 0 2px rgba(80, 195, 161, 0.55); }
-  .copyToClipboard.copied {
-    background-color: #50c3a1;
-    border-color: #e0f7fa;
-    color: #1a1a1e; }
-
-.copyTooltip {
-  display: inline-block;
-  margin-left: 6px;
-  padding: 2px 8px;
-  font-family: "Courier New", monospace;
-  font-size: 85%;
-  color: #1a1a1e;
-  background-color: #a1d9b0;
-  border-radius: 3px;
-  opacity: 0;
-  vertical-align: baseline; }
 
 footer {
   width: 100%;
