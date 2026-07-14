@@ -46,6 +46,7 @@
         <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/hobbies_animations.js" defer></script>
+        <script src="../js/photo_gallery.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
         <script src="../js/service_worker_register.js" defer></script>
@@ -74,6 +75,25 @@
             {"@type": "ListItem", "position": 2, "name": "Photography", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv"},
             {"@type": "ListItem", "position": 3, "name": "Dungeons and Dragons", "url": "https://colbymainard.github.io/assets/html/hobbies.html#dungeonsAndDragonsDiv"},
             {"@type": "ListItem", "position": 4, "name": "History", "url": "https://colbymainard.github.io/assets/html/hobbies.html#historyDiv"}
+          ]
+        }
+        </script>
+
+        <!-- JSON-LD: ImageGallery for the photography section -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Landscape Photography Gallery",
+          "description": "A slideshow of Colby Mainard's favorite landscape photography shots.",
+          "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv",
+          "author": {"@type": "Person", "name": "Colby Mainard"},
+          "associatedMedia": [
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0004.JPG", "name": "An up-close flower in bloom"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0023.JPG", "name": "An orange sun muted by clouds"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0110.JPG", "name": "A sunset hiding behind the treeline"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0237.JPG", "name": "Another sunset framed by the trees"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0396.JPG", "name": "Purple clouds at dusk"}
           ]
         }
         </script>
@@ -133,15 +153,69 @@
                     <h2>Photography</h2>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
                     <br>
-                    <img src="../images/photographyHobby/DSC_0004.JPG" alt="Up-close flower" width="3000" height="2000" loading="lazy" decoding="async">
-                    <br>
-                    <img src="../images/photographyHobby/DSC_0023.JPG" alt="Cloudy orange sun" width="3000" height="2000" loading="lazy" decoding="async">
-                    <br>
-                    <img src="../images/photographyHobby/DSC_0110.JPG" alt="Sunset hidden behind trees" width="3000" height="2000" loading="lazy" decoding="async">
-                    <br>
-                    <img src="../images/photographyHobby/DSC_0237.JPG" alt="Sunset hidden behind trees 2" width="3000" height="2000" loading="lazy" decoding="async">
-                    <br>
-                    <img src="../images/photographyHobby/DSC_0396.JPG" alt="Beautiful purple clouds" width="3000" height="2000" loading="lazy" decoding="async">
+                    <!-- Photo gallery: photo_gallery.js adds .is-active to turn this into a
+                         slideshow. Without JS the slides render as a plain stacked column
+                         and every control below stays hidden. -->
+                    <div class="photo-gallery" id="photoGallery" role="group" aria-roledescription="carousel" aria-label="Landscape photography gallery">
+                        <div class="gallery-stage">
+                            <ul class="gallery-slides">
+                                <li class="gallery-slide is-current" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                                    <figure>
+                                        <img src="../images/photographyHobby/DSC_0004.JPG" alt="Up-close flower" width="3000" height="2000" loading="lazy" decoding="async">
+                                        <figcaption>An up-close flower in bloom</figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                                    <figure>
+                                        <img src="../images/photographyHobby/DSC_0023.JPG" alt="Cloudy orange sun" width="3000" height="2000" loading="lazy" decoding="async">
+                                        <figcaption>An orange sun muted by clouds</figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                                    <figure>
+                                        <img src="../images/photographyHobby/DSC_0110.JPG" alt="Sunset hidden behind trees" width="3000" height="2000" loading="lazy" decoding="async">
+                                        <figcaption>A sunset hiding behind the treeline</figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                                    <figure>
+                                        <img src="../images/photographyHobby/DSC_0237.JPG" alt="A second sunset hidden behind trees" width="3000" height="2000" loading="lazy" decoding="async">
+                                        <figcaption>Another sunset framed by the trees</figcaption>
+                                    </figure>
+                                </li>
+                                <li class="gallery-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                                    <figure>
+                                        <img src="../images/photographyHobby/DSC_0396.JPG" alt="Beautiful purple clouds" width="3000" height="2000" loading="lazy" decoding="async">
+                                        <figcaption>Purple clouds at dusk</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous photo">
+                                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>Previous photo</title><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <button type="button" class="gallery-arrow gallery-next" aria-label="Next photo">
+                                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><title>Next photo</title><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                        <p class="gallery-status" aria-live="polite" aria-atomic="true">Photo 1 of 5: An up-close flower in bloom</p>
+                        <div class="gallery-thumbs" role="group" aria-label="Jump to a photo">
+                            <button type="button" class="gallery-thumb is-current" aria-current="true" aria-label="Show photo 1: An up-close flower in bloom">
+                                <img src="../images/photographyHobby/DSC_0004.JPG" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+                            </button>
+                            <button type="button" class="gallery-thumb" aria-label="Show photo 2: An orange sun muted by clouds">
+                                <img src="../images/photographyHobby/DSC_0023.JPG" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+                            </button>
+                            <button type="button" class="gallery-thumb" aria-label="Show photo 3: A sunset hiding behind the treeline">
+                                <img src="../images/photographyHobby/DSC_0110.JPG" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+                            </button>
+                            <button type="button" class="gallery-thumb" aria-label="Show photo 4: Another sunset framed by the trees">
+                                <img src="../images/photographyHobby/DSC_0237.JPG" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+                            </button>
+                            <button type="button" class="gallery-thumb" aria-label="Show photo 5: Purple clouds at dusk">
+                                <img src="../images/photographyHobby/DSC_0396.JPG" alt="" width="3000" height="2000" loading="lazy" decoding="async">
+                            </button>
+                        </div>
+                    </div>
                     <br>
                 </section>
             </div>

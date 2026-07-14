@@ -95,7 +95,7 @@
             duration: 600,
             delay: anime.stagger(100)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, img, a"), {
+        addStep(tl, directChildren(el, "p, ul, img, a, .photo-gallery"), {
             opacity: [0, 1],
             scale: [0.8, 1],
             duration: 500,

@@ -289,6 +289,175 @@ html.js-animations #contactMe > address {
   aspect-ratio: 16 / 9;
   height: auto; }
 
+/*
+ * Photography gallery/slideshow.
+ * Default (no-JS / script failed) state: slides render as a plain stacked
+ * column of captioned figures and every control stays hidden.
+ * photo_gallery.js adds .is-active, which turns the stage into a fixed 3:2
+ * crossfade viewport with overlay arrows, a status line, and thumbnails.
+ * Caption/arrow contrast is checked against the worst case (white photo
+ * behind the scrim): $noir_5 on rgba($noir_1, 0.82)+white ≈ 6.6:1 (AA).
+ */
+#photography .photo-gallery {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto; }
+  #photography .photo-gallery .gallery-slides {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  #photography .photo-gallery .gallery-slide {
+    margin: 0 0 1.5em 0; }
+    #photography .photo-gallery .gallery-slide figure {
+      margin: 0; }
+    #photography .photo-gallery .gallery-slide img {
+      width: 100%;
+      max-width: 100%; }
+    #photography .photo-gallery .gallery-slide figcaption {
+      color: #B8C2C9;
+      font-size: 95%;
+      font-style: italic;
+      padding: 0.5em 0 0 0; }
+  #photography .photo-gallery .gallery-arrow,
+  #photography .photo-gallery .gallery-status,
+  #photography .photo-gallery .gallery-thumbs {
+    display: none; }
+  #photography .photo-gallery.is-active .gallery-stage {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    background-color: #1a1a1e;
+    border: 2px solid #1a1a1e;
+    border-radius: 10px;
+    touch-action: pan-y; }
+  #photography .photo-gallery.is-active .gallery-slides {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  #photography .photo-gallery.is-active .gallery-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    /* Delay the visibility flip until the fade-out finishes so
+       outgoing and incoming slides crossfade. */
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s; }
+    #photography .photo-gallery.is-active .gallery-slide.is-current {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.5s ease;
+      z-index: 1; }
+    #photography .photo-gallery.is-active .gallery-slide figure {
+      position: relative;
+      height: 100%; }
+    #photography .photo-gallery.is-active .gallery-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+      border-radius: 0; }
+    #photography .photo-gallery.is-active .gallery-slide figcaption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      padding: 0.6em 1em;
+      background-color: rgba(26, 26, 30, 0.82);
+      color: #d4d4d9;
+      font-style: normal;
+      text-align: left; }
+  #photography .photo-gallery.is-active .gallery-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid rgba(231, 234, 236, 0.6);
+    border-radius: 50%;
+    background-color: rgba(26, 26, 30, 0.78);
+    color: #d4d4d9;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s; }
+    #photography .photo-gallery.is-active .gallery-arrow svg {
+      display: block; }
+    #photography .photo-gallery.is-active .gallery-arrow:hover {
+      background-color: rgba(26, 26, 30, 0.95);
+      border-color: #E7EAEC; }
+    #photography .photo-gallery.is-active .gallery-arrow:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(231, 234, 236, 0.85); }
+  #photography .photo-gallery.is-active .gallery-prev {
+    left: 12px; }
+  #photography .photo-gallery.is-active .gallery-next {
+    right: 12px; }
+  #photography .photo-gallery.is-active .gallery-status {
+    display: block;
+    margin: 0.75em 0 0.5em 0;
+    color: #B8C2C9;
+    font-size: 95%;
+    text-align: center; }
+  #photography .photo-gallery.is-active .gallery-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 0.5em; }
+  #photography .photo-gallery.is-active .gallery-thumb {
+    width: 72px;
+    height: 48px;
+    padding: 0;
+    border: 2px solid rgba(231, 234, 236, 0.35);
+    border-radius: 6px;
+    overflow: hidden;
+    background: none;
+    cursor: pointer;
+    opacity: 0.65;
+    transition: opacity 0.2s, border-color 0.2s; }
+    #photography .photo-gallery.is-active .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      border: none;
+      border-radius: 0; }
+    #photography .photo-gallery.is-active .gallery-thumb:hover {
+      opacity: 1; }
+    #photography .photo-gallery.is-active .gallery-thumb:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(231, 234, 236, 0.85);
+      opacity: 1; }
+    #photography .photo-gallery.is-active .gallery-thumb.is-current {
+      border-color: #E7EAEC;
+      opacity: 1; }
+
+@media (max-width: 768px) {
+  #photography .photo-gallery.is-active .gallery-arrow {
+    width: 38px;
+    height: 38px; }
+  #photography .photo-gallery.is-active .gallery-prev {
+    left: 8px; }
+  #photography .photo-gallery.is-active .gallery-next {
+    right: 8px; }
+  #photography .photo-gallery.is-active .gallery-thumb {
+    width: 60px;
+    height: 40px; } }
+@media (prefers-reduced-motion: reduce) {
+  #photography .photo-gallery.is-active .gallery-slide {
+    transition: none; }
+    #photography .photo-gallery.is-active .gallery-slide.is-current {
+      transition: none; } }
 #history blockquote {
   text-align: left;
   color: #B8C2C9;
@@ -324,7 +493,7 @@ html.js-animations #contactMe > address {
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
  */
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > iframe,
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > iframe, html.js-animations #introSectionDiv > .photo-gallery,
 html.js-animations #quantumComputing > h1,
 html.js-animations #quantumComputing > h2,
 html.js-animations #quantumComputing > h3,
@@ -337,6 +506,7 @@ html.js-animations #quantumComputing > blockquote,
 html.js-animations #quantumComputing > a,
 html.js-animations #quantumComputing > address,
 html.js-animations #quantumComputing > iframe,
+html.js-animations #quantumComputing > .photo-gallery,
 html.js-animations #photography > h1,
 html.js-animations #photography > h2,
 html.js-animations #photography > h3,
@@ -349,6 +519,7 @@ html.js-animations #photography > blockquote,
 html.js-animations #photography > a,
 html.js-animations #photography > address,
 html.js-animations #photography > iframe,
+html.js-animations #photography > .photo-gallery,
 html.js-animations #dungeonsAndDragons > h1,
 html.js-animations #dungeonsAndDragons > h2,
 html.js-animations #dungeonsAndDragons > h3,
@@ -361,6 +532,7 @@ html.js-animations #dungeonsAndDragons > blockquote,
 html.js-animations #dungeonsAndDragons > a,
 html.js-animations #dungeonsAndDragons > address,
 html.js-animations #dungeonsAndDragons > iframe,
+html.js-animations #dungeonsAndDragons > .photo-gallery,
 html.js-animations #history > h1,
 html.js-animations #history > h2,
 html.js-animations #history > h3,
@@ -373,6 +545,7 @@ html.js-animations #history > blockquote,
 html.js-animations #history > a,
 html.js-animations #history > address,
 html.js-animations #history > iframe,
+html.js-animations #history > .photo-gallery,
 html.js-animations #contactMe > h1,
 html.js-animations #contactMe > h2,
 html.js-animations #contactMe > h3,
@@ -384,7 +557,8 @@ html.js-animations #contactMe > table,
 html.js-animations #contactMe > blockquote,
 html.js-animations #contactMe > a,
 html.js-animations #contactMe > address,
-html.js-animations #contactMe > iframe {
+html.js-animations #contactMe > iframe,
+html.js-animations #contactMe > .photo-gallery {
   opacity: 0; }
 
 /*
@@ -393,7 +567,7 @@ html.js-animations #contactMe > iframe {
  * the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > iframe,
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > address, html.js-animations #introSectionDiv > iframe, html.js-animations #introSectionDiv > .photo-gallery,
   html.js-animations #quantumComputing > h1,
   html.js-animations #quantumComputing > h2,
   html.js-animations #quantumComputing > h3,
@@ -406,6 +580,7 @@ html.js-animations #contactMe > iframe {
   html.js-animations #quantumComputing > a,
   html.js-animations #quantumComputing > address,
   html.js-animations #quantumComputing > iframe,
+  html.js-animations #quantumComputing > .photo-gallery,
   html.js-animations #photography > h1,
   html.js-animations #photography > h2,
   html.js-animations #photography > h3,
@@ -418,6 +593,7 @@ html.js-animations #contactMe > iframe {
   html.js-animations #photography > a,
   html.js-animations #photography > address,
   html.js-animations #photography > iframe,
+  html.js-animations #photography > .photo-gallery,
   html.js-animations #dungeonsAndDragons > h1,
   html.js-animations #dungeonsAndDragons > h2,
   html.js-animations #dungeonsAndDragons > h3,
@@ -430,6 +606,7 @@ html.js-animations #contactMe > iframe {
   html.js-animations #dungeonsAndDragons > a,
   html.js-animations #dungeonsAndDragons > address,
   html.js-animations #dungeonsAndDragons > iframe,
+  html.js-animations #dungeonsAndDragons > .photo-gallery,
   html.js-animations #history > h1,
   html.js-animations #history > h2,
   html.js-animations #history > h3,
@@ -442,6 +619,7 @@ html.js-animations #contactMe > iframe {
   html.js-animations #history > a,
   html.js-animations #history > address,
   html.js-animations #history > iframe,
+  html.js-animations #history > .photo-gallery,
   html.js-animations #contactMe > h1,
   html.js-animations #contactMe > h2,
   html.js-animations #contactMe > h3,
@@ -453,7 +631,8 @@ html.js-animations #contactMe > iframe {
   html.js-animations #contactMe > blockquote,
   html.js-animations #contactMe > a,
   html.js-animations #contactMe > address,
-  html.js-animations #contactMe > iframe {
+  html.js-animations #contactMe > iframe,
+  html.js-animations #contactMe > .photo-gallery {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */

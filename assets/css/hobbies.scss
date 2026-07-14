@@ -105,6 +105,236 @@ $calm_authority_5: #E7EAEC;
 #photography { @extend %hobbySection; }
 #dungeonsAndDragons { @extend %hobbySection; }
 
+/*
+ * Photography gallery/slideshow.
+ * Default (no-JS / script failed) state: slides render as a plain stacked
+ * column of captioned figures and every control stays hidden.
+ * photo_gallery.js adds .is-active, which turns the stage into a fixed 3:2
+ * crossfade viewport with overlay arrows, a status line, and thumbnails.
+ * Caption/arrow contrast is checked against the worst case (white photo
+ * behind the scrim): $noir_5 on rgba($noir_1, 0.82)+white ≈ 6.6:1 (AA).
+ */
+#photography .photo-gallery {
+    width: 92%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .gallery-slides {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gallery-slide {
+        margin: 0 0 1.5em 0;
+
+        figure {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        figcaption {
+            color: $calm_authority_2;
+            font-size: 95%;
+            font-style: italic;
+            padding: 0.5em 0 0 0;
+        }
+    }
+
+    .gallery-arrow,
+    .gallery-status,
+    .gallery-thumbs {
+        display: none;
+    }
+
+    &.is-active {
+        .gallery-stage {
+            position: relative;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            background-color: $noir_1;
+            border: 2px solid $noir_1;
+            border-radius: 10px;
+            touch-action: pan-y;
+        }
+
+        .gallery-slides {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .gallery-slide {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            opacity: 0;
+            visibility: hidden;
+            /* Delay the visibility flip until the fade-out finishes so
+               outgoing and incoming slides crossfade. */
+            transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+
+            &.is-current {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.5s ease;
+                z-index: 1;
+            }
+
+            figure {
+                position: relative;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border: none;
+                border-radius: 0;
+            }
+
+            figcaption {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+                padding: 0.6em 1em;
+                background-color: rgba($noir_1, 0.82);
+                color: $noir_5;
+                font-style: normal;
+                text-align: left;
+            }
+        }
+
+        .gallery-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            border: 2px solid rgba($calm_authority_5, 0.6);
+            border-radius: 50%;
+            background-color: rgba($noir_1, 0.78);
+            color: $noir_5;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+
+            svg {
+                display: block;
+            }
+
+            &:hover {
+                background-color: rgba($noir_1, 0.95);
+                border-color: $calm_authority_5;
+            }
+
+            &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba($calm_authority_5, 0.85);
+            }
+        }
+
+        .gallery-prev { left: 12px; }
+        .gallery-next { right: 12px; }
+
+        .gallery-status {
+            display: block;
+            margin: 0.75em 0 0.5em 0;
+            color: $calm_authority_2;
+            font-size: 95%;
+            text-align: center;
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 0.5em;
+        }
+
+        .gallery-thumb {
+            width: 72px;
+            height: 48px;
+            padding: 0;
+            border: 2px solid rgba($calm_authority_5, 0.35);
+            border-radius: 6px;
+            overflow: hidden;
+            background: none;
+            cursor: pointer;
+            opacity: 0.65;
+            transition: opacity 0.2s, border-color 0.2s;
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                border: none;
+                border-radius: 0;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba($calm_authority_5, 0.85);
+                opacity: 1;
+            }
+
+            &.is-current {
+                border-color: $calm_authority_5;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #photography .photo-gallery.is-active {
+        .gallery-arrow {
+            width: 38px;
+            height: 38px;
+        }
+
+        .gallery-prev { left: 8px; }
+        .gallery-next { right: 8px; }
+
+        .gallery-thumb {
+            width: 60px;
+            height: 40px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #photography .photo-gallery.is-active .gallery-slide {
+        transition: none;
+
+        &.is-current {
+            transition: none;
+        }
+    }
+}
+
 #history {
     @extend %hobbySection;
     blockquote {
@@ -158,7 +388,7 @@ html.js-animations {
     #dungeonsAndDragons,
     #history,
     #contactMe {
-        > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address, > iframe {
+        > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address, > iframe, > .photo-gallery {
             opacity: 0;
         }
     }
@@ -177,7 +407,7 @@ html.js-animations {
         #dungeonsAndDragons,
         #history,
         #contactMe {
-            > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address, > iframe {
+            > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > address, > iframe, > .photo-gallery {
                 opacity: 1 !important;
             }
         }
