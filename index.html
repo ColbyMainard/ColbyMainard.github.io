@@ -87,7 +87,7 @@
         }
         </script>
 
-        <!-- JSON-LD: WebSite schema (enables sitelinks search box eligibility) -->
+        <!-- JSON-LD: WebSite schema. No SearchAction: the site has no search; re-add one only when a real search ships. -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -97,15 +97,7 @@
           "name": "Colby Mainard",
           "description": "Personal website of Colby Mainard, Machine Learning Engineer specializing in computer vision, deep learning, and AI.",
           "inLanguage": "en",
-          "publisher": {"@id": "https://colbymainard.github.io/#person"},
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://colbymainard.github.io/?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
+          "publisher": {"@id": "https://colbymainard.github.io/#person"}
         }
         </script>
 
@@ -119,9 +111,9 @@
           "name": "Colby Mainard — Machine Learning Engineer",
           "description": "Profile page of Colby Mainard: work history, education, projects, certifications, technical skills, and contact information.",
           "inLanguage": "en",
-          "isPartOf": {"@id": "https://colbymainard.github.io/"},
-          "mainEntity": {"@id": "https://colbymainard.github.io/"},
-          "about": {"@id": "https://colbymainard.github.io/"}
+          "isPartOf": {"@id": "https://colbymainard.github.io/#website"},
+          "mainEntity": {"@id": "https://colbymainard.github.io/#person"},
+          "about": {"@id": "https://colbymainard.github.io/#person"}
         }
         </script>
     </head>
@@ -289,291 +281,318 @@
                             <th scope="row">Analysis of Algorithms</th>
                             <td>CSCE 629</td>
                             <td>
-                                <b>Should gain knowledge of the following:</b>
-                                <ul>
-                                    <li>Advanced Data Structures</li>
-                                    <li>Advanced Design Techniques</li>
-                                    <li>Advanced Analysis Techniques</li>
-                                    <li>Advanced Graph Algorithms</li>
-                                    <li>NP-Completeness Theory</li>
-                                    <li>Approximation Algorithms</li>
-                                    <li>Randomized Algorithms</li>
-                                    <li>Parameterized Algorithms</li>
-                                </ul>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>2-3 Trees</li>
-                                    <li>B+ Trees</li>
-                                    <li>Hashing</li>
-                                    <li>Graph Applications
-                                        <ul>
-                                            <li>Path Algorithms</li>
-                                            <li>
-                                                <ul>
-                                                    <li>Bellman-Ford</li>
-                                                    <li>Floyd-Warshall</li>
-                                                    <li>Johnson</li>
-                                                </ul>
-                                            </li>
-                                            <li>Depth-First Search (DFS)</li>
-                                            <li>Breadth-First Search (BFS)</li>
-                                            <li>Shortest Path</li>
-                                            <li>Minimum Spanning Tree</li>
-                                            <li>Strongly Connected Components</li>
-                                        </ul>
-                                    </li>
-                                    <li>Topological Sorting</li>
-                                    <li>Greedy Applications</li>
-                                    <li>Maximum flow</li>
-                                    <li>Matching</li>
-                                    <li>Dynamic Programming</li>
-                                    <li>Randomized Algorithms</li>
-                                    <li>Classes P and NP</li>
-                                    <li>Polynomial Time Reductions</li>
-                                    <li>Dealing with NP-Hardness</li>
-                                    <li>NP-Completeness</li>
-                                    <li>Approximations</li>
-                                    <li>Parameterized Algorithms</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Analysis of Algorithms</span></summary>
+                                    <b>Should gain knowledge of the following:</b>
+                                    <ul>
+                                        <li>Advanced Data Structures</li>
+                                        <li>Advanced Design Techniques</li>
+                                        <li>Advanced Analysis Techniques</li>
+                                        <li>Advanced Graph Algorithms</li>
+                                        <li>NP-Completeness Theory</li>
+                                        <li>Approximation Algorithms</li>
+                                        <li>Randomized Algorithms</li>
+                                        <li>Parameterized Algorithms</li>
+                                    </ul>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>2-3 Trees</li>
+                                        <li>B+ Trees</li>
+                                        <li>Hashing</li>
+                                        <li>Graph Applications
+                                            <ul>
+                                                <li>Path Algorithms</li>
+                                                <li>
+                                                    <ul>
+                                                        <li>Bellman-Ford</li>
+                                                        <li>Floyd-Warshall</li>
+                                                        <li>Johnson</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Depth-First Search (DFS)</li>
+                                                <li>Breadth-First Search (BFS)</li>
+                                                <li>Shortest Path</li>
+                                                <li>Minimum Spanning Tree</li>
+                                                <li>Strongly Connected Components</li>
+                                            </ul>
+                                        </li>
+                                        <li>Topological Sorting</li>
+                                        <li>Greedy Applications</li>
+                                        <li>Maximum flow</li>
+                                        <li>Matching</li>
+                                        <li>Dynamic Programming</li>
+                                        <li>Randomized Algorithms</li>
+                                        <li>Classes P and NP</li>
+                                        <li>Polynomial Time Reductions</li>
+                                        <li>Dealing with NP-Hardness</li>
+                                        <li>NP-Completeness</li>
+                                        <li>Approximations</li>
+                                        <li>Parameterized Algorithms</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Artificial Intelligence</th>
                             <td>CSCE 625</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Design ML algorithms for a variety of environments, including:
-                                        <ul>
-                                            <li>Fully informed</li>
-                                            <li>Partially observable</li>
-                                            <li>Adversarial</li>
-                                        </ul>
-                                    </li>
-                                    <li>Search
-                                        <ul>
-                                            <li>Uninformed Search</li>
-                                            <li>A* Search</li>
-                                            <li>Heuristics</li>
-                                            <li>Dynamic A*</li>
-                                            <li>Multi-agent Pathfinding</li>
-                                        </ul>
-                                    </li>
-                                    <li>Trees
-                                        <ul>
-                                            <li>Game Trees</li> 
-                                            <li>Minimax</li>
-                                            <li>Expectimax</li>
-                                            <li>Utilities</li>
-                                        </ul>
-                                    </li>
-                                    <li>Markov Processes</li>
-                                    <li>Hidden Markov Models</li>
-                                    <li>Markov Decision Processes</li>
-                                    <li>Bayesian Networks</li>
-                                    <li>Decision Networks</li>
-                                    <li>Reinforcement Learning</li>
-                                    <li>Naive Bayes</li>
-                                    <li>Decision Trees</li>
-                                    <li>Make inferences in uncertain environments.</li>
-                                    <li>Optimize actions for arbitrary reward structures.</li>
-                                    <li>Be able to classify handwritten digits and photographs.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Artificial Intelligence</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Design ML algorithms for a variety of environments, including:
+                                            <ul>
+                                                <li>Fully informed</li>
+                                                <li>Partially observable</li>
+                                                <li>Adversarial</li>
+                                            </ul>
+                                        </li>
+                                        <li>Search
+                                            <ul>
+                                                <li>Uninformed Search</li>
+                                                <li>A* Search</li>
+                                                <li>Heuristics</li>
+                                                <li>Dynamic A*</li>
+                                                <li>Multi-agent Pathfinding</li>
+                                            </ul>
+                                        </li>
+                                        <li>Trees
+                                            <ul>
+                                                <li>Game Trees</li> 
+                                                <li>Minimax</li>
+                                                <li>Expectimax</li>
+                                                <li>Utilities</li>
+                                            </ul>
+                                        </li>
+                                        <li>Markov Processes</li>
+                                        <li>Hidden Markov Models</li>
+                                        <li>Markov Decision Processes</li>
+                                        <li>Bayesian Networks</li>
+                                        <li>Decision Networks</li>
+                                        <li>Reinforcement Learning</li>
+                                        <li>Naive Bayes</li>
+                                        <li>Decision Trees</li>
+                                        <li>Make inferences in uncertain environments.</li>
+                                        <li>Optimize actions for arbitrary reward structures.</li>
+                                        <li>Be able to classify handwritten digits and photographs.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Computational Biology</th>
                             <td>CSCE 628</td>
                             <td>
-                                <b>Topics discussed:</b>
-                                <ul>
-                                    <li>Sequence-Based Approaches</li>
-                                    <li>Pairwise Alignment</li>
-                                    <li>Multiple Alignment</li>
-                                    <li>Motif-Finding</li>
-                                    <li>Database Search</li>
-                                    <li>Phylogenetic Tree Reconstruction</li>
-                                    <li>Clustering Approaches</li>
-                                    <li>Gene Clustering Within Chromosomes</li>
-                                    <li>Genome Rearrangement</li>
-                                    <li>Biological Networks (represented as graphs)</li>
-                                    <li>High-Throughput Sequencing</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Computational Biology</span></summary>
+                                    <b>Topics discussed:</b>
+                                    <ul>
+                                        <li>Sequence-Based Approaches</li>
+                                        <li>Pairwise Alignment</li>
+                                        <li>Multiple Alignment</li>
+                                        <li>Motif-Finding</li>
+                                        <li>Database Search</li>
+                                        <li>Phylogenetic Tree Reconstruction</li>
+                                        <li>Clustering Approaches</li>
+                                        <li>Gene Clustering Within Chromosomes</li>
+                                        <li>Genome Rearrangement</li>
+                                        <li>Biological Networks (represented as graphs)</li>
+                                        <li>High-Throughput Sequencing</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Data Mining and Analysis</th>
                             <td>CSCE 676</td>
                             <td>
-                                <b>Course covers:</b>
-                                <ul>
-                                    <li>Data Mining</li>
-                                    <li>Integrate related concepts from:
-                                        <ul>
-                                            <li>Statistics</li>
-                                            <li>Machine Learning</li>
-                                        </ul>
-                                    </li>
-                                    <li>Exploratory Data Analytics</li>
-                                    <li>Pattern Mining</li>
-                                    <li>Clustering and Classification</li>
-                                    <li>Applications to Scientific Data</li>
-                                    <li>Applications to Online Data</li>
-                                </ul>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Both define and explain the key concepts in addition to the relevant models for:
-                                        <ul>
-                                            <li>Data Mining</li>
-                                            <li>Data Analysis</li>
-                                            <li>Data Preparation</li>
-                                            <li>Normalization</li>
-                                            <li>Dimensionality Reduction</li>
-                                            <li>Text Mining</li>
-                                            <li>Data Visualization</li>
-                                        </ul>
-                                    </li>
-                                    <li>Design, implement, and evaluate data mining algorithms like association rules, clustering, anomaly detection, and do so on scalable modern data science platforms with configurable setups in cloud platforms.</li>
-                                    <li>Identify salient features, as well as weigh concepts like:
-                                        <ul>
-                                            <li>Fairness</li>
-                                            <li>Graph Mining</li>
-                                            <li>Large-Scale Mining</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Data Mining and Analysis</span></summary>
+                                    <b>Course covers:</b>
+                                    <ul>
+                                        <li>Data Mining</li>
+                                        <li>Integrate related concepts from:
+                                            <ul>
+                                                <li>Statistics</li>
+                                                <li>Machine Learning</li>
+                                            </ul>
+                                        </li>
+                                        <li>Exploratory Data Analytics</li>
+                                        <li>Pattern Mining</li>
+                                        <li>Clustering and Classification</li>
+                                        <li>Applications to Scientific Data</li>
+                                        <li>Applications to Online Data</li>
+                                    </ul>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Both define and explain the key concepts in addition to the relevant models for:
+                                            <ul>
+                                                <li>Data Mining</li>
+                                                <li>Data Analysis</li>
+                                                <li>Data Preparation</li>
+                                                <li>Normalization</li>
+                                                <li>Dimensionality Reduction</li>
+                                                <li>Text Mining</li>
+                                                <li>Data Visualization</li>
+                                            </ul>
+                                        </li>
+                                        <li>Design, implement, and evaluate data mining algorithms like association rules, clustering, anomaly detection, and do so on scalable modern data science platforms with configurable setups in cloud platforms.</li>
+                                        <li>Identify salient features, as well as weigh concepts like:
+                                            <ul>
+                                                <li>Fairness</li>
+                                                <li>Graph Mining</li>
+                                                <li>Large-Scale Mining</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Deep Learning</th>
                             <td>CSCE 636</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Deep Neural Networks</li>
-                                    <li>Generative Adversarial Networks (Generative AI)</li>
-                                    <li>Human Action Recognition</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Deep Learning</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Deep Neural Networks</li>
+                                        <li>Generative Adversarial Networks (Generative AI)</li>
+                                        <li>Human Action Recognition</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Machine Learning</th>
                             <td>CSCE 633</td>
                             <td>
-                                <b>Goals include:</b> 
-                                <ul>
-                                    <li>Have a good understanding of fundamental issues / challenges of machine learning, including:
-                                        <ul>
-                                            <li>data</li>
-                                            <li>model selection</li>
-                                            <li>model complexity</li>
-                                        </ul>
-                                    </li>
-                                    <li>Have an intuitive understanding of the strengths and weaknesses of a medley of popular machine learning approaches.</li>
-                                    <li>Develop an intuitive understanding of the underlying mathematical relationships within and across Machine Learning algorithms and paradigms related to both supervised and unsupervised learning.</li>
-                                    <li>Develop the skills to design and implement various machine learning algorithms in a range of real-world applications.</li>
-                                </ul>
-                                <b>Topics Include:</b>
-                                <ul>
-                                    <li>K-Nearest Neighbor</li>
-                                    <li>Linear Regression</li>
-                                    <li>Logistic Regression</li>
-                                    <li>Generalization</li>
-                                    <li>Overfitting</li>
-                                    <li>Neural Networks</li>
-                                    <li>Deep Learning Techniques</li>
-                                    <li>Decision Trees</li>
-                                    <li>Random Forests</li>
-                                    <li>Dimensionality Reduction</li>
-                                    <li>Unsupervised Learning</li>
-                                    <li>Boosting</li>
-                                    <li>Ensemble Learning</li>
-                                    <li>Markov Processes</li>
-                                    <li>Hidden Markov Models</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Machine Learning</span></summary>
+                                    <b>Goals include:</b> 
+                                    <ul>
+                                        <li>Have a good understanding of fundamental issues / challenges of machine learning, including:
+                                            <ul>
+                                                <li>data</li>
+                                                <li>model selection</li>
+                                                <li>model complexity</li>
+                                            </ul>
+                                        </li>
+                                        <li>Have an intuitive understanding of the strengths and weaknesses of a medley of popular machine learning approaches.</li>
+                                        <li>Develop an intuitive understanding of the underlying mathematical relationships within and across Machine Learning algorithms and paradigms related to both supervised and unsupervised learning.</li>
+                                        <li>Develop the skills to design and implement various machine learning algorithms in a range of real-world applications.</li>
+                                    </ul>
+                                    <b>Topics Include:</b>
+                                    <ul>
+                                        <li>K-Nearest Neighbor</li>
+                                        <li>Linear Regression</li>
+                                        <li>Logistic Regression</li>
+                                        <li>Generalization</li>
+                                        <li>Overfitting</li>
+                                        <li>Neural Networks</li>
+                                        <li>Deep Learning Techniques</li>
+                                        <li>Decision Trees</li>
+                                        <li>Random Forests</li>
+                                        <li>Dimensionality Reduction</li>
+                                        <li>Unsupervised Learning</li>
+                                        <li>Boosting</li>
+                                        <li>Ensemble Learning</li>
+                                        <li>Markov Processes</li>
+                                        <li>Hidden Markov Models</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Operating Systems</th>
                             <td>CSCE 611</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Be able to describe:
-                                        <ul>
-                                            <li>the role of an operating system.</li>
-                                            <li>major components of an operating system.</li>
-                                            <li>the architecture of an operating system.</li>
-                                            <li>the operation and role of both exception and interrupt handling.</li>
-                                            <li>the motivations for virtualization.</li>
-                                            <li>the major difficulties encountered in the design of networked and distributed systems.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Be able to both describe and compare various concurrency mechanisms.
-                                        This should also include various synchronization mechanisms for both single-processor and multiprocessor systems.
-                                    </li>
-                                    <li>Be able to both describe and compare the various virtualization approaches and their effect on system performance.</li>
-                                    <li>Be able to implement:
-                                        <ul>
-                                            <li>a virtual memory manager for a paged system.</li>
-                                            <li>a kernel-level threading system for a single-processor system.</li>
-                                            <li>a simple device driver.</li>
-                                            <li>a simple file system.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Operating Systems</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Be able to describe:
+                                            <ul>
+                                                <li>the role of an operating system.</li>
+                                                <li>major components of an operating system.</li>
+                                                <li>the architecture of an operating system.</li>
+                                                <li>the operation and role of both exception and interrupt handling.</li>
+                                                <li>the motivations for virtualization.</li>
+                                                <li>the major difficulties encountered in the design of networked and distributed systems.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Be able to both describe and compare various concurrency mechanisms.
+                                            This should also include various synchronization mechanisms for both single-processor and multiprocessor systems.
+                                        </li>
+                                        <li>Be able to both describe and compare the various virtualization approaches and their effect on system performance.</li>
+                                        <li>Be able to implement:
+                                            <ul>
+                                                <li>a virtual memory manager for a paged system.</li>
+                                                <li>a kernel-level threading system for a single-processor system.</li>
+                                                <li>a simple device driver.</li>
+                                                <li>a simple file system.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Parallel Computing</th>
                             <td>CSCE 735</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Design parallel algorithms and develop software implementations on a variety of parallel computing architectures.</li>
-                                    <li>Understand the architectures of modern parallel computing systems.</li>
-                                    <li>Analyze the performance of parallel implementations on miscellaneous parallel platforms.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Parallel Computing</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Design parallel algorithms and develop software implementations on a variety of parallel computing architectures.</li>
+                                        <li>Understand the architectures of modern parallel computing systems.</li>
+                                        <li>Analyze the performance of parallel implementations on miscellaneous parallel platforms.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Software Engineering</th>
                             <td>CSCE 606</td>
                             <td>
-                                <b>Topics:</b>
-                                <ul>
-                                    <li>Software Lifecycle / Processes</li>
-                                    <li>Requirements Elicitation and Specification</li>
-                                    <li>Modeling Software</li>
-                                    <li>Software Design at Multiple Levels of Abstraction</li>
-                                    <li>Coding Practices</li>
-                                    <li>Coding Interfaces</li>
-                                    <li>Software Modularity</li>
-                                    <li>Software Contracts</li>
-                                    <li>Verification</li>
-                                    <li>Validation</li>
-                                    <li>Testing:
-                                        <ul>
-                                            <li>Unit Testing</li>
-                                            <li>Regression Testing</li>
-                                        </ul>
-                                    </li>
-                                    <li>Managing Code Bases:
-                                        <ul>
-                                            <li>Version Control</li>
-                                            <li>Organizing Releases</li>
-                                        </ul>
-                                    </li>
-                                    <li>Practical Designs:
-                                        <ul>
-                                            <li>Typical Software Architectures</li>
-                                            <li>Design Patterns</li>
-                                            <li>API Designs</li>
-                                        </ul>
-                                    </li>
-                                    <li>Effort estimation of requests for new features</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Software Engineering</span></summary>
+                                    <b>Topics:</b>
+                                    <ul>
+                                        <li>Software Lifecycle / Processes</li>
+                                        <li>Requirements Elicitation and Specification</li>
+                                        <li>Modeling Software</li>
+                                        <li>Software Design at Multiple Levels of Abstraction</li>
+                                        <li>Coding Practices</li>
+                                        <li>Coding Interfaces</li>
+                                        <li>Software Modularity</li>
+                                        <li>Software Contracts</li>
+                                        <li>Verification</li>
+                                        <li>Validation</li>
+                                        <li>Testing:
+                                            <ul>
+                                                <li>Unit Testing</li>
+                                                <li>Regression Testing</li>
+                                            </ul>
+                                        </li>
+                                        <li>Managing Code Bases:
+                                            <ul>
+                                                <li>Version Control</li>
+                                                <li>Organizing Releases</li>
+                                            </ul>
+                                        </li>
+                                        <li>Practical Designs:
+                                            <ul>
+                                                <li>Typical Software Architectures</li>
+                                                <li>Design Patterns</li>
+                                                <li>API Designs</li>
+                                            </ul>
+                                        </li>
+                                        <li>Effort estimation of requests for new features</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                     </table>
@@ -601,1000 +620,1105 @@
                             <th scope="row">Artificial Intelligence</th>
                             <td>CSCE 420</td>
                             <td>
-                                <b>Topics:</b>
-                                <ul>
-                                    <li>
-                                        Search
-                                        <ul>
-                                            <li>Breadth-first search (BFS)</li>
-                                            <li>Depth-first search (DFS)</li>
-                                            <li>A* Search</li>
-                                        </ul>
-                                    </li>
-                                    <li>Search Within Games</li>
-                                    <li>Constraint Satisfaction</li>
-                                    <li>Knowledge Representation</li>
-                                    <li>Logic Foundations</li>
-                                    <li>Logical Inference</li>
-                                    <li>Fuzzy Logic</li>
-                                    <li>Planning</li>
-                                    <li>Learning</li>
-                                    <li>Neural Networks</li>
-                                    <li>Reinforcement Learning</li>
-                                    <li>Natural Language Processing (NLP)</li>
-                                    <li>Philosophical Foundations</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Artificial Intelligence</span></summary>
+                                    <b>Topics:</b>
+                                    <ul>
+                                        <li>
+                                            Search
+                                            <ul>
+                                                <li>Breadth-first search (BFS)</li>
+                                                <li>Depth-first search (DFS)</li>
+                                                <li>A* Search</li>
+                                            </ul>
+                                        </li>
+                                        <li>Search Within Games</li>
+                                        <li>Constraint Satisfaction</li>
+                                        <li>Knowledge Representation</li>
+                                        <li>Logic Foundations</li>
+                                        <li>Logical Inference</li>
+                                        <li>Fuzzy Logic</li>
+                                        <li>Planning</li>
+                                        <li>Learning</li>
+                                        <li>Neural Networks</li>
+                                        <li>Reinforcement Learning</li>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Philosophical Foundations</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Computer & Network Security</th>
                             <td>CSCE 465</td>
                             <td>
-                                <b>Topics:</b>
-                                <ul>
-                                    <li>Security Properties</li>
-                                    <li>Security Principles</li>
-                                    <li>Security Vocabulary</li>
-                                    <li>Operating System (OS) Security</li>
-                                    <li>Program Vulnerabilities</li>
-                                    <li>Symmetric Cryptography</li>
-                                    <li>Asymmetric Cryptography</li>
-                                    <li>Hash Functions</li>
-                                    <li>Hash Signatures</li>
-                                    <li>TCP/IP</li>
-                                    <li>UDP</li>
-                                    <li>Domain Name Service (DNS)</li>
-                                    <li>Network Address Translation (NAT)</li>
-                                    <li>Firewalls</li>
-                                    <li>Virtual Private Networks (VPNs)</li>
-                                    <li>Wireless Security</li>
-                                    <li>Web Security</li>
-                                    <li>Security Models</li>
-                                    <li>Distributed Security</li>
-                                    <li>Physical Security</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Computer & Network Security</span></summary>
+                                    <b>Topics:</b>
+                                    <ul>
+                                        <li>Security Properties</li>
+                                        <li>Security Principles</li>
+                                        <li>Security Vocabulary</li>
+                                        <li>Operating System (OS) Security</li>
+                                        <li>Program Vulnerabilities</li>
+                                        <li>Symmetric Cryptography</li>
+                                        <li>Asymmetric Cryptography</li>
+                                        <li>Hash Functions</li>
+                                        <li>Hash Signatures</li>
+                                        <li>TCP/IP</li>
+                                        <li>UDP</li>
+                                        <li>Domain Name Service (DNS)</li>
+                                        <li>Network Address Translation (NAT)</li>
+                                        <li>Firewalls</li>
+                                        <li>Virtual Private Networks (VPNs)</li>
+                                        <li>Wireless Security</li>
+                                        <li>Web Security</li>
+                                        <li>Security Models</li>
+                                        <li>Distributed Security</li>
+                                        <li>Physical Security</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Computer Organization</th>
                             <td>CSCE 312</td>
                             <td>
-                                <b>Course Expectations and Topics:</b>
-                                <ul>
-                                    <li>Algorithms</li>
-                                    <li>Computer Architecture</li>
-                                    <li>Operating Systems</li>
-                                    <li>Compilers</li>
-                                    <li>Software Engineering</li>
-                                    <li>Building a general-purpose computer system from the ground up</li>
-                                    <li>Data Representation</li>
-                                    <li>Machine Language</li>
-                                    <li>Processor Architecture</li>
-                                    <li>Memory Hierarchy</li>
-                                    <li>Assembler</li>
-                                    <li>Virtual Machines</li>
-                                    <li>Compilers</li>
-                                    <li>Operating Systems</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Computer Organization</span></summary>
+                                    <b>Course Expectations and Topics:</b>
+                                    <ul>
+                                        <li>Algorithms</li>
+                                        <li>Computer Architecture</li>
+                                        <li>Operating Systems</li>
+                                        <li>Compilers</li>
+                                        <li>Software Engineering</li>
+                                        <li>Building a general-purpose computer system from the ground up</li>
+                                        <li>Data Representation</li>
+                                        <li>Machine Language</li>
+                                        <li>Processor Architecture</li>
+                                        <li>Memory Hierarchy</li>
+                                        <li>Assembler</li>
+                                        <li>Virtual Machines</li>
+                                        <li>Compilers</li>
+                                        <li>Operating Systems</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Data Structures & Algorithms</th>
                             <td>CSCE 221</td>
                             <td>
-                                <b>Learning Objectives:</b>
-                                <ul>
-                                    <li>Become comfortable with internal structures and applications of:
-                                        <ul>
-                                            <li>Stacks</li>
-                                            <li>Queues</li>
-                                            <li>Lists</li>
-                                            <li>Trees</li>
-                                            <li>Graphs</li>
-                                            <li>Hash Tables</li>
-                                            <li>Priority Queues</li>
-                                        </ul>
-                                    </li>
-                                    <li>Be comfortable with implementing the above structures in C++.</li>
-                                    <li>Understand and analyze complexity of algorithms focus on run time performance and memory usage.</li>
-                                </ul>
-                                <b>Expected Learning Outcomes:</b>
-                                <ul>
-                                    <li>Design and implement diverse data structures that allow easy access and manipulation of data using C++.</li>
-                                    <li>Apply the Big-O asymptotic notation to analyze and select an efficient algorithm for solving a given problem with respect to both run time and memory usage.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Data Structures & Algorithms</span></summary>
+                                    <b>Learning Objectives:</b>
+                                    <ul>
+                                        <li>Become comfortable with internal structures and applications of:
+                                            <ul>
+                                                <li>Stacks</li>
+                                                <li>Queues</li>
+                                                <li>Lists</li>
+                                                <li>Trees</li>
+                                                <li>Graphs</li>
+                                                <li>Hash Tables</li>
+                                                <li>Priority Queues</li>
+                                            </ul>
+                                        </li>
+                                        <li>Be comfortable with implementing the above structures in C++.</li>
+                                        <li>Understand and analyze complexity of algorithms focus on run time performance and memory usage.</li>
+                                    </ul>
+                                    <b>Expected Learning Outcomes:</b>
+                                    <ul>
+                                        <li>Design and implement diverse data structures that allow easy access and manipulation of data using C++.</li>
+                                        <li>Apply the Big-O asymptotic notation to analyze and select an efficient algorithm for solving a given problem with respect to both run time and memory usage.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Design and Analysis of Algorithms</th>
                             <td>CSCE 411</td>
                             <td>
-                                <b>Course Goals:</b>
-                                <ul>
-                                    <li>Be familiar with fundamental algorithms and algorithmic techniques.</li>
-                                    <li>Given a particular application, be able to decide which algorithm among a set of possible choices is best.</li>
-                                    <li>Ability to
-                                        <ul>
-                                            <li>prove correctness and analyze the running time and space complexity of a given algorithm.</li>
-                                            <li>design efficient algorithms for new situations using a variety of techniques.</li>
-                                            <li>prove a problem is NP-complete using reduction and understand the implications.</li>
-                                        </ul>
-                                    </li>
-                                    <li>Understand the notion of undecidability. Some problems are going to be undecidable as a fundamental level. Be able to unravel the implications thereof.</li>
-                                </ul>
-                                <b>Course Content:</b>
-                                <ul>
-                                    <li>Asymptotic Analysis Review</li>
-                                    <li>Lower Bounds</li>
-                                    <li>Divide and Conquer Algorithms</li>
-                                    <li>Dynamic Programming</li>
-                                    <li>Greedy Algorithms</li>
-                                    <li>Graph Algorithms</li>
-                                    <li>Amortized Analysis</li>
-                                    <li>Randomized Algorithms</li>
-                                    <li>Complexity Theory</li>
-                                    <li>Approximation Algorithms</li>
-                                    <li>Undecidability</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Design and Analysis of Algorithms</span></summary>
+                                    <b>Course Goals:</b>
+                                    <ul>
+                                        <li>Be familiar with fundamental algorithms and algorithmic techniques.</li>
+                                        <li>Given a particular application, be able to decide which algorithm among a set of possible choices is best.</li>
+                                        <li>Ability to
+                                            <ul>
+                                                <li>prove correctness and analyze the running time and space complexity of a given algorithm.</li>
+                                                <li>design efficient algorithms for new situations using a variety of techniques.</li>
+                                                <li>prove a problem is NP-complete using reduction and understand the implications.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Understand the notion of undecidability. Some problems are going to be undecidable as a fundamental level. Be able to unravel the implications thereof.</li>
+                                    </ul>
+                                    <b>Course Content:</b>
+                                    <ul>
+                                        <li>Asymptotic Analysis Review</li>
+                                        <li>Lower Bounds</li>
+                                        <li>Divide and Conquer Algorithms</li>
+                                        <li>Dynamic Programming</li>
+                                        <li>Greedy Algorithms</li>
+                                        <li>Graph Algorithms</li>
+                                        <li>Amortized Analysis</li>
+                                        <li>Randomized Algorithms</li>
+                                        <li>Complexity Theory</li>
+                                        <li>Approximation Algorithms</li>
+                                        <li>Undecidability</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Discrete Structural Computing</th>
                             <td>CSCE 222</td>
                             <td>
-                                <b>Topics:</b>
-                                <ul>
-                                    <li>
-                                        Logic
-                                        <ul>
-                                            <li>Propositional Logic</li>
-                                            <li>Predicate Logic</li>
-                                            <li>Rules of Inference</li>
-                                            <li>Proofs</li>
-                                        </ul>
-                                    </li>
-                                    <li>Sets</li>
-                                    <li>Functions</li>
-                                    <li>Algorithms</li>
-                                    <li>Algorithmic Complexity</li>
-                                    <li>Sequences and Sums</li>
-                                    <li>Mathematical Induction</li>
-                                    <li>Strong Induction</li>
-                                    <li>Structural Induction</li>
-                                    <li>Pigeonhole Principle</li>
-                                    <li>Permutations and Combinations</li>
-                                    <li>Binomial Coefficients and Identities</li>
-                                    <li>
-                                        Recurrent Relations
-                                        <ul>
-                                            <li>Recursive Definitions</li>
-                                            <li>Applications of Recurrent Relations</li>
-                                            <li>Solving Linear Recurrence Relations</li>
-                                            <li>Divide and Conquer Algorithms</li>
-                                        </ul>
-                                    </li>
-                                    <li>Equivalence Relations</li>
-                                    <li>Partial Orderings</li>
-                                    <li>
-                                        Computer Languages
-                                        <ul>
-                                            <li>Models of Computation</li>
-                                            <li>Models of Language</li>
-                                            <li>Models of Grammars</li>
-                                            <li>Language Recognition</li>
-                                        </ul>
-                                    </li>
-                                    <li>Finite State Machines (both with and without output)</li>
-                                    <li>Turing Machines</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Discrete Structural Computing</span></summary>
+                                    <b>Topics:</b>
+                                    <ul>
+                                        <li>
+                                            Logic
+                                            <ul>
+                                                <li>Propositional Logic</li>
+                                                <li>Predicate Logic</li>
+                                                <li>Rules of Inference</li>
+                                                <li>Proofs</li>
+                                            </ul>
+                                        </li>
+                                        <li>Sets</li>
+                                        <li>Functions</li>
+                                        <li>Algorithms</li>
+                                        <li>Algorithmic Complexity</li>
+                                        <li>Sequences and Sums</li>
+                                        <li>Mathematical Induction</li>
+                                        <li>Strong Induction</li>
+                                        <li>Structural Induction</li>
+                                        <li>Pigeonhole Principle</li>
+                                        <li>Permutations and Combinations</li>
+                                        <li>Binomial Coefficients and Identities</li>
+                                        <li>
+                                            Recurrent Relations
+                                            <ul>
+                                                <li>Recursive Definitions</li>
+                                                <li>Applications of Recurrent Relations</li>
+                                                <li>Solving Linear Recurrence Relations</li>
+                                                <li>Divide and Conquer Algorithms</li>
+                                            </ul>
+                                        </li>
+                                        <li>Equivalence Relations</li>
+                                        <li>Partial Orderings</li>
+                                        <li>
+                                            Computer Languages
+                                            <ul>
+                                                <li>Models of Computation</li>
+                                                <li>Models of Language</li>
+                                                <li>Models of Grammars</li>
+                                                <li>Language Recognition</li>
+                                            </ul>
+                                        </li>
+                                        <li>Finite State Machines (both with and without output)</li>
+                                        <li>Turing Machines</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Honors Foundations of Engineering I</th>
                             <td>ENGR 111</td>
                             <td>
-                                <b>Course Goals:</b>
-                                <ul>
-                                    <li>Describe engineering disciplines available at Texas A&M University as well as know what graduates of at least three different fields do.</li>
-                                    <li>Understand and apply a structured, engineering problem-solving process using a design process.</li>
-                                    <li>Develop algorithmic thinking by implementing simple algorithmic models in MATLAB.</li>
-                                    <li>Communicate technical information in written, oral, and presentation formats.</li>
-                                    <li>Realize the advantages and challenges of problem solving using a team.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Honors Foundations of Engineering I</span></summary>
+                                    <b>Course Goals:</b>
+                                    <ul>
+                                        <li>Describe engineering disciplines available at Texas A&M University as well as know what graduates of at least three different fields do.</li>
+                                        <li>Understand and apply a structured, engineering problem-solving process using a design process.</li>
+                                        <li>Develop algorithmic thinking by implementing simple algorithmic models in MATLAB.</li>
+                                        <li>Communicate technical information in written, oral, and presentation formats.</li>
+                                        <li>Realize the advantages and challenges of problem solving using a team.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Honors Foundations of Engineering II</th>
                             <td>ENGR 112</td>
                             <td>
-                                <b>Course Goals:</b>
-                                <ul>
-                                    <li>Describe, in depth, the engineering disciplines at Texas A&M.</li>
-                                    <li>
-                                        Apply knowledge of structured engineering problem-solving processes, engineering fundamentals, and basic engineering science to create more advanced engineering criteria. 
-                                        These should be discovered by design process that satisfies the problem of interest.
-                                    </li>
-                                    <li>Design processes to communicate information orally and visually.</li>
-                                    <li>Implement complex algorithmic solutions to specified problems.</li>
-                                    <li>Synthesize your knowledge of effective and ethical membership on a technical team (e.g. cross-functional team collaboration).</li>
-                                    <li>Exhibit a work ethic appropriate for the engineering profession.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Honors Foundations of Engineering II</span></summary>
+                                    <b>Course Goals:</b>
+                                    <ul>
+                                        <li>Describe, in depth, the engineering disciplines at Texas A&M.</li>
+                                        <li>
+                                            Apply knowledge of structured engineering problem-solving processes, engineering fundamentals, and basic engineering science to create more advanced engineering criteria. 
+                                            These should be discovered by design process that satisfies the problem of interest.
+                                        </li>
+                                        <li>Design processes to communicate information orally and visually.</li>
+                                        <li>Implement complex algorithmic solutions to specified problems.</li>
+                                        <li>Synthesize your knowledge of effective and ethical membership on a technical team (e.g. cross-functional team collaboration).</li>
+                                        <li>Exhibit a work ethic appropriate for the engineering profession.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Human-Computer Interaction</th>
                             <td>CSCE 436</td>
                             <td>
-                                <b>Learning Outcomes:</b>
-                                <ul>
-                                    <li>Know fundamental human-computer interaction principles.</li>
-                                    <li>Be aware of how fundamental human-computer interaction principles support the process of technology development.</li>
-                                    <li>Know late-breaking human-computer interaction research and underlying technologies.</li>
-                                    <li>Be familiar with the process of human-computer interaction research from need finding to user evaluation.</li>
-                                    <li>Know how to prototype physical artifacts using machines and tools.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Human-Computer Interaction</span></summary>
+                                    <b>Learning Outcomes:</b>
+                                    <ul>
+                                        <li>Know fundamental human-computer interaction principles.</li>
+                                        <li>Be aware of how fundamental human-computer interaction principles support the process of technology development.</li>
+                                        <li>Know late-breaking human-computer interaction research and underlying technologies.</li>
+                                        <li>Be familiar with the process of human-computer interaction research from need finding to user evaluation.</li>
+                                        <li>Know how to prototype physical artifacts using machines and tools.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Introduction to Computer Systems</th>
                             <td>CSCE 313</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Operating System (OS) Components</li>
-                                    <li>System Calls</li>
-                                    <li>OS Application Interface</li>
-                                    <li>File Systems</li>
-                                    <li>Process Control</li>
-                                    <li>Execution of a program</li>
-                                    <li>Function Calls</li>
-                                    <li>Interrupts</li>
-                                    <li>Concurrency</li>
-                                    <li>Threads</li>
-                                    <li>Process/Thread synchronization</li>
-                                    <li>Inter-process Communication</li>
-                                    <li>Network Socket Programming</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Introduction to Computer Systems</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Operating System (OS) Components</li>
+                                        <li>System Calls</li>
+                                        <li>OS Application Interface</li>
+                                        <li>File Systems</li>
+                                        <li>Process Control</li>
+                                        <li>Execution of a program</li>
+                                        <li>Function Calls</li>
+                                        <li>Interrupts</li>
+                                        <li>Concurrency</li>
+                                        <li>Threads</li>
+                                        <li>Process/Thread synchronization</li>
+                                        <li>Inter-process Communication</li>
+                                        <li>Network Socket Programming</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Introduction to Programming Design Concepts</th>
                             <td>CSCE 121</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Primitive Types and Control Structures</li>
-                                    <li>Vectors</li>
-                                    <li>Classes</li>
-                                    <li>Strings</li>
-                                    <li>Functions</li>
-                                    <li>File I/O</li>
-                                    <li>Searching</li>
-                                    <li>Sorting</li>
-                                    <li>Lists</li>
-                                    <li>Trees</li>
-                                    <li>Maps</li>
-                                    <li>Graphics</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Introduction to Programming Design Concepts</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Primitive Types and Control Structures</li>
+                                        <li>Vectors</li>
+                                        <li>Classes</li>
+                                        <li>Strings</li>
+                                        <li>Functions</li>
+                                        <li>File I/O</li>
+                                        <li>Searching</li>
+                                        <li>Sorting</li>
+                                        <li>Lists</li>
+                                        <li>Trees</li>
+                                        <li>Maps</li>
+                                        <li>Graphics</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Linear Algebra</th>
                             <td>MATH 304</td>
                             <td>
-                                <b>Topics:</b>
-                                <ul>
-                                    <li>Systems of Linear Equations</li>
-                                    <li>Matrices</li>
-                                    <li>Determinants</li>
-                                    <li>Vector Spaces</li>
-                                    <li>Linear Transformations</li>
-                                    <li>Eigenvalues</li>
-                                    <li>Eigenvectors</li>
-                                    <li>Diagonalization</li>
-                                    <li>Inner Product Spaces</li>
-                                    <li>Orthogonal Functions</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Linear Algebra</span></summary>
+                                    <b>Topics:</b>
+                                    <ul>
+                                        <li>Systems of Linear Equations</li>
+                                        <li>Matrices</li>
+                                        <li>Determinants</li>
+                                        <li>Vector Spaces</li>
+                                        <li>Linear Transformations</li>
+                                        <li>Eigenvalues</li>
+                                        <li>Eigenvectors</li>
+                                        <li>Diagonalization</li>
+                                        <li>Inner Product Spaces</li>
+                                        <li>Orthogonal Functions</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Parallel Computing</th>
                             <td>CSCE 435</td>
                             <td>
-                                <b>Topics:</b>
-                                <ul>
-                                    <li>
-                                        Multiprocessor Architectures
-                                        <ul>
-                                            <li>Multi-core CPU</li>
-                                            <li>Multiple CPU</li>
-                                            <li>GPU</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Programming Tools
-                                        <ul>
-                                            <li>CUDA</li>
-                                            <li>OpenMP</li>
-                                        </ul>
-                                    </li>
-                                    <li>Parallel Performance</li>
-                                    <li>Parallel Algorithms</li>
-                                    <li>Applications of Parallel Computing</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Parallel Computing</span></summary>
+                                    <b>Topics:</b>
+                                    <ul>
+                                        <li>
+                                            Multiprocessor Architectures
+                                            <ul>
+                                                <li>Multi-core CPU</li>
+                                                <li>Multiple CPU</li>
+                                                <li>GPU</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Programming Tools
+                                            <ul>
+                                                <li>CUDA</li>
+                                                <li>OpenMP</li>
+                                            </ul>
+                                        </li>
+                                        <li>Parallel Performance</li>
+                                        <li>Parallel Algorithms</li>
+                                        <li>Applications of Parallel Computing</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Principles of Statistics I</th>
                             <td>STAT 211</td>
                             <td>
-                                <b>Learning Objectives:</b>
-                                <ul>
-                                    <li>Identify appropriate graphs, summary statistics, and inferential statistics for real-world contexts.</li>
-                                    <li>Interpret graphs and statistics in real-world contexts.</li>
-                                    <li>Calculate summary and inferential statistics.</li>
-                                    <li>Infer appropriate conclusions about populations based on data.</li>
-                                    <li>Explain and compare properties of summary and inferential statistics.</li>
-                                    <li>Combine concepts in new ways to solve various problems.</li>
-                                </ul>
-                                <b>Other Topics:</b>
-                                <ul>
-                                    <li>Introduction to Probability and Distributions</li>
-                                    <li>Sampling and Descriptive Measures on Datasets</li>
-                                    <li>Inference and Hypothesis Testing</li>
-                                    <li>Linear Regression</li>
-                                    <li>Analysis of Variance</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Principles of Statistics I</span></summary>
+                                    <b>Learning Objectives:</b>
+                                    <ul>
+                                        <li>Identify appropriate graphs, summary statistics, and inferential statistics for real-world contexts.</li>
+                                        <li>Interpret graphs and statistics in real-world contexts.</li>
+                                        <li>Calculate summary and inferential statistics.</li>
+                                        <li>Infer appropriate conclusions about populations based on data.</li>
+                                        <li>Explain and compare properties of summary and inferential statistics.</li>
+                                        <li>Combine concepts in new ways to solve various problems.</li>
+                                    </ul>
+                                    <b>Other Topics:</b>
+                                    <ul>
+                                        <li>Introduction to Probability and Distributions</li>
+                                        <li>Sampling and Descriptive Measures on Datasets</li>
+                                        <li>Inference and Hypothesis Testing</li>
+                                        <li>Linear Regression</li>
+                                        <li>Analysis of Variance</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Programming Studio</th>
                             <td>CSCE 315</td>
                             <td>
-                                <b>Objectives:</b>
-                                <ul>
-                                    <li>Confidence and experience in the full software development cycle.</li>
-                                    <li>Be a capable and effective member in a small software development team.</li>
-                                    <li>Be an effective communicator within the context of software projects.</li>
-                                </ul>
-                                <b>Outcomes:</b>
-                                <ul>
-                                    <li>Have in-depth knowledge of programming and debugging tools.</li>
-                                    <li>Knowledge of various programming paradigms.</li>
-                                    <li>Demonstrate an ability to design and refine large software systems based on rough system requirements.</li>
-                                    <li>Show introductory-level knowledge in database systems.</li>
-                                    <li>Demonstrate an ability to
-                                        <ul>
-                                            <li>implement and test software system design.</li>
-                                            <li>work as a member of a software project development team.</li>
-                                        </ul>
-                                    </li>
-                                    <li>Gain applicable knowledge of various software development paradigms.</li>
-                                    <li>Management of software development projects.</li>
-                                    <li>Write technical documentation regarding software systems.</li>
-                                    <li>Communicate the overall design and details of software systems.</li>
-                                    <li>Show introductory-level knowledge in
-                                        <ul>
-                                            <li>artificial intelligence.</li>
-                                            <li>software engineering.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Programming Studio</span></summary>
+                                    <b>Objectives:</b>
+                                    <ul>
+                                        <li>Confidence and experience in the full software development cycle.</li>
+                                        <li>Be a capable and effective member in a small software development team.</li>
+                                        <li>Be an effective communicator within the context of software projects.</li>
+                                    </ul>
+                                    <b>Outcomes:</b>
+                                    <ul>
+                                        <li>Have in-depth knowledge of programming and debugging tools.</li>
+                                        <li>Knowledge of various programming paradigms.</li>
+                                        <li>Demonstrate an ability to design and refine large software systems based on rough system requirements.</li>
+                                        <li>Show introductory-level knowledge in database systems.</li>
+                                        <li>Demonstrate an ability to
+                                            <ul>
+                                                <li>implement and test software system design.</li>
+                                                <li>work as a member of a software project development team.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Gain applicable knowledge of various software development paradigms.</li>
+                                        <li>Management of software development projects.</li>
+                                        <li>Write technical documentation regarding software systems.</li>
+                                        <li>Communicate the overall design and details of software systems.</li>
+                                        <li>Show introductory-level knowledge in
+                                            <ul>
+                                                <li>artificial intelligence.</li>
+                                                <li>software engineering.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Software Engineering</th>
                             <td>CSCE 431</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Application of Engineering Approach to Computer Software Design and Development</li>
-                                    <li>Life Cycle Models</li>
-                                    <li>Software Requirements and Specification</li>
-                                    <li>Conceptual Model Design</li>
-                                    <li>Detailed Design</li>
-                                    <li>Validation and Verification</li>
-                                    <li>Design Quality Assurance</li>
-                                    <li>Software Design / Development Environments</li>
-                                    <li>Project Management</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Software Engineering</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Application of Engineering Approach to Computer Software Design and Development</li>
+                                        <li>Life Cycle Models</li>
+                                        <li>Software Requirements and Specification</li>
+                                        <li>Conceptual Model Design</li>
+                                        <li>Detailed Design</li>
+                                        <li>Validation and Verification</li>
+                                        <li>Design Quality Assurance</li>
+                                        <li>Software Design / Development Environments</li>
+                                        <li>Project Management</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Engineering Mathematics I (Calculus)</th>
                             <td>MATH 151</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Understand vectors and vector functions, both graphically and quantitatively.</li>
-                                    <li>Apply vectors and vector functions to real world situations involving velocity, forces, and work.</li>
-                                    <li>Construct vector and parametric equations of lines.</li>
-                                    <li>Understand vector functions and their relationship to parametric equations.</li>
-                                    <li>Understand the concept of a limit graphically, numerically, and algebraically.</li>
-                                    <li>Apply the relationship between limits, continuity, and differentiability in determining where a function is continuous and/or differentiable.</li>
-                                    <li>Define the limit definition of the derivative.</li>
-                                    <li>Calculate derivatives using the below techniques, with applications to tangents and velocity problems.
-                                        <ul>
-                                            <li>limit definition</li>
-                                            <li>differentiation formulas</li>
-                                            <li>the chain rule</li>
-                                            <li>implicit differentiation</li>
-                                        </ul>
-                                    </li>
-                                    <li>Calculate limits and derivatives of vector functions with applications to physics such as computing velocity and acceleration vectors.</li>
-                                    <li>Identify exponential, logarithmic, and inverse trigonometric functions.</li>
-                                    <li>Compute limits and derivatives involving exponential, logarithmic, and inverse trigonometric functions.</li>
-                                    <li>Apply the derivative to mathematically model velocity and acceleration as well as real world related rate applications.</li>
-                                    <li>Approximate functions and function values using the derivative and the tangent line.</li>
-                                    <li>Identify and understand indeterminate forms and apply the derivative to calculate limits using L’Hospital’s Rule.</li>
-                                    <li>Understand and apply the Intermediate Value Theorem and the Mean Value Theorem, and be able to logically determine when these theorems can be used.</li>
-                                    <li>Use calculus and logic to sketch graphs of functions and analyze their properties, including
-                                        <ul>
-                                            <li>where a function is increasing/decreasing.</li>
-                                            <li>in describing the concavity of the function.</li>
-                                        </ul>
-                                    </li>
-                                    <li>Determine the maximum/minimum values of functions, including applied optimization problems.</li>
-                                    <li>Compute antiderivatives/integrals and understand the concept of integration as it relates to area and Riemann sums.</li>
-                                    <li>Articulate the relationship between derivatives and integrals using the Fundamental Theorem of Calculus.</li>
-                                    <li>Evaluate definite integrals using the Fundamental Theorem of Calculus.</li>
-                                    <li>Use a Computer Algebra System to solve problems.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Engineering Mathematics I (Calculus)</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Understand vectors and vector functions, both graphically and quantitatively.</li>
+                                        <li>Apply vectors and vector functions to real world situations involving velocity, forces, and work.</li>
+                                        <li>Construct vector and parametric equations of lines.</li>
+                                        <li>Understand vector functions and their relationship to parametric equations.</li>
+                                        <li>Understand the concept of a limit graphically, numerically, and algebraically.</li>
+                                        <li>Apply the relationship between limits, continuity, and differentiability in determining where a function is continuous and/or differentiable.</li>
+                                        <li>Define the limit definition of the derivative.</li>
+                                        <li>Calculate derivatives using the below techniques, with applications to tangents and velocity problems.
+                                            <ul>
+                                                <li>limit definition</li>
+                                                <li>differentiation formulas</li>
+                                                <li>the chain rule</li>
+                                                <li>implicit differentiation</li>
+                                            </ul>
+                                        </li>
+                                        <li>Calculate limits and derivatives of vector functions with applications to physics such as computing velocity and acceleration vectors.</li>
+                                        <li>Identify exponential, logarithmic, and inverse trigonometric functions.</li>
+                                        <li>Compute limits and derivatives involving exponential, logarithmic, and inverse trigonometric functions.</li>
+                                        <li>Apply the derivative to mathematically model velocity and acceleration as well as real world related rate applications.</li>
+                                        <li>Approximate functions and function values using the derivative and the tangent line.</li>
+                                        <li>Identify and understand indeterminate forms and apply the derivative to calculate limits using L’Hospital’s Rule.</li>
+                                        <li>Understand and apply the Intermediate Value Theorem and the Mean Value Theorem, and be able to logically determine when these theorems can be used.</li>
+                                        <li>Use calculus and logic to sketch graphs of functions and analyze their properties, including
+                                            <ul>
+                                                <li>where a function is increasing/decreasing.</li>
+                                                <li>in describing the concavity of the function.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Determine the maximum/minimum values of functions, including applied optimization problems.</li>
+                                        <li>Compute antiderivatives/integrals and understand the concept of integration as it relates to area and Riemann sums.</li>
+                                        <li>Articulate the relationship between derivatives and integrals using the Fundamental Theorem of Calculus.</li>
+                                        <li>Evaluate definite integrals using the Fundamental Theorem of Calculus.</li>
+                                        <li>Use a Computer Algebra System to solve problems.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Principles of Economics</th>
                             <td>ECON 202</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Demonstrate a level of thinking that incorporates basic economic concepts such as trade-offs, opportunity costs and incentives.</li>
-                                    <li>Understand the process of price determination using supply and demand curves.</li>
-                                    <li>Differentiate between the types of market structures.</li>
-                                </ul>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>The Five Foundations of Economics</li>
-                                    <li>Gains from Trade</li>
-                                    <li>Supply and Demand</li>
-                                    <li>Elasticity</li>
-                                    <li>Price Controls</li>
-                                    <li>Efficiency of Markets</li>
-                                    <li>Costs of Taxation</li>
-                                    <li>Externalities and Public Goods</li>
-                                    <li>Business Costs and Production</li>
-                                    <li>Firms in a Competitive Market</li>
-                                    <li>Monopolies</li>
-                                    <li>Monopolistic Competition</li>
-                                    <li>Oligopolies</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Principles of Economics</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Demonstrate a level of thinking that incorporates basic economic concepts such as trade-offs, opportunity costs and incentives.</li>
+                                        <li>Understand the process of price determination using supply and demand curves.</li>
+                                        <li>Differentiate between the types of market structures.</li>
+                                    </ul>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>The Five Foundations of Economics</li>
+                                        <li>Gains from Trade</li>
+                                        <li>Supply and Demand</li>
+                                        <li>Elasticity</li>
+                                        <li>Price Controls</li>
+                                        <li>Efficiency of Markets</li>
+                                        <li>Costs of Taxation</li>
+                                        <li>Externalities and Public Goods</li>
+                                        <li>Business Costs and Production</li>
+                                        <li>Firms in a Competitive Market</li>
+                                        <li>Monopolies</li>
+                                        <li>Monopolistic Competition</li>
+                                        <li>Oligopolies</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Forensic Investigations</th>
                             <td>FIVS 123</td>
                             <td>
-                                <b>Students will be able to:</b>
-                                <ul>
-                                    <li>Identify forensic science fields and describe their scope of application.</li>
-                                    <li>Evaluate evidence for classification purposes.</li>
-                                    <li>Implement specific methodologies for problem solving.</li>
-                                    <li>Critically analyze information and data to generate informed conclusions.</li>
-                                </ul>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>
-                                        Discuss
-                                        <ul>
-                                            <li>The field of forensic science</li>
-                                            <li>The professionals working in the various fields</li>
-                                            <li>The agencies that employ such professionals</li>
-                                            <li>Class and individualizing characteristics</li>
-                                            <li>The CSI Effect and the relationship to Forensic Science</li>
-                                            <li>The goal of crime scene investigation</li>
-                                            <li>Legal aspects of searching and seizing evidence</li>
-                                            <li>Collection and preservation of evidence</li>
-                                            <li>Virtual evidence and crimes</li>
-                                            <li>Types of questioned documents examinations</li>
-                                            <li>The forensic value of glass</li>
-                                            <li>The application of toxicology in forensics</li>
-                                            <li>The examination and comparison process of firearms evidence</li>
-                                            <li>The forensic value of hair</li>
-                                            <li>The modes of hair analysis</li>
-                                            <li>Blood analysis</li>
-                                            <li>Bloodstain Pattern Analysis</li>
-                                            <li>The forensic value of biological fluids</li>
-                                            <li>Death investigation</li>
-                                            <li>DNA as forensic evidence</li>
-                                            <li>Identification methods used in forensic anthropology</li>
-                                            <li>Forensic odontology</li>
-                                            <li>Factors affecting the entomological post mortem interval</li>
-                                            <li>Situations where a forensic engineer would be utilized</li>
-                                            <li>Forensic science as it relates to the law and the courtroom</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Examine
-                                        <ul>
-                                            <li>The classification system of evidence</li>
-                                            <li>Modes of scene documentation</li>
-                                            <li>Types of search methods</li>
-                                            <li>Evidence processing methods</li>
-                                            <li>The relationship between blood alcohol content (BAC), impaired behavior, and drunk driving laws</li>
-                                            <li>Bloodstain Pattern Analysis</li>
-                                            <li>Different types of firearms evidence</li>
-                                            <li>The nature of polymer evidence</li>
-                                            <li>Characteristics related to postmortem interval</li>
-                                        </ul>
-                                    </li>
-                                    <li>The Nature of Evidence</li>
-                                    <li>Introduction to Forensic Science</li>
-                                    <li>Crime Scene Investigation</li>
-                                    <li>
-                                        Computer Investigation
-                                        <ul>
-                                            <li>Digital Evidence</li>
-                                            <li>Computer Forensics</li>
-                                        </ul>
-                                    </li>
-                                    <li>Questioned Documents</li>
-                                    <li>Firearms and Toolmarks</li>
-                                    <li>Fibers, Paints, and Other Polymers</li>
-                                    <li>Glass</li>
-                                    <li>Soil</li>
-                                    <li>Hair</li>
-                                    <li>Serology</li>
-                                    <li>DNA Typing</li>
-                                    <li>Forensic Pathology</li>
-                                    <li>Anthropology</li>
-                                    <li>Odontology</li>
-                                    <li>Forensic Entomology</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Forensic Investigations</span></summary>
+                                    <b>Students will be able to:</b>
+                                    <ul>
+                                        <li>Identify forensic science fields and describe their scope of application.</li>
+                                        <li>Evaluate evidence for classification purposes.</li>
+                                        <li>Implement specific methodologies for problem solving.</li>
+                                        <li>Critically analyze information and data to generate informed conclusions.</li>
+                                    </ul>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>
+                                            Discuss
+                                            <ul>
+                                                <li>The field of forensic science</li>
+                                                <li>The professionals working in the various fields</li>
+                                                <li>The agencies that employ such professionals</li>
+                                                <li>Class and individualizing characteristics</li>
+                                                <li>The CSI Effect and the relationship to Forensic Science</li>
+                                                <li>The goal of crime scene investigation</li>
+                                                <li>Legal aspects of searching and seizing evidence</li>
+                                                <li>Collection and preservation of evidence</li>
+                                                <li>Virtual evidence and crimes</li>
+                                                <li>Types of questioned documents examinations</li>
+                                                <li>The forensic value of glass</li>
+                                                <li>The application of toxicology in forensics</li>
+                                                <li>The examination and comparison process of firearms evidence</li>
+                                                <li>The forensic value of hair</li>
+                                                <li>The modes of hair analysis</li>
+                                                <li>Blood analysis</li>
+                                                <li>Bloodstain Pattern Analysis</li>
+                                                <li>The forensic value of biological fluids</li>
+                                                <li>Death investigation</li>
+                                                <li>DNA as forensic evidence</li>
+                                                <li>Identification methods used in forensic anthropology</li>
+                                                <li>Forensic odontology</li>
+                                                <li>Factors affecting the entomological post mortem interval</li>
+                                                <li>Situations where a forensic engineer would be utilized</li>
+                                                <li>Forensic science as it relates to the law and the courtroom</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Examine
+                                            <ul>
+                                                <li>The classification system of evidence</li>
+                                                <li>Modes of scene documentation</li>
+                                                <li>Types of search methods</li>
+                                                <li>Evidence processing methods</li>
+                                                <li>The relationship between blood alcohol content (BAC), impaired behavior, and drunk driving laws</li>
+                                                <li>Bloodstain Pattern Analysis</li>
+                                                <li>Different types of firearms evidence</li>
+                                                <li>The nature of polymer evidence</li>
+                                                <li>Characteristics related to postmortem interval</li>
+                                            </ul>
+                                        </li>
+                                        <li>The Nature of Evidence</li>
+                                        <li>Introduction to Forensic Science</li>
+                                        <li>Crime Scene Investigation</li>
+                                        <li>
+                                            Computer Investigation
+                                            <ul>
+                                                <li>Digital Evidence</li>
+                                                <li>Computer Forensics</li>
+                                            </ul>
+                                        </li>
+                                        <li>Questioned Documents</li>
+                                        <li>Firearms and Toolmarks</li>
+                                        <li>Fibers, Paints, and Other Polymers</li>
+                                        <li>Glass</li>
+                                        <li>Soil</li>
+                                        <li>Hair</li>
+                                        <li>Serology</li>
+                                        <li>DNA Typing</li>
+                                        <li>Forensic Pathology</li>
+                                        <li>Anthropology</li>
+                                        <li>Odontology</li>
+                                        <li>Forensic Entomology</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Engineering Mathematics II (Calculus II)</th>
                             <td>MATH 152</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Fundamental Theorem of Calculus</li>
-                                    <li>Integration by Substitution</li>
-                                    <li>Area</li>
-                                    <li>Volumes by Slicing</li>
-                                    <li>Disks</li>
-                                    <li>Washers</li>
-                                    <li>Volume by Cylindrical Shells</li>
-                                    <li>Work</li>
-                                    <li>Average Value</li>
-                                    <li>Integration by Parts</li>
-                                    <li>Trigonometric Integrals</li>
-                                    <li>Trigonometric Substitution</li>
-                                    <li>Partial Fractions</li>
-                                    <li>Improper Integrals</li>
-                                    <li>Arc length</li>
-                                    <li>Surface Area of Revolution</li>
-                                    <li>Sequences and Series</li>
-                                    <li>Convergence Tests</li>
-                                    <li>Absolute Convergence</li>
-                                    <li>Power Series</li>
-                                    <li>Taylor and Maclaurin Series</li>
-                                    <li>3D Coordinates</li>
-                                    <li>Vectors</li>
-                                    <li>Dot Product</li>
-                                    <li>Cross Product</li>
-                                    <li>Polar Coordinates</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Engineering Mathematics II (Calculus II)</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Fundamental Theorem of Calculus</li>
+                                        <li>Integration by Substitution</li>
+                                        <li>Area</li>
+                                        <li>Volumes by Slicing</li>
+                                        <li>Disks</li>
+                                        <li>Washers</li>
+                                        <li>Volume by Cylindrical Shells</li>
+                                        <li>Work</li>
+                                        <li>Average Value</li>
+                                        <li>Integration by Parts</li>
+                                        <li>Trigonometric Integrals</li>
+                                        <li>Trigonometric Substitution</li>
+                                        <li>Partial Fractions</li>
+                                        <li>Improper Integrals</li>
+                                        <li>Arc length</li>
+                                        <li>Surface Area of Revolution</li>
+                                        <li>Sequences and Series</li>
+                                        <li>Convergence Tests</li>
+                                        <li>Absolute Convergence</li>
+                                        <li>Power Series</li>
+                                        <li>Taylor and Maclaurin Series</li>
+                                        <li>3D Coordinates</li>
+                                        <li>Vectors</li>
+                                        <li>Dot Product</li>
+                                        <li>Cross Product</li>
+                                        <li>Polar Coordinates</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Fundamentals of Ecology</th>
                             <td>RENR 205</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Evolution and Adaptation</li>
-                                    <li>Behavioral Ecology</li>
-                                    <li>Population Growth and Regulation</li>
-                                    <li>Competition</li>
-                                    <li>Consumer-Resource Interactions</li>
-                                    <li>Evolutionary Arms Race and Mutualism</li>
-                                    <li>Biomes</li>
-                                    <li>Community Dynamics</li>
-                                    <li>Ecosystem Ecology</li>
-                                    <li>Nutrient Cycling</li>
-                                    <li>Ecosystem Services</li>
-                                    <li>Landscape Ecology</li>
-                                    <li>Biodiversity</li>
-                                    <li>Biogeography</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Fundamentals of Ecology</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Evolution and Adaptation</li>
+                                        <li>Behavioral Ecology</li>
+                                        <li>Population Growth and Regulation</li>
+                                        <li>Competition</li>
+                                        <li>Consumer-Resource Interactions</li>
+                                        <li>Evolutionary Arms Race and Mutualism</li>
+                                        <li>Biomes</li>
+                                        <li>Community Dynamics</li>
+                                        <li>Ecosystem Ecology</li>
+                                        <li>Nutrient Cycling</li>
+                                        <li>Ecosystem Services</li>
+                                        <li>Landscape Ecology</li>
+                                        <li>Biodiversity</li>
+                                        <li>Biogeography</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Engineering Mathematics III (Calculus III)</th>
                             <td>MATH 251</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Visualize quadric surfaces in space.</li>
-                                    <li>Differentiate functions of several variables and apply them to extrema problems.</li>
-                                    <li>Determine tangent planes to surfaces.</li>
-                                    <li>Parametrize curves in space, compute line integrals and apply these notions to engineering problems.</li>
-                                    <li>Apply multiple integration to geometric problems such as area and volume.</li>
-                                    <li>Apply Green's and Stokes' Theorem.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Engineering Mathematics III (Calculus III)</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Visualize quadric surfaces in space.</li>
+                                        <li>Differentiate functions of several variables and apply them to extrema problems.</li>
+                                        <li>Determine tangent planes to surfaces.</li>
+                                        <li>Parametrize curves in space, compute line integrals and apply these notions to engineering problems.</li>
+                                        <li>Apply multiple integration to geometric problems such as area and volume.</li>
+                                        <li>Apply Green's and Stokes' Theorem.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Business Information System Concept</th>
                             <td>ISTM 209</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Demonstrate and utilize information technology (i.e., Excel, Access, HTML, CSS) as a tool for solving business problems.</li>
-                                    <li>
-                                        Identify:
-                                        <ul>
-                                            <li>the types of information systems and their uses in business.</li>
-                                            <li>how information systems provide value for organizations.</li>
-                                            <li>how organizations use electronic commerce to achieve their goals.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Recognize:
-                                        <ul>
-                                            <li>the components of an information systems infrastructure.</li>
-                                            <li>how the above components should be managed and protected in an organization.</li>
-                                            <li>the tools and techniques used to develop information systems.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Identify:
-                                        <ul>
-                                            <li>unethical and illegal practices in the use of information systems and technology.</li>
-                                            <li>the components of computer information systems.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Business Information System Concept</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Demonstrate and utilize information technology (i.e., Excel, Access, HTML, CSS) as a tool for solving business problems.</li>
+                                        <li>
+                                            Identify:
+                                            <ul>
+                                                <li>the types of information systems and their uses in business.</li>
+                                                <li>how information systems provide value for organizations.</li>
+                                                <li>how organizations use electronic commerce to achieve their goals.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Recognize:
+                                            <ul>
+                                                <li>the components of an information systems infrastructure.</li>
+                                                <li>how the above components should be managed and protected in an organization.</li>
+                                                <li>the tools and techniques used to develop information systems.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Identify:
+                                            <ul>
+                                                <li>unethical and illegal practices in the use of information systems and technology.</li>
+                                                <li>the components of computer information systems.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Intro to World Theatre</th>
                             <td>THAR 209</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Define why theatre as an art form exists throughout the world.</li>
-                                    <li>Discuss how cultures of other countries influence Western theatre and have been influenced by Western theatre.</li>
-                                    <li>Discuss and critique different theatrical elements in theory and in practice, historic and contemporary movements in world theatre.</li>
-                                    <li>Expand knowledge of the global world through its rituals, dramatic literature and performances.</li>
-                                    <li>Experience theatre as a collaborative means of both global and communal expression.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Intro to World Theatre</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Define why theatre as an art form exists throughout the world.</li>
+                                        <li>Discuss how cultures of other countries influence Western theatre and have been influenced by Western theatre.</li>
+                                        <li>Discuss and critique different theatrical elements in theory and in practice, historic and contemporary movements in world theatre.</li>
+                                        <li>Expand knowledge of the global world through its rituals, dramatic literature and performances.</li>
+                                        <li>Experience theatre as a collaborative means of both global and communal expression.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Technical Business Writing</th>
                             <td>ENGL 210</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Understand writing and speaking as a process (from invention to editing) and learn how to use that process appropriately and efficiently for various writing tasks.</li>
-                                    <li>Analyze audiences and learn how to fulfill a specific purpose by adapting writing and documentation (style, tone, graphics, page design) for that audience.</li>
-                                    <li>Differentiate between and create types of writing most frequently used in scientific, technical, and professional fields.</li>
-                                    <li>Produce documents that reflect appropriate and effective style, graphics, and document design.</li>
-                                    <li>Apply course concepts when writing other documents related to their discipline.</li>
-                                    <li>Use a variety of technology tools to support online communication and the drafting of technical documents.</li>
-                                </ul>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Analyzing rhetorical situations to make decisions about effective communication.</li>
-                                    <li>Understanding and evaluating how rhetorical appeals function with various audiences.</li>
-                                    <li>Recognizing and applying how technical writing genres function and adapt based on the needs of the communication context.</li>
-                                    <li>Analyzing audiences using common business tools and applying that information in appeals to specific audiences.</li>
-                                    <li>Designing and interpreting simple primary research (survey, observation, interview) using awareness of common pitfalls and better practices.</li>
-                                    <li>Evaluating secondary resources for credibility and context-appropriate use.</li>
-                                    <li>Understanding and applying concepts in visual rhetoric to the tasks of page layout and design and in the use of persuasive technology.</li>
-                                    <li>Creating and integrating graphics appropriately for a specific audience and context.</li>
-                                    <li>Practicing editing techniques for clarity, conciseness and precision; compose an analytical text.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Technical Business Writing</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Understand writing and speaking as a process (from invention to editing) and learn how to use that process appropriately and efficiently for various writing tasks.</li>
+                                        <li>Analyze audiences and learn how to fulfill a specific purpose by adapting writing and documentation (style, tone, graphics, page design) for that audience.</li>
+                                        <li>Differentiate between and create types of writing most frequently used in scientific, technical, and professional fields.</li>
+                                        <li>Produce documents that reflect appropriate and effective style, graphics, and document design.</li>
+                                        <li>Apply course concepts when writing other documents related to their discipline.</li>
+                                        <li>Use a variety of technology tools to support online communication and the drafting of technical documents.</li>
+                                    </ul>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Analyzing rhetorical situations to make decisions about effective communication.</li>
+                                        <li>Understanding and evaluating how rhetorical appeals function with various audiences.</li>
+                                        <li>Recognizing and applying how technical writing genres function and adapt based on the needs of the communication context.</li>
+                                        <li>Analyzing audiences using common business tools and applying that information in appeals to specific audiences.</li>
+                                        <li>Designing and interpreting simple primary research (survey, observation, interview) using awareness of common pitfalls and better practices.</li>
+                                        <li>Evaluating secondary resources for credibility and context-appropriate use.</li>
+                                        <li>Understanding and applying concepts in visual rhetoric to the tasks of page layout and design and in the use of persuasive technology.</li>
+                                        <li>Creating and integrating graphics appropriately for a specific audience and context.</li>
+                                        <li>Practicing editing techniques for clarity, conciseness and precision; compose an analytical text.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Newtonian Mechanics for Engineering and Science</th>
                             <td>PHYS 218</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>
-                                        Understanding of:
-                                        <ul>
-                                            <li>the physical laws of motion</li>
-                                            <li>static and dynamical Newtonian mechanics</li>
-                                            <li>harmonic motion</li>
-                                            <li>the scientific approach</li>
-                                        </ul>
-                                    </li>
-                                    <li>Learning to think more critically/scientifically</li>
-                                    <li>Developing the skills need to attack difficult problems</li>
-                                </ul>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Newton’s Laws</li>
-                                    <li>Energy</li>
-                                    <li>Work</li>
-                                    <li>Conservation of Energy</li>
-                                    <li>Conservation of Momentum</li>
-                                    <li>Rotational Motion</li>
-                                    <li>Gravity</li>
-                                    <li>Simple Harmonic Motion</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Newtonian Mechanics for Engineering and Science</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>
+                                            Understanding of:
+                                            <ul>
+                                                <li>the physical laws of motion</li>
+                                                <li>static and dynamical Newtonian mechanics</li>
+                                                <li>harmonic motion</li>
+                                                <li>the scientific approach</li>
+                                            </ul>
+                                        </li>
+                                        <li>Learning to think more critically/scientifically</li>
+                                        <li>Developing the skills need to attack difficult problems</li>
+                                    </ul>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Newton’s Laws</li>
+                                        <li>Energy</li>
+                                        <li>Work</li>
+                                        <li>Conservation of Energy</li>
+                                        <li>Conservation of Momentum</li>
+                                        <li>Rotational Motion</li>
+                                        <li>Gravity</li>
+                                        <li>Simple Harmonic Motion</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Electricity and Magnetism for Engineering and Science</th>
                             <td>PHYS 208</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Coulomb’s Law</li>
-                                    <li>Electric Forces</li>
-                                    <li>Electric Fields</li>
-                                    <li>Electric Potentials</li>
-                                    <li>Gauss’s Law</li>
-                                    <li>Derivation</li>
-                                    <li>Applications of Gauss</li>
-                                    <li>Capacitors</li>
-                                    <li>Current</li>
-                                    <li>Ohm’s Law</li>
-                                    <li>Simple Circuits</li>
-                                    <li>Magnetic Forces</li>
-                                    <li>Magnetic Fields</li>
-                                    <li>Ampere’s Law</li>
-                                    <li>Induced EMF</li>
-                                    <li>Inductance</li>
-                                    <li>Time Dependent Circuits</li>
-                                    <li>Maxwell’s Equations</li>
-                                    <li>Waves</li>
-                                    <li>Symmetric distributions</li>
-                                    <li>Conductors</li>
-                                    <li>Insulators</li>
-                                    <li>Capacitance/Capacitors</li>
-                                    <li>Resistors</li>
-                                    <li>Batteries</li>
-                                    <li>Ampere’s Principle</li>
-                                    <li>Sources of magnetic fields</li>
-                                    <li>Ampere’s Circuital Law</li>
-                                    <li>Faraday’s Law</li>
-                                    <li>Induced Electromotive Force</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Electricity and Magnetism for Engineering and Science</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Coulomb’s Law</li>
+                                        <li>Electric Forces</li>
+                                        <li>Electric Fields</li>
+                                        <li>Electric Potentials</li>
+                                        <li>Gauss’s Law</li>
+                                        <li>Derivation</li>
+                                        <li>Applications of Gauss</li>
+                                        <li>Capacitors</li>
+                                        <li>Current</li>
+                                        <li>Ohm’s Law</li>
+                                        <li>Simple Circuits</li>
+                                        <li>Magnetic Forces</li>
+                                        <li>Magnetic Fields</li>
+                                        <li>Ampere’s Law</li>
+                                        <li>Induced EMF</li>
+                                        <li>Inductance</li>
+                                        <li>Time Dependent Circuits</li>
+                                        <li>Maxwell’s Equations</li>
+                                        <li>Waves</li>
+                                        <li>Symmetric distributions</li>
+                                        <li>Conductors</li>
+                                        <li>Insulators</li>
+                                        <li>Capacitance/Capacitors</li>
+                                        <li>Resistors</li>
+                                        <li>Batteries</li>
+                                        <li>Ampere’s Principle</li>
+                                        <li>Sources of magnetic fields</li>
+                                        <li>Ampere’s Circuital Law</li>
+                                        <li>Faraday’s Law</li>
+                                        <li>Induced Electromotive Force</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Olympics Studies</th>
                             <td>SPMT 220</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>
-                                        Ancient Olympics
-                                        <ul>
-                                            <li>776 B.C. - 393 A.D.</li>
-                                            <li>Origins</li>
-                                            <li>History</li>
-                                            <li>Interesting/Famous Figures</li>
-                                            <li>Mythology</li>
-                                            <li>Culture</li>
-                                            <li>Politics</li>
-                                            <li>Events</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Modern Olympics
-                                        <ul>
-                                            <li>Pierre de Coubertin</li>
-                                            <li>International Olympic Committee</li>
-                                            <li>Olympism</li>
-                                            <li>Olympiad</li>
-                                            <li>Olympics</li>
-                                            <li>The Olympic Movement</li>
-                                            <li>Early Years (1896 - World War II)</li>
-                                            <li>World War II to present</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Growth of the Olympics
-                                        <ul>
-                                            <li>Commercialization</li>
-                                            <li>Amateurism</li>
-                                            <li>Marketing</li>
-                                            <li>Politics</li>
-                                            <li>Social Issues</li>
-                                            <li>Paralympics</li>
-                                            <li>Ethics</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Olympics Studies</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>
+                                            Ancient Olympics
+                                            <ul>
+                                                <li>776 B.C. - 393 A.D.</li>
+                                                <li>Origins</li>
+                                                <li>History</li>
+                                                <li>Interesting/Famous Figures</li>
+                                                <li>Mythology</li>
+                                                <li>Culture</li>
+                                                <li>Politics</li>
+                                                <li>Events</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Modern Olympics
+                                            <ul>
+                                                <li>Pierre de Coubertin</li>
+                                                <li>International Olympic Committee</li>
+                                                <li>Olympism</li>
+                                                <li>Olympiad</li>
+                                                <li>Olympics</li>
+                                                <li>The Olympic Movement</li>
+                                                <li>Early Years (1896 - World War II)</li>
+                                                <li>World War II to present</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Growth of the Olympics
+                                            <ul>
+                                                <li>Commercialization</li>
+                                                <li>Amateurism</li>
+                                                <li>Marketing</li>
+                                                <li>Politics</li>
+                                                <li>Social Issues</li>
+                                                <li>Paralympics</li>
+                                                <li>Ethics</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Financial Accounting</th>
                             <td>ACCT 209</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>
-                                        Be able to describe:
-                                        <ul>
-                                            <li>the role and purpose of accounting in business and society.</li>
-                                            <li>the elements of, the relationships among, and the accounting concepts underlying the primary financial statements.</li>
-                                            <li>how routine transactions are reflected in the financial statements.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Be able to define:
-                                        <ul>
-                                            <li>business-related terms and concepts.</li>
-                                            <li>accounting-related terms and concepts.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Be able to analyze:
-                                        <ul>
-                                            <li>the effect of routine transactions on the basic accounting equation.</li>
-                                            <li>financial statements from the perspective of an owner, potential owner, and creditor using basic financial ratios.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Financial Accounting</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>
+                                            Be able to describe:
+                                            <ul>
+                                                <li>the role and purpose of accounting in business and society.</li>
+                                                <li>the elements of, the relationships among, and the accounting concepts underlying the primary financial statements.</li>
+                                                <li>how routine transactions are reflected in the financial statements.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Be able to define:
+                                            <ul>
+                                                <li>business-related terms and concepts.</li>
+                                                <li>accounting-related terms and concepts.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Be able to analyze:
+                                            <ul>
+                                                <li>the effect of routine transactions on the basic accounting equation.</li>
+                                                <li>financial statements from the perspective of an owner, potential owner, and creditor using basic financial ratios.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Business Government and Society</th>
                             <td>MGMT 209</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>
-                                        Impact of external environment on business behavior, including the following factors:
-                                        <ul>
-                                            <li>Antitrust Law</li>
-                                            <li>Employment Law</li>
-                                            <li>Discrimination Law</li>
-                                            <li>Product Safety Regulation</li>
-                                            <li>Consumer Protection</li>
-                                            <li>Ethics</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Business Government and Society</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>
+                                            Impact of external environment on business behavior, including the following factors:
+                                            <ul>
+                                                <li>Antitrust Law</li>
+                                                <li>Employment Law</li>
+                                                <li>Discrimination Law</li>
+                                                <li>Product Safety Regulation</li>
+                                                <li>Consumer Protection</li>
+                                                <li>Ethics</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Survey of Management Principles</th>
                             <td>MGMT 309</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>
-                                        Identify and describe:
-                                        <ul>
-                                            <li>the role of managers</li>
-                                            <li>managerial functions</li>
-                                            <li>how different approaches to management affect organizations</li>
-                                        </ul>
-                                    </li>
-                                    <li>Describe and comprehend the interface and interaction between business, culture, ethics, and the environment.</li>
-                                    <li>Explain the processes by which managers set and achieve organizational goals.</li>
-                                    <li>Determine how managers group activities and resources inside an organizational setting.</li>
-                                    <li>Develop an understanding of how managers lead and motivate diverse individuals to work together in organizations.</li>
-                                    <li>Understand how managers monitor, evaluate and correct activities.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Survey of Management Principles</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>
+                                            Identify and describe:
+                                            <ul>
+                                                <li>the role of managers</li>
+                                                <li>managerial functions</li>
+                                                <li>how different approaches to management affect organizations</li>
+                                            </ul>
+                                        </li>
+                                        <li>Describe and comprehend the interface and interaction between business, culture, ethics, and the environment.</li>
+                                        <li>Explain the processes by which managers set and achieve organizational goals.</li>
+                                        <li>Determine how managers group activities and resources inside an organizational setting.</li>
+                                        <li>Develop an understanding of how managers lead and motivate diverse individuals to work together in organizations.</li>
+                                        <li>Understand how managers monitor, evaluate and correct activities.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">State and Local Government</th>
                             <td>POLS 207</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Functions of Texas state and local government</li>
-                                    <li>State Differences and Relationships</li>
-                                    <li>Politics Among the States</li>
-                                    <li>The Evolution of American Federalism</li>
-                                    <li>Government Revenue</li>
-                                    <li>Government Budgeting</li>
-                                    <li>Government Expenditures</li>
-                                    <li>The Individual in Democratic Government</li>
-                                    <li>Political Parties</li>
-                                    <li>Elections</li>
-                                    <li>Pressure Groups</li>
-                                    <li>Idea of Competition</li>
-                                    <li>The First Active Government: That at the Local Level</li>
-                                    <li>Legislating Policy</li>
-                                    <li>Executing the Laws</li>
-                                    <li>Adjudicating the Law</li>
-                                    <li>Policy and the Courts</li>
-                                    <li>Education, Poverty and Health: State and Local Efforts</li>
-                                    <li>The State of the States and Communities</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for State and Local Government</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Functions of Texas state and local government</li>
+                                        <li>State Differences and Relationships</li>
+                                        <li>Politics Among the States</li>
+                                        <li>The Evolution of American Federalism</li>
+                                        <li>Government Revenue</li>
+                                        <li>Government Budgeting</li>
+                                        <li>Government Expenditures</li>
+                                        <li>The Individual in Democratic Government</li>
+                                        <li>Political Parties</li>
+                                        <li>Elections</li>
+                                        <li>Pressure Groups</li>
+                                        <li>Idea of Competition</li>
+                                        <li>The First Active Government: That at the Local Level</li>
+                                        <li>Legislating Policy</li>
+                                        <li>Executing the Laws</li>
+                                        <li>Adjudicating the Law</li>
+                                        <li>Policy and the Courts</li>
+                                        <li>Education, Poverty and Health: State and Local Efforts</li>
+                                        <li>The State of the States and Communities</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Principles of Marketing</th>
                             <td>MKTG 409</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Introduction to the Field of Marketing</li>
-                                    <li>Marketing Environment</li>
-                                    <li>Social Responsibility in Ethics</li>
-                                    <li>
-                                        Target Markets
-                                        <ul>
-                                            <li>Segmentation</li>
-                                            <li>Evaluation</li>
-                                        </ul>
-                                    </li>
-                                    <li>Consumer Buying Behavior</li>
-                                    <li>Business Markets and Buying Behavior</li>
-                                    <li>Marketing Research and Information Systems</li>
-                                    <li>
-                                        Product Concepts
-                                        <ul>
-                                            <li>Development</li>
-                                            <li>Management</li>
-                                        </ul>
-                                    </li>
-                                    <li>Services Marketing</li>
-                                    <li>Pricing Concepts and Management</li>
-                                    <li>Marketing Channels</li>
-                                    <li>Supply Chain Management</li>
-                                    <li>Retailing</li>
-                                    <li>Direct Marketing</li>
-                                    <li>Wholesaling</li>
-                                    <li>Integrated Marketing Communications</li>
-                                    <li>Advertising</li>
-                                    <li>Public Relations</li>
-                                    <li>Personal Selling</li>
-                                    <li>Sales Promotion</li>
-                                    <li>Planning</li>
-                                    <li>Implementing</li>
-                                    <li>Evaluating Marketing Strategies</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Principles of Marketing</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Introduction to the Field of Marketing</li>
+                                        <li>Marketing Environment</li>
+                                        <li>Social Responsibility in Ethics</li>
+                                        <li>
+                                            Target Markets
+                                            <ul>
+                                                <li>Segmentation</li>
+                                                <li>Evaluation</li>
+                                            </ul>
+                                        </li>
+                                        <li>Consumer Buying Behavior</li>
+                                        <li>Business Markets and Buying Behavior</li>
+                                        <li>Marketing Research and Information Systems</li>
+                                        <li>
+                                            Product Concepts
+                                            <ul>
+                                                <li>Development</li>
+                                                <li>Management</li>
+                                            </ul>
+                                        </li>
+                                        <li>Services Marketing</li>
+                                        <li>Pricing Concepts and Management</li>
+                                        <li>Marketing Channels</li>
+                                        <li>Supply Chain Management</li>
+                                        <li>Retailing</li>
+                                        <li>Direct Marketing</li>
+                                        <li>Wholesaling</li>
+                                        <li>Integrated Marketing Communications</li>
+                                        <li>Advertising</li>
+                                        <li>Public Relations</li>
+                                        <li>Personal Selling</li>
+                                        <li>Sales Promotion</li>
+                                        <li>Planning</li>
+                                        <li>Implementing</li>
+                                        <li>Evaluating Marketing Strategies</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Ethics and Engineering</th>
                             <td>ENGR 482</td>
                             <td>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>Know and use some common methods for identifying, analyzing, and resolving ethical problems, with an emphasis on clarifying conflicting positions and using dialogue to overcome this conflict.</li>
-                                    <li>Develop the capacity to think analytically, critically, and creatively about ethical issues in engineering and how engineering affects society and the environment.</li>
-                                    <li>Know and analyze some of the classic cases in engineering ethics and typical ethical and professional issues that arise in engineering work, especially those having to do with bias, power, and authority.</li>
-                                    <li>Explain ethical theories, moral principles, and technical details clearly and concisely.</li>
-                                    <li>Know the NSPE code, the code of one’s own professional society, and the major professional societies and organizations in engineering.</li>
-                                    <li>Explain how ethical theories, principles, and values inform common engineering practices and applicable codes of ethics and laws, with attention to how they differ by culture.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Ethics and Engineering</span></summary>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>Know and use some common methods for identifying, analyzing, and resolving ethical problems, with an emphasis on clarifying conflicting positions and using dialogue to overcome this conflict.</li>
+                                        <li>Develop the capacity to think analytically, critically, and creatively about ethical issues in engineering and how engineering affects society and the environment.</li>
+                                        <li>Know and analyze some of the classic cases in engineering ethics and typical ethical and professional issues that arise in engineering work, especially those having to do with bias, power, and authority.</li>
+                                        <li>Explain ethical theories, moral principles, and technical details clearly and concisely.</li>
+                                        <li>Know the NSPE code, the code of one’s own professional society, and the major professional societies and organizations in engineering.</li>
+                                        <li>Explain how ethical theories, principles, and values inform common engineering practices and applicable codes of ethics and laws, with attention to how they differ by culture.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Survey of Finance Principles</th>
                             <td>FINC 409</td>
                             <td>
-                                <b>Topics include:</b>
-                                <ul>
-                                    <li>Time value of money</li>
-                                    <li>Compound interest rates</li>
-                                    <li>Discounting cash flows</li>
-                                    <li>Financial valuation</li>
-                                </ul>
-                                <b>Goals include:</b>
-                                <ul>
-                                    <li>How, when, and where to spend money from the perspective of a corporate financial manager.</li>
-                                    <li>Calculate a project’s net present value, internal rate of return, etc. to facilitate sound financial decision making.</li>
-                                    <li>How and where to find cash flows in financial reports.</li>
-                                    <li>Understand the trade-off between risk and return.</li>
-                                    <li>How financial markets define, measure, price, and spread risk through an economy.</li>
-                                </ul>
+                                <details>
+                                    <summary>Course details<span class="visually-hidden"> for Survey of Finance Principles</span></summary>
+                                    <b>Topics include:</b>
+                                    <ul>
+                                        <li>Time value of money</li>
+                                        <li>Compound interest rates</li>
+                                        <li>Discounting cash flows</li>
+                                        <li>Financial valuation</li>
+                                    </ul>
+                                    <b>Goals include:</b>
+                                    <ul>
+                                        <li>How, when, and where to spend money from the perspective of a corporate financial manager.</li>
+                                        <li>Calculate a project’s net present value, internal rate of return, etc. to facilitate sound financial decision making.</li>
+                                        <li>How and where to find cash flows in financial reports.</li>
+                                        <li>Understand the trade-off between risk and return.</li>
+                                        <li>How financial markets define, measure, price, and spread risk through an economy.</li>
+                                    </ul>
+                                </details>
                             </td>
                         </tr>
                     </table>

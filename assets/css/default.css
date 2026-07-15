@@ -84,6 +84,12 @@
       #education table tr td ul li {
         color: #e64d9e;
         font-size: 100%; }
+      #education table tr td details summary {
+        color: #e64d9e;
+        font-size: 100%;
+        cursor: pointer; }
+        #education table tr td details summary:hover {
+          color: #ff3d94; }
 
 /*
  * Animation initial states — only applied when JS is active.
