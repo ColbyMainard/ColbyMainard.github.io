@@ -134,7 +134,7 @@ html.js-animations {
     #softwareEngineeringGuide,
     #cybersecurityGuide,
     #contactMe {
-        > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a, > address, > div.guideInfographic {
+        > h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a {
             opacity: 0;
         }
     }
@@ -156,7 +156,7 @@ html.js-animations {
         #softwareEngineeringGuide,
         #cybersecurityGuide,
         #contactMe {
-            > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a, > address, > div.guideInfographic {
+            > h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a {
                 opacity: 1 !important;
             }
         }

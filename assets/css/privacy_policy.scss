@@ -2,7 +2,7 @@
 $refined_professionalism_1: #2C3E50;
 $refined_professionalism_2: #34495E;
 /* _3 tuned brighter than the source #16A085 (3.35:1, failed WCAG AA) so body
-   text, links and h3/h4 clear AA at 5.22:1 on the _1 bg — important for this
+   text and links clear AA at 5.22:1 on the _1 bg — important for this
    page's legal-disclosure readability. */
 $refined_professionalism_3: #22c9a8;
 $refined_professionalism_4: #F39C12;
@@ -23,16 +23,6 @@ $refined_professionalism_5: #F7F9F9;
         text-align: left;
         color: $refined_professionalism_4;
         font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $refined_professionalism_3;
-        font-size: 200%;
-    }
-    h4 {
-        text-align: left;
-        color: $refined_professionalism_3;
-        font-size: 175%;
     }
     p {
         text-align: left;

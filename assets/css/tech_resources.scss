@@ -141,7 +141,7 @@ html.js-animations {
     #scriptingResources,
     #operatingSystemsResources,
     #contactMe {
-        > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a, > address {
+        > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a {
             opacity: 0;
         }
     }
@@ -162,7 +162,7 @@ html.js-animations {
         #scriptingResources,
         #operatingSystemsResources,
         #contactMe {
-            > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a, > address {
+            > h1, > h2, > h3, > p, > ul, > svg, > table, > blockquote, > a {
                 opacity: 1 !important;
             }
         }

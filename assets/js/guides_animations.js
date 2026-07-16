@@ -61,13 +61,13 @@
             translateY: ["40px", "0px"],
             duration: 700
         });
-        addStep(tl, directChildren(el, "h3"), {
+        addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,
             delay: anime.stagger(80)
         }, ">-300");
-        addStep(tl, directChildren(el, "p, blockquote, ul, table, a, svg, div.guideInfographic"), {
+        addStep(tl, directChildren(el, "p, blockquote, ul, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 500,

@@ -163,7 +163,7 @@ html.js-animations {
     #certifications,
     #otherSkills,
     #contactMe {
-        > h1, > h2, > h3, > p, > ul, > svg, > table, > a, > address {
+        > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
             opacity: 0;
         }
     }
@@ -184,7 +184,7 @@ html.js-animations {
         #certifications,
         #otherSkills,
         #contactMe {
-            > h1, > h2, > h3, > p, > ul, > svg, > table, > a, > address {
+            > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
                 opacity: 1 !important;
             }
         }

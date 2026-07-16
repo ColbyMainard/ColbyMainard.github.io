@@ -128,7 +128,7 @@ All seven guide sections share a single `animateGuide` timeline rather than each
 | Cybersecurity | Rise from bottom + staggered children | `outExpo` | Shared `animateGuide` |
 | Contact | Simple fade | `outSine` | Clean exit |
 
-Within each guide timeline, the `h2` heading enters first (700ms, 40px rise), `h3` subheadings follow with an 80ms stagger and 30px rise, and body elements (`p, blockquote, ul, table, a, svg, div.guideInfographic`) finish with a 50ms stagger and 20px rise. Relative offsets (`">-300"`) overlap the phases so each guide reads as one continuous reveal.
+Within each guide timeline, the `h2` heading enters first (700ms, 40px rise), `h3` and `h4` subheadings follow with an 80ms stagger and 30px rise, and body elements (`p, blockquote, ul, a`) finish with a 50ms stagger and 20px rise. Relative offsets (`">-300"`) overlap the phases so each guide reads as one continuous reveal.
 
 ### 404.html
 
@@ -157,18 +157,19 @@ All use the same base pattern:
 ```scss
 html.js-animations {
     #sectionId {
-        > h1, > h2, > h3, > p, > ul, > svg, > table, > a, > address {
+        > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
             opacity: 0;
         }
     }
 }
 ```
 
-The exact list of child selectors varies by partial based on the element types each page uses:
+The exact list of child selectors varies by partial based on the element types each page uses. The gate has to stay in step with that page's JS: an element type that is animated but not gated flashes, while one that is gated but never animated is stranded invisible.
 
+- `> h4` is gated on `index.scss`, `tech_takes.scss`, and `guides.scss`, the three pages that use `<h4>` and the three whose partials carry an `h4` style rule. `hobbies.scss` and `tech_resources.scss` omit it: those pages have no `<h4>`, and no `h4` rule to style one if it were added.
 - `hobbies.scss` adds `> img`, `> blockquote`, and `> iframe`.
 - `tech_takes.scss` adds `> dl`.
-- `tech_resources.scss` and `guides.scss` add `> blockquote`; `guides.scss` also adds `> div.guideInfographic`.
+- `tech_resources.scss` adds `> blockquote`. `guides.scss` gates only `> h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a`, since `guides.html` contains no `<svg>` or `<table>`.
 - `page_not_found.scss` uses a shorter list (`> h1, > h2, > h3, > p, > ul, > a`) for its intro, not-found, and contact sections, plus a separate `#helpfulLinks` rule that gates a bare `li` so the page links stagger in individually.
 
 ### Reduced-motion safety net
@@ -179,7 +180,7 @@ Each animated partial also wraps a duplicate rule inside a reduced-motion media 
 @media (prefers-reduced-motion: reduce) {
     html.js-animations {
         #sectionId {
-            > h1, > h2, > h3, > p, > ul, > svg, > table, > a, > address {
+            > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
                 opacity: 1 !important;
             }
         }
@@ -219,6 +220,16 @@ sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
 Without the compiled rules, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there can be a brief flash of unstyled content before JS executes because the CSS would not yet include the `opacity: 0` rules.
 
 ## Changelog
+
+### h4 gating fix and dead-selector sweep
+
+`<h4>` headings flashed on `index.html` and `tech_takes.html`. The JS animated them (`directChildren(el, "h3, h4")`, and `"h4, p, ul, a"` in `animateWork`) but no partial gated `> h4`, so each heading rendered at full opacity, snapped to `opacity: 0` when its timeline step applied the tween's from-value, then faded back in. On `index.html` they also jumped sideways, because `animateWork` tweens `translateX: ["-40px", "0px"]`.
+
+- **`assets/css/index.scss`, `assets/css/tech_takes.scss`**: added `> h4` to both the initial-state list and its reduced-motion duplicate. No JS change was needed, since `index_animations.js` and `tech_takes_animations.js` already animated h4 in exactly the sections that have one.
+- **`assets/css/guides.scss` + `assets/js/guides_animations.js`**: guides had the same gap, but symmetrically (neither gated nor animated), so its 15 h4s pre-painted while the rest of each guide faded in around them. `guides.scss` now gates `> h4` and `animateGuide` animates `directChildren(el, "h3, h4")`, folding the subheadings into the guide's single continuous reveal. Both edits are required together: gating without animating would strand all 15 headings invisible.
+- **Dead-selector sweep**: `<address>` appears on no page of the site, so `> address` was dropped from all five partials' gate lists and the `address` rule was removed from `footer #contactMe` in `default.scss`. `guides.scss` and `guides_animations.js` also dropped `> svg`, `> table`, and `> div.guideInfographic`, none of which exist in `guides.html`. `privacy_policy.scss` lost its `h3` and `h4` rules, since `privacy.html` has only `h1` and `h2` headings, and the comment on `$refined_professionalism_3` no longer cites them.
+
+The rule this restores: the style rule, the CSS gate, and the JS target move as one set, per page, per element type. Animated but not gated flashes. Gated but not animated disappears. `hobbies_animations.js` and `tech_resources_animations.js` still name `h4` in their step selectors even though neither page has an `<h4>`. Those are harmless no-ops and were left alone, because neither partial gates `> h4`, so there is nothing for them to strand.
 
 ### Product Placement section added (tech_takes.html)
 
