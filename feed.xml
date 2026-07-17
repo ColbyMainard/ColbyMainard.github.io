@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hand-maintained Atom feed for the Technical Stances page.
+     When a take is added or edited: update the matching Article JSON-LD in
+     assets/html/tech_takes.html, mirror datePublished/dateModified here as
+     RFC3339 (T00:00:00Z), set the feed-level <updated> to the newest entry
+     <updated>, and bump CACHE_VERSION in service-worker.js.
+     Entry <id> values are permanent tag: URIs. Never change them, even if
+     the page's section anchors are renamed; update only <link href>. -->
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Technical Stances by Colby Mainard</title>
+	<subtitle>Long-form opinions on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.</subtitle>
+	<id>https://colbymainard.github.io/feed.xml</id>
+	<link rel="self" type="application/atom+xml" href="https://colbymainard.github.io/feed.xml"/>
+	<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html"/>
+	<updated>2026-06-21T00:00:00Z</updated>
+	<author>
+		<name>Colby Mainard</name>
+		<uri>https://colbymainard.github.io/</uri>
+	</author>
+	<entry>
+		<title>Product Placement in Sports Marketing</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/product-placement</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#ProductPlacementDiv"/>
+		<published>2026-04-23T00:00:00Z</published>
+		<updated>2026-06-11T00:00:00Z</updated>
+		<summary>Lessons from valuing sports brand placements with computer vision, covering the visual signals that drive placement value and practical strategies for brands seeking exposure.</summary>
+	</entry>
+	<entry>
+		<title>Post-Internet Privacy</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/privacy</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv"/>
+		<published>2026-01-20T00:00:00Z</published>
+		<updated>2026-06-19T00:00:00Z</updated>
+		<summary>How advertising economics eroded online privacy, the threat models to plan for, and practical defenses for users and services, from privacy-preserving browsers to differential privacy and federated learning.</summary>
+	</entry>
+	<entry>
+		<title>Staying Safe with Cryptocurrency</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/cryptocurrency</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv"/>
+		<published>2025-11-29T00:00:00Z</published>
+		<updated>2026-06-19T00:00:00Z</updated>
+		<summary>A plain-language look at how cryptocurrency works, how it compares to traditional securities, which coins tend to be more stable, and the wallets and security practices that keep holdings safe.</summary>
+	</entry>
+	<entry>
+		<title>Artificial General Intelligence: More Buzzword Than Threat</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/agi</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv"/>
+		<published>2025-10-28T00:00:00Z</published>
+		<updated>2026-06-19T00:00:00Z</updated>
+		<summary>Why artificial general intelligence remains more buzzword than imminent threat: hype cycles, undefined success criteria, missing technology, and the philosophical and practical questions still unanswered.</summary>
+	</entry>
+	<entry>
+		<title>Future of Quantum Computing</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/future-of-quantum</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv"/>
+		<published>2025-10-18T00:00:00Z</published>
+		<updated>2026-06-19T00:00:00Z</updated>
+		<summary>What quantum computing is, the problem classes where qubits offer real speedups, and why quantum hardware will likely follow the GPU and ASIC path from enterprise accelerator to consumer availability.</summary>
+	</entry>
+	<entry>
+		<title>Kolmogorov-Arnold Networks (KANs)</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/kan</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv"/>
+		<published>2025-10-07T00:00:00Z</published>
+		<updated>2026-06-21T00:00:00Z</updated>
+		<summary>How Kolmogorov-Arnold Networks differ from multi-layer perceptrons by learning spline activation functions, and why interpretability and accuracy gains come with tooling and speed tradeoffs.</summary>
+	</entry>
+</feed>

@@ -59,6 +59,9 @@ $dark_blue_gray_5: #ff5c5c;
     background-color: $dark_blue_gray_1;
     width: 80%;
     border-radius: 10px;
+    padding-bottom: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     font-family: "Courier New", monospace;
     h1 {
         text-align: left;
@@ -284,6 +287,22 @@ html.js-animations {
     font-style: italic;
     color: $dark_blue_gray_4;
     font-size: 95%;
+}
+
+/* Visible Atom subscribe link in the page intro. The intro sits on the
+   global $noir_2 body background, where this page's _3 text tone fails AA
+   (3.95:1); _4 clears it at 6.07:1 and hover uses $noir_5 (7.22:1, the
+   documented intro-paragraph pair). .feedSubscribe exists only on
+   tech_takes.html, so nothing leaks to other pages' intros. */
+.feedSubscribe a:link,
+.feedSubscribe a:visited {
+    color: $dark_blue_gray_4;
+    text-decoration: underline;
+}
+.feedSubscribe a:hover,
+.feedSubscribe a:focus,
+.feedSubscribe a:active {
+    color: $noir_5;
 }
 
 /* Reading progress bar — fixed strip at the top of the viewport that

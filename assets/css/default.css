@@ -11,6 +11,9 @@
   background-color: #200b4b;
   width: 80%;
   border-radius: 10px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
@@ -246,6 +249,9 @@ html.js-animations #contactMe > a {
   background-color: #34495E;
   width: 80%;
   border-radius: 10px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
@@ -463,6 +469,9 @@ html.js-animations #contactMe > iframe {
   background-color: #20203c;
   width: 80%;
   border-radius: 10px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
@@ -735,6 +744,21 @@ html.js-animations #contactMe > a {
   color: #c2c2d1;
   font-size: 95%; }
 
+/* Visible Atom subscribe link in the page intro. The intro sits on the
+   global $noir_2 body background, where this page's _3 text tone fails AA
+   (3.95:1); _4 clears it at 6.07:1 and hover uses $noir_5 (7.22:1, the
+   documented intro-paragraph pair). .feedSubscribe exists only on
+   tech_takes.html, so nothing leaks to other pages' intros. */
+.feedSubscribe a:link,
+.feedSubscribe a:visited {
+  color: #c2c2d1;
+  text-decoration: underline; }
+
+.feedSubscribe a:hover,
+.feedSubscribe a:focus,
+.feedSubscribe a:active {
+  color: #d4d4d9; }
+
 /* Reading progress bar — fixed strip at the top of the viewport that
  * fills left-to-right as the reader scrolls down. Injected dynamically
  * by tech_takes_engagement.js. z-index sits above the sticky header
@@ -767,6 +791,9 @@ html.js-animations #contactMe > a {
   background-color: #1f1b79;
   width: 80%;
   border-radius: 10px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
@@ -986,6 +1013,9 @@ html.js-animations #contactMe > a {
   background-color: #2C3E50;
   width: 80%;
   border-radius: 10px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* unvisited link */
   /* visited link */
@@ -1743,7 +1773,10 @@ pre {
 footer {
   width: 100%;
   text-align: center;
-  background-color: #007a5e; }
+  background-color: #007a5e;
+  /* Bottom apron below the last line, replacing the trailing <br> the
+     sub-pages used to carry (index never had one; now all pages match). */
+  padding-bottom: 1em; }
   footer #contactMe {
     font-family: "Courier New", monospace;
     /* unvisited link */

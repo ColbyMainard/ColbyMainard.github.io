@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v39";
+const CACHE_VERSION = "v40";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -12,6 +12,7 @@ const PRECACHE_URLS = [
     "./index.html",
     "./404.html",
     "./llms.txt",
+    "./feed.xml",
     "./manifest.json",
     "./assets/html/hobbies.html",
     "./assets/html/tech_takes.html",

@@ -535,6 +535,9 @@ footer {
     width: 100%;
     text-align: center;
     background-color: $emerald_efficiency_1;
+    /* Bottom apron below the last line, replacing the trailing <br> the
+       sub-pages used to carry (index never had one; now all pages match). */
+    padding-bottom: 1em;
     #contactMe {
         font-family: "Courier New", monospace;
         h1 {
