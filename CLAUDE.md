@@ -16,6 +16,7 @@ Keep content credible, professional, and plain-spoken. Every page must work with
 - When possible, JavaScript and CSS/SCSS implementations should be contained in separate files that can be imported in the head section.
 - Each document should contain a header allowing to navigate to both other sections and other pages on this site. The responsive nav toggle is driven by `navbar.js`, and the header markup is kept consistent across pages.
 - Pages embed `schema.org` structured data as one or more `<script type="application/ld+json">` blocks in the head for SEO; preserve these when editing page content.
+- The Technical Stances page (`tech_takes.html`) links a hand-maintained Atom feed (`feed.xml`) from its head via `<link rel="alternate" type="application/atom+xml">`, with a matching "Subscribe (Atom)" link in the body. No other page has a feed.
 
 ### Sassy CSS
 
@@ -42,13 +43,15 @@ Before finishing any change, verify each point that applies:
 - Edited SCSS → `default.css` recompiled and committed together with the SCSS.
 - Added, renamed, or removed a page or asset → `service-worker.js` `PRECACHE_URLS` updated and `CACHE_VERSION` bumped (assets are served cache-first; without a bump, returning visitors keep stale files).
 - Changed pages or content → `sitemap.xml` and `llms.txt` still accurate.
+- Added or edited a Technical Stances entry → mirror its `datePublished`/`dateModified` into `feed.xml` (as RFC3339 `T00:00:00Z`), reset the feed-level `<updated>` to the newest entry, and bump `CACHE_VERSION`. Entry `<id>` tag URIs are permanent — never change them. The feed's own header comment documents this workflow.
 - JSON-LD structured-data blocks intact on every touched page.
 
 ## Important Notes
 
 - Be mindful of best practices regarding Cross-Origin Request Security policies when creating and organizing new files. The dynamically injected manifest (above) is an example of working around a `file://` CORS restriction.
 - Deployment: `.github/workflows/static.yml` publishes the entire repository to GitHub Pages on every push to `master` (and on manual `workflow_dispatch`). All CSS and JavaScript must work under GitHub's static serving — there is no server-side processing.
-- Non-obvious root-level files: `manifest.json` (PWA manifest), `service-worker.js` (offline cache), `robots.txt`, `sitemap.xml`, `llms.txt` (site summary for LLM crawlers), and `press_mentions.csv` (log of external press mentions/quotes).
+- Non-obvious root-level files: `manifest.json` (PWA manifest), `service-worker.js` (offline cache), `robots.txt`, `sitemap.xml`, `llms.txt` (site summary for LLM crawlers), `feed.xml` (hand-maintained Atom feed for the Technical Stances page), and `press_mentions.csv` (log of external press mentions/quotes).
+- The social share card is `assets/images/sharecard.png` (1200×630); it is referenced by the Open Graph / Twitter / LinkedIn `<meta>` image tags on every page. `assets/images/` also keeps GIMP `.xcf` design sources (`favicon.xcf`, `sharecard.xcf`) alongside the exported PNGs.
 - `assets/js/current_time.js` is legacy: precached by the service worker but referenced by no page. Verify before relying on it.
 
 ## Other Information

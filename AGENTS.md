@@ -19,10 +19,10 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 | `assets/html/` | All non-index pages: `tech_takes.html`, `hobbies.html`, `tech_resources.html`, `guides.html`, `privacy.html`. |
 | `assets/css/` | `default.scss` (single compile entry) + 7 per-page partials; compiled `default.css` (committed); `*.css.map` (gitignored). |
 | `assets/js/` | Shared scripts, per-page `*_animations.js`, and page helpers. All client-side. |
-| `assets/images/` | `favicon.png`, photography (`photographyHobby/`), misc images. |
-| `assets/markdown/` | Dated strategy/audit reports (SEO, accessibility, backlink, content, roadmap) and progress notes. |
+| `assets/images/` | `favicon.png`, `sharecard.png` (1200×630 social/OG card wired into every page's meta tags), photography (`photographyHobby/`), `miscellaneous/`, and GIMP `.xcf` design sources. |
+| `assets/markdown/` | Dated strategy/audit reports (SEO, accessibility, backlink, content, feature recommendations, code review, roadmap) and progress notes. |
 | `assets/other/` | Misc supporting files (e.g. `pgp_email_key.asc`). |
-| Root config | `manifest.json` (PWA), `service-worker.js` (offline precache), `robots.txt`, `sitemap.xml`, `llms.txt` (LLM crawler summary), `press_mentions.csv`. |
+| Root config | `manifest.json` (PWA), `service-worker.js` (offline precache), `robots.txt`, `sitemap.xml`, `llms.txt` (LLM crawler summary), `feed.xml` (hand-maintained Atom feed for the Technical Stances page), `press_mentions.csv`. |
 | `.github/workflows/static.yml` | CI: deploys the **entire repo** to GitHub Pages on every push to `master` (and manual `workflow_dispatch`). |
 
 ## Build & deploy
@@ -73,6 +73,7 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 
 - Each page embeds **`schema.org` JSON-LD** (`<script type="application/ld+json">`) in `<head>` (Person/WebSite/ProfilePage, BreadcrumbList, HowTo, Article, ItemList, etc.). **Preserve these blocks when editing page content;** extend rather than remove.
 - Keep `sitemap.xml`, `robots.txt`, and `llms.txt` accurate when pages or content change.
+- **`feed.xml` is a hand-maintained Atom feed** for the Technical Stances page (`tech_takes.html`), linked from its `<head>` via `<link rel="alternate" type="application/atom+xml">`. When a take is added or edited: mirror its `datePublished`/`dateModified` into the matching feed `<entry>` (RFC3339 `T00:00:00Z`), reset the feed-level `<updated>` to the newest entry, and bump `CACHE_VERSION`. Entry `<id>` tag URIs are permanent — never change them, even if page anchors are renamed (update only the entry `<link href>`). The feed's own header comment restates this workflow.
 
 ### CORS & `file://`
 
@@ -106,6 +107,7 @@ The steps that get missed are the cross-file ones — walk the matching list end
 - JSON-LD blocks on touched pages are intact and still valid.
 - Nothing you added breaks on `file://` (no hardcoded manifest link, no fetches the origin forbids).
 - `sitemap.xml` / `llms.txt` still describe the site accurately if pages or content changed.
+- If you touched a Technical Stances entry, `feed.xml` mirrors its dates and feed-level `<updated>`, and `CACHE_VERSION` is bumped.
 
 ## Hard rules (do not)
 
@@ -118,5 +120,5 @@ The steps that get missed are the cross-file ones — walk the matching list end
 
 ## Where to find things
 
-- Dated audits and strategy docs (accessibility, SEO, backlinks, content, roadmap) live in `assets/markdown/` as `*-YYYY-MM-DD.md`. Check the most recent before re-auditing.
+- Dated audits and strategy docs (accessibility, SEO, backlinks, content, feature recommendations, code review, roadmap) live in `assets/markdown/` as `*-YYYY-MM-DD.md`. Check the most recent before re-auditing.
 - Note: `assets/js/current_time.js` exists and is precached by the service worker but is **not referenced by any page** (legacy/unused) — verify before relying on it.
