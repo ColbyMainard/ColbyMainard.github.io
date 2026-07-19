@@ -581,3 +581,34 @@ footer {
         }
     }
 }
+
+/*
+ * Animation initial state for the footer contact section — identical on every
+ * page, so it lives here instead of being repeated in each per-page partial.
+ * Only applied when JS is active: elements start invisible and the shared
+ * animateContact helper (animation_helpers.js) fades them in. Keep the child
+ * selectors in sync with the section's markup and that helper. Without JS the
+ * .js-animations class is never added and content remains fully visible.
+ */
+html.js-animations {
+    #contactMe {
+        > h2, > p, > a {
+            opacity: 0;
+        }
+    }
+}
+
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+    html.js-animations {
+        #contactMe {
+            > h2, > p, > a {
+                opacity: 1 !important;
+            }
+        }
+    }
+}

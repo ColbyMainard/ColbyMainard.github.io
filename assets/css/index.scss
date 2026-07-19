@@ -164,8 +164,7 @@ html.js-animations {
     #projects,
     #technicalSkills,
     #certifications,
-    #otherSkills,
-    #contactMe {
+    #otherSkills {
         > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
             opacity: 0;
         }
@@ -185,8 +184,7 @@ html.js-animations {
         #projects,
         #technicalSkills,
         #certifications,
-        #otherSkills,
-        #contactMe {
+        #otherSkills {
             > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
                 opacity: 1 !important;
             }

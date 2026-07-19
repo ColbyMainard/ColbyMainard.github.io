@@ -92,13 +92,13 @@ $signal_lost_5: #fdf3e3;
 /*
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
- * (The #introSectionDiv / #contactMe gates duplicate what other per-page
- * partials already emit — the established per-partial convention.)
+ * (The #introSectionDiv gate duplicates what other per-page partials
+ * already emit — the established per-partial convention. The #contactMe
+ * gate is shared and lives in default.scss.)
  */
 html.js-animations {
     #introSectionDiv,
-    #notFound,
-    #contactMe {
+    #notFound {
         > h1, > h2, > h3, > p, > ul, > a {
             opacity: 0;
         }
@@ -119,8 +119,7 @@ html.js-animations {
 @media (prefers-reduced-motion: reduce) {
     html.js-animations {
         #introSectionDiv,
-        #notFound,
-        #contactMe {
+        #notFound {
             > h1, > h2, > h3, > p, > ul, > a {
                 opacity: 1 !important;
             }

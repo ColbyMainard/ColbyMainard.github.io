@@ -154,16 +154,7 @@ html.js-animations #otherSkills > p,
 html.js-animations #otherSkills > ul,
 html.js-animations #otherSkills > svg,
 html.js-animations #otherSkills > table,
-html.js-animations #otherSkills > a,
-html.js-animations #contactMe > h1,
-html.js-animations #contactMe > h2,
-html.js-animations #contactMe > h3,
-html.js-animations #contactMe > h4,
-html.js-animations #contactMe > p,
-html.js-animations #contactMe > ul,
-html.js-animations #contactMe > svg,
-html.js-animations #contactMe > table,
-html.js-animations #contactMe > a {
+html.js-animations #otherSkills > a {
   opacity: 0; }
 
 /*
@@ -226,16 +217,7 @@ html.js-animations #contactMe > a {
   html.js-animations #otherSkills > ul,
   html.js-animations #otherSkills > svg,
   html.js-animations #otherSkills > table,
-  html.js-animations #otherSkills > a,
-  html.js-animations #contactMe > h1,
-  html.js-animations #contactMe > h2,
-  html.js-animations #contactMe > h3,
-  html.js-animations #contactMe > h4,
-  html.js-animations #contactMe > p,
-  html.js-animations #contactMe > ul,
-  html.js-animations #contactMe > svg,
-  html.js-animations #contactMe > table,
-  html.js-animations #contactMe > a {
+  html.js-animations #otherSkills > a {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette
@@ -380,18 +362,7 @@ html.js-animations #history > img,
 html.js-animations #history > table,
 html.js-animations #history > blockquote,
 html.js-animations #history > a,
-html.js-animations #history > iframe,
-html.js-animations #contactMe > h1,
-html.js-animations #contactMe > h2,
-html.js-animations #contactMe > h3,
-html.js-animations #contactMe > p,
-html.js-animations #contactMe > ul,
-html.js-animations #contactMe > svg,
-html.js-animations #contactMe > img,
-html.js-animations #contactMe > table,
-html.js-animations #contactMe > blockquote,
-html.js-animations #contactMe > a,
-html.js-animations #contactMe > iframe {
+html.js-animations #history > iframe {
   opacity: 0; }
 
 /*
@@ -444,18 +415,7 @@ html.js-animations #contactMe > iframe {
   html.js-animations #history > table,
   html.js-animations #history > blockquote,
   html.js-animations #history > a,
-  html.js-animations #history > iframe,
-  html.js-animations #contactMe > h1,
-  html.js-animations #contactMe > h2,
-  html.js-animations #contactMe > h3,
-  html.js-animations #contactMe > p,
-  html.js-animations #contactMe > ul,
-  html.js-animations #contactMe > svg,
-  html.js-animations #contactMe > img,
-  html.js-animations #contactMe > table,
-  html.js-animations #contactMe > blockquote,
-  html.js-animations #contactMe > a,
-  html.js-animations #contactMe > iframe {
+  html.js-animations #history > iframe {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
@@ -655,16 +615,7 @@ html.js-animations #ProductPlacement > p,
 html.js-animations #ProductPlacement > ul,
 html.js-animations #ProductPlacement > dl,
 html.js-animations #ProductPlacement > table,
-html.js-animations #ProductPlacement > a,
-html.js-animations #contactMe > h1,
-html.js-animations #contactMe > h2,
-html.js-animations #contactMe > h3,
-html.js-animations #contactMe > h4,
-html.js-animations #contactMe > p,
-html.js-animations #contactMe > ul,
-html.js-animations #contactMe > dl,
-html.js-animations #contactMe > table,
-html.js-animations #contactMe > a {
+html.js-animations #ProductPlacement > a {
   opacity: 0; }
 
 /*
@@ -727,16 +678,7 @@ html.js-animations #contactMe > a {
   html.js-animations #ProductPlacement > ul,
   html.js-animations #ProductPlacement > dl,
   html.js-animations #ProductPlacement > table,
-  html.js-animations #ProductPlacement > a,
-  html.js-animations #contactMe > h1,
-  html.js-animations #contactMe > h2,
-  html.js-animations #contactMe > h3,
-  html.js-animations #contactMe > h4,
-  html.js-animations #contactMe > p,
-  html.js-animations #contactMe > ul,
-  html.js-animations #contactMe > dl,
-  html.js-animations #contactMe > table,
-  html.js-animations #contactMe > a {
+  html.js-animations #ProductPlacement > a {
     opacity: 1 !important; } }
 /* Reading-time pill rendered next to "Last Updated:" */
 .readingTime {
@@ -922,16 +864,7 @@ html.js-animations #operatingSystemsResources > ul,
 html.js-animations #operatingSystemsResources > svg,
 html.js-animations #operatingSystemsResources > table,
 html.js-animations #operatingSystemsResources > blockquote,
-html.js-animations #operatingSystemsResources > a,
-html.js-animations #contactMe > h1,
-html.js-animations #contactMe > h2,
-html.js-animations #contactMe > h3,
-html.js-animations #contactMe > p,
-html.js-animations #contactMe > ul,
-html.js-animations #contactMe > svg,
-html.js-animations #contactMe > table,
-html.js-animations #contactMe > blockquote,
-html.js-animations #contactMe > a {
+html.js-animations #operatingSystemsResources > a {
   opacity: 0; }
 
 /*
@@ -994,16 +927,7 @@ html.js-animations #contactMe > a {
   html.js-animations #operatingSystemsResources > svg,
   html.js-animations #operatingSystemsResources > table,
   html.js-animations #operatingSystemsResources > blockquote,
-  html.js-animations #operatingSystemsResources > a,
-  html.js-animations #contactMe > h1,
-  html.js-animations #contactMe > h2,
-  html.js-animations #contactMe > h3,
-  html.js-animations #contactMe > p,
-  html.js-animations #contactMe > ul,
-  html.js-animations #contactMe > svg,
-  html.js-animations #contactMe > table,
-  html.js-animations #contactMe > blockquote,
-  html.js-animations #contactMe > a {
+  html.js-animations #operatingSystemsResources > a {
     opacity: 1 !important; } }
 /* _3 tuned brighter than the source #16A085 (3.35:1, failed WCAG AA) so body
    text and links clear AA at 5.22:1 on the _1 bg — important for this
@@ -1204,15 +1128,7 @@ html.js-animations #cybersecurityGuide > h4,
 html.js-animations #cybersecurityGuide > p,
 html.js-animations #cybersecurityGuide > ul,
 html.js-animations #cybersecurityGuide > blockquote,
-html.js-animations #cybersecurityGuide > a,
-html.js-animations #contactMe > h1,
-html.js-animations #contactMe > h2,
-html.js-animations #contactMe > h3,
-html.js-animations #contactMe > h4,
-html.js-animations #contactMe > p,
-html.js-animations #contactMe > ul,
-html.js-animations #contactMe > blockquote,
-html.js-animations #contactMe > a {
+html.js-animations #cybersecurityGuide > a {
   opacity: 0; }
 
 /*
@@ -1277,15 +1193,7 @@ html.js-animations #contactMe > a {
   html.js-animations #cybersecurityGuide > p,
   html.js-animations #cybersecurityGuide > ul,
   html.js-animations #cybersecurityGuide > blockquote,
-  html.js-animations #cybersecurityGuide > a,
-  html.js-animations #contactMe > h1,
-  html.js-animations #contactMe > h2,
-  html.js-animations #contactMe > h3,
-  html.js-animations #contactMe > h4,
-  html.js-animations #contactMe > p,
-  html.js-animations #contactMe > ul,
-  html.js-animations #contactMe > blockquote,
-  html.js-animations #contactMe > a {
+  html.js-animations #cybersecurityGuide > a {
     opacity: 1 !important; } }
 /* Signal Lost color palette — original warm-ember ramp for the 404 error page.
    Contrast on the _1 background: _3 body text 8.1:1, _4 links 10.2:1, _5
@@ -1358,8 +1266,9 @@ html.js-animations #contactMe > a {
 /*
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
- * (The #introSectionDiv / #contactMe gates duplicate what other per-page
- * partials already emit — the established per-partial convention.)
+ * (The #introSectionDiv gate duplicates what other per-page partials
+ * already emit — the established per-partial convention. The #contactMe
+ * gate is shared and lives in default.scss.)
  */
 html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > a,
 html.js-animations #notFound > h1,
@@ -1367,13 +1276,7 @@ html.js-animations #notFound > h2,
 html.js-animations #notFound > h3,
 html.js-animations #notFound > p,
 html.js-animations #notFound > ul,
-html.js-animations #notFound > a,
-html.js-animations #contactMe > h1,
-html.js-animations #contactMe > h2,
-html.js-animations #contactMe > h3,
-html.js-animations #contactMe > p,
-html.js-animations #contactMe > ul,
-html.js-animations #contactMe > a {
+html.js-animations #notFound > a {
   opacity: 0; }
 html.js-animations #helpfulLinks {
   /* li (not > ul) so the page links can stagger in individually */ }
@@ -1392,13 +1295,7 @@ html.js-animations #helpfulLinks {
   html.js-animations #notFound > h3,
   html.js-animations #notFound > p,
   html.js-animations #notFound > ul,
-  html.js-animations #notFound > a,
-  html.js-animations #contactMe > h1,
-  html.js-animations #contactMe > h2,
-  html.js-animations #contactMe > h3,
-  html.js-animations #contactMe > p,
-  html.js-animations #contactMe > ul,
-  html.js-animations #contactMe > a {
+  html.js-animations #notFound > a {
     opacity: 1 !important; }
   html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, html.js-animations #helpfulLinks li {
     opacity: 1 !important; } }
@@ -1810,3 +1707,23 @@ footer {
     footer #contactMe p {
       color: #e0f7fa;
       font-size: 100%; }
+
+/*
+ * Animation initial state for the footer contact section — identical on every
+ * page, so it lives here instead of being repeated in each per-page partial.
+ * Only applied when JS is active: elements start invisible and the shared
+ * animateContact helper (animation_helpers.js) fades them in. Keep the child
+ * selectors in sync with the section's markup and that helper. Without JS the
+ * .js-animations class is never added and content remains fully visible.
+ */
+html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+  opacity: 0; }
+
+/*
+ * Reduced-motion safety net: if .js-animations is ever present while the user
+ * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
+ * the gated elements so content is never trapped at opacity: 0.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+    opacity: 1 !important; } }
