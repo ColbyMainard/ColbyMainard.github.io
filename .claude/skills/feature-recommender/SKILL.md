@@ -5,7 +5,7 @@ description: |
   Triggers on: feature recommendation, feature suggestion
   Use when brainstorming new site features or deciding what to build next. Trigger with phrases like "feature recommendation", and "feature suggestion".
 allowed-tools: "Read, Glob, Write"
-version: 1.3.0
+version: 1.4.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -62,7 +62,7 @@ Work from what the site actually has, not from assumptions.
 1. **Read every page** in the table above. Note each page's structure, content types, internal links, and calls to action.
 2. **Read each page's `<head>` and script list.** The loaded scripts reveal the features already built: cookie consent, responsive navbar, back-to-top button, service-worker registration (offline/PWA), per-page animations, and page-specific helpers such as the tech-takes reading-time script.
 3. **Check the root files** — `manifest.json`, `service-worker.js`, `sitemap.xml`, `robots.txt`, `llms.txt` — so you know which platform features (PWA install, offline cache, SEO plumbing) already exist.
-4. **Skim recent reports** in `assets/markdown/` (dated `*-YYYY-MM-DD.md`) so you do not re-recommend what other audits already cover.
+4. **Skim recent reports** in `assets/markdown/` (dated `*-YYYY-MM-DD.md`) so you do not re-recommend what other audits already cover. This skill's own past reports are the one exception: a still-unbuilt recommendation that is still a genuine gap may be repeated — note that it is a repeat.
 
 ## Feature areas to consider
 
@@ -76,6 +76,15 @@ Distilled from the sources at the bottom and adapted from blog-oriented advice t
 - **Media and visual engagement** — featured images for takes and guides, richer gallery treatment for the photography, multimedia only where it genuinely supports the content.
 - **Personal touch and communication** — headline quality, about/contact affordances, and a consistent personal voice; the site should read as one person communicating, not a brochure.
 - **Insight** — consent-gated analytics the maintainer can actually act on.
+
+## Maintainer-suggested candidates
+
+The maintainer has flagged these ideas for consideration. They are candidates, not pre-approved recommendations: evaluate each against the inventory, the restrictions, and the rating scale exactly as you would a gap you found yourself, and account for every one in the report — as a numbered recommendation or under **Not recommended** with the reason (already exists, out of scope, belongs to a sibling skill, poor impact for the effort).
+
+- **Easter eggs** — one or more hidden touches that reward visitors who spend time exploring the site.
+- **Citation guidance** — if the site publishes academic work, a section showing readers how to cite it.
+- **Abbreviation markup** — `<abbr>` elements expanding abbreviations where relevant.
+- **A `now` page** — a plain, conversational answer to "What are you doing right now?": a line on current work or the main project, what the maintainer is learning or reading, a location note, personal goals in progress, what has been deprioritized, and a last-updated date. It only signals freshness if refreshed at least monthly — count that upkeep toward Effort.
 
 ## Rating scale
 
@@ -102,7 +111,7 @@ Ongoing upkeep counts toward Effort. A feature that needs the maintainer to hand
 ## Process
 
 1. Complete the inventory (Inputs above) and list the features the site already has.
-2. Compare that inventory against the feature areas to find genuine gaps. Discard any gap that belongs to a sibling skill (see Scope).
+2. Compare that inventory against the feature areas and the maintainer-suggested candidates to find genuine gaps. Discard any gap that belongs to a sibling skill (see Scope).
 3. For each gap worth filling, draft a recommendation: what the feature is, where it lives, who it serves, and a two- to three-sentence sketch of how to build it statically.
 4. Rate each recommendation Impact and Effort against the Rating scale above.
 5. Sort by **impact descending, breaking ties by effort ascending** — so the first row is always the highest-impact, lowest-effort item. Do not reorder to promote a favored idea.
@@ -122,7 +131,7 @@ The report must contain, in order:
 
    The Impact/Effort columns use the Rating scale above, which matches the roadmap-generator's action table so the reports merge cleanly.
 4. **Recommendation details** — one short subsection per numbered row, in the same order. Each gives the two- to three-sentence sketch of how to build it statically, names any prerequisite recommendation or existing feature it depends on, and states its cost honestly (new dependency, service-worker bump, ongoing upkeep).
-5. **Not recommended** — anything considered but rejected (already exists, needs a server, adds a heavy dependency, belongs to a sibling skill), with a one-line reason each.
+5. **Not recommended** — anything considered but rejected (already exists, needs a server, adds a heavy dependency, belongs to a sibling skill), with a one-line reason each. Any maintainer-suggested candidate that did not become a recommendation must appear here.
 
 ## Tone
 
@@ -132,3 +141,5 @@ Constructive and concrete. Every recommendation names its audience benefit and i
 
 - [21 Essential Blog Features for a Widely Successful Blog (feather.so)](https://feather.so/blog/blog-features#21-essential-blog-features-for-a-widely-successful-blog)
 - [Characteristics of a Blog (firstsiteguide.com)](https://firstsiteguide.com/characteristics-of-blog/)
+- [100 things you can do on your personal website](https://jamesg.blog/2024/02/19/personal-website-ideas)
+- [100 (more) things you can do with your personal website](https://jamesg.blog/2024/03/10/100-more-personal-website-ideas)
