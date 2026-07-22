@@ -37,6 +37,22 @@ $emerald_efficiency_5: #e0f7fa;
     }
 }
 
+/* Keep anchored and keyboard-focused targets clear of the sticky header
+   (WCAG 2.4.11). scroll-padding-top on the scroll container offsets both
+   fragment-jump navigation and focus scrolling, so scroll-margin-top on the
+   targets is intentionally omitted (it would stack and double the gap). The
+   value approximates the header height: ~2 stacked nav rows on desktop, a
+   single collapsed row on mobile. Verify if the nav layout changes. */
+html {
+    scroll-padding-top: 8rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 3.5rem;
+    }
+}
+
 /* Visually-hidden utility: keeps content available to screen readers while
    removing it from the visual layout. Used for accessible table <caption>s. */
 .visually-hidden {
@@ -49,6 +65,15 @@ $emerald_efficiency_5: #e0f7fa;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Horizontal-scroll container for wide data tables. The table scrolls inside
+   this box instead of widening the page on narrow viewports (WCAG 1.4.10). A
+   wrapper is used rather than `display: block` on the <table> itself, which
+   would strip the table's semantics and its scope-ed row/column headers. */
+.tableScroll {
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 /* <main> is focused programmatically by the skip link; don't paint a ring. */
@@ -273,6 +298,16 @@ body {
         border: 2px solid $noir_1;
         border-radius: 1%;
     }
+}
+
+/* Keyboard focus ring for in-content links. The section partials set link
+   colors; this gives every in-prose link a visible focus indicator over the
+   varied section backgrounds. currentColor tracks the link color, which each
+   partial keeps at AA (>=4.5:1), so the ring clears the 3:1 non-text minimum. */
+main a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .floatingBackToTop {

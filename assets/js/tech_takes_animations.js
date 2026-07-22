@@ -96,7 +96,7 @@
             duration: 600,
             delay: anime.stagger(100)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 500,
@@ -122,7 +122,7 @@
             duration: 700,
             delay: anime.stagger(100)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, ul, .tableScroll, a"), {
             opacity: [0, 1],
             scale: [1.03, 1],
             translateY: ["15px", "0px"],
@@ -204,7 +204,7 @@
             duration: 650,
             delay: anime.stagger(90)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, dl, table, a"), {
+        addStep(tl, directChildren(el, "p, ul, dl, .tableScroll, a"), {
             opacity: [0, 1],
             scale: [1.05, 1],
             translateY: ["20px", "0px"],

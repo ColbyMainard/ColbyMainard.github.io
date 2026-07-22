@@ -70,7 +70,7 @@
             duration: 700,
             delay: anime.stagger(100)
         }, ">-200");
-        addStep(tl, directChildren(el, "h4, p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "h4, p, blockquote, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateX: ["-20px", "4px", "0px"],
             duration: 500,
@@ -103,7 +103,7 @@
             duration: 600,
             delay: anime.stagger(100)
         }, ">-300");
-        addStep(tl, directChildren(el, "p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
             opacity: [0, 1],
             scale: [0.9, 1],
             translateY: ["20px", "0px"],
@@ -135,7 +135,7 @@
             duration: 500,
             delay: anime.stagger(80)
         }, ">-200");
-        addStep(tl, directChildren(el, "p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateX: ["-30px", "0px"],
             duration: 500,
@@ -166,7 +166,7 @@
             duration: 500,
             delay: anime.stagger(80)
         }, ">-200");
-        addStep(tl, directChildren(el, "p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateX: ["30px", "0px"],
             duration: 500,
@@ -197,7 +197,7 @@
             duration: 500,
             delay: anime.stagger(100)
         }, ">-200");
-        addStep(tl, directChildren(el, "p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateY: ["25px", "0px"],
             duration: 500,
@@ -229,7 +229,7 @@
             duration: 600,
             delay: anime.stagger(100)
         }, ">-200");
-        addStep(tl, directChildren(el, "p, blockquote, ul, table, a"), {
+        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateY: ["-20px", "0px"],
             duration: 500,

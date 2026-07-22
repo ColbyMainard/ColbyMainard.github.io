@@ -62,29 +62,22 @@ $calm_authority_5: #E7EAEC;
         color: $calm_authority_2;
         font-size: 100%;
     }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* visited link */
+    /* In-prose links: _4 (6.57:1) is brighter than the _2 body text, underlined
+       so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
+       (7.69:1). */
+    a:link,
     a:visited {
         text-align: left;
-        color: $calm_authority_2;
+        color: $calm_authority_4;
         font-size: 100%;
+        text-decoration: underline;
     }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
-    /* selected link */
+    a:hover,
     a:active {
         text-align: left;
-        color: $calm_authority_2;
+        color: $calm_authority_5;
         font-size: 100%;
+        text-decoration: underline;
     }
     ul {
         text-align: left;
@@ -105,7 +98,16 @@ $calm_authority_5: #E7EAEC;
     }
 }
 
-#photography { @extend %hobbySection; }
+#photography {
+    @extend %hobbySection;
+    /* Vertical rhythm between the landscape shots, replacing the layout-only
+       <br> spacers the markup used to carry. Horizontal centering still comes
+       from the global `body img` rule. */
+    img {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}
 #dungeonsAndDragons { @extend %hobbySection; }
 
 #history {
@@ -160,7 +162,7 @@ html.js-animations {
     #photography,
     #dungeonsAndDragons,
     #history {
-        > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > iframe {
+        > h1, > h2, > h3, > p, > ul, > svg, > img, > .tableScroll, > blockquote, > a, > iframe {
             opacity: 0;
         }
     }
@@ -178,7 +180,7 @@ html.js-animations {
         #photography,
         #dungeonsAndDragons,
         #history {
-            > h1, > h2, > h3, > p, > ul, > svg, > img, > table, > blockquote, > a, > iframe {
+            > h1, > h2, > h3, > p, > ul, > svg, > img, > .tableScroll, > blockquote, > a, > iframe {
                 opacity: 1 !important;
             }
         }

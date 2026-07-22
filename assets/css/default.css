@@ -15,10 +15,9 @@
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
+  /* In-prose links: _1 (#ff3d94, 5.24:1 on _5) sits a step brighter than the
+     _2 body text (4.89:1), plus an underline so links never rely on color
+     alone (WCAG 1.4.1). _1 tops this ramp, so hover thickens the underline. */ }
   #workHistory h1, #education h1, #projects h1, #technicalSkills h1, #otherSkills h1, #certifications h1 {
     text-align: left;
     color: #ff3d94;
@@ -39,22 +38,29 @@
     text-align: left;
     color: #e64d9e;
     font-size: 100%; }
-  #workHistory a:link, #education a:link, #projects a:link, #technicalSkills a:link, #otherSkills a:link, #certifications a:link {
+  #workHistory a:link, #education a:link, #projects a:link, #technicalSkills a:link, #otherSkills a:link, #certifications a:link,
+  #workHistory a:visited,
+  #education a:visited,
+  #projects a:visited,
+  #technicalSkills a:visited,
+  #otherSkills a:visited,
+  #certifications a:visited {
     text-align: left;
-    color: #e64d9e;
-    font-size: 100%; }
-  #workHistory a:visited, #education a:visited, #projects a:visited, #technicalSkills a:visited, #otherSkills a:visited, #certifications a:visited {
+    color: #ff3d94;
+    font-size: 100%;
+    text-decoration: underline; }
+  #workHistory a:hover, #education a:hover, #projects a:hover, #technicalSkills a:hover, #otherSkills a:hover, #certifications a:hover,
+  #workHistory a:active,
+  #education a:active,
+  #projects a:active,
+  #technicalSkills a:active,
+  #otherSkills a:active,
+  #certifications a:active {
     text-align: left;
-    color: #e64d9e;
-    font-size: 100%; }
-  #workHistory a:hover, #education a:hover, #projects a:hover, #technicalSkills a:hover, #otherSkills a:hover, #certifications a:hover {
-    text-align: left;
-    color: #e64d9e;
-    font-size: 100%; }
-  #workHistory a:active, #education a:active, #projects a:active, #technicalSkills a:active, #otherSkills a:active, #certifications a:active {
-    text-align: left;
-    color: #e64d9e;
-    font-size: 100%; }
+    color: #ff3d94;
+    font-size: 100%;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; }
   #workHistory ul, #education ul, #projects ul, #technicalSkills ul, #otherSkills ul, #certifications ul {
     text-align: left; }
     #workHistory ul li, #education ul li, #projects ul li, #technicalSkills ul li, #otherSkills ul li, #certifications ul li {
@@ -100,7 +106,7 @@
  * Without JS, the .js-animations class is never added and
  * content remains fully visible.
  */
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a,
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a,
 html.js-animations #workHistory > h1,
 html.js-animations #workHistory > h2,
 html.js-animations #workHistory > h3,
@@ -108,7 +114,7 @@ html.js-animations #workHistory > h4,
 html.js-animations #workHistory > p,
 html.js-animations #workHistory > ul,
 html.js-animations #workHistory > svg,
-html.js-animations #workHistory > table,
+html.js-animations #workHistory > .tableScroll,
 html.js-animations #workHistory > a,
 html.js-animations #education > h1,
 html.js-animations #education > h2,
@@ -117,7 +123,7 @@ html.js-animations #education > h4,
 html.js-animations #education > p,
 html.js-animations #education > ul,
 html.js-animations #education > svg,
-html.js-animations #education > table,
+html.js-animations #education > .tableScroll,
 html.js-animations #education > a,
 html.js-animations #projects > h1,
 html.js-animations #projects > h2,
@@ -126,7 +132,7 @@ html.js-animations #projects > h4,
 html.js-animations #projects > p,
 html.js-animations #projects > ul,
 html.js-animations #projects > svg,
-html.js-animations #projects > table,
+html.js-animations #projects > .tableScroll,
 html.js-animations #projects > a,
 html.js-animations #technicalSkills > h1,
 html.js-animations #technicalSkills > h2,
@@ -135,7 +141,7 @@ html.js-animations #technicalSkills > h4,
 html.js-animations #technicalSkills > p,
 html.js-animations #technicalSkills > ul,
 html.js-animations #technicalSkills > svg,
-html.js-animations #technicalSkills > table,
+html.js-animations #technicalSkills > .tableScroll,
 html.js-animations #technicalSkills > a,
 html.js-animations #certifications > h1,
 html.js-animations #certifications > h2,
@@ -144,7 +150,7 @@ html.js-animations #certifications > h4,
 html.js-animations #certifications > p,
 html.js-animations #certifications > ul,
 html.js-animations #certifications > svg,
-html.js-animations #certifications > table,
+html.js-animations #certifications > .tableScroll,
 html.js-animations #certifications > a,
 html.js-animations #otherSkills > h1,
 html.js-animations #otherSkills > h2,
@@ -153,7 +159,7 @@ html.js-animations #otherSkills > h4,
 html.js-animations #otherSkills > p,
 html.js-animations #otherSkills > ul,
 html.js-animations #otherSkills > svg,
-html.js-animations #otherSkills > table,
+html.js-animations #otherSkills > .tableScroll,
 html.js-animations #otherSkills > a {
   opacity: 0; }
 
@@ -163,7 +169,7 @@ html.js-animations #otherSkills > a {
  * the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a,
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a,
   html.js-animations #workHistory > h1,
   html.js-animations #workHistory > h2,
   html.js-animations #workHistory > h3,
@@ -171,7 +177,7 @@ html.js-animations #otherSkills > a {
   html.js-animations #workHistory > p,
   html.js-animations #workHistory > ul,
   html.js-animations #workHistory > svg,
-  html.js-animations #workHistory > table,
+  html.js-animations #workHistory > .tableScroll,
   html.js-animations #workHistory > a,
   html.js-animations #education > h1,
   html.js-animations #education > h2,
@@ -180,7 +186,7 @@ html.js-animations #otherSkills > a {
   html.js-animations #education > p,
   html.js-animations #education > ul,
   html.js-animations #education > svg,
-  html.js-animations #education > table,
+  html.js-animations #education > .tableScroll,
   html.js-animations #education > a,
   html.js-animations #projects > h1,
   html.js-animations #projects > h2,
@@ -189,7 +195,7 @@ html.js-animations #otherSkills > a {
   html.js-animations #projects > p,
   html.js-animations #projects > ul,
   html.js-animations #projects > svg,
-  html.js-animations #projects > table,
+  html.js-animations #projects > .tableScroll,
   html.js-animations #projects > a,
   html.js-animations #technicalSkills > h1,
   html.js-animations #technicalSkills > h2,
@@ -198,7 +204,7 @@ html.js-animations #otherSkills > a {
   html.js-animations #technicalSkills > p,
   html.js-animations #technicalSkills > ul,
   html.js-animations #technicalSkills > svg,
-  html.js-animations #technicalSkills > table,
+  html.js-animations #technicalSkills > .tableScroll,
   html.js-animations #technicalSkills > a,
   html.js-animations #certifications > h1,
   html.js-animations #certifications > h2,
@@ -207,7 +213,7 @@ html.js-animations #otherSkills > a {
   html.js-animations #certifications > p,
   html.js-animations #certifications > ul,
   html.js-animations #certifications > svg,
-  html.js-animations #certifications > table,
+  html.js-animations #certifications > .tableScroll,
   html.js-animations #certifications > a,
   html.js-animations #otherSkills > h1,
   html.js-animations #otherSkills > h2,
@@ -216,7 +222,7 @@ html.js-animations #otherSkills > a {
   html.js-animations #otherSkills > p,
   html.js-animations #otherSkills > ul,
   html.js-animations #otherSkills > svg,
-  html.js-animations #otherSkills > table,
+  html.js-animations #otherSkills > .tableScroll,
   html.js-animations #otherSkills > a {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
@@ -235,10 +241,9 @@ html.js-animations #otherSkills > a {
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
+  /* In-prose links: _4 (6.57:1) is brighter than the _2 body text, underlined
+     so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
+     (7.69:1). */ }
   #quantumComputing h1, #photography h1, #dungeonsAndDragons h1, #history h1 {
     text-align: left;
     color: #E7EAEC;
@@ -255,22 +260,24 @@ html.js-animations #otherSkills > a {
     text-align: left;
     color: #B8C2C9;
     font-size: 100%; }
-  #quantumComputing a:link, #photography a:link, #dungeonsAndDragons a:link, #history a:link {
+  #quantumComputing a:link, #photography a:link, #dungeonsAndDragons a:link, #history a:link,
+  #quantumComputing a:visited,
+  #photography a:visited,
+  #dungeonsAndDragons a:visited,
+  #history a:visited {
     text-align: left;
-    color: #B8C2C9;
-    font-size: 100%; }
-  #quantumComputing a:visited, #photography a:visited, #dungeonsAndDragons a:visited, #history a:visited {
+    color: #D3DADE;
+    font-size: 100%;
+    text-decoration: underline; }
+  #quantumComputing a:hover, #photography a:hover, #dungeonsAndDragons a:hover, #history a:hover,
+  #quantumComputing a:active,
+  #photography a:active,
+  #dungeonsAndDragons a:active,
+  #history a:active {
     text-align: left;
-    color: #B8C2C9;
-    font-size: 100%; }
-  #quantumComputing a:hover, #photography a:hover, #dungeonsAndDragons a:hover, #history a:hover {
-    text-align: left;
-    color: #B8C2C9;
-    font-size: 100%; }
-  #quantumComputing a:active, #photography a:active, #dungeonsAndDragons a:active, #history a:active {
-    text-align: left;
-    color: #B8C2C9;
-    font-size: 100%; }
+    color: #E7EAEC;
+    font-size: 100%;
+    text-decoration: underline; }
   #quantumComputing ul, #photography ul, #dungeonsAndDragons ul, #history ul {
     text-align: left; }
     #quantumComputing ul li, #photography ul li, #dungeonsAndDragons ul li, #history ul li {
@@ -282,6 +289,14 @@ html.js-animations #otherSkills > a {
   max-width: 100%;
   aspect-ratio: 16 / 9;
   height: auto; }
+
+#photography {
+  /* Vertical rhythm between the landscape shots, replacing the layout-only
+     <br> spacers the markup used to carry. Horizontal centering still comes
+     from the global `body img` rule. */ }
+  #photography img {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; }
 
 #history blockquote {
   text-align: left;
@@ -318,7 +333,7 @@ html.js-animations #otherSkills > a {
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
  */
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe,
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe,
 html.js-animations #quantumComputing > h1,
 html.js-animations #quantumComputing > h2,
 html.js-animations #quantumComputing > h3,
@@ -326,7 +341,7 @@ html.js-animations #quantumComputing > p,
 html.js-animations #quantumComputing > ul,
 html.js-animations #quantumComputing > svg,
 html.js-animations #quantumComputing > img,
-html.js-animations #quantumComputing > table,
+html.js-animations #quantumComputing > .tableScroll,
 html.js-animations #quantumComputing > blockquote,
 html.js-animations #quantumComputing > a,
 html.js-animations #quantumComputing > iframe,
@@ -337,7 +352,7 @@ html.js-animations #photography > p,
 html.js-animations #photography > ul,
 html.js-animations #photography > svg,
 html.js-animations #photography > img,
-html.js-animations #photography > table,
+html.js-animations #photography > .tableScroll,
 html.js-animations #photography > blockquote,
 html.js-animations #photography > a,
 html.js-animations #photography > iframe,
@@ -348,7 +363,7 @@ html.js-animations #dungeonsAndDragons > p,
 html.js-animations #dungeonsAndDragons > ul,
 html.js-animations #dungeonsAndDragons > svg,
 html.js-animations #dungeonsAndDragons > img,
-html.js-animations #dungeonsAndDragons > table,
+html.js-animations #dungeonsAndDragons > .tableScroll,
 html.js-animations #dungeonsAndDragons > blockquote,
 html.js-animations #dungeonsAndDragons > a,
 html.js-animations #dungeonsAndDragons > iframe,
@@ -359,7 +374,7 @@ html.js-animations #history > p,
 html.js-animations #history > ul,
 html.js-animations #history > svg,
 html.js-animations #history > img,
-html.js-animations #history > table,
+html.js-animations #history > .tableScroll,
 html.js-animations #history > blockquote,
 html.js-animations #history > a,
 html.js-animations #history > iframe {
@@ -371,7 +386,7 @@ html.js-animations #history > iframe {
  * the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe,
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe,
   html.js-animations #quantumComputing > h1,
   html.js-animations #quantumComputing > h2,
   html.js-animations #quantumComputing > h3,
@@ -379,7 +394,7 @@ html.js-animations #history > iframe {
   html.js-animations #quantumComputing > ul,
   html.js-animations #quantumComputing > svg,
   html.js-animations #quantumComputing > img,
-  html.js-animations #quantumComputing > table,
+  html.js-animations #quantumComputing > .tableScroll,
   html.js-animations #quantumComputing > blockquote,
   html.js-animations #quantumComputing > a,
   html.js-animations #quantumComputing > iframe,
@@ -390,7 +405,7 @@ html.js-animations #history > iframe {
   html.js-animations #photography > ul,
   html.js-animations #photography > svg,
   html.js-animations #photography > img,
-  html.js-animations #photography > table,
+  html.js-animations #photography > .tableScroll,
   html.js-animations #photography > blockquote,
   html.js-animations #photography > a,
   html.js-animations #photography > iframe,
@@ -401,7 +416,7 @@ html.js-animations #history > iframe {
   html.js-animations #dungeonsAndDragons > ul,
   html.js-animations #dungeonsAndDragons > svg,
   html.js-animations #dungeonsAndDragons > img,
-  html.js-animations #dungeonsAndDragons > table,
+  html.js-animations #dungeonsAndDragons > .tableScroll,
   html.js-animations #dungeonsAndDragons > blockquote,
   html.js-animations #dungeonsAndDragons > a,
   html.js-animations #dungeonsAndDragons > iframe,
@@ -412,7 +427,7 @@ html.js-animations #history > iframe {
   html.js-animations #history > ul,
   html.js-animations #history > svg,
   html.js-animations #history > img,
-  html.js-animations #history > table,
+  html.js-animations #history > .tableScroll,
   html.js-animations #history > blockquote,
   html.js-animations #history > a,
   html.js-animations #history > iframe {
@@ -433,10 +448,9 @@ html.js-animations #history > iframe {
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
+  /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined
+     so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp
+     (_5 is the red heading accent), so hover thickens the underline. */ }
   #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1 {
     text-align: left;
     font-size: 500%;
@@ -453,22 +467,29 @@ html.js-animations #history > iframe {
     text-align: left;
     font-size: 175%;
     color: #9a9ac2; }
-  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link {
+  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link,
+  #KAN a:visited,
+  #Cryptocurrency a:visited,
+  #FutureOfQuantum a:visited,
+  #AGI a:visited,
+  #Privacy a:visited,
+  #ProductPlacement a:visited {
     text-align: left;
     font-size: 100%;
-    color: #9a9ac2; }
-  #KAN a:visited, #Cryptocurrency a:visited, #FutureOfQuantum a:visited, #AGI a:visited, #Privacy a:visited, #ProductPlacement a:visited {
+    color: #c2c2d1;
+    text-decoration: underline; }
+  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover,
+  #KAN a:active,
+  #Cryptocurrency a:active,
+  #FutureOfQuantum a:active,
+  #AGI a:active,
+  #Privacy a:active,
+  #ProductPlacement a:active {
     text-align: left;
     font-size: 100%;
-    color: #9a9ac2; }
-  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover {
-    text-align: left;
-    font-size: 100%;
-    color: #9a9ac2; }
-  #KAN a:active, #Cryptocurrency a:active, #FutureOfQuantum a:active, #AGI a:active, #Privacy a:active, #ProductPlacement a:active {
-    text-align: left;
-    font-size: 100%;
-    color: #9a9ac2; }
+    color: #c2c2d1;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; }
   #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p {
     text-align: left;
     font-size: 100%;
@@ -561,7 +582,7 @@ html.js-animations #history > iframe {
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
  */
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a,
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a,
 html.js-animations #KAN > h1,
 html.js-animations #KAN > h2,
 html.js-animations #KAN > h3,
@@ -569,7 +590,7 @@ html.js-animations #KAN > h4,
 html.js-animations #KAN > p,
 html.js-animations #KAN > ul,
 html.js-animations #KAN > dl,
-html.js-animations #KAN > table,
+html.js-animations #KAN > .tableScroll,
 html.js-animations #KAN > a,
 html.js-animations #Cryptocurrency > h1,
 html.js-animations #Cryptocurrency > h2,
@@ -578,7 +599,7 @@ html.js-animations #Cryptocurrency > h4,
 html.js-animations #Cryptocurrency > p,
 html.js-animations #Cryptocurrency > ul,
 html.js-animations #Cryptocurrency > dl,
-html.js-animations #Cryptocurrency > table,
+html.js-animations #Cryptocurrency > .tableScroll,
 html.js-animations #Cryptocurrency > a,
 html.js-animations #FutureOfQuantum > h1,
 html.js-animations #FutureOfQuantum > h2,
@@ -587,7 +608,7 @@ html.js-animations #FutureOfQuantum > h4,
 html.js-animations #FutureOfQuantum > p,
 html.js-animations #FutureOfQuantum > ul,
 html.js-animations #FutureOfQuantum > dl,
-html.js-animations #FutureOfQuantum > table,
+html.js-animations #FutureOfQuantum > .tableScroll,
 html.js-animations #FutureOfQuantum > a,
 html.js-animations #AGI > h1,
 html.js-animations #AGI > h2,
@@ -596,7 +617,7 @@ html.js-animations #AGI > h4,
 html.js-animations #AGI > p,
 html.js-animations #AGI > ul,
 html.js-animations #AGI > dl,
-html.js-animations #AGI > table,
+html.js-animations #AGI > .tableScroll,
 html.js-animations #AGI > a,
 html.js-animations #Privacy > h1,
 html.js-animations #Privacy > h2,
@@ -605,7 +626,7 @@ html.js-animations #Privacy > h4,
 html.js-animations #Privacy > p,
 html.js-animations #Privacy > ul,
 html.js-animations #Privacy > dl,
-html.js-animations #Privacy > table,
+html.js-animations #Privacy > .tableScroll,
 html.js-animations #Privacy > a,
 html.js-animations #ProductPlacement > h1,
 html.js-animations #ProductPlacement > h2,
@@ -614,7 +635,7 @@ html.js-animations #ProductPlacement > h4,
 html.js-animations #ProductPlacement > p,
 html.js-animations #ProductPlacement > ul,
 html.js-animations #ProductPlacement > dl,
-html.js-animations #ProductPlacement > table,
+html.js-animations #ProductPlacement > .tableScroll,
 html.js-animations #ProductPlacement > a {
   opacity: 0; }
 
@@ -624,7 +645,7 @@ html.js-animations #ProductPlacement > a {
  * the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > a,
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a,
   html.js-animations #KAN > h1,
   html.js-animations #KAN > h2,
   html.js-animations #KAN > h3,
@@ -632,7 +653,7 @@ html.js-animations #ProductPlacement > a {
   html.js-animations #KAN > p,
   html.js-animations #KAN > ul,
   html.js-animations #KAN > dl,
-  html.js-animations #KAN > table,
+  html.js-animations #KAN > .tableScroll,
   html.js-animations #KAN > a,
   html.js-animations #Cryptocurrency > h1,
   html.js-animations #Cryptocurrency > h2,
@@ -641,7 +662,7 @@ html.js-animations #ProductPlacement > a {
   html.js-animations #Cryptocurrency > p,
   html.js-animations #Cryptocurrency > ul,
   html.js-animations #Cryptocurrency > dl,
-  html.js-animations #Cryptocurrency > table,
+  html.js-animations #Cryptocurrency > .tableScroll,
   html.js-animations #Cryptocurrency > a,
   html.js-animations #FutureOfQuantum > h1,
   html.js-animations #FutureOfQuantum > h2,
@@ -650,7 +671,7 @@ html.js-animations #ProductPlacement > a {
   html.js-animations #FutureOfQuantum > p,
   html.js-animations #FutureOfQuantum > ul,
   html.js-animations #FutureOfQuantum > dl,
-  html.js-animations #FutureOfQuantum > table,
+  html.js-animations #FutureOfQuantum > .tableScroll,
   html.js-animations #FutureOfQuantum > a,
   html.js-animations #AGI > h1,
   html.js-animations #AGI > h2,
@@ -659,7 +680,7 @@ html.js-animations #ProductPlacement > a {
   html.js-animations #AGI > p,
   html.js-animations #AGI > ul,
   html.js-animations #AGI > dl,
-  html.js-animations #AGI > table,
+  html.js-animations #AGI > .tableScroll,
   html.js-animations #AGI > a,
   html.js-animations #Privacy > h1,
   html.js-animations #Privacy > h2,
@@ -668,7 +689,7 @@ html.js-animations #ProductPlacement > a {
   html.js-animations #Privacy > p,
   html.js-animations #Privacy > ul,
   html.js-animations #Privacy > dl,
-  html.js-animations #Privacy > table,
+  html.js-animations #Privacy > .tableScroll,
   html.js-animations #Privacy > a,
   html.js-animations #ProductPlacement > h1,
   html.js-animations #ProductPlacement > h2,
@@ -677,7 +698,7 @@ html.js-animations #ProductPlacement > a {
   html.js-animations #ProductPlacement > p,
   html.js-animations #ProductPlacement > ul,
   html.js-animations #ProductPlacement > dl,
-  html.js-animations #ProductPlacement > table,
+  html.js-animations #ProductPlacement > .tableScroll,
   html.js-animations #ProductPlacement > a {
     opacity: 1 !important; } }
 /* Reading-time pill rendered next to "Last Updated:" */
@@ -737,10 +758,9 @@ html.js-animations #ProductPlacement > a {
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
+  /* In-prose links: _4 (4.62:1) is a distinct warm tone against the _3 body
+     text, underlined so links do not rely on color alone (WCAG 1.4.1); hover
+     lifts to _5 (8.8:1). */ }
   #cybersecurityResources h1, #artificialIntelligenceResources h1, #cppResources h1, #pythonResources h1, #scriptingResources h1, #operatingSystemsResources h1 {
     text-align: left;
     color: #f9c54e;
@@ -761,22 +781,28 @@ html.js-animations #ProductPlacement > a {
     text-align: left;
     color: #b88ce0;
     font-size: 150%; }
-  #cybersecurityResources a:link, #artificialIntelligenceResources a:link, #cppResources a:link, #pythonResources a:link, #scriptingResources a:link, #operatingSystemsResources a:link {
+  #cybersecurityResources a:link, #artificialIntelligenceResources a:link, #cppResources a:link, #pythonResources a:link, #scriptingResources a:link, #operatingSystemsResources a:link,
+  #cybersecurityResources a:visited,
+  #artificialIntelligenceResources a:visited,
+  #cppResources a:visited,
+  #pythonResources a:visited,
+  #scriptingResources a:visited,
+  #operatingSystemsResources a:visited {
     text-align: left;
-    color: #b88ce0;
-    font-size: 100%; }
-  #cybersecurityResources a:visited, #artificialIntelligenceResources a:visited, #cppResources a:visited, #pythonResources a:visited, #scriptingResources a:visited, #operatingSystemsResources a:visited {
+    color: #d07e6c;
+    font-size: 100%;
+    text-decoration: underline; }
+  #cybersecurityResources a:hover, #artificialIntelligenceResources a:hover, #cppResources a:hover, #pythonResources a:hover, #scriptingResources a:hover, #operatingSystemsResources a:hover,
+  #cybersecurityResources a:active,
+  #artificialIntelligenceResources a:active,
+  #cppResources a:active,
+  #pythonResources a:active,
+  #scriptingResources a:active,
+  #operatingSystemsResources a:active {
     text-align: left;
-    color: #b88ce0;
-    font-size: 100%; }
-  #cybersecurityResources a:hover, #artificialIntelligenceResources a:hover, #cppResources a:hover, #pythonResources a:hover, #scriptingResources a:hover, #operatingSystemsResources a:hover {
-    text-align: left;
-    color: #b88ce0;
-    font-size: 100%; }
-  #cybersecurityResources a:active, #artificialIntelligenceResources a:active, #cppResources a:active, #pythonResources a:active, #scriptingResources a:active, #operatingSystemsResources a:active {
-    text-align: left;
-    color: #b88ce0;
-    font-size: 100%; }
+    color: #f9c54e;
+    font-size: 100%;
+    text-decoration: underline; }
   #cybersecurityResources ul, #artificialIntelligenceResources ul, #cppResources ul, #pythonResources ul, #scriptingResources ul, #operatingSystemsResources ul {
     text-align: left; }
     #cybersecurityResources ul li, #artificialIntelligenceResources ul li, #cppResources ul li, #pythonResources ul li, #scriptingResources ul li, #operatingSystemsResources ul li {
@@ -810,14 +836,14 @@ html.js-animations #ProductPlacement > a {
  * Animation initial states — only applied when JS is active.
  * Elements start invisible; AnimeJS animates them into view.
  */
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a,
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a,
 html.js-animations #cybersecurityResources > h1,
 html.js-animations #cybersecurityResources > h2,
 html.js-animations #cybersecurityResources > h3,
 html.js-animations #cybersecurityResources > p,
 html.js-animations #cybersecurityResources > ul,
 html.js-animations #cybersecurityResources > svg,
-html.js-animations #cybersecurityResources > table,
+html.js-animations #cybersecurityResources > .tableScroll,
 html.js-animations #cybersecurityResources > blockquote,
 html.js-animations #cybersecurityResources > a,
 html.js-animations #artificialIntelligenceResources > h1,
@@ -826,7 +852,7 @@ html.js-animations #artificialIntelligenceResources > h3,
 html.js-animations #artificialIntelligenceResources > p,
 html.js-animations #artificialIntelligenceResources > ul,
 html.js-animations #artificialIntelligenceResources > svg,
-html.js-animations #artificialIntelligenceResources > table,
+html.js-animations #artificialIntelligenceResources > .tableScroll,
 html.js-animations #artificialIntelligenceResources > blockquote,
 html.js-animations #artificialIntelligenceResources > a,
 html.js-animations #cppResources > h1,
@@ -835,7 +861,7 @@ html.js-animations #cppResources > h3,
 html.js-animations #cppResources > p,
 html.js-animations #cppResources > ul,
 html.js-animations #cppResources > svg,
-html.js-animations #cppResources > table,
+html.js-animations #cppResources > .tableScroll,
 html.js-animations #cppResources > blockquote,
 html.js-animations #cppResources > a,
 html.js-animations #pythonResources > h1,
@@ -844,7 +870,7 @@ html.js-animations #pythonResources > h3,
 html.js-animations #pythonResources > p,
 html.js-animations #pythonResources > ul,
 html.js-animations #pythonResources > svg,
-html.js-animations #pythonResources > table,
+html.js-animations #pythonResources > .tableScroll,
 html.js-animations #pythonResources > blockquote,
 html.js-animations #pythonResources > a,
 html.js-animations #scriptingResources > h1,
@@ -853,7 +879,7 @@ html.js-animations #scriptingResources > h3,
 html.js-animations #scriptingResources > p,
 html.js-animations #scriptingResources > ul,
 html.js-animations #scriptingResources > svg,
-html.js-animations #scriptingResources > table,
+html.js-animations #scriptingResources > .tableScroll,
 html.js-animations #scriptingResources > blockquote,
 html.js-animations #scriptingResources > a,
 html.js-animations #operatingSystemsResources > h1,
@@ -862,7 +888,7 @@ html.js-animations #operatingSystemsResources > h3,
 html.js-animations #operatingSystemsResources > p,
 html.js-animations #operatingSystemsResources > ul,
 html.js-animations #operatingSystemsResources > svg,
-html.js-animations #operatingSystemsResources > table,
+html.js-animations #operatingSystemsResources > .tableScroll,
 html.js-animations #operatingSystemsResources > blockquote,
 html.js-animations #operatingSystemsResources > a {
   opacity: 0; }
@@ -873,14 +899,14 @@ html.js-animations #operatingSystemsResources > a {
  * the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > table, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a,
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a,
   html.js-animations #cybersecurityResources > h1,
   html.js-animations #cybersecurityResources > h2,
   html.js-animations #cybersecurityResources > h3,
   html.js-animations #cybersecurityResources > p,
   html.js-animations #cybersecurityResources > ul,
   html.js-animations #cybersecurityResources > svg,
-  html.js-animations #cybersecurityResources > table,
+  html.js-animations #cybersecurityResources > .tableScroll,
   html.js-animations #cybersecurityResources > blockquote,
   html.js-animations #cybersecurityResources > a,
   html.js-animations #artificialIntelligenceResources > h1,
@@ -889,7 +915,7 @@ html.js-animations #operatingSystemsResources > a {
   html.js-animations #artificialIntelligenceResources > p,
   html.js-animations #artificialIntelligenceResources > ul,
   html.js-animations #artificialIntelligenceResources > svg,
-  html.js-animations #artificialIntelligenceResources > table,
+  html.js-animations #artificialIntelligenceResources > .tableScroll,
   html.js-animations #artificialIntelligenceResources > blockquote,
   html.js-animations #artificialIntelligenceResources > a,
   html.js-animations #cppResources > h1,
@@ -898,7 +924,7 @@ html.js-animations #operatingSystemsResources > a {
   html.js-animations #cppResources > p,
   html.js-animations #cppResources > ul,
   html.js-animations #cppResources > svg,
-  html.js-animations #cppResources > table,
+  html.js-animations #cppResources > .tableScroll,
   html.js-animations #cppResources > blockquote,
   html.js-animations #cppResources > a,
   html.js-animations #pythonResources > h1,
@@ -907,7 +933,7 @@ html.js-animations #operatingSystemsResources > a {
   html.js-animations #pythonResources > p,
   html.js-animations #pythonResources > ul,
   html.js-animations #pythonResources > svg,
-  html.js-animations #pythonResources > table,
+  html.js-animations #pythonResources > .tableScroll,
   html.js-animations #pythonResources > blockquote,
   html.js-animations #pythonResources > a,
   html.js-animations #scriptingResources > h1,
@@ -916,7 +942,7 @@ html.js-animations #operatingSystemsResources > a {
   html.js-animations #scriptingResources > p,
   html.js-animations #scriptingResources > ul,
   html.js-animations #scriptingResources > svg,
-  html.js-animations #scriptingResources > table,
+  html.js-animations #scriptingResources > .tableScroll,
   html.js-animations #scriptingResources > blockquote,
   html.js-animations #scriptingResources > a,
   html.js-animations #operatingSystemsResources > h1,
@@ -925,7 +951,7 @@ html.js-animations #operatingSystemsResources > a {
   html.js-animations #operatingSystemsResources > p,
   html.js-animations #operatingSystemsResources > ul,
   html.js-animations #operatingSystemsResources > svg,
-  html.js-animations #operatingSystemsResources > table,
+  html.js-animations #operatingSystemsResources > .tableScroll,
   html.js-animations #operatingSystemsResources > blockquote,
   html.js-animations #operatingSystemsResources > a {
     opacity: 1 !important; } }
@@ -941,10 +967,9 @@ html.js-animations #operatingSystemsResources > a {
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* unvisited link */
-  /* visited link */
-  /* mouse over link */
-  /* selected link */ }
+  /* In-prose links: _4 (5.01:1) is a distinct tone against the _3 body text,
+     underlined so links do not rely on color alone (WCAG 1.4.1) — important on
+     this legal page; hover lifts to _5 (10.39:1). */ }
   #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1, #changesDiv h1 {
     text-align: left;
     color: #F7F9F9;
@@ -957,22 +982,30 @@ html.js-animations #operatingSystemsResources > a {
     text-align: left;
     color: #22c9a8;
     font-size: 100%; }
-  #analyticsDiv a:link, #thirdPartyDiv a:link, #serviceWorkerDiv a:link, #verificationDiv a:link, #rightsDiv a:link, #preferencesDiv a:link, #changesDiv a:link {
+  #analyticsDiv a:link, #thirdPartyDiv a:link, #serviceWorkerDiv a:link, #verificationDiv a:link, #rightsDiv a:link, #preferencesDiv a:link, #changesDiv a:link,
+  #analyticsDiv a:visited,
+  #thirdPartyDiv a:visited,
+  #serviceWorkerDiv a:visited,
+  #verificationDiv a:visited,
+  #rightsDiv a:visited,
+  #preferencesDiv a:visited,
+  #changesDiv a:visited {
     text-align: left;
-    color: #22c9a8;
-    font-size: 100%; }
-  #analyticsDiv a:visited, #thirdPartyDiv a:visited, #serviceWorkerDiv a:visited, #verificationDiv a:visited, #rightsDiv a:visited, #preferencesDiv a:visited, #changesDiv a:visited {
+    color: #F39C12;
+    font-size: 100%;
+    text-decoration: underline; }
+  #analyticsDiv a:hover, #thirdPartyDiv a:hover, #serviceWorkerDiv a:hover, #verificationDiv a:hover, #rightsDiv a:hover, #preferencesDiv a:hover, #changesDiv a:hover,
+  #analyticsDiv a:active,
+  #thirdPartyDiv a:active,
+  #serviceWorkerDiv a:active,
+  #verificationDiv a:active,
+  #rightsDiv a:active,
+  #preferencesDiv a:active,
+  #changesDiv a:active {
     text-align: left;
-    color: #22c9a8;
-    font-size: 100%; }
-  #analyticsDiv a:hover, #thirdPartyDiv a:hover, #serviceWorkerDiv a:hover, #verificationDiv a:hover, #rightsDiv a:hover, #preferencesDiv a:hover, #changesDiv a:hover {
-    text-align: left;
-    color: #22c9a8;
-    font-size: 100%; }
-  #analyticsDiv a:active, #thirdPartyDiv a:active, #serviceWorkerDiv a:active, #verificationDiv a:active, #rightsDiv a:active, #preferencesDiv a:active, #changesDiv a:active {
-    text-align: left;
-    color: #22c9a8;
-    font-size: 100%; }
+    color: #F7F9F9;
+    font-size: 100%;
+    text-decoration: underline; }
   #analyticsDiv ul, #thirdPartyDiv ul, #serviceWorkerDiv ul, #verificationDiv ul, #rightsDiv ul, #preferencesDiv ul, #changesDiv ul {
     text-align: left; }
     #analyticsDiv ul li, #thirdPartyDiv ul li, #serviceWorkerDiv ul li, #verificationDiv ul li, #rightsDiv ul li, #preferencesDiv ul li, #changesDiv ul li {
@@ -1304,6 +1337,18 @@ html.js-animations #helpfulLinks {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth; } }
+/* Keep anchored and keyboard-focused targets clear of the sticky header
+   (WCAG 2.4.11). scroll-padding-top on the scroll container offsets both
+   fragment-jump navigation and focus scrolling, so scroll-margin-top on the
+   targets is intentionally omitted (it would stack and double the gap). The
+   value approximates the header height: ~2 stacked nav rows on desktop, a
+   single collapsed row on mobile. Verify if the nav layout changes. */
+html {
+  scroll-padding-top: 8rem; }
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 3.5rem; } }
 /* Visually-hidden utility: keeps content available to screen readers while
    removing it from the visual layout. Used for accessible table <caption>s. */
 .visually-hidden {
@@ -1316,6 +1361,14 @@ html.js-animations #helpfulLinks {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0; }
+
+/* Horizontal-scroll container for wide data tables. The table scrolls inside
+   this box instead of widening the page on narrow viewports (WCAG 1.4.10). A
+   wrapper is used rather than `display: block` on the <table> itself, which
+   would strip the table's semantics and its scope-ed row/column headers. */
+.tableScroll {
+  max-width: 100%;
+  overflow-x: auto; }
 
 /* <main> is focused programmatically by the skip link; don't paint a ring. */
 main.main:focus {
@@ -1477,6 +1530,15 @@ body {
     height: auto;
     border: 2px solid #1a1a1e;
     border-radius: 1%; }
+
+/* Keyboard focus ring for in-content links. The section partials set link
+   colors; this gives every in-prose link a visible focus indicator over the
+   varied section backgrounds. currentColor tracks the link color, which each
+   partial keeps at AA (>=4.5:1), so the ring clears the 3:1 non-text minimum. */
+main a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px; }
 
 .floatingBackToTop {
   position: fixed;

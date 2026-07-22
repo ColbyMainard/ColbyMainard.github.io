@@ -4,12 +4,14 @@
         <meta charset="UTF-8">
         <!--
             GitHub Pages serves this file's CONTENT at whatever missing URL was
-            requested (e.g. /some/missing/path), so every internal path below is
-            root-absolute (/assets/..., /index.html) — a relative path would
-            resolve against the phantom directory of the missing URL.
-            Consequence: this page will NOT style or script correctly when opened
-            from file:// — acceptable, because 404 handling is inherently an
-            HTTP-server feature.
+            requested (e.g. /some/missing/path). Internal paths below are
+            deliberately RELATIVE (./assets/..., ./index.html), like every other
+            page, so this file also styles and scripts correctly from file:// and
+            at top-level missing URLs. The accepted tradeoff: at a NESTED missing
+            URL (e.g. /dir/typo) the relative paths resolve against the phantom
+            directory and the page renders unstyled with broken internal links.
+            The only root-absolute exceptions are the icon links (favicon /
+            apple-touch-icon) and the footer PGP + Privacy Policy links.
         -->
         <title>Page Not Found (404) — Colby Mainard</title>
         <meta name="author" content="Colby Mainard">

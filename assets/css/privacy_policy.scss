@@ -32,29 +32,22 @@ $refined_professionalism_5: #F7F9F9;
         color: $refined_professionalism_3;
         font-size: 100%;
     }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $refined_professionalism_3;
-        font-size: 100%;
-    }
-    /* visited link */
+    /* In-prose links: _4 (5.01:1) is a distinct tone against the _3 body text,
+       underlined so links do not rely on color alone (WCAG 1.4.1) — important on
+       this legal page; hover lifts to _5 (10.39:1). */
+    a:link,
     a:visited {
         text-align: left;
-        color: $refined_professionalism_3;
+        color: $refined_professionalism_4;
         font-size: 100%;
+        text-decoration: underline;
     }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $refined_professionalism_3;
-        font-size: 100%;
-    }
-    /* selected link */
+    a:hover,
     a:active {
         text-align: left;
-        color: $refined_professionalism_3;
+        color: $refined_professionalism_5;
         font-size: 100%;
+        text-decoration: underline;
     }
     ul {
         text-align: left;

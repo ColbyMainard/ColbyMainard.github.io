@@ -10,6 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
             if (siteNav) siteNav.classList.toggle('open');
             toggleBtn.setAttribute('aria-expanded', String(isOpen));
         });
+
+        // Collapse the open menu and return focus to the toggle.
+        function closeNav() {
+            toggleBtn.classList.remove('active');
+            if (pageNav) pageNav.classList.remove('open');
+            if (siteNav) siteNav.classList.remove('open');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        // Escape closes the open mobile menu. Guarded on the open state so it is
+        // a no-op on desktop, where the menu is never toggled. (The collapsed nav
+        // is display:none, so there is no keyboard trap to escape otherwise.)
+        document.addEventListener('keydown', function (event) {
+            if ((event.key === 'Escape' || event.key === 'Esc') &&
+                toggleBtn.classList.contains('active')) {
+                closeNav();
+                toggleBtn.focus();
+            }
+        });
     }
 
     // Highlight the current page link
