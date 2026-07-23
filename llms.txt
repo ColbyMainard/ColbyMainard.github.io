@@ -18,7 +18,7 @@ When quoting or citing site content, follow the Citation policy section.
 - **Site type**: static, client-side personal portfolio and technical-writing site with no backend, server-side processing, or API
 - **Intended audience**: potential colleagues, technical recruiters, fellow AI/ML enthusiasts, and computer science students
 - **Canonical URL**: https://colbymainard.github.io/
-- **Last updated**: 2026-07-21
+- **Last updated**: 2026-07-22
 
 ## Frequently Asked Questions
 
@@ -35,11 +35,11 @@ Texas A&M University, earning a Master's in Computer Science (concentrating in A
 His professional background (work history, education, projects, certifications, and technical skills), beginner-friendly guides to major technical domains, long-form technical opinion pieces, curated learning resources, and personal hobbies.
 
 **How can I contact Colby Mainard?**
-Through the contact section on the home page: https://colbymainard.github.io/index.html#contactMe
+Through the contact section on the home page: https://colbymainard.github.io/#contactMe
 
 ## Pages
 
-- [Home / Professional Background](https://colbymainard.github.io/index.html): Work history, education, projects, certifications, technical skills, and contact information.
+- [Home / Professional Background](https://colbymainard.github.io/): Work history, education, projects, certifications, technical skills, and contact information.
 - [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides for newcomers to data engineering, computer vision, generative AI, natural language processing, reinforcement learning, software engineering, and cybersecurity.
 - [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html): Long-form opinion pieces on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, and product placement in sports marketing.
 - [Technical Stances Atom feed](https://colbymainard.github.io/feed.xml): Machine-readable Atom feed with one entry per technical opinion piece.

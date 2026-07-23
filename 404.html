@@ -19,8 +19,12 @@
         <!--Optimizing for multiple devices: https://www.techtarget.com/whatis/feature/Best-practices-to-make-a-mobile-friendly-website-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Social sharing cards. No canonical link: this page is noindex, and a
-             canonical on a noindex page sends search engines mixed signals. -->
+        <!-- Social sharing cards. No canonical link: GitHub Pages serves this
+             page's content at whatever missing URL was requested, so there is no
+             single URL a canonical could honestly point at. This is specific to
+             404.html. A noindex page with one stable URL, such as privacy.html,
+             keeps a self-referencing canonical, which search engines handle
+             correctly alongside noindex. -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://colbymainard.github.io/404.html">
         <meta property="og:title" content="Page Not Found — Colby Mainard">

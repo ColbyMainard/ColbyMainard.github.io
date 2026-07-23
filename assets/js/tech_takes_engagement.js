@@ -17,6 +17,13 @@
 
     var WORDS_PER_MINUTE = 200;
 
+    /* Separator lives here rather than in the markup so it only appears once a
+       reading time has actually been rendered. Without it, a page loaded with
+       JavaScript disabled shows a dangling "Last Updated: <date> &middot;".
+       Escaped rather than literal so the file cannot be mis-decoded from
+       file:// origins, where the script inherits the document's encoding. */
+    var SEPARATOR = "\u00B7 ";
+
     function getWordCount(element) {
         if (!element) return 0;
         var clone = element.cloneNode(true);
@@ -41,7 +48,7 @@
         Array.prototype.forEach.call(spans, function (span) {
             var section = span.closest("section");
             if (!section) return;
-            span.textContent = formatReadingTime(getWordCount(section));
+            span.textContent = SEPARATOR + formatReadingTime(getWordCount(section));
         });
     }
 
