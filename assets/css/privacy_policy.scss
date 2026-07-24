@@ -9,53 +9,17 @@ $refined_professionalism_4: #F39C12;
 $refined_professionalism_5: #F7F9F9;
 
 %privacySection {
-    margin: auto;
-    background-color: $refined_professionalism_1;
-    width: 80%;
-    border-radius: 10px;
-    padding-bottom: 1.5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $refined_professionalism_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $refined_professionalism_4;
-        font-size: 300%;
-    }
-    p {
-        text-align: left;
-        color: $refined_professionalism_3;
-        font-size: 100%;
-    }
+    @include sectionShell($refined_professionalism_1, $padding-bottom: 1.5em);
+    @include headingRamp(
+        $h1: $refined_professionalism_5,
+        $h2: $refined_professionalism_4
+    );
+    @include bodyText($refined_professionalism_3);
     /* In-prose links: _4 (5.01:1) is a distinct tone against the _3 body text,
        underlined so links do not rely on color alone (WCAG 1.4.1) — important on
        this legal page; hover lifts to _5 (10.39:1). */
-    a:link,
-    a:visited {
-        text-align: left;
-        color: $refined_professionalism_4;
-        font-size: 100%;
-        text-decoration: underline;
-    }
-    a:hover,
-    a:active {
-        text-align: left;
-        color: $refined_professionalism_5;
-        font-size: 100%;
-        text-decoration: underline;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $refined_professionalism_3;
-            font-size: 100%;
-        }
-    }
+    @include proseLinks($refined_professionalism_4, $refined_professionalism_5);
+    @include listText($refined_professionalism_3);
 }
 
 #analyticsDiv { @extend %privacySection; }

@@ -34,58 +34,18 @@ $calm_authority_5: #E7EAEC;
 // $brown_document_background_5: #895b29;
 
 %hobbySection {
-    margin: auto;
-    background-color: $calm_authority_1;
-    width: 80%;
-    border-radius: 10px;
-    padding-bottom: 1.5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $calm_authority_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $calm_authority_4;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $calm_authority_3;
-        font-size: 200%;
-    }
-    p {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 100%;
-    }
+    @include sectionShell($calm_authority_1, $padding-bottom: 1.5em);
+    @include headingRamp(
+        $h1: $calm_authority_5,
+        $h2: $calm_authority_4,
+        $h3: $calm_authority_3
+    );
+    @include bodyText($calm_authority_2);
     /* In-prose links: _4 (6.57:1) is brighter than the _2 body text, underlined
        so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
        (7.69:1). */
-    a:link,
-    a:visited {
-        text-align: left;
-        color: $calm_authority_4;
-        font-size: 100%;
-        text-decoration: underline;
-    }
-    a:hover,
-    a:active {
-        text-align: left;
-        color: $calm_authority_5;
-        font-size: 100%;
-        text-decoration: underline;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $calm_authority_2;
-            font-size: 100%;
-        }
-    }
+    @include proseLinks($calm_authority_4, $calm_authority_5);
+    @include listText($calm_authority_2);
 }
 
 #quantumComputing {
@@ -112,77 +72,21 @@ $calm_authority_5: #E7EAEC;
 
 #history {
     @extend %hobbySection;
-    blockquote {
-        text-align: left;
-        color: $calm_authority_2;
-        font-size: 150%;
-    }
-    table {
-        text-align: left;
-        border-collapse: collapse;
-        border-color: $calm_authority_2;
-        border-style: solid;
-        tr {
-            border-color: $calm_authority_2;
-            th {
-                border-color: $calm_authority_2;
+    @include blockQuote($calm_authority_2);
+    @include dataTable($calm_authority_2);
+    // The podcast table nests a list inside a cell.
+    table tr td {
+        ul {
+            li {
                 color: $calm_authority_2;
                 font-size: 100%;
-                border-top-style: double;
-                border-right-style: double;
-                border-bottom-style: double;
-                border-left-style: double;
-            }
-            td {
-                border-color: $calm_authority_2;
-                color: $calm_authority_2;
-                font-size: 100%;
-                border-top-style: groove;
-                border-right-style: groove;
-                border-bottom-style: groove;
-                border-left-style: groove;
-                ul {
-                    li {
-                        color: $calm_authority_2;
-                        font-size: 100%;
-                    }
-                }
             }
         }
     }
 }
 
-/*
- * Animation initial states — only applied when JS is active.
- * Elements start invisible; AnimeJS animates them into view.
- */
-html.js-animations {
-    #introSectionDiv,
-    #quantumComputing,
-    #photography,
-    #dungeonsAndDragons,
-    #history {
-        > h1, > h2, > h3, > p, > ul, > svg, > img, > .tableScroll, > blockquote, > a, > iframe {
-            opacity: 0;
-        }
-    }
-}
-
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
- */
-@media (prefers-reduced-motion: reduce) {
-    html.js-animations {
-        #introSectionDiv,
-        #quantumComputing,
-        #photography,
-        #dungeonsAndDragons,
-        #history {
-            > h1, > h2, > h3, > p, > ul, > svg, > img, > .tableScroll, > blockquote, > a, > iframe {
-                opacity: 1 !important;
-            }
-        }
-    }
-}
+// Animation gating (initial hidden state plus the reduced-motion safety net).
+@include animationGate(
+    "#introSectionDiv, #quantumComputing, #photography, #dungeonsAndDragons, #history",
+    "> h1, > h2, > h3, > p, > ul, > svg, > img, > .tableScroll, > blockquote, > a, > iframe"
+);

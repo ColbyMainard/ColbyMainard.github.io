@@ -55,132 +55,35 @@ $dark_blue_gray_5: #ff5c5c;
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3;
    #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 %techTakeSection {
-    margin: auto;
-    background-color: $dark_blue_gray_1;
-    width: 80%;
-    border-radius: 10px;
-    padding-bottom: 1.5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        font-size: 500%;
-        color: $dark_blue_gray_5;
-    }
-    h2 {
-        text-align: left;
-        font-size: 300%;
-        color: $dark_blue_gray_4;
-    }
-    h3 {
-        text-align: left;
-        font-size: 200%;
-        color: $dark_blue_gray_3;
-    }
-    h4 {
-        text-align: left;
-        font-size: 175%;
-        color: $dark_blue_gray_3;
-    }
+    @include sectionShell($dark_blue_gray_1, $padding-bottom: 1.5em);
+    @include headingRamp(
+        $h1: $dark_blue_gray_5,
+        $h2: $dark_blue_gray_4,
+        $h3: $dark_blue_gray_3,
+        $h4: $dark_blue_gray_3
+    );
     /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined
        so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp
        (_5 is the red heading accent), so hover thickens the underline. */
-    a:link,
-    a:visited {
-        text-align: left;
-        font-size: 100%;
-        color: $dark_blue_gray_4;
-        text-decoration: underline;
-    }
-    a:hover,
-    a:active {
-        text-align: left;
-        font-size: 100%;
-        color: $dark_blue_gray_4;
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-    }
-    p {
-        text-align: left;
-        font-size: 100%;
-        color: $dark_blue_gray_3;
-    }
-    ul {
-        text-align: left;
-        li {
-            font-size: 100%;
-            color: $dark_blue_gray_3;
-        }
-    }
+    @include proseLinks($dark_blue_gray_4, $dark_blue_gray_4, $thicken-on-hover: true);
+    @include bodyText($dark_blue_gray_3);
+    @include listText($dark_blue_gray_3);
 }
 
 /* Shared table styling for opinions that include a comparison table. */
 %techTakeTable {
-    table {
-        text-align: left;
-        border-collapse: collapse;
-        border-color: $dark_blue_gray_3;
-        border-style: solid;
-        tr {
-            border-color: $dark_blue_gray_3;
-            th {
-                border-color: $dark_blue_gray_3;
-                color: $dark_blue_gray_3;
+    @include dataTable($dark_blue_gray_3);
+    // Links inside a cell stay at the cell's own tone in every state, so a
+    // linked row header does not out-shout the surrounding data.
+    table tr {
+        th,
+        td {
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
                 font-size: 100%;
-                border-top-style: double;
-                border-right-style: double;
-                border-bottom-style: double;
-                border-left-style: double;
-                /* unvisited link */
-                a:link {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-                /* visited link */
-                a:visited {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-                /* mouse over link */
-                a:hover {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-                /* selected link */
-                a:active {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-            }
-            td {
-                border-color: $dark_blue_gray_3;
                 color: $dark_blue_gray_3;
-                font-size: 100%;
-                border-top-style: groove;
-                border-right-style: groove;
-                border-bottom-style: groove;
-                border-left-style: groove;
-                /* unvisited link */
-                a:link {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-                /* visited link */
-                a:visited {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-                /* mouse over link */
-                a:hover {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-                /* selected link */
-                a:active {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
             }
         }
     }
@@ -235,44 +138,11 @@ $dark_blue_gray_5: #ff5c5c;
 
 #ProductPlacement { @extend %techTakeSection; }
 
-/*
- * Animation initial states — only applied when JS is active.
- * Elements start invisible; AnimeJS animates them into view.
- */
-html.js-animations {
-    #introSectionDiv,
-    #KAN,
-    #Cryptocurrency,
-    #FutureOfQuantum,
-    #AGI,
-    #Privacy,
-    #ProductPlacement {
-        > h1, > h2, > h3, > h4, > p, > ul, > dl, > .tableScroll, > a {
-            opacity: 0;
-        }
-    }
-}
-
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
- */
-@media (prefers-reduced-motion: reduce) {
-    html.js-animations {
-        #introSectionDiv,
-        #KAN,
-        #Cryptocurrency,
-        #FutureOfQuantum,
-        #AGI,
-        #Privacy,
-        #ProductPlacement {
-            > h1, > h2, > h3, > h4, > p, > ul, > dl, > .tableScroll, > a {
-                opacity: 1 !important;
-            }
-        }
-    }
-}
+// Animation gating (initial hidden state plus the reduced-motion safety net).
+@include animationGate(
+    "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement",
+    "> h1, > h2, > h3, > h4, > p, > ul, > dl, > .tableScroll, > a"
+);
 
 /* Reading-time pill rendered next to "Last Updated:" */
 .readingTime {

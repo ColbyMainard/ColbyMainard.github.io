@@ -121,4 +121,4 @@ The steps that get missed are the cross-file ones — walk the matching list end
 ## Where to find things
 
 - Dated audits and strategy docs (accessibility, SEO, backlinks, content, feature recommendations, code review, roadmap) live in `assets/markdown/` as `*-YYYY-MM-DD.md`. Check the most recent before re-auditing.
-- Note: `assets/js/current_time.js` exists and is precached by the service worker but is **not referenced by any page** (legacy/unused) — verify before relying on it.
+- Note: every file in `assets/js/` is referenced by at least one page. If you add a script, load it from a page **and** register it in `service-worker.js` `PRECACHE_URLS`; if a script stops being referenced, delete it rather than leaving it precached. (The legacy `current_time.js` was removed on 2026-07-23 under exactly that rule.)

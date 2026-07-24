@@ -19,6 +19,196 @@ $emerald_efficiency_3: #50c3a1;
 $emerald_efficiency_4: #a1d9b0;
 $emerald_efficiency_5: #e0f7fa;
 
+// ---------------------------------------------------------------------------
+// Shared section mixins.
+//
+// Every per-page partial used to re-declare the same section shell, heading
+// ramp, link treatment, data-table skeleton, and animation-gating pair,
+// differing only in which palette variable each rule referenced. A structural
+// change (a heading size, a border style, a newly animated element type) had to
+// be made in six files in lockstep or the pages would silently drift apart.
+//
+// These mixins hold that structure once; each partial passes its own palette.
+// Anything genuinely page-specific (the hobbies iframe, the tech-takes
+// glossary, per-cell link colors) stays at the call site.
+//
+// Comments here are silent (//) so they stay out of the compiled stylesheet.
+// The loud (/* */) contrast notes inside the partials are deliberate and do
+// ship, so keep them where they are relative to the rule they document.
+// ---------------------------------------------------------------------------
+
+/// The card every content section sits in. Callers pass either $padding (full
+/// shorthand) or $padding-bottom, matching whichever the partial originally
+/// declared, so no section's box model shifts.
+@mixin sectionShell($background, $padding: null, $padding-bottom: null) {
+    margin: auto;
+    background-color: $background;
+    width: 80%;
+    border-radius: 10px;
+    @if $padding != null {
+        padding: $padding;
+    }
+    @if $padding-bottom != null {
+        padding-bottom: $padding-bottom;
+    }
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: "Courier New", monospace;
+}
+
+/// Heading ramp. The size ladder (500/300/200/175%) is identical site-wide and
+/// only the colors differ. Pass null for a level the page has no markup for and
+/// no rule is emitted, which is why 404.html gets no h1 rule and hobbies gets
+/// no h4 rule.
+@mixin headingRamp($h1: null, $h2: null, $h3: null, $h4: null) {
+    @if $h1 != null {
+        h1 {
+            text-align: left;
+            color: $h1;
+            font-size: 500%;
+        }
+    }
+    @if $h2 != null {
+        h2 {
+            text-align: left;
+            color: $h2;
+            font-size: 300%;
+        }
+    }
+    @if $h3 != null {
+        h3 {
+            text-align: left;
+            color: $h3;
+            font-size: 200%;
+        }
+    }
+    @if $h4 != null {
+        h4 {
+            text-align: left;
+            color: $h4;
+            font-size: 175%;
+        }
+    }
+}
+
+@mixin bodyText($color) {
+    p {
+        text-align: left;
+        color: $color;
+        font-size: 100%;
+    }
+}
+
+@mixin listText($color) {
+    ul {
+        text-align: left;
+        li {
+            color: $color;
+            font-size: 100%;
+        }
+    }
+}
+
+@mixin blockQuote($color) {
+    blockquote {
+        text-align: left;
+        color: $color;
+        font-size: 150%;
+    }
+}
+
+/// In-prose links. Three variants existed across the partials:
+///   underline, same color on hover, thicker rule  (index, tech_takes)
+///   underline, brighter color on hover            (hobbies, tech_resources, privacy)
+///   no underline, brighter color on hover         (guides, 404)
+/// The underlined variants satisfy WCAG 1.4.1 by not relying on color alone;
+/// the two pages using the third variant sit on their own palettes, where the
+/// per-partial contrast notes record the ratios.
+@mixin proseLinks($base, $hover, $underline: true, $thicken-on-hover: false) {
+    a:link,
+    a:visited {
+        text-align: left;
+        color: $base;
+        font-size: 100%;
+        @if $underline {
+            text-decoration: underline;
+        }
+    }
+    a:hover,
+    a:active {
+        text-align: left;
+        color: $hover;
+        font-size: 100%;
+        @if $underline {
+            text-decoration: underline;
+        }
+        @if $thicken-on-hover {
+            text-decoration-thickness: 2px;
+        }
+    }
+}
+
+/// Data-table skeleton: solid outer border, double-ruled headers, groove-ruled
+/// cells, all in one tone. Pages needing extra rules inside a cell (nested
+/// lists, <details> summaries, per-cell link colors) add a `table tr td { ... }`
+/// block at the call site, which resolves to the same selector the nested
+/// version produced.
+@mixin dataTable($color) {
+    table {
+        text-align: left;
+        border-collapse: collapse;
+        border-color: $color;
+        border-style: solid;
+        tr {
+            border-color: $color;
+            th {
+                border-color: $color;
+                color: $color;
+                font-size: 100%;
+                border-top-style: double;
+                border-right-style: double;
+                border-bottom-style: double;
+                border-left-style: double;
+            }
+            td {
+                border-color: $color;
+                color: $color;
+                font-size: 100%;
+                border-top-style: groove;
+                border-right-style: groove;
+                border-bottom-style: groove;
+                border-left-style: groove;
+            }
+        }
+    }
+}
+
+/// Animation gating. Elements start invisible only when JS is active, and the
+/// reduced-motion safety net re-reveals them so content can never be trapped at
+/// opacity: 0 (for example when the OS setting is toggled after load). The two
+/// halves must always ship together, which is precisely why they belong in one
+/// mixin rather than two hand-copied blocks per partial. $sections and
+/// $children are selector-list strings.
+@mixin animationGate($sections, $children) {
+    html.js-animations {
+        #{$sections} {
+            #{$children} {
+                opacity: 0;
+            }
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html.js-animations {
+            #{$sections} {
+                #{$children} {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+
 @import "index";
 @import "hobbies";
 @import "tech_takes";

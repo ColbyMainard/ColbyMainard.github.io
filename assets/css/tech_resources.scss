@@ -31,90 +31,20 @@ $neon_dusk_serenity_5: #f9c54e;
 // $shades_of_blue_5: #f1f5f8;
 
 %resourceSection {
-    margin: auto;
-    background-color: $neon_dusk_serenity_1;
-    width: 80%;
-    border-radius: 10px;
-    padding-bottom: 1.5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $neon_dusk_serenity_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $neon_dusk_serenity_4;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $neon_dusk_serenity_3;
-        font-size: 200%;
-    }
-    p {
-        text-align: left;
-        color: $neon_dusk_serenity_3;
-        font-size: 100%;
-    }
-    blockquote {
-        text-align: left;
-        color: $neon_dusk_serenity_3;
-        font-size: 150%;
-    }
+    @include sectionShell($neon_dusk_serenity_1, $padding-bottom: 1.5em);
+    @include headingRamp(
+        $h1: $neon_dusk_serenity_5,
+        $h2: $neon_dusk_serenity_4,
+        $h3: $neon_dusk_serenity_3
+    );
+    @include bodyText($neon_dusk_serenity_3);
+    @include blockQuote($neon_dusk_serenity_3);
     /* In-prose links: _4 (4.62:1) is a distinct warm tone against the _3 body
        text, underlined so links do not rely on color alone (WCAG 1.4.1); hover
        lifts to _5 (8.8:1). */
-    a:link,
-    a:visited {
-        text-align: left;
-        color: $neon_dusk_serenity_4;
-        font-size: 100%;
-        text-decoration: underline;
-    }
-    a:hover,
-    a:active {
-        text-align: left;
-        color: $neon_dusk_serenity_5;
-        font-size: 100%;
-        text-decoration: underline;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $neon_dusk_serenity_3;
-            font-size: 100%;
-        }
-    }
-    table {
-        text-align: left;
-        border-collapse: collapse;
-        border-color: $neon_dusk_serenity_3;
-        border-style: solid;
-        tr {
-            border-color: $neon_dusk_serenity_3;
-            th {
-                border-color: $neon_dusk_serenity_3;
-                color: $neon_dusk_serenity_3;
-                font-size: 100%;
-                border-top-style: double;
-                border-right-style: double;
-                border-bottom-style: double;
-                border-left-style: double;
-            }
-            td {
-                border-color: $neon_dusk_serenity_3;
-                color: $neon_dusk_serenity_3;
-                font-size: 100%;
-                border-top-style: groove;
-                border-right-style: groove;
-                border-bottom-style: groove;
-                border-left-style: groove;
-            }
-        }
-    }
+    @include proseLinks($neon_dusk_serenity_4, $neon_dusk_serenity_5);
+    @include listText($neon_dusk_serenity_3);
+    @include dataTable($neon_dusk_serenity_3);
 }
 
 #cybersecurityResources { @extend %resourceSection; }
@@ -124,41 +54,8 @@ $neon_dusk_serenity_5: #f9c54e;
 #scriptingResources { @extend %resourceSection; }
 #operatingSystemsResources { @extend %resourceSection; }
 
-/*
- * Animation initial states — only applied when JS is active.
- * Elements start invisible; AnimeJS animates them into view.
- */
-html.js-animations {
-    #introSectionDiv,
-    #cybersecurityResources,
-    #artificialIntelligenceResources,
-    #cppResources,
-    #pythonResources,
-    #scriptingResources,
-    #operatingSystemsResources {
-        > h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a {
-            opacity: 0;
-        }
-    }
-}
-
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
- */
-@media (prefers-reduced-motion: reduce) {
-    html.js-animations {
-        #introSectionDiv,
-        #cybersecurityResources,
-        #artificialIntelligenceResources,
-        #cppResources,
-        #pythonResources,
-        #scriptingResources,
-        #operatingSystemsResources {
-            > h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a {
-                opacity: 1 !important;
-            }
-        }
-    }
-}
+// Animation gating (initial hidden state plus the reduced-motion safety net).
+@include animationGate(
+    "#introSectionDiv, #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources",
+    "> h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a"
+);

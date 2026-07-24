@@ -11,105 +11,21 @@ $techno_serenity_4: #a3d5e0;
 $techno_serenity_5: #e0f5f2;
 
 %guideSection {
-    margin: auto;
-    background-color: $techno_serenity_1;
-    width: 80%;
-    border-radius: 10px;
-    padding: 1.5em 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-family: "Courier New", monospace;
-    h1 {
-        text-align: left;
-        color: $techno_serenity_5;
-        font-size: 500%;
-    }
-    h2 {
-        text-align: left;
-        color: $techno_serenity_5;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $techno_serenity_4;
-        font-size: 200%;
-    }
-    h4{
-        text-align: left;
-        color: $techno_serenity_4;
-        font-size: 175%;
-    }
-    p {
-        text-align: left;
-        color: $techno_serenity_3;
-        font-size: 100%;
-    }
+    @include sectionShell($techno_serenity_1, $padding: 1.5em 2em);
+    @include headingRamp(
+        $h1: $techno_serenity_5,
+        $h2: $techno_serenity_5,
+        $h3: $techno_serenity_4,
+        $h4: $techno_serenity_4
+    );
+    @include bodyText($techno_serenity_3);
     u {
         color: $techno_serenity_4;
     }
-    blockquote {
-        text-align: left;
-        color: $techno_serenity_3;
-        font-size: 150%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $techno_serenity_4;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $techno_serenity_4;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $techno_serenity_5;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $techno_serenity_5;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $techno_serenity_3;
-            font-size: 100%;
-        }
-    }
-    table {
-        text-align: left;
-        border-collapse: collapse;
-        border-color: $techno_serenity_3;
-        border-style: solid;
-        tr {
-            border-color: $techno_serenity_3;
-            th {
-                border-color: $techno_serenity_3;
-                color: $techno_serenity_3;
-                font-size: 100%;
-                border-top-style: double;
-                border-right-style: double;
-                border-bottom-style: double;
-                border-left-style: double;
-            }
-            td {
-                border-color: $techno_serenity_3;
-                color: $techno_serenity_3;
-                font-size: 100%;
-                border-top-style: groove;
-                border-right-style: groove;
-                border-bottom-style: groove;
-                border-left-style: groove;
-            }
-        }
-    }
+    @include blockQuote($techno_serenity_3);
+    @include proseLinks($techno_serenity_4, $techno_serenity_5, $underline: false);
+    @include listText($techno_serenity_3);
+    @include dataTable($techno_serenity_3);
 }
 
 #dataEngineeringGuide { @extend %guideSection; }
@@ -120,43 +36,8 @@ $techno_serenity_5: #e0f5f2;
 #softwareEngineeringGuide { @extend %guideSection; }
 #cybersecurityGuide { @extend %guideSection; }
 
-/*
- * Animation initial states — only applied when JS is active.
- * Elements start invisible; AnimeJS animates them into view.
- */
-html.js-animations {
-    #introSectionDiv,
-    #dataEngineeringGuide,
-    #computerVisionGuide,
-    #generativeAIGuide,
-    #nlpGuide,
-    #reinforcementLearningGuide,
-    #softwareEngineeringGuide,
-    #cybersecurityGuide {
-        > h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a {
-            opacity: 0;
-        }
-    }
-}
-
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
- */
-@media (prefers-reduced-motion: reduce) {
-    html.js-animations {
-        #introSectionDiv,
-        #dataEngineeringGuide,
-        #computerVisionGuide,
-        #generativeAIGuide,
-        #nlpGuide,
-        #reinforcementLearningGuide,
-        #softwareEngineeringGuide,
-        #cybersecurityGuide {
-            > h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a {
-                opacity: 1 !important;
-            }
-        }
-    }
-}
+// Animation gating (initial hidden state plus the reduced-motion safety net).
+@include animationGate(
+    "#introSectionDiv, #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide",
+    "> h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a"
+);

@@ -52,7 +52,7 @@ Before finishing any change, verify each point that applies:
 - Deployment: `.github/workflows/static.yml` publishes the entire repository to GitHub Pages on every push to `master` (and on manual `workflow_dispatch`). All CSS and JavaScript must work under GitHub's static serving — there is no server-side processing.
 - Non-obvious root-level files: `manifest.json` (PWA manifest), `service-worker.js` (offline cache), `robots.txt`, `sitemap.xml`, `llms.txt` (site summary for LLM crawlers), `feed.xml` (hand-maintained Atom feed for the Technical Stances page), and `press_mentions.csv` (log of external press mentions/quotes).
 - The social share card is `assets/images/sharecard.png` (1200×630); it is referenced by the Open Graph / Twitter / LinkedIn `<meta>` image tags on every page. `assets/images/` also keeps GIMP `.xcf` design sources (`favicon.xcf`, `sharecard.xcf`) alongside the exported PNGs.
-- `assets/js/current_time.js` is legacy: precached by the service worker but referenced by no page. Verify before relying on it.
+- Every file in `assets/js/` is referenced by at least one page. Keep it that way: a script that no page loads should be deleted rather than left precached (the legacy `current_time.js` was removed on 2026-07-23 for exactly this reason).
 
 ## Other Information
 

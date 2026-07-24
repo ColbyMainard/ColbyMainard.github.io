@@ -29,105 +29,25 @@ $signal_lost_5: #fdf3e3;
     }
 }
 
+// No h1 tier here: the 404 page's h1 sits in #introSectionDiv, outside these
+// two sections, so headingRamp is called without an $h1 color.
 %notFoundSection {
-    margin: auto;
-    background-color: $signal_lost_1;
-    width: 80%;
-    border-radius: 10px;
-    padding: 1.5em 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-family: "Courier New", monospace;
-    h2 {
-        text-align: left;
-        color: $signal_lost_5;
-        font-size: 300%;
-    }
-    h3 {
-        text-align: left;
-        color: $signal_lost_4;
-        font-size: 200%;
-    }
-    p {
-        text-align: left;
-        color: $signal_lost_3;
-        font-size: 100%;
-    }
-    /* unvisited link */
-    a:link {
-        text-align: left;
-        color: $signal_lost_4;
-        font-size: 100%;
-    }
-    /* visited link */
-    a:visited {
-        text-align: left;
-        color: $signal_lost_4;
-        font-size: 100%;
-    }
-    /* mouse over link */
-    a:hover {
-        text-align: left;
-        color: $signal_lost_5;
-        font-size: 100%;
-    }
-    /* selected link */
-    a:active {
-        text-align: left;
-        color: $signal_lost_5;
-        font-size: 100%;
-    }
-    ul {
-        text-align: left;
-        li {
-            color: $signal_lost_3;
-            font-size: 100%;
-        }
-    }
+    @include sectionShell($signal_lost_1, $padding: 1.5em 2em);
+    @include headingRamp($h2: $signal_lost_5, $h3: $signal_lost_4);
+    @include bodyText($signal_lost_3);
+    @include proseLinks($signal_lost_4, $signal_lost_5, $underline: false);
+    @include listText($signal_lost_3);
 }
 
 #notFound { @extend %notFoundSection; }
 #helpfulLinks { @extend %notFoundSection; }
 
-/*
- * Animation initial states — only applied when JS is active.
- * Elements start invisible; AnimeJS animates them into view.
- * (The #introSectionDiv gate duplicates what other per-page partials
- * already emit — the established per-partial convention. The #contactMe
- * gate is shared and lives in default.scss.)
- */
-html.js-animations {
-    #introSectionDiv,
-    #notFound {
-        > h1, > h2, > h3, > p, > ul, > a {
-            opacity: 0;
-        }
-    }
-    #helpfulLinks {
-        /* li (not > ul) so the page links can stagger in individually */
-        > h2, > p, li {
-            opacity: 0;
-        }
-    }
-}
+// Animation gating (initial hidden state plus the reduced-motion safety net).
+// The #introSectionDiv gate duplicates what other per-page partials already
+// emit, which is the established per-partial convention. The #contactMe gate is
+// shared and lives in default.scss.
+@include animationGate("#introSectionDiv, #notFound", "> h1, > h2, > h3, > p, > ul, > a");
 
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
- */
-@media (prefers-reduced-motion: reduce) {
-    html.js-animations {
-        #introSectionDiv,
-        #notFound {
-            > h1, > h2, > h3, > p, > ul, > a {
-                opacity: 1 !important;
-            }
-        }
-        #helpfulLinks {
-            > h2, > p, li {
-                opacity: 1 !important;
-            }
-        }
-    }
-}
+// #helpfulLinks gates `li` rather than `> ul` so the page links stagger in
+// individually, so it needs its own call rather than joining the list above.
+@include animationGate("#helpfulLinks", "> h2, > p, li");
