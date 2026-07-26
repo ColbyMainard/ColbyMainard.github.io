@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v44";
+const CACHE_VERSION = "v45";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -48,7 +48,14 @@ self.addEventListener("install", function (event) {
         caches.open(CACHE_NAME).then(function (cache) {
             return Promise.all(
                 PRECACHE_URLS.map(function (url) {
-                    return cache.add(url).catch(function () { /* tolerate missing assets */ });
+                    return cache.add(url).catch(function (err) {
+                        // Tolerate a missing/renamed asset so one bad path can't
+                        // fail the whole install, but surface it anyway. A silent
+                        // catch makes a typo'd PRECACHE_URLS entry (e.g. after a
+                        // rename that skips the AGENTS.md checklist) permanently
+                        // invisible, even in local dev over http://localhost.
+                        console.warn("[service-worker] precache skipped:", url, err);
+                    });
                 })
             );
         }).then(function () {

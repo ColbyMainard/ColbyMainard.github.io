@@ -62,8 +62,17 @@
         }
 
         if (!prefersReducedMotion() && typeof window.anime !== "undefined" && window.anime.animate) {
+            // Read the live opacity so an interrupted fade resumes from where it
+            // is. Guard with isNaN rather than `|| default`: a genuine current
+            // opacity of 0 (button mid-hide) must be preserved as a fade-in's
+            // starting point, and `parseFloat(...) || 0` would keep 0 by luck
+            // while `|| 1` on the hide path would wrongly treat it as missing.
+            var currentOpacity = parseFloat(getComputedStyle(button).opacity);
+            if (isNaN(currentOpacity)) {
+                currentOpacity = next ? 0 : 1;
+            }
             window.anime.animate(button, {
-                opacity: next ? [parseFloat(getComputedStyle(button).opacity) || 0, 1] : [parseFloat(getComputedStyle(button).opacity) || 1, 0],
+                opacity: next ? [currentOpacity, 1] : [currentOpacity, 0],
                 translateY: next ? ["20px", "0px"] : ["0px", "20px"],
                 duration: 300,
                 ease: "outQuad"

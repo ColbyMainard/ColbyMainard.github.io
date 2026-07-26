@@ -27,8 +27,11 @@
     if (!isHttp) return;
 
     window.addEventListener("load", function () {
-        navigator.serviceWorker.register(rootPrefix + "service-worker.js").catch(function () {
-            /* registration can fail on non-root hosts or restrictive CSPs; ignore quietly */
+        navigator.serviceWorker.register(rootPrefix + "service-worker.js").catch(function (err) {
+            // Registration can legitimately fail on non-root hosts or under a
+            // restrictive CSP; warn instead of failing silently so a genuine
+            // regression stays visible in the console during development.
+            console.warn("[service-worker] registration failed:", err);
         });
     });
 })();
