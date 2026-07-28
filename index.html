@@ -18,7 +18,9 @@
 
         <!-- Canonical URL and social sharing cards -->
         <link rel="canonical" href="https://colbymainard.github.io/">
-        <meta property="og:type" content="website">
+        <!-- profile, not website: this page declares @type ProfilePage in its
+             JSON-LD below, and og:type keeps the Open Graph layer in agreement. -->
+        <meta property="og:type" content="profile">
         <meta property="og:url" content="https://colbymainard.github.io/">
         <meta property="og:title" content="Colby Mainard — Machine Learning Engineer">
         <meta property="og:description" content="Colby Mainard: machine learning engineer specializing in computer vision for sports analytics, cybersecurity, fintech, and medical imaging. M.S. in CS, Texas A&amp;M.">
@@ -56,6 +58,7 @@
         <script src="./assets/js/index_animations.js" defer></script>
         <script src="./assets/js/navbar.js" defer></script>
         <script src="./assets/js/back_to_top.js" defer></script>
+        <script src="./assets/js/easter_egg.js" defer></script>
         <script src="./assets/js/service_worker_register.js" defer></script>
 
         <!-- JSON-LD: Person schema -->
@@ -95,7 +98,7 @@
             "SQL", "Amazon Web Services", "Docker", "MLOps",
             "Reinforcement Learning", "Transformer Architectures"
           ],
-          "sameAs": ["https://www.linkedin.com/in/colby-mainard/"],
+          "sameAs": ["https://www.linkedin.com/in/colby-mainard/", "https://github.com/ColbyMainard"],
           "email": "mailto:colby.mainard@proton.me",
           "description": "Machine Learning Engineer specializing in computer vision and AI, with experience in sports analytics, cybersecurity, and medical imaging."
         }
@@ -281,9 +284,9 @@
                         <li><strong>Dates:</strong> August 2020-December 2021</li>
                     </ul>
                     <p>Relevant Courses</p>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="grad-coursework-caption">
                     <table>
-                        <caption class="visually-hidden">Relevant graduate coursework</caption>
+                        <caption class="visually-hidden" id="grad-coursework-caption">Relevant graduate coursework</caption>
                         <tr>
                             <th scope="col">Course Name</th>
                             <th scope="col">Course Number</th>
@@ -621,9 +624,9 @@
                         <li><strong>Dates:</strong> August 2016-May 2020</li>
                     </ul>
                     <p>Relevant Courses</p>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="undergrad-coursework-caption">
                     <table>
-                        <caption class="visually-hidden">Relevant undergraduate coursework</caption>
+                        <caption class="visually-hidden" id="undergrad-coursework-caption">Relevant undergraduate coursework</caption>
                         <tr>
                             <th scope="col">Course Name</th>
                             <th scope="col">Course Number</th>

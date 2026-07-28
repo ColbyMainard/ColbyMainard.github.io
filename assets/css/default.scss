@@ -264,6 +264,17 @@ html {
 .tableScroll {
     max-width: 100%;
     overflow-x: auto;
+
+    /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user
+       can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable
+       element has to show where focus is. The global `main a:focus-visible`
+       rule below covers links only, so the container needs its own ring.
+       currentColor tracks each section's body text color, which every partial
+       keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
 }
 
 /* <main> is focused programmatically by the skip link; don't paint a ring. */
@@ -545,6 +556,103 @@ main a:focus-visible {
         width: 44px;
         height: 44px;
         font-size: 140%;
+    }
+}
+
+/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it
+   never sits under the back-to-top button on the opposite corner. $noir_5 on
+   $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair
+   already verified at 4.78:1 for .floatingBackToTop. */
+.easterEggCard {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 300;
+    max-width: 22rem;
+    padding: 16px 20px;
+    text-align: left;
+    background-color: $noir_1;
+    color: $noir_5;
+    border: 2px solid $emerald_efficiency_3;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    font-family: "Courier New", monospace;
+    opacity: 0;
+    transform: translateY(12px);
+    /* Mirrors .floatingBackToTop: an un-revealed card must not swallow clicks
+       on the content behind it. */
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Focused programmatically on reveal, the same way main.main is by the skip
+       link. The card announces itself through its accessible name, so a ring
+       around the whole card would be noise. */
+    &:focus {
+        outline: none;
+    }
+
+    .easterEggTitle {
+        margin: 0 0 0.5em;
+        color: $emerald_efficiency_5;
+        font-size: 125%;
+    }
+
+    .easterEggJoke {
+        margin: 0 0 1em;
+        color: $noir_5;
+        font-size: 95%;
+        line-height: 1.5;
+    }
+
+    .easterEggActions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .easterEggButton {
+        background-color: $emerald_efficiency_1;
+        border: 2px solid $emerald_efficiency_3;
+        border-radius: 4px;
+        color: $emerald_efficiency_5;
+        font-family: "Courier New", monospace;
+        font-size: 90%;
+        padding: 6px 12px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $emerald_efficiency_2;
+            border-color: $emerald_efficiency_5;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $emerald_efficiency_5;
+            outline-offset: 2px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .easterEggCard {
+        left: 16px;
+        /* Clear the back-to-top button (44px wide at right: 16px) plus a gap. */
+        right: 80px;
+        bottom: 16px;
+        max-width: none;
+    }
+}
+
+/* Safety net paired with the JS-side prefersReducedMotion() check in
+   easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
+@media (prefers-reduced-motion: reduce) {
+    .easterEggCard {
+        transition: none;
     }
 }
 

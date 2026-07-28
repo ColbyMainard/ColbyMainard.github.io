@@ -71,6 +71,10 @@
         <script src="./assets/js/404_animations.js" defer></script>
         <script src="./assets/js/navbar.js" defer></script>
         <script src="./assets/js/back_to_top.js" defer></script>
+        <!-- Safe here despite this page's other script omissions: easter_egg.js
+             derives no paths, so it has nothing to get wrong at a nested missing
+             URL (it simply won't load there, like every relative asset). -->
+        <script src="./assets/js/easter_egg.js" defer></script>
 
         <!-- JSON-LD: BreadcrumbList -->
         <script type="application/ld+json">

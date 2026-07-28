@@ -144,6 +144,13 @@ $dark_blue_gray_5: #ff5c5c;
     "> h1, > h2, > h3, > h4, > p, > ul, > dl, > .tableScroll, > a"
 );
 
+// The dated index is a <nav>, which the shared child list above does not match,
+// so without this it would pop in while its siblings fade. Gated on its own
+// class rather than by adding "> nav" above: that would also catch a future
+// direct-child <nav> in a take section (the planned .relatedStances component)
+// and strand it at opacity: 0 with no animation step to reveal it.
+@include animationGate("#introSectionDiv", "> .takesIndex");
+
 /* Reading-time pill rendered next to "Last Updated:" */
 .readingTime {
     font-style: italic;
@@ -165,6 +172,54 @@ $dark_blue_gray_5: #ff5c5c;
 .feedSubscribe a:focus,
 .feedSubscribe a:active {
     color: $noir_5;
+}
+
+/* Dated index of the six takes, under the page intro. Sits on the same global
+   $noir_2 body background as .feedSubscribe above, so it reuses that block's
+   documented AA pair: $dark_blue_gray_4 for links and dates (6.07:1) with a
+   $noir_5 hover (7.22:1). Stays centered like the rest of the page rather than
+   left-aligning, which would be the only left-aligned block on the site. */
+.takesIndex {
+    margin: 1.5em auto 0;
+    max-width: 44em;
+
+    .takesIndexLabel {
+        margin-bottom: 0.4em;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    li {
+        padding: 0.5em 0;
+        border-bottom: 1px solid rgba($noir_5, 0.15);
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    a:link,
+    a:visited {
+        color: $dark_blue_gray_4;
+        text-decoration: underline;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: $noir_5;
+    }
+
+    time {
+        display: block;
+        color: $dark_blue_gray_4;
+        font-size: 90%;
+    }
 }
 
 /* Reading progress bar — fixed strip at the top of the viewport that

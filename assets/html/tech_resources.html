@@ -49,6 +49,7 @@
         <script src="../js/tech_resources_animations.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
+        <script src="../js/easter_egg.js" defer></script>
         <script src="../js/service_worker_register.js" defer></script>
 
         <!-- JSON-LD: BreadcrumbList -->
@@ -127,9 +128,9 @@
                 <section class="cybersecurityResources" id="cybersecurityResources">
                     <h2>Cybersecurity</h2>
                     <h3 id="cybersecurity-certifications">Certifications</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="cybersecurity-certifications-caption">
                     <table>
-                        <caption class="visually-hidden">Cybersecurity certifications</caption>
+                        <caption class="visually-hidden" id="cybersecurity-certifications-caption">Cybersecurity certifications</caption>
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
@@ -157,9 +158,9 @@
                     </table>
                     </div>
                     <h3 id="cybersecurity-books">Books</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="cybersecurity-books-caption">
                     <table>
-                        <caption class="visually-hidden">Cybersecurity books</caption>
+                        <caption class="visually-hidden" id="cybersecurity-books-caption">Cybersecurity books</caption>
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author(s)</th>
@@ -743,9 +744,9 @@
                     </table>
                     </div>
                     <h3>Podcasts</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="cybersecurity-podcasts-caption">
                     <table>
-                        <caption class="visually-hidden">Cybersecurity podcasts</caption>
+                        <caption class="visually-hidden" id="cybersecurity-podcasts-caption">Cybersecurity podcasts</caption>
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Link</th>
@@ -809,9 +810,9 @@
                         These pair well with my <a href="./tech_takes.html#AGIDiv">opinion on AGI hype</a> and <a href="./tech_takes.html#KANDiv">deep-dive on Kolmogorov-Arnold Networks</a>.
                     </p>
                     <h3 id="ai-books">Books</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="ai-books-caption">
                     <table>
-                        <caption class="visually-hidden">Artificial intelligence books</caption>
+                        <caption class="visually-hidden" id="ai-books-caption">Artificial intelligence books</caption>
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author(s)</th>
@@ -1116,9 +1117,9 @@
                     </table>
                     </div>
                     <h3>Podcasts</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="ai-podcasts-caption">
                     <table>
-                        <caption class="visually-hidden">Artificial intelligence podcasts</caption>
+                        <caption class="visually-hidden" id="ai-podcasts-caption">Artificial intelligence podcasts</caption>
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Link</th>
@@ -1139,9 +1140,9 @@
                 <section class="cppResources" id="cppResources">
                     <h2>C/C++</h2>
                     <h3 id="cpp-books">Books</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="cpp-books-caption">
                     <table>
-                        <caption class="visually-hidden">C and C++ books</caption>
+                        <caption class="visually-hidden" id="cpp-books-caption">C and C++ books</caption>
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author(s)</th>
@@ -1210,9 +1211,9 @@
                 <section class="pythonResources" id="pythonResources">
                     <h2>Python</h2>
                     <h3 id="python-books">Books</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="python-books-caption">
                     <table>
-                        <caption class="visually-hidden">Python books</caption>
+                        <caption class="visually-hidden" id="python-books-caption">Python books</caption>
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author(s)</th>
@@ -1243,9 +1244,10 @@
             <div class="scriptingResourcesDiv" id="scriptingResourcesDiv">
                 <section class="scriptingResources" id="scriptingResources">
                     <h2>Scripting</h2>
-                    <div class="tableScroll">
+                    <h3 id="scripting-books">Books</h3>
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="scripting-books-caption">
                     <table>
-                        <caption class="visually-hidden">Scripting books</caption>
+                        <caption class="visually-hidden" id="scripting-books-caption">Scripting books</caption>
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author(s)</th>
@@ -1391,9 +1393,10 @@
             <div class="operatingSystemsResourcesDiv" id="operatingSystemsResourcesDiv">
                 <section class="operatingSystemsResources" id="operatingSystemsResources">
                     <h2>Operating Systems</h2>
-                    <div class="tableScroll">
+                    <h3 id="os-books">Books</h3>
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="os-books-caption">
                     <table>
-                        <caption class="visually-hidden">Operating systems books</caption>
+                        <caption class="visually-hidden" id="os-books-caption">Operating systems books</caption>
                         <tr>
                             <th scope="col">Title</th>
                             <th scope="col">Author(s)</th>

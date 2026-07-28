@@ -353,6 +353,12 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > a {
     opacity: 1 !important; } }
+html.js-animations #introSectionDiv > .takesIndex {
+  opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > .takesIndex {
+    opacity: 1 !important; } }
 /* Reading-time pill rendered next to "Last Updated:" */
 .readingTime {
   font-style: italic;
@@ -373,6 +379,39 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 .feedSubscribe a:focus,
 .feedSubscribe a:active {
   color: #d4d4d9; }
+
+/* Dated index of the six takes, under the page intro. Sits on the same global
+   $noir_2 body background as .feedSubscribe above, so it reuses that block's
+   documented AA pair: $dark_blue_gray_4 for links and dates (6.07:1) with a
+   $noir_5 hover (7.22:1). Stays centered like the rest of the page rather than
+   left-aligning, which would be the only left-aligned block on the site. */
+.takesIndex {
+  margin: 1.5em auto 0;
+  max-width: 44em; }
+  .takesIndex .takesIndexLabel {
+    margin-bottom: 0.4em;
+    font-weight: bold; }
+  .takesIndex ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+  .takesIndex li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid rgba(212, 212, 217, 0.15); }
+    .takesIndex li:last-child {
+      border-bottom: none; }
+  .takesIndex a:link,
+  .takesIndex a:visited {
+    color: #c2c2d1;
+    text-decoration: underline; }
+  .takesIndex a:hover,
+  .takesIndex a:focus,
+  .takesIndex a:active {
+    color: #d4d4d9; }
+  .takesIndex time {
+    display: block;
+    color: #c2c2d1;
+    font-size: 90%; }
 
 /* Reading progress bar — fixed strip at the top of the viewport that
  * fills left-to-right as the reader scrolls down. Injected dynamically
@@ -752,7 +791,16 @@ html {
    would strip the table's semantics and its scope-ed row/column headers. */
 .tableScroll {
   max-width: 100%;
-  overflow-x: auto; }
+  overflow-x: auto;
+  /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user
+     can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable
+     element has to show where focus is. The global `main a:focus-visible`
+     rule below covers links only, so the container needs its own ring.
+     currentColor tracks each section's body text color, which every partial
+     keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */ }
+  .tableScroll:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px; }
 
 /* <main> is focused programmatically by the skip link; don't paint a ring. */
 main.main:focus {
@@ -961,6 +1009,80 @@ main a:focus-visible {
     width: 44px;
     height: 44px;
     font-size: 140%; } }
+/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it
+   never sits under the back-to-top button on the opposite corner. $noir_5 on
+   $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair
+   already verified at 4.78:1 for .floatingBackToTop. */
+.easterEggCard {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 300;
+  max-width: 22rem;
+  padding: 16px 20px;
+  text-align: left;
+  background-color: #1a1a1e;
+  color: #d4d4d9;
+  border: 2px solid #50c3a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  font-family: "Courier New", monospace;
+  opacity: 0;
+  transform: translateY(12px);
+  /* Mirrors .floatingBackToTop: an un-revealed card must not swallow clicks
+     on the content behind it. */
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  /* Focused programmatically on reveal, the same way main.main is by the skip
+     link. The card announces itself through its accessible name, so a ring
+     around the whole card would be noise. */ }
+  .easterEggCard.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; }
+  .easterEggCard:focus {
+    outline: none; }
+  .easterEggCard .easterEggTitle {
+    margin: 0 0 0.5em;
+    color: #e0f7fa;
+    font-size: 125%; }
+  .easterEggCard .easterEggJoke {
+    margin: 0 0 1em;
+    color: #d4d4d9;
+    font-size: 95%;
+    line-height: 1.5; }
+  .easterEggCard .easterEggActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; }
+  .easterEggCard .easterEggButton {
+    background-color: #007a5e;
+    border: 2px solid #50c3a1;
+    border-radius: 4px;
+    color: #e0f7fa;
+    font-family: "Courier New", monospace;
+    font-size: 90%;
+    padding: 6px 12px;
+    cursor: pointer; }
+    .easterEggCard .easterEggButton:hover {
+      background-color: #1d9a6a;
+      border-color: #e0f7fa; }
+    .easterEggCard .easterEggButton:focus-visible {
+      outline: 2px solid #e0f7fa;
+      outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .easterEggCard {
+    left: 16px;
+    /* Clear the back-to-top button (44px wide at right: 16px) plus a gap. */
+    right: 80px;
+    bottom: 16px;
+    max-width: none; } }
+/* Safety net paired with the JS-side prefersReducedMotion() check in
+   easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
+@media (prefers-reduced-motion: reduce) {
+  .easterEggCard {
+    transition: none; } }
 /* Inline + block code styling.
  * For syntax highlighting on <pre><code class="language-X"> blocks, drop in
  * Prism.js (https://prismjs.com/) — these base styles are designed to remain

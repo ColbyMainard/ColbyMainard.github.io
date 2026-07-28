@@ -71,9 +71,15 @@
             if (isNaN(currentOpacity)) {
                 currentOpacity = next ? 0 : 1;
             }
+            // translateY deliberately omits a from-value while opacity above
+            // supplies one. That asymmetry is the fix, not an oversight: a
+            // to-only tween interpolates from the element's live rendered
+            // transform, so an interrupted slide resumes in place. Restoring a
+            // ["20px", "0px"] tuple here re-breaks it — the position would snap
+            // back to the hardcoded start while the fade kept gliding.
             window.anime.animate(button, {
                 opacity: next ? [currentOpacity, 1] : [currentOpacity, 0],
-                translateY: next ? ["20px", "0px"] : ["0px", "20px"],
+                translateY: next ? "0px" : "20px",
                 duration: 300,
                 ease: "outQuad"
             });

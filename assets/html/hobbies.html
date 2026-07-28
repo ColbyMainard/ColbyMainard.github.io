@@ -48,6 +48,7 @@
         <script src="../js/hobbies_animations.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
+        <script src="../js/easter_egg.js" defer></script>
         <script src="../js/service_worker_register.js" defer></script>
 
         <!-- JSON-LD: BreadcrumbList -->
@@ -208,9 +209,9 @@
                         </li>
                     </ul>
                     <h3>Interesting Podcasts</h3>
-                    <div class="tableScroll">
+                    <div class="tableScroll" tabindex="0" role="region" aria-labelledby="hobbies-podcasts-caption">
                     <table>
-                        <caption class="visually-hidden">Interesting podcasts</caption>
+                        <caption class="visually-hidden" id="hobbies-podcasts-caption">Interesting podcasts</caption>
                         <tr>
                             <th scope="col">
                                 Podcast Name
