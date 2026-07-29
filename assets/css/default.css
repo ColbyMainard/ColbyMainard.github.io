@@ -67,6 +67,17 @@
       color: #e64d9e;
       font-size: 100%; }
 
+/* Decorative section illustrations. These five classes replace the inline
+   style= attributes the drawings shipped with; the declarations are unchanged.
+   Colors stay literal rather than moving to palette variables because they
+   match the fill=/stroke= presentation attributes on the sibling shapes in the
+   same drawing. Every one of these <svg> elements is aria-hidden decoration, so
+   no contrast requirement applies to them. */
+#workHistory .bagFlap {
+  fill: none;
+  stroke: #AA7333;
+  stroke-width: 3; }
+
 #education table {
   text-align: left;
   border-collapse: collapse;
@@ -90,6 +101,13 @@
       border-right-style: groove;
       border-bottom-style: groove;
       border-left-style: groove; }
+#education .capPanel {
+  fill: black;
+  stroke: white;
+  stroke-width: 3; }
+#education .capTassel {
+  stroke: red;
+  stroke-width: 3; }
 #education table tr td ul li {
   color: #e64d9e;
   font-size: 100%; }
@@ -99,6 +117,15 @@
   cursor: pointer; }
   #education table tr td details summary:hover {
     color: #ff3d94; }
+
+#technicalSkills .circuitTrace {
+  stroke: #ADFF2F;
+  stroke-width: 3; }
+
+#otherSkills .clipboardClip {
+  fill: none;
+  stroke: gray;
+  stroke-width: 3; }
 
 html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #workHistory > h1, html.js-animations #workHistory > h2, html.js-animations #workHistory > h3, html.js-animations #workHistory > h4, html.js-animations #workHistory > p, html.js-animations #workHistory > ul, html.js-animations #workHistory > svg, html.js-animations #workHistory > .tableScroll, html.js-animations #workHistory > a, html.js-animations #education > h1, html.js-animations #education > h2, html.js-animations #education > h3, html.js-animations #education > h4, html.js-animations #education > p, html.js-animations #education > ul, html.js-animations #education > svg, html.js-animations #education > .tableScroll, html.js-animations #education > a, html.js-animations #projects > h1, html.js-animations #projects > h2, html.js-animations #projects > h3, html.js-animations #projects > h4, html.js-animations #projects > p, html.js-animations #projects > ul, html.js-animations #projects > svg, html.js-animations #projects > .tableScroll, html.js-animations #projects > a, html.js-animations #technicalSkills > h1, html.js-animations #technicalSkills > h2, html.js-animations #technicalSkills > h3, html.js-animations #technicalSkills > h4, html.js-animations #technicalSkills > p, html.js-animations #technicalSkills > ul, html.js-animations #technicalSkills > svg, html.js-animations #technicalSkills > .tableScroll, html.js-animations #technicalSkills > a, html.js-animations #certifications > h1, html.js-animations #certifications > h2, html.js-animations #certifications > h3, html.js-animations #certifications > h4, html.js-animations #certifications > p, html.js-animations #certifications > ul, html.js-animations #certifications > svg, html.js-animations #certifications > .tableScroll, html.js-animations #certifications > a, html.js-animations #otherSkills > h1, html.js-animations #otherSkills > h2, html.js-animations #otherSkills > h3, html.js-animations #otherSkills > h4, html.js-animations #otherSkills > p, html.js-animations #otherSkills > ul, html.js-animations #otherSkills > svg, html.js-animations #otherSkills > .tableScroll, html.js-animations #otherSkills > a {
   opacity: 0; }

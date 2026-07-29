@@ -46,11 +46,37 @@ $cyberpunk_dreams_5: #200b4b;
     @include listText($cyberpunk_dreams_2);
 }
 
-#workHistory { @extend %indexSection; }
+/* Decorative section illustrations. These five classes replace the inline
+   style= attributes the drawings shipped with; the declarations are unchanged.
+   Colors stay literal rather than moving to palette variables because they
+   match the fill=/stroke= presentation attributes on the sibling shapes in the
+   same drawing. Every one of these <svg> elements is aria-hidden decoration, so
+   no contrast requirement applies to them. */
+
+#workHistory {
+    @extend %indexSection;
+    // Laptop-bag flap: an open outline over the filled body beneath it.
+    .bagFlap {
+        fill: none;
+        stroke: #AA7333;
+        stroke-width: 3;
+    }
+}
 
 #education {
     @extend %indexSection;
     @include dataTable($cyberpunk_dreams_2);
+    // Graduation cap: the mortarboard and its crown share one outline, and the
+    // tassel is the single red accent.
+    .capPanel {
+        fill: black;
+        stroke: white;
+        stroke-width: 3;
+    }
+    .capTassel {
+        stroke: red;
+        stroke-width: 3;
+    }
     // Coursework cells carry a nested topic list and a <details> disclosure;
     // the summary is the only interactive element inside the table.
     table tr td {
@@ -74,8 +100,26 @@ $cyberpunk_dreams_5: #200b4b;
 }
 
 #projects { @extend %indexSection; }
-#technicalSkills { @extend %indexSection; }
-#otherSkills { @extend %indexSection; }
+
+#technicalSkills {
+    @extend %indexSection;
+    // Circuit board: every trace between a contact and the central chip.
+    .circuitTrace {
+        stroke: #ADFF2F;
+        stroke-width: 3;
+    }
+}
+
+#otherSkills {
+    @extend %indexSection;
+    // Clipboard: the metal clip arching over the top of the board.
+    .clipboardClip {
+        fill: none;
+        stroke: gray;
+        stroke-width: 3;
+    }
+}
+
 #certifications { @extend %indexSection; }
 
 // Animation gating (initial hidden state plus the reduced-motion safety net).
