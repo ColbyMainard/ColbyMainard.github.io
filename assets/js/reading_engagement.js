@@ -1,13 +1,19 @@
 /**
- * tech_takes_engagement.js
+ * reading_engagement.js
  *
- * Two engagement features for tech_takes.html:
+ * Two engagement features for the long-form pages (tech_takes.html and
+ * guides.html):
  *   1. Per-section reading-time estimates: for each
  *      <span data-reading-time> placeholder, walks up to the nearest
  *      <section>, counts words, and renders "X min read" at 200 wpm.
  *   2. Reading progress bar fixed to the top of the viewport that fills
  *      left-to-right as the user scrolls down. Uses a passive scroll
  *      listener and rAF coalescing to stay cheap.
+ *
+ * Nothing here is page-specific: both features key off markup
+ * ([data-reading-time] and the nearest <section>) rather than page
+ * identity, which is why the file is named for the behaviour rather than
+ * for the page that first used it.
  *
  * Pure DOM, no external dependency.
  */

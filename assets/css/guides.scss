@@ -26,6 +26,14 @@ $techno_serenity_5: #e0f5f2;
     @include proseLinks($techno_serenity_4, $techno_serenity_5, $underline: false);
     @include listText($techno_serenity_3);
     @include dataTable($techno_serenity_3);
+    /* Reading-time pill next to "Last Updated:". The base .readingTime rule
+       lives in tech_takes.scss and colors it with that page's palette, which
+       is untraceable here; _3 is this page's documented body tone (5.57:1 on
+       the _1 bg) and the pill is body-adjacent secondary text. Italics and
+       the 95% size are inherited from the base rule. */
+    .readingTime {
+        color: $techno_serenity_3;
+    }
 }
 
 #dataEngineeringGuide { @extend %guideSection; }

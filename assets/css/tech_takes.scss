@@ -151,7 +151,9 @@ $dark_blue_gray_5: #ff5c5c;
 // and strand it at opacity: 0 with no animation step to reveal it.
 @include animationGate("#introSectionDiv", "> .takesIndex");
 
-/* Reading-time pill rendered next to "Last Updated:" */
+/* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the
+   base rule for every page that loads reading_engagement.js, not just this
+   one; guides.scss overrides the color with its own palette. */
 .readingTime {
     font-style: italic;
     color: $dark_blue_gray_4;
@@ -224,7 +226,8 @@ $dark_blue_gray_5: #ff5c5c;
 
 /* Reading progress bar — fixed strip at the top of the viewport that
  * fills left-to-right as the reader scrolls down. Injected dynamically
- * by tech_takes_engagement.js. z-index sits above the sticky header
+ * by reading_engagement.js, so it appears on Guides as well. z-index sits
+ * above the sticky header
  * (which uses 100). */
 #reading-progress {
     position: fixed;

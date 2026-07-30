@@ -386,7 +386,9 @@ html.js-animations #introSectionDiv > .takesIndex {
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > .takesIndex {
     opacity: 1 !important; } }
-/* Reading-time pill rendered next to "Last Updated:" */
+/* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the
+   base rule for every page that loads reading_engagement.js, not just this
+   one; guides.scss overrides the color with its own palette. */
 .readingTime {
   font-style: italic;
   color: #c2c2d1;
@@ -442,7 +444,8 @@ html.js-animations #introSectionDiv > .takesIndex {
 
 /* Reading progress bar — fixed strip at the top of the viewport that
  * fills left-to-right as the reader scrolls down. Injected dynamically
- * by tech_takes_engagement.js. z-index sits above the sticky header
+ * by reading_engagement.js, so it appears on Guides as well. z-index sits
+ * above the sticky header
  * (which uses 100). */
 #reading-progress {
   position: fixed;
@@ -626,7 +629,12 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding: 1.5em 2em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace; }
+  font-family: "Courier New", monospace;
+  /* Reading-time pill next to "Last Updated:". The base .readingTime rule
+     lives in tech_takes.scss and colors it with that page's palette, which
+     is untraceable here; _3 is this page's documented body tone (5.57:1 on
+     the _1 bg) and the pill is body-adjacent secondary text. Italics and
+     the 95% size are inherited from the base rule. */ }
   #dataEngineeringGuide h1, #computerVisionGuide h1, #generativeAIGuide h1, #nlpGuide h1, #reinforcementLearningGuide h1, #softwareEngineeringGuide h1, #cybersecurityGuide h1 {
     text-align: left;
     color: #e0f5f2;
@@ -703,6 +711,8 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
         border-right-style: groove;
         border-bottom-style: groove;
         border-left-style: groove; }
+  #dataEngineeringGuide .readingTime, #computerVisionGuide .readingTime, #generativeAIGuide .readingTime, #nlpGuide .readingTime, #reinforcementLearningGuide .readingTime, #softwareEngineeringGuide .readingTime, #cybersecurityGuide .readingTime {
+    color: #8fbccb; }
 
 html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #dataEngineeringGuide > h1, html.js-animations #dataEngineeringGuide > h2, html.js-animations #dataEngineeringGuide > h3, html.js-animations #dataEngineeringGuide > h4, html.js-animations #dataEngineeringGuide > p, html.js-animations #dataEngineeringGuide > ul, html.js-animations #dataEngineeringGuide > blockquote, html.js-animations #dataEngineeringGuide > a, html.js-animations #computerVisionGuide > h1, html.js-animations #computerVisionGuide > h2, html.js-animations #computerVisionGuide > h3, html.js-animations #computerVisionGuide > h4, html.js-animations #computerVisionGuide > p, html.js-animations #computerVisionGuide > ul, html.js-animations #computerVisionGuide > blockquote, html.js-animations #computerVisionGuide > a, html.js-animations #generativeAIGuide > h1, html.js-animations #generativeAIGuide > h2, html.js-animations #generativeAIGuide > h3, html.js-animations #generativeAIGuide > h4, html.js-animations #generativeAIGuide > p, html.js-animations #generativeAIGuide > ul, html.js-animations #generativeAIGuide > blockquote, html.js-animations #generativeAIGuide > a, html.js-animations #nlpGuide > h1, html.js-animations #nlpGuide > h2, html.js-animations #nlpGuide > h3, html.js-animations #nlpGuide > h4, html.js-animations #nlpGuide > p, html.js-animations #nlpGuide > ul, html.js-animations #nlpGuide > blockquote, html.js-animations #nlpGuide > a, html.js-animations #reinforcementLearningGuide > h1, html.js-animations #reinforcementLearningGuide > h2, html.js-animations #reinforcementLearningGuide > h3, html.js-animations #reinforcementLearningGuide > h4, html.js-animations #reinforcementLearningGuide > p, html.js-animations #reinforcementLearningGuide > ul, html.js-animations #reinforcementLearningGuide > blockquote, html.js-animations #reinforcementLearningGuide > a, html.js-animations #softwareEngineeringGuide > h1, html.js-animations #softwareEngineeringGuide > h2, html.js-animations #softwareEngineeringGuide > h3, html.js-animations #softwareEngineeringGuide > h4, html.js-animations #softwareEngineeringGuide > p, html.js-animations #softwareEngineeringGuide > ul, html.js-animations #softwareEngineeringGuide > blockquote, html.js-animations #softwareEngineeringGuide > a, html.js-animations #cybersecurityGuide > h1, html.js-animations #cybersecurityGuide > h2, html.js-animations #cybersecurityGuide > h3, html.js-animations #cybersecurityGuide > h4, html.js-animations #cybersecurityGuide > p, html.js-animations #cybersecurityGuide > ul, html.js-animations #cybersecurityGuide > blockquote, html.js-animations #cybersecurityGuide > a {
   opacity: 0; }
