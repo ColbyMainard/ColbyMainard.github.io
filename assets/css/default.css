@@ -250,7 +250,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
    5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3;
    #AGI and #Privacy override it to $dark_blue_gray_4 below. */
-#KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement {
+#KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy {
   margin: auto;
   background-color: #20203c;
   width: 80%;
@@ -262,52 +262,54 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined
      so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp
      (_5 is the red heading accent), so hover thickens the underline. */ }
-  #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1 {
+  #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1 {
     text-align: left;
     color: #ff5c5c;
     font-size: 500%; }
-  #KAN h2, #Cryptocurrency h2, #FutureOfQuantum h2, #AGI h2, #Privacy h2, #ProductPlacement h2 {
+  #KAN h2, #Cryptocurrency h2, #FutureOfQuantum h2, #AGI h2, #Privacy h2, #ProductPlacement h2, #PhysicalMediaSupremacy h2 {
     text-align: left;
     color: #c2c2d1;
     font-size: 300%; }
-  #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3 {
+  #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3, #PhysicalMediaSupremacy h3 {
     text-align: left;
     color: #9a9ac2;
     font-size: 200%; }
-  #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4 {
+  #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4, #PhysicalMediaSupremacy h4 {
     text-align: left;
     color: #9a9ac2;
     font-size: 175%; }
-  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link,
+  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link, #PhysicalMediaSupremacy a:link,
   #KAN a:visited,
   #Cryptocurrency a:visited,
   #FutureOfQuantum a:visited,
   #AGI a:visited,
   #Privacy a:visited,
-  #ProductPlacement a:visited {
+  #ProductPlacement a:visited,
+  #PhysicalMediaSupremacy a:visited {
     text-align: left;
     color: #c2c2d1;
     font-size: 100%;
     text-decoration: underline; }
-  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover,
+  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover, #PhysicalMediaSupremacy a:hover,
   #KAN a:active,
   #Cryptocurrency a:active,
   #FutureOfQuantum a:active,
   #AGI a:active,
   #Privacy a:active,
-  #ProductPlacement a:active {
+  #ProductPlacement a:active,
+  #PhysicalMediaSupremacy a:active {
     text-align: left;
     color: #c2c2d1;
     font-size: 100%;
     text-decoration: underline;
     text-decoration-thickness: 2px; }
-  #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p {
+  #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p, #PhysicalMediaSupremacy p {
     text-align: left;
     color: #9a9ac2;
     font-size: 100%; }
-  #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul {
+  #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul, #PhysicalMediaSupremacy ul {
     text-align: left; }
-    #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li {
+    #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li, #PhysicalMediaSupremacy ul li {
       color: #9a9ac2;
       font-size: 100%; }
 

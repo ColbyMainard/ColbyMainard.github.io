@@ -138,6 +138,8 @@ $dark_blue_gray_5: #ff5c5c;
 
 #ProductPlacement { @extend %techTakeSection; }
 
+#PhysicalMediaSupremacy { @extend %techTakeSection; }
+
 // Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
     "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement",
