@@ -29,6 +29,7 @@
         agi: "#AGI",
         privacy: "#Privacy",
         productPlacement: "#ProductPlacement",
+        physicalMedia: "#PhysicalMediaSupremacy",
         contact: "#contactMe"
     };
 
@@ -213,6 +214,36 @@
         }, ">-300");
     }
 
+    /**
+     * Physical Media Supremacy — Record drop and settle
+     * The heading lands like a vinyl record dropped onto a platter: it comes in
+     * tilted, rocks past level, then lies flat. Sub-headings drop from above as
+     * if stacking onto it, and the body settles last.
+     */
+    function animatePhysicalMedia(el) {
+        var tl = anime.createTimeline({ ease: "outCirc" });
+
+        addStep(tl, directChildren(el, "h2"), {
+            opacity: [0, 1],
+            rotate: ["-10deg", "2deg", "0deg"],
+            scale: [0.88, 1],
+            duration: 950
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
+            opacity: [0, 1],
+            rotate: ["-6deg", "0deg"],
+            translateY: ["-18px", "0px"],
+            duration: 600,
+            delay: anime.stagger(90)
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, dl, .tableScroll, a"), {
+            opacity: [0, 1],
+            translateY: ["24px", "0px"],
+            duration: 520,
+            delay: anime.stagger(55)
+        }, ">-300");
+    }
+
     var animationMap = {
         intro: animateIntro,
         kan: animateKAN,
@@ -221,6 +252,7 @@
         agi: animateAGI,
         privacy: animatePrivacy,
         productPlacement: animateProductPlacement,
+        physicalMedia: animatePhysicalMedia,
         contact: animateContact
     };
 

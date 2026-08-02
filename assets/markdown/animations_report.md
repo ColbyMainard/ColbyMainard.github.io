@@ -95,9 +95,10 @@ and body steps).
 | AGI | Slide from right + expand | `outBack` | Intelligence expanding |
 | Privacy | Rise from bottom | `outExpo` | Hidden becoming visible |
 | Product Placement | Cinematic focus pull (scale down + slight rotation settle) | `outQuint` | Broadcast camera zooming in to lock on a logo |
+| Physical Media Supremacy | Record drop and settle (tilt in, rock past level, lie flat) | `outCirc` | Vinyl record dropped onto a platter |
 | Contact | Simple fade | `outSine` | Clean exit |
 
-`outQuint` is used only by Product Placement, and it is the only section with 650ms/550ms step durations rather than the site's usual 500-800ms.
+`outQuint` is used only by Product Placement, and it is the only section with 650ms/550ms step durations rather than the site's usual 500-800ms. `outCirc` is used only by Physical Media Supremacy, and appears nowhere else on the site.
 
 ### hobbies.html
 
@@ -220,6 +221,22 @@ sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
 Without the compiled rules, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there can be a brief flash of unstyled content before JS executes because the CSS would not yet include the `opacity: 0` rules.
 
 ## Changelog
+
+### Physical Media Supremacy section added (tech_takes.html)
+
+A new `#PhysicalMediaSupremacy` section ("Physical Media Supremacy: Why is Streaming Struggling?") was added to `tech_takes.html`, inside `#PhysicalMediaSupremacyDiv`. Wiring it into the page's animation system took three edits:
+
+- **`assets/css/tech_takes.scss`**: `#PhysicalMediaSupremacy` was appended to the `animationGate` selector list, so its direct children start at `opacity: 0` and are re-revealed by the mixin's reduced-motion duplicate. The section's own `%techTakeSection` styling was already in place.
+- **`assets/css/default.css`**: has to be regenerated from `default.scss` to pick up the widened gate. Until it is, the new section's children are ungated and flash on first view: they paint at full opacity, snap to `opacity: 0` when the timeline applies its from-value, then fade back in.
+- **`assets/js/tech_takes_animations.js`**:
+  - Added `physicalMedia: "#PhysicalMediaSupremacy"` to the `sections` map, positioned after `productPlacement` so the map reads in page order.
+  - Added `animatePhysicalMedia(el)`, a "record drop and settle" timeline on `outCirc`. The `h2` enters at `scale: 0.88` tilted `-10deg`, rocks past level to `2deg`, then lies flat at `0deg` (950ms). Sub-headings (`h3`, `h4`) drop 18px from above with a smaller `-6deg -> 0deg` tilt, staggered by 90ms (600ms). Body elements (`p, ul, dl, .tableScroll, a`) finish with a plain 24px rise staggered by 55ms (520ms). Relative offsets (`">-400"`, `">-300"`) overlap the phases so the section reads as one landing rather than three.
+  - Registered `physicalMedia: animatePhysicalMedia` in `animationMap`.
+- **`service-worker.js`**: `CACHE_VERSION` bumped to `v51` so returning visitors get the new script and stylesheet instead of the cached ones.
+
+`outCirc` was chosen because no other animation on the site uses it, and its long glide into a hard stop matches a disc coasting down onto a platter. The three-keyframe `rotate` on the `h2` is what separates this section from the page's two other rotation users: `#KAN` rotates once by `-2deg` while sliding in, and `#ProductPlacement` unwinds `2deg` while scaling down, but neither overshoots and settles back.
+
+The section's markup has only `h2`, `h3`, and `p` direct children. The `ul`, `dl`, `.tableScroll`, and `a` selectors in the body step are inert here and were kept for symmetry with the sibling take sections, which is safe in this direction: `addStep` skips a step whose target list is empty, and a gated-but-absent element cannot be stranded invisible. If the take later grows a list or a table, it animates with no further change.
 
 ### h4 gating fix and dead-selector sweep
 
