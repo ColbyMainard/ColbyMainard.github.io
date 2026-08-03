@@ -657,8 +657,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-align: left;
     color: #8fbccb;
     font-size: 100%; }
-  #dataEngineeringGuide u, #computerVisionGuide u, #generativeAIGuide u, #nlpGuide u, #reinforcementLearningGuide u, #softwareEngineeringGuide u, #cybersecurityGuide u {
-    color: #a3d5e0; }
   #dataEngineeringGuide blockquote, #computerVisionGuide blockquote, #generativeAIGuide blockquote, #nlpGuide blockquote, #reinforcementLearningGuide blockquote, #softwareEngineeringGuide blockquote, #cybersecurityGuide blockquote {
     text-align: left;
     color: #8fbccb;

@@ -12,11 +12,19 @@
 	<id>https://colbymainard.github.io/feed.xml</id>
 	<link rel="self" type="application/atom+xml" href="https://colbymainard.github.io/feed.xml"/>
 	<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html"/>
-	<updated>2026-07-27T00:00:00Z</updated>
+	<updated>2026-08-02T00:00:00Z</updated>
 	<author>
 		<name>Colby Mainard</name>
 		<uri>https://colbymainard.github.io/</uri>
 	</author>
+	<entry>
+		<title>Physical Media Supremacy: Why is Streaming Struggling?</title>
+		<id>tag:colbymainard.github.io,2026:tech-takes/physical-media-supremacy</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#PhysicalMediaSupremacyDiv"/>
+		<published>2026-07-31T00:00:00Z</published>
+		<updated>2026-08-02T00:00:00Z</updated>
+		<summary>Discussing the resurgence of physical media and how streaming has made a series of unforced errors that is slowly cannibalizing itself.</summary>
+	</entry>
 	<entry>
 		<title>Product Placement in Sports Marketing: Tips and Tricks</title>
 		<id>tag:colbymainard.github.io,2026:tech-takes/product-placement</id>
