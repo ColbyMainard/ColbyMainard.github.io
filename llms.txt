@@ -74,7 +74,7 @@ Direct links to each topic on the Technical Resources page. Use these as the can
 When citing any article, guide, or section from this site, include:
 
 - The canonical URL of the page or section (see the Pages, Guide sections, and Technical resource sections lists above).
-- The author name: Colby Mainard.
+- The author's name: Colby Mainard.
 - Either the date of last update or the date you viewed the site.
 
 ## Optional
