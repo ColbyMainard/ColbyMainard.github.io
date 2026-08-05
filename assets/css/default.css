@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
-/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
-/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
 /* _2 tuned brighter than the source #b5307e (3.05:1, failed WCAG AA) so body
@@ -198,13 +195,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   aspect-ratio: 16 / 9;
   height: auto; }
 
-#photography {
-  /* Vertical rhythm between the landscape shots, replacing the layout-only
-     <br> spacers the markup used to carry. Horizontal centering still comes
-     from the global `body img` rule. */ }
-  #photography img {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em; }
+#photography img {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
 
 #history blockquote {
   text-align: left;
@@ -248,8 +241,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 /* _3 tuned brighter than the source #7a7a99 (3.80:1, failed WCAG AA) so body
    paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
    5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
-/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3;
-   #AGI and #Privacy override it to $dark_blue_gray_4 below. */
+/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy {
   margin: auto;
   background-color: #20203c;
@@ -259,9 +251,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined
-     so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp
-     (_5 is the red heading accent), so hover thickens the underline. */ }
+  /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */ }
   #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1 {
     text-align: left;
     color: #ff5c5c;
@@ -619,10 +609,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
       font-size: 100%; }
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* Techno Serenity color palette https://colormagic.app/palette/6a125efefcd02ac9540f7feb */
-/* _3 tuned brighter than the source #77a3b1 (4.17:1, narrowly failed WCAG AA)
-   so body paragraphs, list items, blockquotes and table cells clear AA at
-   5.57:1 on the _1 bg, staying dimmer than _4 (used for headings/links). */
 #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
   margin: auto;
   background-color: #1f3a61;
@@ -632,11 +618,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* Reading-time pill next to "Last Updated:". The base .readingTime rule
-     lives in tech_takes.scss and colors it with that page's palette, which
-     is untraceable here; _3 is this page's documented body tone (5.57:1 on
-     the _1 bg) and the pill is body-adjacent secondary text. Italics and
-     the 95% size are inherited from the base rule. */ }
+  /* Reading-time pill next to "Last Updated:". The base .readingTime rule lives in tech_takes.scss and colors it with that page's palette, which is untraceable here; _3 is this page's documented body tone (5.57:1 on the _1 bg) and the pill is body-adjacent secondary text. Italics and the 95% size are inherited from the base rule. */ }
   #dataEngineeringGuide h1, #computerVisionGuide h1, #generativeAIGuide h1, #nlpGuide h1, #reinforcementLearningGuide h1, #softwareEngineeringGuide h1, #cybersecurityGuide h1 {
     text-align: left;
     color: #e0f5f2;
@@ -725,9 +707,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
    headings 13.7:1 — all clear WCAG AA (>=4.5:1 for body text). _2 is
    decorative only (shadows; never use it for text). The .errorCode figure
    uses _4 on the global noir_2 body background: 7.2:1. */
-/* Oversized decorative "404" figure in the intro (aria-hidden in the markup;
-   the h1 carries the accessible page state). Sits on the global noir_2 body
-   background. .errorCode exists only on 404.html, so nothing leaks. */
+/* Oversized decorative "404" figure in the intro (aria-hidden in the markup; the h1 carries the accessible page state). Sits on the global noir_2 body background. .errorCode exists only on 404.html, so nothing leaks. */
 #introSectionDiv .errorCode {
   color: #f2cfa0;
   font-family: "Courier New", monospace;
@@ -797,20 +777,17 @@ html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, htm
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth; } }
-/* Keep anchored and keyboard-focused targets clear of the sticky header
-   (WCAG 2.4.11). scroll-padding-top on the scroll container offsets both
-   fragment-jump navigation and focus scrolling, so scroll-margin-top on the
-   targets is intentionally omitted (it would stack and double the gap). The
-   value approximates the header height: ~2 stacked nav rows on desktop, a
-   single collapsed row on mobile. Verify if the nav layout changes. */
+/* Keep anchored and keyboard-focused targets clear of the sticky header (WCAG 2.4.11). 
+   scroll-padding-top on the scroll container offsets both fragment-jump navigation and focus scrolling, so scroll-margin-top on the targets is intentionally omitted (it would stack and double the gap).
+   The value approximates the header height: ~2 stacked nav rows on desktop, a single collapsed row on mobile.
+   Verify if the nav layout changes. */
 html {
   scroll-padding-top: 8rem; }
 
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 3.5rem; } }
-/* Visually-hidden utility: keeps content available to screen readers while
-   removing it from the visual layout. Used for accessible table <caption>s. */
+/* Visually-hidden utility: keeps content available to screen readers while removing it from the visual layout. Used for accessible table <caption>s. */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -822,19 +799,14 @@ html {
   white-space: nowrap;
   border: 0; }
 
-/* Horizontal-scroll container for wide data tables. The table scrolls inside
-   this box instead of widening the page on narrow viewports (WCAG 1.4.10). A
-   wrapper is used rather than `display: block` on the <table> itself, which
-   would strip the table's semantics and its scope-ed row/column headers. */
+/* Horizontal-scroll container for wide data tables.
+   The table scrolls inside this box instead of widening the page on narrow viewports (WCAG 1.4.10).
+   A wrapper is used rather than `display: block` on the <table> itself, which would strip the table's semantics and its scope-ed row/column headers. */
 .tableScroll {
   max-width: 100%;
   overflow-x: auto;
-  /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user
-     can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable
-     element has to show where focus is. The global `main a:focus-visible`
-     rule below covers links only, so the container needs its own ring.
-     currentColor tracks each section's body text color, which every partial
-     keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */ }
+  /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable element has to show where focus is.
+     The global `main a:focus-visible` rule below covers links only, so the container needs its own ring. currentColor tracks each section's body text color, which every partial keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */ }
   .tableScroll:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px; }
@@ -861,9 +833,7 @@ header {
     letter-spacing: 1px;
     text-decoration: none; }
     header .nav-brand:hover {
-      /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1,
-         AA only while this text stays above the large-text cutoff (~0.5px
-         to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
+      /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1, AA only while this text stays above the large-text cutoff (~0.5px to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
       text-decoration: underline; }
   header .nav-toggle {
     display: none;
@@ -1029,10 +999,7 @@ main a:focus-visible {
   pointer-events: none;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   z-index: 200;
-  /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class
-     toggle is the only reveal path when reduced motion is on or AnimeJS is
-     unreachable, so it must raise opacity itself rather than relying on the
-     tween. Without this the button is transparent but still clickable. */ }
+  /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */ }
   .floatingBackToTop.visible {
     opacity: 1;
     transform: translateY(0);
@@ -1052,10 +1019,7 @@ main a:focus-visible {
     width: 44px;
     height: 44px;
     font-size: 140%; } }
-/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it
-   never sits under the back-to-top button on the opposite corner. $noir_5 on
-   $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair
-   already verified at 4.78:1 for .floatingBackToTop. */
+/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it never sits under the back-to-top button on the opposite corner. $noir_5 on $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair already verified at 4.78:1 for .floatingBackToTop. */
 .easterEggCard {
   position: fixed;
   left: 24px;
@@ -1076,9 +1040,7 @@ main a:focus-visible {
      on the content behind it. */
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  /* Focused programmatically on reveal, the same way main.main is by the skip
-     link. The card announces itself through its accessible name, so a ring
-     around the whole card would be noise. */ }
+  /* Focused programmatically on reveal, the same way main.main is by the skip link. The card announces itself through its accessible name, so a ring around the whole card would be noise. */ }
   .easterEggCard.visible {
     opacity: 1;
     transform: translateY(0);
@@ -1121,8 +1083,7 @@ main a:focus-visible {
     right: 80px;
     bottom: 16px;
     max-width: none; } }
-/* Safety net paired with the JS-side prefersReducedMotion() check in
-   easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
+/* Safety net paired with the JS-side prefersReducedMotion() check in easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
 @media (prefers-reduced-motion: reduce) {
   .easterEggCard {
     transition: none; } }
@@ -1245,8 +1206,7 @@ pre {
       justify-content: center; }
     .cookieConsent .cookieConsent-button {
       flex: 1 1 0; } }
-/* Inline preferences controls used on the Privacy Policy page so visitors
- * can change their consent decision after the banner has been dismissed. */
+/* Inline preferences controls used on the Privacy Policy page so visitors can change their consent decision after the banner has been dismissed. */
 .cookiePreferences {
   display: flex;
   flex-wrap: wrap;
@@ -1282,14 +1242,12 @@ footer {
   width: 100%;
   text-align: center;
   background-color: #007a5e;
-  /* Bottom apron below the last line, replacing the trailing <br> the
-     sub-pages used to carry (index never had one; now all pages match). */
+  /* Bottom apron below the last line, replacing the trailing <br> the sub-pages used to carry (index never had one; now all pages match). */
   padding-bottom: 1em; }
   footer #contactMe {
     font-family: "Courier New", monospace;
     /* unvisited link */
-    /* visited link — _5 like :link (no emerald tint between _4 and _5
-     * reaches 4.5:1 on _1); visited is distinguished by underline style */
+    /* visited link — _5 like :link (no emerald tint between _4 and _5 reaches 4.5:1 on _1); visited is distinguished by underline style */
     /* mouse over link */
     /* selected link */ }
     footer #contactMe h1 {
@@ -1320,20 +1278,16 @@ footer {
       font-size: 100%; }
 
 /*
- * Animation initial state for the footer contact section — identical on every
- * page, so it lives here instead of being repeated in each per-page partial.
- * Only applied when JS is active: elements start invisible and the shared
- * animateContact helper (animation_helpers.js) fades them in. Keep the child
- * selectors in sync with the section's markup and that helper. Without JS the
- * .js-animations class is never added and content remains fully visible.
+ * Animation initial state for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
+ * Only applied when JS is active: elements start invisible and the shared animateContact helper (animation_helpers.js) fades them in. 
+ * Keep the child selectors in sync with the section's markup and that helper. 
+ * Without JS the .js-animations class is never added and content remains fully visible.
  */
 html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
   opacity: 0; }
 
 /*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
+ * Reduced-motion safety net: if .js-animations is ever present while the user prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {

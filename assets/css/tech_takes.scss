@@ -52,8 +52,7 @@ $dark_blue_gray_3: #9a9ac2;
 $dark_blue_gray_4: #c2c2d1;
 $dark_blue_gray_5: #ff5c5c;
 
-/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3;
-   #AGI and #Privacy override it to $dark_blue_gray_4 below. */
+/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 %techTakeSection {
     @include sectionShell($dark_blue_gray_1, $padding-bottom: 1.5em);
     @include headingRamp(
@@ -62,9 +61,7 @@ $dark_blue_gray_5: #ff5c5c;
         $h3: $dark_blue_gray_3,
         $h4: $dark_blue_gray_3
     );
-    /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined
-       so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp
-       (_5 is the red heading accent), so hover thickens the underline. */
+    /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
     @include proseLinks($dark_blue_gray_4, $dark_blue_gray_4, $thicken-on-hover: true);
     @include bodyText($dark_blue_gray_3);
     @include listText($dark_blue_gray_3);
@@ -73,8 +70,7 @@ $dark_blue_gray_5: #ff5c5c;
 /* Shared table styling for opinions that include a comparison table. */
 %techTakeTable {
     @include dataTable($dark_blue_gray_3);
-    // Links inside a cell stay at the cell's own tone in every state, so a
-    // linked row header does not out-shout the surrounding data.
+    // Links inside a cell stay at the cell's own tone in every state, so a linked row header does not out-shout the surrounding data.
     table tr {
         th,
         td {
@@ -146,11 +142,8 @@ $dark_blue_gray_5: #ff5c5c;
     "> h1, > h2, > h3, > h4, > p, > ul, > dl, > .tableScroll, > a"
 );
 
-// The dated index is a <nav>, which the shared child list above does not match,
-// so without this it would pop in while its siblings fade. Gated on its own
-// class rather than by adding "> nav" above: that would also catch a future
-// direct-child <nav> in a take section (the planned .relatedStances component)
-// and strand it at opacity: 0 with no animation step to reveal it.
+// The dated index is a <nav>, which the shared child list above does not match, so without this it would pop in while its siblings fade. 
+// Gated on its own class rather than by adding "> nav" above: that would also catch a future direct-child <nav> in a take section (the planned .relatedStances component) and strand it at opacity: 0 with no animation step to reveal it.
 @include animationGate("#introSectionDiv", "> .takesIndex");
 
 /* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the

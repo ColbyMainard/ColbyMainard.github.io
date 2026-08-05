@@ -66,8 +66,7 @@ $cyberpunk_dreams_5: #200b4b;
 #education {
     @extend %indexSection;
     @include dataTable($cyberpunk_dreams_2);
-    // Graduation cap: the mortarboard and its crown share one outline, and the
-    // tassel is the single red accent.
+    // Graduation cap: the mortarboard and its crown share one outline, and the tassel is the single red accent.
     .capPanel {
         fill: black;
         stroke: white;
@@ -77,8 +76,7 @@ $cyberpunk_dreams_5: #200b4b;
         stroke: red;
         stroke-width: 3;
     }
-    // Coursework cells carry a nested topic list and a <details> disclosure;
-    // the summary is the only interactive element inside the table.
+    // Coursework cells carry a nested topic list and a <details> disclosure; the summary is the only interactive element inside the table.
     table tr td {
         ul {
             li {
@@ -122,8 +120,7 @@ $cyberpunk_dreams_5: #200b4b;
 
 #certifications { @extend %indexSection; }
 
-// Animation gating (initial hidden state plus the reduced-motion safety net).
-// Without JS the .js-animations class is never added and content stays visible.
+// Animation gating (initial hidden state plus the reduced-motion safety net). Without JS the .js-animations class is never added and content stays visible.
 @include animationGate(
     "#introSectionDiv, #workHistory, #education, #projects, #technicalSkills, #certifications, #otherSkills",
     "> h1, > h2, > h3, > h4, > p, > ul, > svg, > .tableScroll, > a"

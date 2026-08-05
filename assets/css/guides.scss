@@ -1,11 +1,9 @@
 /* https://www.w3schools.com/Css/css_selectors.asp */
 
-/* Techno Serenity color palette https://colormagic.app/palette/6a125efefcd02ac9540f7feb */
+// Techno Serenity color palette https://colormagic.app/palette/6a125efefcd02ac9540f7feb */
 $techno_serenity_1: #1f3a61;
 $techno_serenity_2: #4a718c;
-/* _3 tuned brighter than the source #77a3b1 (4.17:1, narrowly failed WCAG AA)
-   so body paragraphs, list items, blockquotes and table cells clear AA at
-   5.57:1 on the _1 bg, staying dimmer than _4 (used for headings/links). */
+// _3 tuned brighter than the source #77a3b1 (4.17:1, narrowly failed WCAG AA) so body paragraphs, list items, blockquotes and table cells clear AA at 5.57:1 on the _1 bg, staying dimmer than _4 (used for headings/links). 
 $techno_serenity_3: #8fbccb;
 $techno_serenity_4: #a3d5e0;
 $techno_serenity_5: #e0f5f2;
@@ -23,11 +21,7 @@ $techno_serenity_5: #e0f5f2;
     @include proseLinks($techno_serenity_4, $techno_serenity_5, $underline: false);
     @include listText($techno_serenity_3);
     @include dataTable($techno_serenity_3);
-    /* Reading-time pill next to "Last Updated:". The base .readingTime rule
-       lives in tech_takes.scss and colors it with that page's palette, which
-       is untraceable here; _3 is this page's documented body tone (5.57:1 on
-       the _1 bg) and the pill is body-adjacent secondary text. Italics and
-       the 95% size are inherited from the base rule. */
+    /* Reading-time pill next to "Last Updated:". The base .readingTime rule lives in tech_takes.scss and colors it with that page's palette, which is untraceable here; _3 is this page's documented body tone (5.57:1 on the _1 bg) and the pill is body-adjacent secondary text. Italics and the 95% size are inherited from the base rule. */
     .readingTime {
         color: $techno_serenity_3;
     }

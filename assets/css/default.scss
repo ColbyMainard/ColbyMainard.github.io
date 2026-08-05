@@ -1,18 +1,18 @@
-/* 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036 */
+// 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036
 $noir_1: #1a1a1e;
 $noir_2: #3e3e41;
 $noir_3: #6b6b70;
 $noir_4: #a0a0b0;
 $noir_5: #d4d4d9;
 
-/* Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1 */
+// Smart color palette from https://colormagic.app/palette/6723509a3e9d694408a440e1
 $smart_1: #1c1a3d; 
 $smart_2: #4a4e8c; 
 $smart_3: #8d7d9b; 
 $smart_4: #d1c3e9; 
 $smart_5: #f1e0ff;
 
-/* Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c */
+// Emerald Efficiency color palette from https://colormagic.app/palette/68f301dc7470129f5e4b011c
 $emerald_efficiency_1: #007a5e;
 $emerald_efficiency_2: #1d9a6a;
 $emerald_efficiency_3: #50c3a1;
@@ -227,12 +227,10 @@ $emerald_efficiency_5: #e0f7fa;
     }
 }
 
-/* Keep anchored and keyboard-focused targets clear of the sticky header
-   (WCAG 2.4.11). scroll-padding-top on the scroll container offsets both
-   fragment-jump navigation and focus scrolling, so scroll-margin-top on the
-   targets is intentionally omitted (it would stack and double the gap). The
-   value approximates the header height: ~2 stacked nav rows on desktop, a
-   single collapsed row on mobile. Verify if the nav layout changes. */
+/* Keep anchored and keyboard-focused targets clear of the sticky header (WCAG 2.4.11). 
+   scroll-padding-top on the scroll container offsets both fragment-jump navigation and focus scrolling, so scroll-margin-top on the targets is intentionally omitted (it would stack and double the gap).
+   The value approximates the header height: ~2 stacked nav rows on desktop, a single collapsed row on mobile.
+   Verify if the nav layout changes. */
 html {
     scroll-padding-top: 8rem;
 }
@@ -243,8 +241,7 @@ html {
     }
 }
 
-/* Visually-hidden utility: keeps content available to screen readers while
-   removing it from the visual layout. Used for accessible table <caption>s. */
+/* Visually-hidden utility: keeps content available to screen readers while removing it from the visual layout. Used for accessible table <caption>s. */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -257,20 +254,15 @@ html {
     border: 0;
 }
 
-/* Horizontal-scroll container for wide data tables. The table scrolls inside
-   this box instead of widening the page on narrow viewports (WCAG 1.4.10). A
-   wrapper is used rather than `display: block` on the <table> itself, which
-   would strip the table's semantics and its scope-ed row/column headers. */
+/* Horizontal-scroll container for wide data tables.
+   The table scrolls inside this box instead of widening the page on narrow viewports (WCAG 1.4.10).
+   A wrapper is used rather than `display: block` on the <table> itself, which would strip the table's semantics and its scope-ed row/column headers. */
 .tableScroll {
     max-width: 100%;
     overflow-x: auto;
 
-    /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user
-       can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable
-       element has to show where focus is. The global `main a:focus-visible`
-       rule below covers links only, so the container needs its own ring.
-       currentColor tracks each section's body text color, which every partial
-       keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */
+    /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable element has to show where focus is.
+       The global `main a:focus-visible` rule below covers links only, so the container needs its own ring. currentColor tracks each section's body text color, which every partial keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */
     &:focus-visible {
         outline: 2px solid currentColor;
         outline-offset: 2px;
@@ -302,9 +294,7 @@ header {
         text-decoration: none;
 
         &:hover {
-            /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1,
-               AA only while this text stays above the large-text cutoff (~0.5px
-               to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
+            /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1, AA only while this text stays above the large-text cutoff (~0.5px to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
             text-decoration: underline;
         }
     }
@@ -532,10 +522,7 @@ main a:focus-visible {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     z-index: 200;
 
-    /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class
-       toggle is the only reveal path when reduced motion is on or AnimeJS is
-       unreachable, so it must raise opacity itself rather than relying on the
-       tween. Without this the button is transparent but still clickable. */
+    /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */
     &.visible {
         opacity: 1;
         transform: translateY(0);
@@ -565,10 +552,7 @@ main a:focus-visible {
     }
 }
 
-/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it
-   never sits under the back-to-top button on the opposite corner. $noir_5 on
-   $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair
-   already verified at 4.78:1 for .floatingBackToTop. */
+/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it never sits under the back-to-top button on the opposite corner. $noir_5 on $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair already verified at 4.78:1 for .floatingBackToTop. */
 .easterEggCard {
     position: fixed;
     left: 24px;
@@ -596,9 +580,7 @@ main a:focus-visible {
         pointer-events: auto;
     }
 
-    /* Focused programmatically on reveal, the same way main.main is by the skip
-       link. The card announces itself through its accessible name, so a ring
-       around the whole card would be noise. */
+    /* Focused programmatically on reveal, the same way main.main is by the skip link. The card announces itself through its accessible name, so a ring around the whole card would be noise. */
     &:focus {
         outline: none;
     }
@@ -654,8 +636,7 @@ main a:focus-visible {
     }
 }
 
-/* Safety net paired with the JS-side prefersReducedMotion() check in
-   easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
+/* Safety net paired with the JS-side prefersReducedMotion() check in easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
 @media (prefers-reduced-motion: reduce) {
     .easterEggCard {
         transition: none;
@@ -826,8 +807,7 @@ pre {
     }
 }
 
-/* Inline preferences controls used on the Privacy Policy page so visitors
- * can change their consent decision after the banner has been dismissed. */
+/* Inline preferences controls used on the Privacy Policy page so visitors can change their consent decision after the banner has been dismissed. */
 .cookiePreferences {
     display: flex;
     flex-wrap: wrap;
@@ -874,8 +854,7 @@ footer {
     width: 100%;
     text-align: center;
     background-color: $emerald_efficiency_1;
-    /* Bottom apron below the last line, replacing the trailing <br> the
-       sub-pages used to carry (index never had one; now all pages match). */
+    /* Bottom apron below the last line, replacing the trailing <br> the sub-pages used to carry (index never had one; now all pages match). */
     padding-bottom: 1em;
     #contactMe {
         font-family: "Courier New", monospace;
@@ -897,8 +876,7 @@ footer {
             color: $emerald_efficiency_5;
             font-size: 100%;
         }
-        /* visited link — _5 like :link (no emerald tint between _4 and _5
-         * reaches 4.5:1 on _1); visited is distinguished by underline style */
+        /* visited link — _5 like :link (no emerald tint between _4 and _5 reaches 4.5:1 on _1); visited is distinguished by underline style */
         a:visited {
             color: $emerald_efficiency_5;
             font-size: 100%;
@@ -922,12 +900,10 @@ footer {
 }
 
 /*
- * Animation initial state for the footer contact section — identical on every
- * page, so it lives here instead of being repeated in each per-page partial.
- * Only applied when JS is active: elements start invisible and the shared
- * animateContact helper (animation_helpers.js) fades them in. Keep the child
- * selectors in sync with the section's markup and that helper. Without JS the
- * .js-animations class is never added and content remains fully visible.
+ * Animation initial state for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
+ * Only applied when JS is active: elements start invisible and the shared animateContact helper (animation_helpers.js) fades them in. 
+ * Keep the child selectors in sync with the section's markup and that helper. 
+ * Without JS the .js-animations class is never added and content remains fully visible.
  */
 html.js-animations {
     #contactMe {
@@ -938,9 +914,7 @@ html.js-animations {
 }
 
 /*
- * Reduced-motion safety net: if .js-animations is ever present while the user
- * prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal
- * the gated elements so content is never trapped at opacity: 0.
+ * Reduced-motion safety net: if .js-animations is ever present while the user prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal the gated elements so content is never trapped at opacity: 0.
  */
 @media (prefers-reduced-motion: reduce) {
     html.js-animations {

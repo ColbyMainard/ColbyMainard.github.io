@@ -60,9 +60,7 @@ $calm_authority_5: #E7EAEC;
 
 #photography {
     @extend %hobbySection;
-    /* Vertical rhythm between the landscape shots, replacing the layout-only
-       <br> spacers the markup used to carry. Horizontal centering still comes
-       from the global `body img` rule. */
+    // Vertical rhythm between the landscape shots, replacing the layout-only <br> spacers the markup used to carry. Horizontal centering still comes from the global `body img` rule.
     img {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
