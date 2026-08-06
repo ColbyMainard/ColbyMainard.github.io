@@ -46,12 +46,10 @@ $cyberpunk_dreams_5: #200b4b;
     @include listText($cyberpunk_dreams_2);
 }
 
-/* Decorative section illustrations. These five classes replace the inline
-   style= attributes the drawings shipped with; the declarations are unchanged.
-   Colors stay literal rather than moving to palette variables because they
-   match the fill=/stroke= presentation attributes on the sibling shapes in the
-   same drawing. Every one of these <svg> elements is aria-hidden decoration, so
-   no contrast requirement applies to them. */
+/* Decorative section illustrations. 
+   These five classes replace the inline style= attributes the drawings shipped with; the declarations are unchanged.
+   Colors stay literal rather than moving to palette variables because they match the fill=/stroke= presentation attributes on the sibling shapes in the same drawing.
+   Every one of these <svg> elements is aria-hidden decoration, so no contrast requirement applies to them. */
 
 #workHistory {
     @extend %indexSection;

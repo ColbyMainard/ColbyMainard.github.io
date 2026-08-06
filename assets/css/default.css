@@ -64,12 +64,10 @@
       color: #e64d9e;
       font-size: 100%; }
 
-/* Decorative section illustrations. These five classes replace the inline
-   style= attributes the drawings shipped with; the declarations are unchanged.
-   Colors stay literal rather than moving to palette variables because they
-   match the fill=/stroke= presentation attributes on the sibling shapes in the
-   same drawing. Every one of these <svg> elements is aria-hidden decoration, so
-   no contrast requirement applies to them. */
+/* Decorative section illustrations. 
+   These five classes replace the inline style= attributes the drawings shipped with; the declarations are unchanged.
+   Colors stay literal rather than moving to palette variables because they match the fill=/stroke= presentation attributes on the sibling shapes in the same drawing.
+   Every one of these <svg> elements is aria-hidden decoration, so no contrast requirement applies to them. */
 #workHistory .bagFlap {
   fill: none;
   stroke: #AA7333;
