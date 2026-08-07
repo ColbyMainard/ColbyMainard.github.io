@@ -1303,25 +1303,35 @@ footer {
   padding-bottom: 1em; }
   footer #contactMe {
     font-family: "Courier New", monospace;
-    /* These two carry their own clamps rather than $heading_size_* because
-       _4 is 3.31:1 on _1, which is AA only while the text stays at or above
-       the 24px WCAG large-text cutoff. The shared ladder floors h3 at
-       1.25rem (20px), which would drop below it; both are floored at 1.5rem
-       here instead. Raise the color to _5 (4.78:1) before lowering either
-       floor. */
+        /* h2 is the only heading level this footer styles, because h2 is the
+           only level any of the seven pages puts in a footer. The same
+           assumption is encoded in animation_helpers.js `animateContact`
+           (which animates "h2, p, a") and in the #contactMe animation gate
+           further down. This mirrors the headingRamp convention of emitting no
+           rule for a level the markup never uses.
+
+           There used to be h1 and h3 rules here. Both were dead, and the h1
+           was a trap: _2 on _1 is 1.49:1, unreadable if anyone had ever added
+           one. They were removed rather than recolored.
+
+           BEFORE ADDING an h1 or h3 here, note that deleting those rules means
+           such a heading now falls through to the global `body` ramp, which is
+           $noir_5 — only 3.60:1 against this green background. That is AA for
+           an h1 (floored at 2rem, so it clears the 24px large-text cutoff and
+           the 3:1 threshold) but NOT for an h3, whose shared floor is 1.25rem
+           (20px) and therefore needs the full 4.5:1. Give any new h3 an
+           explicit color of _5 (4.78:1). */
+    /* This carries its own clamp rather than $heading_size_2 because _4 is
+       3.31:1 on _1, which is AA only while the text stays at or above the
+       24px WCAG large-text cutoff. Raise the color to _5 (4.78:1) before
+       lowering the floor. */
     /* unvisited link */
     /* visited link — _5 like :link (no emerald tint between _4 and _5 reaches 4.5:1 on _1); visited is distinguished by underline style */
     /* mouse over link */
     /* selected link */ }
-    footer #contactMe h1 {
-      font-size: clamp(2rem, 8vw, 5rem);
-      color: #1d9a6a; }
     footer #contactMe h2 {
       font-size: clamp(1.5rem, 5vw, 3rem);
       /* _4 = 3.31:1 on _1 — AA for text at/above 24px; _3 was 2.45:1 */
-      color: #a1d9b0; }
-    footer #contactMe h3 {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
       color: #a1d9b0; }
     footer #contactMe a:link {
       color: #e0f7fa;
