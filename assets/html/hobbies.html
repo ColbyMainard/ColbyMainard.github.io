@@ -36,7 +36,6 @@
 
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Colby Mainard's hobbies: landscape photography, self-taught quantum computing, Dungeons &amp; Dragons in Austin, and history.">
-        <meta name="keywords" content="photography, dungeons and dragons, history, quantum computing, hobbies">
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
@@ -46,6 +45,7 @@
         <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/hobbies_animations.js" defer></script>
+        <script src="../js/photo_gallery.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
         <script src="../js/easter_egg.js" defer></script>
@@ -75,6 +75,23 @@
             {"@type": "ListItem", "position": 2, "name": "Photography", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv"},
             {"@type": "ListItem", "position": 3, "name": "Dungeons and Dragons", "url": "https://colbymainard.github.io/assets/html/hobbies.html#dungeonsAndDragonsDiv"},
             {"@type": "ListItem", "position": 4, "name": "History", "url": "https://colbymainard.github.io/assets/html/hobbies.html#historyDiv"}
+          ]
+        }
+        </script>
+
+        <!-- JSON-LD: ImageObject nodes for the five original photographs in the gallery.
+             Extends the ItemList above; neither that block nor the BreadcrumbList is
+             modified. Each description is the image's alt text verbatim, so the two stay
+             in step - update both together if a caption or alt is reworded. -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0004.JPG", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv", "name": "Pink and cream garden roses", "description": "Close-up of two pink and cream roses with layered petals against a soft gray background.", "caption": "Garden roses at close range, working a shallow depth of field for the layered petals.", "width": 3000, "height": 2000, "encodingFormat": "image/jpeg", "creator": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"}, "creditText": "Colby Mainard"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0023.JPG", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv", "name": "Sun through orange cloud above a treetop", "description": "Bright sun burning through a sky of deep orange clouds above the dark silhouette of a treetop.", "caption": "The sun burning through a bank of orange cloud, exposed for the highlights so the treeline drops to silhouette.", "width": 3000, "height": 2000, "encodingFormat": "image/jpeg", "creator": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"}, "creditText": "Colby Mainard"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0110.JPG", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv", "name": "Sun through oak branches over a wooded valley", "description": "Small orange sun glimpsed through gaps in green oak branches, with a wooded valley fading into dusk below.", "caption": "Late light broken up by oak branches, with the valley behind already gone to dusk.", "width": 3000, "height": 2000, "encodingFormat": "image/jpeg", "creator": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"}, "creditText": "Colby Mainard"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0237.JPG", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv", "name": "Amber sunset through cedar needles", "description": "Golden sunset blazing through the silhouetted needles of dense cedar branches, turning the sky amber.", "caption": "Sunset through cedar needles, shot into the light on purpose for the amber cast.", "width": 3000, "height": 2000, "encodingFormat": "image/jpeg", "creator": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"}, "creditText": "Colby Mainard"},
+            {"@type": "ImageObject", "contentUrl": "https://colbymainard.github.io/assets/images/photographyHobby/DSC_0396.JPG", "url": "https://colbymainard.github.io/assets/html/hobbies.html#photographyDiv", "name": "Pink cloud streaks over a violet dusk sky", "description": "Streaks of pink cloud sweeping across a violet dusk sky above silhouetted trees and a rooftop.", "caption": "Pink cloud streaks over a violet dusk sky, taken from the roofline at the end of the day.", "width": 3000, "height": 2000, "encodingFormat": "image/jpeg", "creator": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"}, "creditText": "Colby Mainard"}
           ]
         }
         </script>
@@ -131,11 +148,56 @@
                 <section class="photography" id="photography">
                     <h2>Photography</h2>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
-                    <img src="../images/photographyHobby/DSC_0004.JPG" alt="Close-up of two pink and cream roses with layered petals against a soft gray background." width="3000" height="2000" loading="lazy" decoding="async">
-                    <img src="../images/photographyHobby/DSC_0023.JPG" alt="Bright sun burning through a sky of deep orange clouds above the dark silhouette of a treetop." width="3000" height="2000" loading="lazy" decoding="async">
-                    <img src="../images/photographyHobby/DSC_0110.JPG" alt="Small orange sun glimpsed through gaps in green oak branches, with a wooded valley fading into dusk below." width="3000" height="2000" loading="lazy" decoding="async">
-                    <img src="../images/photographyHobby/DSC_0237.JPG" alt="Golden sunset blazing through the silhouetted needles of dense cedar branches, turning the sky amber." width="3000" height="2000" loading="lazy" decoding="async">
-                    <img src="../images/photographyHobby/DSC_0396.JPG" alt="Streaks of pink cloud sweeping across a violet dusk sky above silhouetted trees and a rooftop." width="3000" height="2000" loading="lazy" decoding="async">
+                    <!--
+                        One-photo-at-a-time gallery. photo_gallery.js adds the .js-gallery
+                        class, which is what collapses this to a single visible slide and
+                        reveals the controls. Without JavaScript all five render stacked and
+                        captioned, and the controls stay hidden, so nothing is lost and no
+                        dead buttons appear. The status paragraph is in the static markup on
+                        purpose: a live region only announces changes to content inside a
+                        region that already existed, so injecting it later would silently do
+                        nothing.
+                    -->
+                    <div class="photoGallery" id="photoGallery" role="group" aria-roledescription="carousel" aria-label="Landscape photography gallery">
+                        <p class="visually-hidden" id="photoGalleryStatus" role="status"></p>
+                        <ul class="photoGallery-track" id="photoGalleryTrack">
+                            <li class="photoGallery-slide">
+                                <figure>
+                                    <img src="../images/photographyHobby/DSC_0004.JPG" alt="Close-up of two pink and cream roses with layered petals against a soft gray background." width="3000" height="2000" loading="lazy" decoding="async">
+                                    <figcaption>Garden roses at close range, working a shallow depth of field for the layered petals.</figcaption>
+                                </figure>
+                            </li>
+                            <li class="photoGallery-slide">
+                                <figure>
+                                    <img src="../images/photographyHobby/DSC_0023.JPG" alt="Bright sun burning through a sky of deep orange clouds above the dark silhouette of a treetop." width="3000" height="2000" loading="lazy" decoding="async">
+                                    <figcaption>The sun burning through a bank of orange cloud, exposed for the highlights so the treeline drops to silhouette.</figcaption>
+                                </figure>
+                            </li>
+                            <li class="photoGallery-slide">
+                                <figure>
+                                    <img src="../images/photographyHobby/DSC_0110.JPG" alt="Small orange sun glimpsed through gaps in green oak branches, with a wooded valley fading into dusk below." width="3000" height="2000" loading="lazy" decoding="async">
+                                    <figcaption>Late light broken up by oak branches, with the valley behind already gone to dusk.</figcaption>
+                                </figure>
+                            </li>
+                            <li class="photoGallery-slide">
+                                <figure>
+                                    <img src="../images/photographyHobby/DSC_0237.JPG" alt="Golden sunset blazing through the silhouetted needles of dense cedar branches, turning the sky amber." width="3000" height="2000" loading="lazy" decoding="async">
+                                    <figcaption>Sunset through cedar needles, shot into the light on purpose for the amber cast.</figcaption>
+                                </figure>
+                            </li>
+                            <li class="photoGallery-slide">
+                                <figure>
+                                    <img src="../images/photographyHobby/DSC_0396.JPG" alt="Streaks of pink cloud sweeping across a violet dusk sky above silhouetted trees and a rooftop." width="3000" height="2000" loading="lazy" decoding="async">
+                                    <figcaption>Pink cloud streaks over a violet dusk sky, taken from the roofline at the end of the day.</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <div class="photoGallery-controls" id="photoGalleryControls" hidden>
+                            <button type="button" class="photoGallery-button" data-gallery-step="-1">Previous photo</button>
+                            <span class="photoGallery-count" id="photoGalleryCount" aria-hidden="true"></span>
+                            <button type="button" class="photoGallery-button" data-gallery-step="1">Next photo</button>
+                        </div>
+                    </div>
                 </section>
             </div>
             <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">

@@ -18,19 +18,19 @@
   #workHistory h1, #education h1, #projects h1, #technicalSkills h1, #otherSkills h1, #certifications h1 {
     text-align: left;
     color: #ff3d94;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   #workHistory h2, #education h2, #projects h2, #technicalSkills h2, #otherSkills h2, #certifications h2 {
     text-align: left;
     color: #e64d9e;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #workHistory h3, #education h3, #projects h3, #technicalSkills h3, #otherSkills h3, #certifications h3 {
     text-align: left;
     color: #e64d9e;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #workHistory h4, #education h4, #projects h4, #technicalSkills h4, #otherSkills h4, #certifications h4 {
     text-align: left;
     color: #e64d9e;
-    font-size: 175%; }
+    font-size: clamp(1.125rem, 3vw, 1.75rem); }
   #workHistory p, #education p, #projects p, #technicalSkills p, #otherSkills p, #certifications p {
     text-align: left;
     color: #e64d9e;
@@ -150,15 +150,15 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #quantumComputing h1, #photography h1, #dungeonsAndDragons h1, #history h1 {
     text-align: left;
     color: #E7EAEC;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   #quantumComputing h2, #photography h2, #dungeonsAndDragons h2, #history h2 {
     text-align: left;
     color: #D3DADE;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #quantumComputing h3, #photography h3, #dungeonsAndDragons h3, #history h3 {
     text-align: left;
     color: #C2CBD1;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #quantumComputing p, #photography p, #dungeonsAndDragons p, #history p {
     text-align: left;
     color: #B8C2C9;
@@ -193,9 +193,57 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   aspect-ratio: 16 / 9;
   height: auto; }
 
-#photography img {
+#photography .photoGallery-track {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+#photography .photoGallery-slide {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
+  #photography .photoGallery-slide figure {
+    margin: 0; }
+#photography .photoGallery-slide img {
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto; }
+#photography figcaption {
+  text-align: left;
+  color: #B8C2C9;
+  font-size: 100%;
+  margin-top: 0.75em; }
+#photography .photoGallery.js-gallery .photoGallery-slide {
+  display: none; }
+  #photography .photoGallery.js-gallery .photoGallery-slide.is-active {
+    display: block; }
+#photography .photoGallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 1em; }
+#photography .photoGallery-count {
+  color: #B8C2C9;
+  font-family: "Courier New", monospace;
+  font-size: 100%; }
+#photography .photoGallery-button {
+  background-color: #E7EAEC;
+  color: #34495E;
+  border: 2px solid #34495E;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  font-family: "Courier New", monospace;
+  font-size: 100%;
+  cursor: pointer; }
+  #photography .photoGallery-button:hover {
+    background-color: #D3DADE; }
+  #photography .photoGallery-button:focus-visible {
+    outline: 2px solid #34495E;
+    outline-offset: 2px; }
 
 #history blockquote {
   text-align: left;
@@ -228,11 +276,11 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   color: #B8C2C9;
   font-size: 100%; }
 
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > blockquote, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .tableScroll, html.js-animations #photography > blockquote, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > blockquote, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .tableScroll, html.js-animations #history > blockquote, html.js-animations #history > a, html.js-animations #history > iframe {
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > blockquote, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > blockquote, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > blockquote, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > blockquote, html.js-animations #history > a, html.js-animations #history > iframe {
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > blockquote, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .tableScroll, html.js-animations #photography > blockquote, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > blockquote, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .tableScroll, html.js-animations #history > blockquote, html.js-animations #history > a, html.js-animations #history > iframe {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > blockquote, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > blockquote, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > blockquote, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > blockquote, html.js-animations #history > a, html.js-animations #history > iframe {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
@@ -253,19 +301,19 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1 {
     text-align: left;
     color: #ff5c5c;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   #KAN h2, #Cryptocurrency h2, #FutureOfQuantum h2, #AGI h2, #Privacy h2, #ProductPlacement h2, #PhysicalMediaSupremacy h2 {
     text-align: left;
     color: #c2c2d1;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3, #PhysicalMediaSupremacy h3 {
     text-align: left;
     color: #9a9ac2;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4, #PhysicalMediaSupremacy h4 {
     text-align: left;
     color: #9a9ac2;
-    font-size: 175%; }
+    font-size: clamp(1.125rem, 3vw, 1.75rem); }
   #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link, #PhysicalMediaSupremacy a:link,
   #KAN a:visited,
   #Cryptocurrency a:visited,
@@ -475,15 +523,15 @@ html.js-animations #introSectionDiv > .takesIndex {
   #cybersecurityResources h1, #artificialIntelligenceResources h1, #cppResources h1, #pythonResources h1, #scriptingResources h1, #operatingSystemsResources h1 {
     text-align: left;
     color: #f9c54e;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   #cybersecurityResources h2, #artificialIntelligenceResources h2, #cppResources h2, #pythonResources h2, #scriptingResources h2, #operatingSystemsResources h2 {
     text-align: left;
     color: #d07e6c;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #cybersecurityResources h3, #artificialIntelligenceResources h3, #cppResources h3, #pythonResources h3, #scriptingResources h3, #operatingSystemsResources h3 {
     text-align: left;
     color: #b88ce0;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #cybersecurityResources p, #artificialIntelligenceResources p, #cppResources p, #pythonResources p, #scriptingResources p, #operatingSystemsResources p {
     text-align: left;
     color: #b88ce0;
@@ -567,11 +615,11 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1, #changesDiv h1 {
     text-align: left;
     color: #F7F9F9;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   #analyticsDiv h2, #thirdPartyDiv h2, #serviceWorkerDiv h2, #verificationDiv h2, #rightsDiv h2, #preferencesDiv h2, #changesDiv h2 {
     text-align: left;
     color: #F39C12;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #analyticsDiv p, #thirdPartyDiv p, #serviceWorkerDiv p, #verificationDiv p, #rightsDiv p, #preferencesDiv p, #changesDiv p {
     text-align: left;
     color: #22c9a8;
@@ -620,19 +668,19 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #dataEngineeringGuide h1, #computerVisionGuide h1, #generativeAIGuide h1, #nlpGuide h1, #reinforcementLearningGuide h1, #softwareEngineeringGuide h1, #cybersecurityGuide h1 {
     text-align: left;
     color: #e0f5f2;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   #dataEngineeringGuide h2, #computerVisionGuide h2, #generativeAIGuide h2, #nlpGuide h2, #reinforcementLearningGuide h2, #softwareEngineeringGuide h2, #cybersecurityGuide h2 {
     text-align: left;
     color: #e0f5f2;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #dataEngineeringGuide h3, #computerVisionGuide h3, #generativeAIGuide h3, #nlpGuide h3, #reinforcementLearningGuide h3, #softwareEngineeringGuide h3, #cybersecurityGuide h3 {
     text-align: left;
     color: #a3d5e0;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #dataEngineeringGuide h4, #computerVisionGuide h4, #generativeAIGuide h4, #nlpGuide h4, #reinforcementLearningGuide h4, #softwareEngineeringGuide h4, #cybersecurityGuide h4 {
     text-align: left;
     color: #a3d5e0;
-    font-size: 175%; }
+    font-size: clamp(1.125rem, 3vw, 1.75rem); }
   #dataEngineeringGuide p, #computerVisionGuide p, #generativeAIGuide p, #nlpGuide p, #reinforcementLearningGuide p, #softwareEngineeringGuide p, #cybersecurityGuide p {
     text-align: left;
     color: #8fbccb;
@@ -731,11 +779,11 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #notFound h2, #helpfulLinks h2 {
     text-align: left;
     color: #fdf3e3;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   #notFound h3, #helpfulLinks h3 {
     text-align: left;
     color: #f2cfa0;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #notFound p, #helpfulLinks p {
     text-align: left;
     color: #e8b48f;
@@ -946,13 +994,13 @@ body {
   font-family: "Courier New", monospace; }
   body h1 {
     color: #d4d4d9;
-    font-size: 500%; }
+    font-size: clamp(2rem, 8vw, 5rem); }
   body h2 {
     color: #d4d4d9;
-    font-size: 300%; }
+    font-size: clamp(1.5rem, 5vw, 3rem); }
   body h3 {
     color: #d4d4d9;
-    font-size: 200%; }
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   body p {
     /* $noir_4 (#a0a0b0) on $noir_2 is only 4.14:1; $noir_5 clears WCAG AA
        (7.22:1). This global rule styles the #introSectionDiv lead paragraph
@@ -967,6 +1015,17 @@ body {
     height: auto;
     border: 2px solid #1a1a1e;
     border-radius: 1%; }
+
+/* Headings are the longest unbroken strings on the site (page titles like
+   "Curated AI, Cybersecurity & Programming Learning Resources") and sit inside
+   `width: 80%` section shells, so on a 320px viewport a single long word can be
+   wider than its container no matter how far the $heading_size_* clamps scale
+   the type down. Allowing a break inside the word is what actually guarantees
+   the page never scrolls sideways (WCAG 1.4.10 Reflow); the clamps handle
+   proportion. Applied globally so section, body, and footer headings are all
+   covered by one rule. */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; }
 
 /* Keyboard focus ring for in-content links. The section partials set link
    colors; this gives every in-prose link a visible focus indicator over the
@@ -1244,19 +1303,25 @@ footer {
   padding-bottom: 1em; }
   footer #contactMe {
     font-family: "Courier New", monospace;
+    /* These two carry their own clamps rather than $heading_size_* because
+       _4 is 3.31:1 on _1, which is AA only while the text stays at or above
+       the 24px WCAG large-text cutoff. The shared ladder floors h3 at
+       1.25rem (20px), which would drop below it; both are floored at 1.5rem
+       here instead. Raise the color to _5 (4.78:1) before lowering either
+       floor. */
     /* unvisited link */
     /* visited link — _5 like :link (no emerald tint between _4 and _5 reaches 4.5:1 on _1); visited is distinguished by underline style */
     /* mouse over link */
     /* selected link */ }
     footer #contactMe h1 {
-      font-size: 500%;
+      font-size: clamp(2rem, 8vw, 5rem);
       color: #1d9a6a; }
     footer #contactMe h2 {
-      font-size: 300%;
-      /* _4 = 3.31:1 on _1 — AA for 48px text; _3 was 2.45:1 */
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      /* _4 = 3.31:1 on _1 — AA for text at/above 24px; _3 was 2.45:1 */
       color: #a1d9b0; }
     footer #contactMe h3 {
-      font-size: 200%;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
       color: #a1d9b0; }
     footer #contactMe a:link {
       color: #e0f7fa;

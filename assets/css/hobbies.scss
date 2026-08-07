@@ -60,10 +60,98 @@ $calm_authority_5: #E7EAEC;
 
 #photography {
     @extend %hobbySection;
-    // Vertical rhythm between the landscape shots, replacing the layout-only <br> spacers the markup used to carry. Horizontal centering still comes from the global `body img` rule.
-    img {
+
+    .photoGallery-track {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Vertical rhythm between the landscape shots, replacing the layout-only <br> spacers the markup used to carry.
+    .photoGallery-slide {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
+
+        figure {
+            margin: 0;
+        }
+    }
+
+    // Scale-to-fit. These are 3000x2000 originals, so the constraint has to cap
+    // both axes: max-width keeps a wide photo inside the section shell on a
+    // phone, max-height stops a tall viewport from handing over a photo taller
+    // than the screen. width/height auto plus object-fit: contain preserve the
+    // 3:2 aspect ratio rather than squashing it, and the width/height attributes
+    // in the markup still reserve the right box so nothing shifts as it loads.
+    //
+    // This also overrides the global `body img { max-width: 60% }` in
+    // default.scss, which would otherwise leave the gallery photo at 60% of a
+    // 320px screen. Specificity: #photography + class + type beats `body img`.
+    .photoGallery-slide img {
+        max-width: 100%;
+        max-height: 70vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    figcaption {
+        text-align: left;
+        color: $calm_authority_2; // 5.13:1 on _1, matching this section's body text
+        font-size: 100%;
+        margin-top: 0.75em;
+    }
+
+    // One slide at a time, but only once photo_gallery.js has confirmed it is
+    // running. Without .js-gallery every slide stays visible, so a visitor with
+    // scripting off sees all five stacked instead of one photo and no controls.
+    .photoGallery.js-gallery .photoGallery-slide {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    .photoGallery-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+        margin-top: 1em;
+    }
+
+    .photoGallery-count {
+        color: $calm_authority_2;
+        font-family: "Courier New", monospace;
+        font-size: 100%;
+    }
+
+    .photoGallery-button {
+        // _1 text on _5 is the section palette inverted: the same 7.69:1 pair
+        // the h1 uses, which clears AA either way round.
+        background-color: $calm_authority_5;
+        color: $calm_authority_1;
+        border: 2px solid $calm_authority_1;
+        border-radius: 6px;
+        padding: 0.5em 1em;
+        font-family: "Courier New", monospace;
+        font-size: 100%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $calm_authority_4; // 6.57:1 against _1 text
+        }
+
+        // Matches the .tableScroll and `main a:focus-visible` rings in
+        // default.scss; _1 on the _5 button clears the 3:1 non-text minimum.
+        &:focus-visible {
+            outline: 2px solid $calm_authority_1;
+            outline-offset: 2px;
+        }
     }
 }
 #dungeonsAndDragons { @extend %hobbySection; }
@@ -84,7 +172,11 @@ $calm_authority_5: #E7EAEC;
 }
 
 // Animation gating (initial hidden state plus the reduced-motion safety net).
+// `> .photoGallery` is the photography section's animated unit: its images are
+// nested inside the gallery's list and figures, so the `> img` selector no
+// longer reaches them (that one still covers the #introSectionDiv portrait).
+// Keep this list in sync with the selectors in hobbies_animations.js.
 @include animationGate(
     "#introSectionDiv, #quantumComputing, #photography, #dungeonsAndDragons, #history",
-    "> h1, > h2, > h3, > p, > ul, > svg, > img, > .tableScroll, > blockquote, > a, > iframe"
+    "> h1, > h2, > h3, > p, > ul, > svg, > img, > .photoGallery, > .tableScroll, > blockquote, > a, > iframe"
 );

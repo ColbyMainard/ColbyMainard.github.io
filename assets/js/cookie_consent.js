@@ -6,6 +6,14 @@
  * the gtag.js library and analytics initialization are not loaded until
  * the visitor opts in, so no GA cookies are set until then.
  *
+ * The banner is a non-modal dialog (role="dialog", aria-modal="false") named
+ * by its own message text, inserted immediately after the skip link so the
+ * consent choice sits at the second tab stop while "Skip to main content"
+ * stays first. It is drawn at the bottom of the viewport by CSS, independent
+ * of that DOM position. Focus is deliberately NOT moved into it on load:
+ * yanking focus mid-page is more disruptive than the ordering problem it
+ * would solve, and DOM position alone puts the buttons within reach.
+ *
  * The choice is stored in localStorage as "accepted" or "rejected"; the
  * banner does not reappear on subsequent page loads. Visitors can change
  * their mind via window.cookieConsent.revoke() (linked from the Privacy
@@ -73,15 +81,25 @@
         var wrap = document.createElement("div");
         wrap.className = "cookieConsent";
         wrap.id = "cookieConsent";
-        wrap.setAttribute("role", "region");
-        wrap.setAttribute("aria-live", "polite");
-        wrap.setAttribute("aria-label", "Cookie consent");
+        // Non-modal dialog rather than a live region. The previous
+        // role="region" + aria-live="polite" pairing never announced: assistive
+        // technology watches a live region for content changing *inside a region
+        // that already exists*, and this element is built fully populated and
+        // inserted in one operation, so there was nothing to observe when the
+        // content arrived. A dialog named by its own message is announced when
+        // focus reaches it, which is what the live region was reaching for.
+        // aria-modal is false because the rest of the page stays usable — the
+        // banner does not trap focus and nothing behind it is inert.
+        wrap.setAttribute("role", "dialog");
+        wrap.setAttribute("aria-modal", "false");
+        wrap.setAttribute("aria-labelledby", "cookieConsentMessage");
 
         var inner = document.createElement("div");
         inner.className = "cookieConsent-inner";
 
         var msg = document.createElement("p");
         msg.className = "cookieConsent-message";
+        msg.id = "cookieConsentMessage";
         msg.innerHTML = "This site loads Google Analytics so the owner can see which pages are read. " +
                         "Analytics cookies are only set if you accept. " +
                         "Nothing is stored on this server, and your data is never sold. " +
@@ -113,7 +131,23 @@
     function showBanner() {
         if (banner) return;
         banner = createBanner();
-        document.body.appendChild(banner);
+        // Insert near the top of <body>, not at the end. Appending put the
+        // consent choice at the very end of the tab order, behind every link on
+        // pages that run to 1,600-2,300 lines, so a keyboard or screen-reader
+        // user had to traverse the whole page to answer a question a mouse user
+        // answers in one click (WCAG 2.4.3 Focus Order).
+        //
+        // Placed *after* the skip link rather than before it: "Skip to main
+        // content" must stay the first thing in the tab order and the
+        // accessibility tree. That still leaves consent at the second stop.
+        // Visual placement is unaffected — .cookieConsent is position: fixed
+        // with a z-index, so DOM order does not change where it draws.
+        var skipLink = document.querySelector('body > a[href="#main"]');
+        if (skipLink) {
+            document.body.insertBefore(banner, skipLink.nextSibling);
+        } else {
+            document.body.insertBefore(banner, document.body.firstChild);
+        }
         if (typeof window.requestAnimationFrame === "function") {
             window.requestAnimationFrame(function () {
                 if (banner) banner.classList.add("visible");

@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v55";
+const CACHE_VERSION = "v56";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -29,20 +29,24 @@ const PRECACHE_URLS = [
     "./assets/js/hobbies_animations.js",
     "./assets/js/index_animations.js",
     "./assets/js/navbar.js",
+    "./assets/js/photo_gallery.js",
     "./assets/js/reading_engagement.js",
     "./assets/js/service_worker_register.js",
     "./assets/js/tech_resources_animations.js",
     "./assets/js/tech_takes_animations.js",
     "./assets/images/favicon.png",
     "./assets/images/sharecard.png",
-    "./assets/images/miscellaneous/DEFCON33.jpeg",
-    "./assets/images/photographyHobby/DSC_0004.JPG",
-    "./assets/images/photographyHobby/DSC_0023.JPG",
-    "./assets/images/photographyHobby/DSC_0110.JPG",
-    "./assets/images/photographyHobby/DSC_0237.JPG",
-    "./assets/images/photographyHobby/DSC_0396.JPG",
     "./assets/other/pgp_email_key.asc"
 ];
+
+// Deliberately NOT precached: the five full-resolution photographs in
+// assets/images/photographyHobby/ (3.5-5.0 MB each) and the 2.1 MB
+// assets/images/miscellaneous/DEFCON33.jpeg. Together they were about 22 MB
+// fetched in the background on a visitor's first load of ANY page, including
+// people who never open hobbies.html. The fetch handler below still caches
+// each one the first time it is actually requested, so offline support for a
+// page the visitor has already viewed is unchanged. Do not re-add them here
+// without shrinking them first.
 
 self.addEventListener("install", function (event) {
     event.waitUntil(

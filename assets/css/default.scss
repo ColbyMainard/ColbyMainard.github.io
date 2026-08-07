@@ -56,37 +56,65 @@ $emerald_efficiency_5: #e0f7fa;
     font-family: "Courier New", monospace;
 }
 
-/// Heading ramp. The size ladder (500/300/200/175%) is identical site-wide and
-/// only the colors differ. Pass null for a level the page has no markup for and
-/// no rule is emitted, which is why 404.html gets no h1 rule and hobbies gets
-/// no h4 rule.
+// Heading size ladder, shared by the headingRamp mixin, the global `body`
+// headings, and the footer's #contactMe ramp — the three places that used to
+// repeat the same 500/300/200/175% literals.
+//
+// The ladder was previously fixed at those percentages with no responsive
+// downscale, so an 80px monospace h1 (0.6em character advance, ~48px per glyph)
+// inside a `width: 80%` section shell could not fit a long word on a 320px
+// viewport and forced the page to scroll sideways — a WCAG 1.4.10 Reflow
+// failure, and exactly what a low-vision user hits at 400% zoom.
+//
+// Each clamp keeps the old size as its maximum, so nothing changes on desktop
+// at a 16px root (5rem = 500% of 16px = 80px, and so on down). The `vw` middle
+// term shrinks with the viewport, and browser zoom shrinks the viewport in CSS
+// pixels, so one expression covers both the narrow-screen and the zoomed case.
+// The `overflow-wrap: break-word` rule further down is the actual guarantee
+// against an unbreakable word; these clamps keep headings proportionate.
+$heading_size_1: clamp(2rem,     8vw,   5rem);    // was 500% — 80px at a 16px root
+$heading_size_2: clamp(1.5rem,   5vw,   3rem);    // was 300% — 48px
+$heading_size_3: clamp(1.25rem,  3.5vw, 2rem);    // was 200% — 32px
+$heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
+
+/// Heading ramp. The size ladder is identical site-wide (see $heading_size_*)
+/// and only the colors differ. Pass null for a level the page has no markup for
+/// and no rule is emitted, which is why 404.html gets no h1 rule and hobbies
+/// gets no h4 rule.
+///
+/// Shrinking these does not put any caller below WCAG AA: every partial's
+/// heading colors were tuned against the 4.5:1 body-text threshold rather than
+/// the 3:1 large-text one (see the contrast notes in index.scss, tech_takes.scss,
+/// tech_resources.scss, privacy_policy.scss, hobbies.scss, page_not_found.scss),
+/// so they do not depend on staying above the 24px large-text cutoff. The one
+/// place that does is the footer ramp, which sets its own floors — see #contactMe.
 @mixin headingRamp($h1: null, $h2: null, $h3: null, $h4: null) {
     @if $h1 != null {
         h1 {
             text-align: left;
             color: $h1;
-            font-size: 500%;
+            font-size: $heading_size_1;
         }
     }
     @if $h2 != null {
         h2 {
             text-align: left;
             color: $h2;
-            font-size: 300%;
+            font-size: $heading_size_2;
         }
     }
     @if $h3 != null {
         h3 {
             text-align: left;
             color: $h3;
-            font-size: 200%;
+            font-size: $heading_size_3;
         }
     }
     @if $h4 != null {
         h4 {
             text-align: left;
             color: $h4;
-            font-size: 175%;
+            font-size: $heading_size_4;
         }
     }
 }
@@ -463,15 +491,15 @@ body {
     font-family: "Courier New", monospace;
     h1 {
         color: $noir_5;
-        font-size: 500%;
+        font-size: $heading_size_1;
     }
     h2 {
         color: $noir_5;
-        font-size: 300%;
+        font-size: $heading_size_2;
     }
     h3 {
         color: $noir_5;
-        font-size: 200%;
+        font-size: $heading_size_3;
     }
     p {
         /* $noir_4 (#a0a0b0) on $noir_2 is only 4.14:1; $noir_5 clears WCAG AA
@@ -489,6 +517,18 @@ body {
         border: 2px solid $noir_1;
         border-radius: 1%;
     }
+}
+
+/* Headings are the longest unbroken strings on the site (page titles like
+   "Curated AI, Cybersecurity & Programming Learning Resources") and sit inside
+   `width: 80%` section shells, so on a 320px viewport a single long word can be
+   wider than its container no matter how far the $heading_size_* clamps scale
+   the type down. Allowing a break inside the word is what actually guarantees
+   the page never scrolls sideways (WCAG 1.4.10 Reflow); the clamps handle
+   proportion. Applied globally so section, body, and footer headings are all
+   covered by one rule. */
+h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
 }
 
 /* Keyboard focus ring for in-content links. The section partials set link
@@ -859,16 +899,22 @@ footer {
     #contactMe {
         font-family: "Courier New", monospace;
         h1 {
-            font-size: 500%;
+            font-size: $heading_size_1;
             color: $emerald_efficiency_2;
         }
+        /* These two carry their own clamps rather than $heading_size_* because
+           _4 is 3.31:1 on _1, which is AA only while the text stays at or above
+           the 24px WCAG large-text cutoff. The shared ladder floors h3 at
+           1.25rem (20px), which would drop below it; both are floored at 1.5rem
+           here instead. Raise the color to _5 (4.78:1) before lowering either
+           floor. */
         h2 {
-            font-size: 300%;
-            /* _4 = 3.31:1 on _1 — AA for 48px text; _3 was 2.45:1 */
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            /* _4 = 3.31:1 on _1 — AA for text at/above 24px; _3 was 2.45:1 */
             color: $emerald_efficiency_4;
         }
         h3 {
-            font-size: 200%;
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
             color: $emerald_efficiency_4;
         }
         /* unvisited link */

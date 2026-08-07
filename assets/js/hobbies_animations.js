@@ -95,7 +95,10 @@
             duration: 600,
             delay: anime.stagger(100)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, img, a"), {
+        // .photoGallery, not img: the photographs now sit inside the gallery's
+        // list and figures, so they are no longer direct children of the
+        // section. The gallery as a whole is the element that blooms in.
+        addStep(tl, directChildren(el, "p, ul, .photoGallery, a"), {
             opacity: [0, 1],
             scale: [0.8, 1],
             duration: 500,
