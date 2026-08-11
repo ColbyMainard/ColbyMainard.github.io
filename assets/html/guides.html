@@ -64,6 +64,22 @@
         }
         </script>
 
+        <!-- JSON-LD: CollectionPage schema (wraps the per-guide HowTo schemas below) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#guides",
+          "name": "Technical Guides — Colby Mainard",
+          "url": "https://colbymainard.github.io/assets/html/guides.html",
+          "inLanguage": "en",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "description": "Plain-spoken starter guides to data engineering, computer vision, generative AI, natural language processing, reinforcement learning, software engineering, and cybersecurity, each written for readers new to the area."
+        }
+        </script>
+
         <!-- JSON-LD: ItemList of guide topics -->
         <script type="application/ld+json">
         {
@@ -90,7 +106,7 @@
           "@type": "HowTo",
           "name": "How to get started with data engineering",
           "description": "A plain-spoken starter guide to cleaning data, handling user data responsibly, accounting for data velocity, and choosing batch vs. real-time processing.",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand why clean data matters", "text": "Real-world data has duplicates, outliers, inconsistent types, and missing values; deduplicate, cast types, and impute on a consistent policy before anything downstream relies on it."},
@@ -109,7 +125,7 @@
           "@type": "HowTo",
           "name": "How to get started with computer vision",
           "description": "A starter guide to computer-vision problem classes, choosing a model, normalizing image data, and the core libraries.",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Learn the main problem classes", "text": "Object classification, instance segmentation, semantic segmentation, image classification, and pose estimation each suit different vision tasks."},
@@ -127,7 +143,7 @@
           "@type": "HowTo",
           "name": "How to get started with generative AI",
           "description": "A starter guide to the technology behind generative AI, the role of GANs, and the core libraries for building with it.",
-          "dateModified": "2026-06-17",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand the underlying technology", "text": "Generative models convert an input into novel data of a similar format; LLMs map prompts to text, while vision language models combine vision and language."},
@@ -144,7 +160,7 @@
           "@type": "HowTo",
           "name": "How to get started with natural language processing",
           "description": "A starter guide to sentiment analysis, topic detection, data-normalization concerns, and the core NLP libraries.",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Perform sentiment analysis", "text": "Feed tokenized text into a network that outputs a positive-or-negative sentiment measurement."},
@@ -162,7 +178,7 @@
           "@type": "HowTo",
           "name": "How to get started with reinforcement learning",
           "description": "A starter guide to the agent-environment-reward framework, the core RL techniques, and where reinforcement learning applies.",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand the agent-environment-reward framework", "text": "An agent takes actions in an environment, then measures its state and the resulting reward to optimize behavior in noisy, dynamic settings."},
@@ -179,7 +195,7 @@
           "@type": "HowTo",
           "name": "How to get started with software engineering",
           "description": "A starter guide to why GenAI can't replace software engineers, practical maintainability principles, and where to learn next.",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand why GenAI can't replace software engineering", "text": "GenAI writes a solid first draft but struggles with taste, hidden requirements, intuitive UI design, and unstated user priorities."},
@@ -196,7 +212,7 @@
           "@type": "HowTo",
           "name": "How to get started with cybersecurity",
           "description": "A starter guide to everyday security best practices, the subfields of cybersecurity, and the core tools.",
-          "dateModified": "2026-05-25",
+          "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Adopt security best practices", "text": "Patch regularly, enable multi-factor authentication, use strong unique passwords and a password manager, and minimize your digital footprint."},
@@ -249,7 +265,7 @@
                     <p><strong>Cite this guide:</strong> <a href="https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv">https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv</a></p>
                     <p>
                         Data engineering is the discipline of moving, shaping, and storing data so that downstream applications have consistent and stable datasets to work with.
-                        This has many parallels with software engineering, as both emphasize the importance of designing, testing, and maintaining data.
+                        This has many parallels with software engineering, since both disciplines live or die on how carefully you design, test, and maintain what you build.
                     </p>
                     <h3>The Importance of Clean Data</h3>
                     <p>
@@ -448,7 +464,7 @@
                     <p><strong>Last Updated:</strong> August 8, 2026 <span class="readingTime" data-reading-time></span></p>
                     <p><strong>Cite this guide:</strong> <a href="https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv">https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv</a></p>
                     <p>
-                        Natural language processing (NLP) has been described as "a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language" <a href="https://www.ibm.com/think/topics/natural-language-processing">by Cole Stryker and Jim Holdsworth</a>
+                        Natural language processing (NLP) has been described as "a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language" <a href="https://www.ibm.com/think/topics/natural-language-processing">by Cole Stryker and Jim Holdsworth</a>.
                     </p>
                     <h3>Sentiment Analysis</h3>
                     <p>

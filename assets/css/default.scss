@@ -890,6 +890,20 @@ pre {
     }
 }
 
+/* Mirrors .cookieConsent-reject's treatment: the secondary action reads dimmer
+   than its accept sibling, then brightens on interaction. Only the text color
+   differs from .cookiePreferences-button, which already supplies the transparent
+   background, the _3 border, and the same hover fill. _4 on the Privacy Policy
+   section background (refined_professionalism_1) = 6.8:1, clear WCAG AA. */
+.cookiePreferences-reject {
+    color: $emerald_efficiency_4;
+
+    &:hover,
+    &:focus {
+        color: $emerald_efficiency_5;
+    }
+}
+
 footer {
     width: 100%;
     text-align: center;

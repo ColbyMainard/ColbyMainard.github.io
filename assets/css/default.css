@@ -780,10 +780,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-align: left;
     color: #fdf3e3;
     font-size: clamp(1.5rem, 5vw, 3rem); }
-  #notFound h3, #helpfulLinks h3 {
-    text-align: left;
-    color: #f2cfa0;
-    font-size: clamp(1.25rem, 3.5vw, 2rem); }
   #notFound p, #helpfulLinks p {
     text-align: left;
     color: #e8b48f;
@@ -1294,6 +1290,16 @@ pre {
   .cookiePreferences-accept:hover, .cookiePreferences-accept:focus {
     background-color: #00614a;
     border-color: #e0f7fa; }
+
+/* Mirrors .cookieConsent-reject's treatment: the secondary action reads dimmer
+   than its accept sibling, then brightens on interaction. Only the text color
+   differs from .cookiePreferences-button, which already supplies the transparent
+   background, the _3 border, and the same hover fill. _4 on the Privacy Policy
+   section background (refined_professionalism_1) = 6.8:1, clear WCAG AA. */
+.cookiePreferences-reject {
+  color: #a1d9b0; }
+  .cookiePreferences-reject:hover, .cookiePreferences-reject:focus {
+    color: #e0f7fa; }
 
 footer {
   width: 100%;
