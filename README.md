@@ -31,7 +31,7 @@ Discussing resources that were useful for myself and that I would similarly reco
 Topics include:
     - Cybersecurity
     - Artificial Intelligence
-    - C++
+    - C/C++
     - Python
     - Scripting
     - Operating Systems
@@ -75,9 +75,11 @@ Current topics include:
     - Artificial General Intelligence
     - Privacy
     - Product Placement in Sports Marketing
+    - Physical Media vs. Streaming
 
 ## Architecture
 
+- `/.github/workflows/static.yml`: The GitHub Actions workflow that publishes the repository to GitHub Pages.
 - `/404.html`: Custom error page that GitHub Pages serves for URLs that do not exist.
 - `/assets/css`: CSS and Sassy CSS files allowing for layout specification to webpages.
 - `/assets/html`: Contains all non-index HTML files.
@@ -85,7 +87,10 @@ Current topics include:
 - `/assets/js`: Custom JavaScript files.
 - `/assets/markdown/`: Markdown files for various projects and reports on progress.
 - `/assets/other`: Files that are useful for the website but do not fit into any other category
-- `/index.html`": The landing page for the website.
-- `/manifest.json`: A manifest in JSON format to describe the site bots and search engine crawlers.
+- `/feed.xml`: A hand-maintained Atom feed of the Technical Stances entries.
+- `/index.html`: The landing page for the website.
+- `/llms.txt`: A plain-text summary of the site for large language model crawlers.
+- `/manifest.json`: The web app manifest, describing the site as an installable progressive web app.
 - `/robots.txt`: Specifying a web scraping policy to bots.
+- `/service-worker.js`: A service worker that precaches the site for offline browsing and faster repeat visits.
 - `/sitemap.xml`: A mapping of pages and last update time.

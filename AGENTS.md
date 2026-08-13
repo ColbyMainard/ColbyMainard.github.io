@@ -19,8 +19,8 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 | `assets/html/` | All non-index pages: `tech_takes.html`, `hobbies.html`, `tech_resources.html`, `guides.html`, `privacy.html`. |
 | `assets/css/` | `default.scss` (single compile entry) + 7 per-page partials; compiled `default.css` (committed); `*.css.map` (gitignored). |
 | `assets/js/` | Shared scripts, per-page `*_animations.js`, and page helpers. All client-side. |
-| `assets/images/` | `favicon.png`, `sharecard.png` (1200×630 social/OG card wired into every page's meta tags), photography (`photographyHobby/`), `miscellaneous/`, and GIMP `.xcf` design sources. |
-| `assets/markdown/` | Dated strategy/audit reports (SEO, accessibility, backlink, content, feature recommendations, code review, roadmap) and progress notes. |
+| `assets/images/` | `favicon.png`, `sharecard.png` (1200×630 social/OG card wired into every page's meta tags), photography (`photographyHobby/`), `miscellaneous/`, and GIMP `.xcf` design sources. The five `photographyHobby/` originals (3.5–5.0 MB each) and `miscellaneous/DEFCON33.jpeg` (2.1 MB) are **not** precached — see the asset checklist. |
+| `assets/markdown/` | Progress and design notes (currently just `animations_report.md`). Dated strategy/audit reports are written here as `<topic>-YYYY-MM-DD.md`, but they are treated as disposable: the 2026-08-04 report set was deleted on 2026-08-05 once acted on, so do not assume a recent audit is still on disk. |
 | `assets/other/` | Misc supporting files (e.g. `pgp_email_key.asc`). |
 | Root config | `manifest.json` (PWA), `service-worker.js` (offline precache), `robots.txt`, `sitemap.xml`, `llms.txt` (LLM crawler summary), `feed.xml` (hand-maintained Atom feed for the Technical Stances page), `press_mentions.csv`. |
 | `.github/workflows/static.yml` | CI: deploys the **entire repo** to GitHub Pages on every push to `master` (and manual `workflow_dispatch`). |
@@ -44,15 +44,19 @@ You are an AI agent editing Colby Mainard's personal website. Read this guide be
 - **`default.scss` is the single compile entry point.** It `@import`s the seven per-page partials (`index`, `hobbies`, `tech_takes`, `tech_resources`, `privacy_policy`, `guides`, `page_not_found`) and holds shared/global styles (header nav, body, footer, cookie banner, back-to-top button, code blocks).
 - It compiles to **`default.css`, the one stylesheet every page links.**
 - **Color palettes are SCSS variables.** Shared palettes (noir / smart / emerald_efficiency) sit near the top of `default.scss`; each per-page partial also defines its own palette (e.g. cyberpunk_dreams on index). Keep text/background pairs at **WCAG AA contrast (≥4.5:1 for body text)**.
+- **Shared structure lives in mixins, not in the partials.** `default.scss` defines `sectionShell`, `headingRamp`, `bodyText`, `listText`, `blockQuote`, `proseLinks`, `dataTable`, and `animationGate`; every partial `@include`s them with its own palette. Put a structural change (border style, spacing, a newly animated element type) in the mixin — hand-copying it into six partials is what the mixins exist to prevent. Only page-specific rules (the hobbies iframe and photo gallery, the tech-takes glossary, per-cell link colors) belong at the call site.
+- **Heading sizes come from the shared `$heading_size_1..4` ladder**, which uses `clamp()` so headings scale down on narrow viewports and under zoom (WCAG 1.4.10 Reflow) while keeping the previous desktop sizes as their maximum. Do not go back to fixed percentages.
+- **Comment style is load-bearing:** silent `//` comments in the mixin block stay out of the compiled CSS; the `/* */` contrast notes inside the partials ship on purpose and should stay next to the rule they document.
 - Layout must **scale for both mobile and desktop**; keep styling consistent across pages.
 
 ### JavaScript
 
 - **Client-side only.** Every script must run with no server and tolerate a `file://` origin.
 - **Minimal dependencies.** AnimeJS is the *only* external library, loaded from a CDN via an `importmap` plus a small module shim that exposes it as `window.anime`. The deferred `*_animations.js` files are **classic scripts** that consume that global, with `animation_helpers.js` providing shared animation utilities. Before adding any npm dependency, **confirm with the user**; prefer generic JS / NodeJS with few transitive deps.
-- **Shared deferred scripts loaded on every page:** `cookie_consent.js`, `navbar.js`, `back_to_top.js`, `easter_egg.js`, `service_worker_register.js` — and on animated pages, `animation_helpers.js` + the page's own `*_animations.js`, plus occasional helpers (e.g. `reading_engagement.js` reading-time and progress bar, loaded by `tech_takes.html` and `guides.html`).
+- **Shared deferred scripts loaded on every page:** `cookie_consent.js`, `navbar.js`, `back_to_top.js`, `easter_egg.js`, `service_worker_register.js` — and on animated pages, `animation_helpers.js` + the page's own `*_animations.js`, plus page-specific helpers (`reading_engagement.js` reading-time and progress bar on `tech_takes.html` and `guides.html`; `photo_gallery.js` on `hobbies.html`).
 - **Known exceptions — do not "normalize" them:** `privacy.html` loads no AnimeJS/animation scripts at all; `404.html` omits `cookie_consent.js`/`service_worker_register.js`, and its relative paths are intentional (see repo map). `easter_egg.js` is not subject to either exception; it loads on all seven pages, and its file header documents why it is safe on `privacy.html` and `404.html`.
-- `cookie_consent.js` **gates Google Analytics** — GA does not load until the visitor grants consent. Do not load analytics before consent.
+- `cookie_consent.js` **gates Google Analytics** — GA does not load until the visitor grants consent. Do not load analytics before consent. The banner is a non-modal `role="dialog"` labelled by its own message, inserted **immediately after the skip link** so consent is the second tab stop rather than the last (WCAG 2.4.3); CSS pins it to the bottom of the viewport regardless of DOM order. Do not revert it to `appendChild`, and do not move focus into it on load.
+- `photo_gallery.js` (hobbies only) makes the photograph list a manual one-at-a-time viewer, gated behind a `.js-gallery` class it adds — with scripting off, all photographs render stacked and the controls stay `hidden`, so there are no dead buttons. It **never auto-advances** (WCAG 2.2.2 Pause, Stop, Hide) and never moves focus on navigation; keep both properties if you touch it.
 - `service_worker_register.js` registers `service-worker.js` and **injects the `<link rel="manifest">` at runtime**, only over `http(s)` (browsers block manifest fetches from `file://`).
 - `navbar.js` drives the responsive nav toggle and shared header markup; keep the header consistent across pages.
 
@@ -101,6 +105,7 @@ The steps that get missed are the cross-file ones — walk the matching list end
 
 1. Keep JS/CSS in separate files imported from `<head>` — no inline code.
 2. Mirror the change in `service-worker.js` `PRECACHE_URLS` and bump `CACHE_VERSION`.
+3. **Exception for large media:** the `photographyHobby/` originals and `miscellaneous/DEFCON33.jpeg` are deliberately absent from `PRECACHE_URLS` — together they were ~22 MB pulled in the background on a visitor's first load of *any* page, including people who never open `hobbies.html`. The fetch handler still caches each one the first time it is actually requested, so offline support for an already-viewed page is unchanged. Keep new multi-megabyte assets out too, and shrink them before considering a precache entry. The `service-worker.js` comment where the entries used to be documents this.
 
 **Before you finish (any change):**
 
@@ -120,5 +125,5 @@ The steps that get missed are the cross-file ones — walk the matching list end
 
 ## Where to find things
 
-- Dated audits and strategy docs (accessibility, SEO, backlinks, content, feature recommendations, code review, roadmap) live in `assets/markdown/` as `*-YYYY-MM-DD.md`. Check the most recent before re-auditing.
+- Dated audits and strategy docs (accessibility, SEO, backlinks, content, feature recommendations, code review, roadmap) are written to `assets/markdown/` as `*-YYYY-MM-DD.md`. Check for a recent one before re-auditing, but expect the directory to be mostly empty — reports are deleted once their recommendations have been applied, so the site itself, not the report set, is the record of what was done.
 - Note: every file in `assets/js/` is referenced by at least one page. If you add a script, load it from a page **and** register it in `service-worker.js` `PRECACHE_URLS`; if a script stops being referenced, delete it rather than leaving it precached. (The legacy `current_time.js` was removed on 2026-07-23 under exactly that rule.)

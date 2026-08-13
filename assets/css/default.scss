@@ -574,11 +574,13 @@ main a:focus-visible {
         background-color: $emerald_efficiency_2;
         border-color: $emerald_efficiency_5;
         color: $emerald_efficiency_5;
-        outline: none;
     }
 
+    /* Same solid outline as .tableScroll and main a:focus-visible. The previous indicator was a 3px box-shadow at 60% alpha, which composited over whichever section happened to be scrolled behind the fixed button, so its contrast could not be verified.
+       currentColor here is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states. Every surface this button can sit over is a dark section shell or the $noir_2 body (#3e3e41), the lightest of them at 9.5:1, so the ring clears the 3:1 non-text contrast minimum everywhere. */
     &:focus-visible {
-        box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
     }
 }
 

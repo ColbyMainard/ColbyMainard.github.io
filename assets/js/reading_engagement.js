@@ -67,17 +67,28 @@
     function createProgressBar() {
         var bar = document.createElement("div");
         bar.id = "reading-progress";
-        bar.setAttribute("role", "progressbar");
-        bar.setAttribute("aria-label", "Reading progress");
-        bar.setAttribute("aria-valuemin", "0");
-        bar.setAttribute("aria-valuemax", "100");
-        bar.setAttribute("aria-valuenow", "0");
+        // The bar is a purely visual convenience that duplicates what the
+        // browser scrollbar already conveys, so it is hidden from assistive
+        // technology rather than exposed as a progressbar. Announcing
+        // "Reading progress, 0 percent" before any real content, then
+        // updating aria-valuenow on every scroll frame, is noise a screen
+        // reader user cannot act on.
+        bar.setAttribute("aria-hidden", "true");
 
         var fill = document.createElement("div");
         fill.className = "reading-progress-fill";
         bar.appendChild(fill);
 
-        document.body.insertBefore(bar, document.body.firstChild);
+        // Insert *after* the skip link, matching the ordering contract
+        // documented in cookie_consent.js: "Skip to main content" must stay
+        // the first thing in <body> and in the accessibility tree. The bar is
+        // position: fixed, so DOM order does not change where it draws.
+        var skipLink = document.querySelector('body > a[href="#main"]');
+        if (skipLink) {
+            document.body.insertBefore(bar, skipLink.nextSibling);
+        } else {
+            document.body.insertBefore(bar, document.body.firstChild);
+        }
         return { bar: bar, fill: fill };
     }
 
@@ -97,7 +108,6 @@
         if (!progressFill || !progressBar) return;
         var pct = computeProgress();
         progressFill.style.width = pct + "%";
-        progressBar.setAttribute("aria-valuenow", Math.round(pct).toString());
     }
 
     function onScrollOrResize() {

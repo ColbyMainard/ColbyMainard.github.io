@@ -1052,7 +1052,9 @@ main a:focus-visible {
   pointer-events: none;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   z-index: 200;
-  /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */ }
+  /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */
+  /* Same solid outline as .tableScroll and main a:focus-visible. The previous indicator was a 3px box-shadow at 60% alpha, which composited over whichever section happened to be scrolled behind the fixed button, so its contrast could not be verified.
+     currentColor here is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states. Every surface this button can sit over is a dark section shell or the $noir_2 body (#3e3e41), the lightest of them at 9.5:1, so the ring clears the 3:1 non-text contrast minimum everywhere. */ }
   .floatingBackToTop.visible {
     opacity: 1;
     transform: translateY(0);
@@ -1060,10 +1062,10 @@ main a:focus-visible {
   .floatingBackToTop:hover, .floatingBackToTop:focus {
     background-color: #1d9a6a;
     border-color: #e0f7fa;
-    color: #e0f7fa;
-    outline: none; }
+    color: #e0f7fa; }
   .floatingBackToTop:focus-visible {
-    box-shadow: 0 0 0 3px rgba(80, 195, 161, 0.6); }
+    outline: 2px solid currentColor;
+    outline-offset: 2px; }
 
 @media (max-width: 768px) {
   .floatingBackToTop {

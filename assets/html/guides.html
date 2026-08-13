@@ -128,7 +128,7 @@
           "dateModified": "2026-08-08",
           "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
-            {"@type": "HowToStep", "name": "Learn the main problem classes", "text": "Object classification, instance segmentation, semantic segmentation, image classification, and pose estimation each suit different vision tasks."},
+            {"@type": "HowToStep", "name": "Learn the main problem classes", "text": "Object detection, instance segmentation, semantic segmentation, image classification, and pose estimation each suit different vision tasks."},
             {"@type": "HowToStep", "name": "Choose the right model", "text": "Balance resource constraints, performance requirements, and infrastructure capacity; larger networks gain accuracy at the cost of compute and power."},
             {"@type": "HowToStep", "name": "Normalize your image data", "text": "Decide on channel count and dimensions, and augment with rotation, noise, and occlusion so the model generalizes."},
             {"@type": "HowToStep", "name": "Pick the right libraries and tools", "text": "Ultralytics for ready-made models, PyTorch or TensorFlow for custom networks, Keras for portability, and OpenCV/NumPy for image handling."}
@@ -359,20 +359,20 @@
                         While many different problems can be solved via computer vision, it often boils down to one or more of the following categories:
                     </p>
                     <ul>
-                        <li>Object classification</li>
+                        <li>Object detection</li>
                         <li>Instance Segmentation</li>
                         <li>Semantic Segmentation</li>
                         <li>Image classification</li>
                         <li>Pose estimation</li>
                     </ul>
-                    <h4>Object Classification</h4>
+                    <h4>Object Detection</h4>
                     <p>
-                        Object classification can be used to draw bounding boxes around objects that the algorithm has been trained to find.
+                        Object detection draws bounding boxes around objects the algorithm has been trained to find.
                         This is best for finding regions of an image that might be interesting for further processing.
                     </p>
                     <h4>Instance Segmentation</h4>
                     <p>
-                        Instance segmentation is similar to object classification but uses bounding polygons for more fidelity.
+                        Instance segmentation does the same job as object detection, but traces a polygon around each object instead of a box, so the outline is far more precise.
                         This is best for determining which pixels belong to a particular object.
                     </p>
                     <h4>Semantic Segmentation</h4>
