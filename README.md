@@ -35,6 +35,7 @@ Topics include:
     - Python
     - Scripting
     - Operating Systems
+    - Systems, Data Structures and Algorithms
 
 ### Guides
 

@@ -22,16 +22,16 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 ### How It Works
 
-1. **Shared helpers load first**: `animation_helpers.js` is a classic deferred script that runs before each page's `*_animations.js`. It attaches `window.AnimationHelpers = { directChildren, addStep, animateContact, prefersReducedMotion }`. Each page script aliases these locally instead of redeclaring them.
+1. **Shared helpers load first**: `animation_helpers.js` is a classic deferred script that runs before each page's `*_animations.js`. It attaches `window.AnimationHelpers = { directChildren, addStep, animateContact, prefersReducedMotion, run }`. Each page script aliases the ones it needs locally instead of redeclaring them, then hands its `sections` and `animationMap` to `run`, which owns everything from step 2 onward.
 
-2. **Two guards before anything animates**: every page script runs two checks at the top and returns early if either fails.
-   - **Reduced motion**: if `matchMedia("(prefers-reduced-motion: reduce)")` matches, the script skips all animation.
-   - **Graceful degradation**: `if (typeof anime === "undefined" || !window.AnimationHelpers) return;` so a failed AnimeJS CDN load or a missing helpers file does not break the page.
-   In both cases the `js-animations` class is never added, so the CSS never hides anything and all content stays fully visible.
+2. **Three guards before anything animates**: each page script opens with `if (!window.AnimationHelpers) return;`, since it cannot call `run` if the helpers file never loaded. `run` then applies the other two and returns early if either fails.
+   - **Reduced motion**: if `matchMedia("(prefers-reduced-motion: reduce)")` matches, `run` skips all animation.
+   - **Graceful degradation**: `if (typeof anime === "undefined") return;` so a failed AnimeJS CDN load does not break the page.
+   In every case the `js-animations` class is never added, so the CSS never hides anything and all content stays fully visible.
 
-3. **Initial state (SCSS)**: once the guards pass, the script adds `js-animations` to `document.documentElement` (the `<html>` element). A rule scoped under `html.js-animations` sets `opacity: 0` on the direct children of each animated section. Because the class is only added by JavaScript, content remains visible when JS is disabled or fails.
+3. **Initial state (SCSS)**: once the guards pass, `run` adds `js-animations` to `document.documentElement` (the `<html>` element). A rule scoped under `html.js-animations` sets `opacity: 0` on the direct children of each animated section. Because the class is only added by JavaScript, content remains visible when JS is disabled or fails.
 
-4. **Scroll trigger (Intersection Observer)**: each section is tagged with a `data-animate` attribute and observed with a low threshold (`0.02`) and a bottom-margin offset (`-50px`). As soon as 2% of a section enters the viewport, its animation fires. An `animated` map plus `observer.unobserve(el)` ensures each section animates only on its first view. The observer is bootstrapped on `DOMContentLoaded` (or immediately if the DOM is already parsed).
+4. **Scroll trigger (Intersection Observer)**: `run` tags each section with a `data-animate` attribute and observes it with a low threshold (`0.02`) and a bottom-margin offset (`-50px`). As soon as 2% of a section enters the viewport, its animation fires. An `animated` map plus `observer.unobserve(el)` ensures each section animates only on its first view. The observer is bootstrapped on `DOMContentLoaded` (or immediately if the DOM is already parsed).
 
 5. **Timeline coordination (AnimeJS)**: each section's animation is built as an `anime.createTimeline({ ease: "..." })`. Elements within a section are staggered using relative offsets (for example `">-300"`) so headings appear first, followed by SVGs/images, then body content. `addStep` wraps every `.add()` call so empty target lists are skipped (avoiding AnimeJS "No target found" warnings), and `directChildren` restricts a step to top-level children of a section.
 
@@ -39,7 +39,7 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 **Separate JS files per page:** keeps each file focused and avoids loading animation logic for sections that do not exist on the current page. It also prevents ID collision issues.
 
-**Shared helpers in `animation_helpers.js`:** the four functions that were identical across every page (`directChildren`, `addStep`, `animateContact`, `prefersReducedMotion`) were extracted so they are declared once. The refactor is deliberately partial: the IntersectionObserver plumbing, the two guards, and the `js-animations` toggle are still copied into each `*_animations.js`, because they read page-specific `sections` and `animationMap` values.
+**Shared helpers in `animation_helpers.js`:** the four functions that were identical across every page (`directChildren`, `addStep`, `animateContact`, `prefersReducedMotion`) were extracted so they are declared once. A later pass finished the job with `run`, which also absorbed the IntersectionObserver plumbing, the reduced-motion and AnimeJS guards, and the `js-animations` toggle. Those read page-specific `sections` and `animationMap` values, so `run` takes both as arguments; each `*_animations.js` is now only its section map, its per-section timelines, and a single `!window.AnimationHelpers` guard. No page script declares its own observer.
 
 **`directChildren` helper:** several sections (especially Education on `index.html`, and History on `hobbies.html`) contain deeply nested tables with hundreds of inner elements. Using `querySelectorAll("ul, table, p")` would select every nested descendant, causing performance issues and unintended animations. `directChildren` filters `el.children` by CSS selector so only top-level elements are animated; nested content inherits visibility from its parent.
 
@@ -82,7 +82,10 @@ and body steps).
 | Python | Smooth slide from right | `outSine` | Flowing, contrasts C++ |
 | Scripting | Rise from bottom | `outExpo` | Command-line text appearing |
 | Operating Systems | Bounce cascade from top | `outBounce` | OS abstraction layers |
+| Systems, Data Structures and Algorithms | Assembling layers (heading drops, subheadings slide in from the left, body springs up) | `outQuart` | Parts fitting together |
 | Contact | Simple fade | `outSine` | Clean exit |
+
+Systems, Data Structures and Algorithms is the only section on this page whose element types enter from different directions: the heading drops from above, subheadings arrive from the left, and body content rises from below. It reuses `outQuart` rather than claiming a unique curve, since Cybersecurity already holds that easing here and the mixed directions are what separate the two. Its body step overrides to `outBack`, the same way the Operating Systems timeline drops to `outQuart` for its SVG and body steps.
 
 ### tech_takes.html
 
@@ -151,19 +154,18 @@ The Intro's `.errorCode` figure is the only element on the site with a multi-ste
 
 `default.scss` is the single compile entry point. It `@import`s seven partials in order (`index`, `hobbies`, `tech_takes`, `tech_resources`, `privacy_policy`, `guides`, `page_not_found`) and compiles to one committed `default.css` that every page links. The animation initial-state rules live inside each animated partial, not in a separate stylesheet.
 
-Six partials carry a `html.js-animations` initial-state block: `index.scss`, `hobbies.scss`, `tech_takes.scss`, `tech_resources.scss`, `guides.scss`, and `page_not_found.scss`. `privacy_policy.scss` has none, matching that page's lack of animations.
+Six partials declare an initial-state gate: `index.scss`, `hobbies.scss`, `tech_takes.scss`, `tech_resources.scss`, `guides.scss`, and `page_not_found.scss`. `privacy_policy.scss` has none, matching that page's lack of animations.
 
-All use the same base pattern:
+None of them writes the `html.js-animations` block by hand. `default.scss` defines an `animationGate($sections, $children)` mixin that emits both the initial-state rule and its reduced-motion counterpart, and each partial calls it with its own two selector lists:
 
 ```scss
-html.js-animations {
-    #sectionId {
-        > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
-            opacity: 0;
-        }
-    }
-}
+@include animationGate(
+    "#introSectionDiv, #sectionId, #otherSectionId",
+    "> h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a"
+);
 ```
+
+A partial may call the mixin more than once when a section needs a different child list: `page_not_found.scss` gates `#helpfulLinks` separately so it can include a bare `li`, and `tech_takes.scss` adds a second call for `#introSectionDiv > .takesIndex`. The one hand-written gate left is in `default.scss` itself, covering the footer `#contactMe` (`> h2, > p, > a`), which is identical on every page and so is not repeated per partial.
 
 The exact list of child selectors varies by partial based on the element types each page uses. The gate has to stay in step with that page's JS: an element type that is animated but not gated flashes, while one that is gated but never animated is stranded invisible.
 
@@ -175,19 +177,21 @@ The exact list of child selectors varies by partial based on the element types e
 
 ### Reduced-motion safety net
 
-Each animated partial also wraps a duplicate rule inside a reduced-motion media query so gated elements are re-revealed if the OS setting is toggled on after load:
+A duplicate rule inside a reduced-motion media query re-reveals gated elements if the OS setting is toggled on after load. The `animationGate` mixin emits this automatically from the same two selector lists, so a partial cannot widen its gate and forget the safety net:
 
 ```scss
 @media (prefers-reduced-motion: reduce) {
     html.js-animations {
-        #sectionId {
-            > h1, > h2, > h3, > h4, > p, > ul, > svg, > table, > a {
+        #{$sections} {
+            #{$children} {
                 opacity: 1 !important;
             }
         }
     }
 }
 ```
+
+The `#contactMe` gate in `default.scss` predates the mixin and repeats this block literally.
 
 Separately, `default.scss` opts into smooth scrolling only for users who do not prefer reduced motion (`@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }`), and `tech_takes.scss` disables the reading-progress bar transition under the same reduced-motion condition.
 
@@ -221,6 +225,22 @@ sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
 Without the compiled rules, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there can be a brief flash of unstyled content before JS executes because the CSS would not yet include the `opacity: 0` rules.
 
 ## Changelog
+
+### Systems, Data Structures and Algorithms section added (tech_resources.html)
+
+A new `#systemsAndDSA` section ("Systems, Data Structures and Algorithms") was added to `tech_resources.html`, inside `#systemsAndDSADiv`, holding a six-book table. It is the page's seventh topic section. Wiring it into the animation system took four edits:
+
+- **`assets/css/tech_resources.scss`**: `#systemsAndDSA` was appended to the `animationGate` selector list, so its direct children start at `opacity: 0` and are re-revealed by the mixin's reduced-motion duplicate. Unlike the Physical Media Supremacy addition below, the section's base styling was *not* already in place, so `#systemsAndDSA { @extend %resourceSection; }` was added alongside the six existing sections; without it the section would animate correctly but render outside the page's Neon Dusk Serenity palette, section shell, and table styling.
+- **`assets/css/default.css`**: has to be regenerated from `default.scss` to pick up both the widened gate and the new `@extend`. Until it is, the section renders unstyled and its children are ungated, so they paint at full opacity, snap to `opacity: 0` when the timeline applies its from-value, then fade back in.
+- **`assets/js/tech_resources_animations.js`**:
+  - Added `systemsAndDSA: "#systemsAndDSA"` to the `sections` map, after `os` so the map reads in page order.
+  - Added `animateSystemsAndDSA(el)`, an "assembling layers" timeline on `outQuart`. The `h2` drops 45px from above while scaling `0.9 -> 1` (750ms). Sub-headings (`h3`, `h4`) slide in 35px from the left, staggered by 90ms (550ms). Body elements (`p, blockquote, ul, .tableScroll, a`) finish with a 28px rise on `outBack`, staggered by 55ms (550ms). Relative offsets (`">-350"`, `">-250"`, `">-300"`) overlap the phases so the section reads as one reveal rather than three beats.
+  - Registered `systemsAndDSA: animateSystemsAndDSA` in `animationMap`.
+- **`service-worker.js`**: `CACHE_VERSION` bumped to `v61` so returning visitors get the new script and stylesheet instead of the cached ones.
+
+Every step that touches the section's book table moves it vertically only. `outBack` overshoots on `translateY`, which is safe, but a `scale` above `1` or a horizontal tween on a `.tableScroll` already sitting at `max-width: 100%` can push past the viewport edge and flash a horizontal scrollbar mid-animation. Three sibling sections do tween `.tableScroll` horizontally (Cybersecurity -20px, C/C++ -30px, Python +30px), so this is a tighter constraint than the page currently enforces rather than a rule it already followed. Python's is the one that moves right, and therefore the one worth re-checking if a wider table is ever added to that section.
+
+The section's markup has only `h2`, `h3`, `p`, and `.tableScroll` direct children. The `svg`, `blockquote`, `ul`, and `a` selectors in its steps are inert here and were kept for symmetry with the six sibling resource sections, which is safe in this direction: `addStep` skips a step whose target list is empty, and the shared `animationGate` list already covers those element types should the section grow one. `h4` is named in the subheading step and, as with the rest of this page, is neither present nor gated, so it stays a harmless no-op (see the h4 gating fix below).
 
 ### Physical Media Supremacy section added (tech_takes.html)
 

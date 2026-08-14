@@ -53,9 +53,10 @@ $neon_dusk_serenity_5: #f9c54e;
 #pythonResources { @extend %resourceSection; }
 #scriptingResources { @extend %resourceSection; }
 #operatingSystemsResources { @extend %resourceSection; }
+#systemsAndDSA { @extend %resourceSection; }
 
 // Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
-    "#introSectionDiv, #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources",
+    "#introSectionDiv, #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources, #systemsAndDSA",
     "> h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a"
 );

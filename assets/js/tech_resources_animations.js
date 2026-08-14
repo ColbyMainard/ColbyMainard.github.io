@@ -25,6 +25,7 @@
         python: "#pythonResources",
         scripting: "#scriptingResources",
         os: "#operatingSystemsResources",
+        systemsAndDSA: "#systemsAndDSA",
         contact: "#contactMe"
     };
 
@@ -238,6 +239,41 @@
         }, ">-300");
     }
 
+    /**
+     * Systems, Data Structures and Algorithms — Assembling layers
+     * The heading drops in, sub-headings slide in from the left, and the body
+     * content springs up, so the section reads as parts fitting together.
+     * Motion stays vertical for the wide tables so nothing widens the page.
+     */
+    function animateSystemsAndDSA(el) {
+        var tl = anime.createTimeline({ ease: "outQuart" });
+
+        addStep(tl, directChildren(el, "h2"), {
+            opacity: [0, 1],
+            translateY: ["-45px", "0px"],
+            scale: [0.9, 1],
+            duration: 750
+        });
+        addStep(tl, directChildren(el, "svg"), {
+            opacity: [0, 1],
+            scale: [0.75, 1],
+            duration: 500
+        }, ">-350");
+        addStep(tl, directChildren(el, "h3, h4"), {
+            opacity: [0, 1],
+            translateX: ["-35px", "0px"],
+            duration: 550,
+            delay: anime.stagger(90)
+        }, ">-250");
+        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
+            opacity: [0, 1],
+            translateY: ["28px", "0px"],
+            duration: 550,
+            delay: anime.stagger(55),
+            ease: "outBack"
+        }, ">-300");
+    }
+
     var animationMap = {
         intro: animateIntro,
         cybersecurity: animateCybersecurity,
@@ -246,6 +282,7 @@
         python: animatePython,
         scripting: animateScripting,
         os: animateOS,
+        systemsAndDSA: animateSystemsAndDSA,
         contact: animateContact
     };
 

@@ -508,7 +508,7 @@ html.js-animations #introSectionDiv > .takesIndex {
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
 /* _3 tuned brighter than the source #8b5aba (2.86:1, failed WCAG AA) so body
    text, links, h3, blockquotes and every table cell clear AA at 5.27:1 on _1. */
-#cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources {
+#cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources, #systemsAndDSA {
   margin: auto;
   background-color: #1f1b79;
   width: 80%;
@@ -520,61 +520,63 @@ html.js-animations #introSectionDiv > .takesIndex {
   /* In-prose links: _4 (4.62:1) is a distinct warm tone against the _3 body
      text, underlined so links do not rely on color alone (WCAG 1.4.1); hover
      lifts to _5 (8.8:1). */ }
-  #cybersecurityResources h1, #artificialIntelligenceResources h1, #cppResources h1, #pythonResources h1, #scriptingResources h1, #operatingSystemsResources h1 {
+  #cybersecurityResources h1, #artificialIntelligenceResources h1, #cppResources h1, #pythonResources h1, #scriptingResources h1, #operatingSystemsResources h1, #systemsAndDSA h1 {
     text-align: left;
     color: #f9c54e;
     font-size: clamp(2rem, 8vw, 5rem); }
-  #cybersecurityResources h2, #artificialIntelligenceResources h2, #cppResources h2, #pythonResources h2, #scriptingResources h2, #operatingSystemsResources h2 {
+  #cybersecurityResources h2, #artificialIntelligenceResources h2, #cppResources h2, #pythonResources h2, #scriptingResources h2, #operatingSystemsResources h2, #systemsAndDSA h2 {
     text-align: left;
     color: #d07e6c;
     font-size: clamp(1.5rem, 5vw, 3rem); }
-  #cybersecurityResources h3, #artificialIntelligenceResources h3, #cppResources h3, #pythonResources h3, #scriptingResources h3, #operatingSystemsResources h3 {
+  #cybersecurityResources h3, #artificialIntelligenceResources h3, #cppResources h3, #pythonResources h3, #scriptingResources h3, #operatingSystemsResources h3, #systemsAndDSA h3 {
     text-align: left;
     color: #b88ce0;
     font-size: clamp(1.25rem, 3.5vw, 2rem); }
-  #cybersecurityResources p, #artificialIntelligenceResources p, #cppResources p, #pythonResources p, #scriptingResources p, #operatingSystemsResources p {
+  #cybersecurityResources p, #artificialIntelligenceResources p, #cppResources p, #pythonResources p, #scriptingResources p, #operatingSystemsResources p, #systemsAndDSA p {
     text-align: left;
     color: #b88ce0;
     font-size: 100%; }
-  #cybersecurityResources blockquote, #artificialIntelligenceResources blockquote, #cppResources blockquote, #pythonResources blockquote, #scriptingResources blockquote, #operatingSystemsResources blockquote {
+  #cybersecurityResources blockquote, #artificialIntelligenceResources blockquote, #cppResources blockquote, #pythonResources blockquote, #scriptingResources blockquote, #operatingSystemsResources blockquote, #systemsAndDSA blockquote {
     text-align: left;
     color: #b88ce0;
     font-size: 150%; }
-  #cybersecurityResources a:link, #artificialIntelligenceResources a:link, #cppResources a:link, #pythonResources a:link, #scriptingResources a:link, #operatingSystemsResources a:link,
+  #cybersecurityResources a:link, #artificialIntelligenceResources a:link, #cppResources a:link, #pythonResources a:link, #scriptingResources a:link, #operatingSystemsResources a:link, #systemsAndDSA a:link,
   #cybersecurityResources a:visited,
   #artificialIntelligenceResources a:visited,
   #cppResources a:visited,
   #pythonResources a:visited,
   #scriptingResources a:visited,
-  #operatingSystemsResources a:visited {
+  #operatingSystemsResources a:visited,
+  #systemsAndDSA a:visited {
     text-align: left;
     color: #d07e6c;
     font-size: 100%;
     text-decoration: underline; }
-  #cybersecurityResources a:hover, #artificialIntelligenceResources a:hover, #cppResources a:hover, #pythonResources a:hover, #scriptingResources a:hover, #operatingSystemsResources a:hover,
+  #cybersecurityResources a:hover, #artificialIntelligenceResources a:hover, #cppResources a:hover, #pythonResources a:hover, #scriptingResources a:hover, #operatingSystemsResources a:hover, #systemsAndDSA a:hover,
   #cybersecurityResources a:active,
   #artificialIntelligenceResources a:active,
   #cppResources a:active,
   #pythonResources a:active,
   #scriptingResources a:active,
-  #operatingSystemsResources a:active {
+  #operatingSystemsResources a:active,
+  #systemsAndDSA a:active {
     text-align: left;
     color: #f9c54e;
     font-size: 100%;
     text-decoration: underline; }
-  #cybersecurityResources ul, #artificialIntelligenceResources ul, #cppResources ul, #pythonResources ul, #scriptingResources ul, #operatingSystemsResources ul {
+  #cybersecurityResources ul, #artificialIntelligenceResources ul, #cppResources ul, #pythonResources ul, #scriptingResources ul, #operatingSystemsResources ul, #systemsAndDSA ul {
     text-align: left; }
-    #cybersecurityResources ul li, #artificialIntelligenceResources ul li, #cppResources ul li, #pythonResources ul li, #scriptingResources ul li, #operatingSystemsResources ul li {
+    #cybersecurityResources ul li, #artificialIntelligenceResources ul li, #cppResources ul li, #pythonResources ul li, #scriptingResources ul li, #operatingSystemsResources ul li, #systemsAndDSA ul li {
       color: #b88ce0;
       font-size: 100%; }
-  #cybersecurityResources table, #artificialIntelligenceResources table, #cppResources table, #pythonResources table, #scriptingResources table, #operatingSystemsResources table {
+  #cybersecurityResources table, #artificialIntelligenceResources table, #cppResources table, #pythonResources table, #scriptingResources table, #operatingSystemsResources table, #systemsAndDSA table {
     text-align: left;
     border-collapse: collapse;
     border-color: #b88ce0;
     border-style: solid; }
-    #cybersecurityResources table tr, #artificialIntelligenceResources table tr, #cppResources table tr, #pythonResources table tr, #scriptingResources table tr, #operatingSystemsResources table tr {
+    #cybersecurityResources table tr, #artificialIntelligenceResources table tr, #cppResources table tr, #pythonResources table tr, #scriptingResources table tr, #operatingSystemsResources table tr, #systemsAndDSA table tr {
       border-color: #b88ce0; }
-      #cybersecurityResources table tr th, #artificialIntelligenceResources table tr th, #cppResources table tr th, #pythonResources table tr th, #scriptingResources table tr th, #operatingSystemsResources table tr th {
+      #cybersecurityResources table tr th, #artificialIntelligenceResources table tr th, #cppResources table tr th, #pythonResources table tr th, #scriptingResources table tr th, #operatingSystemsResources table tr th, #systemsAndDSA table tr th {
         border-color: #b88ce0;
         color: #b88ce0;
         font-size: 100%;
@@ -582,7 +584,7 @@ html.js-animations #introSectionDiv > .takesIndex {
         border-right-style: double;
         border-bottom-style: double;
         border-left-style: double; }
-      #cybersecurityResources table tr td, #artificialIntelligenceResources table tr td, #cppResources table tr td, #pythonResources table tr td, #scriptingResources table tr td, #operatingSystemsResources table tr td {
+      #cybersecurityResources table tr td, #artificialIntelligenceResources table tr td, #cppResources table tr td, #pythonResources table tr td, #scriptingResources table tr td, #operatingSystemsResources table tr td, #systemsAndDSA table tr td {
         border-color: #b88ce0;
         color: #b88ce0;
         font-size: 100%;
@@ -591,11 +593,11 @@ html.js-animations #introSectionDiv > .takesIndex {
         border-bottom-style: groove;
         border-left-style: groove; }
 
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #cybersecurityResources > h1, html.js-animations #cybersecurityResources > h2, html.js-animations #cybersecurityResources > h3, html.js-animations #cybersecurityResources > p, html.js-animations #cybersecurityResources > ul, html.js-animations #cybersecurityResources > svg, html.js-animations #cybersecurityResources > .tableScroll, html.js-animations #cybersecurityResources > blockquote, html.js-animations #cybersecurityResources > a, html.js-animations #artificialIntelligenceResources > h1, html.js-animations #artificialIntelligenceResources > h2, html.js-animations #artificialIntelligenceResources > h3, html.js-animations #artificialIntelligenceResources > p, html.js-animations #artificialIntelligenceResources > ul, html.js-animations #artificialIntelligenceResources > svg, html.js-animations #artificialIntelligenceResources > .tableScroll, html.js-animations #artificialIntelligenceResources > blockquote, html.js-animations #artificialIntelligenceResources > a, html.js-animations #cppResources > h1, html.js-animations #cppResources > h2, html.js-animations #cppResources > h3, html.js-animations #cppResources > p, html.js-animations #cppResources > ul, html.js-animations #cppResources > svg, html.js-animations #cppResources > .tableScroll, html.js-animations #cppResources > blockquote, html.js-animations #cppResources > a, html.js-animations #pythonResources > h1, html.js-animations #pythonResources > h2, html.js-animations #pythonResources > h3, html.js-animations #pythonResources > p, html.js-animations #pythonResources > ul, html.js-animations #pythonResources > svg, html.js-animations #pythonResources > .tableScroll, html.js-animations #pythonResources > blockquote, html.js-animations #pythonResources > a, html.js-animations #scriptingResources > h1, html.js-animations #scriptingResources > h2, html.js-animations #scriptingResources > h3, html.js-animations #scriptingResources > p, html.js-animations #scriptingResources > ul, html.js-animations #scriptingResources > svg, html.js-animations #scriptingResources > .tableScroll, html.js-animations #scriptingResources > blockquote, html.js-animations #scriptingResources > a, html.js-animations #operatingSystemsResources > h1, html.js-animations #operatingSystemsResources > h2, html.js-animations #operatingSystemsResources > h3, html.js-animations #operatingSystemsResources > p, html.js-animations #operatingSystemsResources > ul, html.js-animations #operatingSystemsResources > svg, html.js-animations #operatingSystemsResources > .tableScroll, html.js-animations #operatingSystemsResources > blockquote, html.js-animations #operatingSystemsResources > a {
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #cybersecurityResources > h1, html.js-animations #cybersecurityResources > h2, html.js-animations #cybersecurityResources > h3, html.js-animations #cybersecurityResources > p, html.js-animations #cybersecurityResources > ul, html.js-animations #cybersecurityResources > svg, html.js-animations #cybersecurityResources > .tableScroll, html.js-animations #cybersecurityResources > blockquote, html.js-animations #cybersecurityResources > a, html.js-animations #artificialIntelligenceResources > h1, html.js-animations #artificialIntelligenceResources > h2, html.js-animations #artificialIntelligenceResources > h3, html.js-animations #artificialIntelligenceResources > p, html.js-animations #artificialIntelligenceResources > ul, html.js-animations #artificialIntelligenceResources > svg, html.js-animations #artificialIntelligenceResources > .tableScroll, html.js-animations #artificialIntelligenceResources > blockquote, html.js-animations #artificialIntelligenceResources > a, html.js-animations #cppResources > h1, html.js-animations #cppResources > h2, html.js-animations #cppResources > h3, html.js-animations #cppResources > p, html.js-animations #cppResources > ul, html.js-animations #cppResources > svg, html.js-animations #cppResources > .tableScroll, html.js-animations #cppResources > blockquote, html.js-animations #cppResources > a, html.js-animations #pythonResources > h1, html.js-animations #pythonResources > h2, html.js-animations #pythonResources > h3, html.js-animations #pythonResources > p, html.js-animations #pythonResources > ul, html.js-animations #pythonResources > svg, html.js-animations #pythonResources > .tableScroll, html.js-animations #pythonResources > blockquote, html.js-animations #pythonResources > a, html.js-animations #scriptingResources > h1, html.js-animations #scriptingResources > h2, html.js-animations #scriptingResources > h3, html.js-animations #scriptingResources > p, html.js-animations #scriptingResources > ul, html.js-animations #scriptingResources > svg, html.js-animations #scriptingResources > .tableScroll, html.js-animations #scriptingResources > blockquote, html.js-animations #scriptingResources > a, html.js-animations #operatingSystemsResources > h1, html.js-animations #operatingSystemsResources > h2, html.js-animations #operatingSystemsResources > h3, html.js-animations #operatingSystemsResources > p, html.js-animations #operatingSystemsResources > ul, html.js-animations #operatingSystemsResources > svg, html.js-animations #operatingSystemsResources > .tableScroll, html.js-animations #operatingSystemsResources > blockquote, html.js-animations #operatingSystemsResources > a, html.js-animations #systemsAndDSA > h1, html.js-animations #systemsAndDSA > h2, html.js-animations #systemsAndDSA > h3, html.js-animations #systemsAndDSA > p, html.js-animations #systemsAndDSA > ul, html.js-animations #systemsAndDSA > svg, html.js-animations #systemsAndDSA > .tableScroll, html.js-animations #systemsAndDSA > blockquote, html.js-animations #systemsAndDSA > a {
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #cybersecurityResources > h1, html.js-animations #cybersecurityResources > h2, html.js-animations #cybersecurityResources > h3, html.js-animations #cybersecurityResources > p, html.js-animations #cybersecurityResources > ul, html.js-animations #cybersecurityResources > svg, html.js-animations #cybersecurityResources > .tableScroll, html.js-animations #cybersecurityResources > blockquote, html.js-animations #cybersecurityResources > a, html.js-animations #artificialIntelligenceResources > h1, html.js-animations #artificialIntelligenceResources > h2, html.js-animations #artificialIntelligenceResources > h3, html.js-animations #artificialIntelligenceResources > p, html.js-animations #artificialIntelligenceResources > ul, html.js-animations #artificialIntelligenceResources > svg, html.js-animations #artificialIntelligenceResources > .tableScroll, html.js-animations #artificialIntelligenceResources > blockquote, html.js-animations #artificialIntelligenceResources > a, html.js-animations #cppResources > h1, html.js-animations #cppResources > h2, html.js-animations #cppResources > h3, html.js-animations #cppResources > p, html.js-animations #cppResources > ul, html.js-animations #cppResources > svg, html.js-animations #cppResources > .tableScroll, html.js-animations #cppResources > blockquote, html.js-animations #cppResources > a, html.js-animations #pythonResources > h1, html.js-animations #pythonResources > h2, html.js-animations #pythonResources > h3, html.js-animations #pythonResources > p, html.js-animations #pythonResources > ul, html.js-animations #pythonResources > svg, html.js-animations #pythonResources > .tableScroll, html.js-animations #pythonResources > blockquote, html.js-animations #pythonResources > a, html.js-animations #scriptingResources > h1, html.js-animations #scriptingResources > h2, html.js-animations #scriptingResources > h3, html.js-animations #scriptingResources > p, html.js-animations #scriptingResources > ul, html.js-animations #scriptingResources > svg, html.js-animations #scriptingResources > .tableScroll, html.js-animations #scriptingResources > blockquote, html.js-animations #scriptingResources > a, html.js-animations #operatingSystemsResources > h1, html.js-animations #operatingSystemsResources > h2, html.js-animations #operatingSystemsResources > h3, html.js-animations #operatingSystemsResources > p, html.js-animations #operatingSystemsResources > ul, html.js-animations #operatingSystemsResources > svg, html.js-animations #operatingSystemsResources > .tableScroll, html.js-animations #operatingSystemsResources > blockquote, html.js-animations #operatingSystemsResources > a {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #cybersecurityResources > h1, html.js-animations #cybersecurityResources > h2, html.js-animations #cybersecurityResources > h3, html.js-animations #cybersecurityResources > p, html.js-animations #cybersecurityResources > ul, html.js-animations #cybersecurityResources > svg, html.js-animations #cybersecurityResources > .tableScroll, html.js-animations #cybersecurityResources > blockquote, html.js-animations #cybersecurityResources > a, html.js-animations #artificialIntelligenceResources > h1, html.js-animations #artificialIntelligenceResources > h2, html.js-animations #artificialIntelligenceResources > h3, html.js-animations #artificialIntelligenceResources > p, html.js-animations #artificialIntelligenceResources > ul, html.js-animations #artificialIntelligenceResources > svg, html.js-animations #artificialIntelligenceResources > .tableScroll, html.js-animations #artificialIntelligenceResources > blockquote, html.js-animations #artificialIntelligenceResources > a, html.js-animations #cppResources > h1, html.js-animations #cppResources > h2, html.js-animations #cppResources > h3, html.js-animations #cppResources > p, html.js-animations #cppResources > ul, html.js-animations #cppResources > svg, html.js-animations #cppResources > .tableScroll, html.js-animations #cppResources > blockquote, html.js-animations #cppResources > a, html.js-animations #pythonResources > h1, html.js-animations #pythonResources > h2, html.js-animations #pythonResources > h3, html.js-animations #pythonResources > p, html.js-animations #pythonResources > ul, html.js-animations #pythonResources > svg, html.js-animations #pythonResources > .tableScroll, html.js-animations #pythonResources > blockquote, html.js-animations #pythonResources > a, html.js-animations #scriptingResources > h1, html.js-animations #scriptingResources > h2, html.js-animations #scriptingResources > h3, html.js-animations #scriptingResources > p, html.js-animations #scriptingResources > ul, html.js-animations #scriptingResources > svg, html.js-animations #scriptingResources > .tableScroll, html.js-animations #scriptingResources > blockquote, html.js-animations #scriptingResources > a, html.js-animations #operatingSystemsResources > h1, html.js-animations #operatingSystemsResources > h2, html.js-animations #operatingSystemsResources > h3, html.js-animations #operatingSystemsResources > p, html.js-animations #operatingSystemsResources > ul, html.js-animations #operatingSystemsResources > svg, html.js-animations #operatingSystemsResources > .tableScroll, html.js-animations #operatingSystemsResources > blockquote, html.js-animations #operatingSystemsResources > a, html.js-animations #systemsAndDSA > h1, html.js-animations #systemsAndDSA > h2, html.js-animations #systemsAndDSA > h3, html.js-animations #systemsAndDSA > p, html.js-animations #systemsAndDSA > ul, html.js-animations #systemsAndDSA > svg, html.js-animations #systemsAndDSA > .tableScroll, html.js-animations #systemsAndDSA > blockquote, html.js-animations #systemsAndDSA > a {
     opacity: 1 !important; } }
 /* _3 tuned brighter than the source #16A085 (3.35:1, failed WCAG AA) so body
    text and links clear AA at 5.22:1 on the _1 bg — important for this
