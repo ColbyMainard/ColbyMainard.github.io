@@ -562,11 +562,16 @@ main a:focus-visible {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     z-index: 200;
 
+    /* visibility, not just opacity: pointer-events alone stops the mouse but leaves the button in the tab order, so a keyboard user tabbing the top of any page reached a control that rendered nothing and drew its focus ring on a fully transparent element (WCAG 2.4.7 Focus Visible, and 4.1.2 since the aria-label announced a control with no visual presence). visibility: hidden removes it from the tab order instead.
+       Safe against the fade because back_to_top.js adds .visible immediately on show and only removes it after the 320ms hide timeout, so visibility flips on before the fade-in starts and off after the fade-out finishes. The opacity tween is AnimeJS inline, not in the transition list above, so visibility needs no entry there. */
+    visibility: hidden;
+
     /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */
     &.visible {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
+        visibility: visible;
     }
 
     &:hover,

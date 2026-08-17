@@ -58,5 +58,5 @@ $neon_dusk_serenity_5: #f9c54e;
 // Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
     "#introSectionDiv, #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources, #systemsAndDSA",
-    "> h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a"
+    "> h1, > h2, > h3, > h4, > p, > ul, > svg, > .tableScroll, > blockquote, > a"
 );
