@@ -105,18 +105,20 @@
                 <nav id="primaryNav" aria-label="Site navigation">
                     <a href="../../index.html">Home</a>
                     <a href="./tech_takes.html">Technical Stances</a>
-                    <a href="./hobbies.html">Hobbies</a>
+                    <a href="./hobbies.html" class="active" aria-current="page">Hobbies</a>
                     <a href="./tech_resources.html">Technical Resources</a>
                     <a href="./guides.html">Guides</a>
                 </nav>
             </div>
             <div class="siteMenu" id="siteMenu">
                 <nav id="sectionNav" aria-label="Page sections">
-                    <a href="#quantumComputingDiv">Quantum Computing</a>
-                    <a href="#photographyDiv">Photography</a>
-                    <a href="#dungeonsAndDragonsDiv">Dungeons and Dragons</a>
-                    <a href="#historyDiv">History</a>
-                    <a href="#contactMe">Contact Me</a>
+                    <ul>
+                        <li><a href="#quantumComputingDiv">Quantum Computing</a></li>
+                        <li><a href="#photographyDiv">Photography</a></li>
+                        <li><a href="#dungeonsAndDragonsDiv">Dungeons and Dragons</a></li>
+                        <li><a href="#historyDiv">History</a></li>
+                        <li><a href="#contactMe">Contact Me</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
@@ -160,6 +162,16 @@
                     -->
                     <div class="photoGallery" id="photoGallery" role="group" aria-roledescription="carousel" aria-label="Landscape photography gallery">
                         <p class="visually-hidden" id="photoGalleryStatus" role="status"></p>
+                        <!--
+                            Keyboard instructions for the gallery. Static markup like
+                            the status paragraph above, but `hidden` until
+                            photo_gallery.js unhides it and points the gallery's
+                            aria-describedby here: with scripting off there is no
+                            one-at-a-time viewer and no arrow-key handler, so
+                            announcing either would describe controls that do not
+                            exist. The buttons it names carry the same labels.
+                        -->
+                        <p class="visually-hidden" id="photoGalleryHelp" hidden>Use the Previous photo and Next photo buttons to move through the photographs. While focus is anywhere inside this gallery, the left and right arrow keys do the same.</p>
                         <ul class="photoGallery-track" id="photoGalleryTrack">
                             <li class="photoGallery-slide">
                                 <figure>

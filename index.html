@@ -69,6 +69,20 @@
           "name": "Colby Mainard",
           "url": "https://colbymainard.github.io/",
           "jobTitle": "AI/ML Engineer",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Machine Learning Engineer",
+            "occupationalCategory": "15-2051.00"
+          },
+          "homeLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Austin",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          },
           "worksFor": {"@type": "Organization", "name": "RiskScout"},
           "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Texas A&M University", "sameAs": "https://www.tamu.edu/"}],
           "hasCredential": [
@@ -141,7 +155,7 @@
                 <span class="nav-brand">Colby Mainard</span>
                 <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav sectionNav">&#9776;</button>
                 <nav id="primaryNav" aria-label="Site navigation">
-                    <a href="./index.html">Home</a>
+                    <a href="./index.html" class="active" aria-current="page">Home</a>
                     <a href="./assets/html/tech_takes.html">Technical Stances</a>
                     <a href="./assets/html/hobbies.html">Hobbies</a>
                     <a href="./assets/html/tech_resources.html">Technical Resources</a>
@@ -150,13 +164,15 @@
             </div>
             <div class="siteMenu" id="siteMenu">
                 <nav id="sectionNav" aria-label="Page sections">
-                    <a href="#workHistoryDiv">Work History</a>
-                    <a href="#educationDiv">Education</a>
-                    <a href="#projectsDiv">Projects</a>
-                    <a href="#technicalSkillsDiv">Technical Skills</a>
-                    <a href="#certificationsDiv">Certifications</a>
-                    <a href="#otherSkillsDiv">Other Skills</a>
-                    <a href="#contactMe">Contact Me</a>
+                    <ul>
+                        <li><a href="#workHistoryDiv">Work History</a></li>
+                        <li><a href="#educationDiv">Education</a></li>
+                        <li><a href="#projectsDiv">Projects</a></li>
+                        <li><a href="#technicalSkillsDiv">Technical Skills</a></li>
+                        <li><a href="#certificationsDiv">Certifications</a></li>
+                        <li><a href="#otherSkillsDiv">Other Skills</a></li>
+                        <li><a href="#contactMe">Contact Me</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>

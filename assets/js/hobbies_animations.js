@@ -15,6 +15,7 @@
 
     var directChildren = window.AnimationHelpers.directChildren;
     var addStep = window.AnimationHelpers.addStep;
+    var introTimeline = window.AnimationHelpers.introTimeline;
     var animateContact = window.AnimationHelpers.animateContact;
 
     var sections = {
@@ -30,13 +31,8 @@
      * Intro — Fade in heading, image scales up
      */
     function animateIntro(el) {
-        var tl = anime.createTimeline({ ease: "outExpo" });
+        var tl = introTimeline(el);
 
-        addStep(tl, el.querySelector("h1"), {
-            opacity: [0, 1],
-            translateY: ["-40px", "0px"],
-            duration: 800
-        });
         addStep(tl, el.querySelector("img"), {
             opacity: [0, 1],
             scale: [0.85, 1],

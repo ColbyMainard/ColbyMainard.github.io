@@ -22,7 +22,7 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 ### How It Works
 
-1. **Shared helpers load first**: `animation_helpers.js` is a classic deferred script that runs before each page's `*_animations.js`. It attaches `window.AnimationHelpers = { directChildren, addStep, animateContact, prefersReducedMotion, run }`. Each page script aliases the ones it needs locally instead of redeclaring them, then hands its `sections` and `animationMap` to `run`, which owns everything from step 2 onward.
+1. **Shared helpers load first**: `animation_helpers.js` is a classic deferred script that runs before each page's `*_animations.js`. It attaches `window.AnimationHelpers = { directChildren, addStep, introTimeline, animateIntro, animateContact, prefersReducedMotion, run }`. Each page script aliases the ones it needs locally instead of redeclaring them, then hands its `sections` and `animationMap` to `run`, which owns everything from step 2 onward.
 
 2. **Three guards before anything animates**: each page script opens with `if (!window.AnimationHelpers) return;`, since it cannot call `run` if the helpers file never loaded. `run` then applies the other two and returns early if either fails.
    - **Reduced motion**: if `matchMedia("(prefers-reduced-motion: reduce)")` matches, `run` skips all animation.
@@ -39,7 +39,9 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 **Separate JS files per page:** keeps each file focused and avoids loading animation logic for sections that do not exist on the current page. It also prevents ID collision issues.
 
-**Shared helpers in `animation_helpers.js`:** the four functions that were identical across every page (`directChildren`, `addStep`, `animateContact`, `prefersReducedMotion`) were extracted so they are declared once. A later pass finished the job with `run`, which also absorbed the IntersectionObserver plumbing, the reduced-motion and AnimeJS guards, and the `js-animations` toggle. Those read page-specific `sections` and `animationMap` values, so `run` takes both as arguments; each `*_animations.js` is now only its section map, its per-section timelines, and a single `!window.AnimationHelpers` guard. No page script declares its own observer.
+**Shared helpers in `animation_helpers.js`:** the four functions that were identical across every page (`directChildren`, `addStep`, `animateContact`, `prefersReducedMotion`) were extracted so they are declared once. A later pass finished the job with `run`, which also absorbed the IntersectionObserver plumbing, the reduced-motion and AnimeJS guards, and the `js-animations` toggle. Those read page-specific `sections` and `animationMap` values, so `run` takes both as arguments; each `*_animations.js` is now only its section map, its per-section timelines, and a single `!window.AnimationHelpers` guard. No page script declares its own observer. (`navbar.js` does run an `IntersectionObserver` of its own, but it is unrelated to this system: it tracks which section the reader is in so the section nav can carry `aria-current="location"`, and it touches no animation state.)
+
+**Two levels of intro sharing:** the intro is the one section every page has, so it is also where duplication crept back in. `introTimeline(el)` owns the single step all six intros open with — the `h1` fading in and dropping 40px over 800ms on `outExpo` — and returns the timeline instead of running it, so a page that continues differently can extend it. `animateIntro(el)` builds on that with the staggered paragraph step, and is the whole intro on `guides.html`, `tech_takes.html`, and `tech_resources.html`. `index.html` and `hobbies.html` call `introTimeline` directly and add their own second step. The split exists because a single shared `animateIntro` would have covered only three of the six pages, leaving the other three to re-declare the `h1` step they already agreed on.
 
 **`directChildren` helper:** several sections (especially Education on `index.html`, and History on `hobbies.html`) contain deeply nested tables with hundreds of inner elements. Using `querySelectorAll("ul, table, p")` would select every nested descendant, causing performance issues and unintended animations. `directChildren` filters `el.children` by CSS selector so only top-level elements are animated; nested content inherits visibility from its parent.
 
@@ -225,6 +227,19 @@ sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
 Without the compiled rules, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there can be a brief flash of unstyled content before JS executes because the CSS would not yet include the `opacity: 0` rules.
 
 ## Changelog
+
+### Shared intro timeline extracted (`animateIntro` / `introTimeline`)
+
+`animateIntro` had been re-declared in all six page scripts. Three of those declarations — `guides_animations.js`, `tech_takes_animations.js`, and `tech_resources_animations.js` — were byte-identical. Two more, `index_animations.js` and `hobbies_animations.js`, opened with the same `h1` step and then diverged. Only `404_animations.js` was genuinely its own. The duplication was easy to miss because each copy sat under a `/** Intro — Fade in + drop from above */` comment that made it read like page-specific choreography.
+
+- **`assets/js/animation_helpers.js`**: gained `introTimeline(el)` and `animateIntro(el)`, both exported on `window.AnimationHelpers`. `introTimeline` creates the `outExpo` timeline, adds the `h1` step (`opacity: [0, 1]`, `translateY: ["-40px", "0px"]`, 800ms), and returns the timeline rather than running it, which is what lets the two divergent pages reuse it. `animateIntro` adds the paragraph step (`translateY: ["30px", "0px"]`, 600ms, 150ms stagger, offset `">-400"`) and mirrors `animateContact` in guarding on `prefersReducedMotion()`.
+- **`assets/js/guides_animations.js`, `tech_takes_animations.js`, `tech_resources_animations.js`**: local `animateIntro` deleted; each now aliases `window.AnimationHelpers.animateIntro` alongside the helpers it already imported. `animationMap` is unchanged, since the key still points at a function named `animateIntro`.
+- **`assets/js/index_animations.js`**: keeps its own `animateIntro`, now built on `introTimeline(el)`. Its second step is the intro-subtitle `h2` scaling `0.8 -> 1` at `">-400"`, and its paragraph step sits at `">-300"` rather than `">-400"`, so it could not use the shared version.
+- **`assets/js/hobbies_animations.js`**: same pattern. Its second step scales the DEF CON photograph `0.85 -> 1` (700ms, `">-400"`) instead of staggering paragraphs.
+- **`assets/js/404_animations.js`**: left alone. Its intro drops the `.errorCode` figure and flickers it *before* the heading enters, and its `h1` step is 600ms with a 20px rise at `">-200"`, so it shares neither the ordering nor the timings. Folding it in would have meant parameterizing `introTimeline` past the point where it saves anything.
+- **`service-worker.js`**: `CACHE_VERSION` bumped to `v63`. That bump covers a batch of unrelated roadmap work landing in the same commit, not this refactor alone.
+
+No rendered animation changed. Every page's intro plays exactly as it did before; the five timelines that share the `h1` step are simply constructed from one declaration of it. The per-page tables above are unaffected, including the hobbies note about its `img` centerpiece, which is now the page's own second step rather than part of a local copy.
 
 ### Systems, Data Structures and Algorithms section added (tech_resources.html)
 

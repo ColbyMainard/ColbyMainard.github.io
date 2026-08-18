@@ -16,6 +16,7 @@
 
     var directChildren = window.AnimationHelpers.directChildren;
     var addStep = window.AnimationHelpers.addStep;
+    var animateIntro = window.AnimationHelpers.animateIntro;
     var animateContact = window.AnimationHelpers.animateContact;
 
     var sections = {
@@ -29,25 +30,6 @@
         cybersecurity: "#cybersecurityGuide",
         contact: "#contactMe"
     };
-
-    /**
-     * Intro — Fade in + drop from above
-     */
-    function animateIntro(el) {
-        var tl = anime.createTimeline({ ease: "outExpo" });
-
-        addStep(tl, el.querySelector("h1"), {
-            opacity: [0, 1],
-            translateY: ["-40px", "0px"],
-            duration: 800
-        });
-        addStep(tl, el.querySelectorAll("p"), {
-            opacity: [0, 1],
-            translateY: ["30px", "0px"],
-            duration: 600,
-            delay: anime.stagger(150)
-        }, ">-400");
-    }
 
     /**
      * Guide section — Rise from bottom with staggered children

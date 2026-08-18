@@ -32,6 +32,7 @@
     var track = document.getElementById("photoGalleryTrack");
     var controls = document.getElementById("photoGalleryControls");
     var status = document.getElementById("photoGalleryStatus");
+    var help = document.getElementById("photoGalleryHelp");
     var count = document.getElementById("photoGalleryCount");
     if (!track || !controls) return;
 
@@ -116,5 +117,14 @@
     labelSlides();
     gallery.classList.add("js-gallery");
     controls.hidden = false;
+
+    // Describe the controls only now that they exist. The instruction stays in
+    // the markup but `hidden` so the no-JS fallback, which is a plain stack of
+    // figures with no navigation, does not announce arrow keys that do nothing.
+    if (help) {
+        help.hidden = false;
+        gallery.setAttribute("aria-describedby", "photoGalleryHelp");
+    }
+
     show(0, false);
 })();

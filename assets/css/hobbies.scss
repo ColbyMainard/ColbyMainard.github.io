@@ -141,6 +141,11 @@ $calm_authority_5: #E7EAEC;
         font-family: "Courier New", monospace;
         font-size: 100%;
         cursor: pointer;
+        // Same 44px target floor the shared buttons in default.scss carry. The
+        // em-based padding here makes it worth stating: it tracks font-size, so
+        // a smaller label would otherwise shrink the whole control.
+        min-height: 44px;
+        min-width: 44px;
 
         &:hover {
             background-color: $calm_authority_4; // 6.57:1 against _1 text

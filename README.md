@@ -66,7 +66,7 @@ Hobbies include:
     - Dungeons and Dragons
     - History
 
-### Technical Opinions
+### Technical Stances
 
 Going over my stance on certain technologies, relevant trends, and tech news.
 Current topics include:

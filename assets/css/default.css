@@ -238,7 +238,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding: 0.5em 1em;
   font-family: "Courier New", monospace;
   font-size: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px; }
   #photography .photoGallery-button:hover {
     background-color: #D3DADE; }
   #photography .photoGallery-button:focus-visible {
@@ -891,7 +893,9 @@ header {
     position: absolute;
     right: 16px;
     top: 10px;
-    line-height: 1; }
+    line-height: 1;
+    min-height: 44px;
+    min-width: 44px; }
     header .nav-toggle:hover {
       background-color: rgba(80, 195, 161, 0.2); }
     header .nav-toggle.active {
@@ -935,12 +939,17 @@ header {
   header #siteMenu {
     background-color: #007a5e;
     padding: 0; }
-    header #siteMenu nav {
+    header #siteMenu nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       gap: 0; }
+    header #siteMenu li:first-child a {
+      border-left: none; }
     header #siteMenu a {
       display: inline-block;
       /* _5 = 4.78:1 on _1 (AA); _3 was 2.45:1 */
@@ -950,8 +959,6 @@ header {
       font-size: 85%;
       transition: color 0.2s, background-color 0.2s;
       border-left: 1px solid rgba(80, 195, 161, 0.15); }
-      header #siteMenu a:first-child {
-        border-left: none; }
       header #siteMenu a:hover {
         color: #e0f7fa;
         /* darken, not tint: a _3 tint under _5 text tops out ≈4.3:1 */
@@ -963,7 +970,9 @@ header {
 
 @media (max-width: 768px) {
   header .nav-toggle {
-    display: block; }
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   header #pageMenu nav {
     display: none;
     flex-direction: column; }
@@ -976,10 +985,11 @@ header {
       header #pageMenu nav a:hover {
         border-bottom-width: 1px; }
   header #siteMenu nav {
-    display: none;
-    flex-direction: column; }
+    display: none; }
     header #siteMenu nav.open {
-      display: flex; }
+      display: block; }
+    header #siteMenu nav ul {
+      flex-direction: column; }
     header #siteMenu nav a {
       border-left: none;
       padding: 10px 20px;
@@ -1230,7 +1240,9 @@ pre {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    min-height: 44px;
+    min-width: 44px; }
   .cookieConsent .cookieConsent-accept {
     /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
     background-color: #007a5e;
@@ -1281,6 +1293,8 @@ pre {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   background-color: transparent;
   border: 2px solid #50c3a1;

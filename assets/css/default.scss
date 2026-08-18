@@ -340,6 +340,13 @@ header {
         right: 16px;
         top: 10px;
         line-height: 1;
+        // WCAG 2.5.5 Target Size (Enhanced). Padding alone left this control
+        // near 30px tall, which passes 2.5.8 but is small for a thumb and would
+        // shrink further if the glyph's font-size were ever reduced. The floor
+        // is stated here so no later type change can quietly undercut it; the
+        // mobile rule below centers the glyph inside the enlarged box.
+        min-height: 44px;
+        min-width: 44px;
 
         &:hover {
             background-color: rgba($emerald_efficiency_3, 0.2);
@@ -404,12 +411,27 @@ header {
         background-color: $emerald_efficiency_1;
         padding: 0;
 
-        nav {
+        // The section nav is a <ul> so screen readers announce how many
+        // sections the page has and where in that list each entry sits. The
+        // list affordances are reset here and the flex row moved onto the
+        // <ul>, so the rendered result is identical to the bare-anchor markup
+        // it replaced.
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             gap: 0;
+        }
+
+        // Was `a:first-child` when the anchors were siblings. Each anchor is
+        // now the only child of its <li>, so that selector would match every
+        // one of them and erase the dividers.
+        li:first-child a {
+            border-left: none;
         }
 
         a {
@@ -421,10 +443,6 @@ header {
             font-size: 85%;
             transition: color 0.2s, background-color 0.2s;
             border-left: 1px solid rgba($emerald_efficiency_3, 0.15);
-
-            &:first-child {
-                border-left: none;
-            }
 
             &:hover {
                 color: $emerald_efficiency_5;
@@ -444,7 +462,12 @@ header {
 @media (max-width: 768px) {
     header {
         .nav-toggle {
-            display: block;
+            // flex, not block: the 44px minimum above makes the box taller and
+            // wider than the glyph, so it has to be centered rather than
+            // sitting at the padding origin.
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #pageMenu nav {
@@ -467,11 +490,16 @@ header {
         }
 
         #siteMenu nav {
+            // navbar.js toggles .open on the <nav>, so the collapse stays here
+            // while the <ul> inside owns the stacking direction.
             display: none;
-            flex-direction: column;
 
             &.open {
-                display: flex;
+                display: block;
+            }
+
+            ul {
+                flex-direction: column;
             }
 
             a {
@@ -791,6 +819,11 @@ pre {
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+        // Same 44px floor as .nav-toggle and .cookiePreferences-button. The
+        // current padding and type size already clear it; stating it keeps a
+        // future font-size edit from silently shrinking the target.
+        min-height: 44px;
+        min-width: 44px;
     }
 
     .cookieConsent-accept {
@@ -869,6 +902,9 @@ pre {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    // Matches the .cookieConsent-button floor; see the note there.
+    min-height: 44px;
+    min-width: 44px;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     background-color: transparent;
     border: 2px solid $emerald_efficiency_3;

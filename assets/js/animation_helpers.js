@@ -2,8 +2,8 @@
  * animation_helpers.js
  *
  * Shared helpers for the per-page *_animations.js entrance animations.
- * Exposes window.AnimationHelpers =
- * { directChildren, addStep, animateContact, prefersReducedMotion, run }
+ * Exposes window.AnimationHelpers = { directChildren, addStep, introTimeline,
+ * animateIntro, animateContact, prefersReducedMotion, run }
  * so the six animation scripts don't each re-declare identical copies. `run`
  * owns the boilerplate they used to duplicate outright: the reduced-motion
  * bail-out, the anime-availability guard, the .js-animations toggle, and the
@@ -58,6 +58,42 @@
             return tl.add(targets, params, position);
         }
         return tl.add(targets, params);
+    }
+
+    /**
+     * Intro — the h1 drop that every intro section opens with. Returns the
+     * timeline rather than running to completion, so a page that continues
+     * with something of its own (index's subtitle h2, hobbies' photograph)
+     * extends this instead of rebuilding the step it shares.
+     */
+    function introTimeline(el) {
+        var tl = anime.createTimeline({ ease: "outExpo" });
+
+        addStep(tl, el.querySelector("h1"), {
+            opacity: [0, 1],
+            translateY: ["-40px", "0px"],
+            duration: 800
+        });
+
+        return tl;
+    }
+
+    /**
+     * Intro — h1 drop followed by staggered paragraphs. guides, tech_takes,
+     * and tech_resources each declared this verbatim, so it lives here for the
+     * same reason animateContact does. 404_animations.js keeps its own intro:
+     * the error code animates before the heading and on different timings.
+     */
+    function animateIntro(el) {
+        if (prefersReducedMotion()) return;
+        var tl = introTimeline(el);
+
+        addStep(tl, el.querySelectorAll("p"), {
+            opacity: [0, 1],
+            translateY: ["30px", "0px"],
+            duration: 600,
+            delay: anime.stagger(150)
+        }, ">-400");
     }
 
     /**
@@ -141,6 +177,8 @@
     window.AnimationHelpers = {
         directChildren: directChildren,
         addStep: addStep,
+        introTimeline: introTimeline,
+        animateIntro: animateIntro,
         animateContact: animateContact,
         prefersReducedMotion: prefersReducedMotion,
         run: run
