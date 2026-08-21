@@ -11,7 +11,10 @@
 
         <!-- Canonical URL and social sharing cards -->
         <link rel="canonical" href="https://colbymainard.github.io/assets/html/guides.html">
-        <meta property="og:type" content="article">
+        <!-- website, not article: this page declares @type CollectionPage in its
+             JSON-LD below, listing seven separate HowTo entities. og:type keeps
+             the Open Graph layer in agreement, as on index.html. -->
+        <meta property="og:type" content="website">
         <meta property="og:url" content="https://colbymainard.github.io/assets/html/guides.html">
         <meta property="og:title" content="Beginner Guides to Data Engineering &amp; AI | Colby Mainard">
         <meta property="og:description" content="Plain-spoken starter guides to data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.">

@@ -77,6 +77,21 @@
         document.head.appendChild(script);
     }
 
+    // Mirrors the createButton helper in back_to_top.js. The two consent buttons
+    // are the same element differing only in label, modifier class, and the value
+    // they record, so the choice is the parameter rather than a whole handler.
+    // Unlike back_to_top's version this does not attach the button itself: both
+    // land in the same .cookieConsent-actions row, and appending there is the
+    // caller's job.
+    function createButton(label, modifierClass, choice) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "cookieConsent-button " + modifierClass;
+        btn.textContent = label;
+        btn.addEventListener("click", function () { onChoice(choice); });
+        return btn;
+    }
+
     function createBanner() {
         var wrap = document.createElement("div");
         wrap.className = "cookieConsent";
@@ -109,19 +124,11 @@
         var actions = document.createElement("div");
         actions.className = "cookieConsent-actions";
 
-        var rejectBtn = document.createElement("button");
-        rejectBtn.type = "button";
-        rejectBtn.className = "cookieConsent-button cookieConsent-reject";
-        rejectBtn.textContent = "Reject";
-        rejectBtn.addEventListener("click", function () { onChoice("rejected"); });
-        actions.appendChild(rejectBtn);
-
-        var acceptBtn = document.createElement("button");
-        acceptBtn.type = "button";
-        acceptBtn.className = "cookieConsent-button cookieConsent-accept";
-        acceptBtn.textContent = "Accept";
-        acceptBtn.addEventListener("click", function () { onChoice("accepted"); });
-        actions.appendChild(acceptBtn);
+        // Reject first, matching the visual order in .cookieConsent-actions: the
+        // secondary action reads before the primary one so neither choice is
+        // buried behind the other in the tab order.
+        actions.appendChild(createButton("Reject", "cookieConsent-reject", "rejected"));
+        actions.appendChild(createButton("Accept", "cookieConsent-accept", "accepted"));
 
         inner.appendChild(actions);
         wrap.appendChild(inner);

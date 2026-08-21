@@ -47,7 +47,7 @@ Before finishing any change, verify each point that applies:
 - Edited SCSS → `default.css` recompiled and committed together with the SCSS.
 - Added, renamed, or removed a page or asset → `service-worker.js` `PRECACHE_URLS` updated and `CACHE_VERSION` bumped (assets are served cache-first; without a bump, returning visitors keep stale files). Large media is the exception: the multi-megabyte photographs in `assets/images/photographyHobby/` and `assets/images/miscellaneous/DEFCON33.jpeg` are deliberately left out of `PRECACHE_URLS` so a first visit to any page does not pull roughly 22 MB in the background. The fetch handler still caches them on first real request. Do not re-add them without shrinking them first.
 - Changed pages or content → `sitemap.xml` and `llms.txt` still accurate.
-- Added or edited a Technical Stances entry → mirror its `datePublished`/`dateModified` into `feed.xml` (as RFC3339 `T00:00:00Z`), reset the feed-level `<updated>` to the newest entry, and bump `CACHE_VERSION`. Entry `<id>` tag URIs are permanent — never change them. The feed's own header comment documents this workflow.
+- Added or edited a Technical Stances entry → mirror its `datePublished`/`dateModified` into `feed.xml` (as RFC3339 `T00:00:00Z`), reset the feed-level `<updated>` to the newest entry, update the matching `<time>` in the `.takesIndex` list in the page intro (it repeats every take's date and is easy to leave behind), and bump `CACHE_VERSION`. Entry `<id>` tag URIs are permanent — never change them. The feed's own header comment documents this workflow.
 - JSON-LD structured-data blocks intact on every touched page.
 
 ## Important Notes

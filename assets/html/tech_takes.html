@@ -11,7 +11,11 @@
         <!-- Canonical URL and social sharing cards -->
         <link rel="canonical" href="https://colbymainard.github.io/assets/html/tech_takes.html">
         <link rel="alternate" type="application/atom+xml" title="Technical Stances by Colby Mainard (Atom feed)" href="../../feed.xml">
-        <meta property="og:type" content="article">
+        <!-- website, not article: this page declares @type Blog in its JSON-LD
+             below, wrapping seven separate Article entities. It is a collection,
+             not one article, and og:type keeps the Open Graph layer in agreement
+             the same way index.html's profile does. -->
+        <meta property="og:type" content="website">
         <meta property="og:url" content="https://colbymainard.github.io/assets/html/tech_takes.html">
         <meta property="og:title" content="Technical Stances on AI, Quantum &amp; Privacy | Colby Mainard">
         <meta property="og:description" content="Technical opinions on Kolmogorov-Arnold networks, cryptocurrency safety, quantum computing, AGI hype, online privacy, sports marketing, and physical media.">

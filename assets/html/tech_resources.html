@@ -11,7 +11,11 @@
 
         <!-- Canonical URL and social sharing cards -->
         <link rel="canonical" href="https://colbymainard.github.io/assets/html/tech_resources.html">
-        <meta property="og:type" content="article">
+        <!-- website, not article: this page declares @type ItemList in its
+             JSON-LD below, enumerating recommended titles rather than presenting
+             one article. og:type keeps the Open Graph layer in agreement, as on
+             index.html. -->
+        <meta property="og:type" content="website">
         <meta property="og:url" content="https://colbymainard.github.io/assets/html/tech_resources.html">
         <meta property="og:title" content="Best AI, Cybersecurity &amp; Programming Books | Colby Mainard">
         <meta property="og:description" content="Curated books, certifications, and podcasts for cybersecurity, AI/ML, C++, Python, scripting, operating systems, and algorithms, recommended from experience.">

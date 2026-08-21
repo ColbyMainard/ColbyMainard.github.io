@@ -42,11 +42,6 @@
             translateX: ["-10px", "5px", "-3px", "0px"],
             duration: 900
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            scale: [0.7, 1],
-            duration: 500
-        }, ">-400");
         addStep(tl, directChildren(el, "h3"), {
             opacity: [0, 0.4, 0, 1],
             translateX: ["30px", "-8px", "0px"],
@@ -73,12 +68,6 @@
             scale: [0.4, 1],
             duration: 800
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            scale: [0.2, 1],
-            rotate: ["8deg", "0deg"],
-            duration: 600
-        }, ">-400");
         addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             scale: [0.7, 1],
@@ -107,11 +96,6 @@
             translateX: ["-70px", "0px"],
             duration: 700
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            translateX: ["-50px", "0px"],
-            duration: 500
-        }, ">-300");
         addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["-50px", "0px"],
@@ -138,11 +122,6 @@
             translateX: ["70px", "0px"],
             duration: 700
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            translateX: ["50px", "0px"],
-            duration: 500
-        }, ">-300");
         addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["50px", "0px"],
@@ -169,11 +148,6 @@
             translateY: ["50px", "0px"],
             duration: 700
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            translateY: ["40px", "0px"],
-            duration: 500
-        }, ">-300");
         addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["35px", "0px"],
@@ -200,12 +174,6 @@
             translateY: ["-50px", "0px"],
             duration: 800
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            translateY: ["-30px", "0px"],
-            duration: 500,
-            ease: "outQuart"
-        }, ">-400");
         addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateY: ["-30px", "0px"],
@@ -236,11 +204,6 @@
             scale: [0.9, 1],
             duration: 750
         });
-        addStep(tl, directChildren(el, "svg"), {
-            opacity: [0, 1],
-            scale: [0.75, 1],
-            duration: 500
-        }, ">-350");
         addStep(tl, directChildren(el, "h3, h4"), {
             opacity: [0, 1],
             translateX: ["-35px", "0px"],

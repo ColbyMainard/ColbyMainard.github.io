@@ -111,8 +111,8 @@ The steps that get missed are the cross-file ones — walk the matching list end
 
 - JSON-LD blocks on touched pages are intact and still valid.
 - Nothing you added breaks on `file://` (no hardcoded manifest link, no fetches the origin forbids).
-- `sitemap.xml` / `llms.txt` still describe the site accurately if pages or content changed.
-- If you touched a Technical Stances entry, `feed.xml` mirrors its dates and feed-level `<updated>`, and `CACHE_VERSION` is bumped.
+- `sitemap.xml` / `llms.txt` still describe the site accurately if pages or content changed. This includes the **`**Last updated**` line in `llms.txt`**, which is the one date touchpoint no other file points at: `feed.xml`'s header comment covers the feed entries and `CACHE_VERSION`, `sitemap.xml`'s header covers `<lastmod>`, and nothing reminds you about this one. Editing page content without moving it leaves an LLM crawler reading a date that is quietly wrong.
+- If you touched a Technical Stances entry, `feed.xml` mirrors its dates and feed-level `<updated>`, the `.takesIndex` list in that page's intro shows the same `<time>` as the section itself, and `CACHE_VERSION` is bumped.
 
 ## Hard rules (do not)
 

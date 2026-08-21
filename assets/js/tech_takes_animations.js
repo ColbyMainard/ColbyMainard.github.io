@@ -19,7 +19,7 @@
 
     var directChildren = window.AnimationHelpers.directChildren;
     var addStep = window.AnimationHelpers.addStep;
-    var animateIntro = window.AnimationHelpers.animateIntro;
+    var introTimeline = window.AnimationHelpers.introTimeline;
     var animateContact = window.AnimationHelpers.animateContact;
 
     var sections = {
@@ -33,6 +33,36 @@
         physicalMedia: "#PhysicalMediaSupremacy",
         contact: "#contactMe"
     };
+
+    /**
+     * Intro — the shared h1 drop and paragraph stagger, then the dated index.
+     *
+     * Written locally instead of reusing AnimationHelpers.animateIntro because
+     * the .takesIndex <nav> carries its own animation gate (see the comment at
+     * tech_takes.scss:145). The shared version has no step for it, so it would
+     * be hidden at opacity: 0 with nothing to reveal it. Extending
+     * introTimeline is the same pattern hobbies_animations.js uses for its
+     * intro photograph.
+     *
+     * Paragraphs are matched as direct children rather than by querySelectorAll,
+     * both to mirror the gate's "> p" selector and to keep the <p> label inside
+     * the nav from animating separately from the nav that contains it.
+     */
+    function animateIntro(el) {
+        var tl = introTimeline(el);
+
+        addStep(tl, directChildren(el, "p"), {
+            opacity: [0, 1],
+            translateY: ["30px", "0px"],
+            duration: 600,
+            delay: anime.stagger(150)
+        }, ">-400");
+        addStep(tl, directChildren(el, ".takesIndex"), {
+            opacity: [0, 1],
+            translateY: ["20px", "0px"],
+            duration: 500
+        }, ">-200");
+    }
 
     /**
      * KAN (Kolmogorov-Arnold Networks) — Slide from left with rotation

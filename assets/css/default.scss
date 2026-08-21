@@ -837,11 +837,14 @@ pre {
         &:focus {
             background-color: darken($emerald_efficiency_1, 5%);
             border-color: $emerald_efficiency_5;
-            outline: none;
         }
 
+        /* Same solid outline as .floatingBackToTop, and for the same reason. This banner is also fixed-positioned, so a 3px box-shadow at 60% alpha composited over whichever section happened to be scrolled behind it and its contrast could not be verified. That indicator was already rejected once on the back-to-top button; the consent buttons simply never got the fix.
+           currentColor is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states, and the ring draws on the banner's own rgba($noir_1, 0.97) surface at 15.9:1, well past the 3:1 non-text contrast minimum.
+           The `outline: none` that used to sit in the :hover, :focus block above is gone deliberately: it stripped the indicator outright for anyone whose browser has not resolved :focus-visible. */
         &:focus-visible {
-            box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
         }
     }
 
@@ -854,11 +857,12 @@ pre {
         &:focus {
             background-color: rgba($emerald_efficiency_3, 0.15);
             color: $emerald_efficiency_5;
-            outline: none;
         }
 
+        /* Solid outline for the same reason as .cookieConsent-accept above; see the note there. currentColor is $emerald_efficiency_4 (#a1d9b0) at rest and _5 on hover, giving 10.8:1 and 15.9:1 on the banner surface. */
         &:focus-visible {
-            box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
         }
     }
 }
@@ -913,11 +917,12 @@ pre {
     &:hover,
     &:focus {
         background-color: rgba($emerald_efficiency_3, 0.15);
-        outline: none;
     }
 
+    /* Solid outline, matching the two .cookieConsent buttons; see the note on .cookieConsent-accept for why the box-shadow ring was dropped. These sit on the Privacy Policy section background ($refined_professionalism_1), where currentColor is $emerald_efficiency_5 (#e0f7fa) at 10.1:1, or _4 at 6.8:1 where .cookiePreferences-reject overrides it. Both clear the 3:1 non-text minimum. */
     &:focus-visible {
-        box-shadow: 0 0 0 3px rgba($emerald_efficiency_3, 0.6);
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
     }
 }
 
