@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Hand-maintained Atom feed for the Technical Stances page.
+<!-- Hand-maintained Atom feed for the Technical Stances page and the Guides page.
      When a take is added or edited: update the matching Article JSON-LD in
      assets/html/tech_takes.html, mirror datePublished/dateModified here as
      RFC3339 (T00:00:00Z), set the feed-level <updated> to the newest entry
      <updated>, and bump CACHE_VERSION in service-worker.js.
+     Guide entries follow the same rule, mirroring the TechArticle JSON-LD in
+     assets/html/guides.html (its datePublished/dateModified, headline, and
+     description) rather than the tech_takes Article blocks.
+     Entries are ordered newest <published> first.
      Entry <id> values are permanent tag: URIs. Never change them, even if
      the page's section anchors are renamed; update only <link href>. -->
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>Technical Stances by Colby Mainard</title>
-	<subtitle>Long-form opinions on various technical topics, for both research and practical purposes.</subtitle>
+	<subtitle>Long-form opinions on various technical topics, plus beginner guides to data and AI fields, for both research and practical purposes.</subtitle>
 	<id>https://colbymainard.github.io/feed.xml</id>
 	<link rel="self" type="application/atom+xml" href="https://colbymainard.github.io/feed.xml"/>
 	<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html"/>
@@ -27,6 +31,62 @@
 		<published>2026-07-31T00:00:00Z</published>
 		<updated>2026-08-11T00:00:00Z</updated>
 		<summary>Discussing the resurgence of physical media and how streaming has made a series of unforced errors that is slowly cannibalizing itself.</summary>
+	</entry>
+	<entry>
+		<title>Data Engineering Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/data-engineering</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A plain-spoken starter guide to cleaning data, handling user data responsibly, accounting for data velocity, and choosing batch vs. real-time processing.</summary>
+	</entry>
+	<entry>
+		<title>Computer Vision Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/computer-vision</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A starter guide to computer-vision problem classes, choosing a model, normalizing image data, and the core libraries.</summary>
+	</entry>
+	<entry>
+		<title>Generative AI Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/generative-ai</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A starter guide to the technology behind generative AI, the role of GANs, and the core libraries for building with it.</summary>
+	</entry>
+	<entry>
+		<title>Natural Language Processing Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/natural-language-processing</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A starter guide to sentiment analysis, topic detection, data-normalization concerns, and the core NLP libraries.</summary>
+	</entry>
+	<entry>
+		<title>Reinforcement Learning Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/reinforcement-learning</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A starter guide to the agent-environment-reward framework, the core RL techniques, and where reinforcement learning applies.</summary>
+	</entry>
+	<entry>
+		<title>Software Engineering Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/software-engineering</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A starter guide to why GenAI can't replace software engineers, practical maintainability principles, and where to learn next.</summary>
+	</entry>
+	<entry>
+		<title>Cybersecurity Guide</title>
+		<id>tag:colbymainard.github.io,2026:guides/cybersecurity</id>
+		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv"/>
+		<published>2026-05-25T00:00:00Z</published>
+		<updated>2026-08-08T00:00:00Z</updated>
+		<summary>A starter guide to everyday security best practices, the subfields of cybersecurity, and the core tools.</summary>
 	</entry>
 	<entry>
 		<title>Product Placement in Sports Marketing: Tips and Tricks</title>
