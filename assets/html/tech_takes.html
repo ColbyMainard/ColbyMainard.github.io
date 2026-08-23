@@ -45,9 +45,15 @@
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
-        <!-- AnimeJS for animations -->
+        <!-- AnimeJS for animations. The module script is async on purpose: without
+             it, a parser-inserted module script joins the same execute-after-parsing
+             queue as the defer scripts below and that queue runs in document order,
+             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js and
+             service_worker_register.js, neither of which needs AnimeJS. Nothing
+             depends on this script's ordering: animation_helpers.js checks for
+             window.anime at call time and back_to_top.js falls back without it. -->
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
+        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_takes_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
@@ -208,11 +214,11 @@
                 <nav id="sectionNav" aria-label="Page sections">
                     <ul>
                         <li><a href="#KANDiv">Kolmogorov-Arnold Networks</a></li>
-                        <li><a href="#CryptocurrencyDiv">Cryptocurrency Basics</a></li>
+                        <li><a href="#CryptocurrencyDiv">Staying Safe with Cryptocurrency</a></li>
                         <li><a href="#FutureOfQuantumDiv">Future of Quantum Computing</a></li>
                         <li><a href="#AGIDiv">Artificial General Intelligence</a></li>
                         <li><a href="#PrivacyDiv">Privacy</a></li>
-                        <li><a href="#ProductPlacementDiv">Product Placement in Sports Marketing</a></li>
+                        <li><a href="#ProductPlacementDiv">Product Placement in Sports Marketing: Tips and Tricks</a></li>
                         <li><a href="#PhysicalMediaSupremacyDiv">Physical Media Supremacy</a></li>
                         <li><a href="#contactMe">Contact Me</a></li>
                     </ul>
@@ -790,7 +796,7 @@
             </div>
             <div class="ProductPlacementDiv" id="ProductPlacementDiv">
                 <section class="ProductPlacement" id="ProductPlacement">
-                    <h2>Product Placement in Sports Marketing</h2>
+                    <h2>Product Placement in Sports Marketing: Tips and Tricks</h2>
                     <p><strong>Last Updated:</strong> <time datetime="2026-08-02">August 2, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <h3>The Basics of the Niche</h3>
                     <p>

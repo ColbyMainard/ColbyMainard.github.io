@@ -44,9 +44,15 @@
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
-        <!-- AnimeJS for animations -->
+        <!-- AnimeJS for animations. The module script is async on purpose: without
+             it, a parser-inserted module script joins the same execute-after-parsing
+             queue as the defer scripts below and that queue runs in document order,
+             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js and
+             service_worker_register.js, neither of which needs AnimeJS. Nothing
+             depends on this script's ordering: animation_helpers.js checks for
+             window.anime at call time and back_to_top.js falls back without it. -->
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
+        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/guides_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
@@ -222,6 +228,156 @@
             {"@type": "HowToStep", "name": "Explore the fields of cybersecurity", "text": "Network security, application security, digital forensics, cloud security, ethical hacking, and governance, risk, and compliance are distinct subfields."},
             {"@type": "HowToStep", "name": "Pick the right tools", "text": "Ghidra for binaries, Scapy for packets, Metasploit for penetration testing, Nmap for discovery, and Hashcat or John the Ripper for credential testing."}
           ]
+        }
+        </script>
+
+        <!-- JSON-LD: TechArticle nodes, one per guide, sitting alongside the HowTo
+             blocks above rather than replacing them.
+
+             Why both: Google removed HowTo rich results from search in 2023, so the
+             HowTo blocks earn no search real estate any more. They are still valid
+             schema.org, still describe the step structure better than anything else
+             does, and are still read by non-Google parsers and by the LLM crawlers
+             robots.txt deliberately allows, so they stay. TechArticle is a subtype of
+             Article and is rich-result eligible, which is the half that was missing.
+
+             The two describe the same guide from different angles and must not drift:
+             each pair shares a dateModified, an author, and a canonical anchor URL.
+             If a guide's date moves, move it in both, in the visible "Last Updated"
+             line, and in the CollectionPage above if it was the most recent one.
+
+             datePublished is 2026-05-25 for all seven because that is the commit that
+             first added guides.html with all seven sections already present, not an
+             estimate. The page shows only "Last Updated", so this is the sole record.
+
+             Each node carries an explicit @id so that linking the parent
+             CollectionPage to its children later (hasPart / isPartOf) is a pure
+             addition that references these by @id and does not have to restructure
+             anything here. -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv-article",
+          "headline": "Data Engineering Guide",
+          "description": "A plain-spoken starter guide to cleaning data, handling user data responsibly, accounting for data velocity, and choosing batch vs. real-time processing.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv-article",
+          "headline": "Computer Vision Guide",
+          "description": "A starter guide to computer-vision problem classes, choosing a model, normalizing image data, and the core libraries.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv-article",
+          "headline": "Generative AI Guide",
+          "description": "A starter guide to the technology behind generative AI, the role of GANs, and the core libraries for building with it.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv-article",
+          "headline": "Natural Language Processing Guide",
+          "description": "A starter guide to sentiment analysis, topic detection, data-normalization concerns, and the core NLP libraries.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv-article",
+          "headline": "Reinforcement Learning Guide",
+          "description": "A starter guide to the agent-environment-reward framework, the core RL techniques, and where reinforcement learning applies.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv-article",
+          "headline": "Software Engineering Guide",
+          "description": "A starter guide to why GenAI can't replace software engineers, practical maintainability principles, and where to learn next.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv"
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "@id": "https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv-article",
+          "headline": "Cybersecurity Guide",
+          "description": "A starter guide to everyday security best practices, the subfields of cybersecurity, and the core tools.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "inLanguage": "en",
+          "proficiencyLevel": "Beginner",
+          "datePublished": "2026-05-25",
+          "dateModified": "2026-08-08",
+          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv",
+          "url": "https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv"
         }
         </script>
     </head>

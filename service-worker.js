@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v65";
+const CACHE_VERSION = "v66";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -108,8 +108,16 @@ self.addEventListener("fetch", function (event) {
                 }
                 return response;
             }).catch(function () {
+                // Offline with no cached copy of this URL. Prefer the precached
+                // 404.html: the visitor asked for a page this cache does not
+                // have, and the site's own "Page Not Found" screen says so,
+                // where silently substituting the home page does not. index.html
+                // stays as the last resort in case 404.html failed to precache.
                 return caches.match(request).then(function (cached) {
-                    return cached || caches.match("./index.html");
+                    if (cached) return cached;
+                    return caches.match("./404.html").then(function (notFound) {
+                        return notFound || caches.match("./index.html");
+                    });
                 });
             })
         );
@@ -130,9 +138,9 @@ self.addEventListener("fetch", function (event) {
                 return response;
             }).catch(function () {
                 // Sub-resource fetch failed with no cache hit: let the browser
-                // handle it natively (native error) rather than returning
-                // index.html — handing HTML to a request that expected CSS/JS.
-                // The index.html fallback is reserved for navigations (above).
+                // handle it natively (native error) rather than returning a
+                // page, which would hand HTML to a request that expected CSS/JS.
+                // The HTML fallback is reserved for navigations (above).
                 return undefined;
             });
         })

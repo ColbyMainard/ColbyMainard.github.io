@@ -249,8 +249,14 @@
                         36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE
                     </a>
                 </p>
+                <!-- aria-current="page" here and on no other page's footer: the shared
+                     footer is copied verbatim onto all seven pages, so on this one the
+                     Privacy Policy link points at the page the reader is already on. A
+                     screen-reader user navigating by link would otherwise hit a no-op
+                     with nothing announcing why. Keeping the anchor rather than
+                     swapping in plain text keeps the footer markup uniform. -->
                 <p>
-                    <a href="./privacy.html">Privacy Policy</a>
+                    <a href="./privacy.html" aria-current="page">Privacy Policy</a>
                 </p>
             </section>
         </footer>

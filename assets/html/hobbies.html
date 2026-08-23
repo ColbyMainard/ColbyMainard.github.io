@@ -40,9 +40,15 @@
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
-        <!-- AnimeJS for animations -->
+        <!-- AnimeJS for animations. The module script is async on purpose: without
+             it, a parser-inserted module script joins the same execute-after-parsing
+             queue as the defer scripts below and that queue runs in document order,
+             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js and
+             service_worker_register.js, neither of which needs AnimeJS. Nothing
+             depends on this script's ordering: animation_helpers.js checks for
+             window.anime at call time and back_to_top.js falls back without it. -->
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
+        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/hobbies_animations.js" defer></script>
         <script src="../js/photo_gallery.js" defer></script>
@@ -214,6 +220,22 @@
                             <button type="button" class="photoGallery-button" data-gallery-step="1">Next photo</button>
                         </div>
                     </div>
+                    <!--
+                        Visible license disclosure for the five photographs above. This is the
+                        human-readable half of a pair: the ImageObject nodes in the head set
+                        license and acquireLicensePage, and acquireLicensePage points at
+                        #photographyDiv, which is this section. Structured data that advertises
+                        terms the page never states is a promise to search engines and reusers
+                        that no visitor can actually read, so if the terms change in one place
+                        they must change in the other. It sits outside #photoGallery on purpose:
+                        photo_gallery.js shows one slide at a time, and the license has to stay
+                        visible no matter which photograph is on screen.
+                    -->
+                    <p>
+                        <strong>License:</strong> these photographs are licensed
+                        <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.
+                        You may share and adapt them, including commercially, as long as you credit "Colby Mainard", link back to this page, and note any changes you made.
+                    </p>
                 </section>
             </div>
             <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">
