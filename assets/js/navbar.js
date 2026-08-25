@@ -20,30 +20,16 @@
     "use strict";
 
     /**
-     * Mark the #sectionNav entry for whichever section is currently being
-     * read. aria-current="location" is the right token here: "page" already
-     * means "this is the page you are on" in the primary nav, and the section
-     * nav is answering a narrower question about position within that page.
-     *
-     * Progressive enhancement, like everything else on this site: without
-     * IntersectionObserver the nav is a plain list of working anchors, which is
-     * what it was before this ran.
+     * Pair each #sectionNav link with the element it points at, in document
+     * order. Anything whose target is missing is dropped rather than tracked,
+     * so a renamed id fails quietly instead of throwing on every scroll.
      */
-    function trackSectionInView() {
-        if (typeof IntersectionObserver === "undefined") return;
-
-        var nav = document.getElementById("sectionNav");
-        if (!nav) return;
-
+    function collectTrackedSections(nav) {
         // Only same-page anchors; a section nav that ever gains an outbound
         // link should not have that link claiming to be a location.
         var links = nav.querySelectorAll('a[href^="#"]');
-        if (!links.length) return;
-
-        // Pair each link with the element it points at, in document order.
-        // Anything whose target is missing is dropped rather than tracked, so a
-        // renamed id fails quietly instead of throwing on every scroll.
         var tracked = [];
+
         Array.prototype.forEach.call(links, function (link) {
             var id = link.getAttribute("href").slice(1);
             if (!id) return;
@@ -52,8 +38,18 @@
                 tracked.push({ link: link, target: target, visible: false });
             }
         });
-        if (!tracked.length) return;
 
+        return tracked;
+    }
+
+    /**
+     * Owns which tracked entry carries aria-current="location", and returns the
+     * update function that re-picks it. aria-current="location" is the right
+     * token here: "page" already means "this is the page you are on" in the
+     * primary nav, and the section nav is answering a narrower question about
+     * position within that page.
+     */
+    function createCurrentMarker(tracked) {
         var current = null;
 
         function setCurrent(entry) {
@@ -63,7 +59,7 @@
             current = entry;
         }
 
-        function update() {
+        return function update() {
             // First in document order wins, so scrolling down moves the marker
             // forward one section at a time rather than jumping to whichever
             // observer callback happened to fire last.
@@ -77,8 +73,11 @@
             // or a long section whose edges are both outside it). Leave the
             // previous entry marked: a nav that blanks out intermittently while
             // scrolling is worse than one that lags slightly.
-        }
+        };
+    }
 
+    /** Watch every tracked section, refreshing the marker whenever one moves. */
+    function observeTrackedSections(tracked, update) {
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 for (var i = 0; i < tracked.length; i++) {
@@ -101,6 +100,25 @@
         tracked.forEach(function (entry) {
             observer.observe(entry.target);
         });
+    }
+
+    /**
+     * Mark the #sectionNav entry for whichever section is currently being read.
+     *
+     * Progressive enhancement, like everything else on this site: without
+     * IntersectionObserver the nav is a plain list of working anchors, which is
+     * what it was before this ran.
+     */
+    function trackSectionInView() {
+        if (typeof IntersectionObserver === "undefined") return;
+
+        var nav = document.getElementById("sectionNav");
+        if (!nav) return;
+
+        var tracked = collectTrackedSections(nav);
+        if (!tracked.length) return;
+
+        observeTrackedSections(tracked, createCurrentMarker(tracked));
     }
 
     document.addEventListener('DOMContentLoaded', function () {

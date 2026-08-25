@@ -92,26 +92,10 @@
         return btn;
     }
 
-    function createBanner() {
-        var wrap = document.createElement("div");
-        wrap.className = "cookieConsent";
-        wrap.id = "cookieConsent";
-        // Non-modal dialog rather than a live region. The previous
-        // role="region" + aria-live="polite" pairing never announced: assistive
-        // technology watches a live region for content changing *inside a region
-        // that already exists*, and this element is built fully populated and
-        // inserted in one operation, so there was nothing to observe when the
-        // content arrived. A dialog named by its own message is announced when
-        // focus reaches it, which is what the live region was reaching for.
-        // aria-modal is false because the rest of the page stays usable — the
-        // banner does not trap focus and nothing behind it is inert.
-        wrap.setAttribute("role", "dialog");
-        wrap.setAttribute("aria-modal", "false");
-        wrap.setAttribute("aria-labelledby", "cookieConsentMessage");
-
-        var inner = document.createElement("div");
-        inner.className = "cookieConsent-inner";
-
+    // The banner's message. Its id is what the wrapper's aria-labelledby points
+    // at, so the two must stay in step; keeping them in sibling helpers rather
+    // than one long function is what makes that pairing easy to see.
+    function createMessage() {
         var msg = document.createElement("p");
         msg.className = "cookieConsent-message";
         msg.id = "cookieConsentMessage";
@@ -119,8 +103,10 @@
                         "Analytics cookies are only set if you accept. " +
                         "Nothing is stored on this server, and your data is never sold. " +
                         "See the <a href=\"" + privacyHref + "\">privacy policy</a> for details.";
-        inner.appendChild(msg);
+        return msg;
+    }
 
+    function createActions() {
         var actions = document.createElement("div");
         actions.className = "cookieConsent-actions";
 
@@ -130,7 +116,31 @@
         actions.appendChild(createButton("Reject", "cookieConsent-reject", "rejected"));
         actions.appendChild(createButton("Accept", "cookieConsent-accept", "accepted"));
 
-        inner.appendChild(actions);
+        return actions;
+    }
+
+    // Non-modal dialog rather than a live region. The previous
+    // role="region" + aria-live="polite" pairing never announced: assistive
+    // technology watches a live region for content changing *inside a region
+    // that already exists*, and this element is built fully populated and
+    // inserted in one operation, so there was nothing to observe when the
+    // content arrived. A dialog named by its own message is announced when
+    // focus reaches it, which is what the live region was reaching for.
+    // aria-modal is false because the rest of the page stays usable — the
+    // banner does not trap focus and nothing behind it is inert.
+    function createBanner() {
+        var wrap = document.createElement("div");
+        wrap.className = "cookieConsent";
+        wrap.id = "cookieConsent";
+        wrap.setAttribute("role", "dialog");
+        wrap.setAttribute("aria-modal", "false");
+        wrap.setAttribute("aria-labelledby", "cookieConsentMessage");
+
+        var inner = document.createElement("div");
+        inner.className = "cookieConsent-inner";
+        inner.appendChild(createMessage());
+        inner.appendChild(createActions());
+
         wrap.appendChild(inner);
         return wrap;
     }

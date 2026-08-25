@@ -78,16 +78,47 @@
         }
     }
 
-    function build() {
+    // The two card buttons differ only in label and click handler, so the
+    // handler is the parameter. Mirrors createButton in cookie_consent.js.
+    function createCardButton(label, onClick) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "easterEggButton";
+        btn.textContent = label;
+        btn.addEventListener("click", onClick);
+        return btn;
+    }
+
+    /**
+     * The empty card element, with its role and its own Escape handling.
+     *
+     * role="note" rather than "dialog": this is ancillary content, not a
+     * modal. Nothing here traps focus and nothing is announced through a
+     * live region — the visitor typed a ten-key sequence to get it, so
+     * moving focus in is the request being answered, not an interruption.
+     */
+    function createCardShell() {
         var el = document.createElement("div");
         el.className = "easterEggCard";
-        // role="note" rather than "dialog": this is ancillary content, not a
-        // modal. Nothing here traps focus and nothing is announced through a
-        // live region — the visitor typed a ten-key sequence to get it, so
-        // moving focus in is the request being answered, not an interruption.
         el.setAttribute("role", "note");
         el.setAttribute("aria-labelledby", "easterEggTitle");
         el.setAttribute("tabindex", "-1");
+
+        // Scoped to the card rather than the document so Escape still belongs to
+        // navbar.js once the visitor tabs back out, and so nothing needs to be
+        // torn down globally on close.
+        el.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                event.stopPropagation();
+                close();
+            }
+        });
+
+        return el;
+    }
+
+    function build() {
+        var el = createCardShell();
 
         var title = document.createElement("h2");
         title.id = "easterEggTitle";
@@ -100,36 +131,14 @@
 
         var actions = document.createElement("div");
         actions.className = "easterEggActions";
-
-        var again = document.createElement("button");
-        again.type = "button";
-        again.className = "easterEggButton";
-        again.textContent = "Another one";
-        again.addEventListener("click", function () {
+        actions.appendChild(createCardButton("Another one", function () {
             joke.textContent = nextJoke();
-        });
+        }));
+        actions.appendChild(createCardButton("Close", close));
 
-        var dismiss = document.createElement("button");
-        dismiss.type = "button";
-        dismiss.className = "easterEggButton";
-        dismiss.textContent = "Close";
-        dismiss.addEventListener("click", close);
-
-        actions.appendChild(again);
-        actions.appendChild(dismiss);
         el.appendChild(title);
         el.appendChild(joke);
         el.appendChild(actions);
-
-        // Scoped to the card rather than the document so Escape still belongs to
-        // navbar.js once the visitor tabs back out, and so nothing needs to be
-        // torn down globally on close.
-        el.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                event.stopPropagation();
-                close();
-            }
-        });
 
         return el;
     }
