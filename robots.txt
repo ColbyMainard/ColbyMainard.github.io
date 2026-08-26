@@ -8,6 +8,13 @@
 #      previews). Blocking these would remove the site from AI-assisted search
 #      results, where recruiter and tech-enthusiast audiences increasingly
 #      begin queries, and would strip the preview card from shared links.
+#
+# Every allowed stanza also carries "Disallow: /assets/markdown/". That folder
+# holds internal working documents (audit reports, strategy notes, progress
+# logs) that are deployed only because GitHub Pages publishes the whole
+# repository. They are not site content and should not appear in search
+# results. robots.txt has no group inheritance, so the line is repeated in each
+# allowed group rather than declared once.
 
 # === Training / scraping bots — blocked ===
 User-agent: AddSearchBot
@@ -288,39 +295,50 @@ Disallow: /
 # Applebot-Extended, which stays blocked above.
 User-agent: Applebot
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: DuckAssistBot
 Allow: /
+Disallow: /assets/markdown/
 
 # facebookexternalhit renders the preview card when links are shared on
 # Facebook, Messenger, and WhatsApp; Meta's training/scraping agents
 # (FacebookBot, meta-externalagent, meta-externalfetcher) stay blocked above.
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: MistralAI-User
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: MistralAI-User/1.0
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /assets/markdown/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /assets/markdown/
 
 # === All other crawlers allowed ===
 User-agent: *
 Allow: /
+Disallow: /assets/markdown/
 
 Sitemap: https://colbymainard.github.io/sitemap.xml

@@ -16,7 +16,7 @@ Keep content credible, professional, and plain-spoken. Every page must work with
 - When possible, JavaScript and CSS/SCSS implementations should be contained in separate files that can be imported in the head section.
 - Each document should contain a header allowing to navigate to both other sections and other pages on this site. The responsive nav toggle is driven by `navbar.js`, and the header markup is kept consistent across pages.
 - Pages embed `schema.org` structured data as one or more `<script type="application/ld+json">` blocks in the head for SEO; preserve these when editing page content.
-- The Technical Stances page (`tech_takes.html`) links a hand-maintained Atom feed (`feed.xml`) from its head via `<link rel="alternate" type="application/atom+xml">`, with a matching "Subscribe (Atom)" link in the body. No other page has a feed.
+- One hand-maintained Atom feed (`feed.xml`) covers both the Technical Stances page (`tech_takes.html`) and the Guides page (`guides.html`); it carries one entry per stance and one per guide. Both pages link it from their head via `<link rel="alternate" type="application/atom+xml">`, and `tech_takes.html` additionally carries a visible "Subscribe (Atom)" link in the body. No other page links the feed.
 
 ### Sassy CSS
 

@@ -6,6 +6,9 @@
  * Also injects the web app manifest link dynamically — browsers block
  * manifest fetches from file:// origins via CORS, so we only add the
  * link tag when the page is served over http(s).
+ *
+ * Page depth comes from path_helpers.js, shared with cookie_consent.js, so the
+ * two cannot disagree about how far the current page sits from the site root.
  */
 
 (function () {
@@ -13,8 +16,12 @@
 
     var protocol = window.location.protocol;
     var isHttp = protocol === "http:" || protocol === "https:";
-    var isNested = (window.location.pathname || "").indexOf("/assets/html/") !== -1;
-    var rootPrefix = isNested ? "../../" : "./";
+
+    // Without the shared helper there is no prefix to build the manifest or
+    // worker URL from, and registering a worker at the wrong scope is worse
+    // than registering none, so bail rather than guess.
+    if (!window.PathHelpers) return;
+    var rootPrefix = window.PathHelpers.rootPrefix();
 
     if (isHttp && !document.querySelector('link[rel="manifest"]')) {
         var link = document.createElement("link");

@@ -32,8 +32,13 @@
 
     var protocol = window.location.protocol;
     var isHttp = protocol === "http:" || protocol === "https:";
-    var isNested = (window.location.pathname || "").indexOf("/assets/html/") !== -1;
-    var privacyHref = isNested ? "./privacy.html" : "./assets/html/privacy.html";
+    // Page depth comes from path_helpers.js, shared with
+    // service_worker_register.js, so the two cannot disagree about how far the
+    // current page sits from the site root. If that script did not load there
+    // is no honest way to build the link, so the banner keeps working and
+    // renders its message without one rather than pointing somewhere wrong.
+    var paths = window.PathHelpers;
+    var privacyHref = paths ? paths.toRoot("assets/html/privacy.html") : null;
 
     var banner = null;
 
@@ -99,10 +104,13 @@
         var msg = document.createElement("p");
         msg.className = "cookieConsent-message";
         msg.id = "cookieConsentMessage";
-        msg.innerHTML = "This site loads Google Analytics so the owner can see which pages are read. " +
-                        "Analytics cookies are only set if you accept. " +
-                        "Nothing is stored on this server, and your data is never sold. " +
-                        "See the <a href=\"" + privacyHref + "\">privacy policy</a> for details.";
+        var text = "This site loads Google Analytics so the owner can see which pages are read. " +
+                   "Analytics cookies are only set if you accept. " +
+                   "Nothing is stored on this server, and your data is never sold.";
+        if (privacyHref) {
+            text += " See the <a href=\"" + privacyHref + "\">privacy policy</a> for details.";
+        }
+        msg.innerHTML = text;
         return msg;
     }
 
