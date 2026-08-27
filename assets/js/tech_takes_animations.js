@@ -31,6 +31,7 @@
         privacy: "#Privacy",
         productPlacement: "#ProductPlacement",
         physicalMedia: "#PhysicalMediaSupremacy",
+        vibeCoding: "#VibeCodingScourge",
         contact: "#contactMe"
     };
 
@@ -244,6 +245,36 @@
         }, ">-300");
     }
 
+    /**
+     * Vibe Coding is a Scourge to the Internet — Skew and straighten
+     * Elements arrive leaning, as if thrown together in a hurry, then square up
+     * into place. The body selector includes "ol" because this is the only
+     * section with a direct ordered-list child, and the gate hides it.
+     */
+    function animateVibeCoding(el) {
+        var tl = anime.createTimeline({ ease: "outQuart" });
+
+        addStep(tl, directChildren(el, "h2"), {
+            opacity: [0, 1],
+            skewX: ["12deg", "0deg"],
+            translateX: ["-40px", "0px"],
+            duration: 800
+        });
+        addStep(tl, directChildren(el, "h3, h4"), {
+            opacity: [0, 1],
+            skewX: ["8deg", "0deg"],
+            duration: 550,
+            delay: anime.stagger(85)
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, ol, a"), {
+            opacity: [0, 1],
+            skewX: ["4deg", "0deg"],
+            translateY: ["18px", "0px"],
+            duration: 500,
+            delay: anime.stagger(55)
+        }, ">-300");
+    }
+
     var animationMap = {
         intro: animateIntro,
         kan: animateKAN,
@@ -253,6 +284,7 @@
         privacy: animatePrivacy,
         productPlacement: animateProductPlacement,
         physicalMedia: animatePhysicalMedia,
+        vibeCoding: animateVibeCoding,
         contact: animateContact
     };
 

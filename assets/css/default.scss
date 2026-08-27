@@ -127,8 +127,18 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-@mixin listText($color) {
+@mixin unorderedListText($color) {
     ul {
+        text-align: left;
+        li {
+            color: $color;
+            font-size: 100%;
+        }
+    }
+}
+
+@mixin orderedListText($color){
+    ol {
         text-align: left;
         li {
             color: $color;

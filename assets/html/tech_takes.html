@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://colbymainard.github.io/assets/html/tech_takes.html">
         <link rel="alternate" type="application/atom+xml" title="Technical Stances by Colby Mainard (Atom feed)" href="../../feed.xml">
         <!-- website, not article: this page declares @type Blog in its JSON-LD
-             below, wrapping seven separate Article entities. It is a collection,
+             below, wrapping eight separate Article entities. It is a collection,
              not one article, and og:type keeps the Open Graph layer in agreement
              the same way index.html's profile does. -->
         <meta property="og:type" content="website">
@@ -220,6 +220,23 @@
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#PhysicalMediaSupremacyDiv"
         }
         </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "@id": "https://colbymainard.github.io/assets/html/tech_takes.html#VibeCodingScourgeDiv",
+          "isPartOf": {"@id": "https://colbymainard.github.io/assets/html/tech_takes.html#blog"},
+          "headline": "Vibe Coding is a Scourge to the Internet",
+          "description": "What separates vibe coding from AI-assisted development, why generating code with little oversight trades quality for speed and hides technical debt, the cultural cost of assuming AI replaces developers, and a practical path back to fundamentals.",
+          "image": "https://colbymainard.github.io/assets/images/sharecard.png",
+          "datePublished": "2026-08-27",
+          "dateModified": "2026-08-27",
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
+          "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#VibeCodingScourgeDiv",
+          "url": "https://colbymainard.github.io/assets/html/tech_takes.html#VibeCodingScourgeDiv"
+        }
+        </script>
     </head>
     <body>
         <a href="#main" class="visually-hidden">Skip to main content</a>
@@ -245,6 +262,7 @@
                         <li><a href="#PrivacyDiv">Privacy</a></li>
                         <li><a href="#ProductPlacementDiv">Product Placement in Sports Marketing: Tips and Tricks</a></li>
                         <li><a href="#PhysicalMediaSupremacyDiv">Physical Media Supremacy</a></li>
+                        <li><a href="#VibeCodingScourgeDiv">Vibe Coding is a Scourge to the Internet</a></li>
                         <li><a href="#contactMe">Contact Me</a></li>
                     </ul>
                 </nav>
@@ -1000,6 +1018,125 @@
                         The degraded service will likely result in some sort of equilibrium in which each price hike and advertising-supported tier leads to a measurable impact on piracy, physical media purchases, and profits alike.
                         While companies are simply responding to market forces, it is worth remembering that no business can last for long without a loyal customer base.
                     </p>
+                </section>
+            </div>
+            <div class="VibeCodingScourgeDiv" id="VibeCodingScourgeDiv">
+                <section class="VibeCodingScourge" id="VibeCodingScourge">
+                    <h2>Vibe Coding is a Scourge to the Internet</h2>
+                    <p><strong>Last Updated:</strong> <time datetime="2026-08-27">August 27, 2026</time> <span class="readingTime" data-reading-time></span></p>
+                    <h3>What is Vibe Coding?</h3>
+                    <p>
+                        For those who have not been exposed to the software development industry post-ChatGPT, vibe coding is the practice of generating code with LLMs with little-to-no oversight.
+                        Since vibe coding is almost wholly reliant on the LLM beyond prompting, there is very little barrier to entry on the individual.
+                        While discussing definitions, it is worth contrasting vibe coding with AI-assisted coding.
+                        AI-assisted coding is when a technical individual combines traditional software engineering practices with LLMs to write boilerplate code with clear specifications.
+                        In this latter case, the user is often more knowledgeable in best practices and often step in more frequently when LLMs get sidetracked or start hallucinating.
+                    </p>
+                    <h3>The Appeal of Vibe Coding</h3>
+                    <p>
+                        For someone non-technical, it is extremely tempting to type an idea into a text box at breakfast and have a first draft of an app by lunch.
+                        There is no need to read documentation or learn a programming language.
+                        All that would be required is a specific enough prompt and access to a powerful enough model.
+                        Since <a href="https://en.wikipedia.org/wiki/Software_engineering_demographics">99% of people who are not professional developers</a>, this can feel incredibly power to many.
+                        While programming languages are well-documented, the learning curve can seem daunting to those who do not know where to start.
+                    </p>
+                    <h3>Monkey's Paw: Hidden Tech Debt</h3>
+                    <p>
+                        When it comes to anything in engineering, there is a saying:
+                    </p>
+                    <blockquote>
+                        "Good, Fast, Cheap. Pick any two." - <a href="https://quotememaybe.com/good-fast-cheap-pick-any-two/">James M. Wallace</a>
+                    </blockquote>
+                    <p>
+                        Vibe coding selects fast and cheap by default.
+                        Non-technical users tend not to have the experience or knowledge to understand this tradeoff.
+                        This drop in quality has subtle signs that are easy to miss if you don't know to check.
+                        Edge cases can be missed.
+                        Cybersecurity measures not explicitly stated may not be implemented.
+                        Features requested during a followup collide and overwrite older features.
+                        Someone who doesn't know how to code has no hope of correcting these issues when it arises.
+                        Technical users may proceed more cautiously when using LLMs to develop code, but human oversight adds additional stability that LLMs cannot offer in their current state.
+                    </p>
+                    <h3>Cultural Ramifications</h3>
+                    <p>
+                        There have been some concerning trends in the culture around vibe coding.
+                        A lot of non-technical users assume that because AI can output code that it means that human developers are a largely redundant layer.
+                        Similar debates have occurred within the artist and author communities as of late, since AI is capable of producing both images and general text.
+                        It is equally easy to destroy all three arguments for outright replacing humans with AI in all three of these fields: the knowledge to be good at anything is rarely captured in the raw output itself.
+                        Knowledge of a genre and reader psychology can influence a book in a way that cannot be easily represented for AI.
+                        Anatomical understanding and an innate understanding of the physics of everyday objects can similarly influence an artist's creative choices in ways that AI models don't consider.
+                        Software engineering, by extension, often requires an in-depth lived experience that it is difficult to truly capture in the number of tokens that fit within the average LLM's context window.
+                        In many different fields, there are a plethora of unstated assumptions that allow humans with proper training to have a much wider breadth of skills than any algorithm at the time of writing can truly capture.
+                    </p>
+                    <p>
+                        Spreading the misinformation that humans are no longer needed is also leading to chronic understaffing in many critical roles.
+                        Understaffing tends to most noticeably affect entry-level and customer-facing roles, where it is assumed that AI-assisted humans are capable of replacing several unassisted staff.
+                        This assumption only works under a very specific set of circumstances:
+                    </p>
+                    <ul>
+                        <li>All job responsibilities have been properly documented.</li>
+                        <li>AI models can do some or all of these tasks with minimal supervision.</li>
+                        <li>The company has high-quality data on how many man-hours are now idle thanks to the AI automating these tasks.</li>
+                        <li>AI has a lower failure rate than a comparable human on this task in the vast majority of daily situations.</li>
+                        <li>Humans do not need to extend bandwidth to verify/correct AI output.</li>
+                        <li>All AI pipelines have strict, automated verification that reduces error rates to below human.</li>
+                        <li>In the event of something unusual happening, the AI handles the task as well or better than humans.</li>
+                        <li>Whatever hypothetical pipeline is suggested for this is cheaper and/or faster per request than comparable humans.</li>
+                    </ul>
+                    <p>
+                        Many vibe coders tend to not put sufficient thought into these practical concerns.
+                        Because of this, it is common to have a flashy vibe coded demo that looks great, but underperforms on real world tasks.
+                    </p>
+                    <h3>Taking a Stand against Vibe Coding</h3>
+                    <p>
+                        Once someone has been seduced by the false promises of vibe coding, how can they break free from the bad habits they have learned?
+                        It is possible to do this with effort and self-improvement.
+                        The following process can help mitigate this:
+                    </p>
+                    <ol>
+                        <li>
+                            Understand applications of data structures and algorithms.
+                            <ul>
+                                <li>
+                                    Many problems novice coders face are similar to problems that have already been solved.
+                                </li>
+                                <li>
+                                    Using existing structures usually means less work for a programmer to design and implement from scratch.
+                                </li>
+                                <li>
+                                    Several books are available at <a href="./tech_resources.html#systemsAndDSADiv">Systems &amp; Algorithms</a>.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Learning to program without generative AI.
+                            <ul>
+                                <li>
+                                    It will feel slow and difficult.
+                                </li>
+                                <li>
+                                    However, learning to use the tools allow you to fix issues when an LLM fails you.
+                                </li>
+                                <li>
+                                    Several books that can help with that in the <a href="./tech_resources.html#cppResourcesDiv">C/C++</a> and <a href="./tech_resources.html#pythonResourcesDiv">Python</a> sections of this site.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Getting comfortable with design patterns.
+                            <ul>
+                                <li>
+                                    Code written by LLMs mostly meets specs, but is often laid out poorly.
+                                </li>
+                                <li>
+                                    Learning common design patterns makes it easier to maintain a codebase.
+                                </li>
+                                <li>
+                                    A list of resources can be found at <a href="./tech_resources.html#systemsAndDSADiv">Systems &amp; Algorithms</a>.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
                 </section>
             </div>
             <!--https://digitaldefynd.com/IQ/technology-jokes/-->

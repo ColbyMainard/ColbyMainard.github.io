@@ -19,7 +19,7 @@ $refined_professionalism_5: #F7F9F9;
        underlined so links do not rely on color alone (WCAG 1.4.1) — important on
        this legal page; hover lifts to _5 (10.39:1). */
     @include proseLinks($refined_professionalism_4, $refined_professionalism_5);
-    @include listText($refined_professionalism_3);
+    @include unorderedListText($refined_professionalism_3);
 }
 
 #analyticsDiv { @extend %privacySection; }

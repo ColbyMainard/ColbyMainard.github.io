@@ -43,7 +43,7 @@ $cyberpunk_dreams_5: #200b4b;
        _2 body text (4.89:1), plus an underline so links never rely on color
        alone (WCAG 1.4.1). _1 tops this ramp, so hover thickens the underline. */
     @include proseLinks($cyberpunk_dreams_1, $cyberpunk_dreams_1, $thicken-on-hover: true);
-    @include listText($cyberpunk_dreams_2);
+    @include unorderedListText($cyberpunk_dreams_2);
 }
 
 /* Decorative section illustrations. 

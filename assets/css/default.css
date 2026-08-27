@@ -290,7 +290,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
    paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
    5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
-#KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy {
+#KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge {
   margin: auto;
   background-color: #20203c;
   width: 80%;
@@ -300,54 +300,56 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */ }
-  #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1 {
+  #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1, #VibeCodingScourge h1 {
     text-align: left;
     color: #ff5c5c;
     font-size: clamp(2rem, 8vw, 5rem); }
-  #KAN h2, #Cryptocurrency h2, #FutureOfQuantum h2, #AGI h2, #Privacy h2, #ProductPlacement h2, #PhysicalMediaSupremacy h2 {
+  #KAN h2, #Cryptocurrency h2, #FutureOfQuantum h2, #AGI h2, #Privacy h2, #ProductPlacement h2, #PhysicalMediaSupremacy h2, #VibeCodingScourge h2 {
     text-align: left;
     color: #c2c2d1;
     font-size: clamp(1.5rem, 5vw, 3rem); }
-  #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3, #PhysicalMediaSupremacy h3 {
+  #KAN h3, #Cryptocurrency h3, #FutureOfQuantum h3, #AGI h3, #Privacy h3, #ProductPlacement h3, #PhysicalMediaSupremacy h3, #VibeCodingScourge h3 {
     text-align: left;
     color: #9a9ac2;
     font-size: clamp(1.25rem, 3.5vw, 2rem); }
-  #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4, #PhysicalMediaSupremacy h4 {
+  #KAN h4, #Cryptocurrency h4, #FutureOfQuantum h4, #AGI h4, #Privacy h4, #ProductPlacement h4, #PhysicalMediaSupremacy h4, #VibeCodingScourge h4 {
     text-align: left;
     color: #9a9ac2;
     font-size: clamp(1.125rem, 3vw, 1.75rem); }
-  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link, #PhysicalMediaSupremacy a:link,
+  #KAN a:link, #Cryptocurrency a:link, #FutureOfQuantum a:link, #AGI a:link, #Privacy a:link, #ProductPlacement a:link, #PhysicalMediaSupremacy a:link, #VibeCodingScourge a:link,
   #KAN a:visited,
   #Cryptocurrency a:visited,
   #FutureOfQuantum a:visited,
   #AGI a:visited,
   #Privacy a:visited,
   #ProductPlacement a:visited,
-  #PhysicalMediaSupremacy a:visited {
+  #PhysicalMediaSupremacy a:visited,
+  #VibeCodingScourge a:visited {
     text-align: left;
     color: #c2c2d1;
     font-size: 100%;
     text-decoration: underline; }
-  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover, #PhysicalMediaSupremacy a:hover,
+  #KAN a:hover, #Cryptocurrency a:hover, #FutureOfQuantum a:hover, #AGI a:hover, #Privacy a:hover, #ProductPlacement a:hover, #PhysicalMediaSupremacy a:hover, #VibeCodingScourge a:hover,
   #KAN a:active,
   #Cryptocurrency a:active,
   #FutureOfQuantum a:active,
   #AGI a:active,
   #Privacy a:active,
   #ProductPlacement a:active,
-  #PhysicalMediaSupremacy a:active {
+  #PhysicalMediaSupremacy a:active,
+  #VibeCodingScourge a:active {
     text-align: left;
     color: #c2c2d1;
     font-size: 100%;
     text-decoration: underline;
     text-decoration-thickness: 2px; }
-  #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p, #PhysicalMediaSupremacy p {
+  #KAN p, #Cryptocurrency p, #FutureOfQuantum p, #AGI p, #Privacy p, #ProductPlacement p, #PhysicalMediaSupremacy p, #VibeCodingScourge p {
     text-align: left;
     color: #9a9ac2;
     font-size: 100%; }
-  #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul, #PhysicalMediaSupremacy ul {
+  #KAN ol, #Cryptocurrency ol, #FutureOfQuantum ol, #AGI ol, #Privacy ol, #ProductPlacement ol, #PhysicalMediaSupremacy ol, #VibeCodingScourge ol {
     text-align: left; }
-    #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li, #PhysicalMediaSupremacy ul li {
+    #KAN ol li, #Cryptocurrency ol li, #FutureOfQuantum ol li, #AGI ol li, #Privacy ol li, #ProductPlacement ol li, #PhysicalMediaSupremacy ol li, #VibeCodingScourge ol li {
       color: #9a9ac2;
       font-size: 100%; }
 
@@ -414,11 +416,26 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 #Privacy h3 {
   color: #c2c2d1; }
 
-html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > a {
+#VibeCodingScourge ul {
+  text-align: left; }
+  #VibeCodingScourge ul li {
+    color: #9a9ac2;
+    font-size: 100%; }
+#VibeCodingScourge ol {
+  text-align: left; }
+  #VibeCodingScourge ol li {
+    color: #9a9ac2;
+    font-size: 100%; }
+#VibeCodingScourge blockquote {
+  text-align: left;
+  color: #9a9ac2;
+  font-size: 150%; }
+
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > ol, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > ol, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > ol, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > ol, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > ol, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > ol, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > ol, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > ol, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > a, html.js-animations #VibeCodingScourge > h1, html.js-animations #VibeCodingScourge > h2, html.js-animations #VibeCodingScourge > h3, html.js-animations #VibeCodingScourge > h4, html.js-animations #VibeCodingScourge > p, html.js-animations #VibeCodingScourge > ul, html.js-animations #VibeCodingScourge > ol, html.js-animations #VibeCodingScourge > dl, html.js-animations #VibeCodingScourge > .tableScroll, html.js-animations #VibeCodingScourge > a {
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > a {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > ol, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > ol, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > ol, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > ol, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > ol, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > ol, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > ol, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > ol, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > a, html.js-animations #VibeCodingScourge > h1, html.js-animations #VibeCodingScourge > h2, html.js-animations #VibeCodingScourge > h3, html.js-animations #VibeCodingScourge > h4, html.js-animations #VibeCodingScourge > p, html.js-animations #VibeCodingScourge > ul, html.js-animations #VibeCodingScourge > ol, html.js-animations #VibeCodingScourge > dl, html.js-animations #VibeCodingScourge > .tableScroll, html.js-animations #VibeCodingScourge > a {
     opacity: 1 !important; } }
 /* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the
    base rule for every page that loads reading_engagement.js, not just this

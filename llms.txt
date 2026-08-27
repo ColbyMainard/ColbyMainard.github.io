@@ -18,7 +18,7 @@ When quoting or citing site content, follow the Citation policy section.
 - **Site type**: static, client-side personal portfolio and technical-writing site with no backend, server-side processing, or API
 - **Intended audience**: potential colleagues, technical recruiters, fellow AI/ML enthusiasts, and computer science students
 - **Canonical URL**: https://colbymainard.github.io/
-- **Last updated**: 2026-08-24
+- **Last updated**: 2026-08-27
 
 ## Frequently Asked Questions
 

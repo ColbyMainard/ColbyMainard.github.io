@@ -64,7 +64,7 @@ $dark_blue_gray_5: #ff5c5c;
     /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
     @include proseLinks($dark_blue_gray_4, $dark_blue_gray_4, $thicken-on-hover: true);
     @include bodyText($dark_blue_gray_3);
-    @include listText($dark_blue_gray_3);
+    @include orderedListText($dark_blue_gray_3);
 }
 
 /* Shared table styling for opinions that include a comparison table. */
@@ -136,10 +136,17 @@ $dark_blue_gray_5: #ff5c5c;
 
 #PhysicalMediaSupremacy { @extend %techTakeSection; }
 
+#VibeCodingScourge {
+    @extend %techTakeSection;
+    @include unorderedListText($dark_blue_gray_3);
+    @include orderedListText($dark_blue_gray_3);
+    @include blockQuote($dark_blue_gray_3);
+}
+
 // Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
-    "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy",
-    "> h1, > h2, > h3, > h4, > p, > ul, > dl, > .tableScroll, > a"
+    "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge",
+    "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > a"
 );
 
 /* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the

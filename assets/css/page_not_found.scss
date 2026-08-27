@@ -34,7 +34,7 @@ $signal_lost_5: #fdf3e3;
     @include headingRamp($h2: $signal_lost_5);
     @include bodyText($signal_lost_3);
     @include proseLinks($signal_lost_4, $signal_lost_5, $underline: false);
-    @include listText($signal_lost_3);
+    @include unorderedListText($signal_lost_3);
 }
 
 #notFound { @extend %notFoundSection; }

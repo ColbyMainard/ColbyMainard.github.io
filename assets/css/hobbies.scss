@@ -45,7 +45,7 @@ $calm_authority_5: #E7EAEC;
        so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
        (7.69:1). */
     @include proseLinks($calm_authority_4, $calm_authority_5);
-    @include listText($calm_authority_2);
+    @include unorderedListText($calm_authority_2);
 }
 
 #quantumComputing {
