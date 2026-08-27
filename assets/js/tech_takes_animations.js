@@ -57,11 +57,6 @@
             duration: 600,
             delay: anime.stagger(150)
         }, ">-400");
-        addStep(tl, directChildren(el, ".takesIndex"), {
-            opacity: [0, 1],
-            translateY: ["20px", "0px"],
-            duration: 500
-        }, ">-200");
     }
 
     /**
