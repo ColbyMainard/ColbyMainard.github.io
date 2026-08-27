@@ -10,8 +10,9 @@
      before committing, so a page edited in the working tree gets the date of
      the commit it is about to land in rather than its previous one.
 
-     The 2026-08-24 dates below are all the same for a legitimate reason rather
-     than a lazy one: that change set edited all five of these pages, so the
+     The 2026-08-26 dates below are all the same for a legitimate reason rather
+     than a lazy one: that change set wired path_helpers.js into every page and
+     consolidated the JSON-LD author nodes, so it edited all five, and the
      procedure above genuinely returns one date for each. Do not read the
      matching dates as licence to stamp today across the board next time.
 
@@ -22,31 +23,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://colbymainard.github.io/</loc>
-		<lastmod>2026-08-24</lastmod>
+		<lastmod>2026-08-26</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/tech_takes.html</loc>
-		<lastmod>2026-08-24</lastmod>
+		<lastmod>2026-08-26</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/tech_resources.html</loc>
-		<lastmod>2026-08-24</lastmod>
+		<lastmod>2026-08-26</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/guides.html</loc>
-		<lastmod>2026-08-24</lastmod>
+		<lastmod>2026-08-26</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/hobbies.html</loc>
-		<lastmod>2026-08-24</lastmod>
+		<lastmod>2026-08-26</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.6</priority>
 	</url>

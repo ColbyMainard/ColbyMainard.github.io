@@ -48,6 +48,11 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Technical opinions on Kolmogorov-Arnold networks, cryptocurrency safety, quantum computing, AGI hype, online privacy, sports marketing, and physical media.">
 
+        <!-- Page-depth helper. Must stay above cookie_consent.js and
+             service_worker_register.js: deferred classic scripts run in
+             document order, and both read window.PathHelpers. -->
+        <script src="../js/path_helpers.js" defer></script>
+
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
@@ -89,8 +94,8 @@
           "name": "Technical Stances | Colby Mainard",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html",
           "inLanguage": "en",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "description": "Long-form opinions on Kolmogorov-Arnold Networks, cryptocurrency security, the future of quantum computing, AGI hype, post-internet privacy, product placement in sports marketing, and the case for physical media over streaming."
         }
         </script>
@@ -107,8 +112,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2025-10-07",
           "dateModified": "2026-08-16",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv"
         }
@@ -124,8 +129,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2025-11-29",
           "dateModified": "2026-06-19",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv"
         }
@@ -141,8 +146,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2025-10-18",
           "dateModified": "2026-06-19",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv"
         }
@@ -158,8 +163,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2025-10-28",
           "dateModified": "2026-06-19",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv"
         }
@@ -175,8 +180,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2026-01-20",
           "dateModified": "2026-06-19",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv"
         }
@@ -192,8 +197,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2026-04-23",
           "dateModified": "2026-08-02",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#ProductPlacementDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#ProductPlacementDiv"
         }
@@ -209,8 +214,8 @@
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2026-07-31",
           "dateModified": "2026-08-11",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#PhysicalMediaSupremacyDiv",
           "url": "https://colbymainard.github.io/assets/html/tech_takes.html#PhysicalMediaSupremacyDiv"
         }

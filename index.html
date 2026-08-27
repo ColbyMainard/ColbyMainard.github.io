@@ -53,6 +53,11 @@
         <meta name="google-site-verification" content="LqOVTw1vRp28p5VNBCRWWOsZHXbZeZteA7rHCZi8bwQ" />
         <meta name="msvalidate.01" content="96DC561C2A904478B8F425694CAF638F" />
 
+        <!-- Page-depth helper. Must stay above cookie_consent.js and
+             service_worker_register.js: deferred classic scripts run in
+             document order, and both read window.PathHelpers. -->
+        <script src="./assets/js/path_helpers.js" defer></script>
+
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="./assets/js/cookie_consent.js" defer></script>
 

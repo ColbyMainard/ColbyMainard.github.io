@@ -35,14 +35,7 @@
     };
 
     /**
-     * Intro — the shared h1 drop and paragraph stagger, then the dated index.
-     *
-     * Written locally instead of reusing AnimationHelpers.animateIntro because
-     * the .takesIndex <nav> carries its own animation gate (see the comment at
-     * tech_takes.scss:145). The shared version has no step for it, so it would
-     * be hidden at opacity: 0 with nothing to reveal it. Extending
-     * introTimeline is the same pattern hobbies_animations.js uses for its
-     * intro photograph.
+     * Intro — the shared h1 drop and paragraph stagger.
      *
      * Paragraphs are matched as direct children rather than by querySelectorAll,
      * both to mirror the gate's "> p" selector and to keep the <p> label inside

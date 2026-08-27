@@ -33,7 +33,7 @@
     function getWordCount(element) {
         if (!element) return 0;
         var clone = element.cloneNode(true);
-        var excluded = clone.querySelectorAll(".relatedStances, .readingTime");
+        var excluded = clone.querySelectorAll(".readingTime");
         Array.prototype.forEach.call(excluded, function (node) {
             if (node.parentNode) node.parentNode.removeChild(node);
         });

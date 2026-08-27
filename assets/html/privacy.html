@@ -46,6 +46,11 @@
         <!-- Tell search engines not to index this disclosure page; it is purely for transparency. -->
         <meta name="robots" content="noindex, follow">
 
+        <!-- Page-depth helper. Must stay above cookie_consent.js and
+             service_worker_register.js: deferred classic scripts run in
+             document order, and both read window.PathHelpers. -->
+        <script src="../js/path_helpers.js" defer></script>
+
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 

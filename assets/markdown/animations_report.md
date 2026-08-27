@@ -167,7 +167,7 @@ None of them writes the `html.js-animations` block by hand. `default.scss` defin
 );
 ```
 
-A partial may call the mixin more than once when a section needs a different child list: `page_not_found.scss` gates `#helpfulLinks` separately so it can include a bare `li`, and `tech_takes.scss` adds a second call for `#introSectionDiv > .takesIndex`. The one hand-written gate left is in `default.scss` itself, covering the footer `#contactMe` (`> h2, > p, > a`), which is identical on every page and so is not repeated per partial.
+A partial may call the mixin more than once when a section needs a different child list: `page_not_found.scss` gates `#helpfulLinks` separately so it can include a bare `li`. `tech_takes.scss` used to make a second call for `#introSectionDiv > .takesIndex`, but that dated-index component was removed and the page is back to a single call. The one hand-written gate left is in `default.scss` itself, covering the footer `#contactMe` (`> h2, > p, > a`), which is identical on every page and so is not repeated per partial.
 
 The exact list of child selectors varies by partial based on the element types each page uses. The gate has to stay in step with that page's JS: an element type that is animated but not gated flashes, while one that is gated but never animated is stranded invisible.
 

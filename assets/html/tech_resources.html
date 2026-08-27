@@ -48,6 +48,11 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Curated books, certifications, and podcasts for cybersecurity, AI/ML, C++, Python, scripting, operating systems, and algorithms, recommended from experience.">
 
+        <!-- Page-depth helper. Must stay above cookie_consent.js and
+             service_worker_register.js: deferred classic scripts run in
+             document order, and both read window.PathHelpers. -->
+        <script src="../js/path_helpers.js" defer></script>
+
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 

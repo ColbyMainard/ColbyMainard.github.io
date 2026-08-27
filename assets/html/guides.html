@@ -11,6 +11,9 @@
 
         <!-- Canonical URL and social sharing cards -->
         <link rel="canonical" href="https://colbymainard.github.io/assets/html/guides.html">
+        <!-- Same feed tech_takes.html links: one Atom document carries an entry
+             per stance and an entry per guide, so both pages advertise it. -->
+        <link rel="alternate" type="application/atom+xml" title="Technical Stances and Guides by Colby Mainard (Atom feed)" href="../../feed.xml">
         <!-- website, not article: this page declares @type CollectionPage in its
              JSON-LD below, listing seven separate HowTo entities. og:type keeps
              the Open Graph layer in agreement, as on index.html. -->
@@ -46,6 +49,11 @@
 
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Plain-spoken starter guides to data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.">
+
+        <!-- Page-depth helper. Must stay above cookie_consent.js and
+             service_worker_register.js: deferred classic scripts run in
+             document order, and both read window.PathHelpers. -->
+        <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
@@ -89,8 +97,8 @@
           "url": "https://colbymainard.github.io/assets/html/guides.html",
           "inLanguage": "en",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "description": "Plain-spoken starter guides to data engineering, computer vision, generative AI, natural language processing, reinforcement learning, software engineering, and cybersecurity, each written for readers new to the area."
         }
         </script>
@@ -122,7 +130,7 @@
           "name": "How to get started with data engineering",
           "description": "A plain-spoken starter guide to cleaning data, handling user data responsibly, accounting for data velocity, and choosing batch vs. real-time processing.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand why clean data matters", "text": "Real-world data has duplicates, outliers, inconsistent types, and missing values; deduplicate, cast types, and impute on a consistent policy before anything downstream relies on it."},
             {"@type": "HowToStep", "name": "Handle user data responsibly", "text": "Protect personally identifiable information with hashing, salting, least-privilege access, k-anonymity, and differential privacy to avoid legal and trust fallout."},
@@ -141,7 +149,7 @@
           "name": "How to get started with computer vision",
           "description": "A starter guide to computer-vision problem classes, choosing a model, normalizing image data, and the core libraries.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Learn the main problem classes", "text": "Object detection, instance segmentation, semantic segmentation, image classification, and pose estimation each suit different vision tasks."},
             {"@type": "HowToStep", "name": "Choose the right model", "text": "Balance resource constraints, performance requirements, and infrastructure capacity; larger networks gain accuracy at the cost of compute and power."},
@@ -159,7 +167,7 @@
           "name": "How to get started with generative AI",
           "description": "A starter guide to the technology behind generative AI, the role of GANs, and the core libraries for building with it.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand the underlying technology", "text": "Generative models convert an input into novel data of a similar format; LLMs map prompts to text, while vision language models combine vision and language."},
             {"@type": "HowToStep", "name": "Know the predecessors: GANs", "text": "Generative adversarial networks preceded modern GenAI; transformer and multi-headed attention layers introduced the architectural flexibility that followed."},
@@ -176,7 +184,7 @@
           "name": "How to get started with natural language processing",
           "description": "A starter guide to sentiment analysis, topic detection, data-normalization concerns, and the core NLP libraries.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Perform sentiment analysis", "text": "Feed tokenized text into a network that outputs a positive-or-negative sentiment measurement."},
             {"@type": "HowToStep", "name": "Detect topics", "text": "Use neural networks to bin text into categories such as tech, current events, or poetry where deterministic methods fail."},
@@ -194,7 +202,7 @@
           "name": "How to get started with reinforcement learning",
           "description": "A starter guide to the agent-environment-reward framework, the core RL techniques, and where reinforcement learning applies.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand the agent-environment-reward framework", "text": "An agent takes actions in an environment, then measures its state and the resulting reward to optimize behavior in noisy, dynamic settings."},
             {"@type": "HowToStep", "name": "Learn the core techniques", "text": "Proximal Policy Optimization, Q-Learning, Monte Carlo methods, and Deep Q Networks each estimate the best action for a given state."},
@@ -211,7 +219,7 @@
           "name": "How to get started with software engineering",
           "description": "A starter guide to why GenAI can't replace software engineers, practical maintainability principles, and where to learn next.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Understand why GenAI can't replace software engineering", "text": "GenAI writes a solid first draft but struggles with taste, hidden requirements, intuitive UI design, and unstated user priorities."},
             {"@type": "HowToStep", "name": "Write maintainable code", "text": "Every line is eventually maintained by someone else; follow Clean Code for low-level standards and Design Patterns for system design."},
@@ -228,7 +236,7 @@
           "name": "How to get started with cybersecurity",
           "description": "A starter guide to everyday security best practices, the subfields of cybersecurity, and the core tools.",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "step": [
             {"@type": "HowToStep", "name": "Adopt security best practices", "text": "Patch regularly, enable multi-factor authentication, use strong unique passwords and a password manager, and minimize your digital footprint."},
             {"@type": "HowToStep", "name": "Explore the fields of cybersecurity", "text": "Network security, application security, digital forensics, cloud security, ethical hacking, and governance, risk, and compliance are distinct subfields."},
@@ -272,8 +280,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv"
         }
@@ -290,8 +298,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv"
         }
@@ -308,8 +316,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv"
         }
@@ -326,8 +334,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv"
         }
@@ -344,8 +352,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv"
         }
@@ -362,8 +370,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv"
         }
@@ -380,8 +388,8 @@
           "proficiencyLevel": "Beginner",
           "datePublished": "2026-05-25",
           "dateModified": "2026-08-08",
-          "author": {"@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
-          "publisher": {"@type": "Person", "name": "Colby Mainard"},
+          "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
+          "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv",
           "url": "https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv"
         }

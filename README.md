@@ -88,7 +88,7 @@ Current topics include:
 - `/assets/js`: Custom JavaScript files.
 - `/assets/markdown/`: Markdown files for various projects and reports on progress.
 - `/assets/other`: Files that are useful for the website but do not fit into any other category
-- `/feed.xml`: A hand-maintained Atom feed of the Technical Stances entries.
+- `/feed.xml`: A hand-maintained Atom feed carrying one entry per Technical Stance and one per Guide. Both pages link it from their head.
 - `/index.html`: The landing page for the website.
 - `/llms.txt`: A plain-text summary of the site for large language model crawlers.
 - `/manifest.json`: The web app manifest, describing the site as an installable progressive web app.
