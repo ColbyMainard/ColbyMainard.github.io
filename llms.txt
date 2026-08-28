@@ -41,7 +41,7 @@ Through the contact section on the home page: https://colbymainard.github.io/#co
 
 - [Home / Professional Background](https://colbymainard.github.io/): Work history, education, projects, certifications, technical skills, and contact information.
 - [Guides](https://colbymainard.github.io/assets/html/guides.html): Plain-spoken starter guides for newcomers to data engineering, computer vision, generative AI, natural language processing, reinforcement learning, software engineering, and cybersecurity.
-- [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html): Long-form opinion pieces, on the case for physical media over streaming, product placement in sports marketing, post-internet privacy, cryptocurrency security, AGI hype, the future of quantum computing, and Kolmogorov-Arnold Networks.
+- [Technical Stances](https://colbymainard.github.io/assets/html/tech_takes.html): Long-form opinion pieces, on the case against vibe coding, the case for physical media over streaming, product placement in sports marketing, post-internet privacy, cryptocurrency security, AGI hype, the future of quantum computing, and Kolmogorov-Arnold Networks.
 - [Technical Stances Atom feed](https://colbymainard.github.io/feed.xml): Machine-readable Atom feed with one entry per technical opinion piece and one per starter guide.
 - [Technical Resources](https://colbymainard.github.io/assets/html/tech_resources.html): Curated reading lists and learning resources covering cybersecurity, AI/ML, C/C++, Python, scripting, operating systems, and systems design with data structures and algorithms.
 - [Hobbies](https://colbymainard.github.io/assets/html/hobbies.html): Photography, quantum-computing self-study, Dungeons & Dragons, and history.

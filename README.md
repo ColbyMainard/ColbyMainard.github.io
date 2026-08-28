@@ -77,6 +77,7 @@ Current topics include:
     - Privacy
     - Product Placement in Sports Marketing: Tips and Tricks
     - Physical Media vs. Streaming
+    - Vibe Coding
 
 ## Architecture
 
