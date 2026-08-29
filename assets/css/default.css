@@ -299,7 +299,14 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
-  /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */ }
+  /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
+  /* Every opinion section uses unordered lists (KAN, Cryptocurrency, AGI,
+     Privacy, ProductPlacement), so the shared placeholder is where this
+     belongs. Without it those <li>s fell back to the UA text color on the
+     $dark_blue_gray_1 background and inherited `body { text-align: center }`.
+     _3 matches the surrounding body text at 5.83:1. Ordered lists are not
+     shared - only #VibeCodingScourge has an <ol> - so orderedListText is
+     included at that call site instead. */ }
   #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1, #VibeCodingScourge h1 {
     text-align: left;
     color: #ff5c5c;
@@ -347,9 +354,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-align: left;
     color: #9a9ac2;
     font-size: 100%; }
-  #KAN ol, #Cryptocurrency ol, #FutureOfQuantum ol, #AGI ol, #Privacy ol, #ProductPlacement ol, #PhysicalMediaSupremacy ol, #VibeCodingScourge ol {
+  #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul, #PhysicalMediaSupremacy ul, #VibeCodingScourge ul {
     text-align: left; }
-    #KAN ol li, #Cryptocurrency ol li, #FutureOfQuantum ol li, #AGI ol li, #Privacy ol li, #ProductPlacement ol li, #PhysicalMediaSupremacy ol li, #VibeCodingScourge ol li {
+    #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li, #PhysicalMediaSupremacy ul li, #VibeCodingScourge ul li {
       color: #9a9ac2;
       font-size: 100%; }
 
@@ -405,10 +412,10 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-decoration: underline; }
   #AGI dl dd, #Privacy dl dd {
     margin: 0;
-    padding: 0 0 2em 0; }
-    #AGI dl dd ul li, #Privacy dl dd ul li {
-      font-size: 100%;
-      color: #9a9ac2; }
+    padding: 0 0 2em 0;
+    /* The <ul>s inside a <dd> are covered by the section-level
+       unorderedListText include, which emits the same color and size
+       at lower specificity; no override is needed here. */ }
 
 #AGI h3 {
   color: #c2c2d1; }
@@ -416,20 +423,19 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 #Privacy h3 {
   color: #c2c2d1; }
 
-#VibeCodingScourge ul {
-  text-align: left; }
-  #VibeCodingScourge ul li {
+#VibeCodingScourge {
+  /* The only section on the page with an <ol>, so the ordered-list rule stays
+     here rather than in %techTakeSection. Unordered lists come from the
+     placeholder. */ }
+  #VibeCodingScourge ol {
+    text-align: left; }
+    #VibeCodingScourge ol li {
+      color: #9a9ac2;
+      font-size: 100%; }
+  #VibeCodingScourge blockquote {
+    text-align: left;
     color: #9a9ac2;
-    font-size: 100%; }
-#VibeCodingScourge ol {
-  text-align: left; }
-  #VibeCodingScourge ol li {
-    color: #9a9ac2;
-    font-size: 100%; }
-#VibeCodingScourge blockquote {
-  text-align: left;
-  color: #9a9ac2;
-  font-size: 150%; }
+    font-size: 150%; }
 
 html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > ol, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > ol, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > ol, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > ol, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > ol, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > ol, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > ol, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > ol, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > a, html.js-animations #VibeCodingScourge > h1, html.js-animations #VibeCodingScourge > h2, html.js-animations #VibeCodingScourge > h3, html.js-animations #VibeCodingScourge > h4, html.js-animations #VibeCodingScourge > p, html.js-animations #VibeCodingScourge > ul, html.js-animations #VibeCodingScourge > ol, html.js-animations #VibeCodingScourge > dl, html.js-animations #VibeCodingScourge > .tableScroll, html.js-animations #VibeCodingScourge > a {
   opacity: 0; }

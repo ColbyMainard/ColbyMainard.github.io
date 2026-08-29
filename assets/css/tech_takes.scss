@@ -64,7 +64,14 @@ $dark_blue_gray_5: #ff5c5c;
     /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
     @include proseLinks($dark_blue_gray_4, $dark_blue_gray_4, $thicken-on-hover: true);
     @include bodyText($dark_blue_gray_3);
-    @include orderedListText($dark_blue_gray_3);
+    /* Every opinion section uses unordered lists (KAN, Cryptocurrency, AGI,
+       Privacy, ProductPlacement), so the shared placeholder is where this
+       belongs. Without it those <li>s fell back to the UA text color on the
+       $dark_blue_gray_1 background and inherited `body { text-align: center }`.
+       _3 matches the surrounding body text at 5.83:1. Ordered lists are not
+       shared - only #VibeCodingScourge has an <ol> - so orderedListText is
+       included at that call site instead. */
+    @include unorderedListText($dark_blue_gray_3);
 }
 
 /* Shared table styling for opinions that include a comparison table. */
@@ -98,12 +105,9 @@ $dark_blue_gray_5: #ff5c5c;
         dd {
             margin: 0;
             padding: 0 0 2em 0;
-            ul {
-                li {
-                    font-size: 100%;
-                    color: $dark_blue_gray_3;
-                }
-            }
+            /* The <ul>s inside a <dd> are covered by the section-level
+               unorderedListText include, which emits the same color and size
+               at lower specificity; no override is needed here. */
         }
     }
 }
@@ -138,7 +142,9 @@ $dark_blue_gray_5: #ff5c5c;
 
 #VibeCodingScourge {
     @extend %techTakeSection;
-    @include unorderedListText($dark_blue_gray_3);
+    /* The only section on the page with an <ol>, so the ordered-list rule stays
+       here rather than in %techTakeSection. Unordered lists come from the
+       placeholder. */
     @include orderedListText($dark_blue_gray_3);
     @include blockQuote($dark_blue_gray_3);
 }
