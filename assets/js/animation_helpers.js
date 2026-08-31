@@ -108,12 +108,18 @@
     /**
      * Contact/Footer — simple fade in. Identical on every page, so it lives
      * here rather than being re-declared in each *_animations.js.
+     *
+     * The selector deliberately stops at "h2, p" to match the direct children
+     * the CSS gate in default.scss actually hides. Every footer anchor on all
+     * seven pages is nested inside a <p>, so selecting "a" as well gave each
+     * link a second, independently staggered tween on top of the one its
+     * parent paragraph was already running, and the two compounded.
      */
     function animateContact(el) {
         if (prefersReducedMotion()) return;
         var tl = anime.createTimeline({ ease: "outSine" });
 
-        addStep(tl, el.querySelectorAll("h2, p, a"), {
+        addStep(tl, el.querySelectorAll("h2, p"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

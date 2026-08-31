@@ -152,7 +152,7 @@ $dark_blue_gray_5: #ff5c5c;
 // Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
     "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge",
-    "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > a"
+    "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > blockquote, > a"
 );
 
 /* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the

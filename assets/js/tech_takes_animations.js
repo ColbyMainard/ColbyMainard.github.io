@@ -248,8 +248,9 @@
     /**
      * Vibe Coding is a Scourge to the Internet — Skew and straighten
      * Elements arrive leaning, as if thrown together in a hurry, then square up
-     * into place. The body selector includes "ol" because this is the only
-     * section with a direct ordered-list child, and the gate hides it.
+     * into place. The body selector includes "ol" and "blockquote" because this
+     * is the only section on the page with a direct child of either kind, and
+     * the gate hides both.
      */
     function animateVibeCoding(el) {
         var tl = anime.createTimeline({ ease: "outQuart" });
@@ -266,7 +267,7 @@
             duration: 550,
             delay: anime.stagger(85)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, ol, a"), {
+        addStep(tl, directChildren(el, "p, ul, ol, blockquote, a"), {
             opacity: [0, 1],
             skewX: ["4deg", "0deg"],
             translateY: ["18px", "0px"],
