@@ -497,7 +497,7 @@
                     <p>
                         The amount of data going through any particular pipeline over a unit of time will determine the robustness of infrastructure required.
                         For example, text tends to have a lower overall processing and storage cost per sample than audio, with images/video being some of the most complex computing requirements.
-                        RAM, CPU, and GPU needs will largely be determined by the amount and types of data being handled regularly.
+                        <abbr title="Random Access Memory">RAM</abbr>, <abbr title="Central Processing Unit">CPU</abbr>, and <abbr title="Graphics Processing Unit">GPU</abbr> needs will largely be determined by the amount and types of data being handled regularly.
                     </p>
                     <h3>Batch vs Real-time</h3>
                     <p>
@@ -507,10 +507,10 @@
                     </p>
                     <h3>Common Libraries / Tools</h3>
                     <ul>
-                        <li>Pandas for CSV exploration</li>
+                        <li>Pandas for <abbr title="Comma-Separated Values">CSV</abbr> exploration</li>
                         <li>Polars for high-speed tabular data processing</li>
                         <li>Spark for distributed high-speed tabular data processing</li>
-                        <li>SQLAlchemy for handling interactions with SQL databases</li>
+                        <li>SQLAlchemy for handling interactions with <abbr title="Structured Query Language">SQL</abbr> databases</li>
                         <li>BeautifulSoup4 for web crawling for data</li>
                         <li>Docker / Kubernetes for managing complex microservice architectures</li>
                         <li>python-dotenv for managing secrets</li>
@@ -603,17 +603,17 @@
                     <p><strong>Last Updated:</strong> <time datetime="2026-08-08">August 8, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <p><strong>Cite this guide:</strong> <a href="https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv">https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv</a></p>
                     <p>
-                        <a href="https://en.wikipedia.org/wiki/Generative_AI">Generative artificial intelligence</a> (GenAI) refers to various content (e.g. text, images, video) generated directly by a machine learning model.
-                        At the time of writing, the most well-known examples are Large Language Models (LLMs) like Anthropic's Claude or OpenAI's ChatGPT.
+                        <a href="https://en.wikipedia.org/wiki/Generative_AI">Generative artificial intelligence</a> (<abbr title="Generative Artificial Intelligence">GenAI</abbr>) refers to various content (e.g. text, images, video) generated directly by a machine learning model.
+                        At the time of writing, the most well-known examples are Large Language Models (<abbr title="Large Language Model">LLMs</abbr>) like Anthropic's Claude or OpenAI's ChatGPT.
                     </p>
                     <h3>Underlying Tech</h3>
                     <p>
                         While the exact structure of the neural network will vary by application, it converts a specified input to novel data of a similar format.
                         In the example of LLMs, input would be a text prompt and output would be a response to the text.
                         Deepfakes, by contrast, would be audio/images/video of a specified person.
-                        Vision Language Models (VLMs) can handle both visual information and human language working in concert.
+                        Vision Language Models (<abbr title="Vision Language Model">VLMs</abbr>) can handle both visual information and human language working in concert.
                     </p>
-                    <h3>Generative Adversarial Networks (GANs)</h3>
+                    <h3>Generative Adversarial Networks (<abbr title="Generative Adversarial Network">GANs</abbr>)</h3>
                     <p>
                         These are the predecessor of modern GenAI.
                         One of the most obvious differences was the introduction of the Transformer/MultiHeaded attention layers and the architectural flexibility it allows.
@@ -639,7 +639,7 @@
                     <p><strong>Last Updated:</strong> <time datetime="2026-08-08">August 8, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <p><strong>Cite this guide:</strong> <a href="https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv">https://colbymainard.github.io/assets/html/guides.html#nlpGuideDiv</a></p>
                     <p>
-                        Natural language processing (NLP) has been described as "a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language" <a href="https://www.ibm.com/think/topics/natural-language-processing">by Cole Stryker and Jim Holdsworth</a>.
+                        Natural language processing (<abbr title="Natural Language Processing">NLP</abbr>) has been described as "a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language" <a href="https://www.ibm.com/think/topics/natural-language-processing">by Cole Stryker and Jim Holdsworth</a>.
                     </p>
                     <h3>Sentiment Analysis</h3>
                     <p>
@@ -664,7 +664,7 @@
                     </ul>
                     <h3>Common Libraries / Tools</h3>
                     <ul>
-                        <li>NLTK for natural language preprocessing</li>
+                        <li><abbr title="Natural Language Toolkit">NLTK</abbr> for natural language preprocessing</li>
                         <li>PyTorch for building research networks</li>
                         <li>CrewAI/Smolagents for building custom agents</li>
                         <li>TensorFlow for building more performant networks</li>
@@ -682,7 +682,7 @@
                     <p><strong>Last Updated:</strong> <time datetime="2026-08-08">August 8, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <p><strong>Cite this guide:</strong> <a href="https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv">https://colbymainard.github.io/assets/html/guides.html#reinforcementLearningGuideDiv</a></p>
                     <p>
-                        Reinforcement learning (RL) is the branch of artificial intelligence concerned with learning optimal policies for behavior.
+                        Reinforcement learning (<abbr title="Reinforcement Learning">RL</abbr>) is the branch of artificial intelligence concerned with learning optimal policies for behavior.
                         Specifically, reinforcement learning optimizes a reward function in noisy, dynamic environments.
                         Most techniques assume that there is an intelligent agent that takes actions in an environment and then measures its current state and the reward from the actions taken.
                     </p>
@@ -699,7 +699,7 @@
                         <li>Deep Q Network</li>
                         <li>Markov Decision Processes</li>
                     </ul>
-                    <h4>Proximal Policy Optimization (PPO)</h4>
+                    <h4>Proximal Policy Optimization (<abbr title="Proximal Policy Optimization">PPO</abbr>)</h4>
                     <p>
                         The basic strategy of PPO is to place an agent in an environment and let it randomly explore.
                         After a while, the agent should have enough data to update policies based on which actions lead to particular rewards in an environment.
@@ -749,7 +749,7 @@
                         <a href="https://en.wikipedia.org/wiki/Software_engineering">Wikipedia</a> defines it as "a branch of both computer science and engineering focused on designing, developing, testing, and maintaining software applications".
                         For my purposes, I will focus on the design, testing, and maintenance of this definition, as this is where many beginners go wrong.
                     </p>
-                    <h3>Why GenAI Can't Kill Software Engineering</h3>
+                    <h3>Why <abbr title="Generative Artificial Intelligence">GenAI</abbr> Can't Kill Software Engineering</h3>
                     <p>
                         Let's be honest: GenAI can write a sufficiently solid first draft of code to achieve known features.
                         However, this is rarely the issue for most large projects.
@@ -821,7 +821,7 @@
                         <li>Digital Forensics</li>
                         <li>Cloud Security</li>
                         <li>Ethical Hacking</li>
-                        <li>Governance, Risk, and Compliance (GRC)</li>
+                        <li>Governance, Risk, and Compliance (<abbr title="Governance, Risk, and Compliance">GRC</abbr>)</li>
                     </ul>
                     <h4>Network Security</h4>
                     <p>
@@ -866,19 +866,19 @@
                         <li>Metasploit - penetration testing for known vulnerabilities</li>
                         <li>Scrapy - web scraping</li>
                         <li>BeautifulSoup - alternate web scraping</li>
-                        <li>Nmap - Exploring what devices are available within a particular IP range</li>
+                        <li>Nmap - Exploring what devices are available within a particular <abbr title="Internet Protocol">IP</abbr> range</li>
                         <li>Hashcat - Breaking cryptographic hashes</li>
                         <li>John the Ripper - Password Cracking</li>
                         <li>Netcat - Reading and writing network data</li>
                         <li>Aircrack-ng - Testing security of various WiFi networks</li>
-                        <li>APKTool - Looking for vulnerabilities in APK files</li>
-                        <li>SQLMap - Looking for SQL injection vulnerabilities</li>
-                        <li>DirB - brute forcing URLs on web servers</li>
-                        <li>Reaver - Looking for WPS Vulnerabilities</li>
-                        <li>XSStrike - Finding and exploiting cross-site scripting (XSS)</li>
+                        <li>APKTool - Looking for vulnerabilities in <abbr title="Android Package Kit">APK</abbr> files</li>
+                        <li>SQLMap - Looking for <abbr title="Structured Query Language">SQL</abbr> injection vulnerabilities</li>
+                        <li>DirB - brute forcing <abbr title="Uniform Resource Locator">URLs</abbr> on web servers</li>
+                        <li>Reaver - Looking for <abbr title="Wi-Fi Protected Setup">WPS</abbr> Vulnerabilities</li>
+                        <li>XSStrike - Finding and exploiting cross-site scripting (<abbr title="Cross-Site Scripting">XSS</abbr>)</li>
                         <li>Nikto - Web server scanning</li>
                         <li>Autopsy - Data recovery and file system analysis</li>
-                        <li>Maltego - Freemium open-source intelligence (OSINT) searches</li>
+                        <li>Maltego - Freemium open-source intelligence (<abbr title="Open-Source Intelligence">OSINT</abbr>) searches</li>
                         <li>Burpsuite - Freemium penetration testing suite</li>
                         <li>Wireshark - Recording and exploring network packet captures</li>
                         <li>Social Engineering Toolkit - Building out social engineering campaigns for penetration testing</li>
