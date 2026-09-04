@@ -68,6 +68,11 @@
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_takes_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
+        <!-- Section permalink buttons. Must stay below reading_engagement.js:
+             both wait for DOMContentLoaded and handlers fire in registration
+             order, so this ordering is what keeps the button labels out of the
+             per-section word counts. -->
+        <script src="../js/section_permalinks.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
         <script src="../js/easter_egg.js" defer></script>
@@ -196,7 +201,7 @@
           "description": "Lessons from valuing sports brand placements with computer vision, covering the visual signals that drive placement value and practical strategies for brands seeking exposure.",
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2026-04-23",
-          "dateModified": "2026-08-02",
+          "dateModified": "2026-09-03",
           "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#ProductPlacementDiv",
@@ -230,7 +235,7 @@
           "description": "What separates vibe coding from AI-assisted development, why generating code with little oversight trades quality for speed and hides technical debt, the cultural cost of assuming AI replaces developers, and a practical path back to fundamentals.",
           "image": "https://colbymainard.github.io/assets/images/sharecard.png",
           "datePublished": "2026-08-27",
-          "dateModified": "2026-08-27",
+          "dateModified": "2026-09-03",
           "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "mainEntityOfPage": "https://colbymainard.github.io/assets/html/tech_takes.html#VibeCodingScourgeDiv",
@@ -269,6 +274,15 @@
             </div>
         </header>
         <main class="main" id="main" tabindex="-1">
+            <!--
+                Announcement target for the section "Copy link" buttons added by
+                section_permalinks.js. Static markup on purpose, matching
+                #photoGalleryStatus on hobbies.html: a live region only announces
+                changes to content inside a region that already existed, so a
+                paragraph injected and written to in the same click would say
+                nothing. Empty and screen-reader-only until a copy happens.
+            -->
+            <p class="visually-hidden" id="sectionPermalinkStatus" role="status"></p>
             <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Technical Opinions on AI, Quantum Computing &amp; Privacy</h1>
                 <p>
@@ -840,7 +854,7 @@
             <div class="ProductPlacementDiv" id="ProductPlacementDiv">
                 <section class="ProductPlacement" id="ProductPlacement">
                     <h2>Product Placement in Sports Marketing: Tips and Tricks</h2>
-                    <p><strong>Last Updated:</strong> <time datetime="2026-08-02">August 2, 2026</time> <span class="readingTime" data-reading-time></span></p>
+                    <p><strong>Last Updated:</strong> <time datetime="2026-09-03">September 3, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <h3>The Basics of the Niche</h3>
                     <p>
                         Any time a logo is seen next to a professional athlete, the brand behind the logo likely paid for that placement.
@@ -900,7 +914,7 @@
                     <h4>Digitally-Enhanced vs. Analog Assets</h4>
                      <p>
                         Certain assets, like virtual glass the NHL has been experimenting with or digitally-enhanced dasherboards (<abbr title="Digitally-Enhanced Dasherboard">DEDs</abbr>), are made more clear by reducing natural motion blur.
-                        Analog assets, however, experience all effects of the camera lens would subject them to.
+                        Analog assets, however, experience all of the effects that the camera lens would subject them to.
                     </p>
                     <h4>Relative Clutter</h4>
                     <p>
@@ -1023,7 +1037,7 @@
             <div class="VibeCodingScourgeDiv" id="VibeCodingScourgeDiv">
                 <section class="VibeCodingScourge" id="VibeCodingScourge">
                     <h2>Vibe Coding is a Scourge to the Internet</h2>
-                    <p><strong>Last Updated:</strong> <time datetime="2026-08-27">August 27, 2026</time> <span class="readingTime" data-reading-time></span></p>
+                    <p><strong>Last Updated:</strong> <time datetime="2026-09-03">September 3, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <h3>What is Vibe Coding?</h3>
                     <p>
                         For those who have not been exposed to the software development industry post-ChatGPT, vibe coding is the practice of generating code with <abbr title="Large Language Model">LLMs</abbr> with little-to-no oversight.
@@ -1037,7 +1051,7 @@
                         For someone non-technical, it is extremely tempting to type an idea into a text box at breakfast and have a first draft of an app by lunch.
                         There is no need to read documentation or learn a programming language.
                         All that would be required is a specific enough prompt and access to a powerful enough model.
-                        Since <a href="https://en.wikipedia.org/wiki/Software_engineering_demographics">99% of people who are not professional developers</a>, this can feel incredibly power to many.
+                        Since <a href="https://en.wikipedia.org/wiki/Software_engineering_demographics">99% of people who are not professional developers</a>, this can feel incredibly powerful to many.
                         While programming languages are well-documented, the learning curve can seem daunting to those who do not know where to start.
                     </p>
                     <h3>Monkey's Paw: Hidden Tech Debt</h3>

@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v75";
+const CACHE_VERSION = "v76";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
@@ -32,6 +32,7 @@ const PRECACHE_URLS = [
     "./assets/js/path_helpers.js",
     "./assets/js/photo_gallery.js",
     "./assets/js/reading_engagement.js",
+    "./assets/js/section_permalinks.js",
     "./assets/js/service_worker_register.js",
     "./assets/js/tech_resources_animations.js",
     "./assets/js/tech_takes_animations.js",

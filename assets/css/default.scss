@@ -54,6 +54,24 @@ $emerald_efficiency_5: #e0f7fa;
     margin-top: 2em;
     margin-bottom: 2em;
     font-family: "Courier New", monospace;
+
+    // Forced colors (Windows High Contrast and the equivalent on other
+    // platforms) replaces every author background-color with the user's own
+    // Canvas color. The card's tinted panel is the ONLY thing separating one
+    // section from the next here, so under forced colors all seven pages
+    // collapse into one undivided column of text with nothing marking where a
+    // section starts. A border is the documented replacement: forced-colors
+    // keeps borders and repaints them in CanvasText, which is guaranteed to
+    // contrast with Canvas.
+    //
+    // It lives in the mixin rather than in each partial for the usual reason:
+    // this is structure, not palette, and every caller needs it identically.
+    // The border is deliberately not in the base rule, because outside forced
+    // colors the background tint already does this job and a ring on every card
+    // would be a visual change to all seven pages.
+    @media (forced-colors: active) {
+        border: 1px solid CanvasText;
+    }
 }
 
 // Heading size ladder, shared by the headingRamp mixin, the global `body`
@@ -221,6 +239,46 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
+/// Section permalink button, appended inside an h2/h3 by section_permalinks.js
+/// on tech_takes.html and guides.html. Structure is identical on both pages and
+/// only the palette differs, which is why it lives here rather than being
+/// written twice.
+///
+/// $base and $hover must both clear 4.5:1 on the section shell they sit on: the
+/// button carries a real text label, so it is text for contrast purposes, not a
+/// UI glyph at 3:1. The focus ring is the same solid currentColor outline used
+/// by .floatingBackToTop and the consent buttons.
+///
+/// font-size is absolute rather than a percentage on purpose. These sit inside
+/// headings on the clamp() ladder, where 80% of an h2 is still 38px on desktop
+/// and the control would read as part of the heading rather than as a control.
+@mixin sectionPermalink($base, $hover) {
+    .sectionPermalink {
+        margin-left: 0.6em;
+        padding: 0.15em 0.55em;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+        background: none;
+        color: $base;
+        font-family: inherit;
+        font-size: 0.875rem;
+        font-weight: normal;
+        line-height: 1.4;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            color: $hover;
+        }
+
+        &:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
+    }
+}
+
 /// Animation gating. Elements start invisible only when JS is active, and the
 /// reduced-motion safety net re-reveals them so content can never be trapped at
 /// opacity: 0 (for example when the OS setting is toggled after load). The two
@@ -292,6 +350,15 @@ html {
     border: 0;
 }
 
+/* Abbreviation affordance. This file previously targeted `abbr` nowhere on purpose, and both CLAUDE.md and AGENTS.md recorded that; the convention was changed deliberately on 2026-09-03, so this rule is not drift.
+   The reasoning: 72 <abbr title="..."> elements carry a spelled-out expansion, and with no styling nothing on the page says an expansion exists. Browsers show it on hover only, so the annotation reached sighted mouse users and nobody else.
+   A dotted underline marks which words carry one. It is not a full fix: the title attribute is still unreachable by keyboard (abbr is not focusable) and by touch (no hover), and making it reachable means either a tab stop on all 72 or spelling the term out in prose. This rule is the cheap half.
+   No color is set. text-decoration draws in currentColor, so the underline inherits whichever section tone the abbreviation already sits in, and every one of those is kept at AA by its partial. */
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
 /* Horizontal-scroll container for wide data tables.
    The table scrolls inside this box instead of widening the page on narrow viewports (WCAG 1.4.10).
    A wrapper is used rather than `display: block` on the <table> itself, which would strip the table's semantics and its scope-ed row/column headers. */
@@ -321,6 +388,11 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    /* Forced colors drops both the background tint and the box-shadow, which together are what lift this sticky bar off the content scrolling underneath it. A CanvasText rule is the replacement; without it the nav and the first section run together as one block of text. */
+    @media (forced-colors: active) {
+        border-bottom: 1px solid CanvasText;
+    }
 
     .nav-brand {
         display: inline-block;
@@ -968,6 +1040,11 @@ footer {
     background-color: $emerald_efficiency_1;
     /* Bottom apron below the last line, replacing the trailing <br> the sub-pages used to carry (index never had one; now all pages match). */
     padding-bottom: 1em;
+
+    /* Same forced-colors reasoning as the header: the green band is the only boundary between the last section and the footer, and it is not painted under forced colors. */
+    @media (forced-colors: active) {
+        border-top: 1px solid CanvasText;
+    }
     #contactMe {
         font-family: "Courier New", monospace;
         /* h2 is the only heading level this footer styles, because h2 is the
@@ -1027,28 +1104,8 @@ footer {
 }
 
 /*
- * Animation initial state for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
- * Only applied when JS is active: elements start invisible and the shared animateContact helper (animation_helpers.js) fades them in. 
- * Keep the child selectors in sync with the section's markup and that helper. 
- * Without JS the .js-animations class is never added and content remains fully visible.
+ * Animation gating for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
+ * The shared animateContact helper (animation_helpers.js) fades these elements in, so keep the child selectors in sync with that helper and with the section's markup.
+ * Without JS the .js-animations class is never added and the content remains fully visible.
  */
-html.js-animations {
-    #contactMe {
-        > h2, > p, > a {
-            opacity: 0;
-        }
-    }
-}
-
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal the gated elements so content is never trapped at opacity: 0.
- */
-@media (prefers-reduced-motion: reduce) {
-    html.js-animations {
-        #contactMe {
-            > h2, > p, > a {
-                opacity: 1 !important;
-            }
-        }
-    }
-}
+@include animationGate("#contactMe", "> h2, > p, > a");

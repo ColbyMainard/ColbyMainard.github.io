@@ -52,6 +52,10 @@ $dark_blue_gray_3: #9a9ac2;
 $dark_blue_gray_4: #c2c2d1;
 $dark_blue_gray_5: #ff5c5c;
 
+/* Reading-progress fill. Deliberately outside the Dark Blue Gray ramp: the bar is a purely decorative strip with no text on it and no contrast obligation, and it is meant to read as a distinct progress accent rather than as more page chrome.
+   Named rather than inlined so a future palette pass finds it, and so the fill and its glow cannot drift apart. */
+$reading_progress_fill: #00c27c;
+
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 %techTakeSection {
     @include sectionShell($dark_blue_gray_1, $padding-bottom: 1.5em);
@@ -64,6 +68,8 @@ $dark_blue_gray_5: #ff5c5c;
     /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
     @include proseLinks($dark_blue_gray_4, $dark_blue_gray_4, $thicken-on-hover: true);
     @include bodyText($dark_blue_gray_3);
+    /* Section permalink buttons: _3 matches the surrounding body text (5.83:1 on the _1 shell) and _4 brightens on hover (8.95:1), the same pair the in-prose links use. */
+    @include sectionPermalink($dark_blue_gray_3, $dark_blue_gray_4);
     /* Every opinion section uses unordered lists (KAN, Cryptocurrency, AGI,
        Privacy, ProductPlacement), so the shared placeholder is where this
        belongs. Without it those <li>s fell back to the UA text color on the
@@ -167,8 +173,13 @@ $dark_blue_gray_5: #ff5c5c;
 /* Visible Atom subscribe link in the page intro. The intro sits on the
    global $noir_2 body background, where this page's _3 text tone fails AA
    (3.95:1); _4 clears it at 6.07:1 and hover uses $noir_5 (7.22:1, the
-   documented intro-paragraph pair). .feedSubscribe exists only on
-   tech_takes.html, so nothing leaks to other pages' intros. */
+   documented intro-paragraph pair).
+
+   .feedSubscribe now appears on guides.html as well, whose intro sits on the
+   same global $noir_2 background, so the same two ratios hold there and the
+   rule is deliberately left unscoped rather than duplicated into guides.scss
+   with the Techno Serenity palette. If a third page ever adopts the class on a
+   different background, split this rule instead of widening it. */
 .feedSubscribe a:link,
 .feedSubscribe a:visited {
     color: $dark_blue_gray_4;
@@ -198,8 +209,8 @@ $dark_blue_gray_5: #ff5c5c;
     .reading-progress-fill {
         height: 100%;
         width: 0%;
-        background-color: #00c27c;
-        box-shadow: 0 0 6px rgba(0, 194, 124, 0.55);
+        background-color: $reading_progress_fill;
+        box-shadow: 0 0 6px rgba($reading_progress_fill, 0.55);
         transition: width 0.08s linear;
     }
 }

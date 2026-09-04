@@ -39,7 +39,7 @@
     var slides = [];
     var children = track.children;
     for (var i = 0; i < children.length; i++) {
-        if (children[i].className.indexOf("photoGallery-slide") !== -1) {
+        if (children[i].classList.contains("photoGallery-slide")) {
             slides.push(children[i]);
         }
     }

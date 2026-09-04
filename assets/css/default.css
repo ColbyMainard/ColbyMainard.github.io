@@ -15,6 +15,9 @@
   /* In-prose links: _1 (#ff3d94, 5.24:1 on _5) sits a step brighter than the
      _2 body text (4.89:1), plus an underline so links never rely on color
      alone (WCAG 1.4.1). _1 tops this ramp, so hover thickens the underline. */ }
+  @media (forced-colors: active) {
+    #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
+      border: 1px solid CanvasText; } }
   #workHistory h1, #education h1, #projects h1, #technicalSkills h1, #otherSkills h1, #certifications h1 {
     text-align: left;
     color: #ff3d94;
@@ -147,6 +150,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   /* In-prose links: _4 (6.57:1) is brighter than the _2 body text, underlined
      so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
      (7.69:1). */ }
+  @media (forced-colors: active) {
+    #quantumComputing, #photography, #dungeonsAndDragons, #history {
+      border: 1px solid CanvasText; } }
   #quantumComputing h1, #photography h1, #dungeonsAndDragons h1, #history h1 {
     text-align: left;
     color: #E7EAEC;
@@ -289,6 +295,8 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 /* _3 tuned brighter than the source #7a7a99 (3.80:1, failed WCAG AA) so body
    paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
    5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
+/* Reading-progress fill. Deliberately outside the Dark Blue Gray ramp: the bar is a purely decorative strip with no text on it and no contrast obligation, and it is meant to read as a distinct progress accent rather than as more page chrome.
+   Named rather than inlined so a future palette pass finds it, and so the fill and its glow cannot drift apart. */
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge {
   margin: auto;
@@ -300,6 +308,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
   /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
+  /* Section permalink buttons: _3 matches the surrounding body text (5.83:1 on the _1 shell) and _4 brightens on hover (8.95:1), the same pair the in-prose links use. */
   /* Every opinion section uses unordered lists (KAN, Cryptocurrency, AGI,
      Privacy, ProductPlacement), so the shared placeholder is where this
      belongs. Without it those <li>s fell back to the UA text color on the
@@ -307,6 +316,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
      _3 matches the surrounding body text at 5.83:1. Ordered lists are not
      shared - only #VibeCodingScourge has an <ol> - so orderedListText is
      included at that call site instead. */ }
+  @media (forced-colors: active) {
+    #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge {
+      border: 1px solid CanvasText; } }
   #KAN h1, #Cryptocurrency h1, #FutureOfQuantum h1, #AGI h1, #Privacy h1, #ProductPlacement h1, #PhysicalMediaSupremacy h1, #VibeCodingScourge h1 {
     text-align: left;
     color: #ff5c5c;
@@ -354,6 +366,24 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-align: left;
     color: #9a9ac2;
     font-size: 100%; }
+  #KAN .sectionPermalink, #Cryptocurrency .sectionPermalink, #FutureOfQuantum .sectionPermalink, #AGI .sectionPermalink, #Privacy .sectionPermalink, #ProductPlacement .sectionPermalink, #PhysicalMediaSupremacy .sectionPermalink, #VibeCodingScourge .sectionPermalink {
+    margin-left: 0.6em;
+    padding: 0.15em 0.55em;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background: none;
+    color: #9a9ac2;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.4;
+    vertical-align: middle;
+    cursor: pointer; }
+    #KAN .sectionPermalink:hover, #Cryptocurrency .sectionPermalink:hover, #FutureOfQuantum .sectionPermalink:hover, #AGI .sectionPermalink:hover, #Privacy .sectionPermalink:hover, #ProductPlacement .sectionPermalink:hover, #PhysicalMediaSupremacy .sectionPermalink:hover, #VibeCodingScourge .sectionPermalink:hover, #KAN .sectionPermalink:active, #Cryptocurrency .sectionPermalink:active, #FutureOfQuantum .sectionPermalink:active, #AGI .sectionPermalink:active, #Privacy .sectionPermalink:active, #ProductPlacement .sectionPermalink:active, #PhysicalMediaSupremacy .sectionPermalink:active, #VibeCodingScourge .sectionPermalink:active {
+      color: #c2c2d1; }
+    #KAN .sectionPermalink:focus-visible, #Cryptocurrency .sectionPermalink:focus-visible, #FutureOfQuantum .sectionPermalink:focus-visible, #AGI .sectionPermalink:focus-visible, #Privacy .sectionPermalink:focus-visible, #ProductPlacement .sectionPermalink:focus-visible, #PhysicalMediaSupremacy .sectionPermalink:focus-visible, #VibeCodingScourge .sectionPermalink:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
   #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul, #PhysicalMediaSupremacy ul, #VibeCodingScourge ul {
     text-align: left; }
     #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li, #PhysicalMediaSupremacy ul li, #VibeCodingScourge ul li {
@@ -454,8 +484,13 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 /* Visible Atom subscribe link in the page intro. The intro sits on the
    global $noir_2 body background, where this page's _3 text tone fails AA
    (3.95:1); _4 clears it at 6.07:1 and hover uses $noir_5 (7.22:1, the
-   documented intro-paragraph pair). .feedSubscribe exists only on
-   tech_takes.html, so nothing leaks to other pages' intros. */
+   documented intro-paragraph pair).
+
+   .feedSubscribe now appears on guides.html as well, whose intro sits on the
+   same global $noir_2 background, so the same two ratios hold there and the
+   rule is deliberately left unscoped rather than duplicated into guides.scss
+   with the Techno Serenity palette. If a third page ever adopts the class on a
+   different background, split this rule instead of widening it. */
 .feedSubscribe a:link,
 .feedSubscribe a:visited {
   color: #c2c2d1;
@@ -506,6 +541,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   /* In-prose links: _4 (4.62:1) is a distinct warm tone against the _3 body
      text, underlined so links do not rely on color alone (WCAG 1.4.1); hover
      lifts to _5 (8.8:1). */ }
+  @media (forced-colors: active) {
+    #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources, #systemsAndDSA {
+      border: 1px solid CanvasText; } }
   #cybersecurityResources h1, #artificialIntelligenceResources h1, #cppResources h1, #pythonResources h1, #scriptingResources h1, #operatingSystemsResources h1, #systemsAndDSA h1 {
     text-align: left;
     color: #f9c54e;
@@ -600,6 +638,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   /* In-prose links: _4 (5.01:1) is a distinct tone against the _3 body text,
      underlined so links do not rely on color alone (WCAG 1.4.1) — important on
      this legal page; hover lifts to _5 (10.39:1). */ }
+  @media (forced-colors: active) {
+    #analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv, #changesDiv {
+      border: 1px solid CanvasText; } }
   #analyticsDiv h1, #thirdPartyDiv h1, #serviceWorkerDiv h1, #verificationDiv h1, #rightsDiv h1, #preferencesDiv h1, #changesDiv h1 {
     text-align: left;
     color: #F7F9F9;
@@ -652,7 +693,11 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace;
+  /* Section permalink buttons: _3 is this page's body tone (5.57:1 on the _1 shell) and _4 brightens on hover (7.16:1), mirroring the base/hover pair proseLinks already uses here. */
   /* Reading-time pill next to "Last Updated:". The base .readingTime rule lives in tech_takes.scss and colors it with that page's palette, which is untraceable here; _3 is this page's documented body tone (5.57:1 on the _1 bg) and the pill is body-adjacent secondary text. Italics and the 95% size are inherited from the base rule. */ }
+  @media (forced-colors: active) {
+    #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
+      border: 1px solid CanvasText; } }
   #dataEngineeringGuide h1, #computerVisionGuide h1, #generativeAIGuide h1, #nlpGuide h1, #reinforcementLearningGuide h1, #softwareEngineeringGuide h1, #cybersecurityGuide h1 {
     text-align: left;
     color: #e0f5f2;
@@ -704,6 +749,24 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     #dataEngineeringGuide ul li, #computerVisionGuide ul li, #generativeAIGuide ul li, #nlpGuide ul li, #reinforcementLearningGuide ul li, #softwareEngineeringGuide ul li, #cybersecurityGuide ul li {
       color: #8fbccb;
       font-size: 100%; }
+  #dataEngineeringGuide .sectionPermalink, #computerVisionGuide .sectionPermalink, #generativeAIGuide .sectionPermalink, #nlpGuide .sectionPermalink, #reinforcementLearningGuide .sectionPermalink, #softwareEngineeringGuide .sectionPermalink, #cybersecurityGuide .sectionPermalink {
+    margin-left: 0.6em;
+    padding: 0.15em 0.55em;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background: none;
+    color: #8fbccb;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.4;
+    vertical-align: middle;
+    cursor: pointer; }
+    #dataEngineeringGuide .sectionPermalink:hover, #computerVisionGuide .sectionPermalink:hover, #generativeAIGuide .sectionPermalink:hover, #nlpGuide .sectionPermalink:hover, #reinforcementLearningGuide .sectionPermalink:hover, #softwareEngineeringGuide .sectionPermalink:hover, #cybersecurityGuide .sectionPermalink:hover, #dataEngineeringGuide .sectionPermalink:active, #computerVisionGuide .sectionPermalink:active, #generativeAIGuide .sectionPermalink:active, #nlpGuide .sectionPermalink:active, #reinforcementLearningGuide .sectionPermalink:active, #softwareEngineeringGuide .sectionPermalink:active, #cybersecurityGuide .sectionPermalink:active {
+      color: #a3d5e0; }
+    #dataEngineeringGuide .sectionPermalink:focus-visible, #computerVisionGuide .sectionPermalink:focus-visible, #generativeAIGuide .sectionPermalink:focus-visible, #nlpGuide .sectionPermalink:focus-visible, #reinforcementLearningGuide .sectionPermalink:focus-visible, #softwareEngineeringGuide .sectionPermalink:focus-visible, #cybersecurityGuide .sectionPermalink:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
   #dataEngineeringGuide table, #computerVisionGuide table, #generativeAIGuide table, #nlpGuide table, #reinforcementLearningGuide table, #softwareEngineeringGuide table, #cybersecurityGuide table {
     text-align: left;
     border-collapse: collapse;
@@ -764,6 +827,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace; }
+  @media (forced-colors: active) {
+    #notFound, #helpfulLinks {
+      border: 1px solid CanvasText; } }
   #notFound h2, #helpfulLinks h2 {
     text-align: left;
     color: #fdf3e3;
@@ -829,6 +895,14 @@ html {
   white-space: nowrap;
   border: 0; }
 
+/* Abbreviation affordance. This file previously targeted `abbr` nowhere on purpose, and both CLAUDE.md and AGENTS.md recorded that; the convention was changed deliberately on 2026-09-03, so this rule is not drift.
+   The reasoning: 72 <abbr title="..."> elements carry a spelled-out expansion, and with no styling nothing on the page says an expansion exists. Browsers show it on hover only, so the annotation reached sighted mouse users and nobody else.
+   A dotted underline marks which words carry one. It is not a full fix: the title attribute is still unreachable by keyboard (abbr is not focusable) and by touch (no hover), and making it reachable means either a tab stop on all 72 or spelling the term out in prose. This rule is the cheap half.
+   No color is set. text-decoration draws in currentColor, so the underline inherits whichever section tone the abbreviation already sits in, and every one of those is kept at AA by its partial. */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help; }
+
 /* Horizontal-scroll container for wide data tables.
    The table scrolls inside this box instead of widening the page on narrow viewports (WCAG 1.4.10).
    A wrapper is used rather than `display: block` on the <table> itself, which would strip the table's semantics and its scope-ed row/column headers. */
@@ -853,7 +927,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* Forced colors drops both the background tint and the box-shadow, which together are what lift this sticky bar off the content scrolling underneath it. A CanvasText rule is the replacement; without it the nav and the first section run together as one block of text. */ }
+  @media (forced-colors: active) {
+    header {
+      border-bottom: 1px solid CanvasText; } }
   header .nav-brand {
     display: inline-block;
     color: #e0f7fa;
@@ -1317,7 +1395,11 @@ footer {
   text-align: center;
   background-color: #007a5e;
   /* Bottom apron below the last line, replacing the trailing <br> the sub-pages used to carry (index never had one; now all pages match). */
-  padding-bottom: 1em; }
+  padding-bottom: 1em;
+  /* Same forced-colors reasoning as the header: the green band is the only boundary between the last section and the footer, and it is not painted under forced colors. */ }
+  @media (forced-colors: active) {
+    footer {
+      border-top: 1px solid CanvasText; } }
   footer #contactMe {
     font-family: "Courier New", monospace;
         /* h2 is the only heading level this footer styles, because h2 is the
@@ -1368,17 +1450,13 @@ footer {
       font-size: 100%; }
 
 /*
- * Animation initial state for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
- * Only applied when JS is active: elements start invisible and the shared animateContact helper (animation_helpers.js) fades them in. 
- * Keep the child selectors in sync with the section's markup and that helper. 
- * Without JS the .js-animations class is never added and content remains fully visible.
+ * Animation gating for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
+ * The shared animateContact helper (animation_helpers.js) fades these elements in, so keep the child selectors in sync with that helper and with the section's markup.
+ * Without JS the .js-animations class is never added and the content remains fully visible.
  */
 html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
   opacity: 0; }
 
-/*
- * Reduced-motion safety net: if .js-animations is ever present while the user prefers reduced motion (e.g. the OS setting is toggled after load), re-reveal the gated elements so content is never trapped at opacity: 0.
- */
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
     opacity: 1 !important; } }

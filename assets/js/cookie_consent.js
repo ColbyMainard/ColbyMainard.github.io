@@ -100,17 +100,30 @@
     // The banner's message. Its id is what the wrapper's aria-labelledby points
     // at, so the two must stay in step; keeping them in sibling helpers rather
     // than one long function is what makes that pairing easy to see.
+    //
+    // Built from text nodes and a real anchor element rather than an innerHTML
+    // string. privacyHref comes from path_helpers.js and is not attacker
+    // controlled, so the previous version was not an injection hole in
+    // practice, but assembling markup by string concatenation is the habit that
+    // becomes one the first time a value with a different provenance is
+    // interpolated. createElement/createTextNode cannot parse markup at all.
     function createMessage() {
         var msg = document.createElement("p");
         msg.className = "cookieConsent-message";
         msg.id = "cookieConsentMessage";
-        var text = "This site loads Google Analytics so the owner can see which pages are read. " +
-                   "Analytics cookies are only set if you accept. " +
-                   "Nothing is stored on this server, and your data is never sold.";
+        msg.appendChild(document.createTextNode(
+            "This site loads Google Analytics so the owner can see which pages are read. " +
+            "Analytics cookies are only set if you accept. " +
+            "Nothing is stored on this server, and your data is never sold."
+        ));
         if (privacyHref) {
-            text += " See the <a href=\"" + privacyHref + "\">privacy policy</a> for details.";
+            msg.appendChild(document.createTextNode(" See the "));
+            var link = document.createElement("a");
+            link.href = privacyHref;
+            link.textContent = "privacy policy";
+            msg.appendChild(link);
+            msg.appendChild(document.createTextNode(" for details."));
         }
-        msg.innerHTML = text;
         return msg;
     }
 
@@ -255,8 +268,12 @@
         wirePreferenceControls();
     }
 
+    // Public API. Only the three actions are exposed: the Privacy Policy page
+    // wires them through data-cookie-consent attributes and links revoke() by
+    // name. A getStatus alias used to sit here as well, but nothing on the site
+    // ever called it (updateStatusLabel below reads the private readConsent
+    // directly), so it was an unused surface rather than a documented API.
     window.cookieConsent = {
-        getStatus: readConsent,
         accept: function () { onChoice("accepted"); },
         reject: function () { onChoice("rejected"); },
         revoke: revoke
