@@ -10,11 +10,11 @@
      before committing, so a page edited in the working tree gets the date of
      the commit it is about to land in rather than its previous one.
 
-     The 2026-08-26 dates below are all the same for a legitimate reason rather
-     than a lazy one: that change set wired path_helpers.js into every page and
-     consolidated the JSON-LD author nodes, so it edited all five, and the
-     procedure above genuinely returns one date for each. Do not read the
-     matching dates as licence to stamp today across the board next time.
+     Repeated dates below are legitimate rather than lazy: change sets here often
+     touch several pages at once, so the procedure above genuinely returns one
+     date for more than one entry. Do not read matching dates as licence to stamp
+     today across the board next time. The guides entry carries a date ahead of
+     its last commit on purpose, per the working-tree rule above.
 
      These dates track when the file changed. The dateModified values in each
      page's JSON-LD track when its content changed, so the two drift apart
@@ -23,31 +23,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://colbymainard.github.io/</loc>
-		<lastmod>2026-08-26</lastmod>
+		<lastmod>2026-09-03</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/tech_takes.html</loc>
-		<lastmod>2026-08-27</lastmod>
+		<lastmod>2026-09-03</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/tech_resources.html</loc>
-		<lastmod>2026-08-26</lastmod>
+		<lastmod>2026-08-27</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/guides.html</loc>
-		<lastmod>2026-08-26</lastmod>
+		<lastmod>2026-09-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/hobbies.html</loc>
-		<lastmod>2026-08-26</lastmod>
+		<lastmod>2026-08-27</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.6</priority>
 	</url>

@@ -957,15 +957,16 @@ header {
     top: 10px;
     line-height: 1;
     min-height: 44px;
-    min-width: 44px; }
+    min-width: 44px;
+    /* Same solid outline as .floatingBackToTop, .tableScroll and main a:focus-visible. The previous indicator suppressed the outline and painted a 3px box-shadow ring, which forced-colors mode discards outright, leaving a keyboard user with no focus indicator at all on the primary navigation.
+       currentColor here is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1, the pair this file already documents at 4.78:1, so the ring clears the 3:1 non-text minimum outside forced colors too. */ }
     header .nav-toggle:hover {
       background-color: rgba(80, 195, 161, 0.2); }
     header .nav-toggle.active {
       background-color: rgba(80, 195, 161, 0.3); }
     header .nav-toggle:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
-      border-radius: 4px; }
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
   header #pageMenu {
     background-color: #006b52;
     border-bottom: 1px solid rgba(80, 195, 161, 0.2);
@@ -985,7 +986,8 @@ header {
       font-size: 95%;
       letter-spacing: 0.5px;
       transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s;
-      border-bottom: 3px solid transparent; }
+      border-bottom: 3px solid transparent;
+      /* Solid outline for the same reason as the nav toggle above: a box-shadow ring is dropped entirely in forced colors, and the outline it replaced was suppressed. currentColor is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1 at 4.78:1, past the 3:1 non-text minimum. */ }
       header #pageMenu a:hover {
         color: #e0f7fa;
         background-color: rgba(80, 195, 161, 0.1);
@@ -995,9 +997,8 @@ header {
         border-bottom-color: #e0f7fa;
         font-weight: bold; }
       header #pageMenu a:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
-        border-radius: 4px; }
+        outline: 2px solid currentColor;
+        outline-offset: 2px; }
   header #siteMenu {
     background-color: #007a5e;
     padding: 0; }
@@ -1020,15 +1021,15 @@ header {
       padding: 10px 18px;
       font-size: 85%;
       transition: color 0.2s, background-color 0.2s;
-      border-left: 1px solid rgba(80, 195, 161, 0.15); }
+      border-left: 1px solid rgba(80, 195, 161, 0.15);
+      /* Solid outline for the same reason as the two rules above. currentColor is $emerald_efficiency_5 (#e0f7fa); the resting background is $emerald_efficiency_1 at 4.78:1 and the hover state darkens it further, so both states clear the 3:1 non-text minimum. */ }
       header #siteMenu a:hover {
         color: #e0f7fa;
         /* darken, not tint: a _3 tint under _5 text tops out ≈4.3:1 */
         background-color: #00614a; }
       header #siteMenu a:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.85);
-        border-radius: 4px; }
+        outline: 2px solid currentColor;
+        outline-offset: 2px; }
 
 @media (max-width: 768px) {
   header .nav-toggle {

@@ -438,10 +438,11 @@ header {
             background-color: rgba($emerald_efficiency_3, 0.3);
         }
 
+        /* Same solid outline as .floatingBackToTop, .tableScroll and main a:focus-visible. The previous indicator suppressed the outline and painted a 3px box-shadow ring, which forced-colors mode discards outright, leaving a keyboard user with no focus indicator at all on the primary navigation.
+           currentColor here is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1, the pair this file already documents at 4.78:1, so the ring clears the 3:1 non-text minimum outside forced colors too. */
         &:focus-visible {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba($emerald_efficiency_5, 0.85);
-            border-radius: 4px;
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
         }
     }
 
@@ -481,10 +482,10 @@ header {
                 font-weight: bold;
             }
 
+            /* Solid outline for the same reason as the nav toggle above: a box-shadow ring is dropped entirely in forced colors, and the outline it replaced was suppressed. currentColor is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1 at 4.78:1, past the 3:1 non-text minimum. */
             &:focus-visible {
-                outline: none;
-                box-shadow: 0 0 0 3px rgba($emerald_efficiency_5, 0.85);
-                border-radius: 4px;
+                outline: 2px solid currentColor;
+                outline-offset: 2px;
             }
         }
     }
@@ -532,10 +533,10 @@ header {
                 background-color: darken($emerald_efficiency_1, 5%);
             }
 
+            /* Solid outline for the same reason as the two rules above. currentColor is $emerald_efficiency_5 (#e0f7fa); the resting background is $emerald_efficiency_1 at 4.78:1 and the hover state darkens it further, so both states clear the 3:1 non-text minimum. */
             &:focus-visible {
-                outline: none;
-                box-shadow: 0 0 0 3px rgba($emerald_efficiency_5, 0.85);
-                border-radius: 4px;
+                outline: 2px solid currentColor;
+                outline-offset: 2px;
             }
         }
     }
