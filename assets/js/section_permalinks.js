@@ -1,10 +1,12 @@
 /**
- * Section permalink buttons — tech_takes.html and guides.html.
+ * Section permalink buttons — tech_takes.html, guides.html and
+ * tech_resources.html.
  *
- * Appends a "Copy link" button to each section heading so a reader can send
- * one stance or one guide to someone instead of the whole page. The anchors
- * already existed (the page menu navigates by them, and guides.html prints
- * seven of them as "Cite this guide:" lines); nothing surfaced them.
+ * Appends a "Copy link" button to the end of each section card so a reader can
+ * send one stance, one guide or one resource list to someone instead of the
+ * whole page. The anchors already existed (the page menu navigates by them, and
+ * guides.html prints seven of them as "Cite this guide:" lines); nothing
+ * surfaced them.
  *
  * Progressive enhancement in the photo_gallery.js shape: with scripting off no
  * button is rendered at all, so there is nothing dead to tab into. The status
@@ -13,49 +15,65 @@
  * content inside a region that already existed, so injecting it here and
  * writing to it on the same click would announce nothing.
  *
- * WHICH HEADINGS GET A BUTTON. The feature request assumed every h2 and h3
- * already carried an id. They do not: on both pages the ids sit on the
- * wrapping <div>/<section> (#VibeCodingScourgeDiv, #dataEngineeringGuideDiv),
- * and no h2 or h3 on either page has one of its own. So each heading resolves
- * an anchor through anchorFor() below, and an anchor is claimed by the first
- * heading that resolves to it. In practice that means one button per section
- * today, on the h2. Give an h3 its own id in the markup and it picks up a
- * button with no change here.
+ * WHERE THE BUTTON GOES. One control per section card, appended as the card's
+ * last child and centered by .sectionPermalinkWrap. This replaced an earlier
+ * version that appended the button inline inside the h2, which put a control in
+ * the middle of every heading. End-of-card is where the reader who just
+ * finished the section is, and it is where guides.html already prints its
+ * "Cite this guide:" line.
  *
- * Deliberately not moving focus on copy, matching photo_gallery.js: focus
- * stays on the button that was pressed, so a second press works.
+ * WHICH HEADINGS GET ONE. h2 only, which on all three pages is the heading that
+ * names the card. Deeper headings do not get their own control, because a
+ * second button at the foot of the same card would copy a different anchor from
+ * the same place with nothing to distinguish it. The h2 has no id of its own on
+ * any of the three pages: the ids sit on the wrapping <div>/<section>
+ * (#VibeCodingScourgeDiv, #dataEngineeringGuideDiv, #cybersecurityResourcesDiv),
+ * so each heading resolves its anchor through anchorFor() below.
  *
- * file:// is not supported on purpose rather than by accident. There is no
- * shareable URL to put on the clipboard from a local file, and the Clipboard
- * API is unavailable outside a secure context anyway, so the buttons are never
- * built there. Offering a control that copies "file:///C:/..." would be worse
- * than offering none.
+ * Deliberately not moving focus on copy, matching photo_gallery.js: focus stays
+ * on the button that was pressed, so a second press works.
+ *
+ * file:// IS SUPPORTED, and what it copies is deliberate. An earlier version
+ * rendered no buttons at all outside http(s), on the grounds that a local file
+ * has no shareable URL. That left the control invisible in every local preview
+ * of the site, which is where it is most often looked at during editing. The
+ * buttons are now always built, and from a non-http(s) origin they copy the
+ * CANONICAL published URL for the page (see canonicalPath), never a
+ * file:///C:/... path that would only resolve on this machine. The Clipboard
+ * API is unavailable outside a secure context, so those origins fall through to
+ * the execCommand path below, which is why that fallback is not dead code.
  *
  * Load order note: this file must stay BELOW reading_engagement.js in the
- * <head>. Deferred classic scripts run in document order, so that script's
- * DOMContentLoaded handler registers first and counts each section's words
- * before these button labels are added to the DOM. Swapping the two inflates
- * every reading-time estimate by a few words per heading.
+ * <head> on the two pages that load both. Deferred classic scripts run in
+ * document order, so that script's DOMContentLoaded handler registers first and
+ * counts each section's words before this button label is added to the DOM.
+ * Swapping the two inflates every reading-time estimate by two words per
+ * section. tech_resources.html loads no reading-time script and so has no such
+ * constraint.
  *
- * Dependency-free.
+ * Dependency-free. window.PathHelpers is used when present and this file works
+ * without it.
  */
 
 (function () {
     "use strict";
 
-    var protocol = window.location.protocol;
-    if (protocol !== "http:" && protocol !== "https:") return;
+    // Where this site is published. Only used to build a shareable URL when the
+    // page is being read from something other than http(s), which in practice
+    // means a local file:// preview.
+    var CANONICAL_ORIGIN = "https://colbymainard.github.io";
+    var NESTED_DIR = "/assets/html/";
 
     var main = null;
     var status = null;
 
     /**
-     * The anchor this heading should hand out.
+     * The anchor this section should hand out.
      *
      * A heading's own id wins, because writing one is a deliberate act. With
      * no id of its own the heading takes the OUTERMOST ancestor id below
-     * <main>, not the nearest one, and that choice is load-bearing. Both pages
-     * wrap each section twice: <div id="VibeCodingScourgeDiv"> around
+     * <main>, not the nearest one, and that choice is load-bearing. All three
+     * pages wrap each section twice: <div id="VibeCodingScourgeDiv"> around
      * <section id="VibeCodingScourge">. Taking the nearest ancestor would hand
      * out #VibeCodingScourge, while feed.xml, the Article JSON-LD @id and url,
      * and the "Cite this guide:" lines all publish #VibeCodingScourgeDiv.
@@ -75,14 +93,51 @@
         return node === main ? found : null;
     }
 
-    function urlFor(anchor) {
-        return window.location.origin + window.location.pathname + "#" + anchor;
+    /**
+     * The card the button is appended to: the nearest <section> ancestor, which
+     * on all three pages is the element carrying the section shell styling and
+     * therefore the visible card. Falling back to the element that owns the
+     * anchor keeps a hand-written section without that wrapper working.
+     */
+    function cardFor(heading, anchor) {
+        var node = heading.parentNode;
+        while (node && node !== main) {
+            if (node.tagName && node.tagName.toLowerCase() === "section") return node;
+            node = node.parentNode;
+        }
+        return document.getElementById(anchor);
     }
 
-    // Text of the heading without the button's own label, which is appended to
-    // the same element. Read before the button is attached, so a plain
-    // textContent read would be correct today; taking it explicitly keeps that
-    // true if a caller ever re-labels an existing button.
+    /**
+     * The published path for this page, used only off http(s). Mirrors what
+     * PathHelpers already knows about the site's two page depths, and asks it
+     * when it is loaded rather than keeping a second copy of that knowledge.
+     */
+    function canonicalPath() {
+        var path = window.location.pathname || "";
+        var file = path.slice(path.lastIndexOf("/") + 1);
+        var nested = window.PathHelpers && typeof window.PathHelpers.isNested === "function"
+            ? window.PathHelpers.isNested()
+            : path.indexOf(NESTED_DIR) !== -1;
+
+        if (nested) return NESTED_DIR + file;
+        // The landing page is published at the bare origin, so copying
+        // "/index.html" would hand out a second URL for it.
+        return (file === "" || file === "index.html") ? "/" : "/" + file;
+    }
+
+    function urlFor(anchor) {
+        var protocol = window.location.protocol;
+        if (protocol === "http:" || protocol === "https:") {
+            return window.location.origin + window.location.pathname + "#" + anchor;
+        }
+        return CANONICAL_ORIGIN + canonicalPath() + "#" + anchor;
+    }
+
+    // Text of the heading, used for the button's accessible name. The button no
+    // longer lives inside the heading, but any .sectionPermalink found within
+    // is still stripped so a caller that re-labels an existing control cannot
+    // fold the old label into the new one.
     function headingText(heading) {
         var clone = heading.cloneNode(true);
         var existing = clone.querySelectorAll(".sectionPermalink");
@@ -98,9 +153,10 @@
 
     /**
      * execCommand("copy") on a throwaway textarea. Kept as the fallback for
-     * browsers without navigator.clipboard, and for the case where the async
-     * write is rejected (a document that is not focused, or a permission
-     * policy that blocks it). Returns true only if the copy actually happened.
+     * browsers without navigator.clipboard, for the case where the async write
+     * is rejected (a document that is not focused, or a permission policy that
+     * blocks it), and for every non-secure origin, where navigator.clipboard is
+     * not exposed at all. Returns true only if the copy actually happened.
      */
     function legacyCopy(text) {
         var field = document.createElement("textarea");
@@ -145,7 +201,10 @@
         if (legacyCopy(url)) onSuccess(); else onFailure();
     }
 
-    function createButton(anchor, label) {
+    function createControl(anchor, label) {
+        var wrap = document.createElement("div");
+        wrap.className = "sectionPermalinkWrap";
+
         var btn = document.createElement("button");
         btn.type = "button";
         btn.className = "sectionPermalink";
@@ -164,7 +223,9 @@
         btn.addEventListener("click", function () {
             copy(urlFor(anchor), label);
         });
-        return btn;
+
+        wrap.appendChild(btn);
+        return wrap;
     }
 
     function init() {
@@ -172,7 +233,7 @@
         if (!main) return;
         status = document.getElementById("sectionPermalinkStatus");
 
-        var headings = main.querySelectorAll("h2, h3");
+        var headings = main.querySelectorAll("h2");
         // Null-prototype so an anchor named "constructor" or "toString" cannot
         // report itself as already claimed.
         var claimed = Object.create(null);
@@ -181,14 +242,18 @@
             var heading = headings[i];
             var anchor = anchorFor(heading);
             // No id anywhere above it, or an ancestor already spoken for by an
-            // earlier heading. The second case is what stops every h3 in a
-            // stance from getting its own button copying the identical URL.
+            // earlier heading. The second case is what stops a card with two
+            // h2s from growing two buttons that copy the identical URL.
             if (!anchor || claimed[anchor]) continue;
-            claimed[anchor] = true;
+
+            var card = cardFor(heading, anchor);
+            if (!card) continue;
 
             var label = headingText(heading);
             if (!label) continue;
-            heading.appendChild(createButton(anchor, label));
+
+            claimed[anchor] = true;
+            card.appendChild(createControl(anchor, label));
         }
     }
 

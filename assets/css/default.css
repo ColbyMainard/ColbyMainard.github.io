@@ -366,24 +366,32 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-align: left;
     color: #9a9ac2;
     font-size: 100%; }
+  #KAN .sectionPermalinkWrap, #Cryptocurrency .sectionPermalinkWrap, #FutureOfQuantum .sectionPermalinkWrap, #AGI .sectionPermalinkWrap, #Privacy .sectionPermalinkWrap, #ProductPlacement .sectionPermalinkWrap, #PhysicalMediaSupremacy .sectionPermalinkWrap, #VibeCodingScourge .sectionPermalinkWrap {
+    margin: 2.5em 0 0.5em 0;
+    text-align: center; }
   #KAN .sectionPermalink, #Cryptocurrency .sectionPermalink, #FutureOfQuantum .sectionPermalink, #AGI .sectionPermalink, #Privacy .sectionPermalink, #ProductPlacement .sectionPermalink, #PhysicalMediaSupremacy .sectionPermalink, #VibeCodingScourge .sectionPermalink {
-    margin-left: 0.6em;
-    padding: 0.15em 0.55em;
+    display: inline-block;
+    padding: 0.5em 1.4em;
     border: 1px solid currentColor;
-    border-radius: 4px;
+    border-radius: 10px;
     background: none;
     color: #9a9ac2;
     font-family: inherit;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: normal;
+    letter-spacing: 1px;
     line-height: 1.4;
-    vertical-align: middle;
-    cursor: pointer; }
-    #KAN .sectionPermalink:hover, #Cryptocurrency .sectionPermalink:hover, #FutureOfQuantum .sectionPermalink:hover, #AGI .sectionPermalink:hover, #Privacy .sectionPermalink:hover, #ProductPlacement .sectionPermalink:hover, #PhysicalMediaSupremacy .sectionPermalink:hover, #VibeCodingScourge .sectionPermalink:hover, #KAN .sectionPermalink:active, #Cryptocurrency .sectionPermalink:active, #FutureOfQuantum .sectionPermalink:active, #AGI .sectionPermalink:active, #Privacy .sectionPermalink:active, #ProductPlacement .sectionPermalink:active, #PhysicalMediaSupremacy .sectionPermalink:active, #VibeCodingScourge .sectionPermalink:active {
-      color: #c2c2d1; }
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s; }
+    #KAN .sectionPermalink:hover, #Cryptocurrency .sectionPermalink:hover, #FutureOfQuantum .sectionPermalink:hover, #AGI .sectionPermalink:hover, #Privacy .sectionPermalink:hover, #ProductPlacement .sectionPermalink:hover, #PhysicalMediaSupremacy .sectionPermalink:hover, #VibeCodingScourge .sectionPermalink:hover, #KAN .sectionPermalink:active, #Cryptocurrency .sectionPermalink:active, #FutureOfQuantum .sectionPermalink:active, #AGI .sectionPermalink:active, #Privacy .sectionPermalink:active, #ProductPlacement .sectionPermalink:active, #PhysicalMediaSupremacy .sectionPermalink:active, #VibeCodingScourge .sectionPermalink:active, #KAN .sectionPermalink:focus, #Cryptocurrency .sectionPermalink:focus, #FutureOfQuantum .sectionPermalink:focus, #AGI .sectionPermalink:focus, #Privacy .sectionPermalink:focus, #ProductPlacement .sectionPermalink:focus, #PhysicalMediaSupremacy .sectionPermalink:focus, #VibeCodingScourge .sectionPermalink:focus {
+      color: #c2c2d1;
+      background-color: rgba(194, 194, 209, 0.12); }
     #KAN .sectionPermalink:focus-visible, #Cryptocurrency .sectionPermalink:focus-visible, #FutureOfQuantum .sectionPermalink:focus-visible, #AGI .sectionPermalink:focus-visible, #Privacy .sectionPermalink:focus-visible, #ProductPlacement .sectionPermalink:focus-visible, #PhysicalMediaSupremacy .sectionPermalink:focus-visible, #VibeCodingScourge .sectionPermalink:focus-visible {
       outline: 2px solid currentColor;
       outline-offset: 2px; }
+    @media (forced-colors: active) {
+      #KAN .sectionPermalink, #Cryptocurrency .sectionPermalink, #FutureOfQuantum .sectionPermalink, #AGI .sectionPermalink, #Privacy .sectionPermalink, #ProductPlacement .sectionPermalink, #PhysicalMediaSupremacy .sectionPermalink, #VibeCodingScourge .sectionPermalink {
+        border-color: CanvasText; } }
   #KAN ul, #Cryptocurrency ul, #FutureOfQuantum ul, #AGI ul, #Privacy ul, #ProductPlacement ul, #PhysicalMediaSupremacy ul, #VibeCodingScourge ul {
     text-align: left; }
     #KAN ul li, #Cryptocurrency ul li, #FutureOfQuantum ul li, #AGI ul li, #Privacy ul li, #ProductPlacement ul li, #PhysicalMediaSupremacy ul li, #VibeCodingScourge ul li {
@@ -540,7 +548,12 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   font-family: "Courier New", monospace;
   /* In-prose links: _4 (4.62:1) is a distinct warm tone against the _3 body
      text, underlined so links do not rely on color alone (WCAG 1.4.1); hover
-     lifts to _5 (8.8:1). */ }
+     lifts to _5 (8.8:1). */
+  /* Section permalink button, closing each resource card: _3 is this page's
+     body tone (5.27:1 on the _1 shell) and _5 brightens on hover (8.80:1).
+     The hover pair is _5 rather than the _4 that proseLinks uses, because the
+     button is a control rather than prose and _4 (4.62:1) leaves less room
+     once the 12% tint sits behind it. */ }
   @media (forced-colors: active) {
     #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources, #systemsAndDSA {
       border: 1px solid CanvasText; } }
@@ -588,6 +601,32 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     color: #f9c54e;
     font-size: 100%;
     text-decoration: underline; }
+  #cybersecurityResources .sectionPermalinkWrap, #artificialIntelligenceResources .sectionPermalinkWrap, #cppResources .sectionPermalinkWrap, #pythonResources .sectionPermalinkWrap, #scriptingResources .sectionPermalinkWrap, #operatingSystemsResources .sectionPermalinkWrap, #systemsAndDSA .sectionPermalinkWrap {
+    margin: 2.5em 0 0.5em 0;
+    text-align: center; }
+  #cybersecurityResources .sectionPermalink, #artificialIntelligenceResources .sectionPermalink, #cppResources .sectionPermalink, #pythonResources .sectionPermalink, #scriptingResources .sectionPermalink, #operatingSystemsResources .sectionPermalink, #systemsAndDSA .sectionPermalink {
+    display: inline-block;
+    padding: 0.5em 1.4em;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    background: none;
+    color: #b88ce0;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s; }
+    #cybersecurityResources .sectionPermalink:hover, #artificialIntelligenceResources .sectionPermalink:hover, #cppResources .sectionPermalink:hover, #pythonResources .sectionPermalink:hover, #scriptingResources .sectionPermalink:hover, #operatingSystemsResources .sectionPermalink:hover, #systemsAndDSA .sectionPermalink:hover, #cybersecurityResources .sectionPermalink:active, #artificialIntelligenceResources .sectionPermalink:active, #cppResources .sectionPermalink:active, #pythonResources .sectionPermalink:active, #scriptingResources .sectionPermalink:active, #operatingSystemsResources .sectionPermalink:active, #systemsAndDSA .sectionPermalink:active, #cybersecurityResources .sectionPermalink:focus, #artificialIntelligenceResources .sectionPermalink:focus, #cppResources .sectionPermalink:focus, #pythonResources .sectionPermalink:focus, #scriptingResources .sectionPermalink:focus, #operatingSystemsResources .sectionPermalink:focus, #systemsAndDSA .sectionPermalink:focus {
+      color: #f9c54e;
+      background-color: rgba(249, 197, 78, 0.12); }
+    #cybersecurityResources .sectionPermalink:focus-visible, #artificialIntelligenceResources .sectionPermalink:focus-visible, #cppResources .sectionPermalink:focus-visible, #pythonResources .sectionPermalink:focus-visible, #scriptingResources .sectionPermalink:focus-visible, #operatingSystemsResources .sectionPermalink:focus-visible, #systemsAndDSA .sectionPermalink:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
+    @media (forced-colors: active) {
+      #cybersecurityResources .sectionPermalink, #artificialIntelligenceResources .sectionPermalink, #cppResources .sectionPermalink, #pythonResources .sectionPermalink, #scriptingResources .sectionPermalink, #operatingSystemsResources .sectionPermalink, #systemsAndDSA .sectionPermalink {
+        border-color: CanvasText; } }
   #cybersecurityResources ul, #artificialIntelligenceResources ul, #cppResources ul, #pythonResources ul, #scriptingResources ul, #operatingSystemsResources ul, #systemsAndDSA ul {
     text-align: left; }
     #cybersecurityResources ul li, #artificialIntelligenceResources ul li, #cppResources ul li, #pythonResources ul li, #scriptingResources ul li, #operatingSystemsResources ul li, #systemsAndDSA ul li {
@@ -749,24 +788,32 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     #dataEngineeringGuide ul li, #computerVisionGuide ul li, #generativeAIGuide ul li, #nlpGuide ul li, #reinforcementLearningGuide ul li, #softwareEngineeringGuide ul li, #cybersecurityGuide ul li {
       color: #8fbccb;
       font-size: 100%; }
+  #dataEngineeringGuide .sectionPermalinkWrap, #computerVisionGuide .sectionPermalinkWrap, #generativeAIGuide .sectionPermalinkWrap, #nlpGuide .sectionPermalinkWrap, #reinforcementLearningGuide .sectionPermalinkWrap, #softwareEngineeringGuide .sectionPermalinkWrap, #cybersecurityGuide .sectionPermalinkWrap {
+    margin: 2.5em 0 0.5em 0;
+    text-align: center; }
   #dataEngineeringGuide .sectionPermalink, #computerVisionGuide .sectionPermalink, #generativeAIGuide .sectionPermalink, #nlpGuide .sectionPermalink, #reinforcementLearningGuide .sectionPermalink, #softwareEngineeringGuide .sectionPermalink, #cybersecurityGuide .sectionPermalink {
-    margin-left: 0.6em;
-    padding: 0.15em 0.55em;
+    display: inline-block;
+    padding: 0.5em 1.4em;
     border: 1px solid currentColor;
-    border-radius: 4px;
+    border-radius: 10px;
     background: none;
     color: #8fbccb;
     font-family: inherit;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: normal;
+    letter-spacing: 1px;
     line-height: 1.4;
-    vertical-align: middle;
-    cursor: pointer; }
-    #dataEngineeringGuide .sectionPermalink:hover, #computerVisionGuide .sectionPermalink:hover, #generativeAIGuide .sectionPermalink:hover, #nlpGuide .sectionPermalink:hover, #reinforcementLearningGuide .sectionPermalink:hover, #softwareEngineeringGuide .sectionPermalink:hover, #cybersecurityGuide .sectionPermalink:hover, #dataEngineeringGuide .sectionPermalink:active, #computerVisionGuide .sectionPermalink:active, #generativeAIGuide .sectionPermalink:active, #nlpGuide .sectionPermalink:active, #reinforcementLearningGuide .sectionPermalink:active, #softwareEngineeringGuide .sectionPermalink:active, #cybersecurityGuide .sectionPermalink:active {
-      color: #a3d5e0; }
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s; }
+    #dataEngineeringGuide .sectionPermalink:hover, #computerVisionGuide .sectionPermalink:hover, #generativeAIGuide .sectionPermalink:hover, #nlpGuide .sectionPermalink:hover, #reinforcementLearningGuide .sectionPermalink:hover, #softwareEngineeringGuide .sectionPermalink:hover, #cybersecurityGuide .sectionPermalink:hover, #dataEngineeringGuide .sectionPermalink:active, #computerVisionGuide .sectionPermalink:active, #generativeAIGuide .sectionPermalink:active, #nlpGuide .sectionPermalink:active, #reinforcementLearningGuide .sectionPermalink:active, #softwareEngineeringGuide .sectionPermalink:active, #cybersecurityGuide .sectionPermalink:active, #dataEngineeringGuide .sectionPermalink:focus, #computerVisionGuide .sectionPermalink:focus, #generativeAIGuide .sectionPermalink:focus, #nlpGuide .sectionPermalink:focus, #reinforcementLearningGuide .sectionPermalink:focus, #softwareEngineeringGuide .sectionPermalink:focus, #cybersecurityGuide .sectionPermalink:focus {
+      color: #a3d5e0;
+      background-color: rgba(163, 213, 224, 0.12); }
     #dataEngineeringGuide .sectionPermalink:focus-visible, #computerVisionGuide .sectionPermalink:focus-visible, #generativeAIGuide .sectionPermalink:focus-visible, #nlpGuide .sectionPermalink:focus-visible, #reinforcementLearningGuide .sectionPermalink:focus-visible, #softwareEngineeringGuide .sectionPermalink:focus-visible, #cybersecurityGuide .sectionPermalink:focus-visible {
       outline: 2px solid currentColor;
       outline-offset: 2px; }
+    @media (forced-colors: active) {
+      #dataEngineeringGuide .sectionPermalink, #computerVisionGuide .sectionPermalink, #generativeAIGuide .sectionPermalink, #nlpGuide .sectionPermalink, #reinforcementLearningGuide .sectionPermalink, #softwareEngineeringGuide .sectionPermalink, #cybersecurityGuide .sectionPermalink {
+        border-color: CanvasText; } }
   #dataEngineeringGuide table, #computerVisionGuide table, #generativeAIGuide table, #nlpGuide table, #reinforcementLearningGuide table, #softwareEngineeringGuide table, #cybersecurityGuide table {
     text-align: left;
     border-collapse: collapse;

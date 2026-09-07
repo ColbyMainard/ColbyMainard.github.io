@@ -67,6 +67,13 @@
         <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_resources_animations.js" defer></script>
+        <!-- Section permalink buttons. On tech_takes.html and guides.html this
+             tag must sit below reading_engagement.js, because both scripts wait
+             for DOMContentLoaded and the button labels would otherwise land
+             inside the per-section word counts. This page runs no reading-time
+             script, so that constraint does not apply here and the tag simply
+             joins the shared deferred run. -->
+        <script src="../js/section_permalinks.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
         <script src="../js/easter_egg.js" defer></script>
@@ -183,6 +190,56 @@
           ]
         }
         </script>
+
+        <!-- JSON-LD: the five rows of the cybersecurity certifications table, which the
+             Book ItemList above does not cover. Descriptions are the table's own second
+             column; recognizedBy names the awarding body, which the table does not state
+             but which identifies each credential unambiguously. Keep in sync when a
+             certification row is added or removed. -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Recommended cybersecurity certifications",
+          "description": "Cybersecurity certifications selected from industry feedback, with a note on who each one suits.",
+          "numberOfItems": 5,
+          "itemListOrder": "https://schema.org/ItemListUnordered",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"EducationalOccupationalCredential","name":"Certified Information Systems Security Professional (CISSP)","description":"Assesses knowledge across eight domains of information security, and requires five years of experience in cybersecurity.","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"ISC2","url":"https://www.isc2.org/"}}},
+            {"@type":"ListItem","position":2,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"EducationalOccupationalCredential","name":"Certified Information Systems Auditor (CISA)","description":"Best for those working in governance of information technology systems.","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"ISACA","url":"https://www.isaca.org/"}}},
+            {"@type":"ListItem","position":3,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"EducationalOccupationalCredential","name":"CompTIA Security+","description":"A great way to demonstrate core security knowledge for those new in the industry.","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"CompTIA","url":"https://www.comptia.org/"}}},
+            {"@type":"ListItem","position":4,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"EducationalOccupationalCredential","name":"Certified Ethical Hacker (CEH)","description":"Teaches how to think like a hacker and defend against real-world cyber threats.","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"EC-Council","url":"https://www.eccouncil.org/"}}},
+            {"@type":"ListItem","position":5,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"EducationalOccupationalCredential","name":"Certified Information Security Manager (CISM)","description":"Mainly focused on making sure managers can apply proper governance and risk assessment.","credentialCategory":"certificate","recognizedBy":{"@type":"Organization","name":"ISACA","url":"https://www.isaca.org/"}}}
+          ]
+        }
+        </script>
+
+        <!-- JSON-LD: the ten rows of the two podcast tables (eight cybersecurity, two
+             artificial intelligence), which no other block on this page covers. Each url
+             is the show's Spotify page with the share tracking parameter removed. Keep in
+             sync when a podcast row is added or removed. -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Recommended technical podcasts",
+          "description": "Cybersecurity and artificial intelligence podcasts limited to shows actually listened to.",
+          "numberOfItems": 10,
+          "itemListOrder": "https://schema.org/ItemListUnordered",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"Hacked","url":"https://open.spotify.com/show/21zZfOy7VCSIIWlJ64DElv"}},
+            {"@type":"ListItem","position":2,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"Error Code","url":"https://open.spotify.com/show/7gsLmkfxCoYxHrysGQXnSB"}},
+            {"@type":"ListItem","position":3,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"Darknet Diaries","url":"https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5"}},
+            {"@type":"ListItem","position":4,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"Hacking Humans","url":"https://open.spotify.com/show/0EhUctIPJiKrxPjzqIAuDc"}},
+            {"@type":"ListItem","position":5,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"The Hacker Mind","url":"https://open.spotify.com/show/6zkacjxPFG0qbcMWzDHvfH"}},
+            {"@type":"ListItem","position":6,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"Malicious Life","url":"https://open.spotify.com/show/1KHIsaZ9mX0NbzPrfId00q"}},
+            {"@type":"ListItem","position":7,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"What the Shell?","url":"https://open.spotify.com/show/3QcBl6Yf1E3rLdz3UJEzOM"}},
+            {"@type":"ListItem","position":8,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#cybersecurityResourcesDiv","item":{"@type":"PodcastSeries","name":"Hackable?","url":"https://open.spotify.com/show/77s2POytwHIUGHZHKS01Ct"}},
+            {"@type":"ListItem","position":9,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#artificialIntelligenceResourcesDiv","item":{"@type":"PodcastSeries","name":"AI Breakdown","url":"https://open.spotify.com/show/2mCr8Laiq2oKhICMemxGoi"}},
+            {"@type":"ListItem","position":10,"url":"https://colbymainard.github.io/assets/html/tech_resources.html#artificialIntelligenceResourcesDiv","item":{"@type":"PodcastSeries","name":"Practical AI","url":"https://open.spotify.com/show/1LaCr5TFAgYPK5qHjP3XDp"}}
+          ]
+        }
+        </script>
     </head>
     <body>
         <a href="#main" class="visually-hidden">Skip to main content</a>
@@ -214,6 +271,15 @@
             </div>
         </header>
         <main class="main" id="main" tabindex="-1">
+            <!--
+                Announcement target for the section "Copy link" buttons added by
+                section_permalinks.js. Static markup on purpose, matching
+                #photoGalleryStatus on hobbies.html: a live region only announces
+                changes to content inside a region that already existed, so a
+                paragraph injected and written to in the same click would say
+                nothing. Empty and screen-reader-only until a copy happens.
+            -->
+            <p class="visually-hidden" id="sectionPermalinkStatus" role="status"></p>
             <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Curated AI, Cybersecurity &amp; Programming Learning Resources</h1>
                 <p>

@@ -239,42 +239,73 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-/// Section permalink button, appended inside an h2/h3 by section_permalinks.js
-/// on tech_takes.html and guides.html. Structure is identical on both pages and
-/// only the palette differs, which is why it lives here rather than being
-/// written twice.
+/// Section permalink control, appended by section_permalinks.js as the last
+/// child of each section card on tech_takes.html, guides.html and
+/// tech_resources.html. Structure is identical on all three and only the
+/// palette differs, which is why it lives here rather than being written out
+/// three times.
+///
+/// It used to sit inline inside the h2, which put a control in the middle of
+/// every heading and made the heading itself read as chrome. It now closes the
+/// card instead: a reader who has finished a stance, a guide or a resource list
+/// is exactly the reader who wants to send it to someone, and end-of-section is
+/// where "Cite this guide:" already lives.
 ///
 /// $base and $hover must both clear 4.5:1 on the section shell they sit on: the
 /// button carries a real text label, so it is text for contrast purposes, not a
 /// UI glyph at 3:1. The focus ring is the same solid currentColor outline used
-/// by .floatingBackToTop and the consent buttons.
+/// by .floatingBackToTop, .tableScroll and main a:focus-visible.
 ///
-/// font-size is absolute rather than a percentage on purpose. These sit inside
-/// headings on the clamp() ladder, where 80% of an h2 is still 38px on desktop
-/// and the control would read as part of the heading rather than as a control.
+/// The rest of the treatment deliberately echoes the components already on
+/// these pages: the 10px radius is the section shell's own, the 1px rule and
+/// the letter-spacing come from the card's tables and the header brand, and the
+/// hover tint is the same "lift toward the brighter end of the palette" move
+/// that proseLinks and .floatingBackToTop both make. font-size is absolute
+/// rather than a percentage because a percentage would inherit whatever the
+/// surrounding block sets and drift between pages.
 @mixin sectionPermalink($base, $hover) {
+    .sectionPermalinkWrap {
+        margin: 2.5em 0 0.5em 0;
+        text-align: center;
+    }
+
     .sectionPermalink {
-        margin-left: 0.6em;
-        padding: 0.15em 0.55em;
+        display: inline-block;
+        padding: 0.5em 1.4em;
         border: 1px solid currentColor;
-        border-radius: 4px;
+        border-radius: 10px;
         background: none;
         color: $base;
         font-family: inherit;
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
         font-weight: normal;
+        letter-spacing: 1px;
         line-height: 1.4;
-        vertical-align: middle;
         cursor: pointer;
+        transition: color 0.2s, background-color 0.2s;
 
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
             color: $hover;
+            // Tint rather than a solid fill: the hover color is a palette tone
+            // chosen against the card background, and painting it as a
+            // background would put the label on a surface nothing has verified.
+            // 12% alpha of the same tone reads as a press target and leaves the
+            // documented text contrast untouched.
+            background-color: rgba($hover, 0.12);
         }
 
         &:focus-visible {
             outline: 2px solid currentColor;
             outline-offset: 2px;
+        }
+
+        // Forced colors discards both the tint and the palette tones. The
+        // border is kept (forced-colors repaints borders in CanvasText), so the
+        // control still reads as a button rather than as a line of text.
+        @media (forced-colors: active) {
+            border-color: CanvasText;
         }
     }
 }
