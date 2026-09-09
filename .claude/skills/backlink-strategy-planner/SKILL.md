@@ -4,8 +4,8 @@ description: |
   Analyzes the site's HTML pages and produces a customized, per-page backlink strategy saved as a dated markdown report.
   Triggers on: backlink strategy planner, backlink strategy generator
   Use when analyzing or auditing backlink strategies and increasing visibility. Trigger with phrases like "backlink strategy planner", "backlink strategy", "backlink planning".
-allowed-tools: "Read, Write"
-version: 1.2.0
+allowed-tools: "Read, Glob, Write"
+version: 1.3.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -36,7 +36,7 @@ Source playbooks:
 
 ## Goal
 
-Produce a customized backlink strategy that maps specific on-site changes and direct-to-community outreach to the pages above. Optimize existing content first; propose net-new content only where there is a real gap. Every recommendation must blend seamlessly with the page's existing content and audience.
+Produce a customized backlink strategy that maps specific on-site changes and direct-to-community outreach to the pages above. Optimize existing content first. Propose net-new content only where there is a real gap. Every recommendation must blend seamlessly with the page's existing content and audience.
 
 ## Inputs — read before planning
 
@@ -46,11 +46,21 @@ Read each page listed in the table above. For each one, note:
 - The linkable assets it already has (guides, data, tools, visuals) versus what it lacks.
 - Whether it has any interactivity or visualization, or is static text only.
 
+Also read two files that record what the site has already earned:
+
+- `press_mentions.csv`, the running log of external mentions and quotes. Note which topics attract coverage, which venues already responded, and which rows are logged as misquoted or uncredited. Do not pitch a venue that already covered the same topic. Recommend a correction request instead where a quote was butchered.
+- `feed.xml`, the hand-maintained Atom feed covering the stances and the guides. Syndication and return-visit tactics build on the feed that exists rather than proposing a new one.
+
+Then check `assets/markdown/` for a dated report from a sibling skill and read any you find. The directory is often empty, which is a normal starting state and not a blocker. Say in one line what you found there.
+
 Do not plan from assumptions — base every recommendation on what the pages actually contain.
 
 ## Requirements (hard constraints)
 
-- Outreach goes **directly to the community of interest**. Treat journalists and PR intermediaries as unnecessary third parties.
+- **Docs only.** Write every recommendation to the report (see Output format). Do not edit the site's HTML, CSS, or JS. An edit made here bypasses the maintainer's review.
+- **No invented metrics.** This skill holds `Read` and `Write` only. It cannot reach Semrush, Ahrefs, Search Console, or analytics. Never state a Domain Authority score, a backlink count, a ranking, or a traffic figure as if you measured it. Where a real number would change the recommendation, say what the maintainer must check and where to check it.
+- **The blocked stanza in `robots.txt` is deliberate policy.** It blocks training and scraping bots such as GPTBot, ClaudeBot, CCBot, PerplexityBot, and Google-Extended. Do not recommend unblocking any of them to gain AI visibility. The allowed stanza already covers the live-search agents.
+- Outreach goes **directly to the community of interest**. Treat journalists and PR intermediaries as unnecessary third parties. Answering a writer's own request for expert comment is a different thing and is allowed, as `press_mentions.csv` shows.
 - Earn links two ways: direct community outreach, and content that naturally attracts links.
 - Prioritize links from sources that are authoritative, relevant, unique, and natural.
 - Avoid self-promotion on mainstream social platforms (Reddit, Facebook, Twitter/X, Instagram) — assume self-promo channels there are saturated.
@@ -67,9 +77,13 @@ Do not plan from assumptions — base every recommendation on what the pages act
 - **Persistence** — the page stays live, updated, and continues to get crawled and cited.
 - **Retrievability** — the mention lives in formats AI systems can reliably extract: body copy, resource lists, podcast show notes and transcripts, video descriptions, newsletter archives.
 
+## Strategy menu
+
+Ten tactics to choose from. Select the ones the pages support. Do not work through all ten.
+
 ### 1. On-site linkable assets
 
-- **Comprehensive guides** — long-form, example-rich coverage of a topic with onward links; longer guides earn disproportionately more links.
+- **Comprehensive guides** — long-form, example-rich coverage of a topic with onward links. A longer guide earns disproportionately more links.
 - **Original research / data studies / industry statistics** — surveys, benchmarks, or analysis others will cite as a source.
 - **Case studies with verifiable results** — concrete evidence of an approach working.
 - **Templates and frameworks** — reusable artifacts (checklists, starter repos, spreadsheets) people link to as tools.
@@ -113,7 +127,7 @@ A supporting on-site tactic: link related pages to one another with descriptive 
 
 - Add a link only where the connection is real (guide → resource list for the same topic → relevant opinion piece), never as filler.
 - Use specific, descriptive anchors ("reinforcement learning guide"), not repeated exact-match keywords — keyword-stuffed anchors read as manipulation.
-- This tactic is on-site only; its **Outreach steps** entry in the Output format is "N/A — internal."
+- This tactic is on-site only. Its **Outreach steps** entry in the Output format is "N/A — internal."
 
 ### 7. Content syndication
 
@@ -121,13 +135,13 @@ Republish a full piece (a guide or opinion) on a developer-publishing platform t
 
 - Syndicate selectively — one or two pieces strong enough to stand alone, not the whole site.
 - Set the canonical to the on-site URL so the original keeps its ranking authority.
-- Because the site is static, the canonical lives in the syndication platform's own canonical field; there is no server redirect to manage.
+- Because the site is static, the canonical lives in the syndication platform's own canonical field. There is no server redirect to manage.
 
 ### 8. Pillar pages and definitive-resource positioning
 
 Consolidate scattered coverage of one core topic into a single comprehensive hub page that becomes the obvious thing to link to. Where the site currently spreads a topic across a guide, a resource list, and an opinion, a well-structured pillar page (linking out to those details) gives other sites one authoritative URL to cite instead of several thinner ones.
 
-- Choose a topic the site covers in depth and that others in the field actively reference (e.g. one of the AI/ML or cybersecurity areas).
+- Choose a topic the site covers in depth and that others in the field actively reference, for example one of the AI/ML or cybersecurity areas.
 - Structure it as a definitive overview that links out to the site's existing detailed pages (pairs naturally with Internal linking).
 - Keep it evergreen — revisit and update it so it stays the current best reference and keeps earning citations.
 
@@ -135,27 +149,36 @@ Consolidate scattered coverage of one core topic into a single comprehensive hub
 
 Add concise entries that answer the foundational "what is X" and "how do I do Y" questions in the site's topics, formatted to win question-based searches and to be quotable by AI answer engines. The guides page already embeds `HowTo` structured data — extend that pattern rather than inventing a new one.
 
-- Target real questions a beginner in the topic asks; the guides' existing audience is the model.
+- Target real questions a beginner in the topic asks. The guides' existing audience is the model.
 - Answer each directly and self-containedly so the passage is extractable as a citation.
 - Mark up new how-to entries with the same `HowTo`/`FAQ` JSON-LD the site already uses, keeping the structured data valid.
 
 ### 10. Sourced expert quotes in existing content
 
-Strengthen an existing page by weaving in a short, properly attributed quote from a recognized voice on the topic, then letting that person know they are featured — many will share or link to the page. This differs from the expert roundup in #3: no new post is solicited; you cite a public statement already on record and add credibility to content that already exists.
+Strengthen an existing page by weaving in a short, properly attributed quote from a recognized voice on the topic, then letting that person know they are featured — many will share or link to the page. This differs from the expert roundup in #3: no new post is solicited. You cite a public statement already on record, and you add credibility to content that already exists.
 
 - Quote real, attributable sources (a talk, paper, or post) and link to the original.
 - Notify the person that the mention is live — briefly, and without a link request.
-- Use sparingly, only where the quote genuinely supports the point; decorative quotes add nothing.
+- Use sparingly, only where the quote genuinely supports the point. A decorative quote adds nothing.
 
 ## Process
 
-1. Read every page in the Inputs section and take the notes it describes.
-2. For each page (or content area), select 2–4 strategies from the menu that blend with its existing content and best satisfy the Priorities.
+1. Read every input listed in the Inputs section and take the notes it describes.
+2. For each page (or content area), select two to four strategies from the Strategy menu that blend with its existing content and best satisfy the Priorities.
 3. For each selected strategy, fill in every component in the Output format below.
 4. Explicitly flag any page lacking interactivity or visualization and recommend a specific addition for it.
-5. Save the finished plan to `assets/markdown/backlink-planner-report-YYYY-MM-DD.md`, using today's date. Recommend on-site changes **in the report** — do not edit the site's HTML, CSS, or JS yourself.
+5. **Verify before writing.** Drop or rewrite any strategy that fails one of these checks:
+   - Every named community, forum, or podcast is real and carries a direct link. A plausible-sounding venue you cannot link to is a fabrication, and the maintainer will waste an afternoon discovering that.
+   - The venue is not already covered in `press_mentions.csv` for the same topic.
+   - The on-site steps work with no server, from both `file://` and `https://`.
+   - It states no metric you could not measure.
+6. Save the finished plan to `assets/markdown/backlink-planner-report-YYYY-MM-DD.md`, using today's date. `roadmap-generator` reads this exact filename pattern. Recommend on-site changes **in the report** — do not edit the site's HTML, CSS, or JS yourself.
 
 ## Output format
+
+Open the report with a `# Backlink Strategy` heading and a `Last Updated: YYYY-MM-DD` line.
+
+Recommend at most ten strategies in total, ranked with the highest expected return first. A short plan the maintainer will actually execute beats a long one they will not.
 
 For each strategy you recommend, produce **all** of the following components.
 
@@ -168,6 +191,12 @@ For each strategy you recommend, produce **all** of the following components.
 | Outreach steps | Which specific communities/forums/podcasts to approach, with direct links, plus an outreach template |
 | Expected success rate | Likelihood of earning genuine, high-quality backlinks, and the assumptions behind the estimate |
 | Expected effort level | Time and resources required to implement, and the assumptions behind the estimate |
+| Impact and Effort (H/M/L) | One letter each, per the anchors below, so `roadmap-generator` can merge this row with the sibling reports |
+
+Rate Impact and Effort against these anchors, because the letters must mean the same thing in every specialist report:
+
+- **Impact H** — plausibly earns a link from a relevant, authoritative source, or lifts the whole site. **M** — helps one page or one community. **L** — marginal, worth doing only alongside something else.
+- **Effort L** — an edit to existing content, or a single outreach message. **M** — a new section or asset following a pattern the site already uses. **H** — a new page, original research, a new dependency, or a campaign needing repeated follow-up.
 
 ### Pros
 
@@ -187,7 +216,7 @@ Name specific individuals, communities, forums, or podcasts (with direct links),
 
 ### Expected success rate
 
-State how likely the strategy is to earn genuine backlinks, and the assumptions driving that estimate (e.g. existing audience, topic competitiveness).
+State how likely the strategy is to earn genuine backlinks, and the assumptions driving that estimate, for example the existing audience or the topic's competitiveness.
 
 ### Expected effort level
 
@@ -195,4 +224,4 @@ Estimate the time and resources to actually implement, and the assumptions behin
 
 ## Tone
 
-Direct, practical, and honest. Recommend only what fits the page, and use the Cons column to flag weak trade-offs rather than overselling. Plain language; concrete specifics over generic advice.
+Direct, practical, and honest. Recommend only what fits the page, and use the Cons column to flag weak trade-offs rather than overselling. Use plain language. Prefer concrete specifics over generic advice.

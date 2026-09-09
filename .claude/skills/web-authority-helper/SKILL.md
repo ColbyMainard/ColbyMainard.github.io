@@ -4,8 +4,8 @@ description: |
   Assesses the site's overall domain authority (linkable assets, topic clusters, internal link equity, off-site mentions, AI-crawlability) and produces a prioritized authority-building plan saved as a dated markdown report.
   Triggers on: web authority helper, web authority strategy, domain authority
   Use when assessing or improving the site's overall authority, topical depth, or how it is represented to search and AI systems. Trigger with phrases like "web authority helper", "web authority strategy", "web authority", "domain authority".
-allowed-tools: "Read, Write"
-version: 2.0.0
+allowed-tools: "Read, Glob, Grep, Write"
+version: 2.1.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -76,15 +76,16 @@ Base every finding on what the files contain. Do not plan from assumptions about
 
 ## The authority model
 
-Three components drive authority, and each maps to something observable on disk.
+Four components drive authority. Each maps to something observable on disk, and each is one row of the baseline table in the Output format.
 
 | Component | What it means | What to inspect here |
 | --------- | ------------- | -------------------- |
 | Link power | Quantity and quality of inbound links | `press_mentions.csv`, plus which pages are strong enough to be worth linking to at all |
 | Organic traffic | Whether content ranks and satisfies real searches | Topical depth, search-intent match, and question coverage across the pages |
 | Spam factors | Signs of link manipulation | Anchor text patterns, any reciprocal or low-quality link arrangements, over-optimized internal anchors |
+| AI retrievability | Whether a machine can reach, render, and attribute the content | `robots.txt`, `llms.txt`, `feed.xml`, the `#person` `@id` graph, and whether each answer is self-contained under a descriptive heading |
 
-Search engines additionally weigh user experience and technical health; AI systems weigh whether content is crawlable, well-structured, and attributable. Treat those as a fourth lens.
+Search engines additionally weigh user experience and technical health. Use the fourth row for that too, because a page a crawler cannot render is a page no system can cite.
 
 ## Techniques, select what each page needs
 
@@ -97,7 +98,7 @@ Content that earns links without being asked is research-dense, original, and ha
 - **Original analysis or first-party data.** A benchmark run, a measured comparison, or an experiment writeup that others can cite as a source. This is the single highest-value gap for a technical personal site, because it is the one thing a well-funded content team cannot copy.
 - **Comprehensive guides.** Coverage that is genuinely more thorough and more current than the incumbent page on the same topic.
 - **Case studies with methodology and constraints stated**, so a reader can judge and reference the result.
-- **Curated resource directories.** Already a strength on `tech_resources.html`; assess whether it is maintained and specific enough to be the obvious thing to link.
+- **Curated resource directories.** Already a strength on `tech_resources.html`. Assess whether it is maintained and specific enough to be the obvious thing to link.
 - **Visual explanation.** A diagram or interactive that makes a dense topic legible. Client-side only, and it becomes its own link target.
 - **Free single-purpose tools.** Only where the topic supports one and it runs entirely in the browser. Do not force this.
 
@@ -110,7 +111,7 @@ Google's late-2025 direction rewards demonstrated specialization over broad cove
 - Identify the topics the site covers in more than one place (a guide, a matching `tech_resources` section, a related stance in `tech_takes`). Each such topic is a latent cluster.
 - For each cluster, name the page that should be the pillar and the pages that are its spokes.
 - Flag topics where coverage is a single shallow mention. Either deepen it or accept it is not a cluster and stop treating it as one.
-- Match each page to a search intent: informational, navigational, commercial, or transactional. For this site nearly everything is informational or navigational; a recommendation that assumes commercial or transactional intent is almost certainly wrong.
+- Match each page to a search intent: informational, navigational, commercial, or transactional. For this site nearly everything is informational or navigational. A recommendation that assumes commercial or transactional intent is almost certainly wrong.
 
 ### 3. Internal link equity
 
@@ -129,7 +130,7 @@ An unlinked brand mention still strengthens how authoritative the site looks to 
 - Identify the topics where Colby is already being quoted and where more of the same is realistic. Expert-quote requests, technical roundups, podcast guest spots, and newsletter contributions all qualify.
 - Prefer venues whose pages persist, stay crawled, and publish in extractable formats: body copy, resource lists, show notes and transcripts, newsletter archives.
 - Where a mention is butchered or uncredited, recommend a specific correction request rather than counting it as a win.
-- Hand concrete outreach targets and templates to **backlink-strategy-planner**; name the opportunity here, do not write the campaign.
+- Hand concrete outreach targets and templates to **backlink-strategy-planner**. Name the opportunity here, and do not write the campaign.
 
 ### 5. AI-friendly structure and retrievability
 
@@ -153,16 +154,18 @@ Easy navigation, fast loads, and stable layout increase dwell time and make a pa
 ## Process
 
 1. Read every input listed above and take the notes that section describes.
-2. Score each of the three authority components against what you actually found, in words rather than numbers, and state the evidence behind each judgment.
+2. Score each of the four authority components against what you actually found, in words rather than numbers, and state the evidence behind each judgment.
 3. Identify the topic clusters that already exist in the content and name the pillar for each.
 4. For each page, select the two to four techniques the evidence supports. Do not fill in every technique for every page.
-5. Rank all recommendations across the whole site by leverage, meaning impact divided by effort. Internal linking and structure fixes usually rank above new content; new content usually ranks above outreach.
+5. Rank all recommendations across the whole site by leverage, meaning impact divided by effort. Internal linking and structure fixes usually rank above new content. New content usually ranks above outreach.
 6. State what you could not determine without live metrics, and what the maintainer would need to check to close each gap.
-7. Save the report to `assets/markdown/web-authority-report-YYYY-MM-DD.md` using today's date. Recommend in the report; do not edit site files.
+7. Save the report to `assets/markdown/web-authority-report-YYYY-MM-DD.md` using today's date. `roadmap-generator` reads this exact filename pattern. Recommend in the report, and do not edit site files.
 
 ## Output format
 
-The report has four sections in this order.
+Open the report with a `# Web Authority Assessment` heading and a `Last Updated: YYYY-MM-DD` line. Then give four sections in this order.
+
+Make at most twelve recommendations in total, ranked by leverage. A short report of real findings beats a long one padded with technique names.
 
 **1. Authority baseline.** One table, filled from evidence on disk:
 
@@ -184,7 +187,7 @@ The report has four sections in this order.
 | Why it works here | Reasoning tied to what this page actually contains, not generic advice |
 | Trade-offs and failure modes | Honest conditions under which it would not pay off |
 | Steps | Ordered, concrete steps the maintainer can execute alone on a static site |
-| Leverage | High, medium, or low, with the impact-versus-effort reasoning stated |
+| Leverage | High, medium, or low, with the impact-versus-effort reasoning stated. `roadmap-generator` feeds this field straight into its Impact and Effort columns, so state both halves rather than one letter |
 | Effort | Rough time and what it assumes |
 | Hand-off | The sibling skill that owns the follow-up, or "none" |
 

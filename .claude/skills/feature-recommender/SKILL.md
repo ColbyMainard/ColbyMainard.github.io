@@ -5,7 +5,7 @@ description: |
   Triggers on: feature recommendation, feature suggestion
   Use when brainstorming new site features or deciding what to build next. Trigger with phrases like "feature recommendation", and "feature suggestion".
 allowed-tools: "Read, Glob, Grep, Write"
-version: 1.5.0
+version: 1.6.0
 author: "Colby Mainard <colby.mainard@proton.me>"
 compatible-with: claude-code
 ---
@@ -34,7 +34,7 @@ Pages that make up the site:
 
 Produce a prioritized list of concrete feature recommendations — each feasible on a static site and tied to a clear benefit for the site's audiences — saved as a dated markdown report the maintainer can pick from.
 
-Aim for **5–8 recommendations**. Fewer is a fine result if the site genuinely has few gaps; never pad the list to reach a count, and never invent a gap to fill a feature area. A short report of real gaps is more useful than a long one of manufactured ones.
+Aim for **5–8 recommendations**. Fewer is a fine result if the site genuinely has few gaps. Never pad the list to reach a count, and never invent a gap to fill a feature area. A short report of real gaps is more useful than a long one of manufactured ones.
 
 ## Scope — and what belongs to other skills
 
@@ -55,7 +55,8 @@ Internal linking is already claimed by both the SEO and backlink skills. Recomme
 - **Minimal dependencies.** AnimeJS is the only external library today. If a recommendation needs a new dependency, say so explicitly and count it as a cost — the maintainer must approve any addition.
 - **Privacy first.** Analytics load only after cookie consent. Do not recommend trackers, social-embed widgets, or third-party scripts that phone home before consent.
 - **Accessible by default.** Every recommended feature must be achievable at WCAG AA with screen-reader-friendly markup.
-- **No duplicates.** Do not recommend a feature the site already has. The inventory you build in Inputs is the only authority on what exists; nothing in this document overrides it, including the Feature areas below.
+- **No duplicates.** Do not recommend a feature the site already has. The inventory you build in Inputs is the only authority on what exists. Nothing in this document overrides it, including the Feature areas and the Maintainer-suggested candidates below.
+- **No invented metrics.** This skill cannot reach analytics, Search Console, or any hosted service. Never state a visitor count, a bounce rate, or a traffic figure as if you measured it. Where a real number would change the priority, say what the maintainer must check.
 
 ## Inputs — inventory before recommending
 
@@ -85,9 +86,11 @@ Answer each from the inventory, not from what a typical personal site lacks. **S
 
 The maintainer has flagged these ideas for consideration. They are candidates, not pre-approved recommendations: evaluate each against the inventory, the restrictions, and the rating scale exactly as you would a gap you found yourself, and account for every one in the report — as a numbered recommendation or under **Not recommended** with the reason (already exists, out of scope, belongs to a sibling skill, poor impact for the effort).
 
-- **Easter eggs** — one or more hidden touches that reward visitors who spend time exploring the site. Can be triggered by keyboard shortcuts, clicks, url parameters, time/date based, or cursor effects. Common examples would include things like responding to the Konami code (up, up, down, down, left, right, left, right, B, A), secret pages, hidden messages, pop culture references, developer jokes, or hidden games.
-- **Citation guidance** — if the site publishes academic work, a section showing readers how to cite it.
-- **Abbreviation markup** — `<abbr>` elements expanding abbreviations where relevant.
+Check each candidate against the inventory before you judge it. Several have shipped since this list was written, so the expected outcome for most runs is a line under **Not recommended** saying "already built" and naming the file that proves it.
+
+- **Easter eggs** — one or more hidden touches that reward visitors who spend time exploring the site. Can be triggered by keyboard shortcuts, clicks, URL parameters, the time or date, or cursor effects. Common examples include a response to the Konami code (up, up, down, down, left, right, left, right, B, A), secret pages, hidden messages, pop-culture references, developer jokes, or hidden games. Check `assets/js/easter_egg.js` first, which every page loads.
+- **Citation guidance** — if the site publishes academic work, a section showing readers how to cite it. Check the "Cite this guide" lines on `guides.html` first.
+- **Abbreviation markup** — `<abbr>` elements expanding abbreviations where relevant. Grep for `<abbr` first. Recommend this only for a term that is genuinely unmarked, and note that the `title` stays unreachable by keyboard and by touch, so prose that spells the term out is the stronger fix.
 
 ## Rating scale
 
@@ -133,7 +136,7 @@ Open the report with an `# Feature Recommendations` heading and a `Last Updated:
 
 1. **Executive summary** — 2–4 sentences on the site's current feature set and the highest-leverage additions.
 2. **Existing-feature inventory** — a short list of what the site already has, so the reader can see what was ruled out. Note here if `assets/markdown/` held no prior reports to check against.
-3. **Recommendation table** — one row per recommendation, sorted per Process step 6. Keep the cells scannable; the build sketch goes in the details section below, not in a cell.
+3. **Recommendation table** — one row per recommendation, sorted per Process step 6. Keep the cells scannable. The build sketch goes in the details section below, not in a cell.
 
    | # | Feature | Where it applies | Who it serves and why | Impact (H/M/L) | Effort (H/M/L) |
    | - | ------- | ---------------- | --------------------- | -------------- | -------------- |
@@ -144,13 +147,13 @@ Open the report with an `# Feature Recommendations` heading and a `Last Updated:
 
    Shape of a details entry, using a feature that **already exists** so it cannot be mistaken for a recommendation:
 
-   > **N. Back-to-top button** — Site-wide. A deferred script watches scroll position and reveals a fixed button that returns the reader to the top of the page; its styles live in the shared block in `default.scss`. Depends on nothing else in this report. Cost: one new script registered in `PRECACHE_URLS` plus a `CACHE_VERSION` bump, no new dependency, no ongoing upkeep.
+   > **N. Back-to-top button** — Site-wide. A deferred script watches scroll position and reveals a fixed button that returns the reader to the top of the page. Its styles live in the shared block in `default.scss`. Depends on nothing else in this report. Cost: one new script registered in `PRECACHE_URLS` plus a `CACHE_VERSION` bump, no new dependency, no ongoing upkeep.
 
 5. **Not recommended** — anything considered but rejected (already exists, needs a server, adds a heavy dependency, belongs to a sibling skill), with a one-line reason each. Any maintainer-suggested candidate that did not become a recommendation must appear here.
 
 ## Tone
 
-Constructive and concrete. Every recommendation names its audience benefit and its cost. Recommend, never dictate — the maintainer decides what gets built. Where you propose visible copy for a feature (a label, a heading, a button), write it without em dashes; the maintainer rewrites those into plain sentences.
+Constructive and concrete. Every recommendation names its audience benefit and its cost. Recommend, never dictate — the maintainer decides what gets built. Where you propose visible copy for a feature (a label, a heading, a button), write it without em dashes. The maintainer rewrites those into plain sentences.
 
 ## Sources
 
