@@ -33,9 +33,6 @@
         <link rel="icon" type="image/png" href="../images/favicon.png"/>
         <link rel="apple-touch-icon" href="../images/favicon.png">
 
-        <!-- rel="me" identity links, asserting that this site and these two
-             profiles are the same person (IndieAuth, and entity confirmation
-             for search engines). Same URLs as the Person sameAs on index.html. -->
         <link rel="me" href="https://github.com/ColbyMainard">
         <link rel="me" href="https://www.linkedin.com/in/colby-mainard/">
         <meta name="theme-color" content="#000000">
@@ -43,21 +40,11 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Colby Mainard's hobbies: landscape photography, self-taught quantum computing, Dungeons &amp; Dragons in Austin, and the historical oddities worth knowing about.">
 
-        <!-- Page-depth helper. Must stay above cookie_consent.js and
-             service_worker_register.js: deferred classic scripts run in
-             document order, and both read window.PathHelpers. -->
         <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
-        <!-- AnimeJS for animations. The module script is async on purpose: without
-             it, a parser-inserted module script joins the same execute-after-parsing
-             queue as the defer scripts below and that queue runs in document order,
-             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js and
-             service_worker_register.js, neither of which needs AnimeJS. Nothing
-             depends on this script's ordering: animation_helpers.js checks for
-             window.anime at call time and back_to_top.js falls back without it. -->
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
         <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
@@ -96,14 +83,6 @@
         }
         </script>
 
-        <!-- JSON-LD: ImageObject nodes for the five original photographs in the gallery.
-             Extends the ItemList above; neither that block nor the BreadcrumbList is
-             modified. Each description is the image's alt text verbatim, so the two stay
-             in step - update both together if a caption or alt is reworded.
-             license and acquireLicensePage are the pair Google reads for licensable
-             images. They must keep saying the same thing as the visible license line
-             under the gallery: if the terms change in one place, change both, or a
-             search result will advertise terms the page does not actually offer. -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -159,9 +138,6 @@
                         The YouTube channel 3Blue1Brown has an excellent brief explainer below that includes wonderful visuals.
                     </p>
                     <iframe src="https://www.youtube-nocookie.com/embed/RQWpF2Gb-gU" title="Quantum computing explainer video by 3Blue1Brown (YouTube)" width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- Fallback for a blocked or unavailable frame: extensions,
-                         strict corporate policies, an offline service-worker hit,
-                         and file:// all collapse the embed to nothing otherwise. -->
                     <p>
                         <a href="https://www.youtube.com/watch?v=RQWpF2Gb-gU">Watch this explainer on YouTube</a> if the embed above does not load.
                     </p>
@@ -177,27 +153,8 @@
                 <section class="photography" id="photography">
                     <h2>Photography</h2>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
-                    <!--
-                        One-photo-at-a-time gallery. photo_gallery.js adds the .js-gallery
-                        class, which is what collapses this to a single visible slide and
-                        reveals the controls. Without JavaScript all five render stacked and
-                        captioned, and the controls stay hidden, so nothing is lost and no
-                        dead buttons appear. The status paragraph is in the static markup on
-                        purpose: a live region only announces changes to content inside a
-                        region that already existed, so injecting it later would silently do
-                        nothing.
-                    -->
                     <div class="photoGallery" id="photoGallery" role="group" aria-roledescription="carousel" aria-label="Landscape photography gallery">
                         <p class="visually-hidden" id="photoGalleryStatus" role="status"></p>
-                        <!--
-                            Keyboard instructions for the gallery. Static markup like
-                            the status paragraph above, but `hidden` until
-                            photo_gallery.js unhides it and points the gallery's
-                            aria-describedby here: with scripting off there is no
-                            one-at-a-time viewer and no arrow-key handler, so
-                            announcing either would describe controls that do not
-                            exist. The buttons it names carry the same labels.
-                        -->
                         <p class="visually-hidden" id="photoGalleryHelp" hidden>Use the Previous photo and Next photo buttons to move through the photographs. While focus is anywhere inside this gallery, the left and right arrow keys do the same.</p>
                         <ul class="photoGallery-track" id="photoGalleryTrack">
                             <li class="photoGallery-slide">
@@ -237,22 +194,6 @@
                             <button type="button" class="photoGallery-button" data-gallery-step="1">Next photo</button>
                         </div>
                     </div>
-                    <!--
-                        Visible license disclosure for the five photographs above. This is the
-                        human-readable half of a pair: the ImageObject nodes in the head set
-                        license and acquireLicensePage, and acquireLicensePage points at
-                        #photographyDiv, which is this section. Structured data that advertises
-                        terms the page never states is a promise to search engines and reusers
-                        that no visitor can actually read, so if the terms change in one place
-                        they must change in the other. It sits outside #photoGallery on purpose:
-                        photo_gallery.js shows one slide at a time, and the license has to stay
-                        visible no matter which photograph is on screen.
-                    -->
-                    <p>
-                        <strong>License:</strong> these photographs are licensed
-                        <a href="https://creativecommons.org/licenses/by/4.0/" rel="license"><abbr title="Creative Commons Attribution 4.0 International">CC BY 4.0</abbr></a>.
-                        You may share and adapt them, including commercially, as long as you credit "Colby Mainard", link back to this page, and note any changes you made.
-                    </p>
                 </section>
             </div>
             <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">

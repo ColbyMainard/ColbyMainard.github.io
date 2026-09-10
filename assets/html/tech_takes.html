@@ -11,10 +11,7 @@
         <!-- Canonical URL and social sharing cards -->
         <link rel="canonical" href="https://colbymainard.github.io/assets/html/tech_takes.html">
         <link rel="alternate" type="application/atom+xml" title="Technical Stances by Colby Mainard (Atom feed)" href="../../feed.xml">
-        <!-- website, not article: this page declares @type Blog in its JSON-LD
-             below, wrapping eight separate Article entities. It is a collection,
-             not one article, and og:type keeps the Open Graph layer in agreement
-             the same way index.html's profile does. -->
+
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://colbymainard.github.io/assets/html/tech_takes.html">
         <meta property="og:title" content="Technical Stances on AI, Quantum &amp; Privacy | Colby Mainard">
@@ -24,23 +21,21 @@
         <meta property="og:image:height" content="630">
         <meta property="og:image:alt" content="Colby Mainard's Personal Website in green monospace lettering on a black background">
         <meta property="og:site_name" content="Colby Mainard">
+
         <meta name="linkedin:card" content="summary_large_image">
         <meta name="linkedin:title" content="Technical Stances on AI, Quantum &amp; Privacy | Colby Mainard">
         <meta name="linkedin:description" content="Technical opinions on vibe coding, physical media, sports marketing, online privacy, AGI hype, quantum computing, crypto safety, and Kolmogorov-Arnold networks.">
         <meta name="linkedin:image" content="https://colbymainard.github.io/assets/images/sharecard.png">
+
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Technical Stances on AI, Quantum &amp; Privacy | Colby Mainard">
         <meta name="twitter:description" content="Technical opinions on vibe coding, physical media, sports marketing, online privacy, AGI hype, quantum computing, crypto safety, and Kolmogorov-Arnold networks.">
         <meta name="twitter:image" content="https://colbymainard.github.io/assets/images/sharecard.png">
         <meta name="twitter:image:alt" content="Colby Mainard's Personal Website in green monospace lettering on a black background">
 
-        <!-- Icons and theme -->
         <link rel="icon" type="image/png" href="../images/favicon.png"/>
         <link rel="apple-touch-icon" href="../images/favicon.png">
 
-        <!-- rel="me" identity links, asserting that this site and these two
-             profiles are the same person (IndieAuth, and entity confirmation
-             for search engines). Same URLs as the Person sameAs on index.html. -->
         <link rel="me" href="https://github.com/ColbyMainard">
         <link rel="me" href="https://www.linkedin.com/in/colby-mainard/">
         <meta name="theme-color" content="#000000">
@@ -48,30 +43,14 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Technical opinions on vibe coding, physical media, sports marketing, online privacy, AGI hype, quantum computing, crypto safety, and Kolmogorov-Arnold networks.">
 
-        <!-- Page-depth helper. Must stay above cookie_consent.js and
-             service_worker_register.js: deferred classic scripts run in
-             document order, and both read window.PathHelpers. -->
         <script src="../js/path_helpers.js" defer></script>
-
-        <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
-        <!-- AnimeJS for animations. The module script is async on purpose: without
-             it, a parser-inserted module script joins the same execute-after-parsing
-             queue as the defer scripts below and that queue runs in document order,
-             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js and
-             service_worker_register.js, neither of which needs AnimeJS. Nothing
-             depends on this script's ordering: animation_helpers.js checks for
-             window.anime at call time and back_to_top.js falls back without it. -->
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
         <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_takes_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
-        <!-- Section permalink buttons. Must stay below reading_engagement.js:
-             both wait for DOMContentLoaded and handlers fire in registration
-             order, so this ordering is what keeps the button labels out of the
-             per-section word counts. -->
         <script src="../js/section_permalinks.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
@@ -274,14 +253,6 @@
             </div>
         </header>
         <main class="main" id="main" tabindex="-1">
-            <!--
-                Announcement target for the section "Copy link" buttons added by
-                section_permalinks.js. Static markup on purpose, matching
-                #photoGalleryStatus on hobbies.html: a live region only announces
-                changes to content inside a region that already existed, so a
-                paragraph injected and written to in the same click would say
-                nothing. Empty and screen-reader-only until a copy happens.
-            -->
             <p class="visually-hidden" id="sectionPermalinkStatus" role="status"></p>
             <div class="introSectionDiv" id="introSectionDiv">
                 <h1>Technical Opinions on AI, Quantum Computing &amp; Privacy</h1>

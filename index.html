@@ -38,36 +38,18 @@
         <meta name="twitter:image" content="https://colbymainard.github.io/assets/images/sharecard.png">
         <meta name="twitter:image:alt" content="Colby Mainard's Personal Website in green monospace lettering on a black background">
 
-        <!-- Icons and theme -->
         <link rel="icon" type="image/png" href="./assets/images/favicon.png"/>
         <link rel="apple-touch-icon" href="./assets/images/favicon.png">
 
-        <!-- rel="me" identity links, asserting that this site and these two
-             profiles are the same person (IndieAuth, and entity confirmation
-             for search engines). Same URLs as the Person sameAs on index.html. -->
         <link rel="me" href="https://github.com/ColbyMainard">
         <link rel="me" href="https://www.linkedin.com/in/colby-mainard/">
-        <meta name="theme-color" content="#000000">
 
-        <!--Setting up tags for search engine verification-->
+        <meta name="theme-color" content="#000000">
         <meta name="google-site-verification" content="LqOVTw1vRp28p5VNBCRWWOsZHXbZeZteA7rHCZi8bwQ" />
         <meta name="msvalidate.01" content="96DC561C2A904478B8F425694CAF638F" />
 
-        <!-- Page-depth helper. Must stay above cookie_consent.js and
-             service_worker_register.js: deferred classic scripts run in
-             document order, and both read window.PathHelpers. -->
         <script src="./assets/js/path_helpers.js" defer></script>
-
-        <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="./assets/js/cookie_consent.js" defer></script>
-
-        <!-- AnimeJS for animations. The module script is async on purpose: without
-             it, a parser-inserted module script joins the same execute-after-parsing
-             queue as the defer scripts below and that queue runs in document order,
-             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js and
-             service_worker_register.js, neither of which needs AnimeJS. Nothing
-             depends on this script's ordering: animation_helpers.js checks for
-             window.anime at call time and back_to_top.js falls back without it. -->
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
         <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="./assets/js/animation_helpers.js" defer></script>

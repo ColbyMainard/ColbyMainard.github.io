@@ -29,13 +29,9 @@
         <meta name="twitter:image" content="https://colbymainard.github.io/assets/images/sharecard.png">
         <meta name="twitter:image:alt" content="Colby Mainard's Personal Website in green monospace lettering on a black background">
 
-        <!-- Icons and theme -->
         <link rel="icon" type="image/png" href="../images/favicon.png"/>
         <link rel="apple-touch-icon" href="../images/favicon.png">
 
-        <!-- rel="me" identity links, asserting that this site and these two
-             profiles are the same person (IndieAuth, and entity confirmation
-             for search engines). Same URLs as the Person sameAs on index.html. -->
         <link rel="me" href="https://github.com/ColbyMainard">
         <link rel="me" href="https://www.linkedin.com/in/colby-mainard/">
         <meta name="theme-color" content="#000000">
@@ -46,24 +42,12 @@
         <!-- Tell search engines not to index this disclosure page; it is purely for transparency. -->
         <meta name="robots" content="noindex, follow">
 
-        <!-- Page-depth helper. Must stay above cookie_consent.js and
-             service_worker_register.js: deferred classic scripts run in
-             document order, and both read window.PathHelpers. -->
         <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
-
-        <!--
-            No AnimeJS bundle on this page. The privacy disclosure is intentionally
-            unanimated so the content is readable immediately, and so users with JS
-            disabled (a common privacy-conscious configuration) see the same content.
-        -->
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
-        <!-- Not an animation script: easter_egg.js needs neither AnimeJS nor
-             AnimationHelpers, so it does not breach this page's no-animation
-             convention. Its only motion is a CSS transition. -->
         <script src="../js/easter_egg.js" defer></script>
         <script src="../js/service_worker_register.js" defer></script>
 
@@ -146,7 +130,6 @@
                     </p>
                 </section>
             </div>
-
             <div class="privacySectionDiv" id="preferencesDiv">
                 <section class="privacySection">
                     <h2>Cookie preferences</h2>
@@ -260,12 +243,6 @@
                         36FF 3C61 A08A 76C9 18C8  FE15 C3DA F3D9 1351 22BE
                     </a>
                 </p>
-                <!-- aria-current="page" here and on no other page's footer: the shared
-                     footer is copied verbatim onto all seven pages, so on this one the
-                     Privacy Policy link points at the page the reader is already on. A
-                     screen-reader user navigating by link would otherwise hit a no-op
-                     with nothing announcing why. Keeping the anchor rather than
-                     swapping in plain text keeps the footer markup uniform. -->
                 <p>
                     <a href="./privacy.html" aria-current="page">Privacy Policy</a>
                 </p>
