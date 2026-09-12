@@ -1,11 +1,4 @@
-/* https://www.w3schools.com/Css/css_selectors.asp */
-
-/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette
- * Light tones _2–_5 are tuned brighter than the source palette so body text (_2)
- * and every heading tier clear WCAG AA on the _1 background, while preserving the
- * light-on-slate ramp (body dimmest, h1 brightest):
- *   _2 body/links/table 5.13:1, _3 h3 5.64:1, _4 h2 6.57:1, _5 h1 7.69:1.
- * (Source values were _2 #5D6D7E 1.75:1, _3 #85929E 2.92:1, _4 #AAB7B8 4.50:1.) */
+/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette */
 $calm_authority_1: #34495E;
 $calm_authority_2: #B8C2C9;
 $calm_authority_3: #C2CBD1;
@@ -41,9 +34,6 @@ $calm_authority_5: #E7EAEC;
         $h3: $calm_authority_3
     );
     @include bodyText($calm_authority_2);
-    /* In-prose links: _4 (6.57:1) is brighter than the _2 body text, underlined
-       so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
-       (7.69:1). */
     @include proseLinks($calm_authority_4, $calm_authority_5);
     @include unorderedListText($calm_authority_2);
 }
@@ -67,7 +57,6 @@ $calm_authority_5: #E7EAEC;
         padding: 0;
     }
 
-    // Vertical rhythm between the landscape shots, replacing the layout-only <br> spacers the markup used to carry.
     .photoGallery-slide {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
@@ -77,16 +66,6 @@ $calm_authority_5: #E7EAEC;
         }
     }
 
-    // Scale-to-fit. These are 3000x2000 originals, so the constraint has to cap
-    // both axes: max-width keeps a wide photo inside the section shell on a
-    // phone, max-height stops a tall viewport from handing over a photo taller
-    // than the screen. width/height auto plus object-fit: contain preserve the
-    // 3:2 aspect ratio rather than squashing it, and the width/height attributes
-    // in the markup still reserve the right box so nothing shifts as it loads.
-    //
-    // This also overrides the global `body img { max-width: 60% }` in
-    // default.scss, which would otherwise leave the gallery photo at 60% of a
-    // 320px screen. Specificity: #photography + class + type beats `body img`.
     .photoGallery-slide img {
         max-width: 100%;
         max-height: 70vh;
@@ -99,14 +78,11 @@ $calm_authority_5: #E7EAEC;
 
     figcaption {
         text-align: left;
-        color: $calm_authority_2; // 5.13:1 on _1, matching this section's body text
+        color: $calm_authority_2;
         font-size: 100%;
         margin-top: 0.75em;
     }
 
-    // One slide at a time, but only once photo_gallery.js has confirmed it is
-    // running. Without .js-gallery every slide stays visible, so a visitor with
-    // scripting off sees all five stacked instead of one photo and no controls.
     .photoGallery.js-gallery .photoGallery-slide {
         display: none;
 
@@ -131,8 +107,6 @@ $calm_authority_5: #E7EAEC;
     }
 
     .photoGallery-button {
-        // _1 text on _5 is the section palette inverted: the same 7.69:1 pair
-        // the h1 uses, which clears AA either way round.
         background-color: $calm_authority_5;
         color: $calm_authority_1;
         border: 2px solid $calm_authority_1;
@@ -141,18 +115,13 @@ $calm_authority_5: #E7EAEC;
         font-family: "Courier New", monospace;
         font-size: 100%;
         cursor: pointer;
-        // Same 44px target floor the shared buttons in default.scss carry. The
-        // em-based padding here makes it worth stating: it tracks font-size, so
-        // a smaller label would otherwise shrink the whole control.
         min-height: 44px;
         min-width: 44px;
 
         &:hover {
-            background-color: $calm_authority_4; // 6.57:1 against _1 text
+            background-color: $calm_authority_4;
         }
 
-        // Matches the .tableScroll and `main a:focus-visible` rings in
-        // default.scss; _1 on the _5 button clears the 3:1 non-text minimum.
         &:focus-visible {
             outline: 2px solid $calm_authority_1;
             outline-offset: 2px;
@@ -165,7 +134,6 @@ $calm_authority_5: #E7EAEC;
     @extend %hobbySection;
     @include blockQuote($calm_authority_2);
     @include dataTable($calm_authority_2);
-    // The podcast table nests a list inside a cell.
     table tr td {
         ul {
             li {
@@ -176,11 +144,6 @@ $calm_authority_5: #E7EAEC;
     }
 }
 
-// Animation gating (initial hidden state plus the reduced-motion safety net).
-// `> .photoGallery` is the photography section's animated unit: its images are
-// nested inside the gallery's list and figures, so the `> img` selector no
-// longer reaches them (that one still covers the #introSectionDiv portrait).
-// Keep this list in sync with the selectors in hobbies_animations.js.
 @include animationGate(
     "#introSectionDiv, #quantumComputing, #photography, #dungeonsAndDragons, #history",
     "> h1, > h2, > h3, > h4, > p, > ul, > svg, > img, > .photoGallery, > .tableScroll, > blockquote, > a, > iframe"

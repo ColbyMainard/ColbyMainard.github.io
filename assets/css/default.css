@@ -1,8 +1,5 @@
 @charset "UTF-8";
-/* https://www.w3schools.com/Css/css_selectors.asp */
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
-/* _2 tuned brighter than the source #b5307e (3.05:1, failed WCAG AA) so body
-   text, links, list items and table cells clear AA at 4.89:1 on the _5 bg. */
 #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
   margin: auto;
   background-color: #200b4b;
@@ -11,10 +8,7 @@
   padding-bottom: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace;
-  /* In-prose links: _1 (#ff3d94, 5.24:1 on _5) sits a step brighter than the
-     _2 body text (4.89:1), plus an underline so links never rely on color
-     alone (WCAG 1.4.1). _1 tops this ramp, so hover thickens the underline. */ }
+  font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
     #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
       border: 1px solid CanvasText; } }
@@ -67,10 +61,6 @@
       color: #e64d9e;
       font-size: 100%; }
 
-/* Decorative section illustrations. 
-   These five classes replace the inline style= attributes the drawings shipped with; the declarations are unchanged.
-   Colors stay literal rather than moving to palette variables because they match the fill=/stroke= presentation attributes on the sibling shapes in the same drawing.
-   Every one of these <svg> elements is aria-hidden decoration, so no contrast requirement applies to them. */
 #workHistory .bagFlap {
   fill: none;
   stroke: #AA7333;
@@ -131,13 +121,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #workHistory > h1, html.js-animations #workHistory > h2, html.js-animations #workHistory > h3, html.js-animations #workHistory > h4, html.js-animations #workHistory > p, html.js-animations #workHistory > ul, html.js-animations #workHistory > svg, html.js-animations #workHistory > .tableScroll, html.js-animations #workHistory > a, html.js-animations #education > h1, html.js-animations #education > h2, html.js-animations #education > h3, html.js-animations #education > h4, html.js-animations #education > p, html.js-animations #education > ul, html.js-animations #education > svg, html.js-animations #education > .tableScroll, html.js-animations #education > a, html.js-animations #projects > h1, html.js-animations #projects > h2, html.js-animations #projects > h3, html.js-animations #projects > h4, html.js-animations #projects > p, html.js-animations #projects > ul, html.js-animations #projects > svg, html.js-animations #projects > .tableScroll, html.js-animations #projects > a, html.js-animations #technicalSkills > h1, html.js-animations #technicalSkills > h2, html.js-animations #technicalSkills > h3, html.js-animations #technicalSkills > h4, html.js-animations #technicalSkills > p, html.js-animations #technicalSkills > ul, html.js-animations #technicalSkills > svg, html.js-animations #technicalSkills > .tableScroll, html.js-animations #technicalSkills > a, html.js-animations #certifications > h1, html.js-animations #certifications > h2, html.js-animations #certifications > h3, html.js-animations #certifications > h4, html.js-animations #certifications > p, html.js-animations #certifications > ul, html.js-animations #certifications > svg, html.js-animations #certifications > .tableScroll, html.js-animations #certifications > a, html.js-animations #otherSkills > h1, html.js-animations #otherSkills > h2, html.js-animations #otherSkills > h3, html.js-animations #otherSkills > h4, html.js-animations #otherSkills > p, html.js-animations #otherSkills > ul, html.js-animations #otherSkills > svg, html.js-animations #otherSkills > .tableScroll, html.js-animations #otherSkills > a {
     opacity: 1 !important; } }
-/* https://www.w3schools.com/Css/css_selectors.asp */
-/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette
- * Light tones _2–_5 are tuned brighter than the source palette so body text (_2)
- * and every heading tier clear WCAG AA on the _1 background, while preserving the
- * light-on-slate ramp (body dimmest, h1 brightest):
- *   _2 body/links/table 5.13:1, _3 h3 5.64:1, _4 h2 6.57:1, _5 h1 7.69:1.
- * (Source values were _2 #5D6D7E 1.75:1, _3 #85929E 2.92:1, _4 #AAB7B8 4.50:1.) */
+/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette */
 #quantumComputing, #photography, #dungeonsAndDragons, #history {
   margin: auto;
   background-color: #34495E;
@@ -146,10 +130,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding-bottom: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace;
-  /* In-prose links: _4 (6.57:1) is brighter than the _2 body text, underlined
-     so links do not rely on color alone (WCAG 1.4.1); hover lifts to _5
-     (7.69:1). */ }
+  font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
     #quantumComputing, #photography, #dungeonsAndDragons, #history {
       border: 1px solid CanvasText; } }
@@ -290,11 +271,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > h4, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > blockquote, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > h4, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > blockquote, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > h4, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > blockquote, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > h4, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > blockquote, html.js-animations #history > a, html.js-animations #history > iframe {
     opacity: 1 !important; } }
-/* https://www.w3schools.com/Css/css_selectors.asp */
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
-/* _3 tuned brighter than the source #7a7a99 (3.80:1, failed WCAG AA) so body
-   paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
-   5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
 /* Reading-progress fill. Deliberately outside the Dark Blue Gray ramp: the bar is a purely decorative strip with no text on it and no contrast obligation, and it is meant to read as a distinct progress accent rather than as more page chrome.
    Named rather than inlined so a future palette pass finds it, and so the fill and its glow cannot drift apart. */
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
@@ -306,16 +283,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding-bottom: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace;
-  /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
-  /* Section permalink buttons: _3 matches the surrounding body text (5.83:1 on the _1 shell) and _4 brightens on hover (8.95:1), the same pair the in-prose links use. */
-  /* Every opinion section uses unordered lists (KAN, Cryptocurrency, AGI,
-     Privacy, ProductPlacement), so the shared placeholder is where this
-     belongs. Without it those <li>s fell back to the UA text color on the
-     $dark_blue_gray_1 background and inherited `body { text-align: center }`.
-     _3 matches the surrounding body text at 5.83:1. Ordered lists are not
-     shared - only #VibeCodingScourge has an <ol> - so orderedListText is
-     included at that call site instead. */ }
+  font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
     #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge {
       border: 1px solid CanvasText; } }
@@ -398,7 +366,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
       color: #9a9ac2;
       font-size: 100%; }
 
-/* Shared table styling for opinions that include a comparison table. */
 #Cryptocurrency table, #FutureOfQuantum table {
   text-align: left;
   border-collapse: collapse;
@@ -440,7 +407,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   font-size: 100%;
   color: #9a9ac2; }
 
-/* Shared definition-list styling for opinions that use a glossary. */
 #AGI dl, #Privacy dl {
   text-align: left;
   font-size: 100%;
@@ -450,10 +416,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
     text-decoration: underline; }
   #AGI dl dd, #Privacy dl dd {
     margin: 0;
-    padding: 0 0 2em 0;
-    /* The <ul>s inside a <dd> are covered by the section-level
-       unorderedListText include, which emits the same color and size
-       at lower specificity; no override is needed here. */ }
+    padding: 0 0 2em 0; }
 
 #AGI h3 {
   color: #c2c2d1; }
@@ -461,19 +424,15 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 #Privacy h3 {
   color: #c2c2d1; }
 
-#VibeCodingScourge {
-  /* The only section on the page with an <ol>, so the ordered-list rule stays
-     here rather than in %techTakeSection. Unordered lists come from the
-     placeholder. */ }
-  #VibeCodingScourge ol {
-    text-align: left; }
-    #VibeCodingScourge ol li {
-      color: #9a9ac2;
-      font-size: 100%; }
-  #VibeCodingScourge blockquote {
-    text-align: left;
+#VibeCodingScourge ol {
+  text-align: left; }
+  #VibeCodingScourge ol li {
     color: #9a9ac2;
-    font-size: 150%; }
+    font-size: 100%; }
+#VibeCodingScourge blockquote {
+  text-align: left;
+  color: #9a9ac2;
+  font-size: 150%; }
 
 html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > ol, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > ol, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > blockquote, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > ol, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > blockquote, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > ol, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > blockquote, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > ol, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > blockquote, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > ol, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > blockquote, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > ol, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > blockquote, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > ol, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > blockquote, html.js-animations #PhysicalMediaSupremacy > a, html.js-animations #VibeCodingScourge > h1, html.js-animations #VibeCodingScourge > h2, html.js-animations #VibeCodingScourge > h3, html.js-animations #VibeCodingScourge > h4, html.js-animations #VibeCodingScourge > p, html.js-animations #VibeCodingScourge > ul, html.js-animations #VibeCodingScourge > ol, html.js-animations #VibeCodingScourge > dl, html.js-animations #VibeCodingScourge > .tableScroll, html.js-animations #VibeCodingScourge > blockquote, html.js-animations #VibeCodingScourge > a {
   opacity: 0; }
@@ -481,24 +440,11 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > ol, html.js-animations #introSectionDiv > dl, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #KAN > h1, html.js-animations #KAN > h2, html.js-animations #KAN > h3, html.js-animations #KAN > h4, html.js-animations #KAN > p, html.js-animations #KAN > ul, html.js-animations #KAN > ol, html.js-animations #KAN > dl, html.js-animations #KAN > .tableScroll, html.js-animations #KAN > blockquote, html.js-animations #KAN > a, html.js-animations #Cryptocurrency > h1, html.js-animations #Cryptocurrency > h2, html.js-animations #Cryptocurrency > h3, html.js-animations #Cryptocurrency > h4, html.js-animations #Cryptocurrency > p, html.js-animations #Cryptocurrency > ul, html.js-animations #Cryptocurrency > ol, html.js-animations #Cryptocurrency > dl, html.js-animations #Cryptocurrency > .tableScroll, html.js-animations #Cryptocurrency > blockquote, html.js-animations #Cryptocurrency > a, html.js-animations #FutureOfQuantum > h1, html.js-animations #FutureOfQuantum > h2, html.js-animations #FutureOfQuantum > h3, html.js-animations #FutureOfQuantum > h4, html.js-animations #FutureOfQuantum > p, html.js-animations #FutureOfQuantum > ul, html.js-animations #FutureOfQuantum > ol, html.js-animations #FutureOfQuantum > dl, html.js-animations #FutureOfQuantum > .tableScroll, html.js-animations #FutureOfQuantum > blockquote, html.js-animations #FutureOfQuantum > a, html.js-animations #AGI > h1, html.js-animations #AGI > h2, html.js-animations #AGI > h3, html.js-animations #AGI > h4, html.js-animations #AGI > p, html.js-animations #AGI > ul, html.js-animations #AGI > ol, html.js-animations #AGI > dl, html.js-animations #AGI > .tableScroll, html.js-animations #AGI > blockquote, html.js-animations #AGI > a, html.js-animations #Privacy > h1, html.js-animations #Privacy > h2, html.js-animations #Privacy > h3, html.js-animations #Privacy > h4, html.js-animations #Privacy > p, html.js-animations #Privacy > ul, html.js-animations #Privacy > ol, html.js-animations #Privacy > dl, html.js-animations #Privacy > .tableScroll, html.js-animations #Privacy > blockquote, html.js-animations #Privacy > a, html.js-animations #ProductPlacement > h1, html.js-animations #ProductPlacement > h2, html.js-animations #ProductPlacement > h3, html.js-animations #ProductPlacement > h4, html.js-animations #ProductPlacement > p, html.js-animations #ProductPlacement > ul, html.js-animations #ProductPlacement > ol, html.js-animations #ProductPlacement > dl, html.js-animations #ProductPlacement > .tableScroll, html.js-animations #ProductPlacement > blockquote, html.js-animations #ProductPlacement > a, html.js-animations #PhysicalMediaSupremacy > h1, html.js-animations #PhysicalMediaSupremacy > h2, html.js-animations #PhysicalMediaSupremacy > h3, html.js-animations #PhysicalMediaSupremacy > h4, html.js-animations #PhysicalMediaSupremacy > p, html.js-animations #PhysicalMediaSupremacy > ul, html.js-animations #PhysicalMediaSupremacy > ol, html.js-animations #PhysicalMediaSupremacy > dl, html.js-animations #PhysicalMediaSupremacy > .tableScroll, html.js-animations #PhysicalMediaSupremacy > blockquote, html.js-animations #PhysicalMediaSupremacy > a, html.js-animations #VibeCodingScourge > h1, html.js-animations #VibeCodingScourge > h2, html.js-animations #VibeCodingScourge > h3, html.js-animations #VibeCodingScourge > h4, html.js-animations #VibeCodingScourge > p, html.js-animations #VibeCodingScourge > ul, html.js-animations #VibeCodingScourge > ol, html.js-animations #VibeCodingScourge > dl, html.js-animations #VibeCodingScourge > .tableScroll, html.js-animations #VibeCodingScourge > blockquote, html.js-animations #VibeCodingScourge > a {
     opacity: 1 !important; } }
-/* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the
-   base rule for every page that loads reading_engagement.js, not just this
-   one; guides.scss overrides the color with its own palette. */
 .readingTime {
   font-style: italic;
   color: #c2c2d1;
   font-size: 95%; }
 
-/* Visible Atom subscribe link in the page intro. The intro sits on the
-   global $noir_2 body background, where this page's _3 text tone fails AA
-   (3.95:1); _4 clears it at 6.07:1 and hover uses $noir_5 (7.22:1, the
-   documented intro-paragraph pair).
-
-   .feedSubscribe now appears on guides.html as well, whose intro sits on the
-   same global $noir_2 background, so the same two ratios hold there and the
-   rule is deliberately left unscoped rather than duplicated into guides.scss
-   with the Techno Serenity palette. If a third page ever adopts the class on a
-   different background, split this rule instead of widening it. */
 .feedSubscribe a:link,
 .feedSubscribe a:visited {
   color: #c2c2d1;
@@ -509,11 +455,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 .feedSubscribe a:active {
   color: #d4d4d9; }
 
-/* Reading progress bar — fixed strip at the top of the viewport that
- * fills left-to-right as the reader scrolls down. Injected dynamically
- * by reading_engagement.js, so it appears on Guides as well. z-index sits
- * above the sticky header
- * (which uses 100). */
 #reading-progress {
   position: fixed;
   top: 0;
@@ -533,7 +474,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   #reading-progress .reading-progress-fill {
     transition: none; } }
-/* https://www.w3schools.com/Css/css_selectors.asp */
 /* Neon Dusk Serenity color palette from https://colormagic.app/palette/690adc39eebc052f2bce9d76 */
 /* _3 tuned brighter than the source #8b5aba (2.86:1, failed WCAG AA) so body
    text, links, h3, blockquotes and every table cell clear AA at 5.27:1 on _1. */
@@ -545,15 +485,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding-bottom: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace;
-  /* In-prose links: _4 (4.62:1) is a distinct warm tone against the _3 body
-     text, underlined so links do not rely on color alone (WCAG 1.4.1); hover
-     lifts to _5 (8.8:1). */
-  /* Section permalink button, closing each resource card: _3 is this page's
-     body tone (5.27:1 on the _1 shell) and _5 brightens on hover (8.80:1).
-     The hover pair is _5 rather than the _4 that proseLinks uses, because the
-     button is a control rather than prose and _4 (4.62:1) leaves less room
-     once the 12% tint sits behind it. */ }
+  font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
     #cybersecurityResources, #artificialIntelligenceResources, #cppResources, #pythonResources, #scriptingResources, #operatingSystemsResources, #systemsAndDSA {
       border: 1px solid CanvasText; } }
@@ -662,9 +594,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #cybersecurityResources > h1, html.js-animations #cybersecurityResources > h2, html.js-animations #cybersecurityResources > h3, html.js-animations #cybersecurityResources > h4, html.js-animations #cybersecurityResources > p, html.js-animations #cybersecurityResources > ul, html.js-animations #cybersecurityResources > .tableScroll, html.js-animations #cybersecurityResources > blockquote, html.js-animations #cybersecurityResources > a, html.js-animations #artificialIntelligenceResources > h1, html.js-animations #artificialIntelligenceResources > h2, html.js-animations #artificialIntelligenceResources > h3, html.js-animations #artificialIntelligenceResources > h4, html.js-animations #artificialIntelligenceResources > p, html.js-animations #artificialIntelligenceResources > ul, html.js-animations #artificialIntelligenceResources > .tableScroll, html.js-animations #artificialIntelligenceResources > blockquote, html.js-animations #artificialIntelligenceResources > a, html.js-animations #cppResources > h1, html.js-animations #cppResources > h2, html.js-animations #cppResources > h3, html.js-animations #cppResources > h4, html.js-animations #cppResources > p, html.js-animations #cppResources > ul, html.js-animations #cppResources > .tableScroll, html.js-animations #cppResources > blockquote, html.js-animations #cppResources > a, html.js-animations #pythonResources > h1, html.js-animations #pythonResources > h2, html.js-animations #pythonResources > h3, html.js-animations #pythonResources > h4, html.js-animations #pythonResources > p, html.js-animations #pythonResources > ul, html.js-animations #pythonResources > .tableScroll, html.js-animations #pythonResources > blockquote, html.js-animations #pythonResources > a, html.js-animations #scriptingResources > h1, html.js-animations #scriptingResources > h2, html.js-animations #scriptingResources > h3, html.js-animations #scriptingResources > h4, html.js-animations #scriptingResources > p, html.js-animations #scriptingResources > ul, html.js-animations #scriptingResources > .tableScroll, html.js-animations #scriptingResources > blockquote, html.js-animations #scriptingResources > a, html.js-animations #operatingSystemsResources > h1, html.js-animations #operatingSystemsResources > h2, html.js-animations #operatingSystemsResources > h3, html.js-animations #operatingSystemsResources > h4, html.js-animations #operatingSystemsResources > p, html.js-animations #operatingSystemsResources > ul, html.js-animations #operatingSystemsResources > .tableScroll, html.js-animations #operatingSystemsResources > blockquote, html.js-animations #operatingSystemsResources > a, html.js-animations #systemsAndDSA > h1, html.js-animations #systemsAndDSA > h2, html.js-animations #systemsAndDSA > h3, html.js-animations #systemsAndDSA > h4, html.js-animations #systemsAndDSA > p, html.js-animations #systemsAndDSA > ul, html.js-animations #systemsAndDSA > .tableScroll, html.js-animations #systemsAndDSA > blockquote, html.js-animations #systemsAndDSA > a {
     opacity: 1 !important; } }
-/* _3 tuned brighter than the source #16A085 (3.35:1, failed WCAG AA) so body
-   text and links clear AA at 5.22:1 on the _1 bg — important for this
-   page's legal-disclosure readability. */
 #analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv, #changesDiv {
   margin: auto;
   background-color: #2C3E50;
@@ -673,10 +602,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding-bottom: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace;
-  /* In-prose links: _4 (5.01:1) is a distinct tone against the _3 body text,
-     underlined so links do not rely on color alone (WCAG 1.4.1) — important on
-     this legal page; hover lifts to _5 (10.39:1). */ }
+  font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
     #analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv, #changesDiv {
       border: 1px solid CanvasText; } }
@@ -722,7 +648,6 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
       color: #22c9a8;
       font-size: 100%; }
 
-/* https://www.w3schools.com/Css/css_selectors.asp */
 #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
   margin: auto;
   background-color: #1f3a61;
@@ -731,9 +656,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding: 1.5em 2em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace;
-  /* Section permalink buttons: _3 is this page's body tone (5.57:1 on the _1 shell) and _4 brightens on hover (7.16:1), mirroring the base/hover pair proseLinks already uses here. */
-  /* Reading-time pill next to "Last Updated:". The base .readingTime rule lives in tech_takes.scss and colors it with that page's palette, which is untraceable here; _3 is this page's documented body tone (5.57:1 on the _1 bg) and the pill is body-adjacent secondary text. Italics and the 95% size are inherited from the base rule. */ }
+  font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
     #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
       border: 1px solid CanvasText; } }
@@ -846,12 +769,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > blockquote, html.js-animations #introSectionDiv > a, html.js-animations #dataEngineeringGuide > h1, html.js-animations #dataEngineeringGuide > h2, html.js-animations #dataEngineeringGuide > h3, html.js-animations #dataEngineeringGuide > h4, html.js-animations #dataEngineeringGuide > p, html.js-animations #dataEngineeringGuide > ul, html.js-animations #dataEngineeringGuide > blockquote, html.js-animations #dataEngineeringGuide > a, html.js-animations #computerVisionGuide > h1, html.js-animations #computerVisionGuide > h2, html.js-animations #computerVisionGuide > h3, html.js-animations #computerVisionGuide > h4, html.js-animations #computerVisionGuide > p, html.js-animations #computerVisionGuide > ul, html.js-animations #computerVisionGuide > blockquote, html.js-animations #computerVisionGuide > a, html.js-animations #generativeAIGuide > h1, html.js-animations #generativeAIGuide > h2, html.js-animations #generativeAIGuide > h3, html.js-animations #generativeAIGuide > h4, html.js-animations #generativeAIGuide > p, html.js-animations #generativeAIGuide > ul, html.js-animations #generativeAIGuide > blockquote, html.js-animations #generativeAIGuide > a, html.js-animations #nlpGuide > h1, html.js-animations #nlpGuide > h2, html.js-animations #nlpGuide > h3, html.js-animations #nlpGuide > h4, html.js-animations #nlpGuide > p, html.js-animations #nlpGuide > ul, html.js-animations #nlpGuide > blockquote, html.js-animations #nlpGuide > a, html.js-animations #reinforcementLearningGuide > h1, html.js-animations #reinforcementLearningGuide > h2, html.js-animations #reinforcementLearningGuide > h3, html.js-animations #reinforcementLearningGuide > h4, html.js-animations #reinforcementLearningGuide > p, html.js-animations #reinforcementLearningGuide > ul, html.js-animations #reinforcementLearningGuide > blockquote, html.js-animations #reinforcementLearningGuide > a, html.js-animations #softwareEngineeringGuide > h1, html.js-animations #softwareEngineeringGuide > h2, html.js-animations #softwareEngineeringGuide > h3, html.js-animations #softwareEngineeringGuide > h4, html.js-animations #softwareEngineeringGuide > p, html.js-animations #softwareEngineeringGuide > ul, html.js-animations #softwareEngineeringGuide > blockquote, html.js-animations #softwareEngineeringGuide > a, html.js-animations #cybersecurityGuide > h1, html.js-animations #cybersecurityGuide > h2, html.js-animations #cybersecurityGuide > h3, html.js-animations #cybersecurityGuide > h4, html.js-animations #cybersecurityGuide > p, html.js-animations #cybersecurityGuide > ul, html.js-animations #cybersecurityGuide > blockquote, html.js-animations #cybersecurityGuide > a {
     opacity: 1 !important; } }
-/* Signal Lost color palette — original warm-ember ramp for the 404 error page.
-   Contrast on the _1 background: _3 body text 8.1:1, _4 links 10.2:1, _5
-   headings 13.7:1 — all clear WCAG AA (>=4.5:1 for body text). _2 is
-   decorative only (shadows; never use it for text). The .errorCode figure
-   uses _4 on the global noir_2 body background: 7.2:1. */
-/* Oversized decorative "404" figure in the intro (aria-hidden in the markup; the h1 carries the accessible page state). Sits on the global noir_2 body background. .errorCode exists only on 404.html, so nothing leaks. */
+/* Signal Lost color palette — original warm-ember ramp for the 404 error page. */
 #introSectionDiv .errorCode {
   color: #f2cfa0;
   font-family: "Courier New", monospace;
@@ -916,14 +834,9 @@ html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, htm
   html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, html.js-animations #helpfulLinks li {
     opacity: 1 !important; } }
 /* https://www.w3schools.com/Css/css_selectors.asp */
-/* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth; } }
-/* Keep anchored and keyboard-focused targets clear of the sticky header (WCAG 2.4.11). 
-   scroll-padding-top on the scroll container offsets both fragment-jump navigation and focus scrolling, so scroll-margin-top on the targets is intentionally omitted (it would stack and double the gap).
-   The value approximates the header height: ~2 stacked nav rows on desktop, a single collapsed row on mobile.
-   Verify if the nav layout changes. */
 html {
   scroll-padding-top: 8rem; }
 
@@ -942,22 +855,13 @@ html {
   white-space: nowrap;
   border: 0; }
 
-/* Abbreviation affordance. This file previously targeted `abbr` nowhere on purpose, and both CLAUDE.md and AGENTS.md recorded that; the convention was changed deliberately on 2026-09-03, so this rule is not drift.
-   The reasoning: 72 <abbr title="..."> elements carry a spelled-out expansion, and with no styling nothing on the page says an expansion exists. Browsers show it on hover only, so the annotation reached sighted mouse users and nobody else.
-   A dotted underline marks which words carry one. It is not a full fix: the title attribute is still unreachable by keyboard (abbr is not focusable) and by touch (no hover), and making it reachable means either a tab stop on all 72 or spelling the term out in prose. This rule is the cheap half.
-   No color is set. text-decoration draws in currentColor, so the underline inherits whichever section tone the abbreviation already sits in, and every one of those is kept at AA by its partial. */
 abbr[title] {
   text-decoration: underline dotted;
   cursor: help; }
 
-/* Horizontal-scroll container for wide data tables.
-   The table scrolls inside this box instead of widening the page on narrow viewports (WCAG 1.4.10).
-   A wrapper is used rather than `display: block` on the <table> itself, which would strip the table's semantics and its scope-ed row/column headers. */
 .tableScroll {
   max-width: 100%;
-  overflow-x: auto;
-  /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable element has to show where focus is.
-     The global `main a:focus-visible` rule below covers links only, so the container needs its own ring. currentColor tracks each section's body text color, which every partial keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */ }
+  overflow-x: auto; }
   .tableScroll:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px; }
@@ -1004,9 +908,7 @@ header {
     top: 10px;
     line-height: 1;
     min-height: 44px;
-    min-width: 44px;
-    /* Same solid outline as .floatingBackToTop, .tableScroll and main a:focus-visible. The previous indicator suppressed the outline and painted a 3px box-shadow ring, which forced-colors mode discards outright, leaving a keyboard user with no focus indicator at all on the primary navigation.
-       currentColor here is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1, the pair this file already documents at 4.78:1, so the ring clears the 3:1 non-text minimum outside forced colors too. */ }
+    min-width: 44px; }
     header .nav-toggle:hover {
       background-color: rgba(80, 195, 161, 0.2); }
     header .nav-toggle.active {
@@ -1026,15 +928,13 @@ header {
       gap: 0; }
     header #pageMenu a {
       display: inline-block;
-      /* _5 = 5.85:1 on the darkened strip (AA); _4 was 4.05:1 */
       color: #e0f7fa;
       text-decoration: none;
       padding: 14px 24px;
       font-size: 95%;
       letter-spacing: 0.5px;
       transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s;
-      border-bottom: 3px solid transparent;
-      /* Solid outline for the same reason as the nav toggle above: a box-shadow ring is dropped entirely in forced colors, and the outline it replaced was suppressed. currentColor is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1 at 4.78:1, past the 3:1 non-text minimum. */ }
+      border-bottom: 3px solid transparent; }
       header #pageMenu a:hover {
         color: #e0f7fa;
         background-color: rgba(80, 195, 161, 0.1);
@@ -1062,17 +962,14 @@ header {
       border-left: none; }
     header #siteMenu a {
       display: inline-block;
-      /* _5 = 4.78:1 on _1 (AA); _3 was 2.45:1 */
       color: #e0f7fa;
       text-decoration: none;
       padding: 10px 18px;
       font-size: 85%;
       transition: color 0.2s, background-color 0.2s;
-      border-left: 1px solid rgba(80, 195, 161, 0.15);
-      /* Solid outline for the same reason as the two rules above. currentColor is $emerald_efficiency_5 (#e0f7fa); the resting background is $emerald_efficiency_1 at 4.78:1 and the hover state darkens it further, so both states clear the 3:1 non-text minimum. */ }
+      border-left: 1px solid rgba(80, 195, 161, 0.15); }
       header #siteMenu a:hover {
         color: #e0f7fa;
-        /* darken, not tint: a _3 tint under _5 text tops out ≈4.3:1 */
         background-color: #00614a; }
       header #siteMenu a:focus-visible {
         outline: 2px solid currentColor;
@@ -1120,9 +1017,6 @@ body {
     color: #d4d4d9;
     font-size: clamp(1.25rem, 3.5vw, 2rem); }
   body p {
-    /* $noir_4 (#a0a0b0) on $noir_2 is only 4.14:1; $noir_5 clears WCAG AA
-       (7.22:1). This global rule styles the #introSectionDiv lead paragraph
-       on every page (section partials override their own <p> color). */
     color: #d4d4d9;
     font-size: 100%; }
   body img {
@@ -1134,21 +1028,9 @@ body {
     border: 2px solid #1a1a1e;
     border-radius: 1%; }
 
-/* Headings are the longest unbroken strings on the site (page titles like
-   "Curated AI, Cybersecurity & Programming Learning Resources") and sit inside
-   `width: 80%` section shells, so on a 320px viewport a single long word can be
-   wider than its container no matter how far the $heading_size_* clamps scale
-   the type down. Allowing a break inside the word is what actually guarantees
-   the page never scrolls sideways (WCAG 1.4.10 Reflow); the clamps handle
-   proportion. Applied globally so section, body, and footer headings are all
-   covered by one rule. */
 h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word; }
 
-/* Keyboard focus ring for in-content links. The section partials set link
-   colors; this gives every in-prose link a visible focus indicator over the
-   varied section backgrounds. currentColor tracks the link color, which each
-   partial keeps at AA (>=4.5:1), so the ring clears the 3:1 non-text minimum. */
 main a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
@@ -1174,12 +1056,7 @@ main a:focus-visible {
   pointer-events: none;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   z-index: 200;
-  /* visibility, not just opacity: pointer-events alone stops the mouse but leaves the button in the tab order, so a keyboard user tabbing the top of any page reached a control that rendered nothing and drew its focus ring on a fully transparent element (WCAG 2.4.7 Focus Visible, and 4.1.2 since the aria-label announced a control with no visual presence). visibility: hidden removes it from the tab order instead.
-     Safe against the fade because back_to_top.js adds .visible immediately on show and only removes it after the 320ms hide timeout, so visibility flips on before the fade-in starts and off after the fade-out finishes. The opacity tween is AnimeJS inline, not in the transition list above, so visibility needs no entry there. */
-  visibility: hidden;
-  /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */
-  /* Same solid outline as .tableScroll and main a:focus-visible. The previous indicator was a 3px box-shadow at 60% alpha, which composited over whichever section happened to be scrolled behind the fixed button, so its contrast could not be verified.
-     currentColor here is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states. Every surface this button can sit over is a dark section shell or the $noir_2 body (#3e3e41), the lightest of them at 9.5:1, so the ring clears the 3:1 non-text contrast minimum everywhere. */ }
+  visibility: hidden; }
   .floatingBackToTop.visible {
     opacity: 1;
     transform: translateY(0);
@@ -1217,8 +1094,6 @@ main a:focus-visible {
   font-family: "Courier New", monospace;
   opacity: 0;
   transform: translateY(12px);
-  /* Mirrors .floatingBackToTop: an un-revealed card must not swallow clicks
-     on the content behind it. */
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
   /* Focused programmatically on reveal, the same way main.main is by the skip link. The card announces itself through its accessible name, so a ring around the whole card would be noise. */ }
@@ -1268,10 +1143,6 @@ main a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .easterEggCard {
     transition: none; } }
-/* Inline + block code styling.
- * For syntax highlighting on <pre><code class="language-X"> blocks, drop in
- * Prism.js (https://prismjs.com/) — these base styles are designed to remain
- * reasonable both with and without it. */
 code {
   font-family: "Courier New", monospace;
   font-size: 95%;
@@ -1300,8 +1171,6 @@ pre {
     padding: 0;
     color: inherit; }
 
-/* Cookie consent banner — fixed bottom strip explaining analytics cookies.
- * Hidden until the JS module attaches it; .visible fades it in. */
 .cookieConsent {
   position: fixed;
   left: 0;
@@ -1354,14 +1223,10 @@ pre {
     min-height: 44px;
     min-width: 44px; }
   .cookieConsent .cookieConsent-accept {
-    /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
     background-color: #007a5e;
     border: 2px solid #50c3a1;
     color: #e0f7fa;
-    font-weight: bold;
-    /* Same solid outline as .floatingBackToTop, and for the same reason. This banner is also fixed-positioned, so a 3px box-shadow at 60% alpha composited over whichever section happened to be scrolled behind it and its contrast could not be verified. That indicator was already rejected once on the back-to-top button; the consent buttons simply never got the fix.
-       currentColor is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states, and the ring draws on the banner's own rgba($noir_1, 0.97) surface at 15.9:1, well past the 3:1 non-text contrast minimum.
-       The `outline: none` that used to sit in the :hover, :focus block above is gone deliberately: it stripped the indicator outright for anyone whose browser has not resolved :focus-visible. */ }
+    font-weight: bold; }
     .cookieConsent .cookieConsent-accept:hover, .cookieConsent .cookieConsent-accept:focus {
       background-color: #00614a;
       border-color: #e0f7fa; }
@@ -1371,8 +1236,7 @@ pre {
   .cookieConsent .cookieConsent-reject {
     background-color: transparent;
     border: 2px solid #50c3a1;
-    color: #a1d9b0;
-    /* Solid outline for the same reason as .cookieConsent-accept above; see the note there. currentColor is $emerald_efficiency_4 (#a1d9b0) at rest and _5 on hover, giving 10.8:1 and 15.9:1 on the banner surface. */ }
+    color: #a1d9b0; }
     .cookieConsent .cookieConsent-reject:hover, .cookieConsent .cookieConsent-reject:focus {
       background-color: rgba(80, 195, 161, 0.15);
       color: #e0f7fa; }
@@ -1393,7 +1257,6 @@ pre {
       justify-content: center; }
     .cookieConsent .cookieConsent-button {
       flex: 1 1 0; } }
-/* Inline preferences controls used on the Privacy Policy page so visitors can change their consent decision after the banner has been dismissed. */
 .cookiePreferences {
   display: flex;
   flex-wrap: wrap;
@@ -1412,8 +1275,7 @@ pre {
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
   background-color: transparent;
   border: 2px solid #50c3a1;
-  color: #e0f7fa;
-  /* Solid outline, matching the two .cookieConsent buttons; see the note on .cookieConsent-accept for why the box-shadow ring was dropped. These sit on the Privacy Policy section background ($refined_professionalism_1), where currentColor is $emerald_efficiency_5 (#e0f7fa) at 10.1:1, or _4 at 6.8:1 where .cookiePreferences-reject overrides it. Both clear the 3:1 non-text minimum. */ }
+  color: #e0f7fa; }
   .cookiePreferences-button:hover, .cookiePreferences-button:focus {
     background-color: rgba(80, 195, 161, 0.15); }
   .cookiePreferences-button:focus-visible {
@@ -1421,18 +1283,12 @@ pre {
     outline-offset: 2px; }
 
 .cookiePreferences-accept {
-  /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
   background-color: #007a5e;
   font-weight: bold; }
   .cookiePreferences-accept:hover, .cookiePreferences-accept:focus {
     background-color: #00614a;
     border-color: #e0f7fa; }
 
-/* Mirrors .cookieConsent-reject's treatment: the secondary action reads dimmer
-   than its accept sibling, then brightens on interaction. Only the text color
-   differs from .cookiePreferences-button, which already supplies the transparent
-   background, the _3 border, and the same hover fill. _4 on the Privacy Policy
-   section background (refined_professionalism_1) = 6.8:1, clear WCAG AA. */
 .cookiePreferences-reject {
   color: #a1d9b0; }
   .cookiePreferences-reject:hover, .cookiePreferences-reject:focus {
@@ -1442,43 +1298,14 @@ footer {
   width: 100%;
   text-align: center;
   background-color: #007a5e;
-  /* Bottom apron below the last line, replacing the trailing <br> the sub-pages used to carry (index never had one; now all pages match). */
-  padding-bottom: 1em;
-  /* Same forced-colors reasoning as the header: the green band is the only boundary between the last section and the footer, and it is not painted under forced colors. */ }
+  padding-bottom: 1em; }
   @media (forced-colors: active) {
     footer {
       border-top: 1px solid CanvasText; } }
   footer #contactMe {
-    font-family: "Courier New", monospace;
-        /* h2 is the only heading level this footer styles, because h2 is the
-           only level any of the seven pages puts in a footer. The same
-           assumption is encoded in animation_helpers.js `animateContact`
-           (which animates "h2, p, a") and in the #contactMe animation gate
-           further down. This mirrors the headingRamp convention of emitting no
-           rule for a level the markup never uses.
-
-           There used to be h1 and h3 rules here. Both were dead, and the h1
-           was a trap: _2 on _1 is 1.49:1, unreadable if anyone had ever added
-           one. They were removed rather than recolored.
-
-           BEFORE ADDING an h1 or h3 here, note that deleting those rules means
-           such a heading now falls through to the global `body` ramp, which is
-           $noir_5 — only 3.60:1 against this green background. That is AA for
-           an h1 (floored at 2rem, so it clears the 24px large-text cutoff and
-           the 3:1 threshold) but NOT for an h3, whose shared floor is 1.25rem
-           (20px) and therefore needs the full 4.5:1. Give any new h3 an
-           explicit color of _5 (4.78:1). */
-    /* This carries its own clamp rather than $heading_size_2 because _4 is
-       3.31:1 on _1, which is AA only while the text stays at or above the
-       24px WCAG large-text cutoff. Raise the color to _5 (4.78:1) before
-       lowering the floor. */
-    /* unvisited link */
-    /* visited link — _5 like :link (no emerald tint between _4 and _5 reaches 4.5:1 on _1); visited is distinguished by underline style */
-    /* mouse over link */
-    /* selected link */ }
+    font-family: "Courier New", monospace; }
     footer #contactMe h2 {
       font-size: clamp(1.5rem, 5vw, 3rem);
-      /* _4 = 3.31:1 on _1 — AA for text at/above 24px; _3 was 2.45:1 */
       color: #a1d9b0; }
     footer #contactMe a:link {
       color: #e0f7fa;
@@ -1497,11 +1324,6 @@ footer {
       color: #e0f7fa;
       font-size: 100%; }
 
-/*
- * Animation gating for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
- * The shared animateContact helper (animation_helpers.js) fades these elements in, so keep the child selectors in sync with that helper and with the section's markup.
- * Without JS the .js-animations class is never added and the content remains fully visible.
- */
 html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
   opacity: 0; }
 

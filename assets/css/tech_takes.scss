@@ -1,5 +1,3 @@
-/* https://www.w3schools.com/Css/css_selectors.asp */
-
 // /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
 // $luna_of_gale_1: #d6e4f5;
 // $luna_of_gale_2: #a4c8df;
@@ -45,9 +43,6 @@
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
 $dark_blue_gray_1: #20203c;
 $dark_blue_gray_2: #7a7a99;
-/* _3 tuned brighter than the source #7a7a99 (3.80:1, failed WCAG AA) so body
-   paragraphs, links, list items, h3/h4 and table/glossary text clear AA at
-   5.83:1 on the _1 bg. (This also de-duplicates _3 from the unused _2.) */
 $dark_blue_gray_3: #9a9ac2;
 $dark_blue_gray_4: #c2c2d1;
 $dark_blue_gray_5: #ff5c5c;
@@ -65,22 +60,12 @@ $reading_progress_fill: #00c27c;
         $h3: $dark_blue_gray_3,
         $h4: $dark_blue_gray_3
     );
-    /* In-prose links: _4 (8.95:1) is brighter than the _3 body text, underlined so links do not rely on color alone (WCAG 1.4.1). _4 tops the neutral ramp (_5 is the red heading accent), so hover thickens the underline. */
     @include proseLinks($dark_blue_gray_4, $dark_blue_gray_4, $thicken-on-hover: true);
     @include bodyText($dark_blue_gray_3);
-    /* Section permalink buttons: _3 matches the surrounding body text (5.83:1 on the _1 shell) and _4 brightens on hover (8.95:1), the same pair the in-prose links use. */
     @include sectionPermalink($dark_blue_gray_3, $dark_blue_gray_4);
-    /* Every opinion section uses unordered lists (KAN, Cryptocurrency, AGI,
-       Privacy, ProductPlacement), so the shared placeholder is where this
-       belongs. Without it those <li>s fell back to the UA text color on the
-       $dark_blue_gray_1 background and inherited `body { text-align: center }`.
-       _3 matches the surrounding body text at 5.83:1. Ordered lists are not
-       shared - only #VibeCodingScourge has an <ol> - so orderedListText is
-       included at that call site instead. */
     @include unorderedListText($dark_blue_gray_3);
 }
 
-/* Shared table styling for opinions that include a comparison table. */
 %techTakeTable {
     @include dataTable($dark_blue_gray_3);
     // Links inside a cell stay at the cell's own tone in every state, so a linked row header does not out-shout the surrounding data.
@@ -98,7 +83,6 @@ $reading_progress_fill: #00c27c;
     }
 }
 
-/* Shared definition-list styling for opinions that use a glossary. */
 %techTakeDl {
     dl {
         text-align: left;
@@ -111,9 +95,6 @@ $reading_progress_fill: #00c27c;
         dd {
             margin: 0;
             padding: 0 0 2em 0;
-            /* The <ul>s inside a <dd> are covered by the section-level
-               unorderedListText include, which emits the same color and size
-               at lower specificity; no override is needed here. */
         }
     }
 }
@@ -148,9 +129,6 @@ $reading_progress_fill: #00c27c;
 
 #VibeCodingScourge {
     @extend %techTakeSection;
-    /* The only section on the page with an <ol>, so the ordered-list rule stays
-       here rather than in %techTakeSection. Unordered lists come from the
-       placeholder. */
     @include orderedListText($dark_blue_gray_3);
     @include blockQuote($dark_blue_gray_3);
 }
@@ -161,25 +139,12 @@ $reading_progress_fill: #00c27c;
     "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > blockquote, > a"
 );
 
-/* Reading-time pill rendered next to "Last Updated:". Unscoped, so it is the
-   base rule for every page that loads reading_engagement.js, not just this
-   one; guides.scss overrides the color with its own palette. */
 .readingTime {
     font-style: italic;
     color: $dark_blue_gray_4;
     font-size: 95%;
 }
 
-/* Visible Atom subscribe link in the page intro. The intro sits on the
-   global $noir_2 body background, where this page's _3 text tone fails AA
-   (3.95:1); _4 clears it at 6.07:1 and hover uses $noir_5 (7.22:1, the
-   documented intro-paragraph pair).
-
-   .feedSubscribe now appears on guides.html as well, whose intro sits on the
-   same global $noir_2 background, so the same two ratios hold there and the
-   rule is deliberately left unscoped rather than duplicated into guides.scss
-   with the Techno Serenity palette. If a third page ever adopts the class on a
-   different background, split this rule instead of widening it. */
 .feedSubscribe a:link,
 .feedSubscribe a:visited {
     color: $dark_blue_gray_4;
@@ -191,11 +156,6 @@ $reading_progress_fill: #00c27c;
     color: $noir_5;
 }
 
-/* Reading progress bar — fixed strip at the top of the viewport that
- * fills left-to-right as the reader scrolls down. Injected dynamically
- * by reading_engagement.js, so it appears on Guides as well. z-index sits
- * above the sticky header
- * (which uses 100). */
 #reading-progress {
     position: fixed;
     top: 0;

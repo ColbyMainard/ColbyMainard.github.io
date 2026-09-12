@@ -19,27 +19,6 @@ $emerald_efficiency_3: #50c3a1;
 $emerald_efficiency_4: #a1d9b0;
 $emerald_efficiency_5: #e0f7fa;
 
-// ---------------------------------------------------------------------------
-// Shared section mixins.
-//
-// Every per-page partial used to re-declare the same section shell, heading
-// ramp, link treatment, data-table skeleton, and animation-gating pair,
-// differing only in which palette variable each rule referenced. A structural
-// change (a heading size, a border style, a newly animated element type) had to
-// be made in six files in lockstep or the pages would silently drift apart.
-//
-// These mixins hold that structure once; each partial passes its own palette.
-// Anything genuinely page-specific (the hobbies iframe, the tech-takes
-// glossary, per-cell link colors) stays at the call site.
-//
-// Comments here are silent (//) so they stay out of the compiled stylesheet.
-// The loud (/* */) contrast notes inside the partials are deliberate and do
-// ship, so keep them where they are relative to the rule they document.
-// ---------------------------------------------------------------------------
-
-/// The card every content section sits in. Callers pass either $padding (full
-/// shorthand) or $padding-bottom, matching whichever the partial originally
-/// declared, so no section's box model shifts.
 @mixin sectionShell($background, $padding: null, $padding-bottom: null) {
     margin: auto;
     background-color: $background;
@@ -55,57 +34,16 @@ $emerald_efficiency_5: #e0f7fa;
     margin-bottom: 2em;
     font-family: "Courier New", monospace;
 
-    // Forced colors (Windows High Contrast and the equivalent on other
-    // platforms) replaces every author background-color with the user's own
-    // Canvas color. The card's tinted panel is the ONLY thing separating one
-    // section from the next here, so under forced colors all seven pages
-    // collapse into one undivided column of text with nothing marking where a
-    // section starts. A border is the documented replacement: forced-colors
-    // keeps borders and repaints them in CanvasText, which is guaranteed to
-    // contrast with Canvas.
-    //
-    // It lives in the mixin rather than in each partial for the usual reason:
-    // this is structure, not palette, and every caller needs it identically.
-    // The border is deliberately not in the base rule, because outside forced
-    // colors the background tint already does this job and a ring on every card
-    // would be a visual change to all seven pages.
     @media (forced-colors: active) {
         border: 1px solid CanvasText;
     }
 }
 
-// Heading size ladder, shared by the headingRamp mixin, the global `body`
-// headings, and the footer's #contactMe ramp — the three places that used to
-// repeat the same 500/300/200/175% literals.
-//
-// The ladder was previously fixed at those percentages with no responsive
-// downscale, so an 80px monospace h1 (0.6em character advance, ~48px per glyph)
-// inside a `width: 80%` section shell could not fit a long word on a 320px
-// viewport and forced the page to scroll sideways — a WCAG 1.4.10 Reflow
-// failure, and exactly what a low-vision user hits at 400% zoom.
-//
-// Each clamp keeps the old size as its maximum, so nothing changes on desktop
-// at a 16px root (5rem = 500% of 16px = 80px, and so on down). The `vw` middle
-// term shrinks with the viewport, and browser zoom shrinks the viewport in CSS
-// pixels, so one expression covers both the narrow-screen and the zoomed case.
-// The `overflow-wrap: break-word` rule further down is the actual guarantee
-// against an unbreakable word; these clamps keep headings proportionate.
 $heading_size_1: clamp(2rem,     8vw,   5rem);    // was 500% — 80px at a 16px root
 $heading_size_2: clamp(1.5rem,   5vw,   3rem);    // was 300% — 48px
 $heading_size_3: clamp(1.25rem,  3.5vw, 2rem);    // was 200% — 32px
 $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
 
-/// Heading ramp. The size ladder is identical site-wide (see $heading_size_*)
-/// and only the colors differ. Pass null for a level the page has no markup for
-/// and no rule is emitted, which is why 404.html gets no h1 rule and hobbies
-/// gets no h4 rule.
-///
-/// Shrinking these does not put any caller below WCAG AA: every partial's
-/// heading colors were tuned against the 4.5:1 body-text threshold rather than
-/// the 3:1 large-text one (see the contrast notes in index.scss, tech_takes.scss,
-/// tech_resources.scss, privacy_policy.scss, hobbies.scss, page_not_found.scss),
-/// so they do not depend on staying above the 24px large-text cutoff. The one
-/// place that does is the footer's #contactMe h2, which sets its own floor.
 @mixin headingRamp($h1: null, $h2: null, $h3: null, $h4: null) {
     @if $h1 != null {
         h1 {
@@ -173,13 +111,6 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-/// In-prose links. Three variants existed across the partials:
-///   underline, same color on hover, thicker rule  (index, tech_takes)
-///   underline, brighter color on hover            (hobbies, tech_resources, privacy)
-///   no underline, brighter color on hover         (guides, 404)
-/// The underlined variants satisfy WCAG 1.4.1 by not relying on color alone;
-/// the two pages using the third variant sit on their own palettes, where the
-/// per-partial contrast notes record the ratios.
 @mixin proseLinks($base, $hover, $underline: true, $thicken-on-hover: false) {
     a:link,
     a:visited {
@@ -204,11 +135,6 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-/// Data-table skeleton: solid outer border, double-ruled headers, groove-ruled
-/// cells, all in one tone. Pages needing extra rules inside a cell (nested
-/// lists, <details> summaries, per-cell link colors) add a `table tr td { ... }`
-/// block at the call site, which resolves to the same selector the nested
-/// version produced.
 @mixin dataTable($color) {
     table {
         text-align: left;
@@ -239,30 +165,6 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-/// Section permalink control, appended by section_permalinks.js as the last
-/// child of each section card on tech_takes.html, guides.html and
-/// tech_resources.html. Structure is identical on all three and only the
-/// palette differs, which is why it lives here rather than being written out
-/// three times.
-///
-/// It used to sit inline inside the h2, which put a control in the middle of
-/// every heading and made the heading itself read as chrome. It now closes the
-/// card instead: a reader who has finished a stance, a guide or a resource list
-/// is exactly the reader who wants to send it to someone, and end-of-section is
-/// where "Cite this guide:" already lives.
-///
-/// $base and $hover must both clear 4.5:1 on the section shell they sit on: the
-/// button carries a real text label, so it is text for contrast purposes, not a
-/// UI glyph at 3:1. The focus ring is the same solid currentColor outline used
-/// by .floatingBackToTop, .tableScroll and main a:focus-visible.
-///
-/// The rest of the treatment deliberately echoes the components already on
-/// these pages: the 10px radius is the section shell's own, the 1px rule and
-/// the letter-spacing come from the card's tables and the header brand, and the
-/// hover tint is the same "lift toward the brighter end of the palette" move
-/// that proseLinks and .floatingBackToTop both make. font-size is absolute
-/// rather than a percentage because a percentage would inherit whatever the
-/// surrounding block sets and drift between pages.
 @mixin sectionPermalink($base, $hover) {
     .sectionPermalinkWrap {
         margin: 2.5em 0 0.5em 0;
@@ -288,11 +190,6 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
         &:active,
         &:focus {
             color: $hover;
-            // Tint rather than a solid fill: the hover color is a palette tone
-            // chosen against the card background, and painting it as a
-            // background would put the label on a surface nothing has verified.
-            // 12% alpha of the same tone reads as a press target and leaves the
-            // documented text contrast untouched.
             background-color: rgba($hover, 0.12);
         }
 
@@ -301,21 +198,12 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
             outline-offset: 2px;
         }
 
-        // Forced colors discards both the tint and the palette tones. The
-        // border is kept (forced-colors repaints borders in CanvasText), so the
-        // control still reads as a button rather than as a line of text.
         @media (forced-colors: active) {
             border-color: CanvasText;
         }
     }
 }
 
-/// Animation gating. Elements start invisible only when JS is active, and the
-/// reduced-motion safety net re-reveals them so content can never be trapped at
-/// opacity: 0 (for example when the OS setting is toggled after load). The two
-/// halves must always ship together, which is precisely why they belong in one
-/// mixin rather than two hand-copied blocks per partial. $sections and
-/// $children are selector-list strings.
 @mixin animationGate($sections, $children) {
     html.js-animations {
         #{$sections} {
@@ -346,18 +234,12 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
 
 /* https://www.w3schools.com/Css/css_selectors.asp */
 
-/* can be compiled to css with `sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css` */
-
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
     }
 }
 
-/* Keep anchored and keyboard-focused targets clear of the sticky header (WCAG 2.4.11). 
-   scroll-padding-top on the scroll container offsets both fragment-jump navigation and focus scrolling, so scroll-margin-top on the targets is intentionally omitted (it would stack and double the gap).
-   The value approximates the header height: ~2 stacked nav rows on desktop, a single collapsed row on mobile.
-   Verify if the nav layout changes. */
 html {
     scroll-padding-top: 8rem;
 }
@@ -381,24 +263,15 @@ html {
     border: 0;
 }
 
-/* Abbreviation affordance. This file previously targeted `abbr` nowhere on purpose, and both CLAUDE.md and AGENTS.md recorded that; the convention was changed deliberately on 2026-09-03, so this rule is not drift.
-   The reasoning: 72 <abbr title="..."> elements carry a spelled-out expansion, and with no styling nothing on the page says an expansion exists. Browsers show it on hover only, so the annotation reached sighted mouse users and nobody else.
-   A dotted underline marks which words carry one. It is not a full fix: the title attribute is still unreachable by keyboard (abbr is not focusable) and by touch (no hover), and making it reachable means either a tab stop on all 72 or spelling the term out in prose. This rule is the cheap half.
-   No color is set. text-decoration draws in currentColor, so the underline inherits whichever section tone the abbreviation already sits in, and every one of those is kept at AA by its partial. */
 abbr[title] {
     text-decoration: underline dotted;
     cursor: help;
 }
 
-/* Horizontal-scroll container for wide data tables.
-   The table scrolls inside this box instead of widening the page on narrow viewports (WCAG 1.4.10).
-   A wrapper is used rather than `display: block` on the <table> itself, which would strip the table's semantics and its scope-ed row/column headers. */
 .tableScroll {
     max-width: 100%;
     overflow-x: auto;
 
-    /* Each wrapper carries tabindex="0" + role="region" so a keyboard-only user can focus it and scroll with the arrow keys (WCAG 2.1.1); a focusable element has to show where focus is.
-       The global `main a:focus-visible` rule below covers links only, so the container needs its own ring. currentColor tracks each section's body text color, which every partial keeps at AA (>=4.5:1), clearing the 3:1 non-text contrast minimum. */
     &:focus-visible {
         outline: 2px solid currentColor;
         outline-offset: 2px;
@@ -453,11 +326,6 @@ header {
         right: 16px;
         top: 10px;
         line-height: 1;
-        // WCAG 2.5.5 Target Size (Enhanced). Padding alone left this control
-        // near 30px tall, which passes 2.5.8 but is small for a thumb and would
-        // shrink further if the glyph's font-size were ever reduced. The floor
-        // is stated here so no later type change can quietly undercut it; the
-        // mobile rule below centers the glyph inside the enlarged box.
         min-height: 44px;
         min-width: 44px;
 
@@ -469,8 +337,6 @@ header {
             background-color: rgba($emerald_efficiency_3, 0.3);
         }
 
-        /* Same solid outline as .floatingBackToTop, .tableScroll and main a:focus-visible. The previous indicator suppressed the outline and painted a 3px box-shadow ring, which forced-colors mode discards outright, leaving a keyboard user with no focus indicator at all on the primary navigation.
-           currentColor here is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1, the pair this file already documents at 4.78:1, so the ring clears the 3:1 non-text minimum outside forced colors too. */
         &:focus-visible {
             outline: 2px solid currentColor;
             outline-offset: 2px;
@@ -492,7 +358,6 @@ header {
 
         a {
             display: inline-block;
-            /* _5 = 5.85:1 on the darkened strip (AA); _4 was 4.05:1 */
             color: $emerald_efficiency_5;
             text-decoration: none;
             padding: 14px 24px;
@@ -512,8 +377,7 @@ header {
                 border-bottom-color: $emerald_efficiency_5;
                 font-weight: bold;
             }
-
-            /* Solid outline for the same reason as the nav toggle above: a box-shadow ring is dropped entirely in forced colors, and the outline it replaced was suppressed. currentColor is $emerald_efficiency_5 (#e0f7fa) over $emerald_efficiency_1 at 4.78:1, past the 3:1 non-text minimum. */
+            
             &:focus-visible {
                 outline: 2px solid currentColor;
                 outline-offset: 2px;
@@ -525,11 +389,6 @@ header {
         background-color: $emerald_efficiency_1;
         padding: 0;
 
-        // The section nav is a <ul> so screen readers announce how many
-        // sections the page has and where in that list each entry sits. The
-        // list affordances are reset here and the flex row moved onto the
-        // <ul>, so the rendered result is identical to the bare-anchor markup
-        // it replaced.
         nav ul {
             list-style: none;
             margin: 0;
@@ -541,16 +400,12 @@ header {
             gap: 0;
         }
 
-        // Was `a:first-child` when the anchors were siblings. Each anchor is
-        // now the only child of its <li>, so that selector would match every
-        // one of them and erase the dividers.
         li:first-child a {
             border-left: none;
         }
 
         a {
             display: inline-block;
-            /* _5 = 4.78:1 on _1 (AA); _3 was 2.45:1 */
             color: $emerald_efficiency_5;
             text-decoration: none;
             padding: 10px 18px;
@@ -560,11 +415,9 @@ header {
 
             &:hover {
                 color: $emerald_efficiency_5;
-                /* darken, not tint: a _3 tint under _5 text tops out ≈4.3:1 */
                 background-color: darken($emerald_efficiency_1, 5%);
             }
 
-            /* Solid outline for the same reason as the two rules above. currentColor is $emerald_efficiency_5 (#e0f7fa); the resting background is $emerald_efficiency_1 at 4.78:1 and the hover state darkens it further, so both states clear the 3:1 non-text minimum. */
             &:focus-visible {
                 outline: 2px solid currentColor;
                 outline-offset: 2px;
@@ -576,9 +429,6 @@ header {
 @media (max-width: 768px) {
     header {
         .nav-toggle {
-            // flex, not block: the 44px minimum above makes the box taller and
-            // wider than the glyph, so it has to be centered rather than
-            // sitting at the padding origin.
             display: flex;
             align-items: center;
             justify-content: center;
@@ -604,8 +454,6 @@ header {
         }
 
         #siteMenu nav {
-            // navbar.js toggles .open on the <nav>, so the collapse stays here
-            // while the <ul> inside owns the stacking direction.
             display: none;
 
             &.open {
@@ -644,9 +492,6 @@ body {
         font-size: $heading_size_3;
     }
     p {
-        /* $noir_4 (#a0a0b0) on $noir_2 is only 4.14:1; $noir_5 clears WCAG AA
-           (7.22:1). This global rule styles the #introSectionDiv lead paragraph
-           on every page (section partials override their own <p> color). */
         color: $noir_5;
         font-size: 100%;
     }
@@ -661,22 +506,10 @@ body {
     }
 }
 
-/* Headings are the longest unbroken strings on the site (page titles like
-   "Curated AI, Cybersecurity & Programming Learning Resources") and sit inside
-   `width: 80%` section shells, so on a 320px viewport a single long word can be
-   wider than its container no matter how far the $heading_size_* clamps scale
-   the type down. Allowing a break inside the word is what actually guarantees
-   the page never scrolls sideways (WCAG 1.4.10 Reflow); the clamps handle
-   proportion. Applied globally so section, body, and footer headings are all
-   covered by one rule. */
 h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
-/* Keyboard focus ring for in-content links. The section partials set link
-   colors; this gives every in-prose link a visible focus indicator over the
-   varied section backgrounds. currentColor tracks the link color, which each
-   partial keeps at AA (>=4.5:1), so the ring clears the 3:1 non-text minimum. */
 main a:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px;
@@ -704,11 +537,8 @@ main a:focus-visible {
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     z-index: 200;
 
-    /* visibility, not just opacity: pointer-events alone stops the mouse but leaves the button in the tab order, so a keyboard user tabbing the top of any page reached a control that rendered nothing and drew its focus ring on a fully transparent element (WCAG 2.4.7 Focus Visible, and 4.1.2 since the aria-label announced a control with no visual presence). visibility: hidden removes it from the tab order instead.
-       Safe against the fade because back_to_top.js adds .visible immediately on show and only removes it after the 320ms hide timeout, so visibility flips on before the fade-in starts and off after the fade-out finishes. The opacity tween is AnimeJS inline, not in the transition list above, so visibility needs no entry there. */
     visibility: hidden;
 
-    /* Mirrors .easterEggCard.visible and .cookieConsent.visible: the class toggle is the only reveal path when reduced motion is on or AnimeJS is unreachable, so it must raise opacity itself rather than relying on the tween. Without this the button is transparent but still clickable. */
     &.visible {
         opacity: 1;
         transform: translateY(0);
@@ -723,8 +553,6 @@ main a:focus-visible {
         color: $emerald_efficiency_5;
     }
 
-    /* Same solid outline as .tableScroll and main a:focus-visible. The previous indicator was a 3px box-shadow at 60% alpha, which composited over whichever section happened to be scrolled behind the fixed button, so its contrast could not be verified.
-       currentColor here is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states. Every surface this button can sit over is a dark section shell or the $noir_2 body (#3e3e41), the lightest of them at 9.5:1, so the ring clears the 3:1 non-text contrast minimum everywhere. */
     &:focus-visible {
         outline: 2px solid currentColor;
         outline-offset: 2px;
@@ -758,8 +586,6 @@ main a:focus-visible {
     font-family: "Courier New", monospace;
     opacity: 0;
     transform: translateY(12px);
-    /* Mirrors .floatingBackToTop: an un-revealed card must not swallow clicks
-       on the content behind it. */
     pointer-events: none;
     transition: opacity 0.25s ease, transform 0.25s ease;
 
@@ -832,10 +658,6 @@ main a:focus-visible {
     }
 }
 
-/* Inline + block code styling.
- * For syntax highlighting on <pre><code class="language-X"> blocks, drop in
- * Prism.js (https://prismjs.com/) — these base styles are designed to remain
- * reasonable both with and without it. */
 code {
     font-family: "Courier New", monospace;
     font-size: 95%;
@@ -868,8 +690,6 @@ pre {
     }
 }
 
-/* Cookie consent banner — fixed bottom strip explaining analytics cookies.
- * Hidden until the JS module attaches it; .visible fades it in. */
 .cookieConsent {
     position: fixed;
     left: 0;
@@ -933,15 +753,11 @@ pre {
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-        // Same 44px floor as .nav-toggle and .cookiePreferences-button. The
-        // current padding and type size already clear it; stating it keeps a
-        // future font-size edit from silently shrinking the target.
         min-height: 44px;
         min-width: 44px;
     }
 
     .cookieConsent-accept {
-        /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
         background-color: $emerald_efficiency_1;
         border: 2px solid $emerald_efficiency_3;
         color: $emerald_efficiency_5;
@@ -953,9 +769,6 @@ pre {
             border-color: $emerald_efficiency_5;
         }
 
-        /* Same solid outline as .floatingBackToTop, and for the same reason. This banner is also fixed-positioned, so a 3px box-shadow at 60% alpha composited over whichever section happened to be scrolled behind it and its contrast could not be verified. That indicator was already rejected once on the back-to-top button; the consent buttons simply never got the fix.
-           currentColor is $emerald_efficiency_5 (#e0f7fa) in both the resting and hover states, and the ring draws on the banner's own rgba($noir_1, 0.97) surface at 15.9:1, well past the 3:1 non-text contrast minimum.
-           The `outline: none` that used to sit in the :hover, :focus block above is gone deliberately: it stripped the indicator outright for anyone whose browser has not resolved :focus-visible. */
         &:focus-visible {
             outline: 2px solid currentColor;
             outline-offset: 2px;
@@ -973,7 +786,6 @@ pre {
             color: $emerald_efficiency_5;
         }
 
-        /* Solid outline for the same reason as .cookieConsent-accept above; see the note there. currentColor is $emerald_efficiency_4 (#a1d9b0) at rest and _5 on hover, giving 10.8:1 and 15.9:1 on the banner surface. */
         &:focus-visible {
             outline: 2px solid currentColor;
             outline-offset: 2px;
@@ -1005,7 +817,6 @@ pre {
     }
 }
 
-/* Inline preferences controls used on the Privacy Policy page so visitors can change their consent decision after the banner has been dismissed. */
 .cookiePreferences {
     display: flex;
     flex-wrap: wrap;
@@ -1020,7 +831,6 @@ pre {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    // Matches the .cookieConsent-button floor; see the note there.
     min-height: 44px;
     min-width: 44px;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
@@ -1033,7 +843,6 @@ pre {
         background-color: rgba($emerald_efficiency_3, 0.15);
     }
 
-    /* Solid outline, matching the two .cookieConsent buttons; see the note on .cookieConsent-accept for why the box-shadow ring was dropped. These sit on the Privacy Policy section background ($refined_professionalism_1), where currentColor is $emerald_efficiency_5 (#e0f7fa) at 10.1:1, or _4 at 6.8:1 where .cookiePreferences-reject overrides it. Both clear the 3:1 non-text minimum. */
     &:focus-visible {
         outline: 2px solid currentColor;
         outline-offset: 2px;
@@ -1041,7 +850,6 @@ pre {
 }
 
 .cookiePreferences-accept {
-    /* _5 on _1 = 4.78:1 (AA); the previous _2 bg left the label at ≈3.2:1 */
     background-color: $emerald_efficiency_1;
     font-weight: bold;
 
@@ -1052,11 +860,6 @@ pre {
     }
 }
 
-/* Mirrors .cookieConsent-reject's treatment: the secondary action reads dimmer
-   than its accept sibling, then brightens on interaction. Only the text color
-   differs from .cookiePreferences-button, which already supplies the transparent
-   background, the _3 border, and the same hover fill. _4 on the Privacy Policy
-   section background (refined_professionalism_1) = 6.8:1, clear WCAG AA. */
 .cookiePreferences-reject {
     color: $emerald_efficiency_4;
 
@@ -1070,60 +873,30 @@ footer {
     width: 100%;
     text-align: center;
     background-color: $emerald_efficiency_1;
-    /* Bottom apron below the last line, replacing the trailing <br> the sub-pages used to carry (index never had one; now all pages match). */
     padding-bottom: 1em;
 
-    /* Same forced-colors reasoning as the header: the green band is the only boundary between the last section and the footer, and it is not painted under forced colors. */
     @media (forced-colors: active) {
         border-top: 1px solid CanvasText;
     }
     #contactMe {
         font-family: "Courier New", monospace;
-        /* h2 is the only heading level this footer styles, because h2 is the
-           only level any of the seven pages puts in a footer. The same
-           assumption is encoded in animation_helpers.js `animateContact`
-           (which animates "h2, p, a") and in the #contactMe animation gate
-           further down. This mirrors the headingRamp convention of emitting no
-           rule for a level the markup never uses.
-
-           There used to be h1 and h3 rules here. Both were dead, and the h1
-           was a trap: _2 on _1 is 1.49:1, unreadable if anyone had ever added
-           one. They were removed rather than recolored.
-
-           BEFORE ADDING an h1 or h3 here, note that deleting those rules means
-           such a heading now falls through to the global `body` ramp, which is
-           $noir_5 — only 3.60:1 against this green background. That is AA for
-           an h1 (floored at 2rem, so it clears the 24px large-text cutoff and
-           the 3:1 threshold) but NOT for an h3, whose shared floor is 1.25rem
-           (20px) and therefore needs the full 4.5:1. Give any new h3 an
-           explicit color of _5 (4.78:1). */
-
-        /* This carries its own clamp rather than $heading_size_2 because _4 is
-           3.31:1 on _1, which is AA only while the text stays at or above the
-           24px WCAG large-text cutoff. Raise the color to _5 (4.78:1) before
-           lowering the floor. */
         h2 {
             font-size: clamp(1.5rem, 5vw, 3rem);
-            /* _4 = 3.31:1 on _1 — AA for text at/above 24px; _3 was 2.45:1 */
             color: $emerald_efficiency_4;
         }
-        /* unvisited link */
         a:link {
             color: $emerald_efficiency_5;
             font-size: 100%;
         }
-        /* visited link — _5 like :link (no emerald tint between _4 and _5 reaches 4.5:1 on _1); visited is distinguished by underline style */
         a:visited {
             color: $emerald_efficiency_5;
             font-size: 100%;
             text-decoration: underline dotted;
         }
-        /* mouse over link */
         a:hover {
             color: $emerald_efficiency_5;
             font-size: 100%;
         }
-        /* selected link */
         a:active {
             color: $emerald_efficiency_4;
             font-size: 100%;
@@ -1135,9 +908,4 @@ footer {
     }
 }
 
-/*
- * Animation gating for the footer contact section — identical on every page, so it lives here instead of being repeated in each per-page partial.
- * The shared animateContact helper (animation_helpers.js) fades these elements in, so keep the child selectors in sync with that helper and with the section's markup.
- * Without JS the .js-animations class is never added and the content remains fully visible.
- */
 @include animationGate("#contactMe", "> h2, > p, > a");
