@@ -232,8 +232,6 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
 @import "guides";
 @import "page_not_found";
 
-/* https://www.w3schools.com/Css/css_selectors.asp */
-
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
@@ -250,7 +248,6 @@ html {
     }
 }
 
-/* Visually-hidden utility: keeps content available to screen readers while removing it from the visual layout. Used for accessible table <caption>s. */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -278,7 +275,6 @@ abbr[title] {
     }
 }
 
-/* <main> is focused programmatically by the skip link; don't paint a ring. */
 main.main:focus {
     outline: none;
 }
@@ -293,7 +289,6 @@ header {
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
-    /* Forced colors drops both the background tint and the box-shadow, which together are what lift this sticky bar off the content scrolling underneath it. A CanvasText rule is the replacement; without it the nav and the first section run together as one block of text. */
     @media (forced-colors: active) {
         border-bottom: 1px solid CanvasText;
     }
@@ -308,7 +303,6 @@ header {
         text-decoration: none;
 
         &:hover {
-            /* Hover cue is an underline, not a color swap: _4 gave 3.31:1 on _1, AA only while this text stays above the large-text cutoff (~0.5px to spare at default root size). Keeping _5 holds 4.78:1 at any size. */
             text-decoration: underline;
         }
     }
@@ -569,7 +563,6 @@ main a:focus-visible {
     }
 }
 
-/* Konami-code joke card, injected by easter_egg.js. Anchored bottom-left so it never sits under the back-to-top button on the opposite corner. $noir_5 on $noir_1 is 11.75:1; the buttons reuse the $emerald_efficiency_5-on-_1 pair already verified at 4.78:1 for .floatingBackToTop. */
 .easterEggCard {
     position: fixed;
     left: 24px;
@@ -595,7 +588,6 @@ main a:focus-visible {
         pointer-events: auto;
     }
 
-    /* Focused programmatically on reveal, the same way main.main is by the skip link. The card announces itself through its accessible name, so a ring around the whole card would be noise. */
     &:focus {
         outline: none;
     }
@@ -644,14 +636,12 @@ main a:focus-visible {
 @media (max-width: 768px) {
     .easterEggCard {
         left: 16px;
-        /* Clear the back-to-top button (44px wide at right: 16px) plus a gap. */
         right: 80px;
         bottom: 16px;
         max-width: none;
     }
 }
 
-/* Safety net paired with the JS-side prefersReducedMotion() check in easter_egg.js, so a mid-session OS toggle can never leave the card mid-fade. */
 @media (prefers-reduced-motion: reduce) {
     .easterEggCard {
         transition: none;
