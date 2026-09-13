@@ -61,6 +61,10 @@
       color: #e64d9e;
       font-size: 100%; }
 
+#introSectionDiv .tagline {
+  color: #d4d4d9;
+  font-size: clamp(1.5rem, 5vw, 3rem); }
+
 #workHistory .bagFlap {
   fill: none;
   stroke: #AA7333;
@@ -231,7 +235,7 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #photography .photoGallery-button:hover {
     background-color: #D3DADE; }
   #photography .photoGallery-button:focus-visible {
-    outline: 2px solid #34495E;
+    outline: 2px solid #E7EAEC;
     outline-offset: 2px; }
 
 #history blockquote {
@@ -656,7 +660,11 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   padding: 1.5em 2em;
   margin-top: 2em;
   margin-bottom: 2em;
-  font-family: "Courier New", monospace; }
+  font-family: "Courier New", monospace;
+  /* The underline is declared rather than inherited from the user agent: a link
+     that is distinguished by colour alone fails WCAG 1.4.1, and the previous
+     $underline: false left that distinction to a browser default no rule here
+     guaranteed. */ }
   @media (forced-colors: active) {
     #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
       border: 1px solid CanvasText; } }
@@ -694,7 +702,8 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #cybersecurityGuide a:visited {
     text-align: left;
     color: #a3d5e0;
-    font-size: 100%; }
+    font-size: 100%;
+    text-decoration: underline; }
   #dataEngineeringGuide a:hover, #computerVisionGuide a:hover, #generativeAIGuide a:hover, #nlpGuide a:hover, #reinforcementLearningGuide a:hover, #softwareEngineeringGuide a:hover, #cybersecurityGuide a:hover,
   #dataEngineeringGuide a:active,
   #computerVisionGuide a:active,
@@ -705,7 +714,8 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #cybersecurityGuide a:active {
     text-align: left;
     color: #e0f5f2;
-    font-size: 100%; }
+    font-size: 100%;
+    text-decoration: underline; }
   #dataEngineeringGuide ul, #computerVisionGuide ul, #generativeAIGuide ul, #nlpGuide ul, #reinforcementLearningGuide ul, #softwareEngineeringGuide ul, #cybersecurityGuide ul {
     text-align: left; }
     #dataEngineeringGuide ul li, #computerVisionGuide ul li, #generativeAIGuide ul li, #nlpGuide ul li, #reinforcementLearningGuide ul li, #softwareEngineeringGuide ul li, #cybersecurityGuide ul li {
@@ -773,16 +783,13 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
 #introSectionDiv .errorCode {
   color: #f2cfa0;
   font-family: "Courier New", monospace;
-  font-size: 1000%;
+  font-size: clamp(3rem, 12.5vw, 10rem);
   font-weight: bold;
   line-height: 1;
   letter-spacing: 0.08em;
   margin: 0.25em 0 0 0;
   text-shadow: 6px 6px 0 rgba(107, 58, 58, 0.85), 12px 12px 0 rgba(0, 0, 0, 0.35); }
 
-@media (max-width: 768px) {
-  #introSectionDiv .errorCode {
-    font-size: 600%; } }
 #notFound, #helpfulLinks {
   margin: auto;
   background-color: #3a1f1f;
@@ -808,13 +815,15 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   #helpfulLinks a:visited {
     text-align: left;
     color: #f2cfa0;
-    font-size: 100%; }
+    font-size: 100%;
+    text-decoration: underline; }
   #notFound a:hover, #helpfulLinks a:hover,
   #notFound a:active,
   #helpfulLinks a:active {
     text-align: left;
     color: #fdf3e3;
-    font-size: 100%; }
+    font-size: 100%;
+    text-decoration: underline; }
   #notFound ul, #helpfulLinks ul {
     text-align: left; }
     #notFound ul li, #helpfulLinks ul li {
@@ -1318,8 +1327,10 @@ footer {
       color: #e0f7fa;
       font-size: 100%; }
     footer #contactMe a:active {
-      color: #a1d9b0;
-      font-size: 100%; }
+      color: #e0f7fa;
+      font-size: 100%;
+      text-decoration: underline;
+      text-decoration-thickness: 2px; }
     footer #contactMe p {
       color: #e0f7fa;
       font-size: 100%; }

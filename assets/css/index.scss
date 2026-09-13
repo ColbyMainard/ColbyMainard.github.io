@@ -39,6 +39,11 @@ $cyberpunk_dreams_5: #200b4b;
     @include unorderedListText($cyberpunk_dreams_2);
 }
 
+#introSectionDiv .tagline {
+    color: $noir_5;
+    font-size: $heading_size_2;
+}
+
 #workHistory {
     @extend %indexSection;
     // Laptop-bag flap: an open outline over the filled body beneath it.

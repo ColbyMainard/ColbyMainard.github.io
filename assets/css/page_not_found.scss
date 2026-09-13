@@ -8,7 +8,7 @@ $signal_lost_5: #fdf3e3;
 #introSectionDiv .errorCode {
     color: $signal_lost_4;
     font-family: "Courier New", monospace;
-    font-size: 1000%;
+    font-size: clamp(3rem, 12.5vw, 10rem);
     font-weight: bold;
     line-height: 1;
     letter-spacing: 0.08em;
@@ -16,17 +16,11 @@ $signal_lost_5: #fdf3e3;
     text-shadow: 6px 6px 0 rgba($signal_lost_2, 0.85), 12px 12px 0 rgba(0, 0, 0, 0.35);
 }
 
-@media (max-width: 768px) {
-    #introSectionDiv .errorCode {
-        font-size: 600%;
-    }
-}
-
 %notFoundSection {
     @include sectionShell($signal_lost_1, $padding: 1.5em 2em);
     @include headingRamp($h2: $signal_lost_5);
     @include bodyText($signal_lost_3);
-    @include proseLinks($signal_lost_4, $signal_lost_5, $underline: false);
+    @include proseLinks($signal_lost_4, $signal_lost_5);
     @include unorderedListText($signal_lost_3);
 }
 

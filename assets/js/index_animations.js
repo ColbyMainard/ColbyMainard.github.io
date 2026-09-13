@@ -3,9 +3,10 @@
  * Each content section has a unique animation style, synced via timelines.
  * Animations trigger on scroll via Intersection Observer.
  *
- * Heading-level note: the page uses a single page-topic <h1>; each section's
+ * Heading-level note: the page uses a single page-topic <h1>. Each section's
  * title is an <h2>, with <h3>/<h4> inside. The selectors below reflect that
- * hierarchy (after the SEO heading-hierarchy fix).
+ * hierarchy (after the SEO heading-hierarchy fix). The intro subtitle is the one
+ * exception: it is a <p class="tagline">, not a heading.
  */
 
 (function () {
@@ -36,17 +37,17 @@
 
     /**
      * Intro Section — Fade in + drop from above
-     * Page-topic h1 drops, intro-subtitle h2 scales in, paragraphs stagger up.
+     * Page-topic h1 drops, the tagline scales in, paragraphs stagger up.
      */
     function animateIntro(el) {
         var tl = introTimeline(el);
 
-        addStep(tl, el.querySelector("h2"), {
+        addStep(tl, el.querySelector(".tagline"), {
             opacity: [0, 1],
             scale: [0.8, 1],
             duration: 600
         }, ">-400");
-        addStep(tl, el.querySelectorAll("p"), {
+        addStep(tl, el.querySelectorAll("p:not(.tagline)"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 600,

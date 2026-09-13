@@ -881,7 +881,7 @@ footer {
     #contactMe {
         font-family: "Courier New", monospace;
         h2 {
-            font-size: clamp(1.5rem, 5vw, 3rem);
+            font-size: $heading_size_2;
             color: $emerald_efficiency_4;
         }
         a:link {
@@ -898,8 +898,10 @@ footer {
             font-size: 100%;
         }
         a:active {
-            color: $emerald_efficiency_4;
+            color: $emerald_efficiency_5;
             font-size: 100%;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
         }
         p {
             color: $emerald_efficiency_5;

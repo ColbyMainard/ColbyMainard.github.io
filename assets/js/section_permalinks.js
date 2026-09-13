@@ -4,9 +4,8 @@
  *
  * Appends a "Copy link" button to the end of each section card so a reader can
  * send one stance, one guide or one resource list to someone instead of the
- * whole page. The anchors already existed (the page menu navigates by them, and
- * guides.html prints seven of them as "Cite this guide:" lines); nothing
- * surfaced them.
+ * whole page. The anchors already existed, because each page menu navigates by
+ * them, but nothing surfaced them to the reader.
  *
  * Progressive enhancement in the photo_gallery.js shape: with scripting off no
  * button is rendered at all, so there is nothing dead to tab into. The status
@@ -18,9 +17,10 @@
  * WHERE THE BUTTON GOES. One control per section card, appended as the card's
  * last child and centered by .sectionPermalinkWrap. This replaced an earlier
  * version that appended the button inline inside the h2, which put a control in
- * the middle of every heading. End-of-card is where the reader who just
- * finished the section is, and it is where guides.html already prints its
- * "Cite this guide:" line.
+ * the middle of every heading. End-of-card is where the reader who just finished
+ * the section is. (Until 2026-09-06 guides.html printed a "Cite this guide:" line
+ * in this same position. Those lines were removed in commit 075515b. No page
+ * prints one now, so do not reason about this file as though one were there.)
  *
  * WHICH HEADINGS GET ONE. h2 only, which on all three pages is the heading that
  * names the card. Deeper headings do not get their own control, because a
@@ -76,7 +76,7 @@
      * pages wrap each section twice: <div id="VibeCodingScourgeDiv"> around
      * <section id="VibeCodingScourge">. Taking the nearest ancestor would hand
      * out #VibeCodingScourge, while feed.xml, the Article JSON-LD @id and url,
-     * and the "Cite this guide:" lines all publish #VibeCodingScourgeDiv.
+     * and each page's own section menu all publish #VibeCodingScourgeDiv.
      * Two URLs for one section is a duplicate-anchor problem nobody asked for,
      * so this deliberately agrees with what the rest of the site already says.
      */

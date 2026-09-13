@@ -30,9 +30,19 @@
         return btn;
     }
 
+    function focusTop() {
+        var link = document.querySelector("#primaryNav a");
+        var target = (link && link.offsetParent !== null)
+            ? link
+            : document.querySelector("main.main");
+        if (!target) return;
+        target.focus({ preventScroll: true });
+    }
+
     function scrollToTop() {
         if (prefersReducedMotion()) {
             window.scrollTo(0, 0);
+            focusTop();
             return;
         }
         if (typeof window.anime !== "undefined" && window.anime.animate) {
@@ -43,10 +53,12 @@
                 ease: "outQuart",
                 onUpdate: function () {
                     window.scrollTo(0, scroller.y);
-                }
+                },
+                onComplete: focusTop
             });
         } else {
             window.scrollTo({ top: 0, behavior: "smooth" });
+            focusTop();
         }
     }
 

@@ -72,7 +72,7 @@
     /**
      * Intro — the h1 drop that every intro section opens with. Returns the
      * timeline rather than running to completion, so a page that continues
-     * with something of its own (index's subtitle h2, hobbies' photograph)
+     * with something of its own (index's tagline paragraph, hobbies' photograph)
      * extends this instead of rebuilding the step it shares.
      */
     function introTimeline(el) {

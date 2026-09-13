@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Each <lastmod> is the date that page's own file last changed, not the date
-     this file was last touched. Derive it per page rather than stamping today
-     across the board: a sitemap where every entry carries the same date is a
-     known low-quality signal, and crawlers discount it, which costs freshness
-     credit on the pages that genuinely did change.
-
-     To recheck one entry, ask git for the committer date of that page's most
-     recent commit (git log, limited to the one path, formatted as %cs). Check
-     before committing, so a page edited in the working tree gets the date of
-     the commit it is about to land in rather than its previous one.
-
-     Repeated dates below are legitimate rather than lazy: change sets here often
-     touch several pages at once, so the procedure above genuinely returns one
-     date for more than one entry. Do not read matching dates as licence to stamp
-     today across the board next time. The guides entry carries a date ahead of
-     its last commit on purpose, per the working-tree rule above.
-
-     These dates track when the file changed. The dateModified values in each
-     page's JSON-LD track when its content changed, so the two drift apart
-     whenever a page is edited without its prose moving. That drift is expected;
-     do not "fix" it by copying one field into the other. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://colbymainard.github.io/</loc>
@@ -41,7 +20,7 @@
 	</url>
 	<url>
 		<loc>https://colbymainard.github.io/assets/html/guides.html</loc>
-		<lastmod>2026-09-05</lastmod>
+		<lastmod>2026-09-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>

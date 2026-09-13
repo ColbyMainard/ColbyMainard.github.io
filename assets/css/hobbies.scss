@@ -121,9 +121,8 @@ $calm_authority_5: #E7EAEC;
         &:hover {
             background-color: $calm_authority_4;
         }
-
         &:focus-visible {
-            outline: 2px solid $calm_authority_1;
+            outline: 2px solid $calm_authority_5;
             outline-offset: 2px;
         }
     }
