@@ -961,7 +961,11 @@ header {
     header #siteMenu li:first-child a {
       border-left: none; }
     header #siteMenu a {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      min-height: 44px;
       color: #e0f7fa;
       text-decoration: none;
       padding: 10px 18px;
@@ -1028,6 +1032,9 @@ body {
     border: 2px solid #1a1a1e;
     border-radius: 1%; }
 
+@media (max-width: 768px) {
+  body img {
+    max-width: 100%; } }
 h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word; }
 
@@ -1101,10 +1108,14 @@ main a:focus-visible {
     pointer-events: auto; }
   .easterEggCard:focus {
     outline: none; }
+  .easterEggCard:focus-visible {
+    outline: 2px solid #e0f7fa;
+    outline-offset: 2px; }
   .easterEggCard .easterEggTitle {
     margin: 0 0 0.5em;
     color: #e0f7fa;
-    font-size: 125%; }
+    font-size: 125%;
+    font-weight: bold; }
   .easterEggCard .easterEggJoke {
     margin: 0 0 1em;
     color: #d4d4d9;
@@ -1253,6 +1264,9 @@ pre {
       justify-content: center; }
     .cookieConsent .cookieConsent-button {
       flex: 1 1 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .cookieConsent {
+    transition: none; } }
 .cookiePreferences {
   display: flex;
   flex-wrap: wrap;

@@ -399,7 +399,11 @@ header {
         }
 
         a {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            min-height: 44px;
             color: $emerald_efficiency_5;
             text-decoration: none;
             padding: 10px 18px;
@@ -500,6 +504,12 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    body img {
+        max-width: 100%;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
@@ -592,10 +602,16 @@ main a:focus-visible {
         outline: none;
     }
 
+    &:focus-visible {
+        outline: 2px solid $emerald_efficiency_5;
+        outline-offset: 2px;
+    }
+
     .easterEggTitle {
         margin: 0 0 0.5em;
         color: $emerald_efficiency_5;
         font-size: 125%;
+        font-weight: bold;
     }
 
     .easterEggJoke {
@@ -804,6 +820,12 @@ pre {
         .cookieConsent-button {
             flex: 1 1 0;
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cookieConsent {
+        transition: none;
     }
 }
 
