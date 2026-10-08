@@ -842,11 +842,17 @@ html.js-animations #helpfulLinks > h2, html.js-animations #helpfulLinks > p, htm
   html {
     scroll-behavior: smooth; } }
 html {
-  scroll-padding-top: 8rem; }
+  scroll-padding-top: calc(var(--header-height, 7.5rem) + 0.5rem); }
+
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: calc(var(--header-height, 3rem) + 0.5rem); } }
+html:has(.cookieConsent.visible) {
+  scroll-padding-bottom: var(--cookie-banner-height, 7rem); }
 
 @media (max-width: 768px) {
-  html {
-    scroll-padding-top: 3.5rem; } }
+  html:has(.cookieConsent.visible) {
+    scroll-padding-bottom: var(--cookie-banner-height, 19rem); } }
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -979,32 +985,39 @@ header {
         outline: 2px solid currentColor;
         outline-offset: 2px; }
 
-@media (max-width: 768px) {
-  header .nav-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  header #pageMenu nav {
-    display: none;
-    flex-direction: column; }
-    header #pageMenu nav.open {
-      display: flex; }
-    header #pageMenu nav a {
-      padding: 12px 20px;
-      border-bottom: 1px solid rgba(80, 195, 161, 0.1);
-      border-bottom-width: 1px; }
-      header #pageMenu nav a:hover {
-        border-bottom-width: 1px; }
-  header #siteMenu nav {
-    display: none; }
-    header #siteMenu nav.open {
-      display: block; }
-    header #siteMenu nav ul {
+@media (max-width: 1024px) {
+  header {
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto; }
+    header #pageMenu nav a:focus-visible,
+    header #siteMenu nav a:focus-visible {
+      outline-offset: -2px; }
+    header .nav-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    header #pageMenu nav {
+      display: none;
       flex-direction: column; }
-    header #siteMenu nav a {
-      border-left: none;
-      padding: 10px 20px;
-      border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
+      header #pageMenu nav.open {
+        display: flex; }
+      header #pageMenu nav a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(80, 195, 161, 0.1);
+        border-bottom-width: 1px; }
+        header #pageMenu nav a:hover {
+          border-bottom-width: 1px; }
+    header #siteMenu nav {
+      display: none; }
+      header #siteMenu nav.open {
+        display: block; }
+      header #siteMenu nav ul {
+        flex-direction: column; }
+      header #siteMenu nav a {
+        border-left: none;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
 body {
   width: 100%;
   margin: auto;

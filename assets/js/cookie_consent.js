@@ -166,6 +166,31 @@
         return wrap;
     }
 
+    // Publishes the banner's rendered height as --cookie-banner-height. The
+    // scroll-padding-bottom rule in default.scss reads it so that a newly
+    // focused element stops above the banner instead of behind it (WCAG
+    // 2.4.11). The height depends on how the message wraps at the current
+    // width, so it is measured rather than guessed. Without ResizeObserver the
+    // CSS falls back to fixed estimates.
+    var bannerResizeObserver = null;
+
+    function trackBannerHeight(el) {
+        if (typeof ResizeObserver === "undefined") return;
+        bannerResizeObserver = new ResizeObserver(function () {
+            document.documentElement.style.setProperty(
+                "--cookie-banner-height", el.offsetHeight + "px");
+        });
+        bannerResizeObserver.observe(el);
+    }
+
+    function untrackBannerHeight() {
+        if (bannerResizeObserver) {
+            bannerResizeObserver.disconnect();
+            bannerResizeObserver = null;
+        }
+        document.documentElement.style.removeProperty("--cookie-banner-height");
+    }
+
     function showBanner() {
         if (banner) return;
         banner = createBanner();
@@ -186,6 +211,7 @@
         } else {
             document.body.insertBefore(banner, document.body.firstChild);
         }
+        trackBannerHeight(banner);
         if (typeof window.requestAnimationFrame === "function") {
             window.requestAnimationFrame(function () {
                 if (banner) banner.classList.add("visible");
@@ -199,6 +225,7 @@
         if (!banner) return;
         var leaving = banner;
         banner = null;
+        untrackBannerHeight();
         leaving.classList.remove("visible");
         setTimeout(function () {
             if (leaving && leaving.parentNode) {
@@ -207,18 +234,24 @@
         }, 320);
     }
 
+    // Both state changes refresh #cookieConsentStatus here, not in their
+    // callers. The banner's own buttons and window.cookieConsent reach these
+    // functions directly, so a refresh in any one caller left the privacy
+    // page's status reading "no choice recorded yet" after a banner choice.
     function onChoice(value) {
         writeConsent(value);
         if (value === "accepted") {
             loadAnalytics();
         }
         hideBanner();
+        updateStatusLabel();
     }
 
     function revoke() {
         clearConsent();
         hideBanner();
         showBanner();
+        updateStatusLabel();
     }
 
     function wirePreferenceControls() {
@@ -235,7 +268,6 @@
                     node.addEventListener("click", function (e) {
                         e.preventDefault();
                         actions[action]();
-                        updateStatusLabel();
                     });
                 }
             })(nodes[i]);

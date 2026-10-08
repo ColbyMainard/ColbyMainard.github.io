@@ -19,6 +19,11 @@ $emerald_efficiency_3: #50c3a1;
 $emerald_efficiency_4: #a1d9b0;
 $emerald_efficiency_5: #e0f7fa;
 
+// Widest viewport at which the header collapses behind the nav toggle. It was
+// 768px, which left a desktop browser zoomed to 200% (about 960 CSS px wide and
+// 470 tall) with both nav rows pinned across a large share of every screen.
+$nav_collapse_width: 1024px;
+
 @mixin sectionShell($background, $padding: null, $padding-bottom: null) {
     margin: auto;
     background-color: $background;
@@ -238,13 +243,30 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
+// --header-height is the sticky header's measured height, set by navbar.js.
+// The fallbacks apply when that script has not run.
 html {
-    scroll-padding-top: 8rem;
+    scroll-padding-top: calc(var(--header-height, 7.5rem) + 0.5rem);
+}
+
+@media (max-width: $nav_collapse_width) {
+    html {
+        scroll-padding-top: calc(var(--header-height, 3rem) + 0.5rem);
+    }
+}
+
+// While the consent banner is up, keep a newly focused element above it
+// instead of behind it (WCAG 2.4.11). --cookie-banner-height is the banner's
+// measured height, set by cookie_consent.js. The fallbacks fit about three
+// lines of message on desktop and about nine on a narrow phone, where the
+// banner stacks into a column.
+html:has(.cookieConsent.visible) {
+    scroll-padding-bottom: var(--cookie-banner-height, 7rem);
 }
 
 @media (max-width: 768px) {
-    html {
-        scroll-padding-top: 3.5rem;
+    html:has(.cookieConsent.visible) {
+        scroll-padding-bottom: var(--cookie-banner-height, 19rem);
     }
 }
 
@@ -424,8 +446,24 @@ header {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $nav_collapse_width) {
     header {
+        // The open menu holds both navs and can be taller than a short or
+        // landscape phone screen. A sticky element taller than the viewport
+        // cannot be scrolled from outside, so the header scrolls itself.
+        max-height: 100vh;
+        max-height: 100dvh;
+        overflow-y: auto;
+
+        // The overflow clips anything drawn outside the header, which
+        // includes the side edges of a full-width link's outset focus ring.
+        // Drawing the ring inside the link keeps all four sides visible.
+        // The ids match the specificity of the desktop focus rules above.
+        #pageMenu nav a:focus-visible,
+        #siteMenu nav a:focus-visible {
+            outline-offset: -2px;
+        }
+
         .nav-toggle {
             display: flex;
             align-items: center;

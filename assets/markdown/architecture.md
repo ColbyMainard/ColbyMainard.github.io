@@ -151,6 +151,7 @@ Anatomy decisions:
 - **Each section is double-wrapped.** The outer `<div id="…Div">` is the **public anchor**: the section nav, the `Article` JSON-LD `url`, the `feed.xml` entry link, and the "Copy link" button all point at it. The inner `<section id="…">` is the **styling and animation hook**: the SCSS partials and the `*_animations.js` section maps target it.
 - **The primary nav's current-page state is hard-coded** (`class="active" aria-current="page"`) on each page, so it exists at first paint and with scripting off. Only the section nav's "where am I" state is computed at runtime.
 - **The header is duplicated on every page.** Adding or renaming a page means editing the nav on all seven.
+- **The whole header is sticky, and it collapses at 1024 px.** Both nav rows sit inside one sticky `<header>`, so neither row can stick alone: a sticky element only sticks within its parent. To keep a zoomed desktop browser (about 960 CSS px wide at 200%) from pinning both rows across its viewport, the header collapses behind the toggle at `$nav_collapse_width` (1024 px) instead of the old 768 px. Collapsed, it is capped at `100dvh` and scrolls itself, because a sticky element taller than the viewport cannot otherwise be scrolled. `scroll-padding-top` reads the header's measured height from `--header-height`, which `navbar.js` sets.
 
 ---
 
@@ -296,7 +297,7 @@ sequenceDiagram
     D->>D: back_to_top.js and easter_egg.js initialise
     D->>D: service_worker_register.js injects the manifest link
     D->>E: queue drained, event fires
-    E->>E: navbar.js wires the toggle and section tracking
+    E->>E: navbar.js wires the toggle, measures the header, starts section tracking
     M-->>D: window.anime appears at some point, within a 3 s budget
     L->>L: service worker registers
 ```
@@ -344,7 +345,7 @@ Every file in `assets/js/` is loaded by at least one page and listed in `PRECACH
 
 ### 7.4 Ordering contracts
 
-The order of `<script>` tags in each `<head>` carries meaning. The tags themselves carry no comments explaining this, so this list and AGENTS.md are the record.
+The order of `<script>` tags in each `<head>` carries meaning. A comment above each `path_helpers.js` tag, and above each `section_permalinks.js` tag, states the rule for that tag. This list and AGENTS.md give the full reasoning.
 
 1. **`path_helpers.js` must come before `cookie_consent.js`** (and therefore before `service_worker_register.js`). If it runs late or not at all, the consent banner renders without its privacy-policy link, the manifest link is never injected, and the service worker never registers. None of these produce an error.
 2. **`animation_helpers.js` must come before every `*_animations.js`.** The page script checks for `window.AnimationHelpers` and returns if it is absent. Content then stays fully visible because the gate class is never added.
@@ -361,13 +362,16 @@ The JavaScript half:
 flowchart TD
     S["Page script calls AnimationHelpers.run(sections, animationMap)"] --> RM{"prefers-reduced-motion: reduce?"}
     RM -->|yes| V1["Return. No gate class, content visible"]
-    RM -->|no| OFF{"anime missing and navigator.onLine is false?"}
+    RM -->|no| IO{"IntersectionObserver available?"}
+    IO -->|no| V4["Return. Nothing could reveal gated content"]
+    IO -->|yes| OFF{"anime missing and navigator.onLine is false?"}
     OFF -->|yes| V2["Return. The CDN module cannot arrive offline"]
     OFF -->|no| GATE["Add js-animations to the html element<br/>CSS now hides gated children"]
     GATE --> WAIT{"window.anime defined within 3000 ms?<br/>polled every 50 ms"}
     WAIT -->|no| V3["Remove js-animations<br/>content revealed without animation"]
     WAIT -->|yes| OBS["One IntersectionObserver for all sections<br/>threshold 0.02, rootMargin bottom -50px"]
     OBS --> ONCE["First time a section intersects:<br/>run its timeline, then unobserve it"]
+    ONCE -->|timeline throws| V5["Log the key, disconnect the observer,<br/>remove js-animations"]
 ```
 
 The CSS half is the `animationGate($sections, $children)` mixin:
@@ -384,6 +388,7 @@ Animation decisions:
 - **Content is hidden only when a script has committed to revealing it.** The CSS gate keys off a class that only `run()` adds, so visitors with JavaScript off, a failed script, or a blocked CDN always see the page. Every path that ends without animating leaves the class off or removes it.
 - **The gate goes on immediately, not after AnimeJS arrives.** First paint usually happens before a cold CDN fetch resolves. Gating late would show content, snap it invisible, then animate it back in.
 - **A bounded wait.** An earlier version checked for `window.anime` once and gave up permanently when the CDN was slow. The current version polls for up to three seconds, then reveals.
+- **A failing animation reveals the page.** A section is marked animated and unobserved before its timeline runs, so a throw used to strand it at `opacity: 0`. The observer now catches the error, logs `[animations] <key> failed`, stops observing, and removes the gate. Remaining sections then show without animation, the same outcome as a CDN that never arrives.
 - **Single-shot.** Each section animates the first time it scrolls into view and never replays.
 - **Direct children only.** `directChildren()` and the gate's `> h2, > p, …` selectors match each other, so nested elements are not tweened twice. `addStep()` skips empty target lists so AnimeJS never warns about missing targets.
 - **Reduced motion is checked per call**, not cached at load, so toggling the OS setting mid-session is honored.
@@ -414,7 +419,8 @@ Consent decisions:
 - **Reject is placed before Accept** in both the DOM and the visual order, so neither choice is buried.
 - **The DOM is built with `createElement` and text nodes**, never `innerHTML`, so no markup is parsed from interpolated values.
 - **Storage failures are tolerated.** In private modes where `localStorage` throws, the banner still works; the choice just does not persist.
-- **The privacy page carries static controls**: three buttons with `data-cookie-consent="accept|reject|revoke"` and a `#cookieConsentStatus` `role="status"` paragraph that reports the current choice.
+- **The privacy page carries static controls**: three buttons with `data-cookie-consent="accept|reject|revoke"` and a `#cookieConsentStatus` `role="status"` paragraph that reports the current choice. `onChoice()` and `revoke()` refresh that paragraph themselves, so a choice made in the banner or through `window.cookieConsent` is announced too, not only one made with the privacy-page buttons.
+- **The banner never hides focus.** It is drawn over the bottom of the viewport, which is exactly where a browser stops when it scrolls a newly focused element into view. While it is visible, `html:has(.cookieConsent.visible)` sets `scroll-padding-bottom` to its height (WCAG 2.4.11). The script measures that height with a `ResizeObserver` and publishes it as `--cookie-banner-height`, because the message wraps to a different number of lines at each width. The CSS carries fixed fallbacks.
 - **Scope is deliberate.** This is a lightweight, dependency-free banner sized for the GDPR and CCPA exposure of GA4 on a personal site, not an IAB TCF consent-management platform.
 
 ### 7.7 Service worker and PWA
@@ -460,7 +466,7 @@ Service worker decisions:
 
 | Script | Pages | What it does | Key decisions |
 | --- | --- | --- | --- |
-| `navbar.js` | All | Mobile nav toggle (`aria-expanded`, Escape closes and returns focus). Tracks the section in view and sets `aria-current="location"` on the matching `#sectionNav` link. | Primary nav state is markup, not script. Section tracking uses an `IntersectionObserver` band across the upper third of the viewport (`rootMargin: -25% 0px -65% 0px`) so tall sections don't stay marked all the way down. The marker holds its last value between sections instead of blanking. |
+| `navbar.js` | All | Collapsed-nav toggle (`aria-expanded`; Escape closes and returns focus; following a menu link closes it without moving focus). Publishes the closed header's height as `--header-height` for `scroll-padding-top`. Tracks the section in view and sets `aria-current="location"` on the matching `#sectionNav` link. | Primary nav state is markup, not script. Header measurements taken while the collapsed menu is open are skipped, so a link tapped in the open menu scrolls against the closed height. Section tracking uses an `IntersectionObserver` band across the upper third of the viewport (`rootMargin: -25% 0px -65% 0px`) so tall sections don't stay marked all the way down. The marker holds its last value between sections instead of blanking. |
 | `back_to_top.js` | All | Floating button that appears after 400 px of scroll and returns to the top. | Uses AnimeJS when present and native smooth scroll otherwise. Instant under reduced motion. Moves focus to the first primary-nav link (or `main`) after scrolling. Interrupted fades resume from their live opacity. |
 | `easter_egg.js` | All | Konami code reveals a small card with a rotating developer joke. | Rolling-window key matching handles stuttered input. `role="note"`, not a dialog. It is the one script that moves focus on reveal, because the visitor asked for it with a ten-key sequence, and focus is restored on close. Ignores keystrokes in form fields. |
 | `reading_engagement.js` | tech_takes, guides | Fills each `[data-reading-time]` placeholder with "N min read" at 200 words per minute, and adds a top-of-viewport progress bar. | The progress bar is `aria-hidden` because it duplicates the scrollbar. The `·` separator is inserted by script so a no-JS page shows no dangling punctuation. Scroll updates are batched with `requestAnimationFrame`. |
@@ -633,7 +639,7 @@ Other recurring workflows, with the full checklists in [AGENTS.md](AGENTS.md#tas
 | `AGENTS.md`, `CLAUDE.md` | Rules and checklists for AI coding agents working on the site. |
 | `.claude/agents/website_code_reviewer.md` | A read-only reviewer agent (Read, Glob, Grep) for HTML, SCSS, and JS quality, accessibility, and convention checks. |
 | `.claude/skills/` | Seven strategy skills: accessibility audit, backlink strategy, content polishing, feature recommendations, roadmap generation, SEO, and web authority. They produce reports rather than code changes. |
-| `assets/markdown/` | Where those reports land, named `<topic>-YYYY-MM-DD.md`. Reports are **disposable**: they are deleted once acted on, and the site plus the Known gaps lists in AGENTS.md and CLAUDE.md become the record. Today it holds only `animations_report.md`. |
+| `assets/markdown/` | Where those reports land, named `<topic>-YYYY-MM-DD.md`. Reports are **disposable**: they are deleted once acted on, and the site plus the Known gaps lists in AGENTS.md and CLAUDE.md become the record. Two undated reference documents stay permanently: `animations_report.md` and this file, `architecture.md`. |
 | `press_mentions.csv` | Log of external articles that quote Colby (`Link,Author,Comments`). |
 | `assets/other/pgp_email_key.asc` | Public PGP key linked from every footer. |
 
@@ -677,6 +683,7 @@ A consolidated list of the decisions described above, for quick reference.
 | 11 | `clamp()` heading ladder | WCAG 1.4.10 Reflow without changing desktop sizes | `$heading_size_1..4` |
 | 12 | GA is loaded only after consent, never on `file://` | Privacy by default; GDPR and CCPA exposure | `cookie_consent.js` |
 | 13 | Consent banner is a non-modal dialog placed after the skip link, without focus capture | Second tab stop (WCAG 2.4.3) without hijacking focus | `cookie_consent.js` |
+| 13a | Scroll padding reserves the banner's and the header's measured heights | Focus and anchor targets never land behind fixed or sticky UI (WCAG 2.4.11) | `default.scss`, `cookie_consent.js`, `navbar.js` |
 | 14 | Pages network-first, assets cache-first, versioned cache | Fresh HTML online, fast repeat visits, explicit invalidation | `service-worker.js` |
 | 15 | Offline fallback is `404.html` | Honest about what is unavailable | `service-worker.js` |
 | 16 | Multi-megabyte photos are not precached | Avoids a 22 MB background download on every first visit | `service-worker.js` comment |

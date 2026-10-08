@@ -45,8 +45,8 @@
  *
  * Load order note: this file must stay BELOW reading_engagement.js in the
  * <head> on the two pages that load both. Deferred classic scripts run in
- * document order, so that script's DOMContentLoaded handler registers first and
- * counts each section's words before this button label is added to the DOM.
+ * document order, so that script's init() runs first and counts each section's
+ * words before this button label is added to the DOM.
  * Swapping the two inflates every reading-time estimate by two words per
  * section. tech_resources.html loads no reading-time script and so has no such
  * constraint.
@@ -257,13 +257,11 @@
         }
     }
 
-    // DOMContentLoaded rather than running inline, even though a deferred
-    // script already runs after parsing. Every deferred script executes before
-    // DOMContentLoaded fires, so doing the work inline here would insert these
-    // labels BEFORE reading_engagement.js counts words, no matter where the
-    // tag sits in the <head>. Waiting for the event puts this handler behind
-    // that one in registration order, which is what the load-order note above
-    // actually depends on.
+    // As a deferred script this always takes the else branch: the document is
+    // already "interactive" when deferred scripts run, so init() runs inline.
+    // reading_engagement.js uses the same guard, so the two run their init()
+    // in tag order, which is what the load-order note above depends on. The
+    // DOMContentLoaded branch only matters if the tag ever loses its defer.
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", init);
     } else {

@@ -202,7 +202,19 @@
                 observer.unobserve(el);
 
                 if (animationMap[key]) {
-                    animationMap[key](el);
+                    // A throw here would strand this section at opacity: 0
+                    // for good, because it is already marked animated and
+                    // unobserved, so nothing retries. Lift the gate instead
+                    // and stop observing, which leaves every section visible
+                    // and unanimated, the same outcome as the CDN never
+                    // arriving.
+                    try {
+                        animationMap[key](el);
+                    } catch (err) {
+                        console.warn("[animations] " + key + " failed", err);
+                        observer.disconnect();
+                        revealGatedContent();
+                    }
                 }
             });
         }, {
@@ -236,13 +248,20 @@
      *
      * The .js-animations class is what makes the opacity-hiding CSS apply, so
      * every path that ends without animations must leave it off (or take it
-     * back off) or content would be stranded at opacity: 0. There are three
-     * such paths: reduced motion, known-offline, and the wait timing out.
-     * The complementary !window.AnimationHelpers guard lives in each page
-     * script, since it can't call run() if this file didn't load at all.
+     * back off) or content would be stranded at opacity: 0. There are five
+     * such paths: reduced motion, no IntersectionObserver, known-offline, the
+     * wait timing out, and a section animation throwing (handled in
+     * createSectionObserver). The complementary !window.AnimationHelpers
+     * guard lives in each page script, since it can't call run() if this file
+     * didn't load at all.
      */
     function run(sections, animationMap) {
         if (prefersReducedMotion()) return;
+
+        // Every section is revealed by the IntersectionObserver in
+        // createSectionObserver. Without one, nothing would ever take the
+        // gate back off, so never put it on.
+        if (typeof IntersectionObserver === "undefined") return;
 
         // The CDN module is cross-origin, and service-worker.js returns early
         // for cross-origin requests, so it is never cached and will never
