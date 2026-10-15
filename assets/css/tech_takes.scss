@@ -136,7 +136,7 @@ $reading_progress_fill: #00c27c;
 // Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
     "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge",
-    "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > blockquote, > a"
+    "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > .quotation, > a"
 );
 
 .readingTime {

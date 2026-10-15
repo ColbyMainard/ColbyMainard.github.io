@@ -41,7 +41,7 @@ Suggest edits that make the existing copy clearer, smoother, and more approachab
 - Preserve the author's voice. Do not flatten it into a generic tone.
 - Do not invent facts, claims, statistics, or personal anecdotes to "improve" a passage.
 - **Suggest prose, not markup.** Leave `<abbr>` elements, JSON-LD blocks, `id` attributes, and link targets exactly as they are. A markup change here reaches the maintainer as a copy edit and ships without the checks it needs.
-- **Treat a section heading as shared data.** Headings on `tech_takes.html` and `guides.html` are mirrored in `feed.xml`, in the `Article` and `TechArticle` JSON-LD, and in the "Cite this guide" lines. Section `id` values are permanent anchor targets that `feed.xml` and copied section links already publish. If a heading genuinely needs rewording, say so and list every file that must change with it. Never propose renaming an `id`.
+- **Treat a section heading as shared data.** Headings on `tech_takes.html` and `guides.html` are mirrored in `feed.xml` and in the `Article` and `TechArticle` JSON-LD. Section `id` values are permanent anchor targets that `feed.xml` and copied section links already publish. If a heading genuinely needs rewording, say so and list every file that must change with it. Never propose renaming an `id`.
 - **Write suggested copy without em dashes.** The author rewrites them into plain sentences, so an em dash in a suggestion costs a second edit.
 - **Do not quote a live metric.** This skill holds `Read` and `Write` only. Do not claim a readability score, a grade level, or a traffic figure as if you measured it.
 

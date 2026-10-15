@@ -248,9 +248,10 @@
     /**
      * Vibe Coding is a Scourge to the Internet — Skew and straighten
      * Elements arrive leaning, as if thrown together in a hurry, then square up
-     * into place. The body selector includes "ol" and "blockquote" because this
+     * into place. The body selector includes "ol" and ".quotation" because this
      * is the only section on the page with a direct child of either kind, and
-     * the gate hides both.
+     * the gate hides both. A quotation is a figure.quotation wrapping the
+     * blockquote and its figcaption, so the figure is the direct child.
      */
     function animateVibeCoding(el) {
         var tl = anime.createTimeline({ ease: "outQuart" });
@@ -267,7 +268,7 @@
             duration: 550,
             delay: anime.stagger(85)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, ol, blockquote, a"), {
+        addStep(tl, directChildren(el, "p, ul, ol, .quotation, a"), {
             opacity: [0, 1],
             skewX: ["4deg", "0deg"],
             translateY: ["18px", "0px"],

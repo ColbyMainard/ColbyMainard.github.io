@@ -114,7 +114,7 @@
             duration: 500,
             delay: anime.stagger(100)
         }, ">-200");
-        addStep(tl, directChildren(el, "ul, .tableScroll, p, a"), {
+        addStep(tl, directChildren(el, "ul, h5, .tableScroll, p, a"), {
             opacity: [0, 1],
             translateY: ["25px", "0px"],
             duration: 600,

@@ -24,14 +24,15 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 1. **Shared helpers load first**: `animation_helpers.js` is a classic deferred script that runs before each page's `*_animations.js`. It attaches `window.AnimationHelpers = { directChildren, addStep, introTimeline, animateIntro, animateContact, prefersReducedMotion, run }`. Each page script aliases the ones it needs locally instead of redeclaring them, then hands its `sections` and `animationMap` to `run`, which owns everything from step 2 onward.
 
-2. **Three guards before anything animates**: each page script opens with `if (!window.AnimationHelpers) return;`, since it cannot call `run` if the helpers file never loaded. `run` then applies the other two and returns early if either fails.
-   - **Reduced motion**: if `matchMedia("(prefers-reduced-motion: reduce)")` matches, `run` skips all animation.
-   - **Graceful degradation**: `if (typeof anime === "undefined") return;` so a failed AnimeJS CDN load does not break the page.
-   In every case the `js-animations` class is never added, so the CSS never hides anything and all content stays fully visible.
+2. **Guards before anything is hidden**: each page script opens with `if (!window.AnimationHelpers) return;`, since it cannot call `run` if the helpers file never loaded. `run` then returns early, before it adds the gate class, in three cases:
+   - **Reduced motion**: if `matchMedia("(prefers-reduced-motion: reduce)")` matches.
+   - **No `IntersectionObserver`**: the observer is the only thing that reveals a section, so without one the gate would never come off.
+   - **Known offline**: if `window.anime` is not defined yet and `navigator.onLine === false`. The CDN module is cross-origin and the service worker does not cache it, so it cannot arrive.
+   In each of these cases the `js-animations` class is never added, so the CSS never hides anything and all content stays fully visible.
 
-3. **Initial state (SCSS)**: once the guards pass, `run` adds `js-animations` to `document.documentElement` (the `<html>` element). A rule scoped under `html.js-animations` sets `opacity: 0` on the direct children of each animated section. Because the class is only added by JavaScript, content remains visible when JS is disabled or fails.
+3. **Initial state (SCSS) and the wait for AnimeJS**: once the guards pass, `run` adds `js-animations` to `document.documentElement` (the `<html>` element) straight away, not after AnimeJS arrives. A rule scoped under `html.js-animations` sets `opacity: 0` on the direct children of each animated section. Gating early avoids a flash: first paint happens well before a cold CDN fetch resolves. `run` then calls `whenAnimeReady`, which polls for `window.anime` every 50 ms for up to 3 s (`ANIME_WAIT_MS`). If AnimeJS arrives, the observer starts. If the 3 s pass without it, `revealGatedContent()` removes the class and the page shows unanimated. Do not replace this with a one-shot `typeof anime === "undefined"` check: the module script is `async`, so on a cold CDN load it is usually still in flight when the deferred scripts run, and a one-shot check turned animations off on exactly those loads.
 
-4. **Scroll trigger (Intersection Observer)**: `run` tags each section with a `data-animate` attribute and observes it with a low threshold (`0.02`) and a bottom-margin offset (`-50px`). As soon as 2% of a section enters the viewport, its animation fires. An `animated` map plus `observer.unobserve(el)` ensures each section animates only on its first view. The observer is bootstrapped on `DOMContentLoaded` (or immediately if the DOM is already parsed).
+4. **Scroll trigger (Intersection Observer)**: `run` tags each section with a `data-animate` attribute and observes it with a low threshold (`0.02`) and a bottom-margin offset (`-50px`). As soon as 2% of a section enters the viewport, its animation fires. An `animated` map plus `observer.unobserve(el)` ensures each section animates only on its first view. The observer is bootstrapped on `DOMContentLoaded` (or immediately if the DOM is already parsed). Each section animation runs inside a `try`. If one throws, the observer logs `[animations] <key> failed`, disconnects, and calls `revealGatedContent()`, because that section is already marked animated and nothing would retry it.
 
 5. **Timeline coordination (AnimeJS)**: each section's animation is built as an `anime.createTimeline({ ease: "..." })`. Elements within a section are staggered using relative offsets (for example `">-300"`) so headings appear first, followed by SVGs/images, then body content. `addStep` wraps every `.add()` call so empty target lists are skipped (avoiding AnimeJS "No target found" warnings), and `directChildren` restricts a step to top-level children of a section.
 
@@ -51,9 +52,9 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 **`html.js-animations` guard class:** added to `<html>` by JavaScript before any animation runs. The SCSS rules that set `opacity: 0` are scoped under this class, so if JavaScript fails to load or is disabled, all content remains visible. This is an accessibility and progressive enhancement decision.
 
-**Reduced-motion support:** `prefersReducedMotion()` is evaluated per call rather than cached at load, so a mid-session OS toggle is honored. Each page script bails out before creating any timeline when reduced motion is preferred, and `addStep`/`animateContact` re-check the preference so any future caller that forgets its own guard is still covered. A CSS safety net (below) re-reveals any gated element so content is never trapped at `opacity: 0`.
+**Reduced-motion support:** `prefersReducedMotion()` is evaluated per call rather than cached at load, so a mid-session OS toggle is honored. `run` bails out before creating any timeline when reduced motion is preferred, and `addStep`/`animateContact` re-check the preference so any future caller that forgets its own guard is still covered. A CSS safety net (below) re-reveals any gated element so content is never trapped at `opacity: 0`.
 
-**Graceful degradation:** if the AnimeJS module fails to load from the CDN, or the shared helpers are missing, the page script returns before adding `js-animations`. The opacity-hiding CSS keys on that class, so content stays in its natural, fully-visible state.
+**Graceful degradation:** if the shared helpers are missing, the page script returns before `run` adds `js-animations`. If the AnimeJS module does not arrive within 3 s, or a section animation throws, `run` takes the class back off. The opacity-hiding CSS keys on that class, so in every failure case content ends in its natural, fully-visible state. Any new early exit from `run` needs the same guarantee.
 
 ## Animation Styles by Page
 
@@ -101,9 +102,10 @@ Systems, Data Structures and Algorithms is the only section on this page whose e
 | Privacy | Rise from bottom | `outExpo` | Hidden becoming visible |
 | Product Placement | Cinematic focus pull (scale down + slight rotation settle) | `outQuint` | Broadcast camera zooming in to lock on a logo |
 | Physical Media Supremacy | Record drop and settle (tilt in, rock past level, lie flat) | `outCirc` | Vinyl record dropped onto a platter |
+| Vibe Coding is a Scourge | Skew and straighten (elements arrive leaning, then square up) | `outQuart` | Work thrown together in a hurry, then corrected |
 | Contact | Simple fade | `outSine` | Clean exit |
 
-`outQuint` is used only by Product Placement, and it is the only section with 650ms/550ms step durations rather than the site's usual 500-800ms. `outCirc` is used only by Physical Media Supremacy, and appears nowhere else on the site.
+`outQuint` is used only by Product Placement, and it is the only section with 650ms/550ms step durations rather than the site's usual 500-800ms. `outCirc` is used only by Physical Media Supremacy, and appears nowhere else on the site. Vibe Coding is the only section on the page with an `<ol>` or a quotation as a direct child, so its body step is the only one that names `ol` and `.quotation`.
 
 ### hobbies.html
 
@@ -120,7 +122,7 @@ The Intro animates an `img` centerpiece rather than paragraphs, and Quantum Comp
 
 ### guides.html
 
-All seven guide sections share a single `animateGuide` timeline rather than each receiving a bespoke style. This is a deliberate departure from the other pages: the guides are meant to read as a uniform reference collection where no topic visually dominates the others, and seven distinct entrance styles on a single long page would feel noisy rather than expressive. Visual identity comes from the page-specific "Guides Aurora" color palette in `guides.scss`, not from per-section animation choreography.
+All seven guide sections share a single `animateGuide` timeline rather than each receiving a bespoke style. This is a deliberate departure from the other pages: the guides are meant to read as a uniform reference collection where no topic visually dominates the others, and seven distinct entrance styles on a single long page would feel noisy rather than expressive. Visual identity comes from the page-specific Techno Serenity color palette (`$techno_serenity_1` to `_5`) in `guides.scss`, not from per-section animation choreography.
 
 | Section | Style | Easing | Rationale |
 | --- | --- | --- | --- |
@@ -134,7 +136,7 @@ All seven guide sections share a single `animateGuide` timeline rather than each
 | Cybersecurity | Rise from bottom + staggered children | `outExpo` | Shared `animateGuide` |
 | Contact | Simple fade | `outSine` | Clean exit |
 
-Within each guide timeline, the `h2` heading enters first (700ms, 40px rise), `h3` and `h4` subheadings follow with an 80ms stagger and 30px rise, and body elements (`p, blockquote, ul, a`) finish with a 50ms stagger and 20px rise. Relative offsets (`">-300"`) overlap the phases so each guide reads as one continuous reveal.
+Within each guide timeline, the `h2` heading enters first (700ms, 40px rise), `h3` and `h4` subheadings follow with an 80ms stagger and 30px rise, and body elements (`p, .quotation, ul, a`) finish with a 50ms stagger and 20px rise. Relative offsets (`">-300"`) overlap the phases so each guide reads as one continuous reveal.
 
 ### 404.html
 
@@ -163,18 +165,21 @@ None of them writes the `html.js-animations` block by hand. `default.scss` defin
 ```scss
 @include animationGate(
     "#introSectionDiv, #sectionId, #otherSectionId",
-    "> h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > blockquote, > a"
+    "> h1, > h2, > h3, > p, > ul, > svg, > .tableScroll, > .quotation, > a"
 );
 ```
 
-A partial may call the mixin more than once when a section needs a different child list: `page_not_found.scss` gates `#helpfulLinks` separately so it can include a bare `li`. `tech_takes.scss` used to make a second call for `#introSectionDiv > .takesIndex`, but that dated-index component was removed and the page is back to a single call. The one hand-written gate left is in `default.scss` itself, covering the footer `#contactMe` (`> h2, > p, > a`), which is identical on every page and so is not repeated per partial.
+A partial may call the mixin more than once when a section needs a different child list: `page_not_found.scss` gates `#helpfulLinks` separately so it can include a bare `li`. `tech_takes.scss` used to make a second call for `#introSectionDiv > .takesIndex`, but that dated-index component was removed and the page is back to a single call. The footer `#contactMe` (`> h2, > p, > a`) is identical on every page, so `default.scss` gates it once with its own `@include animationGate("#contactMe", "> h2, > p, > a")` call rather than repeating it per partial. No gate is written by hand.
 
 The exact list of child selectors varies by partial based on the element types each page uses. The gate has to stay in step with that page's JS: an element type that is animated but not gated flashes, while one that is gated but never animated is stranded invisible.
 
-- `> h4` is gated on `index.scss`, `tech_takes.scss`, and `guides.scss`, the three pages that use `<h4>` and the three whose partials carry an `h4` style rule. `hobbies.scss` and `tech_resources.scss` omit it: those pages have no `<h4>`, and no `h4` rule to style one if it were added.
-- `hobbies.scss` adds `> img`, `> blockquote`, and `> iframe`.
-- `tech_takes.scss` adds `> dl`.
-- `tech_resources.scss` adds `> blockquote`. `guides.scss` gates only `> h1, > h2, > h3, > h4, > p, > ul, > blockquote, > a`, since `guides.html` contains no `<svg>` or `<table>`.
+- `> h4` is gated on all five content partials: `index.scss`, `tech_takes.scss`, `guides.scss`, `hobbies.scss`, and `tech_resources.scss`. Only `page_not_found.scss` omits it.
+- `index.scss` adds `> h5` for the two "Relevant Courses" headings in Education, which `animateEducation` animates in its body step.
+- A quotation is a `figure.quotation` that wraps the `<blockquote>` and a `<figcaption>` for the attribution, so the figure is the section's direct child. The pages that contain one gate `> .quotation`: `hobbies.scss`, `tech_takes.scss`, and `guides.scss`.
+- `hobbies.scss` adds `> svg`, `> img`, `> .photoGallery`, and `> iframe`.
+- `tech_takes.scss` adds `> ol` and `> dl`.
+- `tech_resources.scss` still gates `> blockquote`, although the page has no quotation today. If one is added, use the `figure.quotation` markup and change that entry to `> .quotation`.
+- `guides.scss` gates only `> h1, > h2, > h3, > h4, > p, > ul, > .quotation, > a`, since `guides.html` contains no `<svg>` or `<table>`.
 - `page_not_found.scss` uses a shorter list (`> h1, > h2, > h3, > p, > ul, > a`) for its intro, not-found, and contact sections, plus a separate `#helpfulLinks` rule that gates a bare `li` so the page links stagger in individually.
 
 ### Reduced-motion safety net
@@ -193,7 +198,7 @@ A duplicate rule inside a reduced-motion media query re-reveals gated elements i
 }
 ```
 
-The `#contactMe` gate in `default.scss` predates the mixin and repeats this block literally.
+The `#contactMe` gate in `default.scss` uses the same mixin, so it gets this block too.
 
 Separately, `default.scss` opts into smooth scrolling only for users who do not prefer reduced motion (`@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }`), and `tech_takes.scss` disables the reading-progress bar transition under the same reduced-motion condition.
 
@@ -203,12 +208,12 @@ Each animated page includes the following in its `<head>`, in this order (the he
 
 ```html
 <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-<script type="module">import * as anime from 'animejs'; window.anime = anime;</script>
+<script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
 <script src="../js/animation_helpers.js" defer></script>
 <script src="../js/{page}_animations.js" defer></script>
 ```
 
-AnimeJS v4 is ESM-only. The importmap resolves the `animejs` specifier to jsDelivr's `+esm` endpoint, which serves the package's declared entry point with the correct MIME type and CORS headers. The inline module script imports all named exports (`createTimeline`, `stagger`, etc.) and assigns them to `window.anime` so the deferred, classic animation files can access them as globals. `animation_helpers.js` and the page file both use `defer` to run after the DOM is parsed and after the module script has executed.
+AnimeJS v4 is ESM-only. The importmap resolves the `animejs` specifier to jsDelivr's `+esm` endpoint, which serves the package's declared entry point with the correct MIME type and CORS headers. The inline module script imports all named exports (`createTimeline`, `stagger`, etc.) and assigns them to `window.anime` so the deferred, classic animation files can access them as globals. The module script is `async`, so a slow or blocked CDN does not hold up the deferred scripts, `navbar.js` among them. As a result there is no guarantee that `window.anime` exists when `animation_helpers.js` runs. `run` handles that with the 3 s wait described under How It Works.
 
 Page-specific notes:
 
@@ -227,6 +232,17 @@ sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
 Without the compiled rules, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there can be a brief flash of unstyled content before JS executes because the CSS would not yet include the `opacity: 0` rules.
 
 ## Changelog
+
+### Quotations wrapped in figures, and "Relevant Courses" promoted to headings (2026-10-13)
+
+Two accessibility fixes changed which elements are direct children of a section, so the gate and the JS moved with them.
+
+- **Quotations**: the three blockquotes on `hobbies.html`, `tech_takes.html`, and `guides.html` carried their attribution inside the `<blockquote>`, so assistive technology read the source as part of the quoted words. Each is now a `figure.quotation` holding the `<blockquote>` and a `<figcaption>`. `hobbies.scss`, `tech_takes.scss`, and `guides.scss` gate `> .quotation` in place of `> blockquote`, and `hobbies_animations.js`, `tech_takes_animations.js`, and `guides_animations.js` name `.quotation` in their body steps. The `blockQuote` mixin in `default.scss` styles the figure and its caption.
+- **Education headings**: the two "Relevant Courses" labels on `index.html` were `<p>` elements and are now `<h5>`. `index.scss` gates `> h5`, and `animateEducation` names `h5` in its body step, so each heading still fades in with the table it introduces.
+
+### Stale guidance corrected (2026-10-13)
+
+This report had described a one-shot `typeof anime === "undefined"` guard, a hand-written `#contactMe` gate, `hobbies.scss` and `tech_resources.scss` as omitting `> h4`, a "Guides Aurora" palette, and the module shim without `async`. All five were out of date and are corrected above. The Vibe Coding row was also missing from the `tech_takes.html` table.
 
 ### Shared intro timeline extracted (`animateIntro` / `introTimeline`)
 

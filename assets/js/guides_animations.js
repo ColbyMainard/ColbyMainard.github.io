@@ -49,7 +49,7 @@
             duration: 500,
             delay: anime.stagger(80)
         }, ">-300");
-        addStep(tl, directChildren(el, "p, blockquote, ul, a"), {
+        addStep(tl, directChildren(el, "p, .quotation, ul, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 500,

@@ -43,6 +43,7 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Curated books, certifications, and podcasts for cybersecurity, AI/ML, C++, Python, scripting, operating systems, and algorithms, recommended from experience.">
 
+        <!-- path_helpers.js must stay above cookie_consent.js. Deferred scripts run in document order, and both cookie_consent.js and service_worker_register.js read window.PathHelpers. If this tag moves below them, both bail silently: the banner loses its privacy-policy link and the service worker never registers. -->
         <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
@@ -51,6 +52,7 @@
         <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_resources_animations.js" defer></script>
+        <!-- section_permalinks.js has no ordering rule on this page. On tech_takes.html and guides.html it must stay below reading_engagement.js to keep its button labels out of the reading-time word counts, but this page runs no reading-time script. -->
         <script src="../js/section_permalinks.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>

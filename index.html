@@ -48,6 +48,7 @@
         <meta name="google-site-verification" content="LqOVTw1vRp28p5VNBCRWWOsZHXbZeZteA7rHCZi8bwQ" />
         <meta name="msvalidate.01" content="96DC561C2A904478B8F425694CAF638F" />
 
+        <!-- path_helpers.js must stay above cookie_consent.js. Deferred scripts run in document order, and both cookie_consent.js and service_worker_register.js read window.PathHelpers. If this tag moves below them, both bail silently: the banner loses its privacy-policy link and the service worker never registers. -->
         <script src="./assets/js/path_helpers.js" defer></script>
         <script src="./assets/js/cookie_consent.js" defer></script>
         <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
@@ -298,7 +299,7 @@
                         </li>
                         <li><strong>Dates:</strong> <time datetime="2020-08">August 2020</time>-<time datetime="2021-12">December 2021</time></li>
                     </ul>
-                    <p>Relevant Courses</p>
+                    <h5>Relevant Courses</h5>
                     <div class="tableScroll" tabindex="0" role="region" aria-labelledby="grad-coursework-caption">
                     <table>
                         <caption class="visually-hidden" id="grad-coursework-caption">Relevant graduate coursework</caption>
@@ -642,7 +643,7 @@
                         </li>
                         <li><strong>Dates:</strong> <time datetime="2016-08">August 2016</time>-<time datetime="2020-05">May 2020</time></li>
                     </ul>
-                    <p>Relevant Courses</p>
+                    <h5>Relevant Courses</h5>
                     <div class="tableScroll" tabindex="0" role="region" aria-labelledby="undergrad-coursework-caption">
                     <table>
                         <caption class="visually-hidden" id="undergrad-coursework-caption">Relevant undergraduate coursework</caption>

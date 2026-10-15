@@ -1,6 +1,6 @@
 # Architecture
 
-This document describes how Colby Mainard's personal website is built and why it is built that way. It is a snapshot of the repository as of **2026-09-29** (`CACHE_VERSION` `v79` in `service-worker.js`).
+This document describes how Colby Mainard's personal website is built and why it is built that way. It is a snapshot of the repository as of **2026-10-13** (`CACHE_VERSION` `v82` in `service-worker.js`).
 
 - For the content overview, see [README.md](README.md).
 - For edit-time rules, checklists, and hard "do not" rules, see [AGENTS.md](AGENTS.md) and [CLAUDE.md](CLAUDE.md).
@@ -190,7 +190,7 @@ Deployment decisions:
 ```mermaid
 flowchart TD
     subgraph ENTRY["default.scss"]
-        PAL["Shared palettes<br/>noir, smart, emerald_efficiency"]
+        PAL["Shared palettes<br/>noir, emerald_efficiency"]
         LAD["Heading ladder<br/>heading_size_1 to 4, all clamp()"]
         MIX["Ten shared mixins"]
         IMP["@import seven partials"]
@@ -407,19 +407,21 @@ stateDiagram-v2
     Banner --> Rejected: Reject
     Accepted: gtag.js loaded, http and https only
     Accepted --> Banner: Reset choice on privacy page
+    Accepted --> Rejected: Reject on privacy page
     Rejected --> Banner: Reset choice on privacy page
 ```
 
 Consent decisions:
 
 - **Google Analytics never loads before consent.** No `gtag.js` request and no GA cookies until the visitor clicks Accept. On `file://`, analytics never loads at all.
+- **Withdrawing consent stops the current page, not only the next one.** Reject and Reset both call `stopAnalytics()`, which sets `window["ga-disable-<measurement id>"] = true` so a `gtag` that already loaded sends nothing more, then expires the `_ga` and `_ga_<id>` cookies. Accepting again on the same page clears the flag in `loadAnalytics()`.
 - **The banner is a non-modal `role="dialog"`** labelled by its own message (`aria-labelledby`). An earlier `role="region"` with `aria-live` never announced, because a live region only reports changes inside a region that already exists.
 - **It is inserted right after the skip link**, making the consent choice the second tab stop rather than the last, behind every link on the site's longest pages (WCAG 2.4.3). CSS pins it to the bottom of the viewport, so DOM position does not affect where it draws. Do not change it back to `document.body.appendChild`.
 - **Focus is not moved into it.** Pulling focus on page load is more disruptive than the ordering problem it would solve.
 - **Reject is placed before Accept** in both the DOM and the visual order, so neither choice is buried.
 - **The DOM is built with `createElement` and text nodes**, never `innerHTML`, so no markup is parsed from interpolated values.
 - **Storage failures are tolerated.** In private modes where `localStorage` throws, the banner still works; the choice just does not persist.
-- **The privacy page carries static controls**: three buttons with `data-cookie-consent="accept|reject|revoke"` and a `#cookieConsentStatus` `role="status"` paragraph that reports the current choice. `onChoice()` and `revoke()` refresh that paragraph themselves, so a choice made in the banner or through `window.cookieConsent` is announced too, not only one made with the privacy-page buttons.
+- **The privacy page carries static controls**: three buttons with `data-cookie-consent="accept|reject|revoke"` and a `#cookieConsentStatus` `role="status"` paragraph that reports the current choice. The buttons sit in a `.cookiePreferences` container that ships `hidden` and is shown by `wirePreferenceControls()` once they have handlers, so with scripting off there are no buttons that do nothing; a `<noscript>` note explains why. `onChoice()` and `revoke()` refresh that paragraph themselves, so a choice made in the banner or through `window.cookieConsent` is announced too, not only one made with the privacy-page buttons.
 - **The banner never hides focus.** It is drawn over the bottom of the viewport, which is exactly where a browser stops when it scrolls a newly focused element into view. While it is visible, `html:has(.cookieConsent.visible)` sets `scroll-padding-bottom` to its height (WCAG 2.4.11). The script measures that height with a `ResizeObserver` and publishes it as `--cookie-banner-height`, because the message wraps to a different number of lines at each width. The CSS carries fixed fallbacks.
 - **Scope is deliberate.** This is a lightweight, dependency-free banner sized for the GDPR and CCPA exposure of GA4 on a personal site, not an IAB TCF consent-management platform.
 

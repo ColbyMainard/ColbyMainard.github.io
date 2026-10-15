@@ -148,7 +148,7 @@
             duration: 600,
             delay: anime.stagger(100)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, blockquote, ul, .tableScroll, a"), {
+        addStep(tl, directChildren(el, "p, .quotation, ul, .tableScroll, a"), {
             opacity: [0, 1],
             translateY: ["30px", "0px"],
             duration: 500,

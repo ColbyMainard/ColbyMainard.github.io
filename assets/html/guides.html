@@ -47,6 +47,7 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Plain-spoken starter guides to data engineering, computer vision, generative AI, NLP, reinforcement learning, software engineering, and cybersecurity.">
 
+        <!-- path_helpers.js must stay above cookie_consent.js. Deferred scripts run in document order, and both cookie_consent.js and service_worker_register.js read window.PathHelpers. If this tag moves below them, both bail silently: the banner loses its privacy-policy link and the service worker never registers. -->
         <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
@@ -57,6 +58,7 @@
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/guides_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
+        <!-- section_permalinks.js must stay below reading_engagement.js. Both run init() as soon as they execute, in tag order, so the per-section word counts are taken before the "Copy link" buttons exist. Above it, the button labels would be counted as reading time. -->
         <script src="../js/section_permalinks.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
@@ -84,7 +86,7 @@
           "name": "Technical Guides | Colby Mainard",
           "url": "https://colbymainard.github.io/assets/html/guides.html",
           "inLanguage": "en",
-          "dateModified": "2026-09-03",
+          "dateModified": "2026-10-10",
           "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard", "url": "https://colbymainard.github.io/"},
           "publisher": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
           "description": "Plain-spoken starter guides to data engineering, computer vision, generative AI, natural language processing, reinforcement learning, software engineering, and cybersecurity, each written for readers new to the area."
@@ -645,7 +647,7 @@
             <div class="reinforcementLearningGuideDiv" id="reinforcementLearningGuideDiv">
                 <section class="reinforcementLearningGuide" id="reinforcementLearningGuide">
                     <h2>Reinforcement Learning Guide</h2>
-                    <p><strong>Last Updated:</strong> <time datetime="2026-08-08">October 10, 2026</time> <span class="readingTime" data-reading-time></span></p>
+                    <p><strong>Last Updated:</strong> <time datetime="2026-10-10">October 10, 2026</time> <span class="readingTime" data-reading-time></span></p>
                     <p>
                         Reinforcement learning (<abbr title="Reinforcement Learning">RL</abbr>) is the branch of artificial intelligence concerned with learning optimal policies for behavior.
                         Specifically, reinforcement learning optimizes a reward function in noisy, dynamic environments.
@@ -727,12 +729,16 @@
                         <li>Understanding unstated priorities that users may have</li>
                     </ul>
                     <h3>Practical Concerns</h3>
-                    <blockquote>
-                        "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live." -
-                        <a href="https://sercankulcu.github.io/posts/2025/02/clean-code-psychopath/">
-                            John Woods
-                        </a>
-                    </blockquote>
+                    <figure class="quotation">
+                        <blockquote>
+                            "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
+                        </blockquote>
+                        <figcaption>
+                            <a href="https://sercankulcu.github.io/posts/2025/02/clean-code-psychopath/">
+                                John Woods
+                            </a>
+                        </figcaption>
+                    </figure>
                     <p>
                         Eventually, every line of code in a repo will need to be updated or otherwise replaced once no longer needed.
                         These requests for the edits can frequently come after the original author has retired, died, or otherwise left the organization maintaining the code.

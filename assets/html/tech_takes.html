@@ -43,6 +43,7 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Technical opinions on vibe coding, physical media, sports marketing, online privacy, AGI hype, quantum computing, crypto safety, and Kolmogorov-Arnold networks.">
 
+        <!-- path_helpers.js must stay above cookie_consent.js. Deferred scripts run in document order, and both cookie_consent.js and service_worker_register.js read window.PathHelpers. If this tag moves below them, both bail silently: the banner loses its privacy-policy link and the service worker never registers. -->
         <script src="../js/path_helpers.js" defer></script>
         <script src="../js/cookie_consent.js" defer></script>
 
@@ -51,6 +52,7 @@
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_takes_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
+        <!-- section_permalinks.js must stay below reading_engagement.js. Both run init() as soon as they execute, in tag order, so the per-section word counts are taken before the "Copy link" buttons exist. Above it, the button labels would be counted as reading time. -->
         <script src="../js/section_permalinks.js" defer></script>
         <script src="../js/navbar.js" defer></script>
         <script src="../js/back_to_top.js" defer></script>
@@ -1034,9 +1036,14 @@
                     <p>
                         When it comes to anything in engineering, there is a saying:
                     </p>
-                    <blockquote>
-                        "Good, Fast, Cheap. Pick any two." - <a href="https://quotememaybe.com/good-fast-cheap-pick-any-two/">James M. Wallace</a>
-                    </blockquote>
+                    <figure class="quotation">
+                        <blockquote>
+                            "Good, Fast, Cheap. Pick any two."
+                        </blockquote>
+                        <figcaption>
+                            <a href="https://quotememaybe.com/good-fast-cheap-pick-any-two/">James M. Wallace</a>
+                        </figcaption>
+                    </figure>
                     <p>
                         Vibe coding selects fast and cheap by default.
                         Non-technical users tend not to have the experience or knowledge to understand this tradeoff.

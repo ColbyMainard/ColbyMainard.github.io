@@ -108,11 +108,25 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
+// A quotation is a figure.quotation holding the blockquote and a figcaption
+// for the attribution, so assistive technology does not read the source as
+// part of the quoted words. The caption is indented to line up with the
+// blockquote's default inline margin.
 @mixin blockQuote($color) {
     blockquote {
         text-align: left;
         color: $color;
         font-size: 150%;
+    }
+    figure.quotation {
+        margin: 1em 0;
+
+        figcaption {
+            margin: 0 40px;
+            text-align: left;
+            color: $color;
+            font-size: 100%;
+        }
     }
 }
 
@@ -611,6 +625,19 @@ main a:focus-visible {
     }
 }
 
+// The consent banner draws above this button (z-index 300 vs 200), so while
+// the banner is up the button sits on top of it instead of under it. Same
+// --cookie-banner-height and fallbacks as the scroll-padding-bottom rule.
+html:has(.cookieConsent.visible) .floatingBackToTop {
+    bottom: calc(var(--cookie-banner-height, 7rem) + 24px);
+}
+
+@media (max-width: 768px) {
+    html:has(.cookieConsent.visible) .floatingBackToTop {
+        bottom: calc(var(--cookie-banner-height, 19rem) + 16px);
+    }
+}
+
 .easterEggCard {
     position: fixed;
     left: 24px;
@@ -675,8 +702,10 @@ main a:focus-visible {
         padding: 6px 12px;
         cursor: pointer;
 
+        // Hover darkens rather than lightens: $emerald_efficiency_2 under this
+        // 90%-size label gave 3.21:1. This background gives about 6.8:1.
         &:hover {
-            background-color: $emerald_efficiency_2;
+            background-color: darken($emerald_efficiency_1, 5%);
             border-color: $emerald_efficiency_5;
         }
 
@@ -873,6 +902,12 @@ pre {
     gap: 12px;
     margin: 16px 0;
     text-align: left;
+
+    // display: flex above outranks the browser's own [hidden] rule, so the
+    // container that cookie_consent.js unhides needs this to stay hidden first.
+    &[hidden] {
+        display: none;
+    }
 }
 
 .cookiePreferences-button {

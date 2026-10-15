@@ -42,6 +42,7 @@
         <!-- Tell search engines not to index this disclosure page; it is purely for transparency. -->
         <meta name="robots" content="noindex, follow">
 
+        <!-- path_helpers.js must stay above cookie_consent.js. Deferred scripts run in document order, and both cookie_consent.js and service_worker_register.js read window.PathHelpers. If this tag moves below them, both bail silently: the banner loses its privacy-policy link and the service worker never registers. -->
         <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
@@ -95,7 +96,7 @@
         <main class="main" id="main" tabindex="-1">
             <div class="privacyIntroDiv" id="privacyIntroDiv">
                 <h1>Privacy Policy</h1>
-                <p><strong>Last Updated:</strong> <time datetime="2026-04-29">April 29, 2026</time></p>
+                <p><strong>Last Updated:</strong> <time datetime="2026-10-13">October 13, 2026</time></p>
                 <p>
                     This page explains what data <code>colbymainard.github.io</code> collects, why, and how to contact the site owner with questions or removal requests.
                     This site is a personal portfolio operated by Colby Mainard and is hosted on GitHub Pages. It collects no personal information directly. Everything described below is collected by third-party services that are loaded into the page so visitor analytics and search-engine eligibility can be measured.
@@ -106,13 +107,13 @@
                 <section class="privacySection">
                     <h2>What Google Analytics collects</h2>
                     <p>
-                        This site can load <a href="https://policies.google.com/privacy">Google Analytics 4</a>, but only after you accept the cookie banner shown on your first visit. If you reject the banner, or simply close it without choosing, the Google Analytics scripts are never requested and no analytics cookies are set. You can change your decision at any time in the <a href="#preferencesDiv">Cookie preferences</a> section below.
+                        This site can load <a href="https://policies.google.com/privacy">Google Analytics 4</a>, but only after you accept the cookie banner shown on your first visit. If you reject the banner, or leave it unanswered, the Google Analytics scripts are never requested and no analytics cookies are set. You can change your decision at any time in the <a href="#preferencesDiv">Cookie preferences</a> section below.
                     </p>
                     <p>
                         When you do accept, Google Analytics collects the following information about each visit:
                     </p>
                     <ul>
-                        <li>Your <abbr title="Internet Protocol">IP</abbr> address (Google truncates the last octet before storage to anonymize it).</li>
+                        <li>Your <abbr title="Internet Protocol">IP</abbr> address, which your browser sends with every request. Google states that Google Analytics 4 uses it only to work out your approximate location and does not log or store it.</li>
                         <li>The page <abbr title="Uniform Resource Locator">URL</abbr> and page title you viewed.</li>
                         <li>The referring URL (the page you arrived from), if any.</li>
                         <li>Your browser, operating system, device type, and screen resolution.</li>
@@ -134,17 +135,20 @@
                 <section class="privacySection">
                     <h2>Cookie preferences</h2>
                     <p>
-                        On your first visit a banner is shown at the bottom of every page asking whether you want to accept analytics cookies. Your choice is stored in your browser's <code>localStorage</code> under the key <code>cm-cookie-consent</code>; the banner does not reappear on later visits unless you reset that choice below.
+                        On your first visit a banner is shown at the bottom of every page, except the error page for a missing address, asking whether you want to accept analytics cookies. Your choice is stored in your browser's <code>localStorage</code> under the key <code>cm-cookie-consent</code>; the banner does not reappear on later visits unless you reset that choice below.
                     </p>
                     <p>
-                        Use these controls to change your decision. <em>Reject</em> and <em>Reset</em> stop Google Analytics from loading on subsequent page loads, but they do not delete cookies that were already placed in your browser before you opted out. Clear those via your browser's site-data controls or the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out add-on</a>.
+                        Use these controls to change your decision. <em>Reject</em> and <em>Reset</em> stop Google Analytics on the page you are reading, and it does not load on later pages. They also delete the <code>_ga</code> and <code>_ga_&lt;measurement-id&gt;</code> cookies this site placed. Data that Google already received before you opted out stays with Google until its retention period ends. To ask for it to be removed sooner, see <a href="#rightsDiv">Your rights</a> below.
                     </p>
                     <p id="cookieConsentStatus" role="status">Analytics cookies: no choice recorded yet</p>
-                    <div class="cookiePreferences">
+                    <div class="cookiePreferences" hidden>
                         <button type="button" class="cookiePreferences-button cookiePreferences-accept" data-cookie-consent="accept">Accept analytics</button>
                         <button type="button" class="cookiePreferences-button cookiePreferences-reject" data-cookie-consent="reject">Reject analytics</button>
                         <button type="button" class="cookiePreferences-button" data-cookie-consent="revoke">Reset choice (re-show banner)</button>
                     </div>
+                    <noscript>
+                        <p>These controls need JavaScript. With JavaScript turned off, Google Analytics never loads, so there is no choice to change.</p>
+                    </noscript>
                 </section>
             </div>
             <div class="privacySectionDiv" id="verificationDiv">

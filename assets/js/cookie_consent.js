@@ -17,7 +17,9 @@
  * The choice is stored in localStorage as "accepted" or "rejected"; the
  * banner does not reappear on subsequent page loads. Visitors can change
  * their mind via window.cookieConsent.revoke() (linked from the Privacy
- * Policy page).
+ * Policy page). Rejecting or resetting takes effect on the current page as
+ * well: stopAnalytics() silences a gtag that already loaded and expires the
+ * _ga cookies it set.
  *
  * This is a deliberately lightweight, dependency-free implementation —
  * sized for the GDPR / CCPA exposure created by GA4 on a static personal
@@ -66,7 +68,14 @@
         }
     }
 
+    // gtag.js checks this window property before it sends each hit, so setting
+    // it to true silences a library that is already running on the page.
+    var GA_DISABLE_KEY = "ga-disable-" + GA_MEASUREMENT_ID;
+
     function loadAnalytics() {
+        // Cleared first so that accepting again after a reject, on the same
+        // page, resumes the library that stopAnalytics() silenced.
+        window[GA_DISABLE_KEY] = false;
         if (window.__cmAnalyticsLoaded) return;
         window.__cmAnalyticsLoaded = true;
         if (!isHttp) return;
@@ -80,6 +89,27 @@
         script.async = true;
         script.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
         document.head.appendChild(script);
+    }
+
+    // Withdrawing consent has to stop the current page too, not only the next
+    // one. The disable flag stops further hits from a gtag that already
+    // loaded. The _ga and _ga_<id> cookies are then expired, both host-only
+    // and on the page's own domain, because gtag sets them on the highest
+    // domain the browser accepts and this script cannot read which one it chose.
+    function stopAnalytics() {
+        window[GA_DISABLE_KEY] = true;
+
+        var names = document.cookie.split(";");
+        var expired = "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+        var host = window.location.hostname;
+        for (var i = 0; i < names.length; i++) {
+            var name = names[i].split("=")[0].trim();
+            if (!/^_ga(_|$)/.test(name)) continue;
+            document.cookie = name + expired;
+            if (host) {
+                document.cookie = name + expired + "; domain=" + host;
+            }
+        }
     }
 
     // Mirrors the createButton helper in back_to_top.js. The two consent buttons
@@ -242,13 +272,17 @@
         writeConsent(value);
         if (value === "accepted") {
             loadAnalytics();
+        } else {
+            stopAnalytics();
         }
         hideBanner();
         updateStatusLabel();
     }
 
+    // A reset leaves no consent on record, so analytics stops here as well.
     function revoke() {
         clearConsent();
+        stopAnalytics();
         hideBanner();
         showBanner();
         updateStatusLabel();
@@ -272,6 +306,11 @@
                 }
             })(nodes[i]);
         }
+        // The privacy page ships its preference buttons inside a `hidden`
+        // container, so with scripting off there are no buttons that do
+        // nothing. They are shown only once they have handlers.
+        var panel = document.querySelector(".cookiePreferences");
+        if (panel) panel.hidden = false;
         updateStatusLabel();
     }
 

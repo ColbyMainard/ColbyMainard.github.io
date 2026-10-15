@@ -40,6 +40,7 @@
         <link rel="stylesheet" href="../css/default.css">
         <meta name="description" content="Colby Mainard's hobbies: landscape photography, self-taught quantum computing, Dungeons &amp; Dragons in Austin, and the historical oddities worth knowing about.">
 
+        <!-- path_helpers.js must stay above cookie_consent.js. Deferred scripts run in document order, and both cookie_consent.js and service_worker_register.js read window.PathHelpers. If this tag moves below them, both bail silently: the banner loses its privacy-policy link and the service worker never registers. -->
         <script src="../js/path_helpers.js" defer></script>
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
@@ -153,7 +154,7 @@
                 <section class="photography" id="photography">
                     <h2>Photography</h2>
                     <p>I mainly do landscape photography. Here are some of my favorite results:</p>
-                    <div class="photoGallery" id="photoGallery" role="group" aria-roledescription="carousel" aria-label="Landscape photography gallery">
+                    <div class="photoGallery" id="photoGallery">
                         <p class="visually-hidden" id="photoGalleryStatus" role="status"></p>
                         <p class="visually-hidden" id="photoGalleryHelp" hidden>Use the Previous photo and Next photo buttons to move through the photographs. While focus is anywhere inside this gallery, the left and right arrow keys do the same.</p>
                         <ul class="photoGallery-track" id="photoGalleryTrack">
@@ -220,10 +221,14 @@
                     <p>
                         I have two main reasons that drew me into history: academic interest and personal curiosity.
                     </p>
-                    <blockquote>
-                        "History doesn't repeat itself, but it does rhyme." —
-                        <a href="https://bigthink.com/culture-religion/those-who-do-not-learn-history-doomed-to-repeat-it-really/">Mark Twain (probably)</a>.
-                    </blockquote>
+                    <figure class="quotation">
+                        <blockquote>
+                            "History doesn't repeat itself, but it does rhyme."
+                        </blockquote>
+                        <figcaption>
+                            <a href="https://bigthink.com/culture-religion/those-who-do-not-learn-history-doomed-to-repeat-it-really/">Mark Twain (probably)</a>
+                        </figcaption>
+                    </figure>
                     <p>
                         Academically, it is interesting to know how historical events decades or centuries ago still have ripples impacting the world today.
                         While history isn't a perfect representation of current events, it does allow us to figure out trends we should expect to see.

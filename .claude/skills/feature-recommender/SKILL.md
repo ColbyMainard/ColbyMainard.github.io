@@ -89,7 +89,7 @@ The maintainer has flagged these ideas for consideration. They are candidates, n
 Check each candidate against the inventory before you judge it. Several have shipped since this list was written, so the expected outcome for most runs is a line under **Not recommended** saying "already built" and naming the file that proves it.
 
 - **Easter eggs** — one or more hidden touches that reward visitors who spend time exploring the site. Can be triggered by keyboard shortcuts, clicks, URL parameters, the time or date, or cursor effects. Common examples include a response to the Konami code (up, up, down, down, left, right, left, right, B, A), secret pages, hidden messages, pop-culture references, developer jokes, or hidden games. Check `assets/js/easter_egg.js` first, which every page loads.
-- **Citation guidance** — if the site publishes academic work, a section showing readers how to cite it. Check the "Cite this guide" lines on `guides.html` first.
+- **Citation guidance** — if the site publishes academic work, a section showing readers how to cite it. Check `section_permalinks.js` first: its "Copy link" buttons already give every section on `tech_takes.html`, `guides.html`, and `tech_resources.html` a stable URL. Per-section citation lines were removed from `guides.html` on 2026-09-06 on purpose, so do not recommend restoring them.
 - **Abbreviation markup** — `<abbr>` elements expanding abbreviations where relevant. Grep for `<abbr` first. Recommend this only for a term that is genuinely unmarked, and note that the `title` stays unreachable by keyboard and by touch, so prose that spells the term out is the stronger fix.
 
 ## Rating scale

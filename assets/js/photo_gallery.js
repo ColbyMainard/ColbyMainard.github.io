@@ -50,12 +50,17 @@
     var current = 0;
 
     /**
-     * Label each slide for assistive technology. Applied here rather than in
-     * the markup because these roles only make sense once the slides are
-     * actually being shown one at a time; in the no-JS fallback they are just
-     * a list of figures, which is already correct.
+     * Label the gallery and each slide for assistive technology. Applied here
+     * rather than in the markup because these roles only make sense once the
+     * slides are actually being shown one at a time; in the no-JS fallback
+     * they are just a list of figures, which is already correct. The carousel
+     * role on the container used to sit in the static markup, which announced
+     * the stacked no-JS list as a carousel.
      */
     function labelSlides() {
+        gallery.setAttribute("role", "group");
+        gallery.setAttribute("aria-roledescription", "carousel");
+        gallery.setAttribute("aria-label", "Landscape photography gallery");
         for (var i = 0; i < slides.length; i++) {
             slides[i].setAttribute("role", "group");
             slides[i].setAttribute("aria-roledescription", "slide");
