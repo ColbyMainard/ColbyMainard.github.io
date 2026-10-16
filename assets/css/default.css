@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
-#workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
+#workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications, #publicSpeaking {
   margin: auto;
   background-color: #200b4b;
   width: 80%;
@@ -10,54 +10,56 @@
   margin-bottom: 2em;
   font-family: "Courier New", monospace; }
   @media (forced-colors: active) {
-    #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications {
+    #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications, #publicSpeaking {
       border: 1px solid CanvasText; } }
-  #workHistory h1, #education h1, #projects h1, #technicalSkills h1, #otherSkills h1, #certifications h1 {
+  #workHistory h1, #education h1, #projects h1, #technicalSkills h1, #otherSkills h1, #certifications h1, #publicSpeaking h1 {
     text-align: left;
     color: #ff3d94;
     font-size: clamp(2rem, 8vw, 5rem); }
-  #workHistory h2, #education h2, #projects h2, #technicalSkills h2, #otherSkills h2, #certifications h2 {
+  #workHistory h2, #education h2, #projects h2, #technicalSkills h2, #otherSkills h2, #certifications h2, #publicSpeaking h2 {
     text-align: left;
     color: #e64d9e;
     font-size: clamp(1.5rem, 5vw, 3rem); }
-  #workHistory h3, #education h3, #projects h3, #technicalSkills h3, #otherSkills h3, #certifications h3 {
+  #workHistory h3, #education h3, #projects h3, #technicalSkills h3, #otherSkills h3, #certifications h3, #publicSpeaking h3 {
     text-align: left;
     color: #e64d9e;
     font-size: clamp(1.25rem, 3.5vw, 2rem); }
-  #workHistory h4, #education h4, #projects h4, #technicalSkills h4, #otherSkills h4, #certifications h4 {
+  #workHistory h4, #education h4, #projects h4, #technicalSkills h4, #otherSkills h4, #certifications h4, #publicSpeaking h4 {
     text-align: left;
     color: #e64d9e;
     font-size: clamp(1.125rem, 3vw, 1.75rem); }
-  #workHistory p, #education p, #projects p, #technicalSkills p, #otherSkills p, #certifications p {
+  #workHistory p, #education p, #projects p, #technicalSkills p, #otherSkills p, #certifications p, #publicSpeaking p {
     text-align: left;
     color: #e64d9e;
     font-size: 100%; }
-  #workHistory a:link, #education a:link, #projects a:link, #technicalSkills a:link, #otherSkills a:link, #certifications a:link,
+  #workHistory a:link, #education a:link, #projects a:link, #technicalSkills a:link, #otherSkills a:link, #certifications a:link, #publicSpeaking a:link,
   #workHistory a:visited,
   #education a:visited,
   #projects a:visited,
   #technicalSkills a:visited,
   #otherSkills a:visited,
-  #certifications a:visited {
+  #certifications a:visited,
+  #publicSpeaking a:visited {
     text-align: left;
     color: #ff3d94;
     font-size: 100%;
     text-decoration: underline; }
-  #workHistory a:hover, #education a:hover, #projects a:hover, #technicalSkills a:hover, #otherSkills a:hover, #certifications a:hover,
+  #workHistory a:hover, #education a:hover, #projects a:hover, #technicalSkills a:hover, #otherSkills a:hover, #certifications a:hover, #publicSpeaking a:hover,
   #workHistory a:active,
   #education a:active,
   #projects a:active,
   #technicalSkills a:active,
   #otherSkills a:active,
-  #certifications a:active {
+  #certifications a:active,
+  #publicSpeaking a:active {
     text-align: left;
     color: #ff3d94;
     font-size: 100%;
     text-decoration: underline;
     text-decoration-thickness: 2px; }
-  #workHistory ul, #education ul, #projects ul, #technicalSkills ul, #otherSkills ul, #certifications ul {
+  #workHistory ul, #education ul, #projects ul, #technicalSkills ul, #otherSkills ul, #certifications ul, #publicSpeaking ul {
     text-align: left; }
-    #workHistory ul li, #education ul li, #projects ul li, #technicalSkills ul li, #otherSkills ul li, #certifications ul li {
+    #workHistory ul li, #education ul li, #projects ul li, #technicalSkills ul li, #otherSkills ul li, #certifications ul li, #publicSpeaking ul li {
       color: #e64d9e;
       font-size: 100%; }
 

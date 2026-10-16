@@ -118,6 +118,8 @@ $cyberpunk_dreams_5: #200b4b;
 
 #certifications { @extend %indexSection; }
 
+#publicSpeaking { @extend %indexSection; }
+
 // Animation gating (initial hidden state plus the reduced-motion safety net). Without JS the .js-animations class is never added and content stays visible.
 @include animationGate(
     "#introSectionDiv, #workHistory, #education, #projects, #technicalSkills, #certifications, #otherSkills",
