@@ -32,6 +32,7 @@
         technicalSkills: "#technicalSkills",
         certifications: "#certifications",
         otherSkills: "#otherSkills",
+        publicSpeaking: "#publicSpeaking",
         contact: "#contactMe"
     };
 
@@ -244,6 +245,35 @@
         }, ">-300");
     }
 
+    /**
+     * Public Speaking — Stage spotlight
+     * Section heading widens into focus like a lit stage, the event h2 and
+     * date h3 settle in, then the talk details rise. The talk's <ul> is a
+     * direct child of the section because the parser closes the enclosing
+     * <p> before it.
+     */
+    function animatePublicSpeaking(el) {
+        var tl = anime.createTimeline({ ease: "outExpo" });
+
+        addStep(tl, directChildren(el, "h1"), {
+            opacity: [0, 1],
+            scaleX: [0.6, 1],
+            duration: 800
+        });
+        addStep(tl, directChildren(el, "h2, h3"), {
+            opacity: [0, 1],
+            scale: [0.9, 1],
+            duration: 600,
+            delay: anime.stagger(120)
+        }, ">-400");
+        addStep(tl, directChildren(el, "p, ul, a"), {
+            opacity: [0, 1],
+            translateY: ["20px", "0px"],
+            duration: 600,
+            delay: anime.stagger(100)
+        }, ">-300");
+    }
+
     // Map section keys to their animation functions
     var animationMap = {
         intro: animateIntro,
@@ -253,6 +283,7 @@
         technicalSkills: animateTechnicalSkills,
         certifications: animateCertifications,
         otherSkills: animateOtherSkills,
+        publicSpeaking: animatePublicSpeaking,
         contact: animateContact
     };
 

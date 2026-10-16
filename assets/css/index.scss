@@ -122,6 +122,6 @@ $cyberpunk_dreams_5: #200b4b;
 
 // Animation gating (initial hidden state plus the reduced-motion safety net). Without JS the .js-animations class is never added and content stays visible.
 @include animationGate(
-    "#introSectionDiv, #workHistory, #education, #projects, #technicalSkills, #certifications, #otherSkills",
+    "#introSectionDiv, #workHistory, #education, #projects, #technicalSkills, #certifications, #otherSkills, #publicSpeaking",
     "> h1, > h2, > h3, > h4, > h5, > p, > ul, > svg, > .tableScroll, > a"
 );
