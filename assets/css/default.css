@@ -1117,7 +1117,7 @@ main a:focus-visible {
     pointer-events: auto;
     visibility: visible; }
   .floatingBackToTop:hover, .floatingBackToTop:focus {
-    background-color: #1d9a6a;
+    background-color: #00614a;
     border-color: #e0f7fa;
     color: #e0f7fa; }
   .floatingBackToTop:focus-visible {

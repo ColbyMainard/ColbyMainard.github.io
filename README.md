@@ -57,6 +57,11 @@ More general soft/non-technical skills I possess, mainly focused on business and
 
 Other certifications I have, which are currently cloud-computing focused.
 
+### Public Speaking
+
+Conference talks I have given, with a written summary and slides for each. Talks include:
+    - Invisible Data: The Largest Problem Facing AI (LLMday Austin Q4 2026)
+
 ### Hobbies
 
 Going over hobbies on a separate webpage.
