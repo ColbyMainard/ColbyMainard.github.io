@@ -602,9 +602,12 @@ main a:focus-visible {
         visibility: visible;
     }
 
+    // Hover darkens rather than lightens, as .easterEggButton does:
+    // $emerald_efficiency_2 gave 3.20:1 under the 22.4px mobile glyph, which is
+    // below the 24px large-text cutoff. This background gives about 6.8:1.
     &:hover,
     &:focus {
-        background-color: $emerald_efficiency_2;
+        background-color: darken($emerald_efficiency_1, 5%);
         border-color: $emerald_efficiency_5;
         color: $emerald_efficiency_5;
     }

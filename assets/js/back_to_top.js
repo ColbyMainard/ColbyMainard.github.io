@@ -51,8 +51,11 @@
                 y: 0,
                 duration: 500,
                 ease: "outQuart",
+                // "instant" overrides the CSS scroll-behavior: smooth on html.
+                // Without it, each per-frame step starts its own smooth scroll
+                // and the steps fight each other.
                 onUpdate: function () {
-                    window.scrollTo(0, scroller.y);
+                    window.scrollTo({ top: scroller.y, behavior: "instant" });
                 },
                 onComplete: focusTop
             });

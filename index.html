@@ -139,12 +139,45 @@
           "@id": "https://colbymainard.github.io/#profile",
           "url": "https://colbymainard.github.io/",
           "name": "Colby Mainard | Machine Learning Engineer",
-          "description": "Profile page of Colby Mainard: work history, education, projects, certifications, technical skills, and contact information.",
+          "description": "Profile page of Colby Mainard: work history, education, projects, certifications, technical skills, public speaking, and contact information.",
           "inLanguage": "en",
-          "dateModified": "2026-08-26",
+          "dateModified": "2026-10-16",
           "isPartOf": {"@id": "https://colbymainard.github.io/#website"},
           "mainEntity": {"@id": "https://colbymainard.github.io/#person"},
           "about": {"@id": "https://colbymainard.github.io/#person"}
+        }
+        </script>
+
+        <!-- JSON-LD: Event schema for the talk in the Public Speaking section. Organizer and in-person format come from the LLMday-issued speaker certificate on certified.fyi. -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "@id": "https://colbymainard.github.io/#llmdayAustin2026Q4",
+          "name": "LLMday Austin Q4 2026",
+          "description": "Colby Mainard presented \"Invisible Data: The Largest Problem Facing AI\", a talk on how biased and incomplete real-world data undermines machine learning, with examples from cybersecurity, sports marketing, and money laundering.",
+          "url": "https://colbymainard.github.io/#publicSpeakingDiv",
+          "startDate": "2026-10-14",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Austin, Texas",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Austin",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          },
+          "organizer": {"@type": "Organization", "name": "LLMday", "url": "https://llmday.com"},
+          "performer": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"},
+          "workPerformed": {
+            "@type": "PresentationDigitalDocument",
+            "name": "Invisible Data: The Largest Problem Facing AI",
+            "url": "https://colbymainard.github.io/assets/pdf/InvisibleDataSlides.pdf",
+            "encodingFormat": "application/pdf",
+            "author": {"@id": "https://colbymainard.github.io/#person", "@type": "Person", "name": "Colby Mainard"}
+          }
         }
         </script>
     </head>
@@ -171,6 +204,7 @@
                         <li><a href="#technicalSkillsDiv">Technical Skills</a></li>
                         <li><a href="#certificationsDiv">Certifications</a></li>
                         <li><a href="#otherSkillsDiv">Other Skills</a></li>
+                        <li><a href="#publicSpeakingDiv">Public Speaking</a></li>
                         <li><a href="#contactMe">Contact Me</a></li>
                     </ul>
                 </nav>
@@ -2320,12 +2354,12 @@
             </div>
             <div class="publicSpeakingDiv" id="publicSpeakingDiv">
                 <section class="publicSpeaking" id="publicSpeaking">
-                    <h1>Public Speaking</h1>
-                    <h2>LLMday Austin Q4 2026</h2>
-                    <h3>October 14, 2026</h3>
+                    <h2>Public Speaking</h2>
+                    <h3>LLMday Austin Q4 2026</h3>
+                    <p><strong>Date:</strong> <time datetime="2026-10-14">October 14, 2026</time></p>
                     <p>
-                        <strong>Talk Title</strong>: 
-                        <u>Invisible Data - The Largest Problem Facing AI</u>
+                        <strong>Talk Title</strong>:
+                        <cite>Invisible Data: The Largest Problem Facing AI</cite>
                     </p>
                     <p>
                         <strong>Abstract</strong>: 
@@ -2334,17 +2368,15 @@
                         In fact, it is probably safer to say that real-world data is the number one saboteur of existing machine learning applications. 
                         This talk will go over common data problems that have been seen in enterprise systems and the importance of curating data for pipelines of all varieties.
                     </p>
-                    <p>
-                        Relevant Links:
-                        <ul>
-                            <li>
-                                Certification: <a href="https://certified.fyi/api/v0/certificates/lEMcTpgg-cx6kDQb0-uZR4qQcX-VXbp2KDL/badge.json">Verification</a>
-                            </li>
-                            <li>
-                                Slides: <a href="./assets/pdf/InvisibleDataSlides.pdf">Invisible Data Slides PDF</a>
-                            </li>
-                        </ul>
-                    </p>
+                    <h4>Relevant Links</h4>
+                    <ul>
+                        <li>
+                            Certification: <a href="https://certified.fyi/c/lEMcTpgg-cx6kDQb0-uZR4qQcX-VXbp2KDL">Speaker certificate for LLMday Austin (verify on certified.fyi)</a>
+                        </li>
+                        <li>
+                            Slides: <a href="./assets/pdf/InvisibleDataSlides.pdf" type="application/pdf">Invisible Data slides (PDF)</a>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </main>

@@ -56,15 +56,21 @@
      * they are just a list of figures, which is already correct. The carousel
      * role on the container used to sit in the static markup, which announced
      * the stacked no-JS list as a carousel.
+     *
+     * The slide role goes on the <figure> inside each <li>, not on the <li>
+     * itself. Overriding the <li> role would leave the track a list with no
+     * list items.
      */
     function labelSlides() {
         gallery.setAttribute("role", "group");
         gallery.setAttribute("aria-roledescription", "carousel");
         gallery.setAttribute("aria-label", "Landscape photography gallery");
         for (var i = 0; i < slides.length; i++) {
-            slides[i].setAttribute("role", "group");
-            slides[i].setAttribute("aria-roledescription", "slide");
-            slides[i].setAttribute("aria-label", (i + 1) + " of " + slides.length);
+            var figure = slides[i].querySelector("figure");
+            if (!figure) continue;
+            figure.setAttribute("role", "group");
+            figure.setAttribute("aria-roledescription", "slide");
+            figure.setAttribute("aria-label", (i + 1) + " of " + slides.length);
         }
     }
 

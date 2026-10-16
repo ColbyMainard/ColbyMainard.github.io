@@ -247,26 +247,24 @@
 
     /**
      * Public Speaking — Stage spotlight
-     * Section heading widens into focus like a lit stage, the event h2 and
-     * date h3 settle in, then the talk details rise. The talk's <ul> is a
-     * direct child of the section because the parser closes the enclosing
-     * <p> before it.
+     * Section h2 widens into focus like a lit stage, the event h3 settles
+     * in, then the date, talk details, h4 subheadings, and lists rise.
      */
     function animatePublicSpeaking(el) {
         var tl = anime.createTimeline({ ease: "outExpo" });
 
-        addStep(tl, directChildren(el, "h1"), {
+        addStep(tl, directChildren(el, "h2"), {
             opacity: [0, 1],
             scaleX: [0.6, 1],
             duration: 800
         });
-        addStep(tl, directChildren(el, "h2, h3"), {
+        addStep(tl, directChildren(el, "h3"), {
             opacity: [0, 1],
             scale: [0.9, 1],
             duration: 600,
             delay: anime.stagger(120)
         }, ">-400");
-        addStep(tl, directChildren(el, "p, ul, a"), {
+        addStep(tl, directChildren(el, "h4, p, ul, a"), {
             opacity: [0, 1],
             translateY: ["20px", "0px"],
             duration: 600,

@@ -4,8 +4,18 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v83";
+const CACHE_VERSION = "v84";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
+
+// A failing cache write (quota exceeded, storage cleared mid-session) can
+// repeat on every request, so it is reported once per worker lifetime.
+let cacheWriteWarned = false;
+
+function warnCacheWrite(url, err) {
+    if (cacheWriteWarned) return;
+    cacheWriteWarned = true;
+    console.warn("[service-worker] cache write failed:", url, err);
+}
 
 const PRECACHE_URLS = [
     "./",
@@ -106,7 +116,10 @@ self.addEventListener("fetch", function (event) {
                     const clone = response.clone();
                     caches.open(CACHE_NAME).then(function (cache) {
                         return cache.put(request, clone);
-                    }).catch(function () { /* cache write failed; the network response is still served */ });
+                    }).catch(function (err) {
+                        // The network response is still served.
+                        warnCacheWrite(request.url, err);
+                    });
                 }
                 return response;
             }).catch(function () {
@@ -136,7 +149,10 @@ self.addEventListener("fetch", function (event) {
                 const clone = response.clone();
                 caches.open(CACHE_NAME).then(function (cache) {
                     return cache.put(request, clone);
-                }).catch(function () { /* cache write failed; the network response is still served */ });
+                }).catch(function (err) {
+                    // The network response is still served.
+                    warnCacheWrite(request.url, err);
+                });
                 return response;
             }).catch(function () {
                 // Sub-resource fetch failed with no cache hit: let the browser

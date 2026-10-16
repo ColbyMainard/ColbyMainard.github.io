@@ -16,10 +16,11 @@
  *
  * The choice is stored in localStorage as "accepted" or "rejected"; the
  * banner does not reappear on subsequent page loads. Visitors can change
- * their mind via window.cookieConsent.revoke() (linked from the Privacy
- * Policy page). Rejecting or resetting takes effect on the current page as
- * well: stopAnalytics() silences a gtag that already loaded and expires the
- * _ga cookies it set.
+ * their mind with the Accept, Reject, and Reset buttons on the Privacy Policy
+ * page, which reach these actions through data-cookie-consent attributes.
+ * Rejecting or resetting takes effect on the current page as well:
+ * stopAnalytics() silences a gtag that already loaded and expires the _ga
+ * cookies it set.
  *
  * This is a deliberately lightweight, dependency-free implementation —
  * sized for the GDPR / CCPA exposure created by GA4 on a static personal
@@ -44,10 +45,22 @@
 
     var banner = null;
 
+    // Storage can be blocked (private mode, site data disabled). The banner
+    // still works without it, but the choice will not persist, so each failing
+    // operation warns once rather than on every read.
+    var warned = {};
+
+    function warnOnce(operation, err) {
+        if (warned[operation]) return;
+        warned[operation] = true;
+        console.warn("[cookie-consent] " + operation + " failed:", err);
+    }
+
     function readConsent() {
         try {
             return window.localStorage.getItem(STORAGE_KEY);
         } catch (e) {
+            warnOnce("localStorage read", e);
             return null;
         }
     }
@@ -56,7 +69,7 @@
         try {
             window.localStorage.setItem(STORAGE_KEY, value);
         } catch (e) {
-            /* private mode or storage blocked — choice will not persist */
+            warnOnce("localStorage write", e);
         }
     }
 
@@ -64,7 +77,7 @@
         try {
             window.localStorage.removeItem(STORAGE_KEY);
         } catch (e) {
-            /* ignore */
+            warnOnce("localStorage remove", e);
         }
     }
 
@@ -223,6 +236,12 @@
 
     function showBanner() {
         if (banner) return;
+        // A banner hidden less than 320 ms ago is still in the DOM, fading out.
+        // Remove it now so the new one does not share its ids.
+        var leaving = document.getElementById("cookieConsent");
+        if (leaving && leaving.parentNode) {
+            leaving.parentNode.removeChild(leaving);
+        }
         banner = createBanner();
         // Insert near the top of <body>, not at the end. Appending put the
         // consent choice at the very end of the tab order, behind every link on
@@ -280,10 +299,11 @@
     }
 
     // A reset leaves no consent on record, so analytics stops here as well.
+    // A banner already on screen is kept as it is. Hiding and re-creating it
+    // left two #cookieConsent elements in the DOM during the fade-out.
     function revoke() {
         clearConsent();
         stopAnalytics();
-        hideBanner();
         showBanner();
         updateStatusLabel();
     }
@@ -312,6 +332,11 @@
         var panel = document.querySelector(".cookiePreferences");
         if (panel) panel.hidden = false;
         updateStatusLabel();
+        // The status paragraph becomes a live region only after its first
+        // fill, so the value read from storage on page load is not announced.
+        // Later changes, from onChoice() and revoke(), are.
+        var label = document.getElementById("cookieConsentStatus");
+        if (label) label.setAttribute("role", "status");
     }
 
     function updateStatusLabel() {
@@ -339,11 +364,10 @@
         wirePreferenceControls();
     }
 
-    // Public API. Only the three actions are exposed: the Privacy Policy page
-    // wires them through data-cookie-consent attributes and links revoke() by
-    // name. A getStatus alias used to sit here as well, but nothing on the site
-    // ever called it (updateStatusLabel below reads the private readConsent
-    // directly), so it was an unused surface rather than a documented API.
+    // Console-only API. Nothing on the site calls it: the Privacy Policy page
+    // reaches the same three actions through data-cookie-consent attributes.
+    // It stays so a visitor or developer can change the choice from the
+    // browser console, for example window.cookieConsent.revoke().
     window.cookieConsent = {
         accept: function () { onChoice("accepted"); },
         reject: function () { onChoice("rejected"); },
