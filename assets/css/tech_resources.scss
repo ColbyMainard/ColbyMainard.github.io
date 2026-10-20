@@ -1,3 +1,7 @@
+// Shared palettes, mixins, and site-wide chrome. Must come first: every rule
+// below uses its variables and mixins.
+@import "default";
+
 // /* Teal Shield color palette from https://colormagic.app/palette/690ad82aeebc052f2bce9d4a */
 // $teal_shield_1: #1f3a3d;
 // $teal_shield_2: #2b5c5f;

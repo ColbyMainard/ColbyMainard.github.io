@@ -1,0 +1,682 @@
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth; } }
+html {
+  scroll-padding-top: calc(var(--header-height, 7.5rem) + 0.5rem); }
+
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: calc(var(--header-height, 3rem) + 0.5rem); } }
+html:has(.cookieConsent.visible) {
+  scroll-padding-bottom: var(--cookie-banner-height, 7rem); }
+
+@media (max-width: 768px) {
+  html:has(.cookieConsent.visible) {
+    scroll-padding-bottom: var(--cookie-banner-height, 19rem); } }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help; }
+
+.tableScroll {
+  max-width: 100%;
+  overflow-x: auto; }
+  .tableScroll:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px; }
+
+main.main:focus {
+  outline: none; }
+
+header {
+  width: 100%;
+  text-align: center;
+  background-color: #007a5e;
+  font-family: "Courier New", monospace;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+  @media (forced-colors: active) {
+    header {
+      border-bottom: 1px solid CanvasText; } }
+  header .nav-brand {
+    display: inline-block;
+    color: #e0f7fa;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 12px 20px;
+    letter-spacing: 1px;
+    text-decoration: none; }
+    header .nav-brand:hover {
+      text-decoration: underline; }
+  header .nav-toggle {
+    display: none;
+    background: none;
+    border: 2px solid #50c3a1;
+    border-radius: 4px;
+    color: #e0f7fa;
+    font-size: 150%;
+    cursor: pointer;
+    padding: 4px 10px;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    line-height: 1;
+    min-height: 44px;
+    min-width: 44px; }
+    header .nav-toggle:hover {
+      background-color: rgba(80, 195, 161, 0.2); }
+    header .nav-toggle.active {
+      background-color: rgba(80, 195, 161, 0.3); }
+    header .nav-toggle:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
+  header #pageMenu {
+    background-color: #006b52;
+    border-bottom: 1px solid rgba(80, 195, 161, 0.2);
+    padding: 0;
+    position: relative; }
+    header #pageMenu nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0; }
+    header #pageMenu a {
+      display: inline-block;
+      color: #e0f7fa;
+      text-decoration: none;
+      padding: 14px 24px;
+      font-size: 95%;
+      letter-spacing: 0.5px;
+      transition: color 0.2s, background-color 0.2s, border-bottom-color 0.2s;
+      border-bottom: 3px solid transparent; }
+      header #pageMenu a:hover {
+        color: #e0f7fa;
+        background-color: rgba(80, 195, 161, 0.1);
+        border-bottom-color: #50c3a1; }
+      header #pageMenu a.active {
+        color: #e0f7fa;
+        border-bottom-color: #e0f7fa;
+        font-weight: bold; }
+      header #pageMenu a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px; }
+  header #siteMenu {
+    background-color: #007a5e;
+    padding: 0; }
+    header #siteMenu nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0; }
+    header #siteMenu li:first-child a {
+      border-left: none; }
+    header #siteMenu a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      min-height: 44px;
+      color: #e0f7fa;
+      text-decoration: none;
+      padding: 10px 18px;
+      font-size: 85%;
+      transition: color 0.2s, background-color 0.2s;
+      border-left: 1px solid rgba(80, 195, 161, 0.15); }
+      header #siteMenu a:hover {
+        color: #e0f7fa;
+        background-color: #00614a; }
+      header #siteMenu a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px; }
+
+@media (max-width: 1024px) {
+  header {
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto; }
+    header #pageMenu nav a:focus-visible,
+    header #siteMenu nav a:focus-visible {
+      outline-offset: -2px; }
+    header .nav-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    header #pageMenu nav {
+      display: none;
+      flex-direction: column; }
+      header #pageMenu nav.open {
+        display: flex; }
+      header #pageMenu nav a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(80, 195, 161, 0.1);
+        border-bottom-width: 1px; }
+        header #pageMenu nav a:hover {
+          border-bottom-width: 1px; }
+    header #siteMenu nav {
+      display: none; }
+      header #siteMenu nav.open {
+        display: block; }
+      header #siteMenu nav ul {
+        flex-direction: column; }
+      header #siteMenu nav a {
+        border-left: none;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
+body {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: #3e3e41;
+  font-family: "Courier New", monospace; }
+  body h1 {
+    color: #d4d4d9;
+    font-size: clamp(2rem, 8vw, 5rem); }
+  body h2 {
+    color: #d4d4d9;
+    font-size: clamp(1.5rem, 5vw, 3rem); }
+  body h3 {
+    color: #d4d4d9;
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
+  body p {
+    color: #d4d4d9;
+    font-size: 100%; }
+  body img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto;
+    border: 2px solid #1a1a1e;
+    border-radius: 1%; }
+
+@media (max-width: 768px) {
+  body img {
+    max-width: 100%; } }
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; }
+
+main a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px; }
+
+.floatingBackToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #50c3a1;
+  background-color: rgba(0, 122, 94, 0.92);
+  color: #e0f7fa;
+  font-family: "Courier New", monospace;
+  font-size: 160%;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  z-index: 200;
+  visibility: hidden; }
+  .floatingBackToTop.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible; }
+  .floatingBackToTop:hover, .floatingBackToTop:focus {
+    background-color: #00614a;
+    border-color: #e0f7fa;
+    color: #e0f7fa; }
+  .floatingBackToTop:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .floatingBackToTop {
+    bottom: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 140%; } }
+html:has(.cookieConsent.visible) .floatingBackToTop {
+  bottom: calc(var(--cookie-banner-height, 7rem) + 24px); }
+
+@media (max-width: 768px) {
+  html:has(.cookieConsent.visible) .floatingBackToTop {
+    bottom: calc(var(--cookie-banner-height, 19rem) + 16px); } }
+.easterEggCard {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 300;
+  max-width: 22rem;
+  padding: 16px 20px;
+  text-align: left;
+  background-color: #1a1a1e;
+  color: #d4d4d9;
+  border: 2px solid #50c3a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  font-family: "Courier New", monospace;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease; }
+  .easterEggCard.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; }
+  .easterEggCard:focus {
+    outline: none; }
+  .easterEggCard:focus-visible {
+    outline: 2px solid #e0f7fa;
+    outline-offset: 2px; }
+  .easterEggCard .easterEggTitle {
+    margin: 0 0 0.5em;
+    color: #e0f7fa;
+    font-size: 125%;
+    font-weight: bold; }
+  .easterEggCard .easterEggJoke {
+    margin: 0 0 1em;
+    color: #d4d4d9;
+    font-size: 95%;
+    line-height: 1.5; }
+  .easterEggCard .easterEggActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; }
+  .easterEggCard .easterEggButton {
+    background-color: #007a5e;
+    border: 2px solid #50c3a1;
+    border-radius: 4px;
+    color: #e0f7fa;
+    font-family: "Courier New", monospace;
+    font-size: 90%;
+    padding: 6px 12px;
+    cursor: pointer; }
+    .easterEggCard .easterEggButton:hover {
+      background-color: #00614a;
+      border-color: #e0f7fa; }
+    .easterEggCard .easterEggButton:focus-visible {
+      outline: 2px solid #e0f7fa;
+      outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .easterEggCard {
+    left: 16px;
+    right: 80px;
+    bottom: 16px;
+    max-width: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .easterEggCard {
+    transition: none; } }
+code {
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  background-color: rgba(26, 26, 30, 0.6);
+  color: #a1d9b0;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  border: 1px solid rgba(80, 195, 161, 0.25); }
+
+pre {
+  text-align: left;
+  background-color: #1a1a1e;
+  color: #d4d4d9;
+  border: 1px solid rgba(80, 195, 161, 0.3);
+  border-radius: 6px;
+  padding: 1em 1.25em;
+  margin: 1em auto;
+  max-width: 80%;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  line-height: 1.5; }
+  pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit; }
+
+.cookieConsent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  background-color: rgba(26, 26, 30, 0.97);
+  border-top: 2px solid #50c3a1;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+  padding: 16px 20px;
+  color: #d4d4d9;
+  font-family: "Courier New", monospace;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none; }
+  .cookieConsent.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; }
+  .cookieConsent .cookieConsent-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left; }
+  .cookieConsent .cookieConsent-message {
+    flex: 1 1 auto;
+    margin: 0;
+    color: #d4d4d9;
+    font-size: 95%;
+    line-height: 1.5; }
+    .cookieConsent .cookieConsent-message a {
+      color: #50c3a1;
+      text-decoration: underline; }
+      .cookieConsent .cookieConsent-message a:hover, .cookieConsent .cookieConsent-message a:focus {
+        color: #e0f7fa; }
+  .cookieConsent .cookieConsent-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 12px; }
+  .cookieConsent .cookieConsent-button {
+    font-family: "Courier New", monospace;
+    font-size: 95%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    min-height: 44px;
+    min-width: 44px; }
+  .cookieConsent .cookieConsent-accept {
+    background-color: #007a5e;
+    border: 2px solid #50c3a1;
+    color: #e0f7fa;
+    font-weight: bold; }
+    .cookieConsent .cookieConsent-accept:hover, .cookieConsent .cookieConsent-accept:focus {
+      background-color: #00614a;
+      border-color: #e0f7fa; }
+    .cookieConsent .cookieConsent-accept:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
+  .cookieConsent .cookieConsent-reject {
+    background-color: transparent;
+    border: 2px solid #50c3a1;
+    color: #a1d9b0; }
+    .cookieConsent .cookieConsent-reject:hover, .cookieConsent .cookieConsent-reject:focus {
+      background-color: rgba(80, 195, 161, 0.15);
+      color: #e0f7fa; }
+    .cookieConsent .cookieConsent-reject:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .cookieConsent {
+    padding: 14px 16px; }
+    .cookieConsent .cookieConsent-inner {
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch; }
+    .cookieConsent .cookieConsent-message {
+      text-align: center; }
+    .cookieConsent .cookieConsent-actions {
+      justify-content: center; }
+    .cookieConsent .cookieConsent-button {
+      flex: 1 1 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .cookieConsent {
+    transition: none; } }
+.cookiePreferences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+  text-align: left; }
+  .cookiePreferences[hidden] {
+    display: none; }
+
+.cookiePreferences-button {
+  font-family: "Courier New", monospace;
+  font-size: 95%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  background-color: transparent;
+  border: 2px solid #50c3a1;
+  color: #e0f7fa; }
+  .cookiePreferences-button:hover, .cookiePreferences-button:focus {
+    background-color: rgba(80, 195, 161, 0.15); }
+  .cookiePreferences-button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px; }
+
+.cookiePreferences-accept {
+  background-color: #007a5e;
+  font-weight: bold; }
+  .cookiePreferences-accept:hover, .cookiePreferences-accept:focus {
+    background-color: #00614a;
+    border-color: #e0f7fa; }
+
+.cookiePreferences-reject {
+  color: #a1d9b0; }
+  .cookiePreferences-reject:hover, .cookiePreferences-reject:focus {
+    color: #e0f7fa; }
+
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: #007a5e;
+  padding-bottom: 1em; }
+  @media (forced-colors: active) {
+    footer {
+      border-top: 1px solid CanvasText; } }
+  footer #contactMe {
+    font-family: "Courier New", monospace; }
+    footer #contactMe h2 {
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      color: #a1d9b0; }
+    footer #contactMe a:link {
+      color: #e0f7fa;
+      font-size: 100%; }
+    footer #contactMe a:visited {
+      color: #e0f7fa;
+      font-size: 100%;
+      text-decoration: underline dotted; }
+    footer #contactMe a:hover {
+      color: #e0f7fa;
+      font-size: 100%; }
+    footer #contactMe a:active {
+      color: #e0f7fa;
+      font-size: 100%;
+      text-decoration: underline;
+      text-decoration-thickness: 2px; }
+    footer #contactMe p {
+      color: #e0f7fa;
+      font-size: 100%; }
+
+html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+  opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+    opacity: 1 !important; } }
+/* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette */
+#quantumComputing, #photography, #dungeonsAndDragons, #history {
+  margin: auto;
+  background-color: #34495E;
+  width: 80%;
+  border-radius: 10px;
+  padding-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: "Courier New", monospace; }
+  @media (forced-colors: active) {
+    #quantumComputing, #photography, #dungeonsAndDragons, #history {
+      border: 1px solid CanvasText; } }
+  #quantumComputing h1, #photography h1, #dungeonsAndDragons h1, #history h1 {
+    text-align: left;
+    color: #E7EAEC;
+    font-size: clamp(2rem, 8vw, 5rem); }
+  #quantumComputing h2, #photography h2, #dungeonsAndDragons h2, #history h2 {
+    text-align: left;
+    color: #D3DADE;
+    font-size: clamp(1.5rem, 5vw, 3rem); }
+  #quantumComputing h3, #photography h3, #dungeonsAndDragons h3, #history h3 {
+    text-align: left;
+    color: #C2CBD1;
+    font-size: clamp(1.25rem, 3.5vw, 2rem); }
+  #quantumComputing p, #photography p, #dungeonsAndDragons p, #history p {
+    text-align: left;
+    color: #B8C2C9;
+    font-size: 100%; }
+  #quantumComputing a:link, #photography a:link, #dungeonsAndDragons a:link, #history a:link,
+  #quantumComputing a:visited,
+  #photography a:visited,
+  #dungeonsAndDragons a:visited,
+  #history a:visited {
+    text-align: left;
+    color: #D3DADE;
+    font-size: 100%;
+    text-decoration: underline; }
+  #quantumComputing a:hover, #photography a:hover, #dungeonsAndDragons a:hover, #history a:hover,
+  #quantumComputing a:active,
+  #photography a:active,
+  #dungeonsAndDragons a:active,
+  #history a:active {
+    text-align: left;
+    color: #E7EAEC;
+    font-size: 100%;
+    text-decoration: underline; }
+  #quantumComputing ul, #photography ul, #dungeonsAndDragons ul, #history ul {
+    text-align: left; }
+    #quantumComputing ul li, #photography ul li, #dungeonsAndDragons ul li, #history ul li {
+      color: #B8C2C9;
+      font-size: 100%; }
+
+#quantumComputing iframe {
+  width: 560px;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto; }
+
+#photography .photoGallery-track {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+#photography .photoGallery-slide {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
+  #photography .photoGallery-slide figure {
+    margin: 0; }
+#photography .photoGallery-slide img {
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto; }
+#photography figcaption {
+  text-align: left;
+  color: #B8C2C9;
+  font-size: 100%;
+  margin-top: 0.75em; }
+#photography .photoGallery.js-gallery .photoGallery-slide {
+  display: none; }
+  #photography .photoGallery.js-gallery .photoGallery-slide.is-active {
+    display: block; }
+#photography .photoGallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 1em; }
+#photography .photoGallery-count {
+  color: #B8C2C9;
+  font-family: "Courier New", monospace;
+  font-size: 100%; }
+#photography .photoGallery-button {
+  background-color: #E7EAEC;
+  color: #34495E;
+  border: 2px solid #34495E;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  font-family: "Courier New", monospace;
+  font-size: 100%;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px; }
+  #photography .photoGallery-button:hover {
+    background-color: #D3DADE; }
+  #photography .photoGallery-button:focus-visible {
+    outline: 2px solid #E7EAEC;
+    outline-offset: 2px; }
+
+#history blockquote {
+  text-align: left;
+  color: #B8C2C9;
+  font-size: 150%; }
+#history figure.quotation {
+  margin: 1em 0; }
+  #history figure.quotation figcaption {
+    margin: 0 40px;
+    text-align: left;
+    color: #B8C2C9;
+    font-size: 100%; }
+#history table {
+  text-align: left;
+  border-collapse: collapse;
+  border-color: #B8C2C9;
+  border-style: solid; }
+  #history table tr {
+    border-color: #B8C2C9; }
+    #history table tr th {
+      border-color: #B8C2C9;
+      color: #B8C2C9;
+      font-size: 100%;
+      border-top-style: double;
+      border-right-style: double;
+      border-bottom-style: double;
+      border-left-style: double; }
+    #history table tr td {
+      border-color: #B8C2C9;
+      color: #B8C2C9;
+      font-size: 100%;
+      border-top-style: groove;
+      border-right-style: groove;
+      border-bottom-style: groove;
+      border-left-style: groove; }
+#history table tr td ul li {
+  color: #B8C2C9;
+  font-size: 100%; }
+
+html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > .quotation, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > h4, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > .quotation, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > h4, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > .quotation, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > h4, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > .quotation, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > h4, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > .quotation, html.js-animations #history > a, html.js-animations #history > iframe {
+  opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > .quotation, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > h4, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > .quotation, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > h4, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > .quotation, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > h4, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > .quotation, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > h4, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > .quotation, html.js-animations #history > a, html.js-animations #history > iframe {
+    opacity: 1 !important; } }

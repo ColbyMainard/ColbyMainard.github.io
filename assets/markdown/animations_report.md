@@ -156,7 +156,7 @@ The Intro's `.errorCode` figure is the only element on the site with a multi-ste
 
 ## SCSS Changes
 
-`default.scss` is the single compile entry point. It `@import`s seven partials in order (`index`, `hobbies`, `tech_takes`, `tech_resources`, `privacy_policy`, `guides`, `page_not_found`) and compiles to one committed `default.css` that every page links. The animation initial-state rules live inside each animated partial, not in a separate stylesheet.
+Each page has its own SCSS entry file (`index`, `hobbies`, `tech_takes`, `tech_resources`, `privacy_policy`, `guides`, `page_not_found`), which begins with `@import "default";` and compiles to its own committed `.css` that only that page links. (Until 2026-10-19, `default.scss` imported all seven and compiled to one `default.css` linked by every page; the history entries below that mention `default.css` describe that layout.) The animation initial-state rules live inside each animated page file, not in a separate stylesheet.
 
 Six partials declare an initial-state gate: `index.scss`, `hobbies.scss`, `tech_takes.scss`, `tech_resources.scss`, `guides.scss`, and `page_not_found.scss`. `privacy_policy.scss` has none, matching that page's lack of animations.
 
@@ -223,10 +223,10 @@ Page-specific notes:
 
 ## Build
 
-The SCSS has been compiled and the resulting `default.css` is committed, so the initial hidden states are in effect. When editing the SCSS, recompile before committing:
+The compiled page stylesheets are committed, so the initial hidden states are in effect wherever they have been compiled. When editing the SCSS, recompile before committing:
 
 ```bash
-sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
+sass --sourcemap=none --trace --update ./assets/css/index.scss:./assets/css/index.css ./assets/css/hobbies.scss:./assets/css/hobbies.css ./assets/css/tech_takes.scss:./assets/css/tech_takes.css ./assets/css/tech_resources.scss:./assets/css/tech_resources.css ./assets/css/privacy_policy.scss:./assets/css/privacy_policy.css ./assets/css/guides.scss:./assets/css/guides.css ./assets/css/page_not_found.scss:./assets/css/page_not_found.css
 ```
 
 Without the compiled rules, animations still run (AnimeJS sets `opacity: [0, 1]` inline), but there can be a brief flash of unstyled content before JS executes because the CSS would not yet include the `opacity: 0` rules.

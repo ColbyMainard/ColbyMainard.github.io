@@ -27,7 +27,7 @@ This document describes how Colby Mainard's personal website is built and why it
 
 ## 1. System overview
 
-The site is a static, client-side-only website served by GitHub Pages at <https://colbymainard.github.io/>. It consists of seven HTML pages, one compiled stylesheet, sixteen classic JavaScript files, and a handful of root-level metadata files. There is no server, no backend, no database, no npm, and no bundler. The only runtime dependency is AnimeJS, loaded from a CDN.
+The site is a static, client-side-only website served by GitHub Pages at <https://colbymainard.github.io/>. It consists of seven HTML pages, seven compiled stylesheets (one per page), sixteen classic JavaScript files, and a handful of root-level metadata files. There is no server, no backend, no database, no npm, and no bundler. The only runtime dependency is AnimeJS, loaded from a CDN.
 
 It serves two audiences: potential colleagues and employers (competencies, skills, and held beliefs) and fellow technology enthusiasts (hobbies and technical resources). Because the site's job is to be found, read, and trusted rather than to run application logic, most of its architecture concerns **discoverability** (structured data, a feed, `llms.txt`), **accessibility**, and **robustness when scripts or the network fail**.
 
@@ -86,9 +86,9 @@ Every design decision in the repository traces back to one of these constraints.
 │   │   ├── hobbies.html        Hobbies and photography
 │   │   └── privacy.html        Privacy policy and consent controls
 │   ├── css/
-│   │   ├── default.scss        Single compile entry: palettes, mixins, global rules
-│   │   ├── <page>.scss         Seven per-page partials
-│   │   └── default.css         Compiled output, committed, linked by every page
+│   │   ├── default.scss        Shared base every page file imports: palettes, mixins, global rules
+│   │   ├── <page>.scss         Seven per-page entry files, each starting with @import "default"
+│   │   └── <page>.css          Seven compiled outputs, committed, each linked by its one page
 │   ├── js/                     Sixteen classic deferred scripts
 │   ├── images/                 favicon, share card, photographs, GIMP .xcf sources
 │   ├── markdown/               Working notes and disposable dated reports
@@ -108,7 +108,7 @@ Layout decisions:
 
 - **Exactly two page depths.** Pages live at the repository root (`index.html`, `404.html`) or in `assets/html/`. `path_helpers.js` writes this down once as three constants, so adding a third depth means editing that file rather than every consumer.
 - **`service-worker.js` sits at the root** because a service worker's default scope is the directory it is served from. At the root it controls every page on the site.
-- **`default.css` is committed.** CI does not compile anything (see [section 5](#5-build-and-deployment)), so the compiled file in the repository is the one visitors receive. Source maps (`assets/css/*.css.map`), `.sass-cache`, `.vscode`, and `.claude/settings.local.json` are gitignored.
+- **The seven compiled page stylesheets are committed.** CI does not compile anything (see [section 5](#5-build-and-deployment)), so the compiled files in the repository are the ones visitors receive. There is no `default.css`; it is gitignored so a whole-directory compile cannot slip one back in. Source maps (`assets/css/*.css.map`), `.sass-cache`, `.vscode`, and `.claude/settings.local.json` are gitignored.
 - **Design sources live next to exports.** `favicon.xcf` and `sharecard.xcf` sit beside the PNGs they produce.
 
 ---
@@ -133,7 +133,7 @@ There is no templating, so every page repeats the same skeleton by hand:
 
 ```mermaid
 flowchart TD
-    HEAD["head<br/>meta, canonical, social cards, rel=me,<br/>default.css, deferred scripts, JSON-LD blocks"]
+    HEAD["head<br/>meta, canonical, social cards, rel=me,<br/>the page's own stylesheet, deferred scripts, JSON-LD blocks"]
     SKIP["a.visually-hidden href=main<br/>skip link, always first in body"]
     HDR["header<br/>.pageMenu: brand, nav toggle, primaryNav<br/>.siteMenu: sectionNav for this page"]
     MAIN["main id=main tabindex=-1"]
@@ -159,8 +159,8 @@ Anatomy decisions:
 
 ```mermaid
 flowchart TD
-    A["Edit default.scss or a page partial"] --> B["Run sass locally"]
-    B --> C["default.css regenerated"]
+    A["Edit default.scss or a page entry file"] --> B["Run sass locally"]
+    B --> C["Page .css files regenerated<br/>(all seven after a default.scss edit)"]
     C --> D["Commit SCSS and CSS together"]
     D --> E["Bump CACHE_VERSION in service-worker.js"]
     E --> F["Push to master"]
@@ -171,8 +171,10 @@ flowchart TD
 The only build step is compiling SCSS, run by hand:
 
 ```bash
-sass --sourcemap=none --trace ./assets/css/default.scss ./assets/css/default.css
+sass --sourcemap=none --trace --update ./assets/css/index.scss:./assets/css/index.css ./assets/css/hobbies.scss:./assets/css/hobbies.css ./assets/css/tech_takes.scss:./assets/css/tech_takes.css ./assets/css/tech_resources.scss:./assets/css/tech_resources.css ./assets/css/privacy_policy.scss:./assets/css/privacy_policy.css ./assets/css/guides.scss:./assets/css/guides.css ./assets/css/page_not_found.scss:./assets/css/page_not_found.css
 ```
+
+The pairs are listed explicitly because compiling the whole `assets/css/` directory would also turn `default.scss` into a `default.css`.
 
 Deployment decisions:
 
@@ -189,15 +191,14 @@ Deployment decisions:
 
 ```mermaid
 flowchart TD
-    subgraph ENTRY["default.scss"]
+    subgraph BASE["default.scss (shared base, never compiled alone)"]
         PAL["Shared palettes<br/>noir, emerald_efficiency"]
         LAD["Heading ladder<br/>heading_size_1 to 4, all clamp()"]
-        MIX["Ten shared mixins"]
-        IMP["@import seven partials"]
+        MIX["Eleven shared mixins"]
         GLB["Global rules<br/>header, body, footer, cookie banner,<br/>back-to-top, easter egg, code blocks,<br/>abbr, visually-hidden, contact gate"]
     end
 
-    subgraph PARTIALS["Per-page partials, each with its own palette"]
+    subgraph ENTRIES["Per-page entry files, each with its own palette"]
         P1["index.scss"]
         P2["tech_takes.scss"]
         P3["guides.scss"]
@@ -207,22 +208,32 @@ flowchart TD
         P7["page_not_found.scss"]
     end
 
-    IMP --> PARTIALS
-    MIX -.->|"@include with page palette"| PARTIALS
-    ENTRY --> OUT["default.css<br/>one stylesheet for all seven pages"]
-    PARTIALS --> OUT
+    BASE -->|"@import &quot;default&quot; at the top of each"| ENTRIES
+    MIX -.->|"@include with page palette"| ENTRIES
+    P1 --> O1["index.css → index.html"]
+    P2 --> O2["tech_takes.css → tech_takes.html"]
+    P3 --> O3["guides.css → guides.html"]
+    P4 --> O4["tech_resources.css → tech_resources.html"]
+    P5 --> O5["hobbies.css → hobbies.html"]
+    P6 --> O6["privacy_policy.css → privacy.html"]
+    P7 --> O7["page_not_found.css → 404.html"]
 ```
 
-### How a partial is structured
+Each page downloads only its own rules plus the shared chrome. Before 2026-10-19, `default.scss` imported all seven partials and compiled to one `default.css` that every page linked, so each page also carried six other pages' rules. Because the global rules now come first in each output instead of after the page rules, a page rule and a global rule of equal specificity would now resolve in the page rule's favor. None existed when the split was made: every page rule is scoped by a section ID and so outranks the `body …` and bare-element globals anyway.
 
-Every partial follows the same pattern:
+### How a page entry file is structured
 
-1. Declare a five-color palette (for example `$techno_serenity_1` to `$techno_serenity_5` in `guides.scss`).
-2. Define a placeholder selector (`%guideSection`) that `@include`s the shared mixins with that palette.
-3. `@extend` the placeholder onto each section ID (`#dataEngineeringGuide { @extend %guideSection; }`).
-4. Call `animationGate` with the page's animated sections and the child selectors that start hidden.
+Every page entry file follows the same pattern:
 
-Styles are therefore scoped by **section ID**, not by a page class on `<body>`. That is what lets one compiled stylesheet serve all seven pages without collisions.
+1. `@import "default";` before anything else, so the palettes, ladder, and mixins exist and the global rules are emitted.
+2. Declare a five-color palette (for example `$techno_serenity_1` to `$techno_serenity_5` in `guides.scss`).
+3. Define a placeholder selector (`%guideSection`) that `@include`s the shared mixins with that palette.
+4. `@extend` the placeholder onto each section ID (`#dataEngineeringGuide { @extend %guideSection; }`).
+5. Call `animationGate` with the page's animated sections and the child selectors that start hidden.
+
+Styles are still scoped by **section ID**, not by a page class on `<body>`. That mattered most when one stylesheet served all seven pages, and it is kept so that the specificity reasoning above continues to hold.
+
+A rule that two pages need belongs in a `default.scss` mixin that both entry files call. A page can no longer borrow from another page's file, because it never receives it.
 
 ### The mixin layer
 
@@ -239,23 +250,25 @@ Structural rules live in mixins so that a change (a border, spacing, a newly ani
 | `dataTable` | ✓ | ✓ | ✓ | ✓ | ✓ |  |  |
 | `blockQuote` |  | ✓ | ✓ | ✓ | ✓ |  |  |
 | `sectionPermalink` |  | ✓ | ✓ | ✓ |  |  |  |
+| `readingEngagement` |  | ✓ | ✓ |  |  |  |  |
 | `orderedListText` |  | ✓ |  |  |  |  |  |
 
 Notes on the gaps in that table:
 
 - `privacy_policy.scss` omits `animationGate` because `privacy.html` loads no animation scripts. There is nothing to gate. Do not "fix" the omission.
 - `sectionPermalink` is included exactly where `section_permalinks.js` is loaded.
+- `readingEngagement` is included exactly where `reading_engagement.js` is loaded.
 - `orderedListText` is included once, inside `#VibeCodingScourge`, which holds the page's only `<ol>` content. Ordered and unordered list text are two separate mixins on purpose.
 - `default.scss` makes one global `animationGate` call for `#contactMe`, the footer that appears on every page.
 
 ### Other styling decisions
 
 - **Headings use `clamp()`.** The `$heading_size_1..4` ladder shrinks headings on narrow viewports and under zoom (WCAG 1.4.10 Reflow). The maximum of each clamp is the old fixed desktop size, so large screens look unchanged. Fixed percentage sizes must not come back.
-- **WCAG AA contrast.** Every text and background pair in each palette is chosen for at least 4.5:1. The `/* */` contrast notes inside the partials are meant to ship in `default.css` next to the rule they justify. The `//` comments in the mixin block are silent and stay out of the compiled CSS.
+- **WCAG AA contrast.** Every text and background pair in each palette is chosen for at least 4.5:1. The `/* */` contrast notes inside the partials are meant to ship in that page's compiled `.css` next to the rule they justify. The `//` comments in the mixin block are silent and stay out of the compiled CSS.
 - **Forced colors.** Windows High Contrast discards background tints, which would erase the section cards. `sectionShell` restores the boundary with `1px solid CanvasText` under `@media (forced-colors: active)`, and the header, footer, and permalink button have matching rules.
 - **Reduced motion.** Smooth scrolling is enabled only under `prefers-reduced-motion: no-preference`, and `animationGate` forces gated content to `opacity: 1 !important` under `reduce`.
 - **`abbr[title]`** gets a dotted underline and a help cursor, with no color. `text-decoration` draws in `currentColor`, so each section's already-compliant text color is inherited.
-- **Shared rules for two pages.** `.feedSubscribe` and `#reading-progress` live unscoped in `tech_takes.scss` and are reused by `guides.html`. Both pages' intros sit on the same `$noir_2` body background, so the documented contrast holds on each.
+- **Shared rules for two pages.** `.readingTime`, `.feedSubscribe`, and `#reading-progress` are emitted unscoped by the `readingEngagement` mixin, which `tech_takes.scss` and `guides.scss` both call with `#c2c2d1` (`tech_takes.scss`'s `$dark_blue_gray_4`). They used to live in `tech_takes.scss` alone and reach `guides.html` only because every page shared one stylesheet. Both pages' intros sit on the same `$noir_2` body background, so the documented contrast holds on each.
 - **Section typography** is `"Courier New", monospace`, set once in `sectionShell`.
 
 ---
@@ -626,8 +639,8 @@ flowchart TD
 
 Other recurring workflows, with the full checklists in [AGENTS.md](AGENTS.md#task-checklists):
 
-- **Style change:** edit SCSS, recompile, commit `default.css` with it, re-check contrast for any touched pair, bump `CACHE_VERSION`.
-- **New page:** copy an existing `<head>` and header, add it to the nav on every page, create and `@import` its partial, register it in `sitemap.xml` (if indexable), `llms.txt`, and `PRECACHE_URLS`, bump `CACHE_VERSION`.
+- **Style change:** edit SCSS, recompile, commit the regenerated page `.css` files with it (all seven after a `default.scss` edit), re-check contrast for any touched pair, bump `CACHE_VERSION`.
+- **New page:** copy an existing `<head>` and header, add it to the nav on every page, create its SCSS entry file starting with `@import "default";`, add it to the compile command and link its compiled `.css`, register the page in `sitemap.xml` (if indexable) and `llms.txt` and both the page and its `.css` in `PRECACHE_URLS`, bump `CACHE_VERSION`.
 - **New script or asset:** load it from a page, add it to `PRECACHE_URLS` (unless it is multi-megabyte media), bump `CACHE_VERSION`.
 - **New acronym:** wrap first use per section in `<abbr title="…">`.
 - **New `Person` node for Colby:** copy an adjacent node so it carries the canonical `@id` and `name`.
@@ -673,15 +686,15 @@ A consolidated list of the decisions described above, for quick reference.
 | # | Decision | Rationale | Where it lives |
 | --- | --- | --- | --- |
 | 1 | Static files on GitHub Pages, no backend | Simplest reliable hosting for a personal site, with no server to maintain | `.github/workflows/static.yml` |
-| 2 | CI publishes the repo as-is; compiled CSS is committed | No build infrastructure; what is committed is what is served | `static.yml`, `assets/css/default.css` |
+| 2 | CI publishes the repo as-is; compiled CSS is committed | No build infrastructure; what is committed is what is served | `static.yml`, `assets/css/*.css` |
 | 3 | Support `file://` as a first-class origin | Local previews must match production | Relative paths throughout, `path_helpers.js` |
 | 4 | One path-depth helper shared by all path-aware scripts | Previously duplicated logic drifted and failed silently | `assets/js/path_helpers.js` |
 | 5 | AnimeJS is the only dependency, via importmap and an async module shim | Minimal load time; a slow CDN must not block other scripts | Each animated page's `<head>` |
 | 6 | Classic deferred scripts sharing a few globals | No bundler needed; document order is the dependency graph | `assets/js/`, each `<head>` |
 | 7 | Content is hidden for animation only after a script opts in | No-JS, failed-JS, and blocked-CDN visitors always see content | `animationGate` mixin, `AnimationHelpers.run` |
 | 8 | Bounded 3-second wait for AnimeJS | A one-shot check permanently disabled animations on slow loads | `animation_helpers.js` |
-| 9 | One compiled stylesheet, per-page partials scoped by section ID | One cached file for the whole site without selector collisions | `default.scss` and partials |
-| 10 | Shared structure lives in ten mixins | A structural change is made once, not seven times | `default.scss` |
+| 9 | One compiled stylesheet per page, each importing the shared `default.scss` base | A page downloads only its own rules plus the shared chrome | `default.scss` and the seven page entry files |
+| 10 | Shared structure lives in eleven mixins | A structural change is made once, not seven times | `default.scss` |
 | 11 | `clamp()` heading ladder | WCAG 1.4.10 Reflow without changing desktop sizes | `$heading_size_1..4` |
 | 12 | GA is loaded only after consent, never on `file://` | Privacy by default; GDPR and CCPA exposure | `cookie_consent.js` |
 | 13 | Consent banner is a non-modal dialog placed after the skip link, without focus capture | Second tab stop (WCAG 2.4.3) without hijacking focus | `cookie_consent.js` |

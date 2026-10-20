@@ -1,3 +1,7 @@
+// Shared palettes, mixins, and site-wide chrome. Must come first: every rule
+// below uses its variables and mixins.
+@import "default";
+
 /* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette */
 $calm_authority_1: #34495E;
 $calm_authority_2: #B8C2C9;

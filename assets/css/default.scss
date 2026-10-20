@@ -1,3 +1,10 @@
+// Shared base for every page stylesheet. Each page entry file (index.scss,
+// hobbies.scss, tech_takes.scss, tech_resources.scss, privacy_policy.scss,
+// guides.scss, page_not_found.scss) begins with @import "default" and compiles
+// to its own .css, which only that page links. This file holds the shared
+// palettes and mixins (no output on their own) and the global rules at the
+// bottom (emitted into every page). It has no .css of its own.
+
 // 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036
 $noir_1: #1a1a1e;
 $noir_2: #3e3e41;
@@ -223,6 +230,63 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
+// Reading-progress fill. Deliberately outside every page palette: the bar is a
+// purely decorative strip with no text on it and no contrast obligation, and it
+// is meant to read as a distinct progress accent rather than as more page
+// chrome. Named rather than inlined so a future palette pass finds it, and so
+// the fill and its glow cannot drift apart.
+$reading_progress_fill: #00c27c;
+
+// The two pages that load reading_engagement.js (tech_takes and guides) share
+// the reading-time line, the "Subscribe (Atom)" intro link, and the progress
+// bar the script injects. The rules are top level, not section-scoped, because
+// both intros sit on the global $noir_2 body background. Each page passes the
+// same $accent so the two intros match; a section can still recolor
+// .readingTime at its own (higher) specificity, as guides.scss does.
+@mixin readingEngagement($accent) {
+    .readingTime {
+        font-style: italic;
+        color: $accent;
+        font-size: 95%;
+    }
+
+    .feedSubscribe a:link,
+    .feedSubscribe a:visited {
+        color: $accent;
+        text-decoration: underline;
+    }
+    .feedSubscribe a:hover,
+    .feedSubscribe a:focus,
+    .feedSubscribe a:active {
+        color: $noir_5;
+    }
+
+    #reading-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: transparent;
+        pointer-events: none;
+        z-index: 250;
+
+        .reading-progress-fill {
+            height: 100%;
+            width: 0%;
+            background-color: $reading_progress_fill;
+            box-shadow: 0 0 6px rgba($reading_progress_fill, 0.55);
+            transition: width 0.08s linear;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #reading-progress .reading-progress-fill {
+            transition: none;
+        }
+    }
+}
+
 @mixin animationGate($sections, $children) {
     html.js-animations {
         #{$sections} {
@@ -243,13 +307,11 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-@import "index";
-@import "hobbies";
-@import "tech_takes";
-@import "tech_resources";
-@import "privacy_policy";
-@import "guides";
-@import "page_not_found";
+// Everything below this line is the shared, site-wide chrome (header nav,
+// body, footer, cookie banner, back-to-top button, easter egg, code blocks).
+// It is emitted into every page stylesheet, because each page entry file
+// (index.scss, hobbies.scss, ...) starts with @import "default". Nothing
+// imports a page file, and this file is never compiled on its own.
 
 @media (prefers-reduced-motion: no-preference) {
     html {

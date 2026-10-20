@@ -1,3 +1,7 @@
+// Shared palettes, mixins, and site-wide chrome. Must come first: every rule
+// below uses its variables and mixins.
+@import "default";
+
 // Refined Professionalism from https://piktochart.com/blog/professional-color-palette/
 $refined_professionalism_1: #2C3E50;
 $refined_professionalism_2: #34495E;

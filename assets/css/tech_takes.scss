@@ -1,3 +1,7 @@
+// Shared palettes, mixins, and site-wide chrome. Must come first: every rule
+// below uses its variables and mixins.
+@import "default";
+
 // /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
 // $luna_of_gale_1: #d6e4f5;
 // $luna_of_gale_2: #a4c8df;
@@ -46,10 +50,6 @@ $dark_blue_gray_2: #7a7a99;
 $dark_blue_gray_3: #9a9ac2;
 $dark_blue_gray_4: #c2c2d1;
 $dark_blue_gray_5: #ff5c5c;
-
-/* Reading-progress fill. Deliberately outside the Dark Blue Gray ramp: the bar is a purely decorative strip with no text on it and no contrast obligation, and it is meant to read as a distinct progress accent rather than as more page chrome.
-   Named rather than inlined so a future palette pass finds it, and so the fill and its glow cannot drift apart. */
-$reading_progress_fill: #00c27c;
 
 /* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 %techTakeSection {
@@ -139,44 +139,6 @@ $reading_progress_fill: #00c27c;
     "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > .quotation, > a"
 );
 
-.readingTime {
-    font-style: italic;
-    color: $dark_blue_gray_4;
-    font-size: 95%;
-}
-
-.feedSubscribe a:link,
-.feedSubscribe a:visited {
-    color: $dark_blue_gray_4;
-    text-decoration: underline;
-}
-.feedSubscribe a:hover,
-.feedSubscribe a:focus,
-.feedSubscribe a:active {
-    color: $noir_5;
-}
-
-#reading-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: transparent;
-    pointer-events: none;
-    z-index: 250;
-
-    .reading-progress-fill {
-        height: 100%;
-        width: 0%;
-        background-color: $reading_progress_fill;
-        box-shadow: 0 0 6px rgba($reading_progress_fill, 0.55);
-        transition: width 0.08s linear;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #reading-progress .reading-progress-fill {
-        transition: none;
-    }
-}
+// Reading-time line, intro "Subscribe (Atom)" link, and reading-progress bar.
+// guides.scss passes the same $dark_blue_gray_4 value so both intros match.
+@include readingEngagement($dark_blue_gray_4);

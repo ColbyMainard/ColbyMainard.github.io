@@ -147,7 +147,9 @@ Check the layout of each page against these four accessibility principles:
 
 Check the stylesheets against these rules:
 
-- Report an edit to `assets/css/default.css` as a Critical finding. That file is generated, so the next compile discards the edit.
+- Report a hand edit to any compiled `assets/css/*.css` file as a Critical finding. Those files are generated, so the next compile discards the edit.
+- Report a reintroduced `assets/css/default.css`, or a page linking any stylesheet other than its own, as a Major finding. Each page links only the `.css` compiled from its own entry file.
+- Report a page file that does not begin with `@import "default";`, or that relies on a rule emitted only by another page's file, as a Major finding.
 - Put a shared rule in a mixin in `default.scss`, and not in each partial.
 - Keep each text color and background color pair at a contrast ratio of 4.5 to 1 or better.
 - Take a heading size from the shared size ladder, and not from a fixed percentage.

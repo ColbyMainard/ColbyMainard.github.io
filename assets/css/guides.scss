@@ -1,3 +1,7 @@
+// Shared palettes, mixins, and site-wide chrome. Must come first: every rule
+// below uses its variables and mixins.
+@import "default";
+
 $techno_serenity_1: #1f3a61;
 $techno_serenity_2: #4a718c;
 $techno_serenity_3: #8fbccb;
@@ -36,3 +40,9 @@ $techno_serenity_5: #e0f5f2;
     "#introSectionDiv, #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide",
     "> h1, > h2, > h3, > h4, > p, > ul, > .quotation, > a"
 );
+
+// Reading-time line, intro "Subscribe (Atom)" link, and reading-progress bar.
+// #c2c2d1 is tech_takes.scss's $dark_blue_gray_4, kept so this intro's link
+// matches that page's (6.06:1 on the $noir_2 body background; hover $noir_5
+// gives 7.2:1). Each section's .readingTime is recolored by %guideSection.
+@include readingEngagement(#c2c2d1);

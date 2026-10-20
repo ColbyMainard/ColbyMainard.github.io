@@ -88,7 +88,7 @@ Current topics include:
 
 - `/.github/workflows/static.yml`: The GitHub Actions workflow that publishes the repository to GitHub Pages.
 - `/404.html`: Custom error page that GitHub Pages serves for URLs that do not exist.
-- `/assets/css`: CSS and Sassy CSS files allowing for layout specification to webpages.
+- `/assets/css`: Sassy CSS sources and the compiled stylesheets. Each page has its own SCSS file, which imports the shared `default.scss` and compiles to a `.css` that only that page loads.
 - `/assets/html`: Contains all non-index HTML files.
 - `/assets/images`: Images that will be displayed in some of the webpages.
 - `/assets/js`: Custom JavaScript files.
