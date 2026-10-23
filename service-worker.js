@@ -4,7 +4,7 @@
  * fallback. Supports offline browsing and speeds up repeat visits.
  */
 
-const CACHE_VERSION = "v86";
+const CACHE_VERSION = "v87";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 // A failing cache write (quota exceeded, storage cleared mid-session) can
