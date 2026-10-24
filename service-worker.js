@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v87";
+const CACHE_VERSION = "v88";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 let cacheWriteWarned = false;
@@ -44,8 +44,14 @@ const PRECACHE_URLS = [
     "./assets/js/service_worker_register.js",
     "./assets/js/tech_resources_animations.js",
     "./assets/js/tech_takes_animations.js",
+    "./assets/js/vendor/anime.umd.min.js",
     "./assets/images/favicon.png",
     "./assets/images/sharecard.png",
+    // Deliberately absent: the assets/images/photographyHobby/ originals,
+    // assets/images/miscellaneous/DEFCON33.jpeg, and assets/pdf/InvisibleDataSlides.pdf.
+    // Together they are tens of megabytes that every first visit to any page
+    // would pull in the background. The fetch handler below still caches each
+    // one the first time it is actually requested.
     "./assets/other/pgp_email_key.asc"
 ];
 
@@ -54,7 +60,11 @@ self.addEventListener("install", function (event) {
         caches.open(CACHE_NAME).then(function (cache) {
             return Promise.all(
                 PRECACHE_URLS.map(function (url) {
-                    return cache.add(url).catch(function (err) {
+                    // cache: "reload" skips the HTTP cache. GitHub Pages sends
+                    // max-age=600, so a plain add() could store a pre-deploy
+                    // copy under the new CACHE_VERSION and serve it cache-first
+                    // until the next bump.
+                    return cache.add(new Request(url, { cache: "reload" })).catch(function (err) {
                         // Tolerate a missing/renamed asset, but log failures
                         console.warn("[service-worker] precache skipped:", url, err);
                     });
@@ -108,6 +118,8 @@ self.addEventListener("fetch", function (event) {
                     if (cached) return cached;
                     return caches.match("./404.html").then(function (notFound) {
                         return notFound || caches.match("./index.html");
+                    }).then(function (fallback) {
+                        return fallback || Response.error();
                     });
                 });
             })
@@ -130,7 +142,10 @@ self.addEventListener("fetch", function (event) {
                 });
                 return response;
             }).catch(function () {
-                return undefined;
+                // respondWith() must resolve to a Response. Resolving to
+                // undefined is itself a network error, but an unexplained one
+                // logged against the worker; Response.error() says so plainly.
+                return Response.error();
             });
         })
     );

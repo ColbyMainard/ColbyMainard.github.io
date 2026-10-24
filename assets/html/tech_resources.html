@@ -48,8 +48,8 @@
 
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
-        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
+        <!-- Self-hosted AnimeJS 4.3.5 UMD bundle; defines window.anime. A classic deferred script, not a module, because browsers refuse module scripts from file:// origins. It must stay above animation_helpers.js. -->
+        <script src="../js/vendor/anime.umd.min.js" defer></script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_resources_animations.js" defer></script>
         <!-- section_permalinks.js has no ordering rule on this page. On tech_takes.html and guides.html it must stay below reading_engagement.js to keep its button labels out of the reading-time word counts, but this page runs no reading-time script. -->

@@ -46,8 +46,8 @@
         <!-- Cookie consent + gated Google Analytics. GA does not load until consent is granted. -->
         <script src="../js/cookie_consent.js" defer></script>
 
-        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
+        <!-- Self-hosted AnimeJS 4.3.5 UMD bundle; defines window.anime. A classic deferred script, not a module, because browsers refuse module scripts from file:// origins. It must stay above animation_helpers.js. -->
+        <script src="../js/vendor/anime.umd.min.js" defer></script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/hobbies_animations.js" defer></script>
         <script src="../js/photo_gallery.js" defer></script>
@@ -195,6 +195,10 @@
                             <button type="button" class="photoGallery-button" data-gallery-step="1">Next photo</button>
                         </div>
                     </div>
+                    <p>
+                        These photographs are by Colby Mainard and are licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.
+                        You may share and adapt them, including commercially, as long as you credit Colby Mainard and link to this page.
+                    </p>
                 </section>
             </div>
             <div class="dungeonsAndDragonsDiv" id="dungeonsAndDragonsDiv">

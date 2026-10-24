@@ -14,16 +14,15 @@
  * Classic (non-module) deferred script — must load BEFORE each page's
  * *_animations.js so the global is ready when that script runs.
  *
- * On waiting for AnimeJS: each page loads it as `<script type="module" async>`
- * that assigns window.anime after importing from cdn.jsdelivr.net. That module
- * is async on purpose (see the comment in each page head), which means it is
- * racing the deferred classic scripts rather than ordered against them, and the
- * network fetch it depends on is around one second cold. `run` used to test
- * `typeof anime === "undefined"` once and return, so on any load where the
- * fetch had not already finished it bailed permanently and no animation ever
- * played. It now waits for the global to appear, bounded by ANIME_WAIT_MS, and
- * reveals the gated content if it never does. Read window.anime at call time,
- * never at load time; animateContact and back_to_top.js already do.
+ * On waiting for AnimeJS: each page loads the self-hosted UMD bundle
+ * (assets/js/vendor/anime.umd.min.js) as a classic deferred script directly
+ * above this one, so window.anime normally exists before any page script calls
+ * `run`. Until 2026-10-24 it came from cdn.jsdelivr.net as an async module that
+ * raced the deferred scripts, which is why `run` waits for the global, bounded
+ * by ANIME_WAIT_MS, and reveals the gated content if it never appears. That
+ * wait is kept as the safety net for a vendor file that fails to load. Read
+ * window.anime at call time, never at load time; animateContact and
+ * back_to_top.js already do.
  */
 
 (function () {
@@ -127,12 +126,13 @@
         });
     }
 
-    // How long to wait for the async CDN module to define window.anime before
-    // giving up, and how often to look. The AnimeJS bundle is ~110 KB and a
-    // cold fetch measured about one second including DNS and TLS, so three
-    // seconds is generous headroom on a slow link while still bounding how long
-    // gated content can stay hidden when the CDN is simply unreachable. The
-    // 50 ms poll is below the threshold where a late start reads as a stutter.
+    // How long to wait for window.anime before giving up, and how often to
+    // look. The self-hosted bundle loads ahead of this script, so the fast path
+    // in whenAnimeReady is the normal case and this bound only matters when the
+    // vendor file fails to load. It was sized for the old CDN module (~110 KB,
+    // about one second cold), and it still caps how long gated content can stay
+    // hidden. The 50 ms poll is below the threshold where a late start reads as
+    // a stutter.
     var ANIME_WAIT_MS = 3000;
     var ANIME_POLL_MS = 50;
 
@@ -151,9 +151,9 @@
     }
 
     /**
-     * Wait for the async module to publish window.anime, then hand off. Calls
-     * onReady synchronously when the global is already there, so the fast path
-     * (warm CDN cache) behaves exactly as it did before. Calls onGiveUp once if
+     * Wait for the bundle to publish window.anime, then hand off. Calls
+     * onReady synchronously when the global is already there, which is the
+     * normal case now that the bundle is a deferred script loaded first. Calls onGiveUp once if
      * ANIME_WAIT_MS elapses without it, which is the caller's cue to un-hide.
      */
     function whenAnimeReady(onReady, onGiveUp) {
@@ -218,9 +218,14 @@
                 }
             });
         }, {
-            threshold: 0.02,
-            // Trigger ~50px before a section reaches the viewport's bottom
-            // edge, matching timing across every animated page.
+            // Fire on the first visible pixel. A fractional threshold is a
+            // share of the section's own area, so a section taller than the
+            // viewport divided by that fraction (the long book lists on
+            // tech_resources.html at 320 CSS px or 400% zoom) could never
+            // reach it and would stay at opacity: 0 for good.
+            threshold: 0,
+            // Trigger once a section's top edge is ~50px above the viewport's
+            // bottom edge, matching timing across every animated page.
             rootMargin: "0px 0px -50px 0px"
         });
     }
@@ -263,16 +268,17 @@
         // gate back off, so never put it on.
         if (typeof IntersectionObserver === "undefined") return;
 
-        // The CDN module is cross-origin, and service-worker.js returns early
-        // for cross-origin requests, so it is never cached and will never
-        // arrive while offline. Bail before gating anything rather than hiding
-        // the page for the full timeout to reach the same conclusion.
+        // The bundle is a deferred script that has already run (or failed) by
+        // now, and the service worker precaches it, so a missing global while
+        // offline means it is not coming. Bail before gating anything rather
+        // than hiding the page for the full timeout to reach the same
+        // conclusion.
         if (typeof window.anime === "undefined" && isDefinitelyOffline()) return;
 
         // Mark the document so CSS hides elements only when JS will animate
-        // them. Done up front rather than after the wait: first paint happens
-        // well before a cold CDN fetch resolves, so gating late would show the
-        // content, snap it to invisible, and only then animate it in.
+        // them. Done up front rather than after the wait: if window.anime ever
+        // arrives late, gating late would show the content, snap it to
+        // invisible, and only then animate it in.
         document.documentElement.classList.add("js-animations");
 
         whenAnimeReady(function () {

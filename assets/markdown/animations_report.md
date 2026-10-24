@@ -27,12 +27,12 @@ Each page still has a dedicated animation file rather than one shared script, be
 2. **Guards before anything is hidden**: each page script opens with `if (!window.AnimationHelpers) return;`, since it cannot call `run` if the helpers file never loaded. `run` then returns early, before it adds the gate class, in three cases:
    - **Reduced motion**: if `matchMedia("(prefers-reduced-motion: reduce)")` matches.
    - **No `IntersectionObserver`**: the observer is the only thing that reveals a section, so without one the gate would never come off.
-   - **Known offline**: if `window.anime` is not defined yet and `navigator.onLine === false`. The CDN module is cross-origin and the service worker does not cache it, so it cannot arrive.
+   - **Known offline**: if `window.anime` is not defined yet and `navigator.onLine === false`. The vendored bundle is a deferred script that has already run or failed by this point, so a missing global while offline means it is not coming.
    In each of these cases the `js-animations` class is never added, so the CSS never hides anything and all content stays fully visible.
 
-3. **Initial state (SCSS) and the wait for AnimeJS**: once the guards pass, `run` adds `js-animations` to `document.documentElement` (the `<html>` element) straight away, not after AnimeJS arrives. A rule scoped under `html.js-animations` sets `opacity: 0` on the direct children of each animated section. Gating early avoids a flash: first paint happens well before a cold CDN fetch resolves. `run` then calls `whenAnimeReady`, which polls for `window.anime` every 50 ms for up to 3 s (`ANIME_WAIT_MS`). If AnimeJS arrives, the observer starts. If the 3 s pass without it, `revealGatedContent()` removes the class and the page shows unanimated. Do not replace this with a one-shot `typeof anime === "undefined"` check: the module script is `async`, so on a cold CDN load it is usually still in flight when the deferred scripts run, and a one-shot check turned animations off on exactly those loads.
+3. **Initial state (SCSS) and the wait for AnimeJS**: once the guards pass, `run` adds `js-animations` to `document.documentElement` (the `<html>` element) straight away, not after AnimeJS arrives. A rule scoped under `html.js-animations` sets `opacity: 0` on the direct children of each animated section. `run` then calls `whenAnimeReady`. The self-hosted bundle loads as a deferred script directly above `animation_helpers.js`, so `window.anime` is normally already defined and the observer starts at once. If it is not, `whenAnimeReady` polls every 50 ms for up to 3 s (`ANIME_WAIT_MS`), and if the 3 s pass without it, `revealGatedContent()` removes the class and the page shows unanimated. The wait dates from when AnimeJS came from a CDN as an `async` module that raced the deferred scripts; it is kept as the safety net for a vendored bundle that fails to load.
 
-4. **Scroll trigger (Intersection Observer)**: `run` tags each section with a `data-animate` attribute and observes it with a low threshold (`0.02`) and a bottom-margin offset (`-50px`). As soon as 2% of a section enters the viewport, its animation fires. An `animated` map plus `observer.unobserve(el)` ensures each section animates only on its first view. The observer is bootstrapped on `DOMContentLoaded` (or immediately if the DOM is already parsed). Each section animation runs inside a `try`. If one throws, the observer logs `[animations] <key> failed`, disconnects, and calls `revealGatedContent()`, because that section is already marked animated and nothing would retry it.
+4. **Scroll trigger (Intersection Observer)**: `run` tags each section with a `data-animate` attribute and observes it with `threshold: 0` and a bottom-margin offset (`-50px`). As soon as any pixel of a section is 50px above the viewport's bottom edge, its animation fires. An `animated` map plus `observer.unobserve(el)` ensures each section animates only on its first view. The observer is bootstrapped on `DOMContentLoaded` (or immediately if the DOM is already parsed). Each section animation runs inside a `try`. If one throws, the observer logs `[animations] <key> failed`, disconnects, and calls `revealGatedContent()`, because that section is already marked animated and nothing would retry it.
 
 5. **Timeline coordination (AnimeJS)**: each section's animation is built as an `anime.createTimeline({ ease: "..." })`. Elements within a section are staggered using relative offsets (for example `">-300"`) so headings appear first, followed by SVGs/images, then body content. `addStep` wraps every `.add()` call so empty target lists are skipped (avoiding AnimeJS "No target found" warnings), and `directChildren` restricts a step to top-level children of a section.
 
@@ -46,7 +46,7 @@ Each page still has a dedicated animation file rather than one shared script, be
 
 **`directChildren` helper:** several sections (especially Education on `index.html`, and History on `hobbies.html`) contain deeply nested tables with hundreds of inner elements. Using `querySelectorAll("ul, table, p")` would select every nested descendant, causing performance issues and unintended animations. `directChildren` filters `el.children` by CSS selector so only top-level elements are animated; nested content inherits visibility from its parent.
 
-**Low Intersection Observer threshold (0.02):** the Education section on `index.html` spans over 1,200 lines of HTML. A higher threshold like `0.15` would require 15% of that massive element to be visible simultaneously, which may never happen on typical viewports. The low threshold ensures animations trigger reliably for all section sizes.
+**Zero Intersection Observer threshold:** a threshold is a share of the section's own area, so any non-zero value fails for a tall enough section. The Education section on `index.html` spans over 1,200 lines of HTML, and the earlier `0.02` could still be out of reach for the long book lists on `tech_resources.html` at 320 CSS px or 400% zoom, leaving them blank. `threshold: 0` fires on the first visible pixel regardless of section height.
 
 **`rootMargin: "0px 0px -50px 0px"`:** adds a 50px inset from the bottom of the viewport so animations trigger slightly after the section begins entering, rather than at the very edge. This ensures the user can actually see the animation play.
 
@@ -207,18 +207,17 @@ Separately, `default.scss` opts into smooth scrolling only for users who do not 
 Each animated page includes the following in its `<head>`, in this order (the helpers file always loads immediately before the page-specific animation file):
 
 ```html
-<script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-<script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
+<script src="../js/vendor/anime.umd.min.js" defer></script>
 <script src="../js/animation_helpers.js" defer></script>
 <script src="../js/{page}_animations.js" defer></script>
 ```
 
-AnimeJS v4 is ESM-only. The importmap resolves the `animejs` specifier to jsDelivr's `+esm` endpoint, which serves the package's declared entry point with the correct MIME type and CORS headers. The inline module script imports all named exports (`createTimeline`, `stagger`, etc.) and assigns them to `window.anime` so the deferred, classic animation files can access them as globals. The module script is `async`, so a slow or blocked CDN does not hold up the deferred scripts, `navbar.js` among them. As a result there is no guarantee that `window.anime` exists when `animation_helpers.js` runs. `run` handles that with the 3 s wait described under How It Works.
+`assets/js/vendor/anime.umd.min.js` is the unmodified `dist/bundles/anime.umd.min.js` from the animejs 4.3.5 package. As a classic script it assigns every named export (`createTimeline`, `animate`, `stagger`, and the rest) to `window.anime`, so the deferred, classic animation files can use them as globals. It is deliberately not an ES module: browsers refuse module scripts from `file://` origins. Because deferred scripts run in document order, the global exists before `animation_helpers.js` runs; the 3 s wait described under How It Works only matters if the file fails to load. Until 2026-10-24 the pages used an importmap pointing at jsDelivr's `+esm` endpoint plus an `async` module shim. Self-hosting removed the CDN wait and pinned the exact bytes.
 
 Page-specific notes:
 
 - On `index.html` and `404.html` (both at the repo root) the script paths are `./assets/js/...` rather than `../js/...`.
-- `privacy.html` loads none of these: no importmap, no module shim, no helpers, and no `*_animations.js`.
+- `privacy.html` loads none of these: no AnimeJS bundle, no helpers, and no `*_animations.js`.
 - `404.html` loads both `animation_helpers.js` and `404_animations.js` using relative `./assets/js/` paths, while deliberately omitting `cookie_consent.js` and `service_worker_register.js` (whose relative-path logic breaks when the 404 content is served at an arbitrary missing URL).
 
 ## Build
@@ -321,7 +320,7 @@ A new `guides.html` page was added containing seven topical starter guides (Data
   - `animationMap` registers each guide key against the shared `animateGuide` function rather than a per-section variant.
 - **`assets/css/guides.scss`** (new): An `html.js-animations` block sets `opacity: 0` on direct children of `#introSectionDiv`, every `#xxxGuide`, and `#contactMe`.
 - **`assets/css/default.scss`**: `@import "guides";` appended to the import list.
-- **`assets/html/guides.html`**: Includes the standard AnimeJS importmap, the inline module that exposes `window.anime`, and the deferred animation scripts in the head, identical to the other animated pages.
+- **`assets/html/guides.html`**: Includes the self-hosted AnimeJS bundle that exposes `window.anime` and the deferred animation scripts in the head, identical to the other animated pages.
 
 ### Shared-helper refactor and reduced-motion support
 
@@ -338,4 +337,4 @@ A custom `404.html` error page was added with its own entrance animations:
 
 - **`assets/js/404_animations.js`** (new): Uses the same scaffolding and shared helpers as the other pages. Its `sections` map covers `#introSectionDiv`, `#notFound`, `#helpfulLinks`, and `#contactMe`, all animating on `outExpo` (Contact uses the shared `animateContact` on `outSine`). The Intro drops the oversized `.errorCode` figure in, flickers it like a dropped signal (90ms dim, then 140ms recover), then rises the heading and lead. "Where To Next" staggers its page links in as individual `li` elements.
 - **`assets/css/page_not_found.scss`**: Gained the `html.js-animations` initial-state block (with a dedicated `#helpfulLinks` rule gating bare `li`) and the reduced-motion safety net.
-- **`404.html`**: Loads the AnimeJS importmap, module shim, `animation_helpers.js`, and `404_animations.js` with relative `./assets/js/` paths, while deliberately omitting `cookie_consent.js` and `service_worker_register.js` because their relative-path logic breaks at arbitrary missing URLs.
+- **`404.html`**: Loads the self-hosted AnimeJS bundle, `animation_helpers.js`, and `404_animations.js` with relative `./assets/js/` paths, while deliberately omitting `cookie_consent.js` and `service_worker_register.js` because their relative-path logic breaks at arbitrary missing URLs.

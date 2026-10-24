@@ -69,15 +69,13 @@
             page.
         -->
 
-        <!-- AnimeJS for animations. The module script is async on purpose: without
-             it, a parser-inserted module script joins the same execute-after-parsing
-             queue as the defer scripts below and that queue runs in document order,
-             so a slow or blocked cdn.jsdelivr.net would hold up navbar.js, which
-             does not need AnimeJS. Nothing depends on this script's ordering:
-             animation_helpers.js checks for window.anime at call time and
-             back_to_top.js falls back without it. -->
-        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
+        <!-- AnimeJS 4.3.5, self-hosted as its UMD bundle, which defines window.anime.
+             It is a classic deferred script rather than a module because browsers
+             refuse module scripts from file:// origins. Keep it above
+             animation_helpers.js so the global exists when that script runs; if it
+             fails to load, animation_helpers.js still reveals the page after its
+             bounded wait, and back_to_top.js falls back without it. -->
+        <script src="./assets/js/vendor/anime.umd.min.js" defer></script>
         <script src="./assets/js/animation_helpers.js" defer></script>
         <script src="./assets/js/404_animations.js" defer></script>
         <script src="./assets/js/navbar.js" defer></script>

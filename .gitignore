@@ -3,3 +3,6 @@
 .sass-cache
 assets/css/*.css.map
 .claude/settings.local.json
+# default.scss is a shared partial, never an entry point. A whole-directory
+# sass compile would emit this file; keep it from being committed.
+assets/css/default.css

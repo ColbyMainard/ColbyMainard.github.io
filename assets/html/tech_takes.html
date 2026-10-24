@@ -47,8 +47,8 @@
         <script src="../js/path_helpers.js" defer></script>
         <script src="../js/cookie_consent.js" defer></script>
 
-        <script type="importmap">{"imports": {"animejs": "https://cdn.jsdelivr.net/npm/animejs@4.3.5/+esm"}}</script>
-        <script type="module" async>import * as anime from 'animejs'; window.anime = anime;</script>
+        <!-- Self-hosted AnimeJS 4.3.5 UMD bundle; defines window.anime. A classic deferred script, not a module, because browsers refuse module scripts from file:// origins. It must stay above animation_helpers.js. -->
+        <script src="../js/vendor/anime.umd.min.js" defer></script>
         <script src="../js/animation_helpers.js" defer></script>
         <script src="../js/tech_takes_animations.js" defer></script>
         <script src="../js/reading_engagement.js" defer></script>
