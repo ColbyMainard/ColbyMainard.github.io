@@ -20,8 +20,7 @@ This document describes how Colby Mainard's personal website is built and why it
 10. [Accessibility architecture](#10-accessibility-architecture)
 11. [Content model and maintenance workflows](#11-content-model-and-maintenance-workflows)
 12. [Supporting material in the repository](#12-supporting-material-in-the-repository)
-13. [Known gaps and accepted tradeoffs](#13-known-gaps-and-accepted-tradeoffs)
-14. [Decision record](#14-decision-record)
+13. [Decision record](#13-decision-record)
 
 ---
 
@@ -652,31 +651,13 @@ Other recurring workflows, with the full checklists in [AGENTS.md](AGENTS.md#tas
 | `AGENTS.md`, `CLAUDE.md` | Rules and checklists for AI coding agents working on the site. |
 | `.claude/agents/website_code_reviewer.md` | A read-only reviewer agent (Read, Glob, Grep) for HTML, SCSS, and JS quality, accessibility, and convention checks. |
 | `.claude/skills/` | Seven strategy skills: accessibility audit, backlink strategy, content polishing, feature recommendations, roadmap generation, SEO, and web authority. They produce reports rather than code changes. |
-| `assets/markdown/` | Where those reports land, named `<topic>-YYYY-MM-DD.md`. Reports are **disposable**: they are deleted once acted on, and the site plus [section 13](#13-known-gaps-and-accepted-tradeoffs) of this file become the record. Two undated reference documents stay permanently: `animations_report.md` and this file, `architecture.md`. |
+| `assets/markdown/` | Where those reports land, named `<topic>-YYYY-MM-DD.md`. Reports are **disposable**: they are deleted once acted on, and the site itself becomes the record. Two undated reference documents stay permanently: `animations_report.md` and this file, `architecture.md`. |
 | `press_mentions.csv` | Log of external articles that quote Colby (`Link,Author,Comments`). |
 | `assets/other/pgp_email_key.asc` | Public PGP key linked from every footer. |
 
 ---
 
-## 13. Known gaps and accepted tradeoffs
-
-**Open defects** (bugs to fix, not patterns to copy):
-
-- **About 22 MB of unoptimized imagery.** The five `photographyHobby/` originals and `DEFCON33.jpeg` are camera originals. `DEFCON33.jpeg` is the Largest Contentful Paint element on `hobbies.html` and carries `loading="lazy"`, which delays the paint it is measured on. Shrinking these images would also remove the need for the precache exception.
-
-**Accepted tradeoffs** (known and chosen):
-
-| Tradeoff | Why it was accepted |
-| --- | --- |
-| `404.html` renders unstyled at nested missing URLs | Keeps it working from `file://` and at top-level missing URLs, which are the common cases. |
-| `abbr` expansions unreachable by keyboard and touch | `abbr` is not focusable. Important terms are spelled out in prose instead. |
-| Internal docs are publicly reachable | The deploy publishes the whole repository. `robots.txt` keeps `assets/markdown/` out of search, but nothing there should be secret. |
-| Duplicated facts with no automated check | Feed, `llms.txt`, README lists, sitemap dates, and the header nav are hand-synced. Adding a generator would add the build step and dependencies the site avoids. |
-| Lightweight consent banner, not a full CMP | Proportionate to one analytics tag on a personal site. |
-
----
-
-## 14. Decision record
+## 13. Decision record
 
 A consolidated list of the decisions described above, for quick reference.
 
@@ -711,4 +692,4 @@ A consolidated list of the decisions described above, for quick reference.
 | 26 | Photo gallery is manual only | Avoids WCAG 2.2.2 obligations and respects slow readers | `photo_gallery.js` |
 | 27 | `abbr[title]` is styled with a dotted underline and no color | Visual cue that inherits each section's compliant text color | `default.scss` |
 | 28 | Every script in `assets/js/` must be loaded somewhere | Unreferenced scripts waste precache space and confuse readers | `PRECACHE_URLS`, page heads |
-| 29 | Strategy reports are disposable | The site and section 13 of this file are the long-term record | `assets/markdown/` |
+| 29 | Strategy reports are disposable | The site itself is the long-term record | `assets/markdown/` |
