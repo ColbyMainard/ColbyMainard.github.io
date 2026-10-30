@@ -178,6 +178,13 @@ header {
         border-left: none;
         padding: 10px 20px;
         border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
+@media (max-width: 1024px) and (scripting: none) {
+  header .nav-toggle {
+    display: none; }
+  header #pageMenu nav {
+    display: flex; }
+  header #siteMenu nav {
+    display: block; } }
 body {
   width: 100%;
   margin: auto;
@@ -326,6 +333,12 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
     right: 80px;
     bottom: 16px;
     max-width: none; } }
+html:has(.cookieConsent.visible) .easterEggCard {
+  bottom: calc(var(--cookie-banner-height, 7rem) + 24px); }
+
+@media (max-width: 768px) {
+  html:has(.cookieConsent.visible) .easterEggCard {
+    bottom: calc(var(--cookie-banner-height, 19rem) + 16px); } }
 @media (prefers-reduced-motion: reduce) {
   .easterEggCard {
     transition: none; } }
@@ -523,6 +536,9 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
     opacity: 1 !important; } }
+@media print {
+  html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+    opacity: 1 !important; } }
 #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
   margin: auto;
   background-color: #1f3a61;
@@ -651,6 +667,9 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > .quotation, html.js-animations #introSectionDiv > a, html.js-animations #dataEngineeringGuide > h1, html.js-animations #dataEngineeringGuide > h2, html.js-animations #dataEngineeringGuide > h3, html.js-animations #dataEngineeringGuide > h4, html.js-animations #dataEngineeringGuide > p, html.js-animations #dataEngineeringGuide > ul, html.js-animations #dataEngineeringGuide > .quotation, html.js-animations #dataEngineeringGuide > a, html.js-animations #computerVisionGuide > h1, html.js-animations #computerVisionGuide > h2, html.js-animations #computerVisionGuide > h3, html.js-animations #computerVisionGuide > h4, html.js-animations #computerVisionGuide > p, html.js-animations #computerVisionGuide > ul, html.js-animations #computerVisionGuide > .quotation, html.js-animations #computerVisionGuide > a, html.js-animations #generativeAIGuide > h1, html.js-animations #generativeAIGuide > h2, html.js-animations #generativeAIGuide > h3, html.js-animations #generativeAIGuide > h4, html.js-animations #generativeAIGuide > p, html.js-animations #generativeAIGuide > ul, html.js-animations #generativeAIGuide > .quotation, html.js-animations #generativeAIGuide > a, html.js-animations #nlpGuide > h1, html.js-animations #nlpGuide > h2, html.js-animations #nlpGuide > h3, html.js-animations #nlpGuide > h4, html.js-animations #nlpGuide > p, html.js-animations #nlpGuide > ul, html.js-animations #nlpGuide > .quotation, html.js-animations #nlpGuide > a, html.js-animations #reinforcementLearningGuide > h1, html.js-animations #reinforcementLearningGuide > h2, html.js-animations #reinforcementLearningGuide > h3, html.js-animations #reinforcementLearningGuide > h4, html.js-animations #reinforcementLearningGuide > p, html.js-animations #reinforcementLearningGuide > ul, html.js-animations #reinforcementLearningGuide > .quotation, html.js-animations #reinforcementLearningGuide > a, html.js-animations #softwareEngineeringGuide > h1, html.js-animations #softwareEngineeringGuide > h2, html.js-animations #softwareEngineeringGuide > h3, html.js-animations #softwareEngineeringGuide > h4, html.js-animations #softwareEngineeringGuide > p, html.js-animations #softwareEngineeringGuide > ul, html.js-animations #softwareEngineeringGuide > .quotation, html.js-animations #softwareEngineeringGuide > a, html.js-animations #cybersecurityGuide > h1, html.js-animations #cybersecurityGuide > h2, html.js-animations #cybersecurityGuide > h3, html.js-animations #cybersecurityGuide > h4, html.js-animations #cybersecurityGuide > p, html.js-animations #cybersecurityGuide > ul, html.js-animations #cybersecurityGuide > .quotation, html.js-animations #cybersecurityGuide > a {
+    opacity: 1 !important; } }
+@media print {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > .quotation, html.js-animations #introSectionDiv > a, html.js-animations #dataEngineeringGuide > h1, html.js-animations #dataEngineeringGuide > h2, html.js-animations #dataEngineeringGuide > h3, html.js-animations #dataEngineeringGuide > h4, html.js-animations #dataEngineeringGuide > p, html.js-animations #dataEngineeringGuide > ul, html.js-animations #dataEngineeringGuide > .quotation, html.js-animations #dataEngineeringGuide > a, html.js-animations #computerVisionGuide > h1, html.js-animations #computerVisionGuide > h2, html.js-animations #computerVisionGuide > h3, html.js-animations #computerVisionGuide > h4, html.js-animations #computerVisionGuide > p, html.js-animations #computerVisionGuide > ul, html.js-animations #computerVisionGuide > .quotation, html.js-animations #computerVisionGuide > a, html.js-animations #generativeAIGuide > h1, html.js-animations #generativeAIGuide > h2, html.js-animations #generativeAIGuide > h3, html.js-animations #generativeAIGuide > h4, html.js-animations #generativeAIGuide > p, html.js-animations #generativeAIGuide > ul, html.js-animations #generativeAIGuide > .quotation, html.js-animations #generativeAIGuide > a, html.js-animations #nlpGuide > h1, html.js-animations #nlpGuide > h2, html.js-animations #nlpGuide > h3, html.js-animations #nlpGuide > h4, html.js-animations #nlpGuide > p, html.js-animations #nlpGuide > ul, html.js-animations #nlpGuide > .quotation, html.js-animations #nlpGuide > a, html.js-animations #reinforcementLearningGuide > h1, html.js-animations #reinforcementLearningGuide > h2, html.js-animations #reinforcementLearningGuide > h3, html.js-animations #reinforcementLearningGuide > h4, html.js-animations #reinforcementLearningGuide > p, html.js-animations #reinforcementLearningGuide > ul, html.js-animations #reinforcementLearningGuide > .quotation, html.js-animations #reinforcementLearningGuide > a, html.js-animations #softwareEngineeringGuide > h1, html.js-animations #softwareEngineeringGuide > h2, html.js-animations #softwareEngineeringGuide > h3, html.js-animations #softwareEngineeringGuide > h4, html.js-animations #softwareEngineeringGuide > p, html.js-animations #softwareEngineeringGuide > ul, html.js-animations #softwareEngineeringGuide > .quotation, html.js-animations #softwareEngineeringGuide > a, html.js-animations #cybersecurityGuide > h1, html.js-animations #cybersecurityGuide > h2, html.js-animations #cybersecurityGuide > h3, html.js-animations #cybersecurityGuide > h4, html.js-animations #cybersecurityGuide > p, html.js-animations #cybersecurityGuide > ul, html.js-animations #cybersecurityGuide > .quotation, html.js-animations #cybersecurityGuide > a {
     opacity: 1 !important; } }
 .readingTime {

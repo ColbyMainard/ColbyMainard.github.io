@@ -574,7 +574,7 @@ flowchart LR
     T["tech_takes.html<br/>18 references"] -->|"same @id"| PERSON
     H["hobbies.html<br/>5 references"] -->|"same @id"| PERSON
     subgraph OTHERS["Different people, never linked"]
-        R["tech_resources.html<br/>107 Person nodes for book and course authors"]
+        R["tech_resources.html<br/>104 Person nodes for book and course authors"]
     end
 ```
 

@@ -305,6 +305,18 @@ $reading_progress_fill: #00c27c;
             }
         }
     }
+
+    // Sections reveal on scroll, so printing before scrolling the whole page
+    // would otherwise print every unrevealed section as blank space.
+    @media print {
+        html.js-animations {
+            #{$sections} {
+                #{$children} {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
 }
 
 // Everything below this line is the shared, site-wide chrome (header nav,
@@ -585,6 +597,25 @@ header {
     }
 }
 
+// Only navbar.js adds .open, so with scripting off the collapsed header would
+// show a dead toggle and no links. Show both navs expanded instead. This does
+// not cover navbar.js failing to load while scripting is on.
+@media (max-width: $nav_collapse_width) and (scripting: none) {
+    header {
+        .nav-toggle {
+            display: none;
+        }
+
+        #pageMenu nav {
+            display: flex;
+        }
+
+        #siteMenu nav {
+            display: block;
+        }
+    }
+}
+
 body {
     width: 100%;
     margin: auto;
@@ -787,6 +818,19 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
         right: 80px;
         bottom: 16px;
         max-width: none;
+    }
+}
+
+// The card shares the banner's z-index and is appended later in the DOM, so
+// it would paint over the banner's buttons. Lift it above the banner the same
+// way .floatingBackToTop is lifted.
+html:has(.cookieConsent.visible) .easterEggCard {
+    bottom: calc(var(--cookie-banner-height, 7rem) + 24px);
+}
+
+@media (max-width: 768px) {
+    html:has(.cookieConsent.visible) .easterEggCard {
+        bottom: calc(var(--cookie-banner-height, 19rem) + 16px);
     }
 }
 

@@ -178,6 +178,13 @@ header {
         border-left: none;
         padding: 10px 20px;
         border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
+@media (max-width: 1024px) and (scripting: none) {
+  header .nav-toggle {
+    display: none; }
+  header #pageMenu nav {
+    display: flex; }
+  header #siteMenu nav {
+    display: block; } }
 body {
   width: 100%;
   margin: auto;
@@ -326,6 +333,12 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
     right: 80px;
     bottom: 16px;
     max-width: none; } }
+html:has(.cookieConsent.visible) .easterEggCard {
+  bottom: calc(var(--cookie-banner-height, 7rem) + 24px); }
+
+@media (max-width: 768px) {
+  html:has(.cookieConsent.visible) .easterEggCard {
+    bottom: calc(var(--cookie-banner-height, 19rem) + 16px); } }
 @media (prefers-reduced-motion: reduce) {
   .easterEggCard {
     transition: none; } }
@@ -523,6 +536,9 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
     opacity: 1 !important; } }
+@media print {
+  html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+    opacity: 1 !important; } }
 /* Cyberpunk Dreams color palette from https://colormagic.app/palette/6715cb90695c5016fd048856 */
 #workHistory, #education, #projects, #technicalSkills, #otherSkills, #certifications, #publicSpeaking {
   margin: auto;
@@ -653,5 +669,8 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > h5, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #workHistory > h1, html.js-animations #workHistory > h2, html.js-animations #workHistory > h3, html.js-animations #workHistory > h4, html.js-animations #workHistory > h5, html.js-animations #workHistory > p, html.js-animations #workHistory > ul, html.js-animations #workHistory > svg, html.js-animations #workHistory > .tableScroll, html.js-animations #workHistory > a, html.js-animations #education > h1, html.js-animations #education > h2, html.js-animations #education > h3, html.js-animations #education > h4, html.js-animations #education > h5, html.js-animations #education > p, html.js-animations #education > ul, html.js-animations #education > svg, html.js-animations #education > .tableScroll, html.js-animations #education > a, html.js-animations #projects > h1, html.js-animations #projects > h2, html.js-animations #projects > h3, html.js-animations #projects > h4, html.js-animations #projects > h5, html.js-animations #projects > p, html.js-animations #projects > ul, html.js-animations #projects > svg, html.js-animations #projects > .tableScroll, html.js-animations #projects > a, html.js-animations #technicalSkills > h1, html.js-animations #technicalSkills > h2, html.js-animations #technicalSkills > h3, html.js-animations #technicalSkills > h4, html.js-animations #technicalSkills > h5, html.js-animations #technicalSkills > p, html.js-animations #technicalSkills > ul, html.js-animations #technicalSkills > svg, html.js-animations #technicalSkills > .tableScroll, html.js-animations #technicalSkills > a, html.js-animations #certifications > h1, html.js-animations #certifications > h2, html.js-animations #certifications > h3, html.js-animations #certifications > h4, html.js-animations #certifications > h5, html.js-animations #certifications > p, html.js-animations #certifications > ul, html.js-animations #certifications > svg, html.js-animations #certifications > .tableScroll, html.js-animations #certifications > a, html.js-animations #otherSkills > h1, html.js-animations #otherSkills > h2, html.js-animations #otherSkills > h3, html.js-animations #otherSkills > h4, html.js-animations #otherSkills > h5, html.js-animations #otherSkills > p, html.js-animations #otherSkills > ul, html.js-animations #otherSkills > svg, html.js-animations #otherSkills > .tableScroll, html.js-animations #otherSkills > a, html.js-animations #publicSpeaking > h1, html.js-animations #publicSpeaking > h2, html.js-animations #publicSpeaking > h3, html.js-animations #publicSpeaking > h4, html.js-animations #publicSpeaking > h5, html.js-animations #publicSpeaking > p, html.js-animations #publicSpeaking > ul, html.js-animations #publicSpeaking > svg, html.js-animations #publicSpeaking > .tableScroll, html.js-animations #publicSpeaking > a {
+    opacity: 1 !important; } }
+@media print {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > h5, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > a, html.js-animations #workHistory > h1, html.js-animations #workHistory > h2, html.js-animations #workHistory > h3, html.js-animations #workHistory > h4, html.js-animations #workHistory > h5, html.js-animations #workHistory > p, html.js-animations #workHistory > ul, html.js-animations #workHistory > svg, html.js-animations #workHistory > .tableScroll, html.js-animations #workHistory > a, html.js-animations #education > h1, html.js-animations #education > h2, html.js-animations #education > h3, html.js-animations #education > h4, html.js-animations #education > h5, html.js-animations #education > p, html.js-animations #education > ul, html.js-animations #education > svg, html.js-animations #education > .tableScroll, html.js-animations #education > a, html.js-animations #projects > h1, html.js-animations #projects > h2, html.js-animations #projects > h3, html.js-animations #projects > h4, html.js-animations #projects > h5, html.js-animations #projects > p, html.js-animations #projects > ul, html.js-animations #projects > svg, html.js-animations #projects > .tableScroll, html.js-animations #projects > a, html.js-animations #technicalSkills > h1, html.js-animations #technicalSkills > h2, html.js-animations #technicalSkills > h3, html.js-animations #technicalSkills > h4, html.js-animations #technicalSkills > h5, html.js-animations #technicalSkills > p, html.js-animations #technicalSkills > ul, html.js-animations #technicalSkills > svg, html.js-animations #technicalSkills > .tableScroll, html.js-animations #technicalSkills > a, html.js-animations #certifications > h1, html.js-animations #certifications > h2, html.js-animations #certifications > h3, html.js-animations #certifications > h4, html.js-animations #certifications > h5, html.js-animations #certifications > p, html.js-animations #certifications > ul, html.js-animations #certifications > svg, html.js-animations #certifications > .tableScroll, html.js-animations #certifications > a, html.js-animations #otherSkills > h1, html.js-animations #otherSkills > h2, html.js-animations #otherSkills > h3, html.js-animations #otherSkills > h4, html.js-animations #otherSkills > h5, html.js-animations #otherSkills > p, html.js-animations #otherSkills > ul, html.js-animations #otherSkills > svg, html.js-animations #otherSkills > .tableScroll, html.js-animations #otherSkills > a, html.js-animations #publicSpeaking > h1, html.js-animations #publicSpeaking > h2, html.js-animations #publicSpeaking > h3, html.js-animations #publicSpeaking > h4, html.js-animations #publicSpeaking > h5, html.js-animations #publicSpeaking > p, html.js-animations #publicSpeaking > ul, html.js-animations #publicSpeaking > svg, html.js-animations #publicSpeaking > .tableScroll, html.js-animations #publicSpeaking > a {
     opacity: 1 !important; } }

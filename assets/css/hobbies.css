@@ -178,6 +178,13 @@ header {
         border-left: none;
         padding: 10px 20px;
         border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
+@media (max-width: 1024px) and (scripting: none) {
+  header .nav-toggle {
+    display: none; }
+  header #pageMenu nav {
+    display: flex; }
+  header #siteMenu nav {
+    display: block; } }
 body {
   width: 100%;
   margin: auto;
@@ -326,6 +333,12 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
     right: 80px;
     bottom: 16px;
     max-width: none; } }
+html:has(.cookieConsent.visible) .easterEggCard {
+  bottom: calc(var(--cookie-banner-height, 7rem) + 24px); }
+
+@media (max-width: 768px) {
+  html:has(.cookieConsent.visible) .easterEggCard {
+    bottom: calc(var(--cookie-banner-height, 19rem) + 16px); } }
 @media (prefers-reduced-motion: reduce) {
   .easterEggCard {
     transition: none; } }
@@ -523,6 +536,9 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
 @media (prefers-reduced-motion: reduce) {
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
     opacity: 1 !important; } }
+@media print {
+  html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+    opacity: 1 !important; } }
 /* Calm Authority color palette (base) from https://piktochart.com/tips/professional-color-palette */
 #quantumComputing, #photography, #dungeonsAndDragons, #history {
   margin: auto;
@@ -678,5 +694,8 @@ html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > 
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
+  html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > .quotation, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > h4, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > .quotation, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > h4, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > .quotation, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > h4, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > .quotation, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > h4, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > .quotation, html.js-animations #history > a, html.js-animations #history > iframe {
+    opacity: 1 !important; } }
+@media print {
   html.js-animations #introSectionDiv > h1, html.js-animations #introSectionDiv > h2, html.js-animations #introSectionDiv > h3, html.js-animations #introSectionDiv > h4, html.js-animations #introSectionDiv > p, html.js-animations #introSectionDiv > ul, html.js-animations #introSectionDiv > svg, html.js-animations #introSectionDiv > img, html.js-animations #introSectionDiv > .photoGallery, html.js-animations #introSectionDiv > .tableScroll, html.js-animations #introSectionDiv > .quotation, html.js-animations #introSectionDiv > a, html.js-animations #introSectionDiv > iframe, html.js-animations #quantumComputing > h1, html.js-animations #quantumComputing > h2, html.js-animations #quantumComputing > h3, html.js-animations #quantumComputing > h4, html.js-animations #quantumComputing > p, html.js-animations #quantumComputing > ul, html.js-animations #quantumComputing > svg, html.js-animations #quantumComputing > img, html.js-animations #quantumComputing > .photoGallery, html.js-animations #quantumComputing > .tableScroll, html.js-animations #quantumComputing > .quotation, html.js-animations #quantumComputing > a, html.js-animations #quantumComputing > iframe, html.js-animations #photography > h1, html.js-animations #photography > h2, html.js-animations #photography > h3, html.js-animations #photography > h4, html.js-animations #photography > p, html.js-animations #photography > ul, html.js-animations #photography > svg, html.js-animations #photography > img, html.js-animations #photography > .photoGallery, html.js-animations #photography > .tableScroll, html.js-animations #photography > .quotation, html.js-animations #photography > a, html.js-animations #photography > iframe, html.js-animations #dungeonsAndDragons > h1, html.js-animations #dungeonsAndDragons > h2, html.js-animations #dungeonsAndDragons > h3, html.js-animations #dungeonsAndDragons > h4, html.js-animations #dungeonsAndDragons > p, html.js-animations #dungeonsAndDragons > ul, html.js-animations #dungeonsAndDragons > svg, html.js-animations #dungeonsAndDragons > img, html.js-animations #dungeonsAndDragons > .photoGallery, html.js-animations #dungeonsAndDragons > .tableScroll, html.js-animations #dungeonsAndDragons > .quotation, html.js-animations #dungeonsAndDragons > a, html.js-animations #dungeonsAndDragons > iframe, html.js-animations #history > h1, html.js-animations #history > h2, html.js-animations #history > h3, html.js-animations #history > h4, html.js-animations #history > p, html.js-animations #history > ul, html.js-animations #history > svg, html.js-animations #history > img, html.js-animations #history > .photoGallery, html.js-animations #history > .tableScroll, html.js-animations #history > .quotation, html.js-animations #history > a, html.js-animations #history > iframe {
     opacity: 1 !important; } }

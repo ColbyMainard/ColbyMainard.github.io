@@ -178,6 +178,13 @@ header {
         border-left: none;
         padding: 10px 20px;
         border-bottom: 1px solid rgba(80, 195, 161, 0.1); } }
+@media (max-width: 1024px) and (scripting: none) {
+  header .nav-toggle {
+    display: none; }
+  header #pageMenu nav {
+    display: flex; }
+  header #siteMenu nav {
+    display: block; } }
 body {
   width: 100%;
   margin: auto;
@@ -326,6 +333,12 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
     right: 80px;
     bottom: 16px;
     max-width: none; } }
+html:has(.cookieConsent.visible) .easterEggCard {
+  bottom: calc(var(--cookie-banner-height, 7rem) + 24px); }
+
+@media (max-width: 768px) {
+  html:has(.cookieConsent.visible) .easterEggCard {
+    bottom: calc(var(--cookie-banner-height, 19rem) + 16px); } }
 @media (prefers-reduced-motion: reduce) {
   .easterEggCard {
     transition: none; } }
@@ -521,6 +534,9 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
   opacity: 0; }
 
 @media (prefers-reduced-motion: reduce) {
+  html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
+    opacity: 1 !important; } }
+@media print {
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
     opacity: 1 !important; } }
 #analyticsDiv, #thirdPartyDiv, #serviceWorkerDiv, #verificationDiv, #rightsDiv, #preferencesDiv, #changesDiv {
