@@ -1,9 +1,6 @@
-// Shared base for every page stylesheet. Each page entry file (index.scss,
-// hobbies.scss, tech_takes.scss, tech_resources.scss, privacy_policy.scss,
-// guides.scss, page_not_found.scss) begins with @import "default" and compiles
-// to its own .css, which only that page links. This file holds the shared
-// palettes and mixins (no output on their own) and the global rules at the
-// bottom (emitted into every page). It has no .css of its own.
+// Shared base for every page stylesheet. 
+// Each page entry file begins with @import "default" and compiles to its own .css, which only that page links. 
+// This file holds the shared palettes and mixins (no output on their own) and the global rules at the bottom (emitted into every page).
 
 // 80s Noir color palette from https://colormagic.app/palette/67297aeceb2f245fd531c036
 $noir_1: #1a1a1e;
@@ -115,10 +112,6 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-// A quotation is a figure.quotation holding the blockquote and a figcaption
-// for the attribution, so assistive technology does not read the source as
-// part of the quoted words. The caption is indented to line up with the
-// blockquote's default inline margin.
 @mixin blockQuote($color) {
     blockquote {
         text-align: left;
@@ -230,19 +223,8 @@ $heading_size_4: clamp(1.125rem, 3vw,   1.75rem); // was 175% — 28px
     }
 }
 
-// Reading-progress fill. Deliberately outside every page palette: the bar is a
-// purely decorative strip with no text on it and no contrast obligation, and it
-// is meant to read as a distinct progress accent rather than as more page
-// chrome. Named rather than inlined so a future palette pass finds it, and so
-// the fill and its glow cannot drift apart.
 $reading_progress_fill: #00c27c;
 
-// The two pages that load reading_engagement.js (tech_takes and guides) share
-// the reading-time line, the "Subscribe (Atom)" intro link, and the progress
-// bar the script injects. The rules are top level, not section-scoped, because
-// both intros sit on the global $noir_2 body background. Each page passes the
-// same $accent so the two intros match; a section can still recolor
-// .readingTime at its own (higher) specificity, as guides.scss does.
 @mixin readingEngagement($accent) {
     .readingTime {
         font-style: italic;
@@ -306,8 +288,6 @@ $reading_progress_fill: #00c27c;
         }
     }
 
-    // Sections reveal on scroll, so printing before scrolling the whole page
-    // would otherwise print every unrevealed section as blank space.
     @media print {
         html.js-animations {
             #{$sections} {
@@ -319,20 +299,12 @@ $reading_progress_fill: #00c27c;
     }
 }
 
-// Everything below this line is the shared, site-wide chrome (header nav,
-// body, footer, cookie banner, back-to-top button, easter egg, code blocks).
-// It is emitted into every page stylesheet, because each page entry file
-// (index.scss, hobbies.scss, ...) starts with @import "default". Nothing
-// imports a page file, and this file is never compiled on its own.
-
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
     }
 }
 
-// --header-height is the sticky header's measured height, set by navbar.js.
-// The fallbacks apply when that script has not run.
 html {
     scroll-padding-top: calc(var(--header-height, 7.5rem) + 0.5rem);
 }
@@ -343,11 +315,6 @@ html {
     }
 }
 
-// While the consent banner is up, keep a newly focused element above it
-// instead of behind it (WCAG 2.4.11). --cookie-banner-height is the banner's
-// measured height, set by cookie_consent.js. The fallbacks fit about three
-// lines of message on desktop and about nine on a narrow phone, where the
-// banner stacks into a column.
 html:has(.cookieConsent.visible) {
     scroll-padding-bottom: var(--cookie-banner-height, 7rem);
 }
@@ -536,17 +503,10 @@ header {
 
 @media (max-width: $nav_collapse_width) {
     header {
-        // The open menu holds both navs and can be taller than a short or
-        // landscape phone screen. A sticky element taller than the viewport
-        // cannot be scrolled from outside, so the header scrolls itself.
         max-height: 100vh;
         max-height: 100dvh;
         overflow-y: auto;
 
-        // The overflow clips anything drawn outside the header, which
-        // includes the side edges of a full-width link's outset focus ring.
-        // Drawing the ring inside the link keeps all four sides visible.
-        // The ids match the specificity of the desktop focus rules above.
         #pageMenu nav a:focus-visible,
         #siteMenu nav a:focus-visible {
             outline-offset: -2px;
@@ -597,9 +557,6 @@ header {
     }
 }
 
-// Only navbar.js adds .open, so with scripting off the collapsed header would
-// show a dead toggle and no links. Show both navs expanded instead. This does
-// not cover navbar.js failing to load while scripting is on.
 @media (max-width: $nav_collapse_width) and (scripting: none) {
     header {
         .nav-toggle {
@@ -695,9 +652,6 @@ main a:focus-visible {
         visibility: visible;
     }
 
-    // Hover darkens rather than lightens, as .easterEggButton does:
-    // $emerald_efficiency_2 gave 3.20:1 under the 22.4px mobile glyph, which is
-    // below the 24px large-text cutoff. This background gives about 6.8:1.
     &:hover,
     &:focus {
         background-color: darken($emerald_efficiency_1, 5%);
@@ -721,9 +675,6 @@ main a:focus-visible {
     }
 }
 
-// The consent banner draws above this button (z-index 300 vs 200), so while
-// the banner is up the button sits on top of it instead of under it. Same
-// --cookie-banner-height and fallbacks as the scroll-padding-bottom rule.
 html:has(.cookieConsent.visible) .floatingBackToTop {
     bottom: calc(var(--cookie-banner-height, 7rem) + 24px);
 }
@@ -798,8 +749,6 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
         padding: 6px 12px;
         cursor: pointer;
 
-        // Hover darkens rather than lightens: $emerald_efficiency_2 under this
-        // 90%-size label gave 3.21:1. This background gives about 6.8:1.
         &:hover {
             background-color: darken($emerald_efficiency_1, 5%);
             border-color: $emerald_efficiency_5;
@@ -821,9 +770,6 @@ html:has(.cookieConsent.visible) .floatingBackToTop {
     }
 }
 
-// The card shares the banner's z-index and is appended later in the DOM, so
-// it would paint over the banner's buttons. Lift it above the banner the same
-// way .floatingBackToTop is lifted.
 html:has(.cookieConsent.visible) .easterEggCard {
     bottom: calc(var(--cookie-banner-height, 7rem) + 24px);
 }
@@ -1012,8 +958,6 @@ pre {
     margin: 16px 0;
     text-align: left;
 
-    // display: flex above outranks the browser's own [hidden] rule, so the
-    // container that cookie_consent.js unhides needs this to stay hidden first.
     &[hidden] {
         display: none;
     }

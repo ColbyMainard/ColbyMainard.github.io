@@ -540,7 +540,6 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
   html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-animations #contactMe > a {
     opacity: 1 !important; } }
 /* Dark Blue Gray color palette from https://colormagic.app/palette/69014a7925c5fe1a94c39eea */
-/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge {
   margin: auto;
   background-color: #20203c;

@@ -68,14 +68,11 @@ $cyberpunk_dreams_5: #200b4b;
 #education {
     @extend %indexSection;
     @include dataTable($cyberpunk_dreams_2);
-    // "Relevant Courses" sits one level below each degree's h4. The heading
-    // ramp stops at h4, so it is sized as body text in the body-text tone.
     h5 {
         text-align: left;
         color: $cyberpunk_dreams_2;
         font-size: 100%;
     }
-    // Graduation cap: the mortarboard and its crown share one outline, and the tassel is the single red accent.
     .capPanel {
         fill: black;
         stroke: white;
@@ -85,7 +82,6 @@ $cyberpunk_dreams_5: #200b4b;
         stroke: red;
         stroke-width: 3;
     }
-    // Coursework cells carry a nested topic list and a <details> disclosure; the summary is the only interactive element inside the table.
     table tr td {
         ul {
             li {
@@ -110,7 +106,6 @@ $cyberpunk_dreams_5: #200b4b;
 
 #technicalSkills {
     @extend %indexSection;
-    // Circuit board: every trace between a contact and the central chip.
     .circuitTrace {
         stroke: #ADFF2F;
         stroke-width: 3;
@@ -119,7 +114,6 @@ $cyberpunk_dreams_5: #200b4b;
 
 #otherSkills {
     @extend %indexSection;
-    // Clipboard: the metal clip arching over the top of the board.
     .clipboardClip {
         fill: none;
         stroke: gray;
@@ -131,7 +125,6 @@ $cyberpunk_dreams_5: #200b4b;
 
 #publicSpeaking { @extend %indexSection; }
 
-// Animation gating (initial hidden state plus the reduced-motion safety net). Without JS the .js-animations class is never added and content stays visible.
 @include animationGate(
     "#introSectionDiv, #workHistory, #education, #projects, #technicalSkills, #certifications, #otherSkills, #publicSpeaking",
     "> h1, > h2, > h3, > h4, > h5, > p, > ul, > svg, > .tableScroll, > a"

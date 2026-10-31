@@ -1,5 +1,3 @@
-// Shared palettes, mixins, and site-wide chrome. Must come first: every rule
-// below uses its variables and mixins.
 @import "default";
 
 // /* Luna of Gale color palette from https://colormagic.app/palette/671c28bb53d1e2a13ca7eca4 */
@@ -51,7 +49,6 @@ $dark_blue_gray_3: #9a9ac2;
 $dark_blue_gray_4: #c2c2d1;
 $dark_blue_gray_5: #ff5c5c;
 
-/* Shared per-opinion section styling. h3 defaults to $dark_blue_gray_3; #AGI and #Privacy override it to $dark_blue_gray_4 below. */
 %techTakeSection {
     @include sectionShell($dark_blue_gray_1, $padding-bottom: 1.5em);
     @include headingRamp(
@@ -68,7 +65,6 @@ $dark_blue_gray_5: #ff5c5c;
 
 %techTakeTable {
     @include dataTable($dark_blue_gray_3);
-    // Links inside a cell stay at the cell's own tone in every state, so a linked row header does not out-shout the surrounding data.
     table tr {
         th,
         td {
@@ -133,12 +129,9 @@ $dark_blue_gray_5: #ff5c5c;
     @include blockQuote($dark_blue_gray_3);
 }
 
-// Animation gating (initial hidden state plus the reduced-motion safety net).
 @include animationGate(
     "#introSectionDiv, #KAN, #Cryptocurrency, #FutureOfQuantum, #AGI, #Privacy, #ProductPlacement, #PhysicalMediaSupremacy, #VibeCodingScourge",
     "> h1, > h2, > h3, > h4, > p, > ul, > ol, > dl, > .tableScroll, > .quotation, > a"
 );
 
-// Reading-time line, intro "Subscribe (Atom)" link, and reading-progress bar.
-// guides.scss passes the same $dark_blue_gray_4 value so both intros match.
 @include readingEngagement($dark_blue_gray_4);
