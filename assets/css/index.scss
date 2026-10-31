@@ -48,6 +48,13 @@ $cyberpunk_dreams_5: #200b4b;
     font-size: $heading_size_2;
 }
 
+/* The intro sits on the global $noir_2 body background, not a section card, so its
+   links to the writing pages need their own colors. #c2c2d1 matches the intro links
+   on tech_takes and guides: 6.06:1 on $noir_2, and the $noir_5 hover gives 7.2:1. */
+#introSectionDiv {
+    @include proseLinks(#c2c2d1, $noir_5, $thicken-on-hover: true);
+}
+
 #workHistory {
     @extend %indexSection;
     // Laptop-bag flap: an open outline over the filled body beneath it.

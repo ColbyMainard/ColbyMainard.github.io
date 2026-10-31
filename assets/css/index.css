@@ -607,6 +607,23 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
   color: #d4d4d9;
   font-size: clamp(1.5rem, 5vw, 3rem); }
 
+/* The intro sits on the global $noir_2 body background, not a section card, so its
+   links to the writing pages need their own colors. #c2c2d1 matches the intro links
+   on tech_takes and guides: 6.06:1 on $noir_2, and the $noir_5 hover gives 7.2:1. */
+#introSectionDiv a:link,
+#introSectionDiv a:visited {
+  text-align: left;
+  color: #c2c2d1;
+  font-size: 100%;
+  text-decoration: underline; }
+#introSectionDiv a:hover,
+#introSectionDiv a:active {
+  text-align: left;
+  color: #d4d4d9;
+  font-size: 100%;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; }
+
 #workHistory .bagFlap {
   fill: none;
   stroke: #AA7333;

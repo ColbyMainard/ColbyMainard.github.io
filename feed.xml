@@ -16,7 +16,7 @@
 	<id>https://colbymainard.github.io/feed.xml</id>
 	<link rel="self" type="application/atom+xml" href="https://colbymainard.github.io/feed.xml"/>
 	<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html"/>
-	<updated>2026-10-27T00:00:00Z</updated>
+	<updated>2026-10-30T00:00:00Z</updated>
 	<rights>2026 Colby Mainard - All rights reserved.</rights>
 	<author>
 		<name>Colby Mainard</name>
@@ -44,7 +44,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/data-engineering</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-16T00:00:00Z</updated>
+		<updated>2026-10-30T00:00:00Z</updated>
 		<summary>A plain-spoken starter guide to cleaning data, handling user data responsibly, accounting for data velocity, and choosing batch vs. real-time processing.</summary>
 	</entry>
 	<entry>
@@ -60,7 +60,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/generative-ai</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-27T00:00:00Z</updated>
+		<updated>2026-10-30T00:00:00Z</updated>
 		<summary>A starter guide to the technology behind generative AI, the role of GANs, and the core libraries for building with it.</summary>
 	</entry>
 	<entry>
@@ -84,7 +84,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/software-engineering</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#softwareEngineeringGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-27T00:00:00Z</updated>
+		<updated>2026-10-30T00:00:00Z</updated>
 		<summary>A starter guide to why GenAI can't replace software engineers, practical maintainability principles, and where to learn next.</summary>
 	</entry>
 	<entry>
@@ -92,7 +92,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/cybersecurity</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-08-08T00:00:00Z</updated>
+		<updated>2026-10-30T00:00:00Z</updated>
 		<summary>A starter guide to everyday security best practices, the subfields of cybersecurity, and the core tools.</summary>
 	</entry>
 	<entry>
