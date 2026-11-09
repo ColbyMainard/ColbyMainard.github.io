@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v92";
+const CACHE_VERSION = "v93";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 let cacheWriteWarned = false;
@@ -47,11 +47,6 @@ const PRECACHE_URLS = [
     "./assets/js/vendor/anime.umd.min.js",
     "./assets/images/favicon.png",
     "./assets/images/sharecard.png",
-    // Deliberately absent: the assets/images/photographyHobby/ originals,
-    // assets/images/miscellaneous/DEFCON33.jpeg, and assets/pdf/InvisibleDataSlides.pdf.
-    // Together they are tens of megabytes that every first visit to any page
-    // would pull in the background. The fetch handler below still caches each
-    // one the first time it is actually requested.
     "./assets/other/pgp_email_key.asc"
 ];
 
