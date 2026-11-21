@@ -100,6 +100,13 @@ $calm_authority_5: #E7EAEC;
         gap: 1em;
         flex-wrap: wrap;
         margin-top: 1em;
+
+        // The display value above overrides the browser's built-in
+        // [hidden] { display: none }, so without this guard the controls
+        // render as dead buttons whenever photo_gallery.js does not run.
+        &[hidden] {
+            display: none;
+        }
     }
 
     .photoGallery-count {

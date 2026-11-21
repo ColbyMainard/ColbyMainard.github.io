@@ -28,10 +28,18 @@
     };
 
     /**
-     * Intro — Fade in heading, image scales up
+     * Intro — Fade in heading and intro sentence, image scales up.
+     * The paragraph step is required, not decorative: animationGate hides
+     * "#introSectionDiv > p" until something reveals it.
      */
     function animateIntro(el) {
         var tl = introTimeline(el);
+
+        addStep(tl, directChildren(el, "p"), {
+            opacity: [0, 1],
+            translateY: ["20px", "0px"],
+            duration: 600
+        }, ">-500");
 
         addStep(tl, el.querySelector("img"), {
             opacity: [0, 1],

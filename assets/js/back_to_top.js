@@ -107,6 +107,12 @@
                 }, 320);
             }
         } else {
+            // An earlier animated hide leaves inline opacity: 0 and a
+            // translateY on the button, and inline styles beat the .visible
+            // rule. Clear them, or turning on reduced motion mid-visit would
+            // leave an invisible but focusable button.
+            button.style.opacity = "";
+            button.style.transform = "";
             button.classList.toggle("visible", next);
         }
     }

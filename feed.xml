@@ -16,7 +16,7 @@
 	<id>https://colbymainard.github.io/feed.xml</id>
 	<link rel="self" type="application/atom+xml" href="https://colbymainard.github.io/feed.xml"/>
 	<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html"/>
-	<updated>2026-10-30T00:00:00Z</updated>
+	<updated>2026-11-19T00:00:00Z</updated>
 	<rights>2026 Colby Mainard - All rights reserved.</rights>
 	<author>
 		<name>Colby Mainard</name>
@@ -28,7 +28,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/vibe-coding-scourge</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#VibeCodingScourgeDiv"/>
 		<published>2026-08-27T00:00:00Z</published>
-		<updated>2026-10-27T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>What separates vibe coding from AI-assisted development, why generating code with little oversight trades quality for speed and hides technical debt, the cultural cost of assuming AI replaces developers, and a practical path back to fundamentals.</summary>
 	</entry>
 	<entry>
@@ -36,15 +36,15 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/physical-media-supremacy</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#PhysicalMediaSupremacyDiv"/>
 		<published>2026-07-31T00:00:00Z</published>
-		<updated>2026-10-27T00:00:00Z</updated>
-		<summary>Discussing the resurgence of physical media and how streaming has made a series of unforced errors that is slowly cannibalizing itself.</summary>
+		<updated>2026-11-19T00:00:00Z</updated>
+		<summary>Why physical media is making a comeback, and how a series of unforced errors has streaming slowly cannibalizing itself.</summary>
 	</entry>
 	<entry>
 		<title>Data Engineering Guide</title>
 		<id>tag:colbymainard.github.io,2026:guides/data-engineering</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#dataEngineeringGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-30T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>A plain-spoken starter guide to cleaning data, handling user data responsibly, accounting for data velocity, and choosing batch vs. real-time processing.</summary>
 	</entry>
 	<entry>
@@ -52,7 +52,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/computer-vision</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#computerVisionGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-27T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>A starter guide to computer-vision problem classes, choosing a model, normalizing image data, and the core libraries.</summary>
 	</entry>
 	<entry>
@@ -60,7 +60,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/generative-ai</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#generativeAIGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-30T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>A starter guide to the technology behind generative AI, the role of GANs, and the core libraries for building with it.</summary>
 	</entry>
 	<entry>
@@ -92,7 +92,7 @@
 		<id>tag:colbymainard.github.io,2026:guides/cybersecurity</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/guides.html#cybersecurityGuideDiv"/>
 		<published>2026-05-25T00:00:00Z</published>
-		<updated>2026-10-30T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>A starter guide to everyday security best practices, the subfields of cybersecurity, and the core tools.</summary>
 	</entry>
 	<entry>
@@ -100,7 +100,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/product-placement</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#ProductPlacementDiv"/>
 		<published>2026-04-23T00:00:00Z</published>
-		<updated>2026-09-03T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>Lessons from valuing sports brand placements with computer vision, covering the visual signals that drive placement value and practical strategies for brands seeking exposure.</summary>
 	</entry>
 	<entry>
@@ -108,7 +108,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/privacy</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#PrivacyDiv"/>
 		<published>2026-01-20T00:00:00Z</published>
-		<updated>2026-10-27T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>How advertising economics eroded online privacy, the threat models to plan for, and practical defenses for users and services, from privacy-preserving browsers to differential privacy and federated learning.</summary>
 	</entry>
 	<entry>
@@ -116,7 +116,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/cryptocurrency</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#CryptocurrencyDiv"/>
 		<published>2025-11-29T00:00:00Z</published>
-		<updated>2026-06-19T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>A plain-language look at how cryptocurrency works, how it compares to traditional securities, which coins tend to be more stable, and the wallets and security practices that keep holdings safe.</summary>
 	</entry>
 	<entry>
@@ -124,7 +124,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/agi</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#AGIDiv"/>
 		<published>2025-10-28T00:00:00Z</published>
-		<updated>2026-06-19T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>Why artificial general intelligence remains more buzzword than imminent threat: hype cycles, undefined success criteria, missing technology, and the philosophical and practical questions still unanswered.</summary>
 	</entry>
 	<entry>
@@ -132,7 +132,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/future-of-quantum</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#FutureOfQuantumDiv"/>
 		<published>2025-10-18T00:00:00Z</published>
-		<updated>2026-06-19T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>What quantum computing is, the problem classes where qubits offer real speedups, and why quantum hardware will likely follow the GPU and ASIC path from enterprise accelerator to consumer availability.</summary>
 	</entry>
 	<entry>
@@ -140,7 +140,7 @@
 		<id>tag:colbymainard.github.io,2026:tech-takes/kan</id>
 		<link rel="alternate" type="text/html" href="https://colbymainard.github.io/assets/html/tech_takes.html#KANDiv"/>
 		<published>2025-10-07T00:00:00Z</published>
-		<updated>2026-08-16T00:00:00Z</updated>
+		<updated>2026-11-19T00:00:00Z</updated>
 		<summary>How Kolmogorov-Arnold Networks differ from multi-layer perceptrons by learning spline activation functions, and why interpretability and accuracy gains come with tooling and speed tradeoffs.</summary>
 	</entry>
 </feed>

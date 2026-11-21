@@ -75,14 +75,14 @@ Hobbies include:
 
 Going over my stance on certain technologies, relevant trends, and tech news.
 Current topics include:
-    - Kolmogorov-Arnold Networks
-    - Staying Safe with Cryptocurrency
-    - Future of Quantum Computing
-    - Artificial General Intelligence
-    - Privacy
-    - Product Placement in Sports Marketing: Tips and Tricks
-    - Physical Media vs. Streaming
     - Vibe Coding
+    - Physical Media vs. Streaming
+    - Product Placement in Sports Marketing: Tips and Tricks
+    - Privacy
+    - Staying Safe with Cryptocurrency
+    - Artificial General Intelligence
+    - Future of Quantum Computing
+    - Kolmogorov-Arnold Networks
 
 ## Architecture
 
