@@ -548,6 +548,11 @@ html.js-animations #contactMe > h2, html.js-animations #contactMe > p, html.js-a
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: "Courier New", monospace; }
+  @media (max-width: 768px) {
+    #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
+      width: auto;
+      margin-left: 0.5em;
+      margin-right: 0.5em; } }
   @media (forced-colors: active) {
     #dataEngineeringGuide, #computerVisionGuide, #generativeAIGuide, #nlpGuide, #reinforcementLearningGuide, #softwareEngineeringGuide, #cybersecurityGuide {
       border: 1px solid CanvasText; } }

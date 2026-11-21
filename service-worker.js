@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v94";
+const CACHE_VERSION = "v95";
 const CACHE_NAME = "colbymainard-" + CACHE_VERSION;
 
 let cacheWriteWarned = false;

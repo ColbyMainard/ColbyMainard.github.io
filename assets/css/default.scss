@@ -28,7 +28,10 @@ $emerald_efficiency_5: #e0f7fa;
 // 470 tall) with both nav rows pinned across a large share of every screen.
 $nav_collapse_width: 1024px;
 
-@mixin sectionShell($background, $padding: null, $padding-bottom: null) {
+// The default $padding gives every card horizontal breathing room, so prose no
+// longer touches the card edge. The clamp() keeps the sides narrow on phones and
+// caps them at the 2em that guides and the 404 page already pass explicitly.
+@mixin sectionShell($background, $padding: 1.5em clamp(1em, 4vw, 2em), $padding-bottom: null) {
     margin: auto;
     background-color: $background;
     width: 80%;
@@ -42,6 +45,14 @@ $nav_collapse_width: 1024px;
     margin-top: 2em;
     margin-bottom: 2em;
     font-family: "Courier New", monospace;
+
+    // On phones and under 400% zoom an 80% card wastes a fifth of the screen
+    // on margins, so the card fills the width less a small gutter instead.
+    @media (max-width: 768px) {
+        width: auto;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
 
     @media (forced-colors: active) {
         border: 1px solid CanvasText;
